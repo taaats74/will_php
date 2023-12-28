@@ -36,7 +36,7 @@
         <h1 class="logo" alt="ウィル">
           <div class="img-wrapper">
             <a href="<?php echo home_url('/'); ?>">
-              <img src="img/logo_black.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_black.png" alt="">
             </a>
           </div>
         </h1>
@@ -79,7 +79,7 @@
       <div class="container">
         <div class="wrapper">
           <div class="img-wrapper">
-            <img src="img/white_yoko.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="">
           </div>
           <ul class="menu">
             <li>
@@ -113,6 +113,6 @@
 
   <div class="sp sp-logo">
     <div class="img-wrapper">
-      <img src="img/logo_black.png" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/logo_black.png" alt="">
     </div>
   </div>
