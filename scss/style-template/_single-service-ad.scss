@@ -1,0 +1,202 @@
+.hero-section {
+  &.ad {
+    .container {
+      background: rgba(125, 172, 175, .2);
+      border-bottom: solid 1px #b1cdcf;
+      overflow: hidden;
+
+      .wrapper {
+        padding-top: 68px;
+        max-width: 1950px;
+        margin: 0 auto;
+        position: relative;
+
+        .img-wrapper {
+          width: 100%;
+
+          img {
+            width: 120%;
+          }
+        }
+
+        .hero-text {
+          position: absolute;
+          top: 55%;
+          left: 18%;
+
+          .section-header {
+            font-size: 2.5em;
+            letter-spacing: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.single-service-problem {
+  &.ad {
+    .container {
+      .wrapper {
+        margin-top: 70px;
+
+        .problem-wrapper {
+          padding: 2em;
+          background: #eaf5f3;
+          width: 74%;
+          max-width: 1050px;
+          margin: 0 auto;
+          box-shadow: 0px 3px 6px silver;
+
+          h2 {
+            text-align: center;
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: bold;
+            font-style: normal;
+            letter-spacing: 3px;
+          }
+
+          ul {
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+            list-style: none;
+            padding-top: 1em;
+            width: 95%;
+            margin: 0 auto;
+
+            li {
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .single-service-problem {
+    &.ad {
+      .container {
+        .wrapper {
+          margin-top: 70px;
+
+          .problem-wrapper {
+            padding: 2em;
+            background: #eaf5f3;
+            width: 90%;
+            max-width: 1050px;
+            margin: 0 auto;
+            box-shadow: 0px 3px 6px silver;
+
+            h2 {
+              text-align: center;
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: bold;
+              font-style: normal;
+              letter-spacing: 3px;
+            }
+
+            ul {
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: 400;
+              font-style: normal;
+              list-style: none;
+              padding-top: 1em;
+              width: 100%;
+              margin: 0 auto;
+
+              li {
+                letter-spacing: 2px;
+                line-height: 1em;
+                margin-top: 1em;
+                font-size: .9em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .hero-section {
+    &.ad {
+      .container {
+        background: rgba(125, 172, 175, .2);
+        border-bottom: solid 1px #b1cdcf;
+        overflow: hidden;
+
+        .wrapper {
+          padding-top: 68px;
+          max-width: 1950px;
+          margin: 0 auto;
+          position: relative;
+
+          .img-wrapper {
+            width: 100%;
+
+            img {
+              width: 260%;
+            }
+          }
+
+          .hero-text {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+
+            .section-header {
+              font-size: 2.5em;
+              letter-spacing: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .single-service-problem {
+    &.ad {
+      .container {
+        .wrapper {
+          margin-top: 70px;
+
+          .problem-wrapper {
+            padding: 2em 1em;
+            background: #eaf5f3;
+            width: 90%;
+            max-width: 1050px;
+            margin: 0 auto;
+            box-shadow: 0px 3px 6px silver;
+
+            h2 {
+              text-align: center;
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: bold;
+              font-style: normal;
+              letter-spacing: 3px;
+            }
+
+            ul {
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: 400;
+              font-style: normal;
+              list-style: none;
+              padding-top: 1em;
+              width: 100%;
+              margin: 0 auto;
+
+              li {
+                letter-spacing: 2px;
+                line-height: 1em;
+                margin-top: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

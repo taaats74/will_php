@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  // font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  // font-weight: 400;
+  // font-style: normal;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.section-header{
+  font-family: "bebas-neue-by-fontfabric", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  .green{
+    color: #8ec3c6;
+  }
+}
+.sub-title{
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: .7em;
+}
+.border{
+  width: 100px;
+  height: 1px;
+  background: #8ec3c6;
+  margin: 30px 0;
+}
+.btn{
+  a{
+    display: inline-block;
+    padding: .5em 4em;
+    text-decoration: none;
+    color: white;
+    background: black;
+    border: solid 1px black;
+    font-family: "toppan-bunkyu-gothic-pr6n", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    z-index: 1;
+    transition: .3s;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: white;
+      transition: transform ease .3s;
+      transform-origin: 100% 50%;
+      transform: scaleX(0);
+    }
+    &:hover {
+      color: black;
+      &::before {
+        transform-origin: 0% 50%;
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.hero-section {
+  .container {
+    background: rgba(125, 172, 175, .2);
+    border-bottom: solid 1px #b1cdcf;
+
+    .wrapper {
+      padding-top: 68px;
+      max-width: 1950px;
+      margin: 0 auto;
+      position: relative;
+
+      .img-wrapper {
+        width: 60%;
+      }
+
+      .hero-text {
+        position: absolute;
+        top: 55%;
+        left: 18%;
+
+        .section-header {
+          font-size: 2.5em;
+          letter-spacing: 4px;
+        }
+      }
+    }
+  }
+}
+
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  .sp {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
+}

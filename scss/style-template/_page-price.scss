@@ -1,0 +1,679 @@
+.page-price-contact{
+  .container{
+    .wrapper{
+      width: 83%;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 60px;
+      .content{
+        font-family: "toppan-bunkyu-gothic-pr6n", serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 2px;
+      }
+      .btn{
+        text-align: center;
+        margin-top: 40px;
+        a{
+          padding: .5em 2.5em;
+        }
+      }
+    }
+  }
+}
+
+.service-price{
+  .container{
+    .wrapper{
+      width: 83%;
+      max-width: 1200px;
+      margin: 0 auto;
+      .service-wrapper{
+        .service{
+          &.single{
+            .box-wrapper{
+              justify-content: center;
+            }
+          }
+          &.double{
+            .box-wrapper{
+              justify-content: center;
+              .box{
+                margin: 0 1.375%;
+              }
+            }
+          }
+          .price-header{
+            font-family: "fot-matisse-pron", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 2em;
+            line-height: 1em;
+            text-align: center;
+            margin-top: 120px;
+            span{
+              color: #7dacaf;
+            }
+          }
+          .border{
+            margin: 0 auto;
+            margin-top: 30px;
+          }
+          .ex{
+            font-family: "fot-matisse-pron", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.5em;
+            line-height: 1em;
+          }
+          .box-wrapper{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            .box{
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: 400;
+              font-style: normal;
+              width: 31.5%;
+              padding: 20px 20px 30px 20px;
+              border: solid 1px #7dacaf;
+              .title-wrapper{
+                display: flex;
+                align-items: center;
+                .num{
+                  p{
+                    color: #7dacaf;
+                    font-size: 3.5em;
+                    line-height: 1em;
+                  }
+                }
+                .title{
+                  .plan{
+                    font-size: 1.5em;
+                    font-weight: normal;
+                    margin-left: 10px;
+                  }
+                }
+              }
+              .desc{
+                margin: 30px 20px 30px 20px;
+                ul{
+                  list-style: none;
+                  li{
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+                    min-width: 250px;
+                    .li-header{
+                      font-weight: bold;
+                      width: 35%;
+                    }
+                    .li-desc{
+                      width: 65%;
+                    }
+                  }
+                }
+              }
+              .price{
+                p{
+                  color: #7dacaf;
+                  font-size: 1.5em;
+                  text-align: center;
+                  span{
+                    color: #7dacaf;
+                    font-size: 2em;
+                    line-height: 1em;
+                    margin-right: 10px;
+                  }
+                }
+                &.text{
+                  p{
+                    font-size: 1.8em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-top-contact {
+  &.price-contact{
+    .container {
+      background-image: url(img/page-top-contact-bg.png);
+      background-image: none;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: black;
+        opacity: 0;
+        z-index: 1;
+      }
+
+      .wrapper {
+        padding: 0;
+        width: 83%;
+        max-width: 1200px;
+        margin: 100px auto 80px auto;
+        position: relative;
+        z-index: 2;
+
+        .section-header {
+          font-size: 2.5em;
+          text-align: center;
+          color: black;
+          letter-spacing: 4px;
+        }
+
+        .sub-title {
+          text-align: center;
+          color: black;
+        }
+
+        .border {
+          margin: 30px auto;
+        }
+
+        .content {
+          letter-spacing: 1.8px;
+          width: 83%;
+          color: black;
+          margin: 0 auto;
+          line-height: 2em;
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        .btn {
+          text-align: center;
+          margin-top: 40px;
+          a{
+            padding: .5em 2.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .service-price {
+    .container {
+      .wrapper {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .service-wrapper {
+          .service {
+            &.single {
+              .box-wrapper {
+                justify-content: center;
+              }
+            }
+
+            &.double {
+              .box-wrapper {
+                justify-content: center;
+
+                .box {
+                  margin: 0 1.375%;
+                }
+              }
+            }
+
+            .price-header {
+              font-family: "fot-matisse-pron", sans-serif;
+              font-weight: 500;
+              font-style: normal;
+              font-size: 2em;
+              line-height: 1em;
+              text-align: center;
+              margin-top: 120px;
+
+              span {
+                color: #7dacaf;
+              }
+            }
+
+            .border {
+              margin: 0 auto;
+              margin-top: 30px;
+            }
+
+            .ex {
+              font-family: "fot-matisse-pron", sans-serif;
+              font-weight: 500;
+              font-style: normal;
+              text-align: center;
+              margin-top: 40px;
+              font-size: 1.5em;
+              line-height: 1em;
+            }
+
+            .box-wrapper {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 20px;
+
+              .box {
+                font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                font-weight: 400;
+                font-style: normal;
+                width: 31.5%;
+                padding: 20px 20px 30px 20px;
+                border: solid 1px #7dacaf;
+
+                .title-wrapper {
+                  display: flex;
+                  align-items: center;
+
+                  .num {
+                    p {
+                      color: #7dacaf;
+                      font-size: 3.5em;
+                      line-height: 1em;
+                    }
+                  }
+
+                  .title {
+                    .plan {
+                      font-size: 1.5em;
+                      line-height: 1em;
+                      font-weight: normal;
+                      margin-left: 10px;
+                    }
+                  }
+                }
+
+                .desc {
+                  margin: 30px 20px 30px 20px;
+
+                  ul {
+                    list-style: none;
+
+                    li {
+                      font-size: 18px;
+                      display: flex;
+                      align-items: center;
+                      white-space: nowrap;
+                      min-width: 250px;
+
+                      .li-header {
+                        font-weight: bold;
+                        width: 35%;
+                      }
+
+                      .li-desc {
+                        width: 65%;
+                      }
+                    }
+                  }
+                }
+
+                .price {
+                  p {
+                    color: #7dacaf;
+                    font-size: 1.5em;
+                    line-height: 1em;
+                    text-align: center;
+
+                    span {
+                      color: #7dacaf;
+                      font-size: 2em;
+                      line-height: 1em;
+                      margin-right: 10px;
+                    }
+                  }
+
+                  &.text {
+                    p {
+                      font-size: 1.8em;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .page-top-contact {
+    &.price-contact {
+      .container {
+        background-image: url(img/page-top-contact-bg.png);
+        background-image: none;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          background: black;
+          opacity: 0;
+          z-index: 1;
+        }
+
+        .wrapper {
+          padding: 0;
+          width: 83%;
+          max-width: 1200px;
+          margin: 100px auto 80px auto;
+          position: relative;
+          z-index: 2;
+
+          .section-header {
+            font-size: 2.5em;
+            text-align: center;
+            color: black;
+            letter-spacing: 4px;
+          }
+
+          .sub-title {
+            text-align: center;
+            color: black;
+          }
+
+          .border {
+            margin: 30px auto;
+          }
+
+          .content {
+            letter-spacing: 1.8px;
+            width: 100%;
+            color: black;
+            margin: 0 auto;
+            line-height: 2em;
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          .btn {
+            text-align: center;
+            margin-top: 40px;
+
+            a {
+              padding: .5em 2.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .hero-section {
+    &.price {
+      .container {
+        background: rgba(125, 172, 175, .2);
+        border-bottom: solid 1px #b1cdcf;
+
+        .wrapper {
+          padding-top: 68px;
+          max-width: 1950px;
+          margin: 0 auto;
+          position: relative;
+
+          .img-wrapper {
+            width: 100%;
+            overflow: hidden;
+
+            img {
+              width: 130%;
+            }
+          }
+
+          .hero-text {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+
+            .section-header {
+              font-size: 2.2em;
+              letter-spacing: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .service-price {
+    .container {
+      .wrapper {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .service-wrapper {
+          .service {
+            &.single {
+              .box-wrapper {
+                justify-content: center;
+              }
+            }
+
+            &.double {
+              .price-header{
+                font-size: 1.7em;
+                line-height: 1.5em;
+              }
+              .border{
+                margin-top: 20px;
+              }
+              .box-wrapper {
+                justify-content: center;
+
+                .box {
+                  margin: 0 1.375%;
+                  margin-top: 30px;
+                }
+              }
+            }
+
+            .price-header {
+              font-family: "fot-matisse-pron", sans-serif;
+              font-weight: 500;
+              font-style: normal;
+              font-size: 1.7em;
+              line-height: 1em;
+              text-align: center;
+              margin-top: 120px;
+
+              span {
+                color: #7dacaf;
+              }
+            }
+
+            .border {
+              margin: 0 auto;
+              margin-top: 30px;
+            }
+
+            .ex {
+              font-family: "fot-matisse-pron", sans-serif;
+              font-weight: 500;
+              font-style: normal;
+              text-align: center;
+              margin-top: 40px;
+              font-size: 1.5em;
+              line-height: 1em;
+            }
+
+            .box-wrapper {
+              display: block;
+              justify-content: space-between;
+              margin-top: 20px;
+
+              .box {
+                font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                font-weight: 400;
+                font-style: normal;
+                width: 100%;
+                padding: 20px 20px 30px 20px;
+                border: solid 1px #7dacaf;
+                margin-top: 30px;
+
+                .title-wrapper {
+                  display: flex;
+                  align-items: center;
+
+                  .num {
+                    p {
+                      color: #7dacaf;
+                      font-size: 2.5em;
+                      line-height: 1em;
+                    }
+                  }
+
+                  .title {
+                    .plan {
+                      font-size: 1.5em;
+                      line-height: 1em;
+                      font-weight: normal;
+                      margin-left: 10px;
+                    }
+                  }
+                }
+
+                .desc {
+                  margin: 30px 20px 30px 20px;
+
+                  ul {
+                    list-style: none;
+
+                    li {
+                      font-size: 18px;
+                      display: flex;
+                      align-items: center;
+                      white-space: nowrap;
+                      min-width: 250px;
+
+                      .li-header {
+                        font-weight: bold;
+                        width: 35%;
+                      }
+
+                      .li-desc {
+                        width: 65%;
+                      }
+                    }
+                  }
+                }
+
+                .price {
+                  p {
+                    color: #7dacaf;
+                    font-size: 1.5em;
+                    line-height: 1em;
+                    text-align: center;
+
+                    span {
+                      color: #7dacaf;
+                      font-size: 2em;
+                      line-height: 1em;
+                      margin-right: 10px;
+                    }
+                  }
+
+                  &.text {
+                    p {
+                      font-size: 1.8em;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .page-top-contact {
+    &.price-contact {
+      .container {
+        background-image: url(img/page-top-contact-bg.png);
+        background-image: none;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          background: black;
+          opacity: 0;
+          z-index: 1;
+        }
+
+        .wrapper {
+          padding: 0;
+          width: 95%;
+          max-width: 1200px;
+          margin: 100px auto 80px auto;
+          position: relative;
+          z-index: 2;
+
+          .section-header {
+            font-size: 2.5em;
+            text-align: center;
+            color: black;
+            letter-spacing: 4px;
+          }
+
+          .sub-title {
+            text-align: center;
+            color: black;
+          }
+
+          .border {
+            margin: 30px auto;
+          }
+
+          .content {
+            letter-spacing: 1.8px;
+            width: 100%;
+            color: black;
+            margin: 0 auto;
+            line-height: 2em;
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          .btn {
+            text-align: center;
+            margin-top: 40px;
+
+            a {
+              padding: .5em 2.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

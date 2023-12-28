@@ -1,0 +1,863 @@
+.hero-section {
+  &.service {
+    .container {
+      background: rgba(125, 172, 175, .2);
+      border-bottom: solid 1px #b1cdcf;
+
+      .wrapper {
+        padding-top: 68px;
+        max-width: 1950px;
+        margin: 0 auto;
+        position: relative;
+
+        .img-wrapper {
+          width: 77%;
+        }
+
+        .hero-text {
+          position: absolute;
+          top: 55%;
+          left: 18%;
+
+          .section-header {
+            font-size: 2.5em;
+            letter-spacing: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.archive-service-service {
+  .container {
+    .wrapper {
+      width: 83%;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 140px;
+      margin-bottom: 90px;
+
+      .section-header {
+        font-size: 2.5em;
+        letter-spacing: 4px;
+        text-align: center;
+      }
+
+      .sub-title {
+        font-family: "toppan-bunkyu-gothic-pr6n", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+      }
+
+      .border {
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      .service-wrapper{
+        margin-top: 40px;
+        .box-wrapper{
+          &.above{
+            display: flex;
+            justify-content: center;
+            .service{
+              margin: 0 1.75%;
+            }
+          }
+          &.bottom{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+          }
+          .service{
+            width: 31%;
+            a{
+              position: relative;
+              text-decoration: none;
+              display: block;
+              padding: 1.5em 1em 4em 1em;
+              transition: .3s;
+              width: 100%;
+              height: 100%;
+              &:hover{
+                background: #7dacaf;
+                .num{
+                  p{
+                    color: white;
+                  }
+                }
+                .service-border{
+                  background: white;
+                }
+                h3{
+                  color: white;
+                }
+                .service-icon{
+                  background: white;
+                  i{
+                    color: #7dacaf;
+                  }
+                }
+                p{
+                  color: white;
+                }
+                .more-wrapper{
+                  .text{
+                    color: white;
+                  }
+                  .more-border{
+                    background: white;
+                  }
+                }
+              }
+              .num{
+                p{
+                  font-family: "hiragino-kaku-gothic-pron", sans-serif;
+                  font-weight: 600;
+                  font-style: normal;
+                  font-size: 1.9em;
+                  text-align: center;
+                  color: #7dacaf;
+                  transition: .3s;
+                }
+              }
+              .service-border{
+                width: 50px;
+                height: 1px;
+                background: #7dacaf;
+                margin: 0 auto;
+                margin-top: 10px;
+                transition: .3s;
+              }
+              h3{
+                text-align: center;
+                margin-top: 15px;
+                letter-spacing: 2px;
+                font-size: 1.2em;
+                transition: .3s;
+              }
+              .service-icon{
+                background: #7dacaf;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                text-align: center;
+                margin: 20px auto 20px auto;
+                transition: .3s;
+                i{
+                  font-size: 2.7em;
+                  line-height: 90px;
+                  color: white;
+                  transition: .3s;
+                }
+              }
+              .text{
+                font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 1px;
+                transition: .3s;
+              }
+              .more-wrapper{
+                position: absolute;
+                bottom: 1.5em;
+                right: 1.2em;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                .text{
+                  color: #7dacaf;
+                  transition: .3s;
+                }
+                .more-border{
+                  width: 50px;
+                  height: 1px;
+                  background: #7dacaf;
+                  margin-left: 20px;
+                  transform: translateY(3px);
+                  transition: .3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.archive-service-price{
+  .container{
+    background: #d6e0e1;
+    padding: 80px 0 100px 0;
+    .wrapper{
+      width: 83%;
+      max-width: 1200px;
+      margin: 0 auto;
+      .section-header {
+        font-size: 2.5em;
+        letter-spacing: 4px;
+        text-align: center;
+      }
+
+      .sub-title {
+        font-family: "toppan-bunkyu-gothic-pr6n", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+      }
+
+      .border {
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      .card-wrapper{
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        .card{
+          width: 19%;
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+          line-height: 1em;
+          background: white;
+          box-shadow: 3px 3px 6px #9ca0a0;
+          &:nth-child(4){
+            .price{
+              font-size: 1.1em;
+              line-height: 1.3em;
+            }
+          }
+          h3{
+            padding: 1em;
+            color: white;
+            text-align: center;
+            background: #7dacaf;
+            font-weight: normal;
+          }
+          ul{
+            list-style: none;
+            padding: 1em;
+            border-bottom: solid 1px #EDEDED;
+            position: relative;
+            li{
+              &+li{
+                margin-top: 1em;
+              }
+            }
+          }
+          .price{
+            padding: 1em;
+            text-align: center;
+            font-size: 1.3em;
+            letter-spacing: 2px;;
+            span{
+              font-size: 1.4em;
+            }
+          }
+        }
+      }
+      .btn{
+        text-align: center;
+        margin-top: 70px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .archive-service-service {
+    .container {
+      .wrapper {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 70px;
+
+        .section-header {
+          font-size: 2.5em;
+          letter-spacing: 4px;
+          text-align: center;
+        }
+
+        .sub-title {
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+        }
+
+        .border {
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+
+        .service-wrapper {
+          margin-top: 20px;
+
+          .box-wrapper {
+            &.above {
+              display: flex;
+              justify-content: center;
+
+              .service {
+                margin: 0 1.75%;
+              }
+            }
+
+            &.bottom {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 35px;
+            }
+
+            .service {
+              width: 31%;
+
+              a {
+                position: relative;
+                text-decoration: none;
+                display: block;
+                padding: 1.5em 1em 4em 1em;
+                transition: .3s;
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+                  background: #7dacaf;
+
+                  .num {
+                    p {
+                      color: white;
+                    }
+                  }
+
+                  .service-border {
+                    background: white;
+                  }
+
+                  h3 {
+                    color: white;
+                  }
+
+                  .service-icon {
+                    background: white;
+
+                    i {
+                      color: #7dacaf;
+                    }
+                  }
+
+                  p {
+                    color: white;
+                  }
+
+                  .more-wrapper {
+                    .text {
+                      color: white;
+                    }
+
+                    .more-border {
+                      background: white;
+                    }
+                  }
+                }
+
+                .num {
+                  p {
+                    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 1.9em;
+                    text-align: center;
+                    color: #7dacaf;
+                    transition: .3s;
+                  }
+                }
+
+                .service-border {
+                  width: 50px;
+                  height: 1px;
+                  background: #7dacaf;
+                  margin: 0 auto;
+                  margin-top: 10px;
+                  transition: .3s;
+                }
+
+                h3 {
+                  text-align: center;
+                  margin-top: 15px;
+                  letter-spacing: 2px;
+                  font-size: 1.2em;
+                  transition: .3s;
+                }
+
+                .service-icon {
+                  background: #7dacaf;
+                  width: 90px;
+                  height: 90px;
+                  border-radius: 50%;
+                  text-align: center;
+                  margin: 20px auto 20px auto;
+                  transition: .3s;
+
+                  i {
+                    font-size: 2.7em;
+                    line-height: 90px;
+                    color: white;
+                    transition: .3s;
+                  }
+                }
+
+                .text {
+                  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                  font-weight: 400;
+                  font-style: normal;
+                  letter-spacing: 1px;
+                  transition: .3s;
+                }
+
+                .more-wrapper {
+                  position: absolute;
+                  bottom: 1.5em;
+                  right: 1.2em;
+                  display: flex;
+                  justify-content: end;
+                  align-items: center;
+
+                  .text {
+                    color: #7dacaf;
+                    transition: .3s;
+                  }
+
+                  .more-border {
+                    width: 50px;
+                    height: 1px;
+                    background: #7dacaf;
+                    margin-left: 20px;
+                    transform: translateY(3px);
+                    transition: .3s;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .archive-service-price {
+    .container {
+      background: #d6e0e1;
+      padding: 80px 0 100px 0;
+
+      .wrapper {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .section-header {
+          font-size: 2.5em;
+          letter-spacing: 4px;
+          text-align: center;
+        }
+
+        .sub-title {
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+        }
+
+        .border {
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+
+        .card-wrapper {
+          margin-top: 60px;
+          display: flex;
+          justify-content: space-between;
+
+          .card {
+            width: 19.5%;
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1em;
+            background: white;
+            box-shadow: 3px 3px 6px #9ca0a0;
+
+            &:nth-child(4) {
+              .price {
+                font-size: 1em;
+                line-height: 1.3em;
+              }
+            }
+
+            h3 {
+              padding: 1em;
+              color: white;
+              text-align: center;
+              background: #7dacaf;
+              font-weight: normal;
+              font-size: 1em;
+            }
+
+            ul {
+              list-style: none;
+              padding: .7em;
+              border-bottom: solid 1px #EDEDED;
+              position: relative;
+
+              li {
+                font-size: .85em;
+                &+li {
+                  margin-top: 1em;
+                }
+              }
+            }
+
+            .price {
+              padding: 1em;
+              text-align: center;
+              font-size: 1em;
+              letter-spacing: 2px;
+              ;
+
+              span {
+                font-size: 1.3em;
+              }
+            }
+          }
+        }
+
+        .btn {
+          text-align: center;
+          margin-top: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .hero-section {
+    &.service {
+      .container {
+        background: rgba(125, 172, 175, .2);
+        border-bottom: solid 1px #b1cdcf;
+
+        .wrapper {
+          padding-top: 68px;
+          max-width: 1950px;
+          margin: 0 auto;
+          position: relative;
+
+          .img-wrapper {
+            width: 100%;
+            overflow: hidden;
+            img{
+              width: 170%;
+            }
+          }
+
+          .hero-text {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+
+            .section-header {
+              font-size: 2.5em;
+              letter-spacing: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .archive-service-service {
+    .container {
+      .wrapper {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+        .section-header {
+          font-size: 2.5em;
+          letter-spacing: 4px;
+          text-align: center;
+        }
+
+        .sub-title {
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+        }
+
+        .border {
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+
+        .service-wrapper {
+          margin-top: 20px;
+
+          .box-wrapper {
+            &.above {
+              display: block;
+              justify-content: center;
+
+              .service {
+                margin: 0;
+              }
+            }
+
+            &.bottom {
+              display: block;
+              justify-content: space-between;
+              margin-top: 0;
+            }
+
+            .service {
+              width: 100%;
+
+              a {
+                position: relative;
+                text-decoration: none;
+                display: block;
+                padding: 1.5em 1em 4em 1em;
+                transition: .3s;
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+                  background: #7dacaf;
+
+                  .num {
+                    p {
+                      color: white;
+                    }
+                  }
+
+                  .service-border {
+                    background: white;
+                  }
+
+                  h3 {
+                    color: white;
+                  }
+
+                  .service-icon {
+                    background: white;
+
+                    i {
+                      color: #7dacaf;
+                    }
+                  }
+
+                  p {
+                    color: white;
+                  }
+
+                  .more-wrapper {
+                    .text {
+                      color: white;
+                    }
+
+                    .more-border {
+                      background: white;
+                    }
+                  }
+                }
+
+                .num {
+                  p {
+                    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 1.9em;
+                    text-align: center;
+                    color: #7dacaf;
+                    transition: .3s;
+                  }
+                }
+
+                .service-border {
+                  width: 50px;
+                  height: 1px;
+                  background: #7dacaf;
+                  margin: 0 auto;
+                  margin-top: 10px;
+                  transition: .3s;
+                }
+
+                h3 {
+                  text-align: center;
+                  margin-top: 15px;
+                  letter-spacing: 2px;
+                  font-size: 1.2em;
+                  transition: .3s;
+                }
+
+                .service-icon {
+                  background: #7dacaf;
+                  width: 90px;
+                  height: 90px;
+                  border-radius: 50%;
+                  text-align: center;
+                  margin: 20px auto 20px auto;
+                  transition: .3s;
+
+                  i {
+                    font-size: 2.7em;
+                    line-height: 90px;
+                    color: white;
+                    transition: .3s;
+                  }
+                }
+
+                .text {
+                  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                  font-weight: 400;
+                  font-style: normal;
+                  letter-spacing: 1px;
+                  transition: .3s;
+                }
+
+                .more-wrapper {
+                  position: absolute;
+                  bottom: 1.5em;
+                  right: 1.2em;
+                  display: flex;
+                  justify-content: end;
+                  align-items: center;
+
+                  .text {
+                    color: #7dacaf;
+                    transition: .3s;
+                  }
+
+                  .more-border {
+                    width: 50px;
+                    height: 1px;
+                    background: #7dacaf;
+                    margin-left: 20px;
+                    transform: translateY(3px);
+                    transition: .3s;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .archive-service-price {
+    .container {
+      background: #d6e0e1;
+      padding: 80px 0 100px 0;
+
+      .wrapper {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .section-header {
+          font-size: 2.5em;
+          letter-spacing: 4px;
+          text-align: center;
+        }
+
+        .sub-title {
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+        }
+
+        .border {
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+
+        .card-wrapper {
+          margin-top: 60px;
+          display: block;
+          justify-content: space-between;
+
+          .card {
+            width: 70%;
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1em;
+            background: white;
+            box-shadow: 3px 3px 6px #9ca0a0;
+            margin: 0 auto;
+            &+.card{
+              margin-top: 20px;
+            }
+
+            &:nth-child(4) {
+              .price {
+                font-size: 1em;
+                line-height: 1.3em;
+              }
+            }
+
+            h3 {
+              padding: 1em;
+              color: white;
+              text-align: center;
+              background: #7dacaf;
+              font-weight: normal;
+              font-size: 1em;
+            }
+
+            ul {
+              list-style: none;
+              padding: .7em;
+              border-bottom: solid 1px #EDEDED;
+              position: relative;
+
+              li {
+                font-size: .85em;
+
+                &+li {
+                  margin-top: 1em;
+                }
+              }
+            }
+
+            .price {
+              padding: 1em;
+              text-align: center;
+              font-size: 1em;
+              letter-spacing: 2px;
+              ;
+
+              span {
+                font-size: 1.3em;
+              }
+            }
+          }
+        }
+
+        .btn {
+          text-align: center;
+          margin-top: 70px;
+        }
+      }
+    }
+  }
+}

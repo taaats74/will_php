@@ -1,0 +1,520 @@
+.hero-section{
+  &.single-service-web{
+    .container{
+      overflow: hidden;
+      .wrapper{
+        .img-wrapper{
+          width: 100%;
+          img{
+            width: 135%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.single-service-price {
+  &.web{
+    .container {
+      .wrapper {
+        width: 83%;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 95px;
+
+        .header-text {
+          display: flex;
+          align-items: center;
+
+          .section-header {
+            font-size: 2.5em;
+            letter-spacing: 5px;
+            line-height: 1em;
+          }
+
+          .border {
+            transform: translateY(-5px);
+            margin-left: 30px;
+          }
+        }
+
+        .sub-title {
+          transform: translateY(-10px);
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        .text-content {
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+          margin-top: 20px;
+        }
+
+        .price-header {
+          margin-top: 70px;
+          letter-spacing: 3px;
+          font-size: 1.4em;
+          padding-left: 15px;
+          border-left: solid 5px #7dacaf;
+          line-height: 1em;
+        }
+
+        .box-wrapper {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 40px;
+
+          .box {
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+            width: 31.5%;
+            padding: 20px 20px 70px 20px;
+            border: solid 1px #7dacaf;
+            position: relative;
+
+            .title-wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .num {
+                p {
+                  color: #7dacaf;
+                  font-size: 3em;
+                  line-height: 1em;
+                }
+              }
+
+              .title {
+                .plan {
+                  font-size: 1.7em;
+                  font-weight: normal;
+                  margin-left: 10px;
+                  letter-spacing: 2px;
+                }
+              }
+            }
+
+            .recommendation {
+              width: 80%;
+              margin: 0 auto;
+              line-height: 1.3em;
+              text-align: center;
+              // border: solid 1px #dfe9ea;
+              padding: .5em;
+              font-size: .85em;
+              letter-spacing: 2px;
+              color: #7dacaf;
+              // box-shadow: 3px 3px 6px #b1b9ba;
+            }
+
+            .desc {
+              // padding: 10px 20px 30px 20px;
+              // background: pink;
+              width: 70%;
+              margin: 20px auto 40px auto;
+              // background: pink;
+
+              ul {
+                list-style: none;
+                position: relative;
+                // background: pink;
+
+                li {
+                  font-size: 1em;
+                  display: flex;
+                  align-items: center;
+                  white-space: nowrap;
+
+                  .li-header {
+                    font-weight: bold;
+                    width: 55%;
+                    padding-left: 30px;
+                  }
+
+                  .li-desc {
+                    width: 45%;
+                  }
+                }
+
+                .etc {
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                }
+              }
+            }
+
+            .price {
+              position: absolute;
+              bottom: 20px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+
+              p {
+                color: #7dacaf;
+                font-size: 1.5em;
+                text-align: center;
+
+                span {
+                  color: #7dacaf;
+                  font-size: 1.8em;
+                  line-height: 1em;
+                  margin-right: 10px;
+                }
+              }
+
+              &.text {
+                p {
+                  font-size: 1.8em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .single-service-price {
+    &.web {
+      .container {
+        .wrapper {
+          width: 95%;
+          max-width: 1200px;
+          margin: 0 auto;
+          margin-top: 95px;
+
+          .header-text {
+            display: flex;
+            align-items: center;
+
+            .section-header {
+              font-size: 2.5em;
+              letter-spacing: 5px;
+              line-height: 1em;
+            }
+
+            .border {
+              transform: translateY(-5px);
+              margin-left: 30px;
+            }
+          }
+
+          .sub-title {
+            transform: translateY(-10px);
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          .text-content {
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 20px;
+          }
+
+          .price-header {
+            margin-top: 70px;
+            letter-spacing: 3px;
+            font-size: 1.4em;
+            padding-left: 15px;
+            border-left: solid 5px #7dacaf;
+            line-height: 1em;
+          }
+
+          .box-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+
+            .box {
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: 400;
+              font-style: normal;
+              width: 31.5%;
+              padding: 20px 20px 70px 20px;
+              border: solid 1px #7dacaf;
+              position: relative;
+
+              .title-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .num {
+                  p {
+                    color: #7dacaf;
+                    font-size: 3em;
+                    line-height: 1em;
+                  }
+                }
+
+                .title {
+                  .plan {
+                    font-size: 1.7em;
+                    font-weight: normal;
+                    margin-left: 10px;
+                    letter-spacing: 2px;
+                  }
+                }
+              }
+
+              .desc {
+                // padding: 10px 20px 30px 20px;
+                // background: pink;
+                width: 70%;
+                margin: 20px auto 40px auto;
+                // background: pink;
+
+                ul {
+                  list-style: none;
+                  position: relative;
+                  // background: pink;
+
+                  li {
+                    font-size: 1em;
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+
+                    .li-header {
+                      font-weight: bold;
+                      width: 55%;
+                      padding-left: 0px;
+                    }
+
+                    .li-desc {
+                      width: 45%;
+                    }
+                  }
+
+                  .etc {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                  }
+                }
+              }
+
+              .price {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+
+                p {
+                  color: #7dacaf;
+                  font-size: 1.5em;
+                  text-align: center;
+
+                  span {
+                    color: #7dacaf;
+                    font-size: 1.8em;
+                    line-height: 1em;
+                    margin-right: 10px;
+                  }
+                }
+
+                &.text {
+                  p {
+                    font-size: 1.8em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .hero-section {
+    &.single-service-web {
+      .container{
+        overflow: hidden;
+        .wrapper{
+          .img-wrapper {
+              width: 220%;
+            }
+          .hero-text {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+
+            .section-header {
+              font-size: 2em;
+              letter-spacing: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .single-service-price {
+    &.web {
+      .container {
+        .wrapper {
+          width: 95%;
+          max-width: 1200px;
+          margin: 0 auto;
+          margin-top: 95px;
+
+          .header-text {
+            display: flex;
+            align-items: center;
+
+            .section-header {
+              font-size: 2.5em;
+              letter-spacing: 5px;
+              line-height: 1em;
+            }
+
+            .border {
+              transform: translateY(-5px);
+              margin-left: 30px;
+            }
+          }
+
+          .sub-title {
+            transform: translateY(-10px);
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          .text-content {
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 20px;
+          }
+
+          .price-header {
+            margin-top: 70px;
+            letter-spacing: 3px;
+            font-size: 1.4em;
+            padding-left: 15px;
+            border-left: solid 5px #7dacaf;
+            line-height: 1em;
+          }
+
+          .box-wrapper {
+            display: block;
+            justify-content: space-between;
+            margin-top: 40px;
+
+            .box {
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: 400;
+              font-style: normal;
+              width: 95%;
+              padding: 20px 20px 40px 20px;
+              border: solid 1px #7dacaf;
+              position: relative;
+
+              .title-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .num {
+                  p {
+                    color: #7dacaf;
+                    font-size: 2.5em;
+                    line-height: 1em;
+                  }
+                }
+
+                .title {
+                  .plan {
+                    font-size: 1.4em;
+                    font-weight: normal;
+                    margin-left: 10px;
+                    letter-spacing: 2px;
+                  }
+                }
+              }
+
+              .desc {
+                // padding: 10px 20px 30px 20px;
+                // background: pink;
+                width: 70%;
+                margin: 20px auto 40px auto;
+                // background: pink;
+
+                ul {
+                  list-style: none;
+                  position: relative;
+                  // background: pink;
+
+                  li {
+                    font-size: 1em;
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+
+                    .li-header {
+                      font-weight: bold;
+                      width: 55%;
+                      padding-left: 0px;
+                    }
+
+                    .li-desc {
+                      width: 45%;
+                    }
+                  }
+
+                  .etc {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                  }
+                }
+              }
+
+              .price {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+
+                p {
+                  color: #7dacaf;
+                  font-size: 1.3em;
+                  text-align: center;
+
+                  span {
+                    color: #7dacaf;
+                    font-size: 1.5em;
+                    line-height: 1em;
+                    margin-right: 10px;
+                  }
+                }
+
+                &.text {
+                  p {
+                    font-size: 1.8em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

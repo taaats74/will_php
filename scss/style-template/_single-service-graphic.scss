@@ -1,0 +1,346 @@
+.hero-section {
+  &.gp {
+    .container {
+      background: rgba(125, 172, 175, .2);
+      border-bottom: solid 1px #b1cdcf;
+      overflow: hidden;
+
+      .wrapper {
+        padding-top: 68px;
+        max-width: 1950px;
+        margin: 0 auto;
+        position: relative;
+
+        .img-wrapper {
+          width: 80%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .hero-text {
+          position: absolute;
+          top: 55%;
+          left: 18%;
+
+          .section-header {
+            font-size: 2.5em;
+            letter-spacing: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.single-service-price {
+  &.gp{
+    .container {
+      .wrapper {
+        width: 83%;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 95px;
+
+        .header-text {
+          display: flex;
+          align-items: center;
+
+          .section-header {
+            font-size: 2.5em;
+            letter-spacing: 5px;
+            line-height: 1em;
+          }
+
+          .border {
+            transform: translateY(-5px);
+            margin-left: 30px;
+          }
+        }
+
+        .sub-title {
+          transform: translateY(-10px);
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        .text-content {
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          font-weight: 400;
+          font-style: normal;
+          margin-top: 20px;
+        }
+
+        .price-header {
+          margin-top: 70px;
+          letter-spacing: 3px;
+          font-size: 1.4em;
+          padding-left: 15px;
+          border-left: solid 5px #7dacaf;
+          line-height: 1em;
+        }
+
+        .box-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-top: 40px;
+
+          .box {
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+            width: 31.5%;
+            padding: 20px 20px 70px 20px;
+            border: solid 1px #7dacaf;
+            position: relative;
+            &:nth-child(4){
+              margin-top: 30px;
+            }
+
+            .title-wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .num {
+                p {
+                  color: #7dacaf;
+                  font-size: 2.2em;
+                  line-height: 1em;
+                }
+              }
+
+              .title {
+                .plan {
+                  font-size: 1.7em;
+                  font-weight: normal;
+                  margin-left: 10px;
+                  letter-spacing: 2px;
+                }
+              }
+            }
+
+            .recommendation {
+              width: 80%;
+              margin: 0 auto;
+              line-height: 1.3em;
+              text-align: left;
+              // border: solid 1px #dfe9ea;
+              padding: .9em;
+              font-size: 1em;
+              letter-spacing: 2px;
+              // color: #7dacaf;
+              color: black;
+              // box-shadow: 3px 3px 6px #b1b9ba;
+            }
+
+            .price {
+              position: absolute;
+              bottom: 20px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+
+              p {
+                color: #7dacaf;
+                font-size: 1.5em;
+                text-align: center;
+
+                span {
+                  color: #7dacaf;
+                  font-size: 1.8em;
+                  line-height: 1em;
+                  margin-right: 10px;
+                }
+              }
+
+              &.text {
+                p {
+                  font-size: 1.8em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .hero-section {
+    &.gp {
+      .container {
+        background: rgba(125, 172, 175, .2);
+        border-bottom: solid 1px #b1cdcf;
+        overflow: hidden;
+
+        .wrapper {
+          padding-top: 68px;
+          max-width: 1950px;
+          margin: 0 auto;
+          position: relative;
+
+          .img-wrapper {
+            width: 170%;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .hero-text {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+
+            .section-header {
+              font-size: 2.5em;
+              letter-spacing: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .single-service-price {
+    &.gp {
+      .container {
+        .wrapper {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          margin-top: 95px;
+
+          .header-text {
+            display: flex;
+            align-items: center;
+
+            .section-header {
+              font-size: 2.5em;
+              letter-spacing: 5px;
+              line-height: 1em;
+            }
+
+            .border {
+              transform: translateY(-5px);
+              margin-left: 30px;
+            }
+          }
+
+          .sub-title {
+            transform: translateY(-10px);
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          .text-content {
+            font-family: "toppan-bunkyu-gothic-pr6n", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 20px;
+          }
+
+          .price-header {
+            margin-top: 70px;
+            letter-spacing: 3px;
+            font-size: 1.4em;
+            padding-left: 15px;
+            border-left: solid 5px #7dacaf;
+            line-height: 1em;
+          }
+
+          .box-wrapper {
+            display: block;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+
+            .box {
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: 400;
+              font-style: normal;
+              width: 100%;
+              padding: 20px 20px 70px 20px;
+              border: solid 1px #7dacaf;
+              position: relative;
+
+              &:nth-child(4) {
+                margin-top: 30px;
+              }
+
+              .title-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .num {
+                  p {
+                    color: #7dacaf;
+                    font-size: 2.2em;
+                    line-height: 1em;
+                  }
+                }
+
+                .title {
+                  .plan {
+                    font-size: 1.7em;
+                    font-weight: normal;
+                    margin-left: 10px;
+                    letter-spacing: 2px;
+                  }
+                }
+              }
+
+              .recommendation {
+                width: 80%;
+                margin: 0 auto;
+                line-height: 1.3em;
+                text-align: left;
+                // border: solid 1px #dfe9ea;
+                padding: .9em;
+                font-size: 1em;
+                letter-spacing: 2px;
+                // color: #7dacaf;
+                color: black;
+                // box-shadow: 3px 3px 6px #b1b9ba;
+              }
+
+              .price {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+
+                p {
+                  color: #7dacaf;
+                  font-size: 1.5em;
+                  text-align: center;
+
+                  span {
+                    color: #7dacaf;
+                    font-size: 1.8em;
+                    line-height: 1em;
+                    margin-right: 10px;
+                  }
+                }
+
+                &.text {
+                  p {
+                    font-size: 1.8em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
