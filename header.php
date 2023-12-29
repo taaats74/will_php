@@ -22,6 +22,8 @@
         wp_title('|', true, 'right');
       elseif(is_page()):
         wp_title('|', true, 'right');
+      elseif(is_archive()):
+        wp_title('|', true, 'right');
       endif;
         bloginfo('name');
     ?>
