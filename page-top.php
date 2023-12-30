@@ -28,9 +28,31 @@
         <h2 class="section-header"><span class="green">t</span>opics</h2>
         <p class="sub-title">お知らせ</p>
         <ul>
+          <?php
+            $args = array(
+              'post_type' => 'info',
+              'posts_per_page' => 1,
+            );
+            $info = new WP_Query($args);
+            if($info->have_posts()):
+              while($info->have_posts()):
+                $info->the_post();
+          ?>
           <li>
-            <a href=""><span class="date">2024.11.12</span><span class="title">ホームページを公開しました。</span></a>
+            <a href="<?php the_permalink(); ?>">
+              <span class="date"><?php the_time('Y.m.d') ?></span>
+              <span class="title"><?php the_title(); ?></span>
+            </a>
           </li>
+          <?php
+            endwhile;
+          else:
+          ?>
+          <li>お知らせはまだありません。</li>
+          <?php
+            endif;
+            wp_reset_postdata();
+          ?>
         </ul>
       </div>
     </div>
@@ -53,7 +75,7 @@
         <div class="text-wrapper">
           <p class="content">わたしたちは、ウェブ制作やウェブマーケティング、SNS運用サポートのサービスをワンストップで提供することで、お客様のビジネスをトータルでサポートさせていただきます。弊社の強みは、横断したウェブマーケティングにおける知見と経験を活かし、お客様に最適なウェブ周りの戦略を一緒に考え、実行することです。ウェブ担当者やマーケティング部門がない地方の中小企業様にとって、戦略から戦術の策定、実行まで一気通貫で対応することは簡単ではありません。そんな担当者がいない企業様のビジネスや課題を理解し、その解決に全力で取り組むことが私たちの使命です。</p>
           <div class="btn">
-            <a href="">view more</a>
+            <a href="<?php echo get_page_link(11); ?>">view more</a>
           </div>
         </div>
         <div class="img-wrapper">
@@ -72,7 +94,7 @@
       <div class="border"></div>
       <p class="content">ウェブ担当者がいない地方の中小企業様を中心に、Webサイトの制作からウェブマーケティング施策まで、柔軟で効果的なソリューションをご提案させていただきます。また、私たちはお客様のビジョンを理解し、共に成長するための信頼性と長期的なパートナーシップを築くことが、ビジネスを成功するために非常に重要だと考えております。</p>
       <div class="btn">
-        <a href="">view more</a>
+        <a href="<?php echo get_page_link(39); ?>">view more</a>
       </div>
     </div>
     <div class="cover"></div>
@@ -90,15 +112,15 @@
           <a href="">
             <div class="title-wrapper">
               <div class="title">
-                <h3 class="pjct-name">知育サイト・ロゴ</h3>
-                <p class="client-name">babynias様</p>
+                <h3 class="pjct-name">イベントLP・バナー</h3>
+                <p class="client-name">東京コーチング協会様</p>
               </div>
               <div class="num">
                 <p>01</p>
               </div>
             </div>
             <div class="img-wrapper">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/works01.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/works02.png" alt="">
             </div>
             <div class="works-btn">
               <div class="works-border"></div>
@@ -148,7 +170,7 @@
         </div>
       </div>
       <div class="btn">
-        <a href="">view more</a>
+        <a href="<?php echo get_page_link(43); ?>">view more</a>
       </div>
     </div>
   </div>
@@ -309,7 +331,7 @@
       <div class="border"></div>
       <p class="content">当社はウェブサイト制作に関するご質問やお見積もりのご依頼、ウェブ戦略に関する相談など、お客様のさまざまなニーズに対応いたします。専門スタッフがお客様のご要望を丁寧にお伺いし、最適なソリューションを提案いたします。お気軽にお問い合わせください。</p>
       <div class="btn transparent">
-        <a href="">view more</a>
+        <a href="<?php echo get_page_link(15); ?>">view more</a>
       </div>
     </div>
   </div>
@@ -323,7 +345,7 @@
       <div class="border"></div>
       <p class="content">弊社では、一緒に中小企業を支え、デジタル領域で共に成長するパートナー様を募集しています。あなたのクリエイティブなスキルでお客様の成功をともにサポートしませんか。興味があれば、お気軽にお問い合わせください。</p>
       <div class="btn">
-        <a href="">view more</a>
+        <a href="<?php echo get_page_link(18); ?>">view more</a>
       </div>
     </div>
   </dic>

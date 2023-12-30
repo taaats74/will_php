@@ -42,31 +42,12 @@
             </a>
           </div>
         </h1>
-        <div class="header-menu">
-          <ul>
-            <li>
-              <a href="">home</a>
-            </li>
-            <li>
-              <a href="">about</a>
-            </li>
-            <li>
-              <a href="">service</a>
-            </li>
-            <li>
-              <a href="">works</a>
-            </li>
-            <li>
-              <a href="">blog</a>
-            </li>
-            <li>
-              <a href="">partner</a>
-            </li>
-            <li>
-              <a href="">contact</a>
-            </li>
-          </ul>
-        </div>
+        <?php
+          wp_nav_menu(array(
+            'theme_location' => 'header-menu-child',
+            'container' => 'nav',
+          ));
+        ?>
       </div>
       <div class="cover-white"></div>
     </div>
@@ -83,7 +64,15 @@
           <div class="img-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="">
           </div>
-          <ul class="menu">
+          <?php
+            wp_nav_menu(array(
+              'theme_location' => 'sp-menu',
+              'container' => 'nav',
+              'link_before' => '<span></span>',
+              'link_after' => '<i class="fas fa-chevron-right"></i>'
+            ));
+          ?>
+          <!-- <ul class="menu">
             <li>
               <a href=""><span></span>home<i class="fa-solid fa-chevron-right"></i></a>
             </li>
@@ -105,7 +94,7 @@
             <li>
               <a href=""><span></span>contact<i class="fa-solid fa-chevron-right"></i></a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>

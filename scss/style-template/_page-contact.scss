@@ -84,19 +84,22 @@
                 margin-left: 3px;
               }
             }
-            input{
+            span{
               width: 75%;
-              padding: 1em;
-              font-family: "toppan-bunkyu-gothic-pr6n", serif;
-              font-weight: 400;
-              font-style: normal;
-            }
-            textarea{
-              width: 75%;
-              padding: 1em;
-              font-family: "toppan-bunkyu-gothic-pr6n", serif;
-              font-weight: 400;
-              font-style: normal;
+              input{
+                width: 100%;
+                padding: 1em;
+                font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                font-weight: 400;
+                font-style: normal;
+              }
+              textarea{
+                width: 100%;
+                padding: 1em;
+                font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                font-weight: 400;
+                font-style: normal;
+              }
             }
           }
         }
@@ -222,16 +225,19 @@
                   margin-left: 3px;
                 }
               }
-
-              input {
+              span{
                 width: 75%;
-                padding: 1em;
+                input {
+                  width: 100%;
+                  padding: 1em;
+                }
+
+                textarea {
+                  width: 100%;
+                  padding: 1em;
+                }
               }
 
-              textarea {
-                width: 75%;
-                padding: 1em;
-              }
             }
           }
         }
@@ -388,18 +394,21 @@
                   margin-left: 3px;
                 }
               }
-
-              input {
+              span{
                 width: 100%;
-                padding: 1em;
-                margin-top: 1em;
+                input {
+                  width: 100%;
+                  padding: 1em;
+                  margin-top: 1em;
+                }
+
+                textarea {
+                  width: 100%;
+                  padding: 1em;
+                  margin-top: 1em;
+                }
               }
 
-              textarea {
-                width: 100%;
-                padding: 1em;
-                margin-top: 1em;
-              }
             }
           }
         }

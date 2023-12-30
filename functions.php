@@ -12,7 +12,8 @@
 
   // メニュー登録
   register_nav_menus(array(
-    'header-menu' => 'Header Menu',
+    'header-menu-top' => 'Header Menu Top',
+    'header-menu-child' => 'Header Menu Child',
     'footer-menu' => 'Footer Menu',
     'sp-menu' => 'SP Menu',
   ));
@@ -46,6 +47,12 @@ function disable_visual_editor_filter(){
 }
 add_action( 'load-post.php', 'visual_editor_all_disable_script' );
 add_action( 'load-post-new.php', 'visual_editor_all_disable_script' );
+
+// Contact Form 7で自動挿入されるPタグ、brタグを削除
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+  return false;
+}
 
   // eventの表示件数
 //   function change_posts_per_page($query) {

@@ -98,7 +98,7 @@
         <div class="border"></div> -->
         <p class="content">お問い合わせはこちらからお願いいたします。</p>
         <div class="btn">
-          <a href="">お問い合わせはこちら</a>
+          <a href="<?php echo get_page_link(15); ?>">お問い合わせはこちら</a>
         </div>
       </div>
     </div>

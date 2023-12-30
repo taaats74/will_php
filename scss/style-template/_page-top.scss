@@ -310,6 +310,11 @@
             }
             .img-wrapper{
               margin: 1em 0;
+              img{
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+              }
             }
             .works-btn{
               width: 180px;

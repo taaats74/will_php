@@ -28,7 +28,16 @@
   <p class="sub-title">お問い合わせ</p>
   <div class="border"></div>
   <p class="content">当社はウェブサイト制作に関するご質問やお見積もりのご依頼、ウェブ戦略に関する相談など、専門スタッフがお客様のご要望を丁寧にお伺いし、最適なソリューションを提案いたします。お気軽にお問い合わせください。</p>
-  <form action="">
+    <?php
+      if(have_posts()):
+        while(have_posts()): the_post();
+    ?>
+    <?php the_content(); ?>
+    <?php
+      endwhile;
+    endif;
+    ?>
+  <!-- <form action="">
     <ul>
       <li>
         <label for="company">会社名<span class="required">*</span></label>
@@ -61,7 +70,7 @@
     <div class="contact-btn">
       <button type="submit">上記の内容で送信する</button>
     </div>
-  </form>
+  </form> -->
 </div>
 </div>
 </section>
