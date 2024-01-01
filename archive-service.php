@@ -129,7 +129,6 @@
               <li>・コーポレートサイト</li>
               <li>・採用サイト</li>
               <li>・ECサイト(Shopify)</li>
-              <!-- <li>etc.</li> -->
             </ul>
             <p class="price"><span>30</span>万円〜</p>
           </div>
@@ -140,7 +139,6 @@
               <li>・アクセス解析 / 分析</li>
               <li>・Webサイトの最適化</li>
               <li>・Web施策の各種ご提案</li>
-              <!-- <li>etc.</li> -->
             </ul>
             <p class="price"><span>20</span>万円〜</p>
           </div>
@@ -151,7 +149,6 @@
               <li>・投稿デザイン</li>
               <li>・採用作成</li>
               <li>・分析 / レポート作成</li>
-              <!-- <li>etc.</li> -->
             </ul>
             <p class="price"><span>15</span>万円〜</p>
           </div>
@@ -162,7 +159,6 @@
               <li>・リスティング広告</li>
               <li>・ディスプレイ広告</li>
               <li>・SNS広告</li>
-              <!-- <li>etc.</li> -->
             </ul>
             <p class="price">月額広告費の20%</p>
           </div>
@@ -173,7 +169,6 @@
               <li>・チラシ作成</li>
               <li>・オリジナルロゴ作成</li>
               <li>・名詞作成</li>
-              <!-- <li>etc.</li> -->
             </ul>
             <p class="price"><span>1</span>万円〜</p>
           </div>

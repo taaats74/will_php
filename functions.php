@@ -1,14 +1,17 @@
 <?php
 // cssとjs読み込ませ
-  // function theme_file_scripts(){
-  //   wp_deregister_script('jquery');
-  //   wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js');
-  //   wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), '202211108', true);
+  function theme_file_scripts(){
+    wp_deregister_script('jquery');
+    wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+    wp_enqueue_script('accordion', get_template_directory_uri() . '/js/accordion.js', array(), '20240102', true);
+    wp_enqueue_script('loading', get_template_directory_uri() . '/js/loading.js', array(), '20240102', true);
+    wp_enqueue_script('loading-child', get_template_directory_uri() . '/js/loading-child.js', array(), '20240102', true);
+    wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), '20240102', true);
 
-  //   wp_enqueue_style('main_css', get_template_directory_uri() . '/style.css');
-  //   wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
-  // }
-  // add_action( 'wp_enqueue_scripts', 'theme_file_scripts' );
+    wp_enqueue_style('style_css', get_stylesheet_uri());
+    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+  }
+  add_action( 'wp_enqueue_scripts', 'theme_file_scripts' );
 
   // メニュー登録
   register_nav_menus(array(
@@ -26,6 +29,66 @@
     return get_template_directory_uri().'/img/';
   }
   add_shortcode('img', 'img_directory');
+
+  // aboutリンクショートコード
+  function about_link(){
+    return get_page_link(11);
+  }
+  add_shortcode('about', 'about_link');
+
+  // serviceリンクショートコード
+  function service_link(){
+    return get_page_link(39);
+  }
+  add_shortcode('service', 'service_link');
+
+  // worksリンクショートコード
+  function works_link(){
+    return get_page_link(43);
+  }
+  add_shortcode('works', 'works_link');
+
+  // conatctリンクショートコード
+  function conatct_link(){
+    return get_page_link(15);
+  }
+  add_shortcode('conatct', 'conatct_link');
+
+  // partnerリンクショートコード
+  function partner_link(){
+    return get_page_link(18);
+  }
+  add_shortcode('partner', 'partner_link');
+
+  // Webサービスリンクショートコード
+  function single_web_link(){
+    return get_permalink(92);
+  }
+  add_shortcode('single_web', 'single_web_link');
+  // Webマーケティングリンクショートコード
+  function single_mk_link(){
+    return get_permalink(95);
+  }
+  add_shortcode('single_mk', 'single_mk_link');
+
+  // snsサービスリンクショートコード
+  function single_sns_link(){
+    return get_permalink(89);
+  }
+  add_shortcode('single_sns', 'single_sns_link');
+
+  // 広告運用代行リンクショートコード
+  function single_ad_link(){
+    return get_permalink(84);
+  }
+  add_shortcode('single_ad', 'single_ad_link');
+
+  // graphicリンクショートコード
+  function single_graphic_link(){
+    return get_permalink(87);
+  }
+  add_shortcode('single_graphic', 'single_graphic_link');
+
 
   // エディタ自動入力の打ち消し
   add_action('init', function() {

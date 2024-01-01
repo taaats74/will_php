@@ -130,6 +130,16 @@ img {
   color: #fff;
 }
 
+#splash-child {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999999;
+  text-align: center;
+  color: #fff;
+}
+
 #splash-logo {
   display: none;
   position: absolute;
@@ -5625,6 +5635,14 @@ body.appear .loading-container {
   font-family: "toppan-bunkyu-gothic-pr6n", serif;
   font-weight: 400;
   font-style: normal;
+}
+.page-contact .container .wrapper form .wpcf7-response-output {
+  border-color: none;
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+  text-align: center;
+  border: none;
+  color: #7dacaf;
 }
 .page-contact .container .wrapper .privacy-policy {
   text-align: center;

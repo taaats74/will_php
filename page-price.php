@@ -21,12 +21,22 @@
     </div>
   </section>
 
-  <section class="page-price-contact">
+  <?php
+    if(have_posts()):
+    while(have_posts()): the_post();
+  ?>
+  <?php the_content(); ?>
+  <?php
+    endwhile;
+  endif;
+  ?>
+
+  <!-- <section class="page-price-contact">
     <div class="container">
       <div class="wrapper">
         <p class="content">お客様のニーズに合わせ、柔軟に対応するために様々なプランをご用意しております。ウェブサイト制作に関するご質問やお見積もりのご依頼、ウェブ戦略に関する相談など、お客様のさまざまなニーズに対応いたします。専門スタッフがお客様のご要望を丁寧にお伺いし、最適なソリューションを提案いたします。お気軽にお問い合わせください。</p>
         <div class="btn">
-          <a href="<?php echo get_page_link(15); ?>">お問い合わせはこちら</a>
+          <a href="[contact]">お問い合わせはこちら</a>
         </div>
       </div>
     </div>
@@ -398,10 +408,10 @@
         <div class="border"></div>
         <p class="content">当社はウェブサイト制作に関するご質問やお見積もりのご依頼、ウェブ戦略に関する相談など、お客様のさまざまなニーズに対応いたします。専門スタッフがお客様のご要望を丁寧にお伺いし、最適なソリューションを提案いたします。お気軽にお問い合わせください。</p>
         <div class="btn">
-          <a href="<?php echo get_page_link(15); ?>">お問い合わせはこちら</a>
+          <a href="[contact]">お問い合わせはこちら</a>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 <?php get_footer(); ?>
