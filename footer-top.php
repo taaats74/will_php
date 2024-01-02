@@ -12,7 +12,7 @@
               'container' => 'nav',
             ));
           ?>
-          <p class="small">&copy;2023-<?php the_time('Y'); ?> Will Corp.</p>
+          <p class="small">&copy;2023-<?php echo date('Y'); ?> Will Corp.</p>
         </div>
       </div>
     </footer>

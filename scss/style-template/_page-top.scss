@@ -600,7 +600,6 @@
                   position: absolute;
                   bottom: 3%;
                   left: 3%;
-
                   .above {
                     display: flex;
                     align-items: center;
@@ -1073,6 +1072,11 @@
 
               .img-wrapper {
                 margin: 1em 0;
+                img {
+                  width: 100%;
+                  height: 23vw;
+                  object-fit: cover;
+                }
               }
 
               .works-btn {
@@ -1156,7 +1160,6 @@
                     position: absolute;
                     bottom: 3%;
                     left: 3%;
-
                     .above {
                       display: flex;
                       align-items: center;
@@ -1240,7 +1243,6 @@
                     position: absolute;
                     bottom: 3%;
                     left: 3%;
-
                     .above {
                       display: flex;
                       align-items: center;
@@ -1329,7 +1331,6 @@
                     position: absolute;
                     bottom: 3%;
                     left: 3%;
-
                     .above {
                       display: flex;
                       align-items: center;
@@ -1409,7 +1410,6 @@
                     position: absolute;
                     bottom: 3%;
                     left: 3%;
-
                     .above {
                       display: flex;
                       align-items: center;
@@ -1849,6 +1849,11 @@
 
               .img-wrapper {
                 margin: 1em 0;
+                img {
+                  width: 100%;
+                  height: 65vw;
+                  object-fit: cover;
+                }
               }
 
               .works-btn {
@@ -1932,25 +1937,26 @@
                     position: absolute;
                     bottom: 3%;
                     left: 3%;
-
                     .above {
                       display: flex;
                       align-items: center;
                     }
 
                     .icon {
-                      width: 35px;
+                      width: 30px;
                       margin-right: 10px;
                     }
 
                     ul {
                       list-style: none;
                       display: flex;
+                      align-items: center;
 
                       li {
                         margin-right: 10px;
                         line-height: 1em;
                         color: white;
+                        font-size: .7em;
 
                         &+li {
                           padding-left: 10px;
@@ -1961,6 +1967,7 @@
 
                     h3 {
                       color: white;
+                      line-height: 1.2em;
                     }
                   }
 
@@ -2018,7 +2025,6 @@
                     position: absolute;
                     bottom: 3%;
                     left: 3%;
-
                     .above {
                       display: flex;
                       align-items: center;
@@ -2037,7 +2043,7 @@
                         margin-right: 7px;
                         line-height: 1.5em;
                         color: white;
-                        font-size: .8em;
+                        font-size: .7em;
 
                         &+li {
                           // padding-left: 7px;
@@ -2051,6 +2057,7 @@
                     h3 {
                       color: white;
                       font-size: .9em;
+                      line-height: 1.2em;
                     }
                   }
 
@@ -2112,7 +2119,6 @@
                     position: absolute;
                     bottom: 3%;
                     left: 3%;
-
                     .above {
                       display: flex;
                       align-items: center;
@@ -2131,7 +2137,7 @@
                         margin-right: 7px;
                         line-height: 1.5em;
                         color: white;
-                        font-size: .8em;
+                        font-size: .7em;
 
                         &+li {
                           padding-left: 0px;
@@ -2143,6 +2149,7 @@
                     h3 {
                       color: white;
                       font-size: .9em;
+                      line-height: 1.2em;
                     }
                   }
 
@@ -2192,25 +2199,26 @@
                     position: absolute;
                     bottom: 3%;
                     left: 3%;
-
                     .above {
                       display: flex;
                       align-items: center;
                     }
 
                     .icon {
-                      width: 35px;
+                      width: 30px;
                       margin-right: 10px;
                     }
 
                     ul {
                       list-style: none;
                       display: flex;
+                      align-items: center;
 
                       li {
                         margin-right: 10px;
                         line-height: 1em;
                         color: white;
+                        font-size: .7em;
 
                         &+li {
                           padding-left: 10px;
@@ -2221,6 +2229,7 @@
 
                     h3 {
                       color: white;
+                      line-height: 1.2em;
                     }
                   }
 

@@ -3,10 +3,12 @@
   function theme_file_scripts(){
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
-    wp_enqueue_script('accordion', get_template_directory_uri() . '/js/accordion.js', array(), '20240102', true);
     wp_enqueue_script('loading', get_template_directory_uri() . '/js/loading.js', array(), '20240102', true);
     wp_enqueue_script('loading-child', get_template_directory_uri() . '/js/loading-child.js', array(), '20240102', true);
     wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), '20240102', true);
+    wp_enqueue_script('accordion-js', get_template_directory_uri() . '/js/accordion.js', array(), '20240102', true);
+
+    // wordpressで使えない命名ルールがある「accordion」は使えなかったので「accordion-js」で記載してる↑
 
     wp_enqueue_style('style_css', get_stylesheet_uri());
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
