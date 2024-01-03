@@ -2787,6 +2787,7 @@ body.appear .loading-container {
     position: absolute;
     bottom: 3%;
     left: 3%;
+    width: 90vw;
   }
   .page-top-blog .container .wrapper .blog-wrapper .above .large .card a .blog-info .above {
     display: -webkit-box;
@@ -2799,7 +2800,7 @@ body.appear .loading-container {
             align-items: center;
   }
   .page-top-blog .container .wrapper .blog-wrapper .above .large .card a .blog-info .icon {
-    width: 30px;
+    width: 35px;
     margin-right: 10px;
   }
   .page-top-blog .container .wrapper .blog-wrapper .above .large .card a .blog-info ul {
@@ -2829,13 +2830,14 @@ body.appear .loading-container {
   }
   .page-top-blog .container .wrapper .blog-wrapper .above .large .card a:before {
     content: "";
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.4);
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -2875,6 +2877,7 @@ body.appear .loading-container {
     position: absolute;
     bottom: 3%;
     left: 3%;
+    width: 45vw;
   }
   .page-top-blog .container .wrapper .blog-wrapper .above .small .card a .blog-info .above {
     display: -webkit-box;
@@ -2911,6 +2914,7 @@ body.appear .loading-container {
   }
   .page-top-blog .container .wrapper .blog-wrapper .above .small .card a:before {
     content: "";
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -2967,6 +2971,7 @@ body.appear .loading-container {
     position: absolute;
     bottom: 3%;
     left: 3%;
+    width: 45vw;
   }
   .page-top-blog .container .wrapper .blog-wrapper .bottom .small .card a .blog-info .above {
     display: -webkit-box;
@@ -3003,6 +3008,7 @@ body.appear .loading-container {
   }
   .page-top-blog .container .wrapper .blog-wrapper .bottom .small .card a:before {
     content: "";
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -3039,6 +3045,7 @@ body.appear .loading-container {
     position: absolute;
     bottom: 3%;
     left: 3%;
+    width: 90vw;
   }
   .page-top-blog .container .wrapper .blog-wrapper .bottom .large .card a .blog-info .above {
     display: -webkit-box;
@@ -3051,7 +3058,7 @@ body.appear .loading-container {
             align-items: center;
   }
   .page-top-blog .container .wrapper .blog-wrapper .bottom .large .card a .blog-info .icon {
-    width: 30px;
+    width: 35px;
     margin-right: 10px;
   }
   .page-top-blog .container .wrapper .blog-wrapper .bottom .large .card a .blog-info ul {
@@ -3081,6 +3088,7 @@ body.appear .loading-container {
   }
   .page-top-blog .container .wrapper .blog-wrapper .bottom .large .card a:before {
     content: "";
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
