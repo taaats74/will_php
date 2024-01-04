@@ -10885,6 +10885,121 @@ body.appear .loading-container {
     margin-top: 20px;
   }
 }
+.page-not-found .container {
+  padding: 100px 0 100px 0;
+  background: #f4f4f4;
+}
+.page-not-found .container .wrapper {
+  width: 60%;
+  min-width: 900px;
+  margin: 0 auto;
+}
+.page-not-found .container .wrapper h2 {
+  color: #7dacaf;
+  font-size: 8em;
+  text-align: center;
+  line-height: 1em;
+}
+.page-not-found .container .wrapper h3 {
+  font-size: 3em;
+  color: #7dacaf;
+  text-align: center;
+  line-height: 1em;
+  margin-top: 10px;
+}
+.page-not-found .container .wrapper .p1 {
+  text-align: center;
+  font-size: 1.4em;
+  color: #7dacaf;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.page-not-found .container .wrapper .box-wrapper {
+  text-align: center;
+}
+.page-not-found .container .wrapper .box-wrapper p {
+  text-align: center;
+  color: #7dacaf;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-top: solid 1px #7dacaf;
+  border-bottom: solid 1px #7dacaf;
+  padding: 30px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.page-not-found .container .wrapper .box-wrapper ul {
+  padding: 30px;
+  background: #7dacaf;
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  margin-top: 40px;
+}
+.page-not-found .container .wrapper .box-wrapper ul li {
+  font-weight: bold;
+  color: white;
+}
+
+@media screen and (max-width: 770px) {
+  .page-not-found .container {
+    padding: 100px 0 100px 0;
+    background: #f4f4f4;
+  }
+  .page-not-found .container .wrapper {
+    width: 90%;
+    min-width: 0px;
+    margin: 0 auto;
+  }
+  .page-not-found .container .wrapper h2 {
+    color: #7dacaf;
+    font-size: 4em;
+    text-align: center;
+    line-height: 1em;
+  }
+  .page-not-found .container .wrapper h3 {
+    font-size: 2em;
+    color: #7dacaf;
+    text-align: center;
+    line-height: 1em;
+    margin-top: 10px;
+  }
+  .page-not-found .container .wrapper .p1 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #7dacaf;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  .page-not-found .container .wrapper .box-wrapper {
+    text-align: center;
+  }
+  .page-not-found .container .wrapper .box-wrapper p {
+    text-align: center;
+    color: #7dacaf;
+    font-weight: bold;
+    font-size: 1em;
+    border-top: solid 1px #7dacaf;
+    border-bottom: solid 1px #7dacaf;
+    padding: 30px 10px 30px 10px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .page-not-found .container .wrapper .box-wrapper ul {
+    padding: 30px;
+    background: #7dacaf;
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+    margin-top: 40px;
+  }
+  .page-not-found .container .wrapper .box-wrapper ul li {
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+}
 footer .container {
   background: #7dacaf;
   padding: 60px 0 20px 0;
