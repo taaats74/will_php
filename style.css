@@ -1197,7 +1197,8 @@ body.appear .loading-container {
 }
 .page-top-works .container .wrapper .works-wrapper .card a .img-wrapper img {
   width: 100%;
-  height: 15vw;
+  height: 18vw;
+  max-height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -10203,12 +10204,10 @@ body.appear .loading-container {
 .archive-works-works .container .wrapper .box-wrapper .box a {
   position: relative;
 }
-.archive-works-works .container .wrapper .box-wrapper .box a .img-wrapper {
-  overflow: hidden;
-}
 .archive-works-works .container .wrapper .box-wrapper .box a .img-wrapper img {
   width: 100%;
-  height: 20vw;
+  height: 19vw;
+  max-height: 285px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: 0.3s;
@@ -10227,10 +10226,6 @@ body.appear .loading-container {
   position: absolute;
   top: 0;
   left: 0;
-}
-.archive-works-works .container .wrapper .box-wrapper .box:hover {
-  -webkit-box-shadow: 3px 3px 6px #858585;
-          box-shadow: 3px 3px 6px #858585;
 }
 .archive-works-works .container .wrapper .box-wrapper .box:hover img {
   -webkit-transform: scale(1.05);
