@@ -128,8 +128,8 @@
 .message{
   .container{
     .wrapper{
-      width: 83%;
-      max-width: 1200px;
+      width: 65%;
+      max-width: 950px;
       margin: 0 auto;
       margin-top: 100px;
       .section-header{
@@ -143,36 +143,45 @@
       .border{
         margin: 30px auto 60px auto;
       }
-      .message-wrapper{
-        display: flex;
-        .img-wrapper{
-          width: 50%;
-          text-align: center;
-          img{
-            width: 80%;
-          }
-        }
-        .text-wrapper{
-          width: 50%;
-          .text{
-            font-family: "toppan-bunkyu-gothic-pr6n", serif;
-            font-weight: 400;
-            font-style: normal;
-            letter-spacing: 2.2px;
-            line-height: 1.7em;
-          }
-          .name-wrapper{
-            width: 330px;
-            // background: pink;
-            margin-left: auto;
-            margin-top: 40px;
-            .corp{
-              text-align: center;
-              letter-spacing: 2.2px;
+      .message-container{
+        .message-wrapper{
+          display: flex;
+          &:nth-child(2){
+            flex-direction: row-reverse;
+            margin-top: 100px;
+            .text-wrapper{
+              .name-wrapper{
+                text-align: right;
+              }
             }
-            .name{
-              text-align: center;
+          }
+          .img-wrapper{
+            width: 50%;
+            text-align: center;
+            img{
+              width: 80%;
+            }
+          }
+          .text-wrapper{
+            width: 50%;
+            .name-wrapper{
+              text-align: left;
               letter-spacing: 2.2px;
+              // font-weight: bold;
+              .corp{
+                font-size: 1.1em;
+              }
+              .name{
+                font-size: 1.3em;
+              }
+            }
+            .text{
+              font-family: "toppan-bunkyu-gothic-pr6n", serif;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: 2.2px;
+              line-height: 1.7em;
+              margin-top: 20px;
             }
           }
         }
@@ -415,7 +424,7 @@
   .message {
     .container {
       .wrapper {
-        width: 95%;
+        width: 80%;
         max-width: 1200px;
         margin: 0 auto;
         margin-top: 100px;
@@ -433,44 +442,54 @@
         .border {
           margin: 30px auto 60px auto;
         }
+        .message-container {
+          .message-wrapper {
+            display: flex;
+            &:nth-child(2) {
+              flex-direction: row-reverse;
+              margin-top: 100px;
 
-        .message-wrapper {
-          display: flex;
-
-          .img-wrapper {
-            width: 50%;
-            text-align: center;
-
-            img {
-              width: 80%;
-            }
-          }
-
-          .text-wrapper {
-            width: 50%;
-
-            .text {
-              font-family: "toppan-bunkyu-gothic-pr6n", serif;
-              font-weight: 400;
-              font-style: normal;
-              letter-spacing: 2.2px;
-              line-height: 1.7em;
+              .text-wrapper {
+                .name-wrapper {
+                  text-align: right;
+                }
+              }
             }
 
-            .name-wrapper {
-              width: 330px;
-              // background: pink;
-              margin-left: auto;
-              margin-top: 10px;
+            .img-wrapper {
+              width: 50%;
+              text-align: center;
 
-              .corp {
-                text-align: center;
+              img {
+                width: 80%;
+              }
+            }
+
+            .text-wrapper {
+              width: 50%;
+
+              .name-wrapper {
+                text-align: left;
                 letter-spacing: 2.2px;
+
+                // font-weight: bold;
+                .corp {
+                  font-size: .9em;
+                }
+
+                .name {
+                  font-size: 1.1em;
+                }
               }
 
-              .name {
-                text-align: center;
-                letter-spacing: 2.2px;
+              .text {
+                font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 1.7px;
+                font-size: .9em;
+                line-height: 1.7em;
+                margin-top: 20px;
               }
             }
           }
@@ -698,44 +717,55 @@
           margin: 30px auto 30px auto;
         }
 
-        .message-wrapper {
-          display: block;
+        .message-container {
+          .message-wrapper {
+            display: block;
 
-          .img-wrapper {
-            width: 100%;
-            text-align: center;
+            &:nth-child(2) {
+              flex-direction: row-reverse;
+              margin-top: 50px;
 
-            img {
+              .text-wrapper {
+                .name-wrapper {
+                  text-align: left;
+                }
+              }
+            }
+
+            .img-wrapper {
               width: 100%;
-            }
-          }
+              text-align: center;
 
-          .text-wrapper {
-            width: 100%;
-            margin-top: 30px;
-
-            .text {
-              font-family: "toppan-bunkyu-gothic-pr6n", serif;
-              font-weight: 400;
-              font-style: normal;
-              letter-spacing: 2.2px;
-              line-height: 1.7em;
+              img {
+                width: 80%;
+              }
             }
 
-            .name-wrapper {
-              width: 200px;
-              // background: pink;
-              margin-left: auto;
-              margin-top: 10px;
-
-              .corp {
-                text-align: center;
+            .text-wrapper {
+              width: 100%;
+              margin-top: 30px;
+              .name-wrapper {
+                text-align: left;
                 letter-spacing: 2.2px;
+
+                // font-weight: bold;
+                .corp {
+                  font-size: .9em;
+                }
+
+                .name {
+                  font-size: 1.1em;
+                }
               }
 
-              .name {
-                text-align: center;
-                letter-spacing: 2.2px;
+              .text {
+                font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 1.7px;
+                font-size: .9em;
+                line-height: 1.7em;
+                margin-top: 20px;
               }
             }
           }

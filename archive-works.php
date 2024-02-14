@@ -24,6 +24,7 @@
           ?>
           <div class="box">
             <a href="<?php the_permalink(); ?>">
+            <div class="box-content-wrapper">
               <div class="img-wrapper">
                 <?php
                   if(has_post_thumbnail()):
@@ -45,6 +46,7 @@
                   }
                 ?>
               </span>
+            </div>
             </a>
           </div>
           <?php

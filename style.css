@@ -3358,8 +3358,8 @@ body.appear .loading-container {
 }
 
 .message .container .wrapper {
-  width: 83%;
-  max-width: 1200px;
+  width: 65%;
+  max-width: 950px;
   margin: 0 auto;
   margin-top: 100px;
 }
@@ -3374,41 +3374,50 @@ body.appear .loading-container {
 .message .container .wrapper .border {
   margin: 30px auto 60px auto;
 }
-.message .container .wrapper .message-wrapper {
+.message .container .wrapper .message-container .message-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-.message .container .wrapper .message-wrapper .img-wrapper {
+.message .container .wrapper .message-container .message-wrapper:nth-child(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: 100px;
+}
+.message .container .wrapper .message-container .message-wrapper:nth-child(2) .text-wrapper .name-wrapper {
+  text-align: right;
+}
+.message .container .wrapper .message-container .message-wrapper .img-wrapper {
   width: 50%;
   text-align: center;
 }
-.message .container .wrapper .message-wrapper .img-wrapper img {
+.message .container .wrapper .message-container .message-wrapper .img-wrapper img {
   width: 80%;
 }
-.message .container .wrapper .message-wrapper .text-wrapper {
+.message .container .wrapper .message-container .message-wrapper .text-wrapper {
   width: 50%;
 }
-.message .container .wrapper .message-wrapper .text-wrapper .text {
+.message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper {
+  text-align: left;
+  letter-spacing: 2.2px;
+}
+.message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper .corp {
+  font-size: 1.1em;
+}
+.message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper .name {
+  font-size: 1.3em;
+}
+.message .container .wrapper .message-container .message-wrapper .text-wrapper .text {
   font-family: "toppan-bunkyu-gothic-pr6n", serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 2.2px;
   line-height: 1.7em;
-}
-.message .container .wrapper .message-wrapper .text-wrapper .name-wrapper {
-  width: 330px;
-  margin-left: auto;
-  margin-top: 40px;
-}
-.message .container .wrapper .message-wrapper .text-wrapper .name-wrapper .corp {
-  text-align: center;
-  letter-spacing: 2.2px;
-}
-.message .container .wrapper .message-wrapper .text-wrapper .name-wrapper .name {
-  text-align: center;
-  letter-spacing: 2.2px;
+  margin-top: 20px;
 }
 
 .company .container .wrapper {
@@ -3622,7 +3631,7 @@ body.appear .loading-container {
     letter-spacing: 2px;
   }
   .message .container .wrapper {
-    width: 95%;
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 100px;
@@ -3638,41 +3647,51 @@ body.appear .loading-container {
   .message .container .wrapper .border {
     margin: 30px auto 60px auto;
   }
-  .message .container .wrapper .message-wrapper {
+  .message .container .wrapper .message-container .message-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
-  .message .container .wrapper .message-wrapper .img-wrapper {
+  .message .container .wrapper .message-container .message-wrapper:nth-child(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 100px;
+  }
+  .message .container .wrapper .message-container .message-wrapper:nth-child(2) .text-wrapper .name-wrapper {
+    text-align: right;
+  }
+  .message .container .wrapper .message-container .message-wrapper .img-wrapper {
     width: 50%;
     text-align: center;
   }
-  .message .container .wrapper .message-wrapper .img-wrapper img {
+  .message .container .wrapper .message-container .message-wrapper .img-wrapper img {
     width: 80%;
   }
-  .message .container .wrapper .message-wrapper .text-wrapper {
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper {
     width: 50%;
   }
-  .message .container .wrapper .message-wrapper .text-wrapper .text {
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper {
+    text-align: left;
+    letter-spacing: 2.2px;
+  }
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper .corp {
+    font-size: 0.9em;
+  }
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper .name {
+    font-size: 1.1em;
+  }
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper .text {
     font-family: "toppan-bunkyu-gothic-pr6n", serif;
     font-weight: 400;
     font-style: normal;
-    letter-spacing: 2.2px;
+    letter-spacing: 1.7px;
+    font-size: 0.9em;
     line-height: 1.7em;
-  }
-  .message .container .wrapper .message-wrapper .text-wrapper .name-wrapper {
-    width: 330px;
-    margin-left: auto;
-    margin-top: 10px;
-  }
-  .message .container .wrapper .message-wrapper .text-wrapper .name-wrapper .corp {
-    text-align: center;
-    letter-spacing: 2.2px;
-  }
-  .message .container .wrapper .message-wrapper .text-wrapper .name-wrapper .name {
-    text-align: center;
-    letter-spacing: 2.2px;
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 770px) {
@@ -3861,39 +3880,49 @@ body.appear .loading-container {
   .message .container .wrapper .border {
     margin: 30px auto 30px auto;
   }
-  .message .container .wrapper .message-wrapper {
+  .message .container .wrapper .message-container .message-wrapper {
     display: block;
   }
-  .message .container .wrapper .message-wrapper .img-wrapper {
+  .message .container .wrapper .message-container .message-wrapper:nth-child(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 50px;
+  }
+  .message .container .wrapper .message-container .message-wrapper:nth-child(2) .text-wrapper .name-wrapper {
+    text-align: left;
+  }
+  .message .container .wrapper .message-container .message-wrapper .img-wrapper {
     width: 100%;
     text-align: center;
   }
-  .message .container .wrapper .message-wrapper .img-wrapper img {
-    width: 100%;
+  .message .container .wrapper .message-container .message-wrapper .img-wrapper img {
+    width: 80%;
   }
-  .message .container .wrapper .message-wrapper .text-wrapper {
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper {
     width: 100%;
     margin-top: 30px;
   }
-  .message .container .wrapper .message-wrapper .text-wrapper .text {
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper {
+    text-align: left;
+    letter-spacing: 2.2px;
+  }
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper .corp {
+    font-size: 0.9em;
+  }
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper .name-wrapper .name {
+    font-size: 1.1em;
+  }
+  .message .container .wrapper .message-container .message-wrapper .text-wrapper .text {
     font-family: "toppan-bunkyu-gothic-pr6n", serif;
     font-weight: 400;
     font-style: normal;
-    letter-spacing: 2.2px;
+    letter-spacing: 1.7px;
+    font-size: 0.9em;
     line-height: 1.7em;
-  }
-  .message .container .wrapper .message-wrapper .text-wrapper .name-wrapper {
-    width: 200px;
-    margin-left: auto;
-    margin-top: 10px;
-  }
-  .message .container .wrapper .message-wrapper .text-wrapper .name-wrapper .corp {
-    text-align: center;
-    letter-spacing: 2.2px;
-  }
-  .message .container .wrapper .message-wrapper .text-wrapper .name-wrapper .name {
-    text-align: center;
-    letter-spacing: 2.2px;
+    margin-top: 20px;
   }
   .company .container .wrapper {
     width: 95%;
@@ -10221,10 +10250,10 @@ body.appear .loading-container {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.archive-works-works .container .wrapper .box-wrapper .box a {
+.archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper {
   position: relative;
 }
-.archive-works-works .container .wrapper .box-wrapper .box a .img-wrapper img {
+.archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper .img-wrapper img {
   width: 100%;
   height: 19vw;
   max-height: 285px;
@@ -10233,7 +10262,7 @@ body.appear .loading-container {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.archive-works-works .container .wrapper .box-wrapper .box a .tag {
+.archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper .tag {
   display: inline-block;
   background: black;
   color: white;
@@ -10361,13 +10390,13 @@ body.appear .loading-container {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .archive-works-works .container .wrapper .box-wrapper .box a {
+  .archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper {
     position: relative;
   }
-  .archive-works-works .container .wrapper .box-wrapper .box a .img-wrapper {
+  .archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper .img-wrapper {
     overflow: hidden;
   }
-  .archive-works-works .container .wrapper .box-wrapper .box a .img-wrapper img {
+  .archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper .img-wrapper img {
     width: 100%;
     height: 23vw;
     -o-object-fit: cover;
@@ -10375,7 +10404,7 @@ body.appear .loading-container {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .archive-works-works .container .wrapper .box-wrapper .box a .tag {
+  .archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper .tag {
     display: inline-block;
     background: black;
     color: white;
@@ -10533,13 +10562,13 @@ body.appear .loading-container {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .archive-works-works .container .wrapper .box-wrapper .box a {
+  .archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper {
     position: relative;
   }
-  .archive-works-works .container .wrapper .box-wrapper .box a .img-wrapper {
+  .archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper .img-wrapper {
     overflow: hidden;
   }
-  .archive-works-works .container .wrapper .box-wrapper .box a .img-wrapper img {
+  .archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper .img-wrapper img {
     width: 100%;
     height: 50vw;
     -o-object-fit: cover;
@@ -10547,7 +10576,7 @@ body.appear .loading-container {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .archive-works-works .container .wrapper .box-wrapper .box a .tag {
+  .archive-works-works .container .wrapper .box-wrapper .box a .box-content-wrapper .tag {
     display: inline-block;
     background: black;
     color: white;
