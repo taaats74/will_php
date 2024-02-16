@@ -6879,31 +6879,31 @@ body.appear .loading-container {
     height: 100%;
   }
   .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover {
-    background: #7dacaf;
+    background: white;
   }
   .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .num p {
-    color: white;
-  }
-  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .service-border {
-    background: white;
-  }
-  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover h3 {
-    color: white;
-  }
-  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .service-icon {
-    background: white;
-  }
-  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .service-icon i {
     color: #7dacaf;
   }
-  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover p {
+  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .service-border {
+    background: black;
+  }
+  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover h3 {
+    color: black;
+  }
+  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .service-icon {
+    background: #7dacaf;
+  }
+  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .service-icon i {
     color: white;
+  }
+  .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover p {
+    color: black;
   }
   .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .more-wrapper .text {
-    color: white;
+    color: #7dacaf;
   }
   .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a:hover .more-wrapper .more-border {
-    background: white;
+    background: #7dacaf;
   }
   .archive-service-service .container .wrapper .service-wrapper .box-wrapper .service a .num p {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -8978,10 +8978,10 @@ body.appear .loading-container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   margin-top: 40px;
 }
 .single-service-price.wm .container .wrapper .box-wrapper .box {
@@ -8992,6 +8992,7 @@ body.appear .loading-container {
   padding: 20px 20px 70px 20px;
   border: solid 1px #7dacaf;
   position: relative;
+  margin-right: 2.75%;
 }
 .single-service-price.wm .container .wrapper .box-wrapper .box .title-wrapper {
   display: -webkit-box;
@@ -9166,10 +9167,10 @@ body.appear .loading-container {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     margin-top: 40px;
   }
   .single-service-price.wm .container .wrapper .box-wrapper .box {
@@ -9177,6 +9178,7 @@ body.appear .loading-container {
     font-weight: 400;
     font-style: normal;
     width: 40%;
+    margin-right: 2.75;
     padding: 20px 20px 70px 20px;
     border: solid 1px #7dacaf;
     position: relative;
@@ -9345,10 +9347,7 @@ body.appear .loading-container {
     line-height: 1em;
   }
   .single-service-price.wm .container .wrapper .box-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;

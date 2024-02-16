@@ -639,41 +639,41 @@
                 height: 100%;
 
                 &:hover {
-                  background: #7dacaf;
+                  background: white;
 
                   .num {
                     p {
-                      color: white;
-                    }
-                  }
-
-                  .service-border {
-                    background: white;
-                  }
-
-                  h3 {
-                    color: white;
-                  }
-
-                  .service-icon {
-                    background: white;
-
-                    i {
                       color: #7dacaf;
                     }
                   }
 
+                  .service-border {
+                    background: black;
+                  }
+
+                  h3 {
+                    color: black;
+                  }
+
+                  .service-icon {
+                    background: #7dacaf;
+
+                    i {
+                      color: white;
+                    }
+                  }
+
                   p {
-                    color: white;
+                    color: black;
                   }
 
                   .more-wrapper {
                     .text {
-                      color: white;
+                      color: #7dacaf;
                     }
 
                     .more-border {
-                      background: white;
+                      background: #7dacaf;
                     }
                   }
                 }
