@@ -47,7 +47,7 @@
       <div class="wrapper">
         <div class="service-wrapper">
           <div class="service">
-            <h2 class="price-header"><span>W</span>ebサイト制作</h2>
+            <h2 class="price-header"><span>ウ</span>ィルサポ サブスクHP</h2>
             <div class="border"></div>
             <p class="ex">費用例</p>
             <div class="box-wrapper web">
@@ -57,35 +57,35 @@
                     <p>01</p>
                   </div>
                   <div class="title">
-                    <h3 class="plan">小規模サイト</h3>
+                    <h3 class="plan">スタートプラン</h3>
                   </div>
                 </div>
                 <div class="desc">
                   <ul>
                     <li>
                       <p class="li-header">ページ数 :</p>
-                      <p class="li-desc">5ページ〜</p>
+                      <p class="li-desc">1ページ</p>
                     </li>
                     <li>
                       <p class="li-header">デザイン :</p>
                       <p class="li-desc">フルオーダー</p>
                     </li>
                     <li>
-                      <p class="li-header">CSM :</p>
+                      <p class="li-header">CMS :</p>
                       <p class="li-desc">WordPress</p>
                     </li>
                     <li>
                       <p class="li-header">工期 :</p>
-                      <p class="li-desc">1.5ヶ月〜</p>
+                      <p class="li-desc">1ヶ月程度</p>
                     </li>
                     <li>
-                      <p class="li-header">SEO対策 :</p>
-                      <p class="li-desc">有り</p>
+                      <p class="li-header">ブログ :</p>
+                      <p class="li-desc">なし</p>
                     </li>
                   </ul>
                 </div>
                 <div class="price">
-                  <p><span>50</span>万円〜(税別)</p>
+                  <p><span>9,800</span>円/月</p>
                 </div>
               </div>
               <div class="box">
@@ -94,35 +94,35 @@
                     <p>02</p>
                   </div>
                   <div class="title">
-                    <h3 class="plan">中規模サイト</h3>
+                    <h3 class="plan">シンプルプラン</h3>
                   </div>
                 </div>
                 <div class="desc">
                   <ul>
                     <li>
                       <p class="li-header">ページ数 :</p>
-                      <p class="li-desc">15ページ〜</p>
+                      <p class="li-desc">〜6ページ</p>
                     </li>
                     <li>
                       <p class="li-header">デザイン :</p>
                       <p class="li-desc">フルオーダー</p>
                     </li>
                     <li>
-                      <p class="li-header">CSM :</p>
+                      <p class="li-header">CMS :</p>
                       <p class="li-desc">WordPress</p>
                     </li>
                     <li>
                       <p class="li-header">工期 :</p>
-                      <p class="li-desc">2.5ヶ月〜</p>
+                      <p class="li-desc">2ヶ月程度</p>
                     </li>
                     <li>
-                      <p class="li-header">SEO対策 :</p>
-                      <p class="li-desc">有り</p>
+                      <p class="li-header">ブログ :</p>
+                      <p class="li-desc">なし</p>
                     </li>
                   </ul>
                 </div>
                 <div class="price">
-                  <p><span>120</span>万円〜(税別)</p>
+                  <p><span>19,800</span>円/月</p>
                 </div>
               </div>
               <div class="box">
@@ -131,35 +131,72 @@
                     <p>03</p>
                   </div>
                   <div class="title">
-                    <h3 class="plan">大規模サイト</h3>
+                    <h3 class="plan">スタンダードプラン</h3>
                   </div>
                 </div>
                 <div class="desc">
                   <ul>
                     <li>
                       <p class="li-header">ページ数 :</p>
-                      <p class="li-desc">30ページ〜</p>
+                      <p class="li-desc">〜12ページ</p>
                     </li>
                     <li>
                       <p class="li-header">デザイン :</p>
                       <p class="li-desc">フルオーダー</p>
                     </li>
                     <li>
-                      <p class="li-header">CSM :</p>
+                      <p class="li-header">CMS :</p>
                       <p class="li-desc">WordPress</p>
                     </li>
                     <li>
                       <p class="li-header">工期 :</p>
-                      <p class="li-desc">3.5ヶ月〜</p>
+                      <p class="li-desc">2.5ヶ月程度</p>
                     </li>
                     <li>
-                      <p class="li-header">SEO対策 :</p>
-                      <p class="li-desc">有り</p>
+                      <p class="li-header">ブログ :</p>
+                      <p class="li-desc">あり</p>
                     </li>
                   </ul>
                 </div>
                 <div class="price">
-                  <p><span>220</span>万円〜(税別)</p>
+                  <p><span>29,800</span>円/月</p>
+                </div>
+              </div>
+              <div class="box">
+                <div class="title-wrapper">
+                  <div class="num">
+                    <p>04</p>
+                  </div>
+                  <div class="title">
+                    <h3 class="plan">プレミアムプラン</h3>
+                  </div>
+                </div>
+                <div class="desc">
+                  <ul>
+                    <li>
+                      <p class="li-header">ページ数 :</p>
+                      <p class="li-desc">13ページ〜</p>
+                    </li>
+                    <li>
+                      <p class="li-header">デザイン :</p>
+                      <p class="li-desc">フルオーダー</p>
+                    </li>
+                    <li>
+                      <p class="li-header">CMS :</p>
+                      <p class="li-desc">WordPress</p>
+                    </li>
+                    <li>
+                      <p class="li-header">工期 :</p>
+                      <p class="li-desc">3ヶ月以上</p>
+                    </li>
+                    <li>
+                      <p class="li-header">ブログ :</p>
+                      <p class="li-desc">あり</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="price">
+                  <p><span>39,800</span>円/月</p>
                 </div>
               </div>
             </div>
@@ -168,7 +205,7 @@
             <h2 class="price-header"><span>W</span>ebマーケティング支援</h2>
             <div class="border"></div>
             <p class="ex">費用例</p>
-            <div class="box-wrapper web">
+            <div class="box-wrapper">
               <div class="box">
                 <div class="title-wrapper">
                   <div class="num">

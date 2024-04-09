@@ -3367,8 +3367,8 @@ body.appear .loading-container {
 }
 
 .service-price .container .wrapper {
-  width: 83%;
-  max-width: 1200px;
+  width: 85%;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .service-price .container .wrapper .service-wrapper .service.single .box-wrapper {
@@ -3379,6 +3379,16 @@ body.appear .loading-container {
 }
 .service-price .container .wrapper .service-wrapper .service.double .box-wrapper .box {
   margin: 0 1.375%;
+  width: 31.5%;
+  padding-bottom: 70px;
+  position: relative;
+}
+.service-price .container .wrapper .service-wrapper .service.double .box-wrapper .price {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 .service-price .container .wrapper .service-wrapper .service .price-header {
   font-family: "fot-matisse-pron", sans-serif;
@@ -3410,69 +3420,12 @@ body.appear .loading-container {
   justify-content: space-between;
   margin-top: 20px;
 }
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box {
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-  width: 31.5%;
-  padding: 20px 20px 30px 20px;
-  border: solid 1px #7dacaf;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper .num p {
-  color: #7dacaf;
-  font-size: 3em;
-  line-height: 1em;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper .title .plan {
-  font-size: 1.7em;
-  font-weight: normal;
-  margin-left: 10px;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc {
-  margin: 30px 20px 30px 20px;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc ul {
-  list-style: none;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc ul li {
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  min-width: 250px;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc ul li .li-header {
-  font-weight: bold;
-  width: 35%;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc ul li .li-desc {
-  width: 65%;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .price p {
-  color: #7dacaf;
-  font-size: 1.5em;
-  text-align: center;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .price p span {
-  color: #7dacaf;
-  font-size: 2em;
-  line-height: 1em;
-  margin-right: 10px;
-}
-.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .price.text p {
-  font-size: 1.8em;
-}
 .service-price .container .wrapper .service-wrapper .service .box-wrapper.web .box {
   font-family: "toppan-bunkyu-gothic-pr6n", serif;
   font-weight: 400;
   font-style: normal;
-  width: 31.5%;
-  padding: 20px 20px 30px 20px;
+  width: 24.5%;
+  padding: 20px 10px 30px 10px;
   border: solid 1px #7dacaf;
 }
 .service-price .container .wrapper .service-wrapper .service .box-wrapper.web .box .title-wrapper {
@@ -3482,11 +3435,11 @@ body.appear .loading-container {
 }
 .service-price .container .wrapper .service-wrapper .service .box-wrapper.web .box .title-wrapper .num p {
   color: #7dacaf;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1em;
 }
 .service-price .container .wrapper .service-wrapper .service .box-wrapper.web .box .title-wrapper .title .plan {
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: normal;
   margin-left: 10px;
 }
@@ -3526,6 +3479,63 @@ body.appear .loading-container {
 .service-price .container .wrapper .service-wrapper .service .box-wrapper.web .box .price.text p {
   font-size: 1.8em;
 }
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box {
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 31.5%;
+  padding: 20px 20px 30px 20px;
+  border: solid 1px #7dacaf;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper .num p {
+  color: #7dacaf;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper .title .plan {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-left: 10px;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc {
+  margin: 30px 20px 30px 20px;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc ul {
+  list-style: none;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc ul li {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  min-width: 250px;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc ul li .li-header {
+  font-weight: bold;
+  width: 35%;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .desc ul li .li-desc {
+  width: 65%;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .price p {
+  color: #7dacaf;
+  font-size: 1.5em;
+  text-align: center;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .price p span {
+  color: #7dacaf;
+  font-size: 2em;
+  line-height: 1em;
+  margin-right: 10px;
+}
+.service-price .container .wrapper .service-wrapper .service .box-wrapper .box .price.text p {
+  font-size: 1.8em;
+}
 .service-price .container .wrapper .service-wrapper .service.sns-support .box-wrapper {
   display: flex;
   justify-content: space-between;
@@ -3547,11 +3557,11 @@ body.appear .loading-container {
 }
 .service-price .container .wrapper .service-wrapper .service.sns-support .box-wrapper .box .title-wrapper .num p {
   color: #7dacaf;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1em;
 }
 .service-price .container .wrapper .service-wrapper .service.sns-support .box-wrapper .box .title-wrapper .title .plan {
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: normal;
   margin-left: 10px;
   letter-spacing: 2px;
@@ -3623,13 +3633,13 @@ body.appear .loading-container {
   font-family: "toppan-bunkyu-gothic-pr6n", serif;
   font-weight: 400;
   font-style: normal;
-  width: 31.5%;
-  padding: 20px 20px 70px 20px;
+  width: 24.5%;
+  padding: 20px 10px 70px 10px;
   border: solid 1px #7dacaf;
   position: relative;
 }
 .service-price .container .wrapper .service-wrapper .service.graphic .box-wrapper .box:nth-child(4) {
-  margin-top: 30px;
+  margin-top: 0px;
 }
 .service-price .container .wrapper .service-wrapper .service.graphic .box-wrapper .box .title-wrapper {
   display: flex;
@@ -3638,11 +3648,11 @@ body.appear .loading-container {
 }
 .service-price .container .wrapper .service-wrapper .service.graphic .box-wrapper .box .title-wrapper .num p {
   color: #7dacaf;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1em;
 }
 .service-price .container .wrapper .service-wrapper .service.graphic .box-wrapper .box .title-wrapper .title .plan {
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: normal;
   margin-left: 10px;
   letter-spacing: 2px;
@@ -3749,6 +3759,16 @@ body.appear .loading-container {
   }
   .service-price .container .wrapper .service-wrapper .service.double .box-wrapper .box {
     margin: 0 1.375%;
+    width: 31%;
+    padding-bottom: 40px;
+    position: relative;
+  }
+  .service-price .container .wrapper .service-wrapper .service.double .box-wrapper .box .price {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
   .service-price .container .wrapper .service-wrapper .service .price-header {
     font-family: "fot-matisse-pron", sans-serif;
@@ -3785,7 +3805,7 @@ body.appear .loading-container {
     font-weight: 400;
     font-style: normal;
     width: 31.5%;
-    padding: 20px 20px 30px 20px;
+    padding: 20px 10px 30px 10px;
     border: solid 1px #7dacaf;
   }
   .service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper {
@@ -3794,7 +3814,7 @@ body.appear .loading-container {
   }
   .service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper .num p {
     color: #7dacaf;
-    font-size: 3.5em;
+    font-size: 2.5em;
     line-height: 1em;
   }
   .service-price .container .wrapper .service-wrapper .service .box-wrapper .box .title-wrapper .title .plan {
@@ -3825,13 +3845,13 @@ body.appear .loading-container {
   }
   .service-price .container .wrapper .service-wrapper .service .box-wrapper .box .price p {
     color: #7dacaf;
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1em;
     text-align: center;
   }
   .service-price .container .wrapper .service-wrapper .service .box-wrapper .box .price p span {
     color: #7dacaf;
-    font-size: 2em;
+    font-size: 2.2em;
     line-height: 1em;
     margin-right: 10px;
   }
@@ -3842,8 +3862,8 @@ body.appear .loading-container {
     font-family: "toppan-bunkyu-gothic-pr6n", serif;
     font-weight: 400;
     font-style: normal;
-    width: 31.5%;
-    padding: 20px 20px 30px 20px;
+    width: 24.5%;
+    padding: 20px 10px 30px 10px;
     border: solid 1px #7dacaf;
   }
   .service-price .container .wrapper .service-wrapper .service .box-wrapper.web .box .title-wrapper {
@@ -3886,12 +3906,12 @@ body.appear .loading-container {
   }
   .service-price .container .wrapper .service-wrapper .service .box-wrapper.web .box .price p {
     color: #7dacaf;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
   }
   .service-price .container .wrapper .service-wrapper .service .box-wrapper.web .box .price p span {
     color: #7dacaf;
-    font-size: 2em;
+    font-size: 2.2em;
     line-height: 1em;
     margin-right: 10px;
   }
@@ -3967,12 +3987,12 @@ body.appear .loading-container {
   }
   .service-price .container .wrapper .service-wrapper .service.sns-support .box-wrapper .box .price p {
     color: #7dacaf;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
   }
   .service-price .container .wrapper .service-wrapper .service.sns-support .box-wrapper .box .price p span {
     color: #7dacaf;
-    font-size: 1.8em;
+    font-size: 2.2em;
     line-height: 1em;
     margin-right: 10px;
   }
@@ -3989,13 +4009,13 @@ body.appear .loading-container {
     font-family: "toppan-bunkyu-gothic-pr6n", serif;
     font-weight: 400;
     font-style: normal;
-    width: 31.5%;
+    width: 24.5%;
     padding: 20px 20px 70px 20px;
     border: solid 1px #7dacaf;
     position: relative;
   }
   .service-price .container .wrapper .service-wrapper .service.graphic .box-wrapper .box:nth-child(4) {
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .service-price .container .wrapper .service-wrapper .service.graphic .box-wrapper .box .title-wrapper {
     display: flex;
@@ -4032,12 +4052,12 @@ body.appear .loading-container {
   }
   .service-price .container .wrapper .service-wrapper .service.graphic .box-wrapper .box .price p {
     color: #7dacaf;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
   }
   .service-price .container .wrapper .service-wrapper .service.graphic .box-wrapper .box .price p span {
     color: #7dacaf;
-    font-size: 1.8em;
+    font-size: 2.2em;
     line-height: 1em;
     margin-right: 10px;
   }
@@ -4148,6 +4168,7 @@ body.appear .loading-container {
   .service-price .container .wrapper .service-wrapper .service.double .box-wrapper .box {
     margin: 0 1.375%;
     margin-top: 30px;
+    width: 95%;
   }
   .service-price .container .wrapper .service-wrapper .service .price-header {
     font-family: "fot-matisse-pron", sans-serif;

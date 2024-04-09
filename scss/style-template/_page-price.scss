@@ -25,8 +25,8 @@
 .service-price{
   .container{
     .wrapper{
-      width: 83%;
-      max-width: 1200px;
+      width: 85%;
+      max-width: 1300px;
       margin: 0 auto;
       .service-wrapper{
         .service{
@@ -40,6 +40,16 @@
               justify-content: center;
               .box{
                 margin: 0 1.375%;
+                width: 31.5%;
+                padding-bottom: 70px;
+                position: relative;
+              }
+              .price{
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
               }
             }
           }
@@ -72,6 +82,86 @@
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+          &.web {
+              .box {
+                font-family: "toppan-bunkyu-gothic-pr6n", serif;
+                font-weight: 400;
+                font-style: normal;
+                width: 24.5%;
+                padding: 20px 10px 30px 10px;
+                border: solid 1px #7dacaf;
+
+                .title-wrapper {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  .num {
+                    p {
+                      color: #7dacaf;
+                      font-size: 2.5em;
+                      line-height: 1em;
+                    }
+                  }
+
+                  .title {
+                    .plan {
+                      font-size: 1.5em;
+                      font-weight: normal;
+                      margin-left: 10px;
+                    }
+                  }
+                }
+
+                .desc {
+                  margin: 30px 20px 30px 20px;
+                  margin: 30px auto 30px auto;
+                  width: 200px;
+
+                  ul {
+                    list-style: none;
+
+                    li {
+                      font-size: 1em;
+                      display: flex;
+                      align-items: center;
+                      white-space: nowrap;
+                      min-width: 250px;
+
+                      .li-header {
+                        font-weight: bold;
+                        width: 35%;
+                      }
+
+                      .li-desc {
+                        width: 65%;
+                      }
+                    }
+                  }
+                }
+
+                .price {
+                  p {
+                    color: #7dacaf;
+                    font-size: 1.5em;
+                    text-align: center;
+
+                    span {
+                      color: #7dacaf;
+                      font-size: 2em;
+                      line-height: 1em;
+                      margin-right: 10px;
+                    }
+                  }
+
+                  &.text {
+                    p {
+                      font-size: 1.8em;
+                    }
+                  }
+                }
+              }
+            }
             .box{
               font-family: "toppan-bunkyu-gothic-pr6n", serif;
               font-weight: 400;
@@ -86,13 +176,13 @@
                 .num{
                   p{
                     color: #7dacaf;
-                    font-size: 3em;
+                    font-size: 2.5em;
                     line-height: 1em;
                   }
                 }
                 .title{
                   .plan{
-                    font-size: 1.7em;
+                    font-size: 1.5em;
                     font-weight: normal;
                     margin-left: 10px;
                   }
@@ -137,85 +227,6 @@
                 }
               }
             }
-            &.web {
-              .box {
-                font-family: "toppan-bunkyu-gothic-pr6n", serif;
-                font-weight: 400;
-                font-style: normal;
-                width: 31.5%;
-                padding: 20px 20px 30px 20px;
-                border: solid 1px #7dacaf;
-
-                .title-wrapper {
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-
-                  .num {
-                    p {
-                      color: #7dacaf;
-                      font-size: 3em;
-                      line-height: 1em;
-                    }
-                  }
-
-                  .title {
-                    .plan {
-                      font-size: 1.7em;
-                      font-weight: normal;
-                      margin-left: 10px;
-                    }
-                  }
-                }
-
-                .desc {
-                  margin: 30px 20px 30px 20px;
-                  margin: 30px auto 30px auto;
-                  width: 200px;
-
-                  ul {
-                    list-style: none;
-                    li {
-                      font-size: 1em;
-                      display: flex;
-                      align-items: center;
-                      white-space: nowrap;
-                      min-width: 250px;
-
-                      .li-header {
-                        font-weight: bold;
-                        width: 35%;
-                      }
-
-                      .li-desc {
-                        width: 65%;
-                      }
-                    }
-                  }
-                }
-
-                .price {
-                  p {
-                    color: #7dacaf;
-                    font-size: 1.5em;
-                    text-align: center;
-
-                    span {
-                      color: #7dacaf;
-                      font-size: 2em;
-                      line-height: 1em;
-                      margin-right: 10px;
-                    }
-                  }
-
-                  &.text {
-                    p {
-                      font-size: 1.8em;
-                    }
-                  }
-                }
-              }
-            }
           }
           &.sns-support{
             .box-wrapper {
@@ -240,14 +251,14 @@
                   .num {
                     p {
                       color: #7dacaf;
-                      font-size: 3em;
+                      font-size: 2.5em;
                       line-height: 1em;
                     }
                   }
 
                   .title {
                     .plan {
-                      font-size: 1.7em;
+                      font-size: 1.5em;
                       font-weight: normal;
                       margin-left: 10px;
                       letter-spacing: 2px;
@@ -344,13 +355,13 @@
                 font-family: "toppan-bunkyu-gothic-pr6n", serif;
                 font-weight: 400;
                 font-style: normal;
-                width: 31.5%;
-                padding: 20px 20px 70px 20px;
+                width: 24.5%;
+                padding: 20px 10px 70px 10px;
                 border: solid 1px #7dacaf;
                 position: relative;
 
                 &:nth-child(4) {
-                  margin-top: 30px;
+                  margin-top: 0px;
                 }
 
                 .title-wrapper {
@@ -361,14 +372,14 @@
                   .num {
                     p {
                       color: #7dacaf;
-                      font-size: 3em;
+                      font-size: 2.5em;
                       line-height: 1em;
                     }
                   }
 
                   .title {
                     .plan {
-                      font-size: 1.7em;
+                      font-size: 1.5em;
                       font-weight: normal;
                       margin-left: 10px;
                       letter-spacing: 2px;
@@ -511,9 +522,18 @@
             &.double {
               .box-wrapper {
                 justify-content: center;
-
                 .box {
                   margin: 0 1.375%;
+                  width: 31%;
+                  padding-bottom: 40px;
+                  position: relative;
+                  .price{
+                    position: absolute;
+                    bottom: 20px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                  }
                 }
               }
             }
@@ -557,7 +577,7 @@
                 font-weight: 400;
                 font-style: normal;
                 width: 31.5%;
-                padding: 20px 20px 30px 20px;
+                padding: 20px 10px 30px 10px;
                 border: solid 1px #7dacaf;
 
                 .title-wrapper {
@@ -567,7 +587,7 @@
                   .num {
                     p {
                       color: #7dacaf;
-                      font-size: 3.5em;
+                      font-size: 2.5em;
                       line-height: 1em;
                     }
                   }
@@ -610,13 +630,13 @@
                 .price {
                   p {
                     color: #7dacaf;
-                    font-size: 1.5em;
+                    font-size: 1em;
                     line-height: 1em;
                     text-align: center;
 
                     span {
                       color: #7dacaf;
-                      font-size: 2em;
+                      font-size: 2.2em;
                       line-height: 1em;
                       margin-right: 10px;
                     }
@@ -634,8 +654,8 @@
                   font-family: "toppan-bunkyu-gothic-pr6n", serif;
                   font-weight: 400;
                   font-style: normal;
-                  width: 31.5%;
-                  padding: 20px 20px 30px 20px;
+                  width: 24.5%;
+                  padding: 20px 10px 30px 10px;
                   border: solid 1px #7dacaf;
 
                   .title-wrapper {
@@ -691,12 +711,12 @@
                   .price {
                     p {
                       color: #7dacaf;
-                      font-size: 1.5em;
+                      font-size: 1em;
                       text-align: center;
 
                       span {
                         color: #7dacaf;
-                        font-size: 2em;
+                        font-size: 2.2em;
                         line-height: 1em;
                         margin-right: 10px;
                       }
@@ -800,12 +820,12 @@
 
                     p {
                       color: #7dacaf;
-                      font-size: 1.5em;
+                      font-size: 1em;
                       text-align: center;
 
                       span {
                         color: #7dacaf;
-                        font-size: 1.8em;
+                        font-size: 2.2em;
                         line-height: 1em;
                         margin-right: 10px;
                       }
@@ -831,13 +851,13 @@
                   font-family: "toppan-bunkyu-gothic-pr6n", serif;
                   font-weight: 400;
                   font-style: normal;
-                  width: 31.5%;
+                  width: 24.5%;
                   padding: 20px 20px 70px 20px;
                   border: solid 1px #7dacaf;
                   position: relative;
 
                   &:nth-child(4) {
-                    margin-top: 30px;
+                    margin-top: 0px;
                   }
 
                   .title-wrapper {
@@ -886,12 +906,12 @@
 
                     p {
                       color: #7dacaf;
-                      font-size: 1.5em;
+                      font-size: 1em;
                       text-align: center;
 
                       span {
                         color: #7dacaf;
-                        font-size: 1.8em;
+                        font-size: 2.2em;
                         line-height: 1em;
                         margin-right: 10px;
                       }
@@ -1045,6 +1065,7 @@
                 .box {
                   margin: 0 1.375%;
                   margin-top: 30px;
+                  width: 95%;
                 }
               }
             }
