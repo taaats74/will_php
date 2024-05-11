@@ -49,7 +49,9 @@
       <div class="wrapper">
         <div class="logo">
           <a href="#">
-            <h1>ウィルサポ</h1>
+            <h1>
+              <img src="<?php echo get_template_directory_uri() ?>/willsupport-img/header-logo.png" alt="ウィルサポ|サブスクホームページ 格安ホームページサブスクサービス">
+            </h1>
           </a>
         </div>
         <nav class="menu">
