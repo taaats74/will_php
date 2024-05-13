@@ -11,11 +11,9 @@ header{
       .logo{
         a{
           h1{
-            font-family: "corporate-logo-ver2",sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 42px;
-            color: #5898a2;
+            img{
+              width: 170px;
+            }
           }
         }
       }
@@ -56,7 +54,7 @@ header{
 
 .fv{
   .container{
-    background-image: url(willsupport-img/fv-bg.png);
+    background-image: url(../willsupport-img/fv-bg.png);
     background-position: center;
     background-size: cover;
     .wrapper{
@@ -433,7 +431,7 @@ header{
 .contact{
   .container{
     .wrapper{
-      background-image: url(willsupport-img/contact-bg.png);
+      background-image: url(../willsupport-img/contact-bg.png);
       background-position: center;
       background-size: cover;
       padding: 100px 0;
@@ -812,7 +810,7 @@ header{
 footer {
   .container {
     .wrapper {
-      background-image: url(willsupport-img/footer-bg-img.png);
+      background-image: url(../willsupport-img/footer-bg-img.png);
       padding: 40px 0 15px 0;
       .footer-menu-wrapper{
         display: flex;
@@ -883,7 +881,7 @@ footer {
 @media screen and (max-width: 1250px) {
   .fv {
     .container {
-      background-image: url(willsupport-img/fv-bg.png);
+      background-image: url(../willsupport-img/fv-bg.png);
       background-position: center;
       background-size: cover;
 
@@ -1098,7 +1096,7 @@ footer {
 
   .fv {
     .container {
-      background-image: url(willsupport-img/fv-bg.png);
+      background-image: url(../willsupport-img/fv-bg.png);
       background-position: center;
       background-size: cover;
 
@@ -1541,7 +1539,7 @@ footer {
   footer {
     .container {
       .wrapper {
-        background-image: url(willsupport-img/footer-bg-img.png);
+        background-image: url(../willsupport-img/footer-bg-img.png);
         padding: 40px 0 15px 0;
 
         .footer-menu-wrapper {
@@ -1706,12 +1704,10 @@ footer {
         .logo {
           padding-top: 30px;
           h1 {
-            font-family: "corporate-logo-ver2",sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 50px;
-            color: white;
             text-align: center;
+            img{
+              width: 200px;
+            }
           }
         }
 
@@ -2066,7 +2062,7 @@ footer {
   .contact {
     .container {
       .wrapper {
-        background-image: url(willsupport-img/contact-bg.png);
+        background-image: url(../willsupport-img/contact-bg.png);
         background-position: center;
         background-size: cover;
         padding: 50px 0;
@@ -2505,7 +2501,7 @@ footer {
   footer {
     .container {
       .wrapper {
-        background-image: url(willsupport-img/footer-bg-img.png);
+        background-image: url(../willsupport-img/footer-bg-img.png);
         padding: 40px 0 80px 0;
 
         .footer-menu-wrapper {

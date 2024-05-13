@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* リセットCSS */
 html,
 body,
@@ -171,78 +172,49 @@ img {
 }
 
 header .container .wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
   max-width: 1300px;
   padding: 15px 0;
 }
-
-header .container .wrapper .logo a h1 {
-  font-family: "corporate-logo-ver2", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 42px;
-  color: #5898a2;
+header .container .wrapper .logo a h1 img {
+  width: 170px;
 }
-
 header .container .wrapper .menu ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 header .container .wrapper .menu ul li {
   margin-left: 35px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   font-family: YuGothic, "Yu Gothic", sans-serif;
   letter-spacing: 3px;
 }
-
 header .container .wrapper .menu ul li:hover {
   color: #5898a2;
 }
-
 header .container .wrapper .menu ul li:nth-child(6) {
   color: white;
 }
-
 header .container .wrapper .menu ul li:nth-child(6) a {
   display: block;
   padding: 15px 40px;
   background: #4e4e4e;
   border-radius: 10px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 header .container .wrapper .menu ul li:nth-child(6):hover a {
   background: #5898a2;
 }
 
 .fv .container {
-  background-image: url(willsupport-img/fv-bg.png);
+  background-image: url(../willsupport-img/fv-bg.png);
   background-position: center;
   background-size: cover;
 }
-
 .fv .container .wrapper {
   position: relative;
   font-family: "zen-kaku-gothic-new", sans-serif;
@@ -253,7 +225,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   max-width: 1300px;
   margin: 0 auto;
 }
-
 .fv .container .wrapper .fv-message {
   font-size: 24px;
   border-bottom: solid 6px #f9e615;
@@ -265,44 +236,28 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   text-shadow: 2px 2px 6px #70aeb1;
   letter-spacing: 5px;
 }
-
 .fv .container .wrapper .fv-message .large {
   font-size: 57px;
   letter-spacing: 3px;
   margin: 0 5px;
 }
-
 .fv .container .wrapper .fv-message .large2 {
   font-size: 47px;
   letter-spacing: 3px;
 }
-
 .fv .container .wrapper .fv-message .mid {
   font-size: 32px;
 }
-
 .fv .container .wrapper .fv-content-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-top: 35px;
 }
-
 .fv .container .wrapper .fv-content-wrapper .text-wrapper {
-  -webkit-transform: translateX(30px);
   transform: translateX(30px);
   width: 50%;
 }
-
 .fv .container .wrapper .fv-content-wrapper .text-wrapper h2 {
   color: white;
   font-size: 32px;
@@ -310,7 +265,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   text-align: center;
   letter-spacing: 4px;
 }
-
 .fv .container .wrapper .fv-content-wrapper .text-wrapper .fv-logo {
   font-size: 130px;
   font-family: "corporate-logo-ver2", sans-serif;
@@ -321,23 +275,12 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   text-shadow: 2px 2px 6px #70aeb1;
   letter-spacing: 8px;
 }
-
 .fv .container .wrapper .fv-content-wrapper .text-wrapper ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 20px;
 }
-
 .fv .container .wrapper .fv-content-wrapper .text-wrapper ul li {
   font-size: 26px;
   color: #333333;
@@ -353,13 +296,10 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   width: 150px;
   border-radius: 20px;
 }
-
 .fv .container .wrapper .fv-content-wrapper .illust-wrapper {
   width: 45%;
-  -webkit-transform: translateX(-30px);
   transform: translateX(-30px);
 }
-
 .fv .container .wrapper .message {
   font-family: "zen-kaku-gothic-new", sans-serif;
   font-weight: 500;
@@ -372,24 +312,19 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   line-height: 1.5em;
   letter-spacing: 5px;
 }
-
 .fv .container .wrapper .banner {
   width: 150px;
   position: absolute;
-  -webkit-transform: translateY(60%);
   transform: translateY(60%);
   bottom: 0;
   right: 20px;
 }
-
 .fv .container .wrapper .banner .banner-wrapper {
   position: relative;
 }
-
 .fv .container .wrapper .banner .banner-wrapper p {
   position: absolute;
   top: 45%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
   right: 0;
@@ -407,7 +342,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
 .onayami .container .wrapper {
   margin-top: 100px;
 }
-
 .onayami .container .wrapper h2 {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-size: 26px;
@@ -420,34 +354,22 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   text-align: center;
   margin: 0 auto;
 }
-
 .onayami .container .wrapper .speechbubble-above {
   margin-top: 50px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
-
 .onayami .container .wrapper .speechbubble-above .speech-wrapper {
   position: relative;
   width: 280px;
   margin: 0 15px;
 }
-
 .onayami .container .wrapper .speechbubble-above .speech-wrapper:nth-child(2) {
-  -webkit-transform: translateY(40px);
   transform: translateY(40px);
 }
-
 .onayami .container .wrapper .speechbubble-above .speech-wrapper img {
   z-index: 1;
 }
-
 .onayami .container .wrapper .speechbubble-above .speech-wrapper p {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -458,34 +380,23 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   text-align: center;
   position: absolute;
   top: 45%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
   right: 0;
   margin: 0 auto;
   z-index: 2;
 }
-
 .onayami .container .wrapper .speechbubble-bottom {
   margin-top: 50px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
-
 .onayami .container .wrapper .speechbubble-bottom .speech-wrapper {
   margin: 0 30px;
 }
-
 .onayami .container .wrapper .speechbubble-bottom .speech-wrapper:nth-child(odd) {
   margin-top: 20px;
 }
-
 .onayami .container .wrapper .speechbubble-bottom .speech-wrapper p {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -495,11 +406,9 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   line-height: 1.3em;
   text-align: center;
 }
-
 .onayami .container .wrapper .speechbubble-bottom .speech-wrapper img {
   width: 220px;
 }
-
 .onayami .container .wrapper .img-arrow {
   width: 110px;
   margin: 0 auto;
@@ -512,28 +421,23 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   padding-bottom: 60px;
 }
-
 .feature .container .wrapper h2 {
   color: #08656e;
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 5px;
   text-align: center;
-  -webkit-transform: translateY(-35px);
   transform: translateY(-35px);
 }
-
 .feature .container .wrapper h2 .bold {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 83px;
-  -webkit-transform: translateY(-6px);
   transform: translateY(-6px);
   display: inline-block;
   letter-spacing: 8px;
 }
-
 .feature .container .wrapper h3 {
   background: #0e849c;
   color: white;
@@ -544,18 +448,14 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   border-radius: 15px;
   width: 900px;
   margin: 0 auto;
-  -webkit-transform: translateY(-7px);
   transform: translateY(-7px);
 }
-
 .feature .container .wrapper h3 .bold {
   font-size: 33px;
 }
-
 .feature .container .wrapper h3 .dot-text {
   position: relative;
 }
-
 .feature .container .wrapper h3 .dot-text:before {
   position: absolute;
   top: -15px;
@@ -568,7 +468,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   background: radial-gradient(circle 7px, white 50%, transparent 50%);
   background: -moz-radial-gradient(circle 7px, white 50%, transparent 50%);
 }
-
 .feature .container .wrapper .service-text {
   font-size: 21px;
   font-weight: bold;
@@ -578,27 +477,16 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   margin: 0 auto;
   margin-top: 20px;
 }
-
 .feature .container .wrapper .service-text .bold {
   font-size: 32px;
   display: inline-block;
   border-bottom: solid 6px #2dbbd1;
   padding-bottom: 2px;
 }
-
 .feature .container .wrapper .list-wrapper {
   width: 920px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   border: solid 2px #0e849c;
@@ -606,26 +494,16 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   padding: 10px 50px;
   margin-top: 50px;
 }
-
 .feature .container .wrapper .list-wrapper ul li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
-.feature .container .wrapper .list-wrapper ul li+li {
+.feature .container .wrapper .list-wrapper ul li + li {
   margin-top: 10px;
 }
-
 .feature .container .wrapper .list-wrapper ul li img {
   width: 30px;
 }
-
 .feature .container .wrapper .list-wrapper ul li p {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -634,7 +512,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   margin-left: 10px;
   letter-spacing: 3px;
 }
-
 .feature .container .wrapper .list-wrapper .illust-wrapper {
   width: 40%;
 }
@@ -643,7 +520,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   background: #f1f3f4;
   padding-bottom: 100px;
 }
-
 .works .container .wrapper .header-text h2 {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -653,7 +529,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   letter-spacing: 5px;
   color: #333333;
 }
-
 .works .container .wrapper .header-text p {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-size: 18px;
@@ -663,31 +538,20 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   margin-top: 5px;
   letter-spacing: 3pxm;
 }
-
 .works .container .wrapper .works-wrapper {
   width: 90%;
   max-width: 1152px;
   margin: 0 auto;
   margin-top: 70px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
 .works .container .wrapper .works-wrapper a {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .works .container .wrapper .works-wrapper a .works {
   width: 100%;
 }
-
 .works .container .wrapper .works-wrapper a p {
   text-align: center;
   font-family: YuGothic, "Yu Gothic", sans-serif;
@@ -696,18 +560,16 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   color: #333333;
   letter-spacing: 3px;
 }
-
 .works .container .wrapper .works-wrapper a:hover {
   opacity: 0.8;
 }
 
 .contact .container .wrapper {
-  background-image: url(willsupport-img/contact-bg.png);
+  background-image: url(../willsupport-img/contact-bg.png);
   background-position: center;
   background-size: cover;
   padding: 100px 0;
 }
-
 .contact .container .wrapper h2 {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-size: 24px;
@@ -716,7 +578,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   letter-spacing: 3px;
   color: white;
 }
-
 .contact .container .wrapper .text {
   color: white;
   letter-spacing: 3px;
@@ -725,60 +586,42 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   line-height: 2em;
   margin-top: 30px;
 }
-
 .contact .container .wrapper .btn-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 70px;
 }
-
 .contact .container .wrapper .btn-wrapper a {
   display: block;
   margin: 0 15px;
 }
-
 .contact .container .wrapper .btn-wrapper a:nth-child(2) .btn {
   background: #00b900;
-  -webkit-box-shadow: 2px 2px #90d493;
   box-shadow: 2px 2px #90d493;
 }
-
 .contact .container .wrapper .btn-wrapper a .btn {
   background: #333333;
   width: 400px;
   padding: 20px;
   border-radius: 37px;
   position: relative;
-  -webkit-box-shadow: 2px 2px #789ca0;
   box-shadow: 2px 2px #789ca0;
 }
-
 .contact .container .wrapper .btn-wrapper a .btn p {
   color: white;
   font-family: YuGothic, "Yu Gothic", sans-serif;
   text-align: center;
   letter-spacing: 3px;
 }
-
 .contact .container .wrapper .btn-wrapper a .btn img {
   width: 25px;
   position: absolute;
   top: 50%;
   right: 10%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .contact .container .wrapper .btn-wrapper a .btn:hover img {
-  -webkit-transform: translateX(10px) translateY(-50%);
   transform: translateX(10px) translateY(-50%);
 }
 
@@ -786,13 +629,11 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   padding: 110px 0 130px 0;
   background: #e8eeee;
 }
-
 .plan .container .wrapper .header-wrapper {
   position: relative;
   width: 300px;
   margin: 0 auto;
 }
-
 .plan .container .wrapper .header-wrapper h2 {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -802,7 +643,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   letter-spacing: 5px;
   color: #333333;
 }
-
 .plan .container .wrapper .header-wrapper p {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-size: 18px;
@@ -812,39 +652,28 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   margin-top: 5px;
   letter-spacing: 3px;
 }
-
 .plan .container .wrapper .header-wrapper img {
   width: 150px;
   position: absolute;
   top: -80px;
   right: -80px;
 }
-
 .plan .container .wrapper .box-wrapper {
   width: 95%;
   max-width: 1224px;
   margin: 0 auto;
   margin-top: 70px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
 .plan .container .wrapper .box-wrapper .box {
   text-align: center;
   width: 22%;
   border: solid 2px #0e849c;
   padding: 30px 10px;
   background: white;
-  -webkit-box-shadow: 3px 3px 6px #a0c4c8;
   box-shadow: 3px 3px 6px #a0c4c8;
 }
-
 .plan .container .wrapper .box-wrapper .box h3 {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -856,48 +685,34 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   display: inline-block;
   letter-spacing: 3px;
 }
-
 .plan .container .wrapper .box-wrapper .box ul {
   width: 90%;
   margin: 0 auto;
   font-family: YuGothic, "Yu Gothic", sans-serif;
   letter-spacing: 3px;
   margin-top: 30px;
-  -webkit-transform: translateX(15px);
   transform: translateX(15px);
 }
-
 .plan .container .wrapper .box-wrapper .box ul li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: left;
 }
-
-.plan .container .wrapper .box-wrapper .box ul li+li {
+.plan .container .wrapper .box-wrapper .box ul li + li {
   margin-top: 20px;
 }
-
 .plan .container .wrapper .box-wrapper .box ul li p:nth-child(1) {
   width: 45%;
 }
-
 .plan .container .wrapper .box-wrapper .box ul li p:nth-child(2) {
   width: 55%;
 }
-
 .plan .container .wrapper .box-wrapper .box .price {
   margin-top: 40px;
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-
 .plan .container .wrapper .box-wrapper .box .price .num {
   font-size: 32px;
   letter-spacing: 5px;
@@ -906,7 +721,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
 .flow .container .wrapper {
   padding: 80px 0 120px 0;
 }
-
 .flow .container .wrapper .header-text h2 {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -916,7 +730,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   letter-spacing: 5px;
   color: #333333;
 }
-
 .flow .container .wrapper .header-text p {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-size: 18px;
@@ -926,29 +739,22 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   margin-top: 5px;
   letter-spacing: 3pxm;
 }
-
 .flow .container .wrapper .flow-wrapper {
   width: 95%;
   max-width: 900px;
   margin: 0 auto;
   margin-top: 80px;
 }
-
 .flow .container .wrapper .flow-wrapper ul li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding: 40px;
   color: white;
   background: #7dacaf;
 }
-
 .flow .container .wrapper .flow-wrapper ul li:nth-child(odd) {
   color: #333333;
   background: #c9ddde;
 }
-
 .flow .container .wrapper .flow-wrapper ul li .num-wrapper .step {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 500;
@@ -956,7 +762,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   font-size: 22px;
   text-align: center;
 }
-
 .flow .container .wrapper .flow-wrapper ul li .num-wrapper .num {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -965,11 +770,9 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   text-align: center;
   margin-top: 7px;
 }
-
 .flow .container .wrapper .flow-wrapper ul li .text-wrapper {
   margin-left: 70px;
 }
-
 .flow .container .wrapper .flow-wrapper ul li .text-wrapper .header {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -977,7 +780,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   font-size: 30px;
   letter-spacing: 3px;
 }
-
 .flow .container .wrapper .flow-wrapper ul li .text-wrapper .text {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   line-height: 1.5em;
@@ -991,7 +793,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   margin-top: 100px;
   padding-bottom: 100px;
 }
-
 .faq .container .wrapper .header-text h2 {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -1001,7 +802,6 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   letter-spacing: 5px;
   color: #333333;
 }
-
 .faq .container .wrapper .header-text p {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-size: 18px;
@@ -1011,87 +811,56 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   margin-top: 5px;
   letter-spacing: 3pxm;
 }
-
 .faq .container .wrapper .accordion {
   width: 95%;
   max-width: 900px;
   margin: 0 auto;
   margin-top: 90px;
 }
-
 .faq .container .wrapper .accordion ul li {
   border: solid 1px #32949e;
   border-radius: 5px;
 }
-
-.faq .container .wrapper .accordion ul li+li {
+.faq .container .wrapper .accordion ul li + li {
   margin-top: 30px;
 }
-
 .faq .container .wrapper .accordion ul li .list.question {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 20px 40px;
   cursor: pointer;
 }
-
 .faq .container .wrapper .accordion ul li .list.question .text {
   font-weight: bold;
   color: #08656e;
 }
-
 .faq .container .wrapper .accordion ul li .list.question i {
   font-size: 1.3em;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 .faq .container .wrapper .accordion ul li .list.question.active i {
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
 .faq .container .wrapper .accordion ul li .list.question:hover .text {
   opacity: 0.5;
 }
-
 .faq .container .wrapper .accordion ul li .list.question:hover i {
   opacity: 0.5;
 }
-
 .faq .container .wrapper .accordion ul li .list.answer {
   max-height: 0px;
   overflow: hidden;
-  -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
 }
-
 .faq .container .wrapper .accordion ul li .list.answer .text-wrapper {
   padding: 20px 40px;
 }
-
 .faq .container .wrapper .accordion ul li .list .text-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 90%;
 }
-
 .faq .container .wrapper .accordion ul li .list .text-wrapper .list-icon {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -1099,18 +868,12 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   font-size: 30px;
   margin-right: 30px;
 }
-
 .faq .container .wrapper .accordion ul li .list .text-wrapper .text {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   line-height: 2em;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
-
 .faq .container .wrapper .btn a {
   display: block;
   width: 300px;
@@ -1123,38 +886,25 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   letter-spacing: 3px;
   font-family: YuGothic, "Yu Gothic", sans-serif;
   margin-top: 70px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .faq .container .wrapper .btn a:hover {
   background: #08656e;
   color: white;
 }
 
 footer .container .wrapper {
-  background-image: url(willsupport-img/footer-bg-img.png);
+  background-image: url(../willsupport-img/footer-bg-img.png);
   padding: 40px 0 15px 0;
 }
-
 footer .container .wrapper .footer-menu-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
   max-width: 1300px;
 }
-
 footer .container .wrapper .footer-menu-wrapper .logo a h2 {
   font-family: "corporate-logo-ver2", sans-serif;
   font-weight: 700;
@@ -1163,48 +913,33 @@ footer .container .wrapper .footer-menu-wrapper .logo a h2 {
   color: white;
   text-shadow: 3px 3px 6px #4da0a3;
 }
-
 footer .container .wrapper .footer-menu-wrapper .menu ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 footer .container .wrapper .footer-menu-wrapper .menu ul li {
   margin-left: 35px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   font-family: YuGothic, "Yu Gothic", sans-serif;
   color: white;
   letter-spacing: 3px;
 }
-
 footer .container .wrapper .footer-menu-wrapper .menu ul li:hover {
   color: #5898a2;
 }
-
 footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6) {
   color: white;
 }
-
 footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6) a {
   display: block;
   padding: 15px 40px;
   background: #4e4e4e;
   border-radius: 10px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6):hover a {
   background: #5898a2;
 }
-
 footer .container .wrapper .copy {
   text-align: center;
   color: white;
@@ -1218,11 +953,10 @@ footer .container .wrapper .copy {
 
 @media screen and (max-width: 1250px) {
   .fv .container {
-    background-image: url(willsupport-img/fv-bg.png);
+    background-image: url(../willsupport-img/fv-bg.png);
     background-position: center;
     background-size: cover;
   }
-
   .fv .container .wrapper {
     position: relative;
     font-family: "zen-kaku-gothic-new", sans-serif;
@@ -1233,7 +967,6 @@ footer .container .wrapper .copy {
     max-width: 1300px;
     margin: 0 auto;
   }
-
   .fv .container .wrapper .fv-message {
     font-size: 24px;
     border-bottom: solid 6px #f9e615;
@@ -1245,44 +978,28 @@ footer .container .wrapper .copy {
     text-shadow: 2px 2px 6px #70aeb1;
     letter-spacing: 5px;
   }
-
   .fv .container .wrapper .fv-message .large {
     font-size: 57px;
     letter-spacing: 3px;
     margin: 0 5px;
   }
-
   .fv .container .wrapper .fv-message .large2 {
     font-size: 47px;
     letter-spacing: 3px;
   }
-
   .fv .container .wrapper .fv-message .mid {
     font-size: 32px;
   }
-
   .fv .container .wrapper .fv-content-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-top: 35px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper {
-    -webkit-transform: translateX(30px);
     transform: translateX(30px);
     width: 50%;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper h2 {
     color: white;
     font-size: 32px;
@@ -1290,7 +1007,6 @@ footer .container .wrapper .copy {
     text-align: center;
     letter-spacing: 4px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper .fv-logo {
     font-size: 130px;
     font-family: "corporate-logo-ver2", sans-serif;
@@ -1301,23 +1017,12 @@ footer .container .wrapper .copy {
     text-shadow: 2px 2px 6px #70aeb1;
     letter-spacing: 8px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 20px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper ul li {
     font-size: 26px;
     color: #333333;
@@ -1333,13 +1038,10 @@ footer .container .wrapper .copy {
     width: 150px;
     border-radius: 20px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .illust-wrapper {
     width: 45%;
-    -webkit-transform: translateX(0px);
     transform: translateX(0px);
   }
-
   .fv .container .wrapper .message {
     font-family: "zen-kaku-gothic-new", sans-serif;
     font-weight: 500;
@@ -1352,24 +1054,19 @@ footer .container .wrapper .copy {
     line-height: 1.5em;
     letter-spacing: 5px;
   }
-
   .fv .container .wrapper .banner {
     width: 150px;
     position: absolute;
-    -webkit-transform: translateY(60%);
     transform: translateY(60%);
     bottom: 0;
     right: 20px;
   }
-
   .fv .container .wrapper .banner .banner-wrapper {
     position: relative;
   }
-
   .fv .container .wrapper .banner .banner-wrapper p {
     position: absolute;
     top: 45%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 0;
     right: 0;
@@ -1384,27 +1081,16 @@ footer .container .wrapper .copy {
     color: #333333;
   }
 }
-
 @media screen and (max-width: 1050px) {
   header .container .wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
     max-width: 1300px;
     padding: 18px 0;
   }
-
   header .container .wrapper .logo a h1 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -1412,54 +1098,38 @@ footer .container .wrapper .copy {
     font-size: 42px;
     color: #5898a2;
   }
-
   header .container .wrapper .menu ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
   }
-
   header .container .wrapper .menu ul li {
     margin-left: 15px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
     font-family: YuGothic, "Yu Gothic", sans-serif;
     letter-spacing: 3px;
     font-size: 14px;
   }
-
   header .container .wrapper .menu ul li:hover {
     color: #5898a2;
   }
-
   header .container .wrapper .menu ul li:nth-child(6) {
     color: white;
   }
-
   header .container .wrapper .menu ul li:nth-child(6) a {
     display: block;
     padding: 15px 20px;
     background: #4e4e4e;
     border-radius: 10px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   header .container .wrapper .menu ul li:nth-child(6):hover a {
     background: #5898a2;
   }
-
   .fv .container {
-    background-image: url(willsupport-img/fv-bg.png);
+    background-image: url(../willsupport-img/fv-bg.png);
     background-position: center;
     background-size: cover;
   }
-
   .fv .container .wrapper {
     position: relative;
     font-family: "zen-kaku-gothic-new", sans-serif;
@@ -1470,7 +1140,6 @@ footer .container .wrapper .copy {
     max-width: 1300px;
     margin: 0 auto;
   }
-
   .fv .container .wrapper .fv-message {
     font-size: 18px;
     border-bottom: solid 6px #f9e615;
@@ -1482,44 +1151,28 @@ footer .container .wrapper .copy {
     text-shadow: 2px 2px 6px #70aeb1;
     letter-spacing: 5px;
   }
-
   .fv .container .wrapper .fv-message .large {
     font-size: 50px;
     letter-spacing: 3px;
     margin: 0 5px;
   }
-
   .fv .container .wrapper .fv-message .large2 {
     font-size: 40px;
     letter-spacing: 3px;
   }
-
   .fv .container .wrapper .fv-message .mid {
     font-size: 32px;
   }
-
   .fv .container .wrapper .fv-content-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-top: 25px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper {
-    -webkit-transform: translateX(30px);
     transform: translateX(30px);
     width: 50%;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper h2 {
     color: white;
     font-size: 26px;
@@ -1527,7 +1180,6 @@ footer .container .wrapper .copy {
     text-align: center;
     letter-spacing: 4px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper .fv-logo {
     font-size: 110px;
     font-family: "corporate-logo-ver2", sans-serif;
@@ -1538,23 +1190,12 @@ footer .container .wrapper .copy {
     text-shadow: 2px 2px 6px #70aeb1;
     letter-spacing: 8px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 20px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .text-wrapper ul li {
     font-size: 20px;
     color: #333333;
@@ -1570,13 +1211,10 @@ footer .container .wrapper .copy {
     width: 150px;
     border-radius: 20px;
   }
-
   .fv .container .wrapper .fv-content-wrapper .illust-wrapper {
     width: 45%;
-    -webkit-transform: translateX(0px);
     transform: translateX(0px);
   }
-
   .fv .container .wrapper .message {
     font-family: "zen-kaku-gothic-new", sans-serif;
     font-weight: 500;
@@ -1589,24 +1227,19 @@ footer .container .wrapper .copy {
     line-height: 1.5em;
     letter-spacing: 5px;
   }
-
   .fv .container .wrapper .banner {
     width: 120px;
     position: absolute;
-    -webkit-transform: translateY(60%);
     transform: translateY(60%);
     bottom: 0;
     right: 30px;
   }
-
   .fv .container .wrapper .banner .banner-wrapper {
     position: relative;
   }
-
   .fv .container .wrapper .banner .banner-wrapper p {
     position: absolute;
     top: 45%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 0;
     right: 0;
@@ -1620,35 +1253,29 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     color: #333333;
   }
-
   .feature .container .wrapper {
     background: #fbec47;
     margin-top: 75px;
     font-family: YuGothic, "Yu Gothic", sans-serif;
     padding-bottom: 60px;
   }
-
   .feature .container .wrapper h2 {
     color: #08656e;
     font-size: 28px;
     font-weight: bold;
     letter-spacing: 5px;
     text-align: center;
-    -webkit-transform: translateY(-35px);
     transform: translateY(-35px);
   }
-
   .feature .container .wrapper h2 .bold {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 83px;
-    -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
     display: inline-block;
     letter-spacing: 8px;
   }
-
   .feature .container .wrapper h3 {
     background: #0e849c;
     color: white;
@@ -1659,18 +1286,14 @@ footer .container .wrapper .copy {
     border-radius: 15px;
     width: 900px;
     margin: 0 auto;
-    -webkit-transform: translateY(-7px);
     transform: translateY(-7px);
   }
-
   .feature .container .wrapper h3 .bold {
     font-size: 33px;
   }
-
   .feature .container .wrapper h3 .dot-text {
     position: relative;
   }
-
   .feature .container .wrapper h3 .dot-text:before {
     position: absolute;
     top: -15px;
@@ -1683,7 +1306,6 @@ footer .container .wrapper .copy {
     background: radial-gradient(circle 7px, white 50%, transparent 50%);
     background: -moz-radial-gradient(circle 7px, white 50%, transparent 50%);
   }
-
   .feature .container .wrapper .service-text {
     font-size: 21px;
     font-weight: bold;
@@ -1693,27 +1315,16 @@ footer .container .wrapper .copy {
     margin: 0 auto;
     margin-top: 20px;
   }
-
   .feature .container .wrapper .service-text .bold {
     font-size: 32px;
     display: inline-block;
     border-bottom: solid 6px #2dbbd1;
     padding-bottom: 2px;
   }
-
   .feature .container .wrapper .list-wrapper {
     width: 800px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     margin: 0 auto;
     border: solid 2px #0e849c;
@@ -1721,26 +1332,16 @@ footer .container .wrapper .copy {
     padding: 10px 50px;
     margin-top: 50px;
   }
-
   .feature .container .wrapper .list-wrapper ul li {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
   }
-
-  .feature .container .wrapper .list-wrapper ul li+li {
+  .feature .container .wrapper .list-wrapper ul li + li {
     margin-top: 10px;
   }
-
   .feature .container .wrapper .list-wrapper ul li img {
     width: 30px;
   }
-
   .feature .container .wrapper .list-wrapper ul li p {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -1749,16 +1350,13 @@ footer .container .wrapper .copy {
     margin-left: 10px;
     letter-spacing: 3px;
   }
-
   .feature .container .wrapper .list-wrapper .illust-wrapper {
     width: 40%;
   }
-
   .works .container .wrapper {
     background: #f1f3f4;
     padding-bottom: 100px;
   }
-
   .works .container .wrapper .header-text h2 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -1768,7 +1366,6 @@ footer .container .wrapper .copy {
     letter-spacing: 5px;
     color: #333333;
   }
-
   .works .container .wrapper .header-text p {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 18px;
@@ -1778,31 +1375,20 @@ footer .container .wrapper .copy {
     margin-top: 5px;
     letter-spacing: 3pxm;
   }
-
   .works .container .wrapper .works-wrapper {
     width: 95%;
     max-width: 1152px;
     margin: 0 auto;
     margin-top: 70px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
   .works .container .wrapper .works-wrapper a {
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   .works .container .wrapper .works-wrapper a .works {
     width: 100%;
   }
-
   .works .container .wrapper .works-wrapper a p {
     text-align: center;
     font-family: YuGothic, "Yu Gothic", sans-serif;
@@ -1811,22 +1397,18 @@ footer .container .wrapper .copy {
     color: #333333;
     letter-spacing: 3px;
   }
-
   .works .container .wrapper .works-wrapper a:hover {
     opacity: 0.8;
   }
-
   .plan .container .wrapper {
     padding: 110px 0 130px 0;
     background: #e8eeee;
   }
-
   .plan .container .wrapper .header-wrapper {
     position: relative;
     width: 300px;
     margin: 0 auto;
   }
-
   .plan .container .wrapper .header-wrapper h2 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -1836,7 +1418,6 @@ footer .container .wrapper .copy {
     letter-spacing: 5px;
     color: #333333;
   }
-
   .plan .container .wrapper .header-wrapper p {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 18px;
@@ -1846,39 +1427,28 @@ footer .container .wrapper .copy {
     margin-top: 5px;
     letter-spacing: 3px;
   }
-
   .plan .container .wrapper .header-wrapper img {
     width: 150px;
     position: absolute;
     top: -80px;
     right: -80px;
   }
-
   .plan .container .wrapper .box-wrapper {
     width: 95%;
     max-width: 1224px;
     margin: 0 auto;
     margin-top: 70px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
   .plan .container .wrapper .box-wrapper .box {
     text-align: center;
     width: 22%;
     border: solid 2px #0e849c;
     padding: 30px 10px;
     background: white;
-    -webkit-box-shadow: 3px 3px 6px #a0c4c8;
     box-shadow: 3px 3px 6px #a0c4c8;
   }
-
   .plan .container .wrapper .box-wrapper .box h3 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -1890,7 +1460,6 @@ footer .container .wrapper .copy {
     display: inline-block;
     letter-spacing: 3px;
   }
-
   .plan .container .wrapper .box-wrapper .box ul {
     width: 90%;
     margin: 0 auto;
@@ -1898,69 +1467,44 @@ footer .container .wrapper .copy {
     font-size: 14px;
     letter-spacing: 3px;
     margin-top: 30px;
-    -webkit-transform: translateX(15px);
     transform: translateX(15px);
   }
-
   .plan .container .wrapper .box-wrapper .box ul li {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     text-align: left;
   }
-
-  .plan .container .wrapper .box-wrapper .box ul li+li {
+  .plan .container .wrapper .box-wrapper .box ul li + li {
     margin-top: 20px;
   }
-
   .plan .container .wrapper .box-wrapper .box ul li p:nth-child(1) {
     width: 45%;
   }
-
   .plan .container .wrapper .box-wrapper .box ul li p:nth-child(2) {
     width: 55%;
   }
-
   .plan .container .wrapper .box-wrapper .box .price {
     margin-top: 40px;
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
     font-style: normal;
   }
-
   .plan .container .wrapper .box-wrapper .box .price .num {
     font-size: 32px;
     letter-spacing: 5px;
   }
-
   footer .container .wrapper {
-    background-image: url(willsupport-img/footer-bg-img.png);
+    background-image: url(../willsupport-img/footer-bg-img.png);
     padding: 40px 0 15px 0;
   }
-
   footer .container .wrapper .footer-menu-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
     max-width: 1300px;
   }
-
   footer .container .wrapper .footer-menu-wrapper .logo a h2 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -1969,49 +1513,34 @@ footer .container .wrapper .copy {
     color: white;
     text-shadow: 3px 3px 6px #4da0a3;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li {
     margin-left: 25px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
     font-family: YuGothic, "Yu Gothic", sans-serif;
     color: white;
     letter-spacing: 3px;
     font-size: 14px;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li:hover {
     color: #5898a2;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6) {
     color: white;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6) a {
     display: block;
     padding: 15px 20px;
     background: #4e4e4e;
     border-radius: 10px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6):hover a {
     background: #5898a2;
   }
-
   footer .container .wrapper .copy {
     text-align: center;
     color: white;
@@ -2019,16 +1548,13 @@ footer .container .wrapper .copy {
     margin-top: 70px;
   }
 }
-
 @media screen and (max-width: 770px) {
   .sp {
     display: block;
   }
-
   .pc {
     display: none;
   }
-
   header .sp-wrapper .menu-icon {
     position: fixed;
     top: 2%;
@@ -2040,50 +1566,37 @@ footer .container .wrapper .copy {
     z-index: 999;
     background: #333333;
   }
-
   header .sp-wrapper .menu-icon:hover {
     cursor: pointer;
   }
-
   header .sp-wrapper .menu-icon li {
     width: 25px;
     height: 3px;
     background: white;
     position: absolute;
     left: 25%;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   header .sp-wrapper .menu-icon li:nth-child(1) {
     top: 28%;
   }
-
   header .sp-wrapper .menu-icon li:nth-child(2) {
     top: 47.5%;
   }
-
   header .sp-wrapper .menu-icon li:nth-child(3) {
     bottom: 27%;
   }
-
   header .sp-wrapper .menu-icon.active li:nth-child(1) {
     top: 48%;
-    -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
-
   header .sp-wrapper .menu-icon.active li:nth-child(2) {
-    -webkit-transform: scale(0);
     transform: scale(0);
   }
-
   header .sp-wrapper .menu-icon.active li:nth-child(3) {
     top: 48%;
-    -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
   }
-
   header .sp-wrapper .sp-menu {
     background: rgba(14, 132, 156, 0.95);
     position: fixed;
@@ -2094,35 +1607,26 @@ footer .container .wrapper .copy {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    -webkit-transition: 0.8s;
     transition: 0.8s;
     opacity: 0;
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-
   header .sp-wrapper .sp-menu.active {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
-
   header .sp-wrapper .sp-menu .logo {
     padding-top: 30px;
   }
-
   header .sp-wrapper .sp-menu .logo h1 {
-    font-family: "corporate-logo-ver2", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 50px;
-    color: white;
     text-align: center;
   }
-
+  header .sp-wrapper .sp-menu .logo h1 img {
+    width: 200px;
+  }
   header .sp-wrapper .sp-menu ul {
     width: 80%;
     max-width: 600px;
@@ -2131,63 +1635,41 @@ footer .container .wrapper .copy {
     list-style: none;
     padding-bottom: 100px;
   }
-
-  header .sp-wrapper .sp-menu ul li+li {
+  header .sp-wrapper .sp-menu ul li + li {
     border-top: solid 1px rgba(255, 255, 255, 0.4);
   }
-
   header .sp-wrapper .sp-menu ul li a {
     text-decoration: none;
     color: white;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 25px 0;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   header .sp-wrapper .sp-menu ul li a i {
     padding-right: 30px;
   }
-
   header .sp-wrapper .sp-menu ul li a:hover {
     opacity: 0.5;
   }
-
   .follow-btn {
     position: fixed;
     width: 100%;
     bottom: 0;
     z-index: 999;
   }
-
   .follow-btn .btn-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
   .follow-btn .btn-wrapper .btn {
     background: #333333;
     width: 100%;
     text-align: center;
   }
-
   .follow-btn .btn-wrapper .btn:nth-child(2) {
     background: #00b900;
   }
-
   .follow-btn .btn-wrapper .btn a {
     display: block;
     padding: 10px;
@@ -2199,11 +1681,9 @@ footer .container .wrapper .copy {
     font-size: 18px;
     color: white;
   }
-
   .onayami .container .wrapper {
     margin-top: 50px;
   }
-
   .onayami .container .wrapper h2 {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 20px;
@@ -2216,32 +1696,23 @@ footer .container .wrapper .copy {
     text-align: center;
     margin: 0 auto;
   }
-
   .onayami .container .wrapper .speechbubble-above {
     margin-top: 50px;
     display: block;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
-
   .onayami .container .wrapper .speechbubble-above .speech-wrapper {
     position: relative;
     width: 250px;
     margin: 0 auto;
     margin-top: 10px;
   }
-
   .onayami .container .wrapper .speechbubble-above .speech-wrapper:nth-child(2) {
-    -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-
   .onayami .container .wrapper .speechbubble-above .speech-wrapper img {
     z-index: 1;
   }
-
   .onayami .container .wrapper .speechbubble-above .speech-wrapper p {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2252,31 +1723,23 @@ footer .container .wrapper .copy {
     text-align: center;
     position: absolute;
     top: 45%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 0;
     right: 0;
     margin: 0 auto;
     z-index: 2;
   }
-
   .onayami .container .wrapper .speechbubble-bottom {
     margin-top: 20px;
     display: block;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
-
   .onayami .container .wrapper .speechbubble-bottom .speech-wrapper {
     margin: 0 30px;
   }
-
   .onayami .container .wrapper .speechbubble-bottom .speech-wrapper:nth-child(odd) {
     margin-top: 20px;
   }
-
   .onayami .container .wrapper .speechbubble-bottom .speech-wrapper p {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2286,41 +1749,34 @@ footer .container .wrapper .copy {
     line-height: 1.3em;
     text-align: center;
   }
-
   .onayami .container .wrapper .img-arrow {
     width: 70px;
     margin: 0 auto;
     margin-top: 40px;
   }
-
   .feature .container .wrapper {
     background: #fbec47;
     margin-top: 75px;
     font-family: YuGothic, "Yu Gothic", sans-serif;
     padding-bottom: 60px;
   }
-
   .feature .container .wrapper h2 {
     color: #08656e;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 5px;
     text-align: center;
-    -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
-
   .feature .container .wrapper h2 .bold {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 45px;
-    -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
     display: inline-block;
     letter-spacing: 8px;
   }
-
   .feature .container .wrapper h3 {
     background: #0e849c;
     color: white;
@@ -2332,19 +1788,15 @@ footer .container .wrapper .copy {
     width: 300px;
     margin: 0 auto;
     margin-top: 20px;
-    -webkit-transform: translateY(-7px);
     transform: translateY(-7px);
     line-height: 2em;
   }
-
   .feature .container .wrapper h3 .bold {
     font-size: 22px;
   }
-
   .feature .container .wrapper h3 .dot-text {
     position: relative;
   }
-
   .feature .container .wrapper h3 .dot-text:before {
     position: absolute;
     top: -15px;
@@ -2357,7 +1809,6 @@ footer .container .wrapper .copy {
     background: radial-gradient(circle 7px, white 50%, transparent 50%);
     background: -moz-radial-gradient(circle 7px, white 50%, transparent 50%);
   }
-
   .feature .container .wrapper .service-text {
     font-size: 14px;
     font-weight: bold;
@@ -2369,7 +1820,6 @@ footer .container .wrapper .copy {
     line-height: 2em;
     text-align: center;
   }
-
   .feature .container .wrapper .service-text .bold {
     font-size: 28px;
     display: inline-block;
@@ -2377,17 +1827,10 @@ footer .container .wrapper .copy {
     border-bottom: solid 6px #2dbbd1;
     padding-bottom: 2px;
   }
-
   .feature .container .wrapper .list-wrapper {
     width: 80%;
     display: block;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     margin: 0 auto;
     border: solid 2px #0e849c;
@@ -2395,26 +1838,16 @@ footer .container .wrapper .copy {
     padding: 30px 10px;
     margin-top: 30px;
   }
-
   .feature .container .wrapper .list-wrapper ul li {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
   }
-
-  .feature .container .wrapper .list-wrapper ul li+li {
+  .feature .container .wrapper .list-wrapper ul li + li {
     margin-top: 10px;
   }
-
   .feature .container .wrapper .list-wrapper ul li img {
     width: 20px;
   }
-
   .feature .container .wrapper .list-wrapper ul li p {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2424,23 +1857,19 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     line-height: 1.7em;
   }
-
   .feature .container .wrapper .list-wrapper .illust-wrapper {
     width: 80%;
     display: block;
     margin: 0 auto;
     margin-top: 30px;
   }
-
   .works .container .wrapper {
     background: #f1f3f4;
     padding-bottom: 100px;
   }
-
   .works .container .wrapper .header-text {
     margin-top: 30px;
   }
-
   .works .container .wrapper .header-text h2 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2450,7 +1879,6 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     color: #333333;
   }
-
   .works .container .wrapper .header-text p {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 14px;
@@ -2460,29 +1888,21 @@ footer .container .wrapper .copy {
     margin-top: 5px;
     letter-spacing: 3pxm;
   }
-
   .works .container .wrapper .works-wrapper {
     width: 80%;
     max-width: 1152px;
     margin: 0 auto;
     margin-top: 70px;
     display: block;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
   .works .container .wrapper .works-wrapper a {
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   .works .container .wrapper .works-wrapper a .works {
     width: 100%;
     margin-top: 40px;
   }
-
   .works .container .wrapper .works-wrapper a .works p {
     text-align: center;
     font-family: YuGothic, "Yu Gothic", sans-serif;
@@ -2492,18 +1912,15 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     font-size: 14px;
   }
-
   .works .container .wrapper .works-wrapper a:hover {
     opacity: 0.8;
   }
-
   .contact .container .wrapper {
-    background-image: url(willsupport-img/contact-bg.png);
+    background-image: url(../willsupport-img/contact-bg.png);
     background-position: center;
     background-size: cover;
     padding: 50px 0;
   }
-
   .contact .container .wrapper h2 {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 20px;
@@ -2512,7 +1929,6 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     color: white;
   }
-
   .contact .container .wrapper .text {
     color: white;
     letter-spacing: 3px;
@@ -2523,28 +1939,20 @@ footer .container .wrapper .copy {
     font-size: 14px;
     padding: 0 20px;
   }
-
   .contact .container .wrapper .btn-wrapper {
     display: block;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 40px;
   }
-
   .contact .container .wrapper .btn-wrapper a {
     display: block;
     margin: 0;
   }
-
   .contact .container .wrapper .btn-wrapper a:nth-child(2) .btn {
     background: #00b900;
-    -webkit-box-shadow: 2px 2px #90d493;
     box-shadow: 2px 2px #90d493;
     margin-top: 30px;
   }
-
   .contact .container .wrapper .btn-wrapper a .btn {
     background: #333333;
     width: 300px;
@@ -2552,10 +1960,8 @@ footer .container .wrapper .copy {
     padding: 20px 0;
     border-radius: 37px;
     position: relative;
-    -webkit-box-shadow: 2px 2px #789ca0;
     box-shadow: 2px 2px #789ca0;
   }
-
   .contact .container .wrapper .btn-wrapper a .btn p {
     color: white;
     font-family: YuGothic, "Yu Gothic", sans-serif;
@@ -2563,34 +1969,26 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     font-size: 14px;
   }
-
   .contact .container .wrapper .btn-wrapper a .btn img {
     width: 20px;
     position: absolute;
     top: 50%;
     right: 10%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   .contact .container .wrapper .btn-wrapper a .btn:hover img {
-    -webkit-transform: translateX(5px) translateY(-50%);
     transform: translateX(5px) translateY(-50%);
   }
-
   .plan .container .wrapper {
     padding: 60px 0 70px 0;
     background: #e8eeee;
   }
-
   .plan .container .wrapper .header-wrapper {
     position: relative;
     width: 300px;
     margin: 0 auto;
   }
-
   .plan .container .wrapper .header-wrapper h2 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2600,7 +1998,6 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     color: #333333;
   }
-
   .plan .container .wrapper .header-wrapper p {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 14px;
@@ -2610,26 +2007,20 @@ footer .container .wrapper .copy {
     margin-top: 5px;
     letter-spacing: 3px;
   }
-
   .plan .container .wrapper .header-wrapper img {
     width: 100px;
     position: absolute;
     top: -50px;
     right: 0px;
   }
-
   .plan .container .wrapper .box-wrapper {
     width: 85%;
     max-width: 1224px;
     margin: 0 auto;
     margin-top: 70px;
     display: block;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
   .plan .container .wrapper .box-wrapper .box {
     text-align: center;
     width: 100%;
@@ -2638,14 +2029,11 @@ footer .container .wrapper .copy {
     border: solid 2px #0e849c;
     padding: 30px 0;
     background: white;
-    -webkit-box-shadow: 3px 3px 6px #a0c4c8;
     box-shadow: 3px 3px 6px #a0c4c8;
   }
-
-  .plan .container .wrapper .box-wrapper .box+.box {
+  .plan .container .wrapper .box-wrapper .box + .box {
     margin-top: 50px;
   }
-
   .plan .container .wrapper .box-wrapper .box h3 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2657,7 +2045,6 @@ footer .container .wrapper .copy {
     display: inline-block;
     letter-spacing: 3px;
   }
-
   .plan .container .wrapper .box-wrapper .box ul {
     width: 90%;
     margin: 0 auto;
@@ -2665,50 +2052,35 @@ footer .container .wrapper .copy {
     font-size: 14px;
     letter-spacing: 3px;
     margin-top: 30px;
-    -webkit-transform: translateX(15px);
     transform: translateX(15px);
   }
-
   .plan .container .wrapper .box-wrapper .box ul li {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     text-align: left;
   }
-
-  .plan .container .wrapper .box-wrapper .box ul li+li {
+  .plan .container .wrapper .box-wrapper .box ul li + li {
     margin-top: 20px;
   }
-
   .plan .container .wrapper .box-wrapper .box ul li p:nth-child(1) {
     width: 45%;
   }
-
   .plan .container .wrapper .box-wrapper .box ul li p:nth-child(2) {
     width: 55%;
   }
-
   .plan .container .wrapper .box-wrapper .box .price {
     margin-top: 40px;
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
     font-style: normal;
   }
-
   .plan .container .wrapper .box-wrapper .box .price .num {
     font-size: 32px;
     letter-spacing: 5px;
   }
-
   .flow .container .wrapper {
     padding: 60px 0 80px 0;
   }
-
   .flow .container .wrapper .header-text h2 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2718,7 +2090,6 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     color: #333333;
   }
-
   .flow .container .wrapper .header-text p {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 14px;
@@ -2728,26 +2099,22 @@ footer .container .wrapper .copy {
     margin-top: 5px;
     letter-spacing: 3pxm;
   }
-
   .flow .container .wrapper .flow-wrapper {
     width: 80%;
     max-width: 900px;
     margin: 0 auto;
     margin-top: 40px;
   }
-
   .flow .container .wrapper .flow-wrapper ul li {
     display: block;
     padding: 20px;
     color: white;
     background: #7dacaf;
   }
-
   .flow .container .wrapper .flow-wrapper ul li:nth-child(odd) {
     color: #333333;
     background: #c9ddde;
   }
-
   .flow .container .wrapper .flow-wrapper ul li .num-wrapper .step {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 500;
@@ -2755,7 +2122,6 @@ footer .container .wrapper .copy {
     font-size: 14px;
     text-align: center;
   }
-
   .flow .container .wrapper .flow-wrapper ul li .num-wrapper .num {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2764,11 +2130,9 @@ footer .container .wrapper .copy {
     text-align: center;
     margin-top: 3px;
   }
-
   .flow .container .wrapper .flow-wrapper ul li .text-wrapper {
     margin-left: 0px;
   }
-
   .flow .container .wrapper .flow-wrapper ul li .text-wrapper .header {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2779,14 +2143,12 @@ footer .container .wrapper .copy {
     margin-top: 20px;
     line-height: 1.5em;
   }
-
   .flow .container .wrapper .flow-wrapper ul li .text-wrapper .text {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     line-height: 1.5em;
     margin-top: 10px;
     font-size: 14px;
   }
-
   .faq .container .wrapper {
     width: 95%;
     max-width: 900px;
@@ -2794,7 +2156,6 @@ footer .container .wrapper .copy {
     margin-top: 50px;
     padding-bottom: 50px;
   }
-
   .faq .container .wrapper .header-text h2 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2804,7 +2165,6 @@ footer .container .wrapper .copy {
     letter-spacing: 5px;
     color: #333333;
   }
-
   .faq .container .wrapper .header-text p {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 18px;
@@ -2814,93 +2174,61 @@ footer .container .wrapper .copy {
     margin-top: 5px;
     letter-spacing: 3pxm;
   }
-
   .faq .container .wrapper .accordion {
     width: 95%;
     max-width: 900px;
     margin: 0 auto;
     margin-top: 40px;
   }
-
   .faq .container .wrapper .accordion ul li {
     border: solid 1px #32949e;
     border-radius: 5px;
   }
-
-  .faq .container .wrapper .accordion ul li+li {
+  .faq .container .wrapper .accordion ul li + li {
     margin-top: 30px;
   }
-
   .faq .container .wrapper .accordion ul li .list.question {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 10px 20px;
     cursor: pointer;
   }
-
   .faq .container .wrapper .accordion ul li .list.question .text {
     font-weight: bold;
     color: #08656e;
     line-height: 1.5em;
   }
-
   .faq .container .wrapper .accordion ul li .list.question i {
     font-size: 1.3em;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-
   .faq .container .wrapper .accordion ul li .list.question.active i {
-    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
-
   .faq .container .wrapper .accordion ul li .list.question:hover .text {
     opacity: 0.5;
   }
-
   .faq .container .wrapper .accordion ul li .list.question:hover i {
     opacity: 0.5;
   }
-
   .faq .container .wrapper .accordion ul li .list.answer {
     max-height: 0px;
     overflow: hidden;
-    -webkit-transition: 0.5s ease-out;
     transition: 0.5s ease-out;
   }
-
   .faq .container .wrapper .accordion ul li .list.answer .text-wrapper {
     padding: 10px 20px;
   }
-
   .faq .container .wrapper .accordion ul li .list.answer .text-wrapper .text {
     font-size: 14px;
     line-height: 1.7em;
   }
-
   .faq .container .wrapper .accordion ul li .list .text-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 90%;
   }
-
   .faq .container .wrapper .accordion ul li .list .text-wrapper .list-icon {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2908,18 +2236,12 @@ footer .container .wrapper .copy {
     font-size: 25px;
     margin-right: 20px;
   }
-
   .faq .container .wrapper .accordion ul li .list .text-wrapper .text {
     font-family: YuGothic, "Yu Gothic", sans-serif;
     line-height: 1.2em;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
-
   .faq .container .wrapper .btn a {
     display: block;
     width: 250px;
@@ -2932,35 +2254,24 @@ footer .container .wrapper .copy {
     letter-spacing: 3px;
     font-family: YuGothic, "Yu Gothic", sans-serif;
     margin-top: 40px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   .faq .container .wrapper .btn a:hover {
     background: #08656e;
     color: white;
   }
-
   footer .container .wrapper {
-    background-image: url(willsupport-img/footer-bg-img.png);
+    background-image: url(../willsupport-img/footer-bg-img.png);
     padding: 40px 0 80px 0;
   }
-
   footer .container .wrapper .footer-menu-wrapper {
     display: block;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
     max-width: 1300px;
   }
-
   footer .container .wrapper .footer-menu-wrapper .logo a h2 {
     font-family: "corporate-logo-ver2", sans-serif;
     font-weight: 700;
@@ -2970,19 +2281,13 @@ footer .container .wrapper .copy {
     text-shadow: 3px 3px 6px #4da0a3;
     text-align: center;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul {
     display: block;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-top: 30px;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li {
     margin-left: 25px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
     font-family: YuGothic, "Yu Gothic", sans-serif;
     color: white;
@@ -2991,39 +2296,30 @@ footer .container .wrapper .copy {
     text-align: center;
     padding: 20px 0;
   }
-
-  footer .container .wrapper .footer-menu-wrapper .menu ul li+li {
+  footer .container .wrapper .footer-menu-wrapper .menu ul li + li {
     border-top: solid 1px #9bd8da;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li:hover {
     color: #5898a2;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6) {
     color: white;
     border-top: none;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6) a {
     display: block;
     padding: 15px 20px;
     background: #4e4e4e;
     border-radius: 10px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
   footer .container .wrapper .footer-menu-wrapper .menu ul li:nth-child(6):hover a {
     background: #5898a2;
   }
-
   footer .container .wrapper .copy {
     text-align: center;
     color: white;
     font-size: small;
     margin-top: 70px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
