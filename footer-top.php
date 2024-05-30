@@ -12,6 +12,9 @@
               'container' => 'nav',
             ));
           ?>
+          <p class="footer-tradelaw">
+            <a href="<?php echo get_page_link(214); ?>">特定商取引法に基づく表記</a>
+          </p>
           <p class="small">&copy;2023-<?php echo date('Y'); ?> Will Corp.</p>
         </div>
       </div>

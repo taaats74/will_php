@@ -37,6 +37,19 @@ footer {
           }
         }
       }
+      .footer-tradelaw{
+        text-align: center;
+        margin-top: 30px;
+        a{
+          color: white;
+          font-size: .9em;
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          transition: .3s;
+          &:hover{
+            opacity: .5;
+          }
+        }
+      }
 
       .small {
         text-align: center;

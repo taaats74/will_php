@@ -9514,6 +9514,136 @@ body.appear .loading-container {
     font-size: 0.9em;
   }
 }
+.hero-section.tradelaw .container {
+  background: rgba(125, 172, 175, 0.2);
+  border-bottom: solid 1px #b1cdcf;
+}
+.hero-section.tradelaw .container .wrapper {
+  padding-top: 68px;
+  max-width: 1950px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-section.tradelaw .container .wrapper .img-wrapper {
+  width: 100%;
+}
+.hero-section.tradelaw .container .wrapper .hero-text {
+  position: absolute;
+  top: 55%;
+  left: 18%;
+}
+.hero-section.tradelaw .container .wrapper .hero-text .section-header {
+  font-size: 2.5em;
+  letter-spacing: 4px;
+}
+
+.page-tradelaw-table .container .wrapper {
+  padding-bottom: 100px;
+}
+.page-tradelaw-table .container .wrapper h2 {
+  font-family: "fot-matisse-pron", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  margin-top: 120px;
+}
+.page-tradelaw-table .container .wrapper h2 span {
+  color: #7dacaf;
+}
+.page-tradelaw-table .container .wrapper table {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-tradelaw-table .container .wrapper table tr th {
+  font-weight: bold;
+  width: 30%;
+  padding: 30px 0;
+  border-bottom: solid 1px black;
+}
+.page-tradelaw-table .container .wrapper table tr td {
+  width: 70%;
+  padding: 30px 10px;
+  border-bottom: solid 1px silver;
+}
+.page-tradelaw-table .container .wrapper table tr td ul {
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 770px) {
+  .hero-section.tradelaw .container {
+    background: rgba(125, 172, 175, 0.2);
+    border-bottom: solid 1px #b1cdcf;
+  }
+  .hero-section.tradelaw .container .wrapper {
+    padding-top: 68px;
+    max-width: 1950px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-section.tradelaw .container .wrapper .img-wrapper {
+    width: 220%;
+  }
+  .hero-section.tradelaw .container .wrapper .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 18%;
+  }
+  .hero-section.tradelaw .container .wrapper .hero-text .section-header {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+  }
+  .page-tradelaw-table .container .wrapper {
+    padding-bottom: 100px;
+  }
+  .page-tradelaw-table .container .wrapper h2 {
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.4em;
+    line-height: 1em;
+    text-align: center;
+    margin-top: 70px;
+  }
+  .page-tradelaw-table .container .wrapper h2 span {
+    color: #7dacaf;
+  }
+  .page-tradelaw-table .container .wrapper table {
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-family: "toppan-bunkyu-gothic-pr6n", serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .page-tradelaw-table .container .wrapper table tr th {
+    font-weight: bold;
+    width: 30%;
+    padding: 10px 0;
+    font-size: 0.8em;
+    border-bottom: solid 1px black;
+    line-height: 1.2em;
+  }
+  .page-tradelaw-table .container .wrapper table tr td {
+    width: 70%;
+    padding: 10px;
+    font-size: 0.8em;
+    border-bottom: solid 1px silver;
+  }
+  .page-tradelaw-table .container .wrapper table tr td ul {
+    margin-left: 10px;
+  }
+}
 footer .container {
   background: #7dacaf;
   padding: 60px 0 20px 0;
@@ -9546,6 +9676,19 @@ footer .container .wrapper ul li a {
 }
 footer .container .wrapper ul li a:hover {
   opacity: 0.6;
+}
+footer .container .wrapper .footer-tradelaw {
+  text-align: center;
+  margin-top: 30px;
+}
+footer .container .wrapper .footer-tradelaw a {
+  color: white;
+  font-size: 0.9em;
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  transition: 0.3s;
+}
+footer .container .wrapper .footer-tradelaw a:hover {
+  opacity: 0.5;
 }
 footer .container .wrapper .small {
   text-align: center;

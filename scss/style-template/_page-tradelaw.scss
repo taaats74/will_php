@@ -1,0 +1,165 @@
+.hero-section {
+  &.tradelaw {
+    .container {
+      background: rgba(125, 172, 175, .2);
+      border-bottom: solid 1px #b1cdcf;
+
+      .wrapper {
+        padding-top: 68px;
+        max-width: 1950px;
+        margin: 0 auto;
+        position: relative;
+
+        .img-wrapper {
+          width: 100%;
+        }
+
+        .hero-text {
+          position: absolute;
+          top: 55%;
+          left: 18%;
+
+          .section-header {
+            font-size: 2.5em;
+            letter-spacing: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-tradelaw-table{
+  .container{
+    .wrapper{
+      padding-bottom: 100px;
+      h2{
+        font-family: "fot-matisse-pron", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 1em;
+        text-align: center;
+        margin-top: 120px;
+        span {
+          color: #7dacaf;
+        }
+      }
+      table{
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 50px;
+        font-family: "toppan-bunkyu-gothic-pr6n", serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        tr{
+          th{
+            font-weight: bold;
+            width: 30%;
+            padding: 30px 0;
+            border-bottom: solid 1px black;
+          }
+          td{
+            width: 70%;
+            padding: 30px 10px;
+            border-bottom: solid 1px silver;
+            ul{
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .hero-section {
+    &.tradelaw {
+      .container {
+        background: rgba(125, 172, 175, .2);
+        border-bottom: solid 1px #b1cdcf;
+
+        .wrapper {
+          padding-top: 68px;
+          max-width: 1950px;
+          margin: 0 auto;
+          position: relative;
+          overflow: hidden;
+
+          .img-wrapper {
+            width: 220%;
+          }
+
+          .hero-text {
+            position: absolute;
+            top: 55%;
+            left: 18%;
+
+            .section-header {
+              font-size: 2.5em;
+              letter-spacing: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-tradelaw-table {
+    .container {
+      .wrapper {
+        padding-bottom: 100px;
+
+        h2 {
+          font-family: "fot-matisse-pron", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          font-size: 1.4em;
+          line-height: 1em;
+          text-align: center;
+          margin-top: 70px;
+
+          span {
+            color: #7dacaf;
+          }
+        }
+
+        table {
+          width: 95%;
+          max-width: 800px;
+          margin: 0 auto;
+          margin-top: 30px;
+          font-family: "toppan-bunkyu-gothic-pr6n", serif;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          tr {
+            th {
+              font-weight: bold;
+              width: 30%;
+              padding: 10px 0;
+              font-size: .8em;
+              border-bottom: solid 1px black;
+              line-height: 1.2em;
+            }
+
+            td {
+              width: 70%;
+              padding: 10px;
+              font-size: .8em;
+              border-bottom: solid 1px silver;
+
+              ul {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

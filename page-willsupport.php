@@ -31,6 +31,15 @@
     })(document);
   </script>
   <title>定額サブスクホームページ/ウィルサポ</title>
+		<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S1MX9T90DT"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-S1MX9T90DT');
+	</script>
 </head>
 <body>
   <header>
@@ -106,11 +115,11 @@
   <div class="follow-btn sp">
     <div class="btn-wrapper">
       <div class="btn">
-        <a href="https://will-corp.co.jp/contact/" target="_blank" rel="noopener noreferrer">メールで<br>お問い合わせ</a>
+        <a href="https://will-corp.co.jp/contact/" target="_blank" rel="noopener noreferrer">お問い合わせは<br>こちら</a>
       </div>
-      <div class="btn">
+      <!-- <div class="btn">
         <a href="https://lin.ee/Twx5uF1" target="_blank" rel="noopener noreferrer">LINEで<br>お問い合わせ</a>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -280,12 +289,12 @@
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/contact-arrow.png" alt="">
             </div>
           </a>
-          <a href="https://lin.ee/Twx5uF1" target="_blank" rel="noopener noreferrer">
+          <!-- <a href="https://lin.ee/Twx5uF1" target="_blank" rel="noopener noreferrer">
             <div class="btn">
               <p>LINEでのお問い合わせ</p>
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/contact-arrow-green.png" alt="">
             </div>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
@@ -506,12 +515,12 @@
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/contact-arrow.png" alt="">
             </div>
           </a>
-          <a href="https://lin.ee/Twx5uF1" target="_blank" rel="noopener noreferrer">
+          <!-- <a href="https://lin.ee/Twx5uF1" target="_blank" rel="noopener noreferrer">
             <div class="btn">
               <p>LINEでのお問い合わせ</p>
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/contact-arrow-green.png" alt="">
             </div>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
