@@ -275,6 +275,11 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   text-shadow: 2px 2px 6px #70aeb1;
   letter-spacing: 8px;
 }
+.fv .container .wrapper .fv-content-wrapper .text-wrapper img {
+  width: 550px;
+  display: block;
+  margin: 0 auto;
+}
 .fv .container .wrapper .fv-content-wrapper .text-wrapper ul {
   display: flex;
   align-items: center;
@@ -1017,6 +1022,11 @@ footer .container .wrapper .copy {
     text-shadow: 2px 2px 6px #70aeb1;
     letter-spacing: 8px;
   }
+  .fv .container .wrapper .fv-content-wrapper .text-wrapper img {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
   .fv .container .wrapper .fv-content-wrapper .text-wrapper ul {
     display: flex;
     align-items: center;
@@ -1189,6 +1199,11 @@ footer .container .wrapper .copy {
     color: white;
     text-shadow: 2px 2px 6px #70aeb1;
     letter-spacing: 8px;
+  }
+  .fv .container .wrapper .fv-content-wrapper .text-wrapper img {
+    width: 450px;
+    display: block;
+    margin: 0 auto;
   }
   .fv .container .wrapper .fv-content-wrapper .text-wrapper ul {
     display: flex;

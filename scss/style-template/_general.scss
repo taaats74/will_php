@@ -82,6 +82,32 @@ img {
   }
 }
 
+.page-top2-btn{
+  width: 240px;
+  a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px 15px 40px;
+    border: solid 1px black;
+    letter-spacing: 3px;
+    border-radius: 30px;
+    transition: .5s;
+    img{
+      width: 30px;
+      margin-left: 40px;
+      transition: .5s;
+    }
+    &:hover{
+      opacity: .7;
+      img{
+        transform: translateX(10px);
+      }
+    }
+  }
+}
+
 .hero-section {
   .container {
     background: rgba(125, 172, 175, .2);

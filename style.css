@@ -80,6 +80,32 @@ img {
   transform: scaleX(1);
 }
 
+.page-top2-btn {
+  width: 240px;
+}
+.page-top2-btn a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px 15px 40px;
+  border: solid 1px black;
+  letter-spacing: 3px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.page-top2-btn a img {
+  width: 30px;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+.page-top2-btn a:hover {
+  opacity: 0.7;
+}
+.page-top2-btn a:hover img {
+  transform: translateX(10px);
+}
+
 .hero-section .container {
   background: rgba(125, 172, 175, 0.2);
   border-bottom: solid 1px #b1cdcf;
@@ -2669,6 +2695,2066 @@ body.appear .loading-container {
   .page-top-partner .container .wrapper .btn.transparent a {
     background: transparent;
     border: solid 1px black;
+  }
+}
+.to-right {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: 1.5s;
+}
+.to-right.show {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.to-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1.5s;
+}
+.to-up.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.page-top2-fv .container {
+  position: relative;
+}
+.page-top2-fv .container:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.page-top2-fv .container .wrapper {
+  /* スクロールダウンの位置 */
+}
+.page-top2-fv .container .wrapper .page-top2-header {
+  position: absolute;
+  top: 35px;
+  right: 8%;
+  z-index: 2;
+}
+.page-top2-fv .container .wrapper .page-top2-header nav ul {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style: none;
+  writing-mode: vertical-lr;
+}
+.page-top2-fv .container .wrapper .page-top2-header nav ul li {
+  margin: 0 20px;
+  position: relative;
+  transition: 0.5s;
+}
+.page-top2-fv .container .wrapper .page-top2-header nav ul li span {
+  width: 1px;
+  height: 25px;
+  background: white;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: 0.5s;
+  opacity: 0;
+}
+.page-top2-fv .container .wrapper .page-top2-header nav ul li:hover a {
+  transform: translateY(-5px);
+}
+.page-top2-fv .container .wrapper .page-top2-header nav ul li:hover span {
+  opacity: 1;
+}
+.page-top2-fv .container .wrapper .page-top2-header nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.5s;
+}
+.page-top2-fv .container .wrapper .logo-wrapper {
+  position: absolute;
+  top: 35px;
+  left: 5%;
+  z-index: 2;
+  display: flex;
+}
+.page-top2-fv .container .wrapper .logo-wrapper .logo-text {
+  writing-mode: vertical-rl;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none;
+}
+.page-top2-fv .container .wrapper .logo-wrapper .logo-text .text1 {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.page-top2-fv .container .wrapper .logo-wrapper .logo-text .text2 {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.page-top2-fv .container .wrapper .logo-wrapper .logo-img {
+  width: 60px;
+}
+.page-top2-fv .container .wrapper .fv-message-wrapper {
+  position: absolute;
+  z-index: 2;
+  bottom: 5%;
+  left: 5%;
+}
+.page-top2-fv .container .wrapper .fv-message-wrapper .en {
+  color: white;
+  font-size: 14px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+.page-top2-fv .container .wrapper .fv-message-wrapper .ja {
+  color: white;
+  font-size: 48px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 5px;
+  line-height: 1em;
+}
+.page-top2-fv .container .wrapper .mail-icon {
+  width: 30px;
+  position: absolute;
+  bottom: 3%;
+  right: 8%;
+  z-index: 2;
+}
+.page-top2-fv .container .wrapper .scroll {
+  position: absolute;
+  right: 3%;
+  top: 0;
+  z-index: 2;
+  width: 1px;
+  height: 46vw;
+  background: rgba(255, 255, 255, 0.1);
+}
+.page-top2-fv .container .wrapper .scroll:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #fff, transparent);
+  animation: animate 2s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  50% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  51% {
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
+
+.page-top2-issue .container {
+  position: relative;
+  padding: 130px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.page-top2-issue .container .wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.page-top2-issue .container .wrapper h2 {
+  color: #333333;
+  text-align: right;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 8px;
+}
+.page-top2-issue .container .wrapper .issue-wrapper {
+  width: 840px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+.page-top2-issue .container .wrapper .issue-wrapper .issue {
+  border: solid 1px #F7F7F7;
+  box-shadow: 3px 3px 6px #ACACAC;
+  width: 400px;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  background: white;
+}
+.page-top2-issue .container .wrapper .issue-wrapper .issue p {
+  color: #333333;
+  text-align: center;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  line-height: 1.7em;
+  letter-spacing: 3px;
+}
+.page-top2-issue .container .text-image {
+  width: 60%;
+  max-width: 800px;
+  position: absolute;
+  top: 15%;
+  right: 12%;
+  z-index: 1;
+}
+.page-top2-issue .container .logo-image {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.page-top2-service .container {
+  background: #7fbabd;
+  padding: 120px 0 100px 0;
+  position: relative;
+}
+.page-top2-service .container > img {
+  width: 80px;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  z-index: 1;
+}
+.page-top2-service .container .wrapper {
+  width: 90%;
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.page-top2-service .container .wrapper h2 {
+  color: #333333;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.page-top2-service .container .wrapper .tab {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-top: 60px;
+}
+.page-top2-service .container .wrapper .tab li {
+  width: 33.3%;
+  text-align: center;
+  border: solid 1px #333333;
+  transition: 0.3s;
+}
+.page-top2-service .container .wrapper .tab li a {
+  color: #333333;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px;
+  width: 100%;
+  letter-spacing: 5px;
+  transition: 0.3s;
+}
+.page-top2-service .container .wrapper .tab li:hover {
+  background: #333333;
+}
+.page-top2-service .container .wrapper .tab li:hover a {
+  color: white;
+}
+.page-top2-service .container .wrapper .tab li.active {
+  background: #333333;
+  border: solid 1px #333333;
+}
+.page-top2-service .container .wrapper .tab li.active a {
+  color: white;
+}
+.page-top2-service .container .wrapper .service-wrapper .service {
+  display: none;
+  opacity: 0;
+}
+.page-top2-service .container .wrapper .service-wrapper .service.is-active {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes displayAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page-top2-service .container .wrapper .service-wrapper .service > p {
+  color: #333333;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  letter-spacing: 6px;
+  font-size: 20px;
+  line-height: 1.7em;
+  margin-top: 40px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service > p span {
+  color: #333333;
+  display: inline-block;
+  font-size: 1.5em;
+  border-bottom: solid 5px #f9e615;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc {
+  border: solid 1px white;
+  padding: 35px 70px;
+  margin-top: 40px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc p {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc h3 {
+  text-align: center;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc h3 img {
+  width: 260px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper ul {
+  list-style: none;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper ul li {
+  display: flex;
+  align-items: center;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 5px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper ul li + li {
+  margin-top: 15px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper ul li img {
+  width: 30px;
+  margin-right: 10px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper .desc-image {
+  width: 39%;
+  height: 100%;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .btn-more {
+  background: #333333;
+  border: solid 1px #333333;
+  width: 350px;
+  border-radius: 40px;
+  margin: 0 auto;
+  margin-top: 60px;
+  transition: 0.5s;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .btn-more a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 20px 10px 20px 40px;
+  letter-spacing: 3px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .btn-more a span {
+  color: white;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .btn-more a img {
+  width: 35px;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .btn-more:hover {
+  opacity: 0.8;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .btn-more:hover a img {
+  margin-left: 30px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc h3 img {
+  width: 630px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper ul {
+  list-style: none;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper ul li {
+  display: flex;
+  align-items: center;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 5px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper ul li + li {
+  margin-top: 15px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper ul li img {
+  width: 30px;
+  margin-right: 10px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper .desc-image {
+  width: 29%;
+  height: 100%;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more {
+  background: #333333;
+  border: solid 1px #333333;
+  width: 380px;
+  border-radius: 40px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 20px 10px 20px 40px;
+  letter-spacing: 3px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more a img {
+  width: 35px;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more:hover a img {
+  margin-left: 30px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc h3 img {
+  width: 700px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper ul {
+  list-style: none;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper ul li {
+  display: flex;
+  align-items: center;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 5px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper ul li + li {
+  margin-top: 15px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper ul li img {
+  width: 30px;
+  margin-right: 10px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper .desc-image {
+  width: 33%;
+  height: 100%;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more {
+  background: #333333;
+  border: solid 1px #333333;
+  width: 320px;
+  border-radius: 40px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 20px 10px 20px 40px;
+  letter-spacing: 3px;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more a img {
+  width: 35px;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+.page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more:hover a img {
+  margin-left: 30px;
+}
+
+.page-top2-contact .container {
+  position: relative;
+  background-image: url(img/page-top2-contact-bg.png);
+  background-position: center;
+  background-size: cover;
+}
+.page-top2-contact .container:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.page-top2-contact .container .wrapper {
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+}
+.page-top2-contact .container .wrapper h2 {
+  text-align: center;
+  font-size: 20px;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  letter-spacing: 4px;
+  color: white;
+}
+.page-top2-contact .container .wrapper .contact-btn {
+  text-align: center;
+}
+.page-top2-contact .container .wrapper .contact-btn a {
+  text-decoration: none;
+  display: inline-block;
+}
+.page-top2-contact .container .wrapper .contact-btn a span {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 70px;
+  letter-spacing: 10px;
+  color: white;
+  transition: 0.5s;
+}
+.page-top2-contact .container .wrapper .contact-btn a img {
+  width: 50px;
+  transform: translateY(-20px);
+  margin-left: 30px;
+  transition: 0.5s;
+}
+.page-top2-contact .container .wrapper .contact-btn a:hover span {
+  opacity: 0.7;
+}
+.page-top2-contact .container .wrapper .contact-btn a:hover img {
+  transform: translate(13px, -20px);
+}
+.page-top2-contact .container .wrapper p {
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+  line-height: 2em;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  margin-top: 20px;
+}
+
+.page-top2-works .container {
+  background-image: url(img/page-top2-works-bg.png);
+  background-size: cover;
+  background-position: center;
+  padding: 160px 0 100px 0;
+}
+.page-top2-works .container .wrapper {
+  position: relative;
+}
+.page-top2-works .container .wrapper > img {
+  width: 300px;
+  position: absolute;
+  top: -10px;
+  left: 25%;
+}
+.page-top2-works .container .wrapper h2 {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  color: #595959;
+  font-size: 1em;
+  font-weight: normal;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+.page-top2-works .container .wrapper h2 span {
+  display: block;
+  line-height: 1em;
+  width: 150px;
+  height: 1px;
+  background: #b5b3b3;
+  margin-right: 30px;
+  position: relative;
+  margin-top: 5px;
+}
+.page-top2-works .container .wrapper h2 span:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  animation: stretch-shrink 2s infinite;
+}
+@keyframes stretch-shrink {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  50% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  51% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+.page-top2-works .container .wrapper .carousel-wrapper {
+  margin-top: 70px;
+}
+.page-top2-works .container .wrapper .carousel-wrapper .carousel .work {
+  padding: 0 30px;
+}
+.page-top2-works .container .wrapper .carousel-wrapper .carousel .work a {
+  text-decoration: none;
+}
+.page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper p {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+}
+.page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper p:nth-child(1) {
+  font-size: 14px;
+  color: #797979;
+}
+.page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper p:nth-child(2) {
+  font-size: 22px;
+  color: #595959;
+  border-bottom: solid 1px transparent;
+  display: inline-block;
+  transition: 0.3s;
+}
+.page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper p:nth-child(3) {
+  font-size: 14px;
+  color: #a6a0a0;
+}
+.page-top2-works .container .wrapper .carousel-wrapper .carousel .work a:hover p:nth-child(2) {
+  border-bottom: solid 1px #333333;
+}
+.page-top2-works .container .wrapper .carousel-wrapper .slick-dots {
+  bottom: -50px;
+}
+.page-top2-works .container .wrapper .page-top2-btn {
+  margin: 0 auto;
+  margin-top: 130px;
+}
+
+.page-top2-blog .container {
+  background: #F4F4F4;
+}
+.page-top2-blog .container .wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.page-top2-blog .container .wrapper .sticky {
+  padding-bottom: 200px;
+}
+.page-top2-blog .container .wrapper .sticky .sticky-container {
+  position: sticky;
+  display: fixed;
+  top: 70px;
+  left: 0;
+}
+.page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper {
+  position: relative;
+}
+.page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 {
+  writing-mode: vertical-lr;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  color: #595959;
+  font-size: 1em;
+  font-weight: normal;
+  letter-spacing: 2px;
+  display: flex;
+}
+.page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 span {
+  display: block;
+  line-height: 1em;
+  width: 1px;
+  height: 150px;
+  background: #b5b3b3;
+  margin-right: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  margin-left: 12px;
+}
+.page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 span:before {
+  content: "";
+  width: 2px;
+  height: 150px;
+  background: #000000;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  animation: animate 2s infinite;
+}
+@keyframes animate {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  50% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  51% {
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
+.page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper .page-top2-btn {
+  margin-top: 130px;
+}
+.page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper > img {
+  width: 200px;
+  position: absolute;
+  top: 28%;
+  left: -44%;
+}
+.page-top2-blog .container .wrapper .content-wrapper {
+  width: 67%;
+  padding: 140px 0;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content {
+  padding: 0 20px 40px 20px;
+  border-bottom: solid 1px silver;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content + .content {
+  margin-top: 40px;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a img {
+  width: 33%;
+  transition: 0.5s;
+  box-shadow: 3px 3px 6px silver;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper {
+  width: 60%;
+  transition: 0.5s;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above {
+  margin-top: 15px;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above .date {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  letter-spacing: 1px;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above .category {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-size: 12px;
+  color: #b5b3b3;
+  margin-left: 20px;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .title {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a:hover img {
+  border-radius: 0 40% 0 60px;
+}
+.page-top2-blog .container .wrapper .content-wrapper .content a:hover .text-wrapper {
+  opacity: 0.6;
+}
+
+.page-top2-about .container .wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 80px;
+}
+.page-top2-about .container .wrapper h2 {
+  writing-mode: vertical-lr;
+  margin-left: auto;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  color: #595959;
+  font-size: 1em;
+  font-weight: normal;
+  letter-spacing: 3px;
+  display: flex;
+}
+.page-top2-about .container .wrapper h2 span {
+  display: block;
+  line-height: 1em;
+  width: 1px;
+  height: 150px;
+  background: #b5b3b3;
+  margin-right: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  margin-left: 12px;
+}
+.page-top2-about .container .wrapper h2 span:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  animation: animate 2s infinite;
+}
+@keyframes animate {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  50% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  51% {
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
+.page-top2-about .container .wrapper > img {
+  width: 450px;
+  position: absolute;
+  top: 100px;
+  right: -80px;
+}
+.page-top2-about .container .wrapper .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-top2-about .container .wrapper .content-wrapper img {
+  width: 45%;
+  transform: translateY(-60px);
+}
+.page-top2-about .container .wrapper .content-wrapper p {
+  width: 50%;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  color: #474747;
+  line-height: 2.5em;
+  letter-spacing: 3px;
+  margin-top: 60px;
+}
+.page-top2-about .container .wrapper .page-top2-btn {
+  margin-left: auto;
+}
+
+.footer02 .footer-container {
+  background: #4e4e4e;
+}
+.footer02 .footer-container .footer-wrapper {
+  padding: 50px 0 20px 0;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer02 .footer-container .footer-wrapper > a {
+  display: block;
+  margin: 0 auto;
+  width: 170px;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .left-wrapper .address span {
+  color: white;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .left-wrapper a i {
+  color: white;
+  font-size: 2em;
+  margin-top: 30px;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper {
+  width: 40%;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul {
+  list-style: none;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  border-bottom: solid 1px transparent;
+  padding-bottom: 3px;
+  transition: 0.3s;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul li a:hover {
+  border-bottom: solid 1px white;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.menu-wrapper li {
+  width: 49%;
+  margin-top: 10px;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper {
+  margin-top: 10px;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper li {
+  position: relative;
+  margin-left: 30px;
+  font-size: 0.9em;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper li + li {
+  margin-top: 10px;
+}
+.footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper li:before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+}
+.footer02 .footer-container .footer-wrapper .copy {
+  text-align: center;
+  font-size: small;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  color: white;
+  letter-spacing: 2px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1100px) {
+  .page-top2-blog .container {
+    background: #F4F4F4;
+  }
+  .page-top2-blog .container .wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-top2-blog .container .wrapper .sticky {
+    padding-bottom: 200px;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container {
+    position: sticky;
+    display: fixed;
+    top: 70px;
+    left: 0;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper {
+    position: relative;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 {
+    writing-mode: vertical-lr;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: #595959;
+    font-size: 1em;
+    font-weight: normal;
+    letter-spacing: 2px;
+    display: flex;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 span {
+    display: block;
+    line-height: 1em;
+    width: 1px;
+    height: 150px;
+    background: #b5b3b3;
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 12px;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 span:before {
+    content: "";
+    width: 2px;
+    height: 150px;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    animation: animate 2s infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform-origin: top;
+      transform: scaleY(0);
+    }
+    50% {
+      transform-origin: top;
+      transform: scaleY(1);
+    }
+    51% {
+      transform-origin: bottom;
+      transform: scaleY(1);
+    }
+    100% {
+      transform-origin: bottom;
+      transform: scaleY(0);
+    }
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper .page-top2-btn {
+    margin-top: 130px;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper > img {
+    width: 200px;
+    position: absolute;
+    top: 28%;
+    left: -34%;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper {
+    width: 67%;
+    padding: 140px 0;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content {
+    padding: 0 20px 40px 20px;
+    border-bottom: solid 1px silver;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content + .content {
+    margin-top: 40px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a img {
+    width: 33%;
+    transition: 0.5s;
+    box-shadow: 3px 3px 6px silver;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper {
+    width: 60%;
+    transition: 0.5s;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above {
+    margin-top: 15px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above .date {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    letter-spacing: 1px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above .category {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-size: 12px;
+    color: #b5b3b3;
+    margin-left: 20px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .title {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a:hover img {
+    border-radius: 0 40% 0 60px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a:hover .text-wrapper {
+    opacity: 0.6;
+  }
+  .page-top2-about .container .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 80px;
+  }
+  .page-top2-about .container .wrapper h2 {
+    writing-mode: vertical-lr;
+    margin-left: auto;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: #595959;
+    font-size: 1em;
+    font-weight: normal;
+    letter-spacing: 3px;
+    display: flex;
+  }
+  .page-top2-about .container .wrapper h2 span {
+    display: block;
+    line-height: 1em;
+    width: 1px;
+    height: 150px;
+    background: #b5b3b3;
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 12px;
+  }
+  .page-top2-about .container .wrapper h2 span:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    animation: animate 2s infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform-origin: top;
+      transform: scaleY(0);
+    }
+    50% {
+      transform-origin: top;
+      transform: scaleY(1);
+    }
+    51% {
+      transform-origin: bottom;
+      transform: scaleY(1);
+    }
+    100% {
+      transform-origin: bottom;
+      transform: scaleY(0);
+    }
+  }
+  .page-top2-about .container .wrapper > img {
+    width: 450px;
+    position: absolute;
+    top: 100px;
+    right: 5%;
+  }
+  .page-top2-about .container .wrapper .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-top2-about .container .wrapper .content-wrapper img {
+    width: 45%;
+    transform: translateY(-60px);
+  }
+  .page-top2-about .container .wrapper .content-wrapper p {
+    width: 50%;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: #474747;
+    line-height: 2.5em;
+    letter-spacing: 3px;
+    margin-top: 60px;
+  }
+  .page-top2-about .container .wrapper .page-top2-btn {
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 820px) {
+  .page-top2-issue .container {
+    position: relative;
+    padding: 70px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .page-top2-issue .container .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .page-top2-issue .container .wrapper h2 {
+    color: #333333;
+    text-align: right;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .page-top2-issue .container .wrapper .issue-wrapper {
+    width: 100%;
+    display: block;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .page-top2-issue .container .wrapper .issue-wrapper .issue {
+    border: solid 1px #F7F7F7;
+    box-shadow: 3px 3px 6px #ACACAC;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 5px;
+    font-size: 0.85em;
+    margin-bottom: 15px;
+    background: white;
+  }
+  .page-top2-issue .container .wrapper .issue-wrapper .issue p {
+    color: #333333;
+    text-align: center;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    line-height: 1.7em;
+    letter-spacing: 3px;
+  }
+  .page-top2-issue .container .text-image {
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    z-index: 1;
+  }
+  .page-top2-issue .container .logo-image {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .page-top2-service .container {
+    background: #7fbabd;
+    padding: 70px 0 70px 0;
+    position: relative;
+  }
+  .page-top2-service .container > img {
+    width: 80px;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    z-index: 1;
+  }
+  .page-top2-service .container .wrapper {
+    width: 90%;
+    max-width: 950px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .page-top2-service .container .wrapper h2 {
+    color: #333333;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 1.2em;
+  }
+  .page-top2-service .container .wrapper .tab {
+    display: block;
+    align-items: center;
+    list-style: none;
+    margin-top: 30px;
+  }
+  .page-top2-service .container .wrapper .tab li {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    border: solid 1px #333333;
+    transition: 0.3s;
+  }
+  .page-top2-service .container .wrapper .tab li a {
+    color: #333333;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    width: 100%;
+    letter-spacing: 5px;
+    transition: 0.3s;
+  }
+  .page-top2-service .container .wrapper .tab li:hover {
+    background: #333333;
+  }
+  .page-top2-service .container .wrapper .tab li:hover a {
+    color: white;
+  }
+  .page-top2-service .container .wrapper .tab li.active {
+    background: #333333;
+    border: solid 1px #333333;
+  }
+  .page-top2-service .container .wrapper .tab li.active a {
+    color: white;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service {
+    display: none;
+    opacity: 0;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service.is-active {
+    display: block;
+    animation-name: displayAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes displayAnime {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service > p {
+    color: #333333;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    line-height: 2em;
+    margin-top: 40px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service > p span {
+    color: #333333;
+    display: inline-block;
+    font-size: 1.5em;
+    border-bottom: solid 5px #f9e615;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc {
+    border: solid 1px white;
+    padding: 20px 10px;
+    margin-top: 40px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc p {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc h3 {
+    text-align: center;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc h3 img {
+    width: 60%;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper {
+    margin-top: 45px;
+    display: block;
+    justify-content: space-between;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper ul {
+    list-style: none;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper ul li {
+    display: flex;
+    align-items: center;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper ul li + li {
+    margin-top: 7px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper ul li img {
+    width: 15px;
+    margin-right: 10px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper .desc-image {
+    display: block;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .btn-more {
+    background: #333333;
+    border: solid 1px #333333;
+    width: 90%;
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-top: 60px;
+    transition: 0.5s;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .btn-more a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 20px 10px 20px 40px;
+    letter-spacing: 3px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .btn-more a img {
+    width: 35px;
+    margin-left: 20px;
+    transition: 0.5s;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .btn-more:hover {
+    opacity: 0.8;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .btn-more:hover a img {
+    margin-left: 30px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc h3 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc h3 img {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc h3 img.pc {
+    display: none;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper {
+    margin-top: 45px;
+    display: block;
+    justify-content: space-between;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper ul {
+    list-style: none;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper ul li {
+    display: flex;
+    align-items: center;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper ul li + li {
+    margin-top: 7px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper ul li img {
+    width: 15px;
+    margin-right: 10px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper .desc-image {
+    width: 70%;
+    height: 100%;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more {
+    background: #333333;
+    border: solid 1px #333333;
+    width: 90%;
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 20px 10px 20px 40px;
+    letter-spacing: 3px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more a img {
+    width: 35px;
+    margin-left: 20px;
+    transition: 0.5s;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more:hover a img {
+    margin-left: 30px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc h3 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc h3 img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc h3 img.pc {
+    display: none;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper {
+    margin-top: 45px;
+    display: block;
+    justify-content: space-between;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper ul {
+    list-style: none;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper ul li {
+    display: flex;
+    align-items: center;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper ul li + li {
+    margin-top: 7px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper ul li img {
+    width: 15px;
+    margin-right: 10px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper .desc-image {
+    width: 60%;
+    height: 100%;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more {
+    background: #333333;
+    border: solid 1px #333333;
+    width: 90%;
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 20px 10px 20px 40px;
+    letter-spacing: 3px;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more a img {
+    width: 35px;
+    margin-left: 20px;
+    transition: 0.5s;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more:hover a img {
+    margin-left: 30px;
+  }
+  .page-top2-contact .container {
+    position: relative;
+    background-image: url(img/page-top2-contact-bg.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .page-top2-contact .container:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .page-top2-contact .container .wrapper {
+    padding: 70px 0;
+    position: relative;
+    z-index: 2;
+  }
+  .page-top2-contact .container .wrapper h2 {
+    text-align: center;
+    font-size: 0.9em;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    letter-spacing: 4px;
+    color: white;
+  }
+  .page-top2-contact .container .wrapper .contact-btn {
+    text-align: center;
+  }
+  .page-top2-contact .container .wrapper .contact-btn a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  .page-top2-contact .container .wrapper .contact-btn a span {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    color: white;
+    transition: 0.5s;
+  }
+  .page-top2-contact .container .wrapper .contact-btn a img {
+    width: 35px;
+    transform: translateY(-8px);
+    margin-left: 10px;
+    transition: 0.5s;
+  }
+  .page-top2-contact .container .wrapper .contact-btn a:hover span {
+    opacity: 0.7;
+  }
+  .page-top2-contact .container .wrapper .contact-btn a:hover img {
+    transform: translate(13px, -20px);
+  }
+  .page-top2-contact .container .wrapper p {
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 2em;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-size: 0.8em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .page-top2-works .container {
+    background-image: url(img/page-top2-works-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0 70px 0;
+  }
+  .page-top2-works .container .wrapper {
+    position: relative;
+  }
+  .page-top2-works .container .wrapper > img {
+    width: 200px;
+    position: absolute;
+    top: -10px;
+    left: 5%;
+  }
+  .page-top2-works .container .wrapper h2 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: #595959;
+    font-size: 1em;
+    font-weight: normal;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+  }
+  .page-top2-works .container .wrapper h2 span {
+    display: block;
+    line-height: 1em;
+    width: 50px;
+    height: 1px;
+    background: #b5b3b3;
+    margin-right: 10px;
+    position: relative;
+    margin-top: 5px;
+  }
+  .page-top2-works .container .wrapper h2 span:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    animation: stretch-shrink 2s infinite;
+  }
+  @keyframes stretch-shrink {
+    0% {
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+    50% {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+    51% {
+      transform-origin: right;
+      transform: scaleX(1);
+    }
+    100% {
+      transform-origin: right;
+      transform: scaleX(0);
+    }
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper {
+    margin-top: 70px;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .carousel .work {
+    padding: 0 10px;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .carousel .work a {
+    text-decoration: none;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper {
+    text-align: center;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper p {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper p:nth-child(1) {
+    font-size: 0.8em;
+    color: #797979;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper p:nth-child(2) {
+    font-size: 1.1em;
+    color: #595959;
+    border-bottom: solid 1px transparent;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .carousel .work a .text-wrapper p:nth-child(3) {
+    font-size: 0.8em;
+    color: #a6a0a0;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .carousel .work a:hover p:nth-child(2) {
+    border-bottom: solid 1px #333333;
+  }
+  .page-top2-works .container .wrapper .carousel-wrapper .slick-dots {
+    bottom: -50px;
+  }
+  .page-top2-works .container .wrapper .page-top2-btn {
+    margin: 0 auto;
+    margin-top: 90px;
+  }
+  .page-top2-blog .container {
+    background: #F4F4F4;
+  }
+  .page-top2-blog .container .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    justify-content: space-between;
+  }
+  .page-top2-blog .container .wrapper .sticky {
+    padding-bottom: 0px;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container {
+    position: static;
+    display: fixed;
+    top: 70px;
+    left: 0;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper {
+    position: relative;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 {
+    writing-mode: vertical-lr;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: #595959;
+    font-size: 1em;
+    font-weight: normal;
+    letter-spacing: 2px;
+    display: flex;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 span {
+    display: block;
+    line-height: 1em;
+    width: 1px;
+    height: 50px;
+    background: #b5b3b3;
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 12px;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper h2 span:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    animation: animate 2s infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform-origin: top;
+      transform: scaleY(0);
+    }
+    50% {
+      transform-origin: top;
+      transform: scaleY(1);
+    }
+    51% {
+      transform-origin: bottom;
+      transform: scaleY(1);
+    }
+    100% {
+      transform-origin: bottom;
+      transform: scaleY(0);
+    }
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper .page-top2-btn {
+    margin-top: 130px;
+  }
+  .page-top2-blog .container .wrapper .sticky .sticky-container .sticky-wrapper > img {
+    width: 150px;
+    position: absolute;
+    top: 40px;
+    left: 0%;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper {
+    width: 100%;
+    padding: 50px 0;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content {
+    padding: 0 10px 40px 10px;
+    border-bottom: solid 1px silver;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content + .content {
+    margin-top: 40px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a {
+    display: block;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a img {
+    width: 100%;
+    transition: 0.5s;
+    box-shadow: 3px 3px 6px silver;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper {
+    width: 100%;
+    transition: 0.5s;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above {
+    margin-top: 15px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above .date {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    letter-spacing: 1px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .above .category {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-size: 12px;
+    color: #b5b3b3;
+    margin-left: 0;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a .text-wrapper .title {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a:hover img {
+    border-radius: 0 40% 0 60px;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .content a:hover .text-wrapper {
+    opacity: 0.6;
+  }
+  .page-top2-blog .container .wrapper .content-wrapper .page-top2-btn {
+    margin-top: 50px;
+  }
+  .page-top2-about .container .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 80px;
+  }
+  .page-top2-about .container .wrapper h2 {
+    writing-mode: vertical-lr;
+    margin-left: auto;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: #595959;
+    font-size: 0.9em;
+    font-weight: normal;
+    letter-spacing: 3px;
+    display: flex;
+  }
+  .page-top2-about .container .wrapper h2 span {
+    display: block;
+    line-height: 1em;
+    width: 1px;
+    height: 50px;
+    background: #b5b3b3;
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 12px;
+  }
+  .page-top2-about .container .wrapper h2 span:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    animation: animate 2s infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform-origin: top;
+      transform: scaleY(0);
+    }
+    50% {
+      transform-origin: top;
+      transform: scaleY(1);
+    }
+    51% {
+      transform-origin: bottom;
+      transform: scaleY(1);
+    }
+    100% {
+      transform-origin: bottom;
+      transform: scaleY(0);
+    }
+  }
+  .page-top2-about .container .wrapper > img {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    right: 0;
+  }
+  .page-top2-about .container .wrapper .content-wrapper {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-top2-about .container .wrapper .content-wrapper img {
+    width: 100%;
+    transform: translateY(0px);
+    margin-top: 20px;
+  }
+  .page-top2-about .container .wrapper .content-wrapper p {
+    width: 100%;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: #474747;
+    line-height: 2.5em;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    margin-top: 30px;
+  }
+  .page-top2-about .container .wrapper .page-top2-btn {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .footer02 .footer-container {
+    background: #4e4e4e;
+  }
+  .footer02 .footer-container .footer-wrapper {
+    padding: 50px 0 20px 0;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer02 .footer-container .footer-wrapper > a {
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper {
+    margin-top: 40px;
+    display: block;
+    justify-content: space-between;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .left-wrapper .address span {
+    color: white;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .left-wrapper a {
+    display: block;
+    width: 35px;
+    margin: 0 auto;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .left-wrapper a i {
+    color: white;
+    font-size: 2em;
+    margin-top: 30px;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul {
+    list-style: none;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    border-bottom: solid 1px transparent;
+    padding-bottom: 3px;
+    transition: 0.3s;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul li a:hover {
+    border-bottom: solid 1px white;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.menu-wrapper li {
+    width: 49%;
+    margin-top: 10px;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper {
+    margin-top: 10px;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper li {
+    position: relative;
+    margin-left: 30px;
+    font-size: 0.9em;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper li + li {
+    margin-top: 10px;
+  }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper li:before {
+    content: "";
+    width: 5px;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+  }
+  .footer02 .footer-container .footer-wrapper .copy {
+    text-align: center;
+    font-size: small;
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 50px;
   }
 }
 .mission .container {

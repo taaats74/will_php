@@ -130,7 +130,8 @@
         <div class="fv-content-wrapper">
           <div class="text-wrapper">
             <h2>定額サブスクホームページ</h2>
-            <p class="fv-logo">ウィルサポ</p>
+            <!-- <p class="fv-logo">ウィルサポ</p> -->
+            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/fv-logotext.png" alt="">
             <ul>
               <li>初期費用<br>なし</li>
               <li>契約期間の<br>縛りなし</li>
@@ -141,7 +142,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/fv-illust.png" alt="">
           </div>
         </div>
-        <p class="message">初期費用を抑えたい店舗経営者様やtoC事業者様向けに、安くて高品質なWebサイトを。<br>管理コストを下げながら、Web集客に関する知見を社内に蓄積</p>
+        <p class="message">初期費用を抑えたい個人・中小企業様向けに、安くて高品質なWebサイトを。<br>管理コストを下げながら、Web集客に関する知見を社内に蓄積</p>
         <a href="#contact" class="banner-tag">
           <div class="banner">
             <div class="banner-wrapper">

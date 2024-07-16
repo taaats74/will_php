@@ -113,10 +113,10 @@
     <header class="header-child-page">
       <div class="container pc">
         <div class="wrapper">
-          <h1 class="logo" alt="合同会社ウィル 福岡のホームページ制作会社 ウェブ制作会社">
+          <h1 class="logo">
             <div class="img-wrapper">
               <a href="<?php echo home_url('/'); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo_black.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo_black.png" alt="合同会社ウィル|福岡のホームページ制作会社|ウェブ制作会社">
               </a>
             </div>
           </h1>

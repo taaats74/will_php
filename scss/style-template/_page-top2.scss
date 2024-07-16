@@ -1,0 +1,2434 @@
+// .zen-kaku-gothic-new-regular {
+//   font-family: "Zen Kaku Gothic New", sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .zen-kaku-gothic-new-medium {
+//   font-family: "Zen Kaku Gothic New", sans-serif;
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+// .zen-kaku-gothic-new-bold {
+//   font-family: "Zen Kaku Gothic New", sans-serif;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// font-family: YuGothic,'Yu Gothic',sans-serif;
+
+// fade-in animation
+.to-right{
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: 1.5s;
+  &.show{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.to-up{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1.5s;
+  &.show{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.page-top2-fv{
+  .container{
+    position: relative;
+    &:before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .3);
+      z-index: 1;
+    }
+    .wrapper{
+      .page-top2-header {
+        position: absolute;
+        top: 35px;
+        right: 8%;
+        z-index: 2;
+        nav {
+          ul {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            list-style: none;
+            writing-mode: vertical-lr;
+            li {
+              margin: 0 20px;
+              position: relative;
+              transition: .5s;
+              span{
+                width: 1px;
+                height: 25px;
+                background: white;
+                position: absolute;
+                top: -40px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transition: .5s;
+                opacity: 0;
+              }
+              &:hover{
+                a{
+                  transform: translateY(-5px);
+                }
+                span{
+                  opacity: 1;
+                }
+              }
+              a {
+                color: white;
+                text-decoration: none;
+                display: inline-block;
+                transition: .5s;
+              }
+            }
+          }
+        }
+      }
+      .logo-wrapper{
+        position: absolute;
+        top: 35px;
+        left: 5%;
+        z-index: 2;
+        display: flex;
+        .logo-text{
+          writing-mode: vertical-rl;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          user-select: none;
+          .text1{
+            color: white;
+            font-size: 14px;
+            letter-spacing: 2px;
+          }
+          .text2{
+            color: white;
+            font-size: 18px;
+            letter-spacing: 3px;
+          }
+        }
+        .logo-img{
+          width: 60px;
+        }
+      }
+      .fv-message-wrapper{
+        position: absolute;
+        z-index: 2;
+        bottom: 5%;
+        left: 5%;
+        .en{
+          color: white;
+          font-size: 14px;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: 2px;
+        }
+        .ja{
+          color: white;
+          font-size: 48px;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          letter-spacing: 5px;
+          line-height: 1em;
+        }
+      }
+      .mail-icon{
+        width: 30px;
+        position: absolute;
+        bottom: 3%;
+        right: 8%;
+        z-index: 2;
+      }
+      /* スクロールダウンの位置 */
+      .scroll {
+        position: absolute;
+        right: 3%;
+        top: 0;
+        z-index: 2;
+        width: 1px;
+        height: 46vw;
+        background: rgba(255, 255, 255, .1);
+        &:before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          // background: white;
+          background: linear-gradient(transparent, #fff, transparent);
+          animation: animate 2s linear infinite;
+        }
+      }
+      @keyframes animate{
+        0%{
+          transform-origin: top;
+          transform: scaleY(0);
+        }
+        50%{
+          transform-origin: top;
+          transform: scaleY(1);
+        }
+        51%{
+          transform-origin: bottom;
+          transform: scaleY(1);
+        }
+        100%{
+          transform-origin: bottom;
+          transform: scaleY(0);
+        }
+      }
+    }
+  }
+}
+
+.page-top2-issue{
+  .container{
+    position: relative;
+    padding: 130px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    .wrapper{
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      h2{
+        color: #333333;
+        text-align: right;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 8px;
+      }
+      .issue-wrapper{
+        width: 840px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        .issue{
+          border: solid 1px #F7F7F7;
+          box-shadow: 3px 3px 6px #ACACAC;
+          width: 400px;
+          padding: 30px 0;
+          margin-bottom: 30px;
+          background: white;
+          p{
+            color: #333333;
+            text-align: center;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            line-height: 1.7em;
+            letter-spacing: 3px;
+          }
+        }
+      }
+    }
+    .text-image{
+      width: 60%;
+      max-width: 800px;
+      position: absolute;
+      top: 15%;
+      right: 12%;
+      z-index: 1;
+    }
+    .logo-image{
+      width: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.page-top2-service{
+  .container{
+    background: #7fbabd;
+    padding: 120px 0 100px 0;
+    position: relative;
+    >img {
+        width: 80px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        z-index: 1;
+      }
+    .wrapper{
+      width: 90%;
+      max-width: 950px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      h2{
+        color: #333333;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: center;
+        letter-spacing: 5px;
+      }
+      .tab{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-top: 60px;
+        li{
+          width: 33.3%;
+          text-align: center;
+          border: solid 1px #333333;
+          transition: .3s;
+          a{
+            color: #333333;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px;
+            width: 100%;
+            letter-spacing: 5px;
+            transition: .3s;
+          }
+          &:hover{
+            background: #333333;
+            a{
+              color: white;
+            }
+          }
+          &.active{
+            background: #333333;
+            border: solid 1px #333333;
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+      .service-wrapper{
+        .service{
+          display: none;
+          opacity: 0;
+          &.is-active{
+            display: block;
+            animation-name: displayAnime;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+          @keyframes displayAnime {
+            from {
+              opacity: 0;
+            }
+
+            to {
+              opacity: 1;
+            }
+          }
+          >p{
+            color: #333333;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-weight: bold;
+            letter-spacing: 6px;
+            font-size: 20px;
+            line-height: 1.7em;
+            margin-top: 40px;
+            span{
+              color: #333333;
+              display: inline-block;
+              font-size: 1.5em;
+              border-bottom: solid 5px #f9e615;
+            }
+          }
+          .service-desc{
+            border: solid 1px white;
+            padding: 35px 70px;
+            margin-top: 40px;
+            p{
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              color: white;
+              font-size: 1.5em;
+              font-weight: bold;
+              text-align: center;
+              letter-spacing: 5px;
+            }
+            h3{
+              text-align: center;
+              img{
+                width: 260px;
+              }
+            }
+            .desc-wrapper{
+              margin-top: 45px;
+              display: flex;
+              justify-content: space-between;
+              ul{
+                list-style: none;
+                li{
+                  display: flex;
+                  align-items: center;
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: white;
+                  letter-spacing: 5px;
+                  &+li{
+                    margin-top: 15px;
+                  }
+                  img{
+                    width: 30px;
+                    margin-right: 10px;
+                  }
+                }
+              }
+              .desc-image{
+                width: 39%;
+                height: 100%;
+                // background: pink;
+              }
+            }
+          }
+          .btn-more{
+            background: #333333;
+            border: solid 1px #333333;
+            width: 350px;
+            border-radius: 40px;
+            margin: 0 auto;
+            margin-top: 60px;
+            transition: .5s;
+            a{
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              color: white;
+              padding: 20px 10px 20px 40px;
+              letter-spacing: 3px;
+              span{
+                color: white;
+              }
+              img{
+                width: 35px;
+                margin-left: 20px;
+                transition: .5s;
+              }
+            }
+            &:hover{
+              opacity: .8;
+              a{
+                img{
+                  margin-left: 30px;
+                }
+              }
+            }
+          }
+          &:nth-child(2){
+            .service-desc{
+              h3 {
+                text-align: center;
+                margin-top: 10px;
+                img {
+                  width: 630px;
+                }
+              }
+              .desc-wrapper {
+                margin-top: 45px;
+                display: flex;
+                justify-content: space-between;
+
+                ul {
+                  list-style: none;
+
+                  li {
+                    display: flex;
+                    align-items: center;
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: white;
+                    letter-spacing: 5px;
+
+                    &+li {
+                      margin-top: 15px;
+                    }
+
+                    img {
+                      width: 30px;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+
+                .desc-image {
+                  width: 29%;
+                  height: 100%;
+                  // background: pink;
+                }
+              }
+            }
+            .btn-more {
+              background: #333333;
+              border: solid 1px #333333;
+              width: 380px;
+              border-radius: 40px;
+              margin: 0 auto;
+              margin-top: 60px;
+
+              a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                padding: 20px 10px 20px 40px;
+                letter-spacing: 3px;
+
+                img {
+                  width: 35px;
+                  margin-left: 20px;
+                  transition: .5s;
+                }
+              }
+
+              &:hover {
+                a {
+                  img {
+                    margin-left: 30px;
+                  }
+                }
+              }
+            }
+          }
+          &:nth-child(3){
+            .service-desc{
+              h3 {
+                text-align: center;
+                margin-top: 10px;
+                img {
+                  width: 700px;
+                }
+              }
+              .desc-wrapper {
+                margin-top: 45px;
+                display: flex;
+                justify-content: space-between;
+
+                ul {
+                  list-style: none;
+
+                  li {
+                    display: flex;
+                    align-items: center;
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: white;
+                    letter-spacing: 5px;
+
+                    &+li {
+                      margin-top: 15px;
+                    }
+
+                    img {
+                      width: 30px;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+
+                .desc-image {
+                  width: 33%;
+                  height: 100%;
+                  // background: pink;
+                }
+              }
+            }
+            .btn-more {
+              background: #333333;
+              border: solid 1px #333333;
+              width: 320px;
+              border-radius: 40px;
+              margin: 0 auto;
+              margin-top: 60px;
+
+              a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                padding: 20px 10px 20px 40px;
+                letter-spacing: 3px;
+
+                img {
+                  width: 35px;
+                  margin-left: 20px;
+                  transition: .5s;
+                }
+              }
+
+              &:hover {
+                a {
+                  img {
+                    margin-left: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-top2-contact{
+  .container{
+    position: relative;
+    background-image: url(img/page-top2-contact-bg.png);
+    background-position: center;
+    background-size: cover;
+    &:before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .5);
+      z-index: 1;
+    }
+    .wrapper{
+      padding: 100px 0;
+      position: relative;
+      z-index: 2;
+      h2{
+        text-align: center;
+        font-size: 20px;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        letter-spacing: 4px;
+        color: white;
+      }
+      .contact-btn{
+        text-align: center;
+        a{
+          text-decoration: none;
+          display: inline-block;
+          // background: pink;
+          span{
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 70px;
+            letter-spacing: 10px;
+            color: white;
+            transition: .5s;
+          }
+          img{
+            width: 50px;
+            transform: translateY(-20px);
+            margin-left: 30px;
+            transition: .5s;
+          }
+          &:hover{
+            span{
+              opacity: .7;
+            }
+            img{
+              transform: translate(13px, -20px);
+            }
+          }
+        }
+      }
+      p{
+        text-align: center;
+        color: white;
+        letter-spacing: 3px;
+        line-height: 2em;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.page-top2-works{
+  .container{
+    background-image: url(img/page-top2-works-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0 100px 0;
+    .wrapper{
+      position: relative;
+      >img{
+        width: 300px;
+        position: absolute;
+        top: -10px;
+        left: 25%;
+      }
+      h2{
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        color: #595959;
+        font-size: 1em;
+        font-weight: normal;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        span{
+          display: block;
+          line-height: 1em;
+          width: 150px;
+          height: 1px;
+          background: #b5b3b3;
+          margin-right: 30px;
+          position: relative;
+          margin-top: 5px;
+          &:before{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: black;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            animation: stretch-shrink 2s infinite;
+          }
+        }
+        @keyframes stretch-shrink {
+          0% {
+            transform-origin: left;
+            transform: scaleX(0);
+          }
+
+          50% {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+          51% {
+            transform-origin: right;
+            transform: scaleX(1);
+          }
+
+          100% {
+            transform-origin: right;
+            transform: scaleX(0);
+          }
+        }
+      }
+      .carousel-wrapper{
+        margin-top: 70px;
+        .carousel{
+          .work{
+            padding: 0 30px;
+            a{
+              text-decoration: none;
+              .text-wrapper{
+                p{
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  &:nth-child(1){
+                    font-size: 14px;
+                    color: #797979;
+                  }
+                  &:nth-child(2){
+                    font-size: 22px;
+                    color: #595959;
+                    border-bottom: solid 1px transparent;
+                    display: inline-block;
+                    transition: .3s;
+                  }
+                  &:nth-child(3){
+                    font-size: 14px;
+                    color: #a6a0a0;
+                  }
+                }
+              }
+              &:hover{
+                p{
+                  &:nth-child(2){
+                    border-bottom: solid 1px #333333;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .slick-dots{
+          bottom: -50px;
+        }
+      }
+      .page-top2-btn{
+        margin: 0 auto;
+        margin-top: 130px;
+      }
+    }
+  }
+}
+
+.page-top2-blog{
+  .container{
+    background: #F4F4F4;
+    .wrapper{
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .sticky{
+        padding-bottom: 200px;
+        .sticky-container{
+          position: sticky;
+          display: fixed;
+          top: 70px;
+          left: 0;
+          .sticky-wrapper{
+            position: relative;
+            h2 {
+              writing-mode: vertical-lr;
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              color: #595959;
+              font-size: 1em;
+              font-weight: normal;
+              letter-spacing: 2px;
+              display: flex;
+              // align-items: center;
+              span {
+                display: block;
+                line-height: 1em;
+                width: 1px;
+                height: 150px;
+                background: #b5b3b3;
+                margin-right: 30px;
+                position: relative;
+                margin-bottom: 15px;
+                margin-left: 12px;
+                &:before {
+                  content: "";
+                  width: 2px;
+                  height: 150px;
+                  // background: linear-gradient(transparent, #000000, transparent);
+                  background: #000000;
+                  position: absolute;
+                  left: 0;
+                  top: -1px;
+                  animation: animate 2s infinite;
+                }
+              }
+              @keyframes animate {
+                0% {
+                  transform-origin: top;
+                  transform: scaleY(0);
+                }
+                50% {
+                  transform-origin: top;
+                  transform: scaleY(1);
+                }
+                51% {
+                  transform-origin: bottom;
+                  transform: scaleY(1);
+                }
+                100% {
+                  transform-origin: bottom;
+                  transform: scaleY(0);
+                }
+              }
+            }
+            .page-top2-btn{
+              margin-top: 130px;
+            }
+            >img{
+              width: 200px;
+              position: absolute;
+              top: 28%;
+              left: -44%;
+            }
+          }
+        }
+      }
+      .content-wrapper{
+        width: 67%;
+        padding: 140px 0;
+        .content{
+          padding: 0 20px 40px 20px;
+          border-bottom: solid 1px silver;
+          &+.content{
+            margin-top: 40px;
+          }
+          a{
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            img{
+              width: 33%;
+              transition: .5s;
+              box-shadow: 3px 3px 6px silver;
+            }
+            .text-wrapper{
+              width: 60%;
+              transition: .5s;
+              .above{
+                margin-top: 15px;
+                .date{
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  letter-spacing: 1px;
+                }
+                .category{
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 12px;
+                  color: #b5b3b3;
+                  margin-left: 20px;
+                }
+              }
+              .title{
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                font-size: 18px;
+                margin-top: 10px;
+              }
+            }
+            &:hover{
+              img{
+                border-radius: 0 40% 0 60px;
+              }
+              .text-wrapper{
+                opacity: .6;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-top2-about{
+  .container{
+    .wrapper{
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding-bottom: 80px;
+      h2 {
+        writing-mode: vertical-lr;
+        margin-left: auto;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        color: #595959;
+        font-size: 1em;
+        font-weight: normal;
+        letter-spacing: 3px;
+        display: flex;
+        // align-items: center;
+
+        span {
+          display: block;
+          line-height: 1em;
+          width: 1px;
+          height: 150px;
+          background: #b5b3b3;
+          margin-right: 30px;
+          position: relative;
+          margin-bottom: 15px;
+          margin-left: 12px;
+
+          &:before {
+            content: "";
+            width: 2px;
+            height: 100%;
+            background: black;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            animation: animate 2s infinite;
+          }
+        }
+        @keyframes animate {
+          0% {
+            transform-origin: top;
+            transform: scaleY(0);
+          }
+          50% {
+            transform-origin: top;
+            transform: scaleY(1);
+          }
+          51% {
+            transform-origin: bottom;
+            transform: scaleY(1);
+          }
+          100% {
+            transform-origin: bottom;
+            transform: scaleY(0);
+          }
+        }
+      }
+      >img{
+        width: 450px;
+        position: absolute;
+        top: 100px;
+        right: -80px;
+      }
+      .content-wrapper{
+        // background: pink;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+          width: 45%;
+          transform: translateY(-60px);
+        }
+        p{
+          width: 50%;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #474747;
+          line-height: 2.5em;
+          letter-spacing: 3px;
+          margin-top: 60px;
+        }
+      }
+      .page-top2-btn{
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.footer02{
+  .footer-container{
+    background: #4e4e4e;
+    .footer-wrapper{
+      padding: 50px 0 20px 0;
+      width: 95%;
+      max-width: 1200px;
+      margin: 0 auto;
+      >a{
+        display: block;
+        margin: 0 auto;
+        width: 170px;
+      }
+      .link-wrapper{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        .left-wrapper{
+          .address{
+            span{
+              color: white;
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: 2px;
+            }
+          }
+          a{
+            i{
+              color: white;
+              font-size: 2em;
+              margin-top: 30px;
+            }
+          }
+        }
+        .right-wrapper{
+          width: 40%;
+          // background: pink;
+          ul{
+            list-style: none;
+            li{
+              a{
+                text-decoration: none;
+                color: white;
+                font-family: "Zen Kaku Gothic New", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 2px;
+                border-bottom: solid 1px transparent;
+                padding-bottom: 3px;
+                transition: .3s;
+                &:hover{
+                  border-bottom: solid 1px white;
+                }
+              }
+            }
+            &.menu-wrapper{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              li{
+                width: 49%;
+                margin-top: 10px;
+              }
+            }
+            &.service-wrapper{
+              margin-top: 10px;
+              li{
+                position: relative;
+                margin-left: 30px;
+                font-size: .9em;
+                &+li{
+                  margin-top: 10px;
+                }
+                &:before{
+                  content: "";
+                  width: 5px;
+                  height: 1px;
+                  background: white;
+                  position: absolute;
+                  top: 50%;
+                  left: -20px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .copy{
+        text-align: center;
+        font-size: small;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        color: white;
+        letter-spacing: 2px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .page-top2-blog {
+    .container {
+      background: #F4F4F4;
+
+      .wrapper {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .sticky {
+          padding-bottom: 200px;
+
+          .sticky-container {
+            position: sticky;
+            display: fixed;
+            top: 70px;
+            left: 0;
+
+            .sticky-wrapper {
+              position: relative;
+
+              h2 {
+                writing-mode: vertical-lr;
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                color: #595959;
+                font-size: 1em;
+                font-weight: normal;
+                letter-spacing: 2px;
+                display: flex;
+
+                // align-items: center;
+                span {
+                  display: block;
+                  line-height: 1em;
+                  width: 1px;
+                  height: 150px;
+                  background: #b5b3b3;
+                  margin-right: 30px;
+                  position: relative;
+                  margin-bottom: 15px;
+                  margin-left: 12px;
+
+                  &:before {
+                    content: "";
+                    width: 2px;
+                    height: 150px;
+                    // background: linear-gradient(transparent, #000000, transparent);
+                    background: #000000;
+                    position: absolute;
+                    left: 0;
+                    top: -1px;
+                    animation: animate 2s infinite;
+                  }
+                }
+
+                @keyframes animate {
+                  0% {
+                    transform-origin: top;
+                    transform: scaleY(0);
+                  }
+
+                  50% {
+                    transform-origin: top;
+                    transform: scaleY(1);
+                  }
+
+                  51% {
+                    transform-origin: bottom;
+                    transform: scaleY(1);
+                  }
+
+                  100% {
+                    transform-origin: bottom;
+                    transform: scaleY(0);
+                  }
+                }
+              }
+
+              .page-top2-btn {
+                margin-top: 130px;
+              }
+
+              >img {
+                width: 200px;
+                position: absolute;
+                top: 28%;
+                left: -34%;
+              }
+            }
+          }
+        }
+
+        .content-wrapper {
+          width: 67%;
+          padding: 140px 0;
+
+          .content {
+            padding: 0 20px 40px 20px;
+            border-bottom: solid 1px silver;
+
+            &+.content {
+              margin-top: 40px;
+            }
+
+            a {
+              display: flex;
+              justify-content: space-between;
+              text-decoration: none;
+
+              img {
+                width: 33%;
+                transition: .5s;
+                box-shadow: 3px 3px 6px silver;
+              }
+
+              .text-wrapper {
+                width: 60%;
+                transition: .5s;
+
+                .above {
+                  margin-top: 15px;
+
+                  .date {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    letter-spacing: 1px;
+                  }
+
+                  .category {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: 12px;
+                    color: #b5b3b3;
+                    margin-left: 20px;
+                  }
+                }
+
+                .title {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 18px;
+                  margin-top: 10px;
+                }
+              }
+
+              &:hover {
+                img {
+                  border-radius: 0 40% 0 60px;
+                }
+
+                .text-wrapper {
+                  opacity: .6;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-top2-about {
+    .container {
+      .wrapper {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 80px;
+
+        h2 {
+          writing-mode: vertical-lr;
+          margin-left: auto;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #595959;
+          font-size: 1em;
+          font-weight: normal;
+          letter-spacing: 3px;
+          display: flex;
+          // align-items: center;
+
+          span {
+            display: block;
+            line-height: 1em;
+            width: 1px;
+            height: 150px;
+            background: #b5b3b3;
+            margin-right: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            margin-left: 12px;
+
+            &:before {
+              content: "";
+              width: 2px;
+              height: 100%;
+              background: black;
+              position: absolute;
+              left: 0;
+              top: -1px;
+              animation: animate 2s infinite;
+            }
+          }
+
+          @keyframes animate {
+            0% {
+              transform-origin: top;
+              transform: scaleY(0);
+            }
+
+            50% {
+              transform-origin: top;
+              transform: scaleY(1);
+            }
+
+            51% {
+              transform-origin: bottom;
+              transform: scaleY(1);
+            }
+
+            100% {
+              transform-origin: bottom;
+              transform: scaleY(0);
+            }
+          }
+        }
+
+        >img {
+          width: 450px;
+          position: absolute;
+          top: 100px;
+          right: 5%;
+        }
+
+        .content-wrapper {
+          // background: pink;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          img {
+            width: 45%;
+            transform: translateY(-60px);
+          }
+
+          p {
+            width: 50%;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            color: #474747;
+            line-height: 2.5em;
+            letter-spacing: 3px;
+            margin-top: 60px;
+          }
+        }
+
+        .page-top2-btn {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .page-top2-issue {
+    .container {
+      position: relative;
+      padding: 70px 0;
+      max-width: 1440px;
+      margin: 0 auto;
+
+      .wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        h2 {
+          color: #333333;
+          text-align: right;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          letter-spacing: 5px;
+          text-align: center;
+          font-size: 1.2em;
+        }
+
+        .issue-wrapper {
+          width: 100%;
+          display: block;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin-top: 30px;
+
+          .issue {
+            border: solid 1px #F7F7F7;
+            box-shadow: 3px 3px 6px #ACACAC;
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px 5px;
+            font-size: .85em;
+            margin-bottom: 15px;
+            background: white;
+
+            p {
+              color: #333333;
+              text-align: center;
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              line-height: 1.7em;
+              letter-spacing: 3px;
+            }
+          }
+        }
+      }
+
+      .text-image {
+        width: 100%;
+        max-width: 800px;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        z-index: 1;
+      }
+
+      .logo-image {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .page-top2-service {
+    .container {
+      background: #7fbabd;
+      padding: 70px 0 70px 0;
+      position: relative;
+
+      >img {
+        width: 80px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        z-index: 1;
+      }
+
+      .wrapper {
+        width: 90%;
+        max-width: 950px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        h2 {
+          color: #333333;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          text-align: center;
+          letter-spacing: 3px;
+          font-size: 1.2em;
+        }
+
+        .tab {
+          display: block;
+          align-items: center;
+          list-style: none;
+          margin-top: 30px;
+
+          li {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 10px;
+            text-align: center;
+            border: solid 1px #333333;
+            transition: .3s;
+
+            a {
+              color: #333333;
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              text-decoration: none;
+              display: inline-block;
+              padding: 15px;
+              width: 100%;
+              letter-spacing: 5px;
+              transition: .3s;
+            }
+
+            &:hover {
+              background: #333333;
+
+              a {
+                color: white;
+              }
+            }
+
+            &.active {
+              background: #333333;
+              border: solid 1px #333333;
+
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+
+        .service-wrapper {
+          .service {
+            display: none;
+            opacity: 0;
+
+            &.is-active {
+              display: block;
+              animation-name: displayAnime;
+              animation-duration: 1s;
+              animation-fill-mode: forwards;
+            }
+
+            @keyframes displayAnime {
+              from {
+                opacity: 0;
+              }
+
+              to {
+                opacity: 1;
+              }
+            }
+
+            >p {
+              color: #333333;
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              letter-spacing: 1px;
+              font-size: .9em;
+              line-height: 2em;
+              margin-top: 40px;
+
+              span {
+                color: #333333;
+                display: inline-block;
+                font-size: 1.5em;
+                border-bottom: solid 5px #f9e615;
+              }
+            }
+
+            .service-desc {
+              border: solid 1px white;
+              padding: 20px 10px;
+              margin-top: 40px;
+
+              p {
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                color: white;
+                font-size: 1em;
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: 5px;
+              }
+
+              h3 {
+                text-align: center;
+
+                img {
+                  width: 60%;
+                }
+              }
+
+              .desc-wrapper {
+                margin-top: 45px;
+                display: block;
+                justify-content: space-between;
+
+                ul {
+                  list-style: none;
+
+                  li {
+                    display: flex;
+                    align-items: center;
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: .9em;
+                    font-weight: bold;
+                    color: white;
+                    letter-spacing: 2px;
+
+                    &+li {
+                      margin-top: 7px;
+                    }
+
+                    img {
+                      width: 15px;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+
+                .desc-image {
+                  display: block;
+                  width: 70%;
+                  height: 100%;
+                  margin: 0 auto;
+                  margin-top: 10px;
+                  // background: pink;
+                }
+              }
+            }
+
+            .btn-more {
+              background: #333333;
+              border: solid 1px #333333;
+              width: 90%;
+              border-radius: 40px;
+              margin: 0 auto;
+              margin-top: 60px;
+              transition: .5s;
+
+              a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                padding: 20px 10px 20px 40px;
+                letter-spacing: 3px;
+
+                img {
+                  width: 35px;
+                  margin-left: 20px;
+                  transition: .5s;
+                }
+              }
+
+              &:hover {
+                opacity: .8;
+
+                a {
+                  img {
+                    margin-left: 30px;
+                  }
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              .service-desc {
+                h3 {
+                  text-align: center;
+                  margin-top: 10px;
+
+                  img {
+                    width: 75%;
+                    display: block;
+                    margin: 0 auto;
+                    &.pc{
+                      display: none;
+                    }
+                  }
+                }
+
+                .desc-wrapper {
+                  margin-top: 45px;
+                  display: block;
+                  justify-content: space-between;
+
+                  ul {
+                    list-style: none;
+
+                    li {
+                      display: flex;
+                      align-items: center;
+                      font-family: YuGothic, 'Yu Gothic', sans-serif;
+                      font-size: .9em;
+                      font-weight: bold;
+                      color: white;
+                      letter-spacing: 1px;
+
+                      &+li {
+                        margin-top: 7px;
+                      }
+
+                      img {
+                        width: 15px;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+
+                  .desc-image {
+                    width: 70%;
+                    height: 100%;
+                    // background: pink;
+                  }
+                }
+              }
+
+              .btn-more {
+                background: #333333;
+                border: solid 1px #333333;
+                width: 90%;
+                border-radius: 40px;
+                margin: 0 auto;
+                margin-top: 60px;
+
+                a {
+                  display: flex;
+                  align-items: center;
+                  text-decoration: none;
+                  color: white;
+                  padding: 20px 10px 20px 40px;
+                  letter-spacing: 3px;
+
+                  img {
+                    width: 35px;
+                    margin-left: 20px;
+                    transition: .5s;
+                  }
+                }
+
+                &:hover {
+                  a {
+                    img {
+                      margin-left: 30px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              .service-desc {
+                h3 {
+                  text-align: center;
+                  margin-top: 10px;
+
+                  img {
+                    width: 80%;
+                    display: block;
+                    margin: 0 auto;
+                    &.pc{
+                      display: none;
+                    }
+                  }
+                }
+
+                .desc-wrapper {
+                  margin-top: 45px;
+                  display: block;
+                  justify-content: space-between;
+
+                  ul {
+                    list-style: none;
+
+                    li {
+                      display: flex;
+                      align-items: center;
+                      font-family: YuGothic, 'Yu Gothic', sans-serif;
+                      font-size: .9em;
+                      font-weight: bold;
+                      color: white;
+                      letter-spacing: 2px;
+
+                      &+li {
+                        margin-top: 7px;
+                      }
+
+                      img {
+                        width: 15px;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+
+                  .desc-image {
+                    width: 60%;
+                    height: 100%;
+                    // background: pink;
+                  }
+                }
+              }
+
+              .btn-more {
+                background: #333333;
+                border: solid 1px #333333;
+                width: 90%;
+                border-radius: 40px;
+                margin: 0 auto;
+                margin-top: 60px;
+
+                a {
+                  display: flex;
+                  align-items: center;
+                  text-decoration: none;
+                  color: white;
+                  padding: 20px 10px 20px 40px;
+                  letter-spacing: 3px;
+
+                  img {
+                    width: 35px;
+                    margin-left: 20px;
+                    transition: .5s;
+                  }
+                }
+
+                &:hover {
+                  a {
+                    img {
+                      margin-left: 30px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-top2-contact {
+    .container {
+      position: relative;
+      background-image: url(img/page-top2-contact-bg.png);
+      background-position: center;
+      background-size: cover;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .5);
+        z-index: 1;
+      }
+
+      .wrapper {
+        padding: 70px 0;
+        position: relative;
+        z-index: 2;
+
+        h2 {
+          text-align: center;
+          font-size: .9em;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          letter-spacing: 4px;
+          color: white;
+        }
+
+        .contact-btn {
+          text-align: center;
+
+          a {
+            text-decoration: none;
+            display: inline-block;
+
+            // background: pink;
+            span {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 900;
+              font-style: normal;
+              font-size: 2.5em;
+              letter-spacing: 5px;
+              color: white;
+              transition: .5s;
+            }
+
+            img {
+              width: 35px;
+              transform: translateY(-8px);
+              margin-left: 10px;
+              transition: .5s;
+            }
+
+            &:hover {
+              span {
+                opacity: .7;
+              }
+
+              img {
+                transform: translate(13px, -20px);
+              }
+            }
+          }
+        }
+
+        p {
+          text-align: center;
+          color: white;
+          letter-spacing: 1px;
+          line-height: 2em;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-size: .8em;
+          width: 90%;
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .page-top2-works {
+    .container {
+      background-image: url(img/page-top2-works-bg.png);
+      background-size: cover;
+      background-position: center;
+      padding: 70px 0 70px 0;
+
+      .wrapper {
+        position: relative;
+
+        >img {
+          width: 200px;
+          position: absolute;
+          top: -10px;
+          left: 5%;
+        }
+
+        h2 {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #595959;
+          font-size: 1em;
+          font-weight: normal;
+          letter-spacing: 2px;
+          display: flex;
+          align-items: center;
+
+          span {
+            display: block;
+            line-height: 1em;
+            width: 50px;
+            height: 1px;
+            background: #b5b3b3;
+            margin-right: 10px;
+            position: relative;
+            margin-top: 5px;
+
+            &:before {
+              content: "";
+              width: 100%;
+              height: 2px;
+              background: black;
+              position: absolute;
+              left: 0;
+              top: -1px;
+              animation: stretch-shrink 2s infinite;
+            }
+          }
+
+          @keyframes stretch-shrink {
+            0% {
+              transform-origin: left;
+              transform: scaleX(0);
+            }
+
+            50% {
+              transform-origin: left;
+              transform: scaleX(1);
+            }
+
+            51% {
+              transform-origin: right;
+              transform: scaleX(1);
+            }
+
+            100% {
+              transform-origin: right;
+              transform: scaleX(0);
+            }
+          }
+        }
+
+        .carousel-wrapper {
+          margin-top: 70px;
+
+          .carousel {
+            .work {
+              padding: 0 10px;
+
+              a {
+                text-decoration: none;
+
+                .text-wrapper {
+                  text-align: center;
+                  p {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    &:nth-child(1) {
+                      font-size: .8em;
+                      color: #797979;
+                    }
+
+                    &:nth-child(2) {
+                      font-size: 1.1em;
+                      color: #595959;
+                      border-bottom: solid 1px transparent;
+                      display: inline-block;
+                      transition: .3s;
+                    }
+
+                    &:nth-child(3) {
+                      font-size: .8em;
+                      color: #a6a0a0;
+                    }
+                  }
+                }
+
+                &:hover {
+                  p {
+                    &:nth-child(2) {
+                      border-bottom: solid 1px #333333;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .slick-dots {
+            bottom: -50px;
+          }
+        }
+
+        .page-top2-btn {
+          margin: 0 auto;
+          margin-top: 90px;
+        }
+      }
+    }
+  }
+
+  .page-top2-blog {
+    .container {
+      background: #F4F4F4;
+
+      .wrapper {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: block;
+        justify-content: space-between;
+
+        .sticky {
+          padding-bottom: 0px;
+
+          .sticky-container {
+            position: static;
+            display: fixed;
+            top: 70px;
+            left: 0;
+
+            .sticky-wrapper {
+              position: relative;
+
+              h2 {
+                writing-mode: vertical-lr;
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                color: #595959;
+                font-size: 1em;
+                font-weight: normal;
+                letter-spacing: 2px;
+                display: flex;
+
+                // align-items: center;
+                span {
+                  display: block;
+                  line-height: 1em;
+                  width: 1px;
+                  height: 50px;
+                  background: #b5b3b3;
+                  margin-right: 30px;
+                  position: relative;
+                  margin-bottom: 15px;
+                  margin-left: 12px;
+
+                  &:before {
+                    content: "";
+                    width: 2px;
+                    height: 100%;
+                    // background: linear-gradient(transparent, #000000, transparent);
+                    background: #000000;
+                    position: absolute;
+                    left: 0;
+                    top: -1px;
+                    animation: animate 2s infinite;
+                  }
+                }
+
+                @keyframes animate {
+                  0% {
+                    transform-origin: top;
+                    transform: scaleY(0);
+                  }
+
+                  50% {
+                    transform-origin: top;
+                    transform: scaleY(1);
+                  }
+
+                  51% {
+                    transform-origin: bottom;
+                    transform: scaleY(1);
+                  }
+
+                  100% {
+                    transform-origin: bottom;
+                    transform: scaleY(0);
+                  }
+                }
+              }
+
+              .page-top2-btn {
+                margin-top: 130px;
+              }
+
+              >img {
+                width: 150px;
+                position: absolute;
+                top: 40px;
+                left: 0%;
+              }
+            }
+          }
+        }
+
+        .content-wrapper {
+          width: 100%;
+          padding: 50px 0;
+
+          .content {
+            padding: 0 10px 40px 10px;
+            border-bottom: solid 1px silver;
+
+            &+.content {
+              margin-top: 40px;
+            }
+
+            a {
+              display: block;
+              justify-content: space-between;
+              text-decoration: none;
+
+              img {
+                width: 100%;
+                transition: .5s;
+                box-shadow: 3px 3px 6px silver;
+              }
+
+              .text-wrapper {
+                width: 100%;
+                transition: .5s;
+
+                .above {
+                  margin-top: 15px;
+
+                  .date {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    letter-spacing: 1px;
+                  }
+
+                  .category {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: 12px;
+                    color: #b5b3b3;
+                    margin-left: 0;
+                  }
+                }
+
+                .title {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 18px;
+                  margin-top: 10px;
+                }
+              }
+
+              &:hover {
+                img {
+                  border-radius: 0 40% 0 60px;
+                }
+
+                .text-wrapper {
+                  opacity: .6;
+                }
+              }
+            }
+          }
+          .page-top2-btn{
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .page-top2-about {
+    .container {
+      .wrapper {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 80px;
+
+        h2 {
+          writing-mode: vertical-lr;
+          margin-left: auto;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #595959;
+          font-size: .9em;
+          font-weight: normal;
+          letter-spacing: 3px;
+          display: flex;
+          // align-items: center;
+
+          span {
+            display: block;
+            line-height: 1em;
+            width: 1px;
+            height: 50px;
+            background: #b5b3b3;
+            margin-right: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            margin-left: 12px;
+
+            &:before {
+              content: "";
+              width: 2px;
+              height: 100%;
+              background: black;
+              position: absolute;
+              left: 0;
+              top: -1px;
+              animation: animate 2s infinite;
+            }
+          }
+
+          @keyframes animate {
+            0% {
+              transform-origin: top;
+              transform: scaleY(0);
+            }
+
+            50% {
+              transform-origin: top;
+              transform: scaleY(1);
+            }
+
+            51% {
+              transform-origin: bottom;
+              transform: scaleY(1);
+            }
+
+            100% {
+              transform-origin: bottom;
+              transform: scaleY(0);
+            }
+          }
+        }
+
+        >img {
+          width: 100%;
+          position: absolute;
+          top: 100px;
+          right: 0;
+        }
+
+        .content-wrapper {
+          // background: pink;
+          display: block;
+          justify-content: space-between;
+          align-items: center;
+
+          img {
+            width: 100%;
+            transform: translateY(0px);
+            margin-top: 20px;
+          }
+
+          p {
+            width: 100%;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            color: #474747;
+            line-height: 2.5em;
+            letter-spacing: 1px;
+            font-size: .9em;
+            margin-top: 30px;
+          }
+        }
+
+        .page-top2-btn {
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .footer02 {
+    .footer-container {
+      background: #4e4e4e;
+
+      .footer-wrapper {
+        padding: 50px 0 20px 0;
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        >a {
+          display: block;
+          margin: 0 auto;
+          width: 170px;
+        }
+
+        .link-wrapper {
+          margin-top: 40px;
+          display: block;
+          justify-content: space-between;
+
+          .left-wrapper {
+            .address {
+              span {
+                color: white;
+                font-family: "Zen Kaku Gothic New", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 2px;
+              }
+            }
+
+            a {
+              display: block;
+              width: 35px;
+              margin: 0 auto;
+              i {
+                color: white;
+                font-size: 2em;
+                margin-top: 30px;
+              }
+            }
+          }
+
+          .right-wrapper {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 30px;
+
+            // background: pink;
+            ul {
+              list-style: none;
+
+              li {
+                a {
+                  text-decoration: none;
+                  color: white;
+                  font-family: "Zen Kaku Gothic New", sans-serif;
+                  font-weight: 400;
+                  font-style: normal;
+                  letter-spacing: 2px;
+                  border-bottom: solid 1px transparent;
+                  padding-bottom: 3px;
+                  transition: .3s;
+
+                  &:hover {
+                    border-bottom: solid 1px white;
+                  }
+                }
+              }
+
+              &.menu-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                li {
+                  width: 49%;
+                  margin-top: 10px;
+                }
+              }
+
+              &.service-wrapper {
+                margin-top: 10px;
+
+                li {
+                  position: relative;
+                  margin-left: 30px;
+                  font-size: .9em;
+
+                  &+li {
+                    margin-top: 10px;
+                  }
+
+                  &:before {
+                    content: "";
+                    width: 5px;
+                    height: 1px;
+                    background: white;
+                    position: absolute;
+                    top: 50%;
+                    left: -20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .copy {
+          text-align: center;
+          font-size: small;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: white;
+          letter-spacing: 2px;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
