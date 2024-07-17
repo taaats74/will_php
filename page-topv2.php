@@ -5,66 +5,6 @@
   */
 ?>
 
-<!-- <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <title>Document</title>
-</head>
-<body>
-  <div id="splash">
-    <div id="splash-logo">
-      <div class="img-wrapper">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="">
-      </div>
-      <p class="loading-message">ともに、未来を創る。</p>
-    </div>
-  </div>
-
-  <div class="sp-menu-icon sp">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-
-  <div class="sp-menu sp">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="">
-        </div>
-        <ul class="menu">
-          <li>
-            <a href=""><span></span> about<i class="fa-solid fa-chevron-right"></i></a>
-          </li>
-          <li>
-            <a href=""><span></span>service<i class="fa-solid fa-chevron-right"></i></a>
-          </li>
-          <li>
-            <a href=""><span></span>works<i class="fa-solid fa-chevron-right"></i></a>
-          </li>
-          <li>
-            <a href=""><span></span>blog<i class="fa-solid fa-chevron-right"></i></a>
-          </li>
-          <li>
-            <a href=""><span></span>contact<i class="fa-solid fa-chevron-right"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div> -->
-
   <?php get_header("topv2"); ?>
 
   <div class="loading-container">
@@ -72,22 +12,6 @@
       <div class="container">
         <div class="wrapper">
           <header class="page-top2-header">
-            <!-- <nav>
-              <ul>
-                <li>
-                  <span></span><a href="">ウィルについて</a>
-                </li>
-                <li>
-                  <span></span><a href="">サービス内容</a>
-                </li>
-                <li>
-                  <span></span><a href="">制作実績</a>
-                </li>
-                <li>
-                  <span></span><a href="">ブログ</a>
-                </li>
-              </ul>
-            </nav> -->
             <?php
               wp_nav_menu(array(
                 'theme_location' => 'header-menu-top',
@@ -190,7 +114,7 @@
                 </div>
               </div>
               <div class="btn-more">
-                <a href=""><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="<?php echo get_page_link(334); ?>" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
               </div>
             </div>
             <div id="tab2" class="service">
@@ -213,7 +137,7 @@
                 </div>
               </div>
               <div class="btn-more">
-                <a href=""><span class="pc">SNS運用支援の</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="<?php echo get_permalink(89); ?>"><span class="pc">SNS運用支援の</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
               </div>
             </div>
             <div id="tab3" class="service">
@@ -238,7 +162,7 @@
                 </div>
               </div>
               <div class="btn-more">
-                <a href=""><span class="pc">その他の</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="<?php echo get_permalink(87); ?>"><span class="pc">その他の</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
               </div>
             </div>
           </div>
@@ -269,80 +193,59 @@
           <h2 class="rellax-horizontal"><span></span>制作実績</h2>
           <div class="carousel-wrapper">
             <div class="carousel">
+              <?php
+                $args = array(
+                  'post_type' => 'works',
+                  'posts_per_page' => 5,
+                );
+                $works = new WP_Query($args);
+                if($works->have_posts()):
+                  while($works->have_posts()):
+                    $works->the_post();
+              ?>
               <div class="work">
-                <a href="">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
+                <a href="<?php the_permalink(); ?>">
+                  <?php
+                    if(has_post_thumbnail()):
+                      the_post_thumbnail();
+                    else:
+                      ?>
+                      <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
+                    <?php
+                      endif;
+                    ?>
                   <div class="text-wrapper">
-                    <p>ホームページ制作</p>
-                    <p>コーチング事業</p>
-                    <p>株式会社maru-suru様</p>
+                    <p>
+                      <?php
+                        if(get_post_meta($post->ID, 'プロジェクト名')):
+                          echo get_post_meta($post->ID, 'プロジェクト名', 'true');
+                        endif;
+                      ?>
+                    </p>
+                    <p>
+                      <?php
+                        if(get_post_meta($post->ID, '概要コンテンツ2')):
+                          echo get_post_meta($post->ID, '概要コンテンツ2', 'true');
+                        endif;
+                      ?>
+                    </p>
+                    <p><?php the_title(); ?></p>
                   </div>
                 </a>
               </div>
-              <div class="work">
-                <a href="">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
-                  <div class="text-wrapper">
-                    <p>ホームページ制作</p>
-                    <p>コーチング事業</p>
-                    <p>株式会社maru-suru様</p>
-                  </div>
-                </a>
-              </div>
-              <div class="work">
-                <a href="">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
-                  <div class="text-wrapper">
-                    <p>ホームページ制作</p>
-                    <p>コーチング事業</p>
-                    <p>株式会社maru-suru様</p>
-                  </div>
-                </a>
-              </div>
-              <div class="work">
-                <a href="">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
-                  <div class="text-wrapper">
-                    <p>ホームページ制作</p>
-                    <p>コーチング事業</p>
-                    <p>株式会社maru-suru様</p>
-                  </div>
-                </a>
-              </div>
-              <div class="work">
-                <a href="">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
-                  <div class="text-wrapper">
-                    <p>ホームページ制作</p>
-                    <p>コーチング事業</p>
-                    <p>株式会社maru-suru様</p>
-                  </div>
-                </a>
-              </div>
-              <div class="work">
-                <a href="">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
-                  <div class="text-wrapper">
-                    <p>ホームページ制作</p>
-                    <p>コーチング事業</p>
-                    <p>株式会社maru-suru様</p>
-                  </div>
-                </a>
-              </div>
-              <div class="work">
-                <a href="">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
-                  <div class="text-wrapper">
-                    <p>ホームページ制作</p>
-                    <p>コーチング事業</p>
-                    <p>株式会社maru-suru様</p>
-                  </div>
-                </a>
-              </div>
+              <?php
+                endwhile;
+              else:
+              ?>
+              <p>制作実績はまだありません。</p>
+              <?php
+                endif;
+                wp_reset_postdata();
+              ?>
             </div>
           </div>
           <div class="page-top2-btn">
-            <a href="">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+            <a href="<?php echo get_page_link(43) ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -356,111 +259,58 @@
               <div class="sticky-wrapper">
                 <h2><span></span>ブログ</h2>
                 <div class="page-top2-btn pc">
-                  <a href="">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+                  <a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer" >一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
                 </div>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Blog.png" alt="">
               </div>
             </div>
           </div>
           <div class="content-wrapper">
+            <?php
+              include_once( ABSPATH . WPINC . '/feed.php' );
+              $rss = fetch_feed( 'https://will-corp.co.jp/blog/' ); // ここにURLを入力する
+              if ( !is_wp_error( $rss ) ) {
+                $maxitems = $rss->get_item_quantity( 5 );
+                $rss_items = $rss->get_items( 0, $maxitems );
+              }
+            ?>
+            <?php if ( !empty( $maxitems ) ) : ?>
+            <?php
+              if ($maxitems == 0) echo '<li>RSSデータがありませんでした.</li>';
+                else
+              foreach ( $rss_items as $item ) :
+            ?>
             <div class="content animation-target to-right">
-              <a href="">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-blog-img.png" alt="">
+              <a href="<?php echo $item->get_permalink(); ?>" target="_blank" rel="noopener noreferrer">
+              <?php
+                $first_img = '';
+                if ( preg_match( '/<img.+?src=[\'"]([^\'"]+?)[\'"].*?>/msi',
+                $item->get_content(), $matches )
+                ) { $first_img = $matches[1]; }
+              ?>
+              <?php if ( !empty( $first_img ) ) : ?>
+                <img src="<?php echo esc_attr( $first_img ); ?>" alt="">
+              <?php endif; ?>
                 <div class="text-wrapper">
                   <div class="above">
-                    <span class="date">2024.06.07</span><br class="sp">
-                    <span class="category">ホームページ制作</span>
+                    <span class="date"><?php echo $item->get_date('Y.m.d'); ?></span><br class="sp">
+                    <span class="category">
+                      <?php
+                        $categorys = $item->get_categories();
+                          foreach ( $categorys as $category ) {
+                          echo '<span>'.esc_html( $category->get_label() ).'</span>';
+                        }
+                      ?>
+                    </span>
                   </div>
-                  <p class="title">ブログのタイトルはこちらブログのタイトルはこちら</p>
+                  <p class="title"><?php echo $item->get_title(); ?></p>
                 </div>
               </a>
             </div>
-            <div class="content animation-target to-right">
-              <a href="">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-blog-img.png" alt="">
-                <div class="text-wrapper">
-                  <div class="above">
-                    <span class="date">2024.06.07</span><br class="sp">
-                    <span class="category">ホームページ制作</span>
-                  </div>
-                  <p class="title">ブログのタイトルはこちらブログのタイトルはこちら</p>
-                </div>
-              </a>
-            </div>
-            <div class="content animation-target to-right">
-              <a href="">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-blog-img.png" alt="">
-                <div class="text-wrapper">
-                  <div class="above">
-                    <span class="date">2024.06.07</span><br class="sp">
-                    <span class="category">ホームページ制作</span>
-                  </div>
-                  <p class="title">ブログのタイトルはこちらブログのタイトルはこちら</p>
-                </div>
-              </a>
-            </div>
-            <div class="content animation-target to-right">
-              <a href="">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-blog-img.png" alt="">
-                <div class="text-wrapper">
-                  <div class="above">
-                    <span class="date">2024.06.07</span><br class="sp">
-                    <span class="category">ホームページ制作</span>
-                  </div>
-                  <p class="title">ブログのタイトルはこちらブログのタイトルはこちら</p>
-                </div>
-              </a>
-            </div>
-            <div class="content animation-target to-right">
-              <a href="">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-blog-img.png" alt="">
-                <div class="text-wrapper">
-                  <div class="above">
-                    <span class="date">2024.06.07</span><br class="sp">
-                    <span class="category">ホームページ制作</span>
-                  </div>
-                  <p class="title">ブログのタイトルはこちらブログのタイトルはこちら</p>
-                </div>
-              </a>
-            </div>
-            <div class="content animation-target to-right">
-              <a href="">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-blog-img.png" alt="">
-                <div class="text-wrapper">
-                  <div class="above">
-                    <span class="date">2024.06.07</span><br class="sp">
-                    <span class="category">ホームページ制作</span>
-                  </div>
-                  <p class="title">ブログのタイトルはこちらブログのタイトルはこちら</p>
-                </div>
-              </a>
-            </div>
-            <div class="content animation-target to-right">
-              <a href="">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-blog-img.png" alt="">
-                <div class="text-wrapper">
-                  <div class="above">
-                    <span class="date">2024.06.07</span><br class="sp">
-                    <span class="category">ホームページ制作</span>
-                  </div>
-                  <p class="title">ブログのタイトルはこちらブログのタイトルはこちら</p>
-                </div>
-              </a>
-            </div>
-            <div class="content animation-target to-right">
-              <a href="">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-blog-img.png" alt="">
-                <div class="text-wrapper">
-                  <div class="above">
-                    <span class="date">2024.06.07</span><br class="sp">
-                    <span class="category">ホームページ制作</span>
-                  </div>
-                  <p class="title">ブログのタイトルはこちらブログのタイトルはこちら</p>
-                </div>
-              </a>
-            </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
             <div class="page-top2-btn sp">
-              <a href="">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+              <a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
             </div>
           </div>
         </div>

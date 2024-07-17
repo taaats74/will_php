@@ -69,4 +69,4 @@
 endif;
 ?>
 
-<?php get_footer("top"); ?>
+<?php get_footer("v2"); ?>

@@ -31,4 +31,4 @@ Template Post Type: service
     endif;
     ?>
 
-<?php get_footer(); ?>
+<?php get_footer("v2"); ?>

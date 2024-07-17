@@ -1609,7 +1609,7 @@
 
                 .desc-image {
                   display: block;
-                  width: 70%;
+                  width: 50%;
                   height: 100%;
                   margin: 0 auto;
                   margin-top: 10px;
@@ -1621,7 +1621,7 @@
             .btn-more {
               background: #333333;
               border: solid 1px #333333;
-              width: 90%;
+              width: 250px;
               border-radius: 40px;
               margin: 0 auto;
               margin-top: 60px;
@@ -1698,7 +1698,7 @@
                   }
 
                   .desc-image {
-                    width: 70%;
+                    width: 50%;
                     height: 100%;
                     // background: pink;
                   }
@@ -1708,7 +1708,7 @@
               .btn-more {
                 background: #333333;
                 border: solid 1px #333333;
-                width: 90%;
+                width: 250px;
                 border-radius: 40px;
                 margin: 0 auto;
                 margin-top: 60px;
@@ -1783,7 +1783,7 @@
                   }
 
                   .desc-image {
-                    width: 60%;
+                    width: 40%;
                     height: 100%;
                     // background: pink;
                   }
@@ -1793,7 +1793,7 @@
               .btn-more {
                 background: #333333;
                 border: solid 1px #333333;
-                width: 90%;
+                width: 250px;
                 border-radius: 40px;
                 margin: 0 auto;
                 margin-top: 60px;
@@ -2199,6 +2199,7 @@
             }
           }
           .page-top2-btn{
+            margin: 0 auto;
             margin-top: 50px;
           }
         }
@@ -2333,6 +2334,8 @@
 
           .left-wrapper {
             .address {
+              width: 90%;
+              margin: 0 auto;
               span {
                 color: white;
                 font-family: "Zen Kaku Gothic New", sans-serif;
@@ -2382,14 +2385,15 @@
               }
 
               &.menu-wrapper {
-                display: flex;
+                display: block;
                 align-items: center;
                 justify-content: space-between;
                 flex-wrap: wrap;
-
                 li {
-                  width: 49%;
+                  width: 100%;
                   margin-top: 10px;
+                  border-bottom: solid 1px silver;
+                  padding: 10px 0 10px 10px;
                 }
               }
 

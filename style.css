@@ -4111,7 +4111,7 @@ body.appear .loading-container {
   }
   .page-top2-service .container .wrapper .service-wrapper .service .service-desc .desc-wrapper .desc-image {
     display: block;
-    width: 70%;
+    width: 50%;
     height: 100%;
     margin: 0 auto;
     margin-top: 10px;
@@ -4119,7 +4119,7 @@ body.appear .loading-container {
   .page-top2-service .container .wrapper .service-wrapper .service .btn-more {
     background: #333333;
     border: solid 1px #333333;
-    width: 90%;
+    width: 250px;
     border-radius: 40px;
     margin: 0 auto;
     margin-top: 60px;
@@ -4181,13 +4181,13 @@ body.appear .loading-container {
     margin-right: 10px;
   }
   .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .service-desc .desc-wrapper .desc-image {
-    width: 70%;
+    width: 50%;
     height: 100%;
   }
   .page-top2-service .container .wrapper .service-wrapper .service:nth-child(2) .btn-more {
     background: #333333;
     border: solid 1px #333333;
-    width: 90%;
+    width: 250px;
     border-radius: 40px;
     margin: 0 auto;
     margin-top: 60px;
@@ -4245,13 +4245,13 @@ body.appear .loading-container {
     margin-right: 10px;
   }
   .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .service-desc .desc-wrapper .desc-image {
-    width: 60%;
+    width: 40%;
     height: 100%;
   }
   .page-top2-service .container .wrapper .service-wrapper .service:nth-child(3) .btn-more {
     background: #333333;
     border: solid 1px #333333;
-    width: 90%;
+    width: 250px;
     border-radius: 40px;
     margin: 0 auto;
     margin-top: 60px;
@@ -4573,6 +4573,7 @@ body.appear .loading-container {
     opacity: 0.6;
   }
   .page-top2-blog .container .wrapper .content-wrapper .page-top2-btn {
+    margin: 0 auto;
     margin-top: 50px;
   }
   .page-top2-about .container .wrapper {
@@ -4679,6 +4680,10 @@ body.appear .loading-container {
     display: block;
     justify-content: space-between;
   }
+  .footer02 .footer-container .footer-wrapper .link-wrapper .left-wrapper .address {
+    width: 90%;
+    margin: 0 auto;
+  }
   .footer02 .footer-container .footer-wrapper .link-wrapper .left-wrapper .address span {
     color: white;
     font-family: "Zen Kaku Gothic New", sans-serif;
@@ -4719,14 +4724,16 @@ body.appear .loading-container {
     border-bottom: solid 1px white;
   }
   .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.menu-wrapper {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.menu-wrapper li {
-    width: 49%;
+    width: 100%;
     margin-top: 10px;
+    border-bottom: solid 1px silver;
+    padding: 10px 0 10px 10px;
   }
   .footer02 .footer-container .footer-wrapper .link-wrapper .right-wrapper ul.service-wrapper {
     margin-top: 10px;
