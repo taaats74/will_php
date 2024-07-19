@@ -124,15 +124,15 @@ function wpcf7_autop_return_false() {
   return false;
 }
 
-  // eventの表示件数
-//   function change_posts_per_page($query) {
-//   if ( is_admin() || ! $query->is_main_query() )
-//   return;
-//   if ( $query->is_post_type_archive('event') ) {
-//     $query->set( 'posts_per_page', '30' );
-//   }
-// }
-// add_action( 'pre_get_posts', 'change_posts_per_page' );
+  // worksの表示件数
+  function change_posts_per_page($query) {
+  if ( is_admin() || ! $query->is_main_query() )
+  return;
+  if ( $query->is_post_type_archive('works') ) {
+    $query->set( 'posts_per_page', '100' );
+  }
+}
+add_action( 'pre_get_posts', 'change_posts_per_page' );
 
 // 不要な管理画面項目の削除
 // add_action( 'admin_menu', 'remove_menus' );

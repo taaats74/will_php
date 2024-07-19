@@ -23,7 +23,7 @@
         <div class="service-wrapper">
           <div class="box-wrapper above">
             <div class="service">
-              <a href="<?php echo get_permalink(206); ?> " target="_blank" rel="noopener noreferrer">
+              <a href="<?php echo get_permalink(334); ?> " target="_blank" rel="noopener noreferrer">
                 <div class="num">
                   <p>01</p>
                 </div>

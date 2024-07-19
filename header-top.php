@@ -44,7 +44,7 @@
 		}
 	</script>
 
-	<script type="application/ld+json">
+  <script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
 		  "@type": "WebSite",
@@ -60,31 +60,21 @@
 			"url": "https://will-corp.co.jp/about/"
 		  },
 		  "price": {
-			"@type": "PricePage",
+			"@type": "Offer",
 			"url": "https://will-corp.co.jp/price/"
 		  },
 		  	"works": {
-			"@type": "WorksPage",
+			"@type": "CreativeWork",
 			"url": "https://will-corp.co.jp/works/"
 		  },
 		    "contactPoint": {
 				"@type": "ContactPage",
 				"url": "https://will-corp.co.jp/contact/"
 			  },
-		  "blog": {
-			"@type": "Blog",
 			"blogPosts": {
 			  "@type": "BlogPosting",
-			  "url": "https://maru-suru.com/blog/"
-			}
-		  },
-		  "news": {
-			"@type": "Article",
-			"mainEntityOfPage": {
-			  "@type": "WebPage",
-			  "url": "https://maru-suru.com/info/"
-			}
-		  }
+			  "url": "https://will-corp.com/blog/"
+			},
 		}
 	</script>
 	<!-- Google tag (gtag.js) -->

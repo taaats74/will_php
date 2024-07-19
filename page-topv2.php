@@ -21,7 +21,7 @@
             ?>
           </header>
           <div class="bg-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv-img.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.png" alt="">
           </div>
           <div class="logo-wrapper">
             <div class="logo-text">
@@ -35,8 +35,8 @@
             </h1>
           </div>
           <div class="fv-message-wrapper">
-            <p class="en">Uncover the unknown and turn it into an answer.</p>
-            <p class="ja">未知をひらき、答えにする。</p>
+            <p class="en">Create the future together.</p>
+            <p class="ja">ともに、未来を創る</p>
           </div>
           <div class="mail-icon">
             <a href="<?php echo get_page_link(15); ?>">
@@ -44,6 +44,17 @@
             </a>
           </div>
           <div class="scroll"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-top2-fv-sp sp">
+      <div class="container">
+        <div class="wrapper">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.jpg" alt="">
+          <a href="<?php echo home_url( '/' ); ?>" class="page-top2-sp-icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/black.png" alt="合同会社ウィル 福岡 ウェブ制作 ウェブマーケティング ホームページ制作">
+          </a>
         </div>
       </div>
     </section>
@@ -176,7 +187,7 @@
         <div class="wrapper">
           <h2>無料相談・お問い合わせ</h2>
           <div class="contact-btn">
-            <a href="">
+            <a href="<?php echo get_page_link(15); ?>">
               <span>CONTACT</span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
             </a>
@@ -317,6 +328,29 @@
       </div>
     </section>
 
+    <!-- <section class="page-top2-insta">
+      <div class="container">
+        <div class="wrapper">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-instagram.png" alt="instagram">
+          <h2 class="rellax-horizontal"><span></span>インスタグラム</h2>
+          <?php
+            if(have_posts()):
+              while(have_posts()): the_post();
+          ?>
+          <div class="insta-wrapper">
+            <?php the_content(); ?>
+          </div>
+          <?php
+            endwhile;
+          endif;
+          ?>
+          <div class="page-top2-btn">
+            <a href="<?php echo get_page_link(43) ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
     <section class="page-top2-about">
       <div class="container">
         <div class="wrapper">
@@ -338,7 +372,7 @@
         <div class="wrapper">
           <h2>無料相談・お問い合わせ</h2>
           <div class="contact-btn">
-            <a href="">
+            <a href="<?php echo get_page_link(15); ?>">
               <span>CONTACT</span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
             </a>

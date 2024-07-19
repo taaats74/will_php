@@ -21,7 +21,7 @@ Template Post Type: service
     </div>
   </section>
 
-  <!-- <?php
+  <?php
     if(have_posts()):
     while(have_posts()): the_post();
   ?>
@@ -29,7 +29,7 @@ Template Post Type: service
   <?php
     endwhile;
   endif;
-  ?> -->
+  ?>
 
   <!-- <section class="single-service-copy">
     <div class="container">
