@@ -3675,6 +3675,7 @@ body.appear .loading-container {
   margin-top: 60px;
 }
 .page-top2-about .container .wrapper .page-top2-btn {
+  width: 280px;
   margin-left: auto;
 }
 

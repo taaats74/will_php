@@ -361,7 +361,7 @@
             <p>わたしたちは、ウェブ制作やウェブ集客、SNS運用サポートをワンストップで提供することで、お客様のビジネスをトータルでサポートさせていただきます。<br>ウェブ担当者やマーケティング部門がない中小企業様にとって、戦略から戦術の策定、実行まで一気通貫で対応することは簡単ではありません。中小企業様のビジネスや課題を理解し、解決に全力で取り組ませていただきます。</p>
           </div>
           <div class="page-top2-btn">
-            <a href="">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+            <a href="<?php echo get_page_link(11) ?>">ウィルについて<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
           </div>
         </div>
       </div>
