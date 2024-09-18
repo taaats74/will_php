@@ -125,7 +125,7 @@
                 </div>
               </div>
               <div class="btn-more">
-                <a href="<?php echo get_page_link(334); ?>" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="<?php echo get_page_link(206); ?>" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
               </div>
             </div>
             <div id="tab2" class="service">

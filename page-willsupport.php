@@ -273,6 +273,24 @@
               <p>ルイカステルジャパン株式会社様</p>
             </div>
           </a>
+          <a href="https://logosuki.biz/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/logosuki.png" alt="">
+              <p>ロゴスキ様</p>
+            </div>
+          </a>
+          <a href="https://ce-petmassage-fukuoka.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/cocoroekurere.png" alt="">
+              <p>こころえくれれ様</p>
+            </div>
+          </a>
+          <a href="https://oneplus-salon.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/oneplus.png" alt="">
+              <p>OnePlus+様</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>

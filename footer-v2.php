@@ -8,7 +8,7 @@
                 <span>〒812-0011</span><br>
                 <span>福岡県福岡市博多区博多駅前1-23-2</span>
               </div>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/luce_create/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <div class="right-wrapper">
               <!-- <ul class="menu-wrapper">

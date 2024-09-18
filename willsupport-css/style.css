@@ -547,11 +547,14 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   width: 90%;
   max-width: 1152px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .works .container .wrapper .works-wrapper a {
+  width: 30%;
+  margin-top: 30px;
   transition: 0.3s;
 }
 .works .container .wrapper .works-wrapper a .works {
@@ -561,7 +564,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   text-align: center;
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-weight: bold;
-  margin-top: 3px;
+  margin-top: 20px;
   color: #333333;
   letter-spacing: 3px;
 }

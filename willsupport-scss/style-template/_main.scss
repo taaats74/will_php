@@ -408,10 +408,13 @@ header{
         width: 90%;
         max-width: 1152px;
         margin: 0 auto;
-        margin-top: 70px;
+        margin-top: 40px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         a{
+          width: 30%;
+          margin-top: 30px;
           transition: .3s;
           .works{
             width: 100%;
@@ -420,7 +423,7 @@ header{
             text-align: center;
             font-family: YuGothic, 'Yu Gothic', sans-serif;
             font-weight: bold;
-            margin-top: 3px;
+            margin-top: 20px;
             color: #333333;
             letter-spacing: 3px;
           }
