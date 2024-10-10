@@ -207,7 +207,7 @@
               <?php
                 $args = array(
                   'post_type' => 'works',
-                  'posts_per_page' => 5,
+                  'posts_per_page' => 6,
                 );
                 $works = new WP_Query($args);
                 if($works->have_posts()):
