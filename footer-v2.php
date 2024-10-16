@@ -43,19 +43,19 @@
               ?>
               <ul class="service-wrapper">
                 <li>
-                  <a href="">Webサイト制作</a>
+                  <a href="https://will-corp.co.jp/service/web-creative/">Webサイト制作</a>
                 </li>
                 <li>
-                  <a href="">Webマーケティング</a>
+                  <a href="https://will-corp.co.jp/service/web-marketing/">Webマーケティング</a>
                 </li>
                 <li>
-                  <a href="">SNS運用サポート</a>
+                  <a href="https://will-corp.co.jp/service/sns-support/">SNS運用サポート</a>
                 </li>
                 <li>
-                  <a href="">Web広告運用代行</a>
+                  <a href="https://will-corp.co.jp/service/advertising/">Web広告運用代行</a>
                 </li>
                 <li>
-                  <a href="">チラシ・バナー制作</a>
+                  <a href="https://will-corp.co.jp/service/graphic/">チラシ・バナー制作</a>
                 </li>
               </ul>
             </div>
