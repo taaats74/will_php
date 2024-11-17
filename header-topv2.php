@@ -29,57 +29,59 @@
         bloginfo('name');
     ?>
   </title>
-  <?php wp_head(); ?>
-	<script type="application/ld+json">
-		{
-		  "@context": "https://schema.org",
-		  "@type": "Organization",
-		  "name": "合同会社ウィル",
-		  "url": "https://will-corp.co.jp/",
-		  "logo": "https://will-corp.co.jp/wp-content/uploads/2024/02/black_yoko.png",
-		  "contactPoint": {
-			"@type": "ContactPoint",
-			"contactType": "customer service",
-			"contactOption": "TollFree",
-			"areaServed": "JP",
-			"availableLanguage": ["Japanese"]
-		  }
-		}
-	</script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "合同会社ウィル",
+      "url": "https://will-corp.co.jp/",
+      "foundingDate": "2023-11",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP",
+        "addressRegion": "福岡県",
+        "addressLocality": "福岡市博多区",
+        "streetAddress": "博多駅前1丁目23番2号 ParkFront博多駅前1丁目5F-B",
+        "postalCode": "812-0011"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "url": "https://will-corp.co.jp/contact/",
+        "contactType": "customer service",
+        "availableLanguage": "Japanese"
+      },
+      "description": "WEBサイト制作、WEBマーケティング支援、SNS運用サポート、広告運用代行を提供する企業",
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "アバウト",
+          "url": "https://will-corp.co.jp/about/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "料金",
+          "url": "https://will-corp.co.jp/price/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "サービス",
+          "url": "https://will-corp.co.jp/service/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "ウィルサポ",
+          "url": "https://will-corp.co.jp/willsupport/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "メディア",
+          "url": "https://will-corp.co.jp/blog/"
+        }
+      ]
+    }
+  </script>
 
-		<script type="application/ld+json">
-		{
-		  "@context": "https://schema.org",
-		  "@type": "WebSite",
-		  "name": "合同会社ウィル",
-		  "url": "https://will-corp.co.jp/",
-		  "potentialAction": {
-			"@type": "SearchAction",
-			"target": "https://will-corp.co.jp/search?&q={search_term_string}",
-			"query-input": "required name=search_term_string"
-		  },
-		  "about": {
-			"@type": "AboutPage",
-			"url": "https://will-corp.co.jp/about/"
-		  },
-		  "price": {
-			"@type": "Offer",
-			"url": "https://will-corp.co.jp/price/"
-		  },
-		  	"works": {
-			"@type": "CreativeWork",
-			"url": "https://will-corp.co.jp/works/"
-		  },
-		    "contactPoint": {
-				"@type": "ContactPage",
-				"url": "https://will-corp.co.jp/contact/"
-			  },
-			"blogPosts": {
-			  "@type": "BlogPosting",
-			  "url": "https://will-corp.com/blog/"
-			},
-		}
-	</script>
+  <?php wp_head(); ?>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S1MX9T90DT"></script>
 	<script>
