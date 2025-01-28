@@ -11895,6 +11895,384 @@ body.appear .loading-container {
     margin-left: 10px;
   }
 }
+.hero-section.ebook .container {
+  background: rgba(125, 172, 175, 0.2);
+  border-bottom: solid 1px #b1cdcf;
+  overflow: hidden;
+}
+.hero-section.ebook .container .wrapper {
+  padding-top: 68px;
+  max-width: 1950px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-section.ebook .container .wrapper .img-wrapper {
+  width: 60%;
+}
+.hero-section.ebook .container .wrapper .img-wrapper img {
+  width: 100%;
+}
+.hero-section.ebook .container .wrapper .hero-text {
+  position: absolute;
+  top: 55%;
+  left: 18%;
+}
+.hero-section.ebook .container .wrapper .hero-text .section-header {
+  font-size: 2.5em;
+  letter-spacing: 4px;
+}
+
+.page-contentdl-content {
+  margin-top: 70px;
+}
+.page-contentdl-content .container .wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page-contentdl-content .container .wrapper h2 {
+  border-bottom: solid 1px #eaeaea;
+  padding-bottom: 20px;
+}
+.page-contentdl-content .container .wrapper .contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-contentdl-content .container .wrapper .contents .content {
+  width: 32%;
+  margin: 20px 5px;
+}
+.page-contentdl-content .container .wrapper .contents .content a {
+  text-decoration: none;
+}
+.page-contentdl-content .container .wrapper .contents .content a h3 {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+.page-contentdl-content .container .wrapper .contents .content a p {
+  width: 90%;
+  max-width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  border: solid 1px #333333;
+  background: #333333;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 25px;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+.page-contentdl-content .container .wrapper .contents .content a:hover p {
+  background: white;
+  color: #333333;
+}
+
+.archive-works-btns {
+  margin-top: 120px;
+}
+.archive-works-btns .container {
+  background-image: url(img/archive-works-bg.png);
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+  position: relative;
+}
+.archive-works-btns .container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(125, 172, 175, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.archive-works-btns .container .wrapper {
+  width: 83%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.archive-works-btns .container .wrapper .btns-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn {
+  width: 45%;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.7);
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn a {
+  display: block;
+  width: 100;
+  padding: 2em;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btn-header .section-header {
+  text-align: center;
+  font-size: 1.8em;
+  transition: 0.3s;
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btn-header .sub-title {
+  text-align: center;
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9em;
+  transition: 0.3s;
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btns-text {
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a {
+  background: rgba(0, 0, 0, 0.7);
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btn-header .section-header {
+  color: white;
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btn-header .sub-title {
+  color: white;
+}
+.archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btns-text {
+  color: white;
+}
+
+@media screen and (max-width: 1050px) {
+  .archive-works-btns {
+    margin-top: 120px;
+  }
+  .archive-works-btns .container {
+    background-image: url(img/archive-works-bg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0;
+    position: relative;
+  }
+  .archive-works-btns .container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(125, 172, 175, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .archive-works-btns .container .wrapper {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn {
+    width: 48%;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn a {
+    display: block;
+    width: 100;
+    padding: 2em;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btn-header .section-header {
+    text-align: center;
+    font-size: 1.8em;
+    transition: 0.3s;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btn-header .sub-title {
+    text-align: center;
+    font-family: "toppan-bunkyu-gothic-pr6n", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9em;
+    transition: 0.3s;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btns-text {
+    font-family: "toppan-bunkyu-gothic-pr6n", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+    transition: 0.3s;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btn-header .section-header {
+    color: white;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btn-header .sub-title {
+    color: white;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btns-text {
+    color: white;
+  }
+}
+@media screen and (max-width: 770px) {
+  .hero-section.ebook .container {
+    background: rgba(125, 172, 175, 0.2);
+    border-bottom: solid 1px #b1cdcf;
+    overflow: hidden;
+  }
+  .hero-section.ebook .container .wrapper {
+    padding-top: 68px;
+    max-width: 1950px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-section.ebook .container .wrapper .img-wrapper {
+    width: 125%;
+  }
+  .hero-section.ebook .container .wrapper .img-wrapper img {
+    width: 100%;
+  }
+  .hero-section.ebook .container .wrapper .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+  }
+  .hero-section.ebook .container .wrapper .hero-text .section-header {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+  }
+  .page-contentdl-content {
+    margin-top: 40px;
+  }
+  .page-contentdl-content .container .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .page-contentdl-content .container .wrapper h2 {
+    border-bottom: solid 1px #eaeaea;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+  }
+  .page-contentdl-content .container .wrapper .contents {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .page-contentdl-content .container .wrapper .contents .content {
+    width: 100%;
+    margin: 20px 5px;
+  }
+  .page-contentdl-content .container .wrapper .contents .content a {
+    text-decoration: none;
+  }
+  .page-contentdl-content .container .wrapper .contents .content a h3 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .page-contentdl-content .container .wrapper .contents .content a p {
+    width: 90%;
+    max-width: 220px;
+    margin: 0 auto;
+    text-align: center;
+    border: solid 1px #333333;
+    background: #333333;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .page-contentdl-content .container .wrapper .contents .content a:hover p {
+    background: white;
+    color: #333333;
+  }
+  .archive-works-btns {
+    margin-top: 120px;
+  }
+  .archive-works-btns .container {
+    background-image: url(img/archive-works-bg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0;
+    position: relative;
+  }
+  .archive-works-btns .container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(125, 172, 175, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .archive-works-btns .container .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper {
+    display: block;
+    justify-content: space-between;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn {
+    width: 100%;
+    margin-top: 30px;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn a {
+    display: block;
+    width: 100;
+    padding: 1em;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btn-header .section-header {
+    text-align: center;
+    font-size: 1.8em;
+    transition: 0.3s;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btn-header .sub-title {
+    text-align: center;
+    font-family: "toppan-bunkyu-gothic-pr6n", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8em;
+    transition: 0.3s;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn a .btns-text {
+    font-family: "toppan-bunkyu-gothic-pr6n", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+    transition: 0.3s;
+    font-size: 0.9em;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btn-header .section-header {
+    color: white;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btn-header .sub-title {
+    color: white;
+  }
+  .archive-works-btns .container .wrapper .btns-wrapper .works-btn:hover a .btns-text {
+    color: white;
+  }
+}
 footer .container {
   background: #7dacaf;
   padding: 60px 0 20px 0;

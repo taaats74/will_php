@@ -40,6 +40,9 @@
 
 		gtag('config', 'G-S1MX9T90DT');
 	</script>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
+  <!-- End of HubSpot Embed Code -->
 </head>
 <body>
   <header>
@@ -723,7 +726,9 @@
       </div>
     </div>
   </footer>
-
   <script src="<?php echo get_template_directory_uri(); ?>/willsupport-js/script.js"></script>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
+  <!-- End of HubSpot Embed Code -->
 </body>
 </html>
