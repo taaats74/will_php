@@ -29,7 +29,7 @@
           <div class="content">
             <a href="https://site.will-corp.co.jp/content-3f4he6joo8r" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_template_directory_uri(); ?>/img/page-contentdl-03.png" alt="中小企業のためのWebマーケティング入門ガイド">
-              <h3>中小企業のための<br>Webマーケティング入門ガイド</h3>
+              <h3>基礎からわかる<br>Webマーケティング入門ガイド</h3>
               <p>無料でダウンロード</p>
             </a>
           </div>
