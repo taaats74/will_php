@@ -276,6 +276,12 @@
               <p>株式会社みつや様</p>
             </div>
           </a>
+          <a href="https://fitness-personal-chochi.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc16.png" alt="Fitness Partner Chochi様制作実績">
+              <p>Fitness Partner Chochi様</p>
+            </div>
+          </a>
           <a href="https://logosuki.biz/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/logosuki.png" alt="ロゴスキ様制作実績">
