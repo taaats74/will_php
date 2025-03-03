@@ -21,7 +21,8 @@
             ?>
           </header>
           <div class="bg-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.png" alt="">
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.png" alt=""> -->
+            <video autoplay muted loop playsinline id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie.mp4" ></video>
           </div>
           <div class="logo-wrapper">
             <div class="logo-text">
@@ -51,10 +52,15 @@
     <section class="page-top2-fv-sp sp">
       <div class="container">
         <div class="wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.jpg" alt="">
+          <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.jpg" alt=""> -->
+          <video autoplay muted loop playsinline id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie-sp.mp4" ></video>
           <a href="<?php echo home_url( '/' ); ?>" class="page-top2-sp-icon">
             <img src="<?php echo get_template_directory_uri(); ?>/img/black.png" alt="合同会社ウィル 福岡 ウェブ制作 ウェブマーケティング ホームページ制作">
           </a>
+          <div class="fv-message-wrapper">
+            <p class="en">Create the future together.</p>
+            <p class="ja">ともに、未来を創る</p>
+          </div>
         </div>
       </div>
     </section>
@@ -125,7 +131,7 @@
                 </div>
               </div>
               <div class="btn-more">
-                <a href="<?php echo get_page_link(206); ?>" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="<?php echo get_page_link(334); ?>" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
               </div>
             </div>
             <div id="tab2" class="service">

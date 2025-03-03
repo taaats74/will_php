@@ -44,7 +44,7 @@
     &:before{
       content: "";
       width: 100%;
-      height: 100%;
+      height: 99%;
       position: absolute;
       top: 0;
       left: 0;
@@ -96,6 +96,11 @@
               }
             }
           }
+        }
+      }
+      .bg-img{
+        video{
+          width: 100%;
         }
       }
       .logo-wrapper{
@@ -1461,12 +1466,40 @@
     .container{
       .wrapper{
         position: relative;
+        video{
+          width: 100%;
+        }
         .page-top2-sp-icon{
           position: absolute;
           top: 5px;
           left: 10px;
           display: block;
           width: 25%;
+        }
+        .fv-message-wrapper {
+          position: absolute;
+          z-index: 2;
+          bottom: 5%;
+          left: 5%;
+
+          .en {
+            color: white;
+            font-size: 14px;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 2px;
+          }
+
+          .ja {
+            color: white;
+            font-size: 28px;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: 5px;
+            line-height: 1em;
+          }
         }
       }
     }

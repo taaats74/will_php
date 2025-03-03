@@ -2723,7 +2723,7 @@ body.appear .loading-container {
 .page-top2-fv .container:before {
   content: "";
   width: 100%;
-  height: 100%;
+  height: 99%;
   position: absolute;
   top: 0;
   left: 0;
@@ -2774,6 +2774,9 @@ body.appear .loading-container {
   text-decoration: none;
   display: inline-block;
   transition: 0.5s;
+}
+.page-top2-fv .container .wrapper .bg-img video {
+  width: 100%;
 }
 .page-top2-fv .container .wrapper .logo-wrapper {
   position: absolute;
@@ -3985,12 +3988,38 @@ body.appear .loading-container {
   .page-top2-fv-sp .container .wrapper {
     position: relative;
   }
+  .page-top2-fv-sp .container .wrapper video {
+    width: 100%;
+  }
   .page-top2-fv-sp .container .wrapper .page-top2-sp-icon {
     position: absolute;
     top: 5px;
     left: 10px;
     display: block;
     width: 25%;
+  }
+  .page-top2-fv-sp .container .wrapper .fv-message-wrapper {
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    left: 5%;
+  }
+  .page-top2-fv-sp .container .wrapper .fv-message-wrapper .en {
+    color: white;
+    font-size: 14px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+  }
+  .page-top2-fv-sp .container .wrapper .fv-message-wrapper .ja {
+    color: white;
+    font-size: 28px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 5px;
+    line-height: 1em;
   }
   .page-top2-issue .container {
     position: relative;
