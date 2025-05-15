@@ -258,6 +258,12 @@
           <p>制作実績</p>
         </div>
         <div class="works-wrapper">
+          <a href="https://japanmarvelous.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works" >
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc17.png" alt="ジャパンマーベラス様制作実績">
+              <p>ジャパンマーベラス様</p>
+            </div>
+          </a>
           <a href="https://kuikirizushi-nobu.com/" target="_blank" rel="noopener noreferrer">
             <div class="works" >
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/kuikiri.png" alt="喰い切り寿司のぶ様制作実績">
@@ -313,12 +319,12 @@
               <p>OnePlus+様</p>
             </div>
           </a>
-          <a href="https://louiscasteljapan.com/" target="_blank" rel="noopener noreferrer">
+          <!-- <a href="https://louiscasteljapan.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/louis.png" alt="OnePlus+制作実績">
               <p>ルイカステルジャパン様</p>
             </div>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
