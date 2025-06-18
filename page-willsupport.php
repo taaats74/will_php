@@ -51,7 +51,7 @@
         <div class="logo">
           <a href="#">
 			  <h1>
-          <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/header-logo.png" alt="ウィルサポ おすすめ格安な定額サブスクホームページ">
+          <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/header-logo.png" alt="ウィルサポ おすすめ格安な定額サブスクホームページ 合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ホームページ制作">
         </h1>
           </a>
         </div>
@@ -88,7 +88,7 @@
       <nav class="sp-menu">
         <div class="logo">
           <h1>
-            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/logo-white.png" alt="ウィルサポ おすすめ格安な定額サブスクホームページ">
+            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/logo-white.png" alt="ウィルサポ おすすめ格安な定額サブスクホームページ 合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ホームページ制作">
           </h1>
         </div>
         <ul>

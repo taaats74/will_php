@@ -31,7 +31,7 @@
             </div>
             <h1 class="logo-img">
               <a href="<?php echo home_url( '/' ); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.png" alt="合同会社ウィル 福岡 ウェブ制作 ウェブマーケティング ホームページ制作">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.png" alt="合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ウェブマーケティング ホームページ制作">
               </a>
             </h1>
           </div>
