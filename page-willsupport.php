@@ -276,6 +276,30 @@
               <p>こころえくれれ様</p>
             </div>
           </a>
+          <a href="https://flags-guide.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc18.png" alt="株式会社フラッグス様制作実績">
+              <p>株式会社フラッグス様</p>
+            </div>
+          </a>
+          <a href="https://mrzaimuya.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc19.png" alt="株式会社Mr財務屋様制作実績">
+              <p>株式会社Mr財務屋様</p>
+            </div>
+          </a>
+          <!-- <a href="https://otg-koushu.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc20.png" alt="株式会社OTG講習センター様制作実績">
+              <p>株式会社OTG講習センター様</p>
+            </div>
+          </a> -->
+          <a href="https://oneplus-salon.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/oneplus.png" alt="OnePlus+制作実績">
+              <p>OnePlus+様</p>
+            </div>
+          </a>
           <a href="https://mitsuyaweb.jp/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc14.png" alt="みつや様制作実績">
@@ -294,35 +318,22 @@
               <p>ロゴスキ様</p>
             </div>
           </a>
-          <a href="https://acro-kenkyusho.com/" target="_blank" rel="noopener noreferrer">
+          <!-- <a href="https://acro-kenkyusho.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc15.png" alt="アクロ様制作実績">
               <p>有限会社アクロ研究所様</p>
             </div>
-          </a>
+          </a> -->
           <a href="https://shibuya-shika.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/shibuyashika.png" alt="渋谷歯科医院様制作実績">
               <p>渋谷歯科医院様</p>
             </div>
           </a>
-          <a href="https://maru-suru.com/" target="_blank" rel="noopener noreferrer">
+          <!-- <a href="https://maru-suru.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/maru-suru.png" alt="maru-suru様制作実績">
               <p>株式会社maru-suru様</p>
-            </div>
-          </a>
-          </a>
-          <a href="https://oneplus-salon.com/" target="_blank" rel="noopener noreferrer">
-            <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/oneplus.png" alt="OnePlus+制作実績">
-              <p>OnePlus+様</p>
-            </div>
-          </a>
-          <!-- <a href="https://louiscasteljapan.com/" target="_blank" rel="noopener noreferrer">
-            <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/louis.png" alt="OnePlus+制作実績">
-              <p>ルイカステルジャパン様</p>
             </div>
           </a> -->
         </div>
