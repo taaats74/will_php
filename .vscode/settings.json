@@ -1,4 +1,6 @@
 {
   "liveSassCompile.settings.autoprefix": [],
-  "liveServer.settings.AdvanceCustomBrowserCmdLine": ""
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+  "editor.formatOnSave": true,
+  "liveServer.settings.root": ""
 }

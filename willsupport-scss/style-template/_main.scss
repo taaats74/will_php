@@ -411,9 +411,10 @@ header{
         margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        // justify-content: space-between;
         a{
           width: 30%;
+          margin: 0 1%;
           margin-top: 30px;
           transition: .3s;
           .works{
@@ -1415,7 +1416,7 @@ footer {
           margin: 0 auto;
           margin-top: 70px;
           display: flex;
-          justify-content: space-between;
+          // justify-content: space-between;
 
           a {
             transition: .3s;
@@ -2049,7 +2050,7 @@ footer {
           margin: 0 auto;
           margin-top: 70px;
           display: block;
-          justify-content: space-between;
+          // justify-content: space-between;
 
           a {
             transition: .3s;
