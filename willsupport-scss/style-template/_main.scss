@@ -34,9 +34,9 @@ header{
               color: white;
               a{
                 display: block;
-                padding: 15px 40px;
+                padding: 25px 40px;
                 background: #4e4e4e;
-                border-radius: 10px;
+                border-radius: 5px;
                 transition: .3s;
               }
               &:hover{
@@ -160,7 +160,7 @@ header{
         letter-spacing: 5px;
       }
       .banner {
-        width: 150px;
+        width: 180px;
         position: absolute;
         transform: translateY(60%);
         bottom: 0;
@@ -171,7 +171,7 @@ header{
 
           p {
             position: absolute;
-            top: 45%;
+            top: 50%;
             transform: translateY(-50%);
             left: 0;
             right: 0;
@@ -203,7 +203,7 @@ header{
         letter-spacing: 3px;
         border-bottom: solid 6px #f9e615;
         padding-bottom: 5px;
-        width: 380px;
+        width: 630px;
         text-align: center;
         margin: 0 auto;
       }
@@ -213,7 +213,7 @@ header{
         justify-content: center;
         .speech-wrapper{
           position: relative;
-          width: 280px;
+          width: 350px;
           margin: 0 15px;
           &:nth-child(2){
             transform: translateY(40px);
@@ -1806,6 +1806,7 @@ footer {
           font-weight: bold;
           color: #32949e;
           letter-spacing: 3px;
+          line-height: 1.5em;
           border-bottom: solid 6px #f9e615;
           padding-bottom: 5px;
           width: 300px;
@@ -1820,7 +1821,7 @@ footer {
 
           .speech-wrapper {
             position: relative;
-            width: 250px;
+            width: 280px;
             margin: 0 auto;
             margin-top: 10px;
             &:nth-child(2) {

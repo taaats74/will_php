@@ -70,10 +70,10 @@
               <a href="#faq">よくあるご質問</a>
             </li>
             <li>
-              <a href="https://will-corp.co.jp/">公式HP</a>
+              <a href="https://will-corp.co.jp/contact">お問い合わせ</a>
             </li>
             <li>
-              <a href="#contact">お問い合わせ</a>
+              <a href="#contact">資料を受け取る</a>
             </li>
           </ul>
         </nav>
@@ -145,12 +145,12 @@
             <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/fv-illust.png" alt="">
           </div>
         </div>
-        <p class="message">初期費用を抑えたい個人・中小企業様向けに、安くて高品質なWebサイトを。<br>管理コストを下げながら、Web集客に関する知見を社内に蓄積</p>
+        <p class="message">初期費用を抑えたい事業者様向けに、安くて高品質なWebサイトを。<br>管理コストを下げながら、Web集客に関する知見を社内に蓄積</p>
         <a href="#contact" class="banner-tag">
           <div class="banner">
             <div class="banner-wrapper">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/banner.png" alt="">
-              <p>今すぐ<br>お問い合わせ</p>
+              <p>まずは資料を<br>受け取る</p>
             </div>
           </div>
         </a>
@@ -162,7 +162,7 @@
     <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/fv-sp.png" alt="">
   </section>
 
-  <section class="onayami">
+  <!-- <section class="onayami">
     <div class="container">
       <div class="wrapper">
         <h2>こんなお悩みありませんか？</h2>
@@ -191,6 +191,49 @@
             <p>Webサイトの管理や<br>更新まで手が回らない・・・</p>
           </div>
         </div>
+        <div class="img-arrow">
+          <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/arrow-down.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="onayami">
+    <div class="container">
+      <div class="wrapper">
+        <h2>こんなお悩みをお持ちの<br class="sp">法人・事業者の方へ</h2>
+
+        <div class="speechbubble-above">
+          <div class="speech-wrapper">
+            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/speech-bubble.png" alt="">
+            <p>ホームページを作り直したいが<br>初期費用に大きな予算は<br>かけられない</p>
+          </div>
+
+          <div class="speech-wrapper">
+            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/speech-bubble.png" alt="">
+            <p>安価な制作だと<br>テンプレート感のあるデザインに<br>なりそうで不安</p>
+          </div>
+
+          <div class="speech-wrapper">
+            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/speech-bubble.png" alt="">
+            <p>サーバーやドメインなど<br>Web周りの管理まで<br>任せられる先を探している</p>
+          </div>
+        </div>
+
+        <div class="speechbubble-bottom">
+          <div class="speech-wrapper">
+            <p>作って終わりではなく<br>更新や保守まで対応してほしい</p>
+          </div>
+
+          <div class="speech-wrapper pc">
+            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/people.png" alt="">
+          </div>
+
+          <div class="speech-wrapper">
+            <p>契約や縛りが重く<br>後から変更できないのは避けたい</p>
+          </div>
+        </div>
+
         <div class="img-arrow">
           <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/arrow-down.png" alt="">
         </div>
@@ -264,6 +307,42 @@
               <p>ジャパンマーベラス様</p>
             </div>
           </a>
+          <a href="https://systemline.jp/" target="_blank" rel="noopener noreferrer">
+            <div class="works" >
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc23.png" alt="株式会社システムライン様制作実績">
+              <p>株式会社システムライン様</p>
+            </div>
+          </a>
+          <a href="https://gritcoco-realestate.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc21.png" alt="株式会社GRIT様制作実績">
+              <p>株式会社GRIT様</p>
+            </div>
+          </a>
+          <a href="https://otg-koushu.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc20.png" alt="株式会社OTG講習センター様制作実績">
+              <p>株式会社OTG講習センター様</p>
+            </div>
+          </a>
+          <a href="https://mrzaimuya.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc19.png" alt="株式会社Mr財務屋様制作実績">
+              <p>株式会社Mr財務屋様</p>
+            </div>
+          </a>
+          <a href="https://mitsuyaweb.jp/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc14.png" alt="みつや様制作実績">
+              <p>株式会社みつや様</p>
+            </div>
+          </a>
+          <a href="https://flags-guide.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc18.png" alt="株式会社フラッグス様制作実績">
+              <p>株式会社フラッグス様</p>
+            </div>
+          </a>
           <a href="https://kuikirizushi-nobu.com/" target="_blank" rel="noopener noreferrer">
             <div class="works" >
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/kuikiri.png" alt="喰い切り寿司のぶ様制作実績">
@@ -276,22 +355,10 @@
               <p>こころえくれれ様</p>
             </div>
           </a>
-          <a href="https://flags-guide.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://muraoka-touki.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc18.png" alt="株式会社フラッグス様制作実績">
-              <p>株式会社フラッグス様</p>
-            </div>
-          </a>
-          <a href="https://mrzaimuya.com/" target="_blank" rel="noopener noreferrer">
-            <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc19.png" alt="株式会社Mr財務屋様制作実績">
-              <p>株式会社Mr財務屋様</p>
-            </div>
-          </a>
-          <a href="https://otg-koushu.com/" target="_blank" rel="noopener noreferrer">
-            <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc20.png" alt="株式会社OTG講習センター様制作実績">
-              <p>株式会社OTG講習センター様</p>
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc26.png" alt="村岡測量登記事務所様制作実績">
+              <p>村岡測量登記事務所様</p>
             </div>
           </a>
           <a href="https://oneplus-salon.com/" target="_blank" rel="noopener noreferrer">
@@ -300,40 +367,16 @@
               <p>OnePlus+様</p>
             </div>
           </a>
-          <a href="https://fitness-personal-chochi.com/" target="_blank" rel="noopener noreferrer">
-            <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc16.png" alt="Fitness Partner Chochi様制作実績">
-              <p>Fitness Partner Chochi様</p>
-            </div>
-          </a>
           <a href="https://logosuki.biz/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/logosuki.png" alt="ロゴスキ様制作実績">
               <p>ロゴスキ様</p>
             </div>
           </a>
-          <a href="https://mitsuyaweb.jp/" target="_blank" rel="noopener noreferrer">
-            <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc14.png" alt="みつや様制作実績">
-              <p>株式会社みつや様</p>
-            </div>
-          </a>
           <a href="https://shibuya-shika.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/shibuyashika.png" alt="渋谷歯科医院様制作実績">
               <p>渋谷歯科医院様</p>
-            </div>
-          </a>
-          <a href="https://acro-kenkyusho.com/" target="_blank" rel="noopener noreferrer">
-            <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc20.png" alt="アクロ様制作実績">
-              <p>株式会社OTG講習センター様</p>
-            </div>
-          </a>
-          <a href="https://acro-kenkyusho.com/" target="_blank" rel="noopener noreferrer">
-            <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc21.png" alt="アクロ様制作実績">
-              <p>株式会社GRIT様</p>
             </div>
           </a>
           <a href="https://maru-suru.com/" target="_blank" rel="noopener noreferrer">
@@ -596,7 +639,7 @@
     </div>
   </section>
 
-  <section id="faq" class="faq">
+  <!-- <section id="faq" class="faq">
     <div class="container">
       <div class="wrapper">
         <div class="header-text">
@@ -712,9 +755,165 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="btn">
-          <a href="">よくある質問集へ</a>
-        </div> -->
+      </div>
+    </div>
+  </section> -->
+
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="wrapper">
+        <div class="header-text">
+          <h2>Q&A</h2>
+          <p>よくあるご質問</p>
+        </div>
+
+        <div class="accordion">
+          <ul>
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">初期費用や追加費用は本当にかかりませんか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">初期費用はかかりません。サーバー・ドメイン費用、通常の更新・保守費用も月額料金に含まれています。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">契約期間の縛りはありますか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">契約期間の縛りはありません。必要なくなった場合は、いつでも解約していただけます。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">解約時に違約金は発生しますか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">違約金は発生しません。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">テンプレートデザインではありませんか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">いいえ。マーケティング知識を持ったディレクターがヒアリングを行い、ターゲットや目的に合わせて、構成・動線・デザインを一から設計します。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">デザインや構成はどのように決めるのですか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">事前のヒアリングをもとに「誰に・何を・どう伝えるか」を整理した上で、最適なページ構成や導線を設計します。専門的な内容を整理するところからサポートしますので、Webが苦手な方でも問題ありません。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">サイトを作った後の更新や管理もお願いできますか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">はい。月額費用の中に、保守・更新費用も含まれております。「作って終わり」ではなく、運用まで含めてお任せいただけます。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">Webやマーケティングに詳しくなくても大丈夫ですか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">問題ありません。マーケティング視点でヒアリングを行い、お客様のサービスや強みを整理しながら進めていきます。「何を載せればいいかわからない」という段階からご相談いただけます。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">集客につながるホームページになりますか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">ターゲットや目的を明確にした上で、集客を意識した構成・導線設計を行います。また、ご希望に応じて集客サポートプランのご提案も可能です。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="list question">
+                <div class="text-wrapper">
+                  <div class="list-icon">Q</div>
+                  <p class="text">解約後にサイトを引き取ることはできますか？</p>
+                </div>
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="list answer">
+                <div class="text-wrapper">
+                  <div class="list-icon">A</div>
+                  <p class="text">はい。条件を満たした場合、制作したWebサイトを引き取っていただくことが可能です。</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

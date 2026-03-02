@@ -201,9 +201,9 @@ header .container .wrapper .menu ul li:nth-child(6) {
 }
 header .container .wrapper .menu ul li:nth-child(6) a {
   display: block;
-  padding: 15px 40px;
+  padding: 25px 40px;
   background: #4e4e4e;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: 0.3s;
 }
 header .container .wrapper .menu ul li:nth-child(6):hover a {
@@ -318,7 +318,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   letter-spacing: 5px;
 }
 .fv .container .wrapper .banner {
-  width: 150px;
+  width: 180px;
   position: absolute;
   transform: translateY(60%);
   bottom: 0;
@@ -329,7 +329,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
 }
 .fv .container .wrapper .banner .banner-wrapper p {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   left: 0;
   right: 0;
@@ -355,7 +355,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
   letter-spacing: 3px;
   border-bottom: solid 6px #f9e615;
   padding-bottom: 5px;
-  width: 380px;
+  width: 630px;
   text-align: center;
   margin: 0 auto;
 }
@@ -366,7 +366,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
 }
 .onayami .container .wrapper .speechbubble-above .speech-wrapper {
   position: relative;
-  width: 280px;
+  width: 350px;
   margin: 0 15px;
 }
 .onayami .container .wrapper .speechbubble-above .speech-wrapper:nth-child(2) {
@@ -1707,6 +1707,7 @@ footer .container .wrapper .copy {
     font-weight: bold;
     color: #32949e;
     letter-spacing: 3px;
+    line-height: 1.5em;
     border-bottom: solid 6px #f9e615;
     padding-bottom: 5px;
     width: 300px;
@@ -1720,7 +1721,7 @@ footer .container .wrapper .copy {
   }
   .onayami .container .wrapper .speechbubble-above .speech-wrapper {
     position: relative;
-    width: 250px;
+    width: 280px;
     margin: 0 auto;
     margin-top: 10px;
   }
