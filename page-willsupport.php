@@ -73,7 +73,7 @@
               <a href="https://will-corp.co.jp/contact">お問い合わせ</a>
             </li>
             <li>
-              <a href="#contact">資料を受け取る</a>
+              <a href="https://site.will-corp.co.jp/content-fq349tq4jio" target="_blank" rel="noopener noreferrer">資料請求はこちら</a>
             </li>
           </ul>
         </nav>
@@ -108,7 +108,10 @@
             <a href="#faq"> <span></span> よくあるご質問 <i class="fa-solid fa-chevron-right"></i></a>
           </li>
           <li>
-            <a href="https://will-corp.co.jp/" target="_blank" rel="noopener noreferrer"> <span></span> 公式HP <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="https://will-corp.co.jp/contact" target="_blank" rel="noopener noreferrer"> <span></span> 無料相談はこちら <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href="https://site.will-corp.co.jp/content-fq349tq4jio" target="_blank" rel="noopener noreferrer"> <span></span> 資料請求はこちら <i class="fa-solid fa-chevron-right"></i></a>
           </li>
         </ul>
       </nav>
@@ -120,9 +123,9 @@
       <div class="btn">
         <a href="https://will-corp.co.jp/contact/" target="_blank" rel="noopener noreferrer">お問い合わせは<br>こちら</a>
       </div>
-      <!-- <div class="btn">
-        <a href="https://lin.ee/Twx5uF1" target="_blank" rel="noopener noreferrer">LINEで<br>お問い合わせ</a>
-      </div> -->
+      <div class="btn">
+        <a href="https://site.will-corp.co.jp/content-fq349tq4jio" target="_blank" rel="noopener noreferrer" style="background-color:#28849c;">資料請求は<br>こちら</a>
+      </div>
     </div>
   </div>
 
@@ -146,7 +149,7 @@
           </div>
         </div>
         <p class="message">初期費用を抑えたい事業者様向けに、安くて高品質なWebサイトを。<br>管理コストを下げながら、Web集客に関する知見を社内に蓄積</p>
-        <a href="#contact" class="banner-tag">
+        <a href="https://site.will-corp.co.jp/content-fq349tq4jio" class="banner-tag" target="_blank" rel="noopener noreferrer">
           <div class="banner">
             <div class="banner-wrapper">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/banner.png" alt="">
@@ -161,42 +164,6 @@
   <section class="fv-sp sp">
     <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/fv-sp.png" alt="">
   </section>
-
-  <!-- <section class="onayami">
-    <div class="container">
-      <div class="wrapper">
-        <h2>こんなお悩みありませんか？</h2>
-        <div class="speechbubble-above">
-          <div class="speech-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/speech-bubble.png" alt="">
-            <p>ホームページを<br>リニューアルしたいけど<br>コストはかけられない</p>
-          </div>
-          <div class="speech-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/speech-bubble.png" alt="">
-            <p>安い業者は<br>テンプレっぽいものばかり。<br>オリジナルのHPが欲しい</p>
-          </div>
-          <div class="speech-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/speech-bubble.png" alt="">
-            <p>Web周りが苦手で<br>ネットからの集客が不安</p>
-          </div>
-        </div>
-        <div class="speechbubble-bottom">
-          <div class="speech-wrapper">
-            <p>自分のサービスの<br>売り込み方がわからない・・・</p>
-          </div>
-          <div class="speech-wrapper pc">
-            <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/people.png" alt="">
-          </div>
-          <div class="speech-wrapper">
-            <p>Webサイトの管理や<br>更新まで手が回らない・・・</p>
-          </div>
-        </div>
-        <div class="img-arrow">
-          <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/arrow-down.png" alt="">
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <section class="onayami">
     <div class="container">
@@ -337,6 +304,12 @@
               <p>株式会社みつや様</p>
             </div>
           </a>
+          <a href="https://lilyproductionjp.com/" target="_blank" rel="noopener noreferrer">
+            <div class="works">
+              <img src="https://will-corp.co.jp/wp-content/uploads/2026/01/pc29.png" alt="株式会社フラッグス様制作実績">
+              <p>株式会社Lily様</p>
+            </div>
+          </a>
           <a href="https://flags-guide.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/pc18.png" alt="株式会社フラッグス様制作実績">
@@ -398,7 +371,13 @@
         <div class="btn-wrapper">
           <a href="https://will-corp.co.jp/contact/" target="_blank" rel="noopener noreferrer">
             <div class="btn">
-              <p>メールでのお問い合わせ</p>
+              <p>無料相談はこちらから</p>
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/contact-arrow.png" alt="">
+            </div>
+          </a>
+          <a href="https://site.will-corp.co.jp/content-fq349tq4jio" target="_blank" rel="noopener noreferrer">
+            <div class="btn" style="background-color:#78c3ca; box-shadow: 3px 3px 6px rgba(0, 0, 0, .3);">
+              <p>資料請求はこちらから</p>
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/contact-arrow.png" alt="">
             </div>
           </a>
@@ -442,8 +421,8 @@
                 <p>1ヶ月程度</p>
               </li>
               <li>
-                <p>ブログ：</p>
-                <p>なし</p>
+                <p>SEO対策：</p>
+                <p>あり</p>
               </li>
             </ul>
             <p class="price"><span class="num">¥9,800</span>/月</p>
@@ -468,8 +447,8 @@
                 <p>2ヶ月程度</p>
               </li>
               <li>
-                <p>ブログ：</p>
-                <p>なし</p>
+                <p>SEO対策：</p>
+                <p>あり</p>
               </li>
             </ul>
             <p class="price"><span class="num">¥19,800</span>/月</p>
@@ -494,7 +473,7 @@
                 <p>2ヶ月半程度</p>
               </li>
               <li>
-                <p>ブログ：</p>
+                <p>SEO対策：</p>
                 <p>あり</p>
               </li>
             </ul>
@@ -520,7 +499,7 @@
                 <p>3ヶ月以上</p>
               </li>
               <li>
-                <p>ブログ：</p>
+                <p>SEO対策：</p>
                 <p>あり</p>
               </li>
             </ul>
@@ -616,7 +595,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <div class="container">
       <div class="wrapper">
         <h2>無料相談はお気軽に</h2>
@@ -624,7 +603,13 @@
         <div class="btn-wrapper">
           <a href="https://will-corp.co.jp/contact/" target="_blank" rel="noopener noreferrer">
             <div class="btn">
-              <p>メールでのお問い合わせ</p>
+              <p>無料相談はこちらから</p>
+              <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/contact-arrow.png" alt="">
+            </div>
+          </a>
+          <a href="https://site.will-corp.co.jp/content-fq349tq4jio" target="_blank" rel="noopener noreferrer">
+            <div class="btn" style="background-color:#78c3ca; box-shadow: 3px 3px 6px rgba(0, 0, 0, .3);">
+              <p>資料請求はこちらから</p>
               <img src="<?php echo get_template_directory_uri(); ?>/willsupport-img/contact-arrow.png" alt="">
             </div>
           </a>
@@ -638,126 +623,6 @@
       </div>
     </div>
   </section>
-
-  <!-- <section id="faq" class="faq">
-    <div class="container">
-      <div class="wrapper">
-        <div class="header-text">
-          <h2>Q&A</h2>
-          <p>よくあるご質問</p>
-        </div>
-        <div class="accordion">
-          <ul>
-            <li>
-              <div class="list question">
-                <div class="text-wrapper">
-                  <div class="list-icon">Q</div>
-                  <p class="text">本当に初期費用0円でスタートできますか？</p>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="list answer">
-                <div class="text-wrapper">
-                  <div class="list-icon">A</div>
-                  <p class="text">全てのプランは基本的には初期費用0円でスタートいただけます。ただし、プレミアムプランはページ数によって初期費用をいただく場合がございます。また、予約管理やログイン機能などの機能をつける場合は、初期費用が発生するケースもございますので、お打ち合わせの際にご相談ください。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="list question">
-                <div class="text-wrapper">
-                  <div class="list-icon">Q</div>
-                  <p class="text">全国どこからでも依頼は可能でしょうか？</p>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="list answer">
-                <div class="text-wrapper">
-                  <div class="list-icon">A</div>
-                  <p class="text">全国どこからでもご依頼可能です。zoomやmeetでのオンラインでのお打ち合わせでご対応させていただきます。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="list question">
-                <div class="text-wrapper">
-                  <div class="list-icon">Q</div>
-                  <p class="text">ロゴや名刺、チラシなどの制作もお願いできますか？</p>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="list answer">
-                <div class="text-wrapper">
-                  <div class="list-icon">A</div>
-                  <p class="text">はい、ホームページ以外の制作もお受けしております。<br>・ロゴ、チラシ、名刺：80,000円〜</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="list question">
-                <div class="text-wrapper">
-                  <div class="list-icon">Q</div>
-                  <p class="text">すでに運用している既存のホームページのリニューアルはできますか？</p>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="list answer">
-                <div class="text-wrapper">
-                  <div class="list-icon">A</div>
-                  <p class="text">対応可能です。リニューアルしたサイトは弊社のサーバーで管理させていただきます。現在ご利用中のドメインを引き続き利用もできますので、お打ち合わせの際にご確認させていただきます。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="list question">
-                <div class="text-wrapper">
-                  <div class="list-icon">Q</div>
-                  <p class="text">集客サポートはどの様なサポートが受けられますか？</p>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="list answer">
-                <div class="text-wrapper">
-                  <div class="list-icon">A</div>
-                  <p class="text">サービスや商品の差別化戦略、集客設計や、SNS、MEO、ブログ運用などのご相談をお受けいたします。<br>【集客サポートプラン：9,800円 / 月】<br>月に1回、1時間のzoomになります。SNSやMEO、ブログなど、日々の運用に関するウェブマーケティングのご質問などをお受けいたします。運用に慣れるまでの期間アドバイスを欲しい方におすすめのプランです。<br>【集客設計プラン：30,000円 / 回】<br>2時間程度お時間をいただいて、サービスのコンセプト、集客戦略や設計などを行なっていく単発のプランです。集客全体の設計を行いますので、新しく事業を立ち上げる方や、新規でお客様を獲得していきたい方向けのプランです。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="list question">
-                <div class="text-wrapper">
-                  <div class="list-icon">Q</div>
-                  <p class="text">すでにウィルサポを利用している場合の大規模なサイト改修は対応可能でしょうか？</p>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="list answer">
-                <div class="text-wrapper">
-                  <div class="list-icon">A</div>
-                  <p class="text">対応可能です。サイト改修ですが、3年に1度程度行うケースが多いので、ウィルサポの場合も3年以上ご利用のお客様には、1ページ10,000円でページのリニューアルを対応しております。<br>例）7ページのサイトをご契約中→70,000円でサイトのフルリニューアル対応いたします。<br>※ご契約から3年以内にサイトを改修したい場合も、対応しておりますので、その際は別途ご相談ください。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="list question">
-                <div class="text-wrapper">
-                  <div class="list-icon">Q</div>
-                  <p class="text">インスタグラムやMEO、LINEなどの構築、運用サポートなども可能ですか？</p>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="list answer">
-                <div class="text-wrapper">
-                  <div class="list-icon">A</div>
-                  <p class="text">ホームページ制作以外のサービスも提供しております。詳細は別途お問い合わせください。<br>・インスタグラムアカウント設計：149,800円<br>・公式LINEアカウント構築：149,800円<br>・Google Business Profile構築：50,000円</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <section id="faq" class="faq">
     <div class="container">

@@ -45,7 +45,7 @@
           <a class="ws-ec-header__link" href="#flow">制作の流れ</a>
           <a class="ws-ec-header__link" href="#faq">FAQ</a>
           <a class="ws-ec-header__link ws-ec-header__link--cta" href="#ws-ec-docs-form">無料相談</a>
-          <a class="ws-ec-header__link ws-ec-header__link--cta" href="#download">資料請求</a>
+          <a class="ws-ec-header__link ws-ec-header__link--cta" href="https://site.will-corp.co.jp/will-support-ec-dl-contents" target="_blank" rel="noopener noreferrer">資料請求</a>
         </nav>
       </div>
     </header>
@@ -63,7 +63,7 @@
       <a class="ws-ec-fab-nav__link" href="#flow">制作の流れ</a>
       <a class="ws-ec-fab-nav__link" href="#faq">FAQ</a>
       <a class="ws-ec-fab-nav__link ws-ec-fab-nav__link--cta" href="#ws-ec-docs-form">無料相談</a>
-      <a class="ws-ec-fab-nav__link ws-ec-fab-nav__link--cta" href="#download">資料請求</a>
+      <a class="ws-ec-fab-nav__link ws-ec-fab-nav__link--cta" href="https://site.will-corp.co.jp/will-support-ec-dl-contents" target="_blank" rel="noopener noreferrer">資料請求</a>
     </nav>
     <main class="container">
       <section id="top" class="ws-ec-fv ws-ec-fade" aria-labelledby="ws-ec-fv-title">
@@ -78,9 +78,9 @@
           <div class="ws-ec-fv__visual-sp">
             <img class="ws-ec-fv__mock ws-ec-fv__mock--main" src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero1.png" alt="ウィルサポEC サービスイメージ" />
           </div>
-          <button class="ws-ec-fv__cta" type="button" data-scroll-target="#ws-ec-docs-form">
+          <a class="ws-ec-fv__cta" href="https://site.will-corp.co.jp/will-support-ec-dl-contents" target="_blank" rel="noopener noreferrer">
             資料ダウンロード
-          </button>
+          </a>
         </div>
         <div class="ws-ec-fv__visual" aria-label="ECサイトUIモック">
           <img class="ws-ec-fv__mock ws-ec-fv__mock--main" src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero1.png" alt="ウィルサポEC サービスイメージ" />
@@ -202,7 +202,7 @@
             <article id="download" class="ws-ec-cta__panel">
               <h3 class="ws-ec-cta__sub-title">まずは詳細を確認したい方へ<br>（資料請求）</h3>
               <p class="ws-ec-cta__text">料金プランや制作内容、サポート体制を分かりやすくまとめた資料をお送りします。他社との比較検討にもご活用いただけます。</p>
-              <a class="ws-ec-cta__btn ws-ec-btn" href="#download">資料請求はこちら</a>
+              <a class="ws-ec-cta__btn ws-ec-btn" href="https://site.will-corp.co.jp/will-support-ec-dl-contents" target="_blank" rel="noopener noreferrer">資料請求はこちら</a>
             </article>
           </div>
         </div>
@@ -431,7 +431,7 @@
             <article id="download" class="ws-ec-cta__panel">
               <h3 class="ws-ec-cta__sub-title">まずは詳細を確認したい方へ<br>（資料請求）</h3>
               <p class="ws-ec-cta__text">料金プランや制作内容、サポート体制を分かりやすくまとめた資料をお送りします。他社との比較検討にもご活用いただけます。</p>
-              <a class="ws-ec-cta__btn ws-ec-btn" href="#download">資料請求はこちら</a>
+              <a class="ws-ec-cta__btn ws-ec-btn" href="https://site.will-corp.co.jp/will-support-ec-dl-contents" target="_blank" rel="noopener noreferrer">資料請求はこちら</a>
             </article>
           </div>
         </div>
@@ -538,7 +538,7 @@
             <a class="ws-ec-footer__link" href="#flow">制作の流れ</a>
             <a class="ws-ec-footer__link" href="#faq">FAQ</a>
             <a class="ws-ec-footer__link ws-ec-footer__link--cta" href="#ws-ec-docs-form">無料相談</a>
-            <a class="ws-ec-footer__link ws-ec-footer__link--cta" href="#download">資料請求</a>
+            <a class="ws-ec-footer__link ws-ec-footer__link--cta" href="https://site.will-corp.co.jp/will-support-ec-dl-contents" target="_blank" rel="noopener noreferrer">資料請求</a>
           </nav>
         </div>
         <p class="ws-ec-footer__site-link">

@@ -700,8 +700,6 @@ body.appear .loading-container {
   bottom: 0;
   left: 50%;
   z-index: 10;
-  /*上から下にかけて丸が透過→不透明→透過する*/
-  /* 線の描写 */
 }
 .section-fv .container .wrapper .fv-img .scrolldown span {
   position: absolute;
@@ -738,6 +736,9 @@ body.appear .loading-container {
     bottom: -5px;
   }
 }
+.section-fv .container .wrapper .fv-img .scrolldown {
+  /*上から下にかけて丸が透過→不透明→透過する*/
+}
 @keyframes cirlemovehide {
   0% {
     opacity: 0;
@@ -751,6 +752,9 @@ body.appear .loading-container {
   100% {
     opacity: 0;
   }
+}
+.section-fv .container .wrapper .fv-img .scrolldown {
+  /* 線の描写 */
 }
 .section-fv .container .wrapper .fv-img .scrolldown:after {
   content: "";
@@ -1410,8 +1414,6 @@ body.appear .loading-container {
     bottom: 0;
     left: 50%;
     z-index: 10;
-    /*上から下にかけて丸が透過→不透明→透過する*/
-    /* 線の描写 */
   }
   .section-fv .container .wrapper .fv-img .scrolldown span {
     position: absolute;
@@ -1448,6 +1450,9 @@ body.appear .loading-container {
       bottom: -5px;
     }
   }
+  .section-fv .container .wrapper .fv-img .scrolldown {
+    /*上から下にかけて丸が透過→不透明→透過する*/
+  }
   @keyframes cirlemovehide {
     0% {
       opacity: 0;
@@ -1461,6 +1466,9 @@ body.appear .loading-container {
     100% {
       opacity: 0;
     }
+  }
+  .section-fv .container .wrapper .fv-img .scrolldown {
+    /* 線の描写 */
   }
   .section-fv .container .wrapper .fv-img .scrolldown:after {
     content: "";
@@ -1974,8 +1982,6 @@ body.appear .loading-container {
     bottom: 0;
     left: 50%;
     z-index: 10;
-    /*上から下にかけて丸が透過→不透明→透過する*/
-    /* 線の描写 */
   }
   .section-fv .container .wrapper .fv-img .scrolldown span {
     position: absolute;
@@ -2012,6 +2018,9 @@ body.appear .loading-container {
       bottom: -5px;
     }
   }
+  .section-fv .container .wrapper .fv-img .scrolldown {
+    /*上から下にかけて丸が透過→不透明→透過する*/
+  }
   @keyframes cirlemovehide {
     0% {
       opacity: 0;
@@ -2025,6 +2034,9 @@ body.appear .loading-container {
     100% {
       opacity: 0;
     }
+  }
+  .section-fv .container .wrapper .fv-img .scrolldown {
+    /* 線の描写 */
   }
   .section-fv .container .wrapper .fv-img .scrolldown:after {
     content: "";
@@ -2730,9 +2742,6 @@ body.appear .loading-container {
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-.page-top2-fv .container .wrapper {
-  /* スクロールダウンの位置 */
-}
 .page-top2-fv .container .wrapper .page-top2-header {
   position: absolute;
   top: 35px;
@@ -2835,6 +2844,9 @@ body.appear .loading-container {
   right: 8%;
   z-index: 2;
 }
+.page-top2-fv .container .wrapper {
+  /* スクロールダウンの位置 */
+}
 .page-top2-fv .container .wrapper .scroll {
   position: absolute;
   right: 3%;
@@ -2893,6 +2905,7 @@ body.appear .loading-container {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 8px;
+  text-align: center;
 }
 .page-top2-issue .container .wrapper .issue-wrapper {
   width: 840px;
@@ -2921,7 +2934,9 @@ body.appear .loading-container {
   max-width: 800px;
   position: absolute;
   top: 15%;
-  right: 12%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
   z-index: 1;
 }
 .page-top2-issue .container .logo-image {
@@ -3043,6 +3058,11 @@ body.appear .loading-container {
 }
 .page-top2-service .container .wrapper .service-wrapper .service .service-desc h3 {
   text-align: center;
+  font-size: 38px;
+  color: white;
+}
+.page-top2-service .container .wrapper .service-wrapper .service .service-desc h3.ec {
+  font-size: 45px;
 }
 .page-top2-service .container .wrapper .service-wrapper .service .service-desc h3 img {
   width: 260px;
@@ -4197,6 +4217,11 @@ body.appear .loading-container {
   }
   .page-top2-service .container .wrapper .service-wrapper .service .service-desc h3 {
     text-align: center;
+    font-size: 24px;
+    color: white;
+  }
+  .page-top2-service .container .wrapper .service-wrapper .service .service-desc h3.ec {
+    font-size: 35px;
   }
   .page-top2-service .container .wrapper .service-wrapper .service .service-desc h3 img {
     width: 60%;

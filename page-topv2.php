@@ -68,26 +68,51 @@
     <section class="page-top2-issue">
       <div class="container">
         <div class="wrapper">
-          <h2>個人・中小企業の<br>経営者様のお悩みを解決します</h2>
-          <div class="issue-wrapper animation-target to-up">
+          <h2>Webや営業の取り組みで、<br>次のようなことはございませんか？</h2>
+
+          <div class="issue-wrapper">
+
             <div class="issue">
-              <p>Webサイトをリニューアルしたいが<br>費用が高く着手できない</p>
+              <p>
+                問い合わせはあるが、<br>
+                案件化率が安定しない
+              </p>
             </div>
+
             <div class="issue">
-              <p>Webサイトを作ったが、運用まで<br>手が回っておらず活用できていない</p>
+              <p>
+                展示会や紹介に頼っており、<br>
+                継続的な集客の仕組みがない
+              </p>
             </div>
+
             <div class="issue">
-              <p>ウェブ集客の必要性は理解しているが<br class="pc">予算があまりかけられない</p>
+              <p>
+                Webサイトはあるが、<br>
+                営業活動と連動していない
+              </p>
             </div>
+
             <div class="issue">
-              <p>ウェブ集客に力を入れたいが、知見が<br class="pc">なく何から取り組んでいいかわからない</p>
+              <p>
+                営業が特定の担当者に<br>依存している
+              </p>
             </div>
+
             <div class="issue">
-              <p>SNSで発信を行なっているが<br>思ったような効果が出ない</p>
+              <p>
+                価格で比較されやすく、<br>
+                選ばれる理由が明確でない
+              </p>
             </div>
+
             <div class="issue">
-              <p>お金をかけて採用しているが<br>なかなか人が集まらない</p>
+              <p>
+                WebやMAを導入したが、<br>
+                活用しきれていない
+              </p>
             </div>
+
           </div>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.png" alt="management issue" class="text-image rellax-up">
@@ -98,16 +123,16 @@
     <section class="page-top2-service">
       <div class="container">
         <div class="wrapper">
-          <h2>ウィルでは個人・中小企業様の<br>ウェブマーケティングをサポートしております。</h2>
+          <h2>ウィルではBtoBの中小企業様を中心に<br>ウェブ・デジタルマーケティングをサポートしております。</h2>
           <ul class="tab">
             <li data-tab="tab1">
-              <a href="#web">Web制作</a>
+              <a href="#web">サブスクHP制作</a>
             </li>
             <li data-tab="tab2">
-              <a href="#sns">SNS運用支援</a>
+              <a href="#ec">サブスクECサイト</a>
             </li>
             <li data-tab="tab3">
-              <a href="#others">その他</a>
+              <a href="#ma">MA導入支援</a>
             </li>
           </ul>
           <div class="service-wrapper animation-target to-up">
@@ -131,55 +156,59 @@
                 </div>
               </div>
               <div class="btn-more">
-                <a href="<?php echo get_page_link(334); ?>" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="https://will-corp.co.jp/willsupport/" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
               </div>
             </div>
             <div id="tab2" class="service">
-              <p>インスタグラムからお問い合わせを獲得するためのアカウント設計や運用方法、投稿内容など、インスタグラムの初期立ち上げをサポートさせていただきます。</p>
+              <p>ECサイト制作会社をお探しの方や、構築を代行してほしい企業様へ。ウィルサポECは、構成設計から公開後の運用・保守まで一括対応する月額型サービスです。</p>
               <div class="service-desc">
-                <p>SNS運用支援</p>
-                <h3>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-snslogo.png" alt="instagram運用戦略設計" class="pc">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-snslogo-sp.png" alt="instagram運用戦略設計" class="sp">
+                <p>定額サブスクECサイト</p>
+                <h3 class="ec">ウィルサポEC
+                  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-snslogo.png" alt="instagram運用戦略設計" class="pc">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-snslogo-sp.png" alt="instagram運用戦略設計" class="sp"> -->
+
                 </h3>
                 <div class="desc-wrapper">
                   <ul>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">土台構築ができて、自社運用が楽になる</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">オリジナルの投稿デザインを作成</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">数ヶ月分の投稿ネタ出しサポート</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">実績に基づいたインスタのノウハウが得られる</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">自社のブランディング強化</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">初期費用0円から本格ECをスタート</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">保守・更新込みで追加費用の不安を軽減</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">ブランド価値を高めるオリジナルデザイン</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">中小企業に最適なスモールスタート設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">高水準のセキュリティ環境</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">スマートフォン最適化を前提とした設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">将来的な機能追加・拡張にも柔軟対応</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">相談しやすい伴走型サポート体制</li>
                   </ul>
                   <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-insta.png" alt="" class="desc-image">
                 </div>
               </div>
               <div class="btn-more">
-                <a href="<?php echo get_permalink(89); ?>"><span class="pc">SNS運用支援の</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="https://will-corp.co.jp/will-support-ec/" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポECの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
               </div>
             </div>
             <div id="tab3" class="service">
               <p>目的やご要望に合わせて、デザインや制作、ウェブマーケティングをサポート。ご要望に合わせてオーダーメイドでご提案させていただきます。</p>
               <div class="service-desc">
-                <p>その他</p>
-                <h3>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creativelogo.png" alt="クリエイティブ・コンサルティング" class="pc">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creativelogo-sp.png" alt="クリエイティブ・コンサルティング" class="sp">
+                <p>MA構築運用支援</p>
+                <h3>集客から商談化までを<br class="sp">一気通貫で設計
+                  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creativelogo.png" alt="クリエイティブ・コンサルティング" class="pc">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creativelogo-sp.png" alt="クリエイティブ・コンサルティング" class="sp"> -->
                 </h3>
                 <div class="desc-wrapper">
                   <ul>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">ロゴ制作</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">名刺制作</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">チラシ制作</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">バナー制作</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">動画制作</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">集客設計コンサルティング</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">集客サポートプラン</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">営業構造から設計するMA導入支援</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">Webと連動したリード獲得〜育成設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">人に依存しない営業体制の仕組み化支援</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">MAの構築・初期設定・自動化設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">シナリオ設計・メール設計・温度管理設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">リード管理・データクレンジング支援</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">運用改善・数値分析・継続伴走サポート</li>
                   </ul>
                   <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creative.png" alt="" class="desc-image">
                 </div>
               </div>
               <div class="btn-more">
-                <a href="<?php echo get_permalink(87); ?>"><span class="pc">その他の</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="https://will-corp.co.jp/service/web-marketing/"><span class="pc">MAの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
               </div>
             </div>
           </div>
