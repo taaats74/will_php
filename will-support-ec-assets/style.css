@@ -2715,3 +2715,74 @@ body.fab-menu-open .ws-ec-fab-menu__line:nth-child(3) {
             transform: translateX(-50%) rotate(-45deg);
   }
 }
+
+/* ============================================
+   Loader (毎回表示)
+   ============================================ */
+.ws-ec-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #81c3cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.9s ease-in-out, visibility 0s linear 0.9s;
+}
+
+.ws-ec-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ws-ec-loader__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ws-ec-loader__logo {
+  max-width: 480px;
+  width: 70%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.7s ease-out, transform 0.9s ease-in-out;
+}
+
+.ws-ec-loader.is-shown .ws-ec-loader__logo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ws-ec-loader.is-hidden .ws-ec-loader__logo {
+  transform: translateY(-14px);
+}
+
+.ws-ec-loader.is-skipped {
+  display: none;
+}
+
+body.ws-ec-loading {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ws-ec-loader__logo,
+  .ws-ec-loader.is-shown .ws-ec-loader__logo,
+  .ws-ec-loader.is-hidden .ws-ec-loader__logo {
+    transform: none;
+    transition: opacity 0.4s ease-in-out;
+  }
+  .ws-ec-loader.is-shown .ws-ec-loader__logo {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .ws-ec-loader__logo {
+    max-width: 320px;
+  }
+}

@@ -11,6 +11,17 @@
     wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
     wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), '20240717', true);
 
+    // page-topv3.php 専用 SP ヘッダー / ドロワー JS
+    if ( is_page_template( 'page-topv3.php' ) ) {
+      wp_enqueue_script(
+        'sp-menu-v5',
+        get_template_directory_uri() . '/js/sp-menu-v5.js',
+        array(),
+        filemtime( get_template_directory() . '/js/sp-menu-v5.js' ),
+        true
+      );
+    }
+
     // wordpressで使えない命名ルールがある「accordion」は使えなかったので「accordion-js」で記載してる↑
 
     wp_enqueue_style('style_css', get_stylesheet_uri());

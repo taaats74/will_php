@@ -1,3 +1,42 @@
+/* ============================================
+   Loader制御 (毎回表示)
+   ============================================ */
+(function () {
+  'use strict';
+
+  const loader = document.getElementById('ws-ec-loader');
+  if (!loader) return;
+
+  const FADE_OUT_TRIGGER = 1500;
+  const FADE_OUT_DURATION = 900;
+  const FALLBACK_TIMEOUT = 3500;
+
+  document.body.classList.add('ws-ec-loading');
+
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      loader.classList.add('is-shown');
+    });
+  });
+
+  let hidden = false;
+  function hideLoader() {
+    if (hidden) return;
+    hidden = true;
+    loader.classList.add('is-hidden');
+    document.body.classList.remove('ws-ec-loading');
+
+    setTimeout(function () {
+      if (loader && loader.parentNode) {
+        loader.parentNode.removeChild(loader);
+      }
+    }, FADE_OUT_DURATION + 150);
+  }
+
+  setTimeout(hideLoader, FADE_OUT_TRIGGER);
+  setTimeout(hideLoader, FALLBACK_TIMEOUT);
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   const smoothScrollToSelector = (targetSelector) => {
     if (!targetSelector || targetSelector === "#") return false;

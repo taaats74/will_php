@@ -34,6 +34,22 @@
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
   </head>
   <body class="page-top">
+    <!-- ============================================
+         Loader (毎回表示)
+         ============================================ -->
+    <div class="ws-ec-loader" id="ws-ec-loader" aria-hidden="true">
+      <div class="ws-ec-loader__inner">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.png"
+          alt=""
+          class="ws-ec-loader__logo"
+          width="240"
+          height="60"
+          decoding="async"
+        >
+      </div>
+    </div>
+
     <header class="ws-ec-header">
       <div class="ws-ec-header__inner">
         <a class="ws-ec-header__brand" href="#top">ウィルサポEC</a>

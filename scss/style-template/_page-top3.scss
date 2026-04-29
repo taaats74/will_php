@@ -1,0 +1,6266 @@
+// .zen-kaku-gothic-new-regular {
+//   font-family: "Zen Kaku Gothic New", sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .zen-kaku-gothic-new-medium {
+//   font-family: "Zen Kaku Gothic New", sans-serif;
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+// .zen-kaku-gothic-new-bold {
+//   font-family: "Zen Kaku Gothic New", sans-serif;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// font-family: YuGothic,'Yu Gothic',sans-serif;
+
+// fade-in animation
+.to-right {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: 1.5s;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.to-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1.5s;
+  &.show {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.page-topv3-fv {
+  .container {
+    position: relative;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 99%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .3);
+      z-index: 1;
+    }
+    .wrapper {
+      .page-topv3-header {
+        position: absolute;
+        top: 35px;
+        right: 8%;
+        z-index: 2;
+
+        nav {
+          ul {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            list-style: none;
+            writing-mode: vertical-lr;
+
+            li {
+              margin: 0 20px;
+              position: relative;
+              transition: .5s;
+
+              span {
+                width: 1px;
+                height: 25px;
+                background: white;
+                position: absolute;
+                top: -40px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transition: .5s;
+                opacity: 0;
+              }
+
+              &:hover {
+                a {
+                  transform: translateY(-5px);
+                }
+
+                span {
+                  opacity: 1;
+                }
+              }
+
+              a {
+                color: white;
+                text-decoration: none;
+                display: inline-block;
+                transition: .5s;
+              }
+            }
+          }
+        }
+      }
+
+      .bg-img {
+        video {
+          width: 100%;
+        }
+      }
+
+      .logo-wrapper {
+        position: absolute;
+        top: 35px;
+        left: 5%;
+        z-index: 2;
+        display: flex;
+
+        .logo-text {
+          writing-mode: vertical-rl;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          user-select: none;
+
+          .text1 {
+            color: white;
+            font-size: 14px;
+            letter-spacing: 2px;
+          }
+
+          .text2 {
+            color: white;
+            font-size: 18px;
+            letter-spacing: 3px;
+          }
+        }
+
+        .logo-img {
+          width: 60px;
+        }
+      }
+
+      .fv-message-wrapper {
+        position: absolute;
+        z-index: 2;
+        bottom: 5%;
+        left: 5%;
+
+        .ja {
+          color: white;
+          font-size: 48px;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          letter-spacing: 5px;
+          line-height: 1em;
+        }
+
+        .sub1 {
+          margin-top: 20px;
+          margin-left: 30px;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: normal;
+          font-size: 21px;
+          color: white;
+          letter-spacing: 2px;
+          line-height: 1.3em;
+        }
+
+        .sub2 {
+          margin-top: 2px;
+          margin-left: 30px;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: normal;
+          font-size: 21px;
+          color: rgba(255, 255, 255, .85);
+          letter-spacing: 2px;
+          line-height: 1.3em;
+        }
+      }
+
+      .fv-cta-cards {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        z-index: 2;
+        display: flex;
+        gap: 20px;
+
+        .fv-cta-card {
+          width: 280px;
+          background: rgba(255, 255, 255, .92);
+          border-radius: 4px;
+          padding: 22px 24px;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          transition: .4s;
+
+          .cta-label {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 500;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #7fbabd;
+          }
+
+          .cta-text {
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333333;
+            letter-spacing: 1.5px;
+            line-height: 1.7em;
+          }
+
+          &:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+          }
+        }
+      }
+
+      /* スクロールダウンの位置 */
+      .scroll {
+        position: absolute;
+        right: 3%;
+        top: 0;
+        z-index: 2;
+        width: 1px;
+        height: 46vw;
+        background: rgba(255, 255, 255, .1);
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          // background: white;
+          background: linear-gradient(transparent, #fff, transparent);
+          animation: animate 2s linear infinite;
+        }
+      }
+
+      @keyframes animate {
+        0% {
+          transform-origin: top;
+          transform: scaleY(0);
+        }
+
+        50% {
+          transform-origin: top;
+          transform: scaleY(1);
+        }
+
+        51% {
+          transform-origin: bottom;
+          transform: scaleY(1);
+        }
+
+        100% {
+          transform-origin: bottom;
+          transform: scaleY(0);
+        }
+      }
+    }
+  }
+}
+.page-topv3-issue {
+  .container {
+    position: relative;
+    padding: 130px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .wrapper {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+
+      .issue-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        .en {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 4px;
+          color: #7fbabd;
+          margin-bottom: 12px;
+        }
+
+        h2 {
+          color: #333333;
+          text-align: center;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          letter-spacing: 8px;
+        }
+      }
+
+      .issue-wrapper {
+        width: 840px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 70px;
+
+        .issue {
+          border: solid 1px #F7F7F7;
+          box-shadow: 3px 3px 6px #ACACAC;
+          width: 400px;
+          padding: 30px 20px;
+          margin-bottom: 30px;
+          background: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          min-height: 140px;
+          box-sizing: border-box;
+
+          .issue-number {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: #7fbabd;
+          }
+
+          p {
+            color: #333333;
+            text-align: center;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            line-height: 1.7em;
+            letter-spacing: 2px;
+          }
+        }
+      }
+
+      .issue-bridge {
+        margin-top: 60px;
+        text-align: center;
+
+        p {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 28px;
+          color: #333333;
+          letter-spacing: 3px;
+          line-height: 2em;
+        }
+
+        .bridge-keyword {
+          color: #7fbabd;
+          font-size: 1.1em;
+          font-weight: bold;
+          border-bottom: solid 5px #f9e615;
+          padding-bottom: 2px;
+        }
+      }
+
+      .issue-next {
+        margin-top: 50px;
+        text-align: center;
+
+        .issue-next-link {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          text-decoration: none;
+          color: #595959;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          letter-spacing: 3px;
+          transition: .4s;
+
+          &:hover {
+            color: #333333;
+          }
+        }
+
+        .issue-next-arrow {
+          font-size: 24px;
+          color: #7fbabd;
+          animation: issue-next-bounce 2s ease-in-out infinite;
+        }
+
+        .issue-next-text {
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        @keyframes issue-next-bounce {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(8px);
+          }
+        }
+      }
+    }
+
+    .text-image {
+      width: 60%;
+      max-width: 800px;
+      position: absolute;
+      top: 15%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    .logo-image {
+      width: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.page-topv3-concept {
+  .container {
+    background: #fafafa;
+    padding: 120px 0 100px 0;
+    position: relative;
+
+    .wrapper {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+
+      .concept-header {
+        text-align: center;
+        margin-bottom: 80px;
+
+        .en {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 900;
+          font-size: 60px;
+          letter-spacing: 5px;
+          color: #7fbabd;
+          opacity: .1;
+          margin-bottom: -35px;
+        }
+
+        h2 {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-size: 26px;
+          color: #333333;
+          letter-spacing: 8px;
+          margin-top: 0;
+          margin-bottom: 25px;
+        }
+
+        .subtitle {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 16px;
+          color: #595959;
+          letter-spacing: 3px;
+          line-height: 1.8em;
+        }
+      }
+
+      .concept-blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .concept-block {
+        margin-bottom: 0;
+        padding: 40px 35px;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 3px 3px 12px rgba(0, 0, 0, .06);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .concept-block-header {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin-bottom: 30px;
+          padding-bottom: 20px;
+          border-bottom: solid 1px #e8e8e8;
+
+          .block-number {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 500;
+            font-size: 28px;
+            letter-spacing: 2px;
+            color: #7fbabd;
+          }
+
+          h3 {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 500;
+            font-size: 22px;
+            color: #333333;
+            letter-spacing: 5px;
+          }
+        }
+
+        .concept-block-body {
+          p {
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-size: 16px;
+            color: #474747;
+            letter-spacing: 2px;
+            line-height: 2.2em;
+
+            & + p {
+              margin-top: 20px;
+            }
+          }
+
+          .keyword {
+            font-weight: bold;
+            color: #333333;
+            border-bottom: solid 2px #f9e615;
+            padding-bottom: 1px;
+          }
+        }
+      }
+
+      .concept-video {
+        margin-top: 80px;
+        text-align: center;
+
+        .concept-video-lead {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 16px;
+          color: #595959;
+          letter-spacing: 3px;
+          margin-bottom: 30px;
+        }
+
+        .concept-video-frame {
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          position: relative;
+          padding-top: 56.25%;
+          background: #e8e8e8;
+          border-radius: 6px;
+          overflow: hidden;
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+          }
+
+          .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8e8e8;
+
+            p {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-size: 14px;
+              color: #999;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+
+      .concept-next {
+        margin-top: 80px;
+        text-align: center;
+
+        .concept-next-link {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          text-decoration: none;
+          color: #595959;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          letter-spacing: 3px;
+          transition: .4s;
+
+          &:hover {
+            color: #333333;
+          }
+        }
+
+        .concept-next-arrow {
+          font-size: 24px;
+          color: #7fbabd;
+          animation: concept-next-bounce 2s ease-in-out infinite;
+        }
+
+        .concept-next-text {
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        @keyframes concept-next-bounce {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(8px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-topv3-strength {
+  .container {
+    background: white;
+    padding: 120px 0 100px 0;
+    position: relative;
+
+    .wrapper {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+
+      .strength-header {
+        text-align: center;
+        margin-bottom: 80px;
+
+        .en {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 900;
+          font-size: 60px;
+          letter-spacing: 5px;
+          color: #7fbabd;
+          opacity: .1;
+          margin-bottom: -35px;
+        }
+
+        h2 {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-size: 26px;
+          color: #333333;
+          letter-spacing: 8px;
+          margin-top: 0;
+          margin-bottom: 25px;
+        }
+
+        .subtitle {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 16px;
+          color: #595959;
+          letter-spacing: 3px;
+          line-height: 1.8em;
+        }
+      }
+
+      .strength-list {
+        .strength-item {
+          padding: 50px 60px;
+          background: #fafafa;
+          border-left: solid 4px #7fbabd;
+          border-radius: 0 6px 6px 0;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+
+          & + .strength-item {
+            margin-top: 30px;
+          }
+
+          .strength-item-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: solid 1px #e0e0e0;
+
+            .strength-number {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 500;
+              font-size: 36px;
+              letter-spacing: 2px;
+              color: #7fbabd;
+              line-height: 1em;
+              flex-shrink: 0;
+            }
+
+            h3 {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 500;
+              font-size: 22px;
+              color: #333333;
+              letter-spacing: 4px;
+              line-height: 1.5em;
+            }
+          }
+
+          .strength-item-body {
+            p {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-size: 16px;
+              color: #474747;
+              letter-spacing: 2px;
+              line-height: 2.2em;
+            }
+
+            .keyword {
+              font-weight: bold;
+              color: #333333;
+              border-bottom: solid 2px #f9e615;
+              padding-bottom: 1px;
+            }
+          }
+        }
+      }
+
+      .strength-cta {
+        margin-top: 80px;
+        text-align: center;
+
+        .strength-cta-link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          padding: 22px 50px;
+          background: #333333;
+          border: solid 1px #333333;
+          border-radius: 40px;
+          text-decoration: none;
+          transition: .5s;
+
+          &:hover {
+            opacity: .85;
+
+            .strength-cta-arrow {
+              transform: translateX(8px);
+            }
+          }
+        }
+
+        .strength-cta-text {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 15px;
+          color: white;
+          letter-spacing: 3px;
+        }
+
+        .strength-cta-arrow {
+          font-size: 18px;
+          color: white;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}
+
+/* ============================================
+   旧 Section 05 .page-topv3-service スタイル
+   保存日: 2026-04-29
+   保存理由: 構成書v5刷新により .page-topv3-mainproduct
+   に置き換え。問題発生時は本コメントを解除し、
+   .page-topv3-mainproduct のスタイルをコメントアウト。
+============================================ */
+/*
+.page-topv3-service {
+  .container {
+    background: #7fbabd;
+    padding: 120px 0 100px 0;
+    position: relative;
+
+    >img {
+      width: 80px;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      z-index: 1;
+    }
+
+    .wrapper {
+      width: 90%;
+      max-width: 950px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+
+      h2 {
+        color: #333333;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: center;
+        letter-spacing: 5px;
+      }
+
+      .tab {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-top: 60px;
+
+        li {
+          width: 33.3%;
+          text-align: center;
+          border: solid 1px #333333;
+          transition: .3s;
+
+          a {
+            color: #333333;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px;
+            width: 100%;
+            letter-spacing: 5px;
+            transition: .3s;
+          }
+
+          &:hover {
+            background: #333333;
+
+            a {
+              color: white;
+            }
+          }
+
+          &.active {
+            background: #333333;
+            border: solid 1px #333333;
+
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+
+      .service-wrapper {
+        .service {
+          display: none;
+          opacity: 0;
+
+          &.is-active {
+            display: block;
+            animation-name: displayAnime;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+
+          @keyframes displayAnime {
+            from {
+              opacity: 0;
+            }
+
+            to {
+              opacity: 1;
+            }
+          }
+
+          >p {
+            color: #333333;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-weight: bold;
+            letter-spacing: 6px;
+            font-size: 20px;
+            line-height: 1.7em;
+            margin-top: 40px;
+
+            span {
+              color: #333333;
+              display: inline-block;
+              font-size: 1.5em;
+              border-bottom: solid 5px #f9e615;
+            }
+          }
+
+          .service-desc {
+            border: solid 1px white;
+            padding: 35px 70px;
+            margin-top: 40px;
+
+            p {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              color: white;
+              font-size: 1.5em;
+              font-weight: bold;
+              text-align: center;
+              letter-spacing: 5px;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 38px;
+              color: white;
+
+              &.ec {
+                font-size: 45px;
+              }
+
+              img {
+                width: 260px;
+              }
+            }
+
+            .desc-wrapper {
+              margin-top: 45px;
+              display: flex;
+              justify-content: space-between;
+
+              ul {
+                list-style: none;
+
+                li {
+                  display: flex;
+                  align-items: center;
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: white;
+                  letter-spacing: 5px;
+
+                  &+li {
+                    margin-top: 15px;
+                  }
+
+                  img {
+                    width: 30px;
+                    margin-right: 10px;
+                  }
+                }
+              }
+
+              .desc-image {
+                width: 39%;
+                height: 100%;
+                // background: pink;
+              }
+            }
+          }
+
+          .btn-more {
+            background: #333333;
+            border: solid 1px #333333;
+            width: 350px;
+            border-radius: 40px;
+            margin: 0 auto;
+            margin-top: 60px;
+            transition: .5s;
+
+            a {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              color: white;
+              padding: 20px 10px 20px 40px;
+              letter-spacing: 3px;
+
+              span {
+                color: white;
+              }
+
+              img {
+                width: 35px;
+                margin-left: 20px;
+                transition: .5s;
+              }
+            }
+
+            &:hover {
+              opacity: .8;
+
+              a {
+                img {
+                  margin-left: 30px;
+                }
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            .service-desc {
+              h3 {
+                text-align: center;
+                margin-top: 10px;
+
+                img {
+                  width: 630px;
+                }
+              }
+
+              .desc-wrapper {
+                margin-top: 45px;
+                display: flex;
+                justify-content: space-between;
+
+                ul {
+                  list-style: none;
+
+                  li {
+                    display: flex;
+                    align-items: center;
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: white;
+                    letter-spacing: 5px;
+
+                    &+li {
+                      margin-top: 15px;
+                    }
+
+                    img {
+                      width: 30px;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+
+                .desc-image {
+                  width: 29%;
+                  height: 100%;
+                  // background: pink;
+                }
+              }
+            }
+
+            .btn-more {
+              background: #333333;
+              border: solid 1px #333333;
+              width: 380px;
+              border-radius: 40px;
+              margin: 0 auto;
+              margin-top: 60px;
+
+              a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                padding: 20px 10px 20px 40px;
+                letter-spacing: 3px;
+
+                img {
+                  width: 35px;
+                  margin-left: 20px;
+                  transition: .5s;
+                }
+              }
+
+              &:hover {
+                a {
+                  img {
+                    margin-left: 30px;
+                  }
+                }
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .service-desc {
+              h3 {
+                text-align: center;
+                margin-top: 10px;
+
+                img {
+                  width: 700px;
+                }
+              }
+
+              .desc-wrapper {
+                margin-top: 45px;
+                display: flex;
+                justify-content: space-between;
+
+                ul {
+                  list-style: none;
+
+                  li {
+                    display: flex;
+                    align-items: center;
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: white;
+                    letter-spacing: 5px;
+
+                    &+li {
+                      margin-top: 15px;
+                    }
+
+                    img {
+                      width: 30px;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+
+                .desc-image {
+                  width: 33%;
+                  height: 100%;
+                  // background: pink;
+                }
+              }
+            }
+
+            .btn-more {
+              background: #333333;
+              border: solid 1px #333333;
+              width: 320px;
+              border-radius: 40px;
+              margin: 0 auto;
+              margin-top: 60px;
+
+              a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                padding: 20px 10px 20px 40px;
+                letter-spacing: 3px;
+
+                img {
+                  width: 35px;
+                  margin-left: 20px;
+                  transition: .5s;
+                }
+              }
+
+              &:hover {
+                a {
+                  img {
+                    margin-left: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+*/
+/* 旧 .page-topv3-service ここまで(温存) */
+
+.page-topv3-mainproduct {
+  .container {
+    background: #7fbabd;
+    padding: 120px 0 100px 0;
+    position: relative;
+
+    > img {
+      width: 80px;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      z-index: 1;
+    }
+
+    .wrapper {
+      width: 90%;
+      max-width: 950px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+
+      .mainproduct-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        .en {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 4px;
+          color: white;
+          opacity: .85;
+          margin-bottom: 12px;
+        }
+
+        h2 {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-size: 32px;
+          color: #333333;
+          letter-spacing: 8px;
+          margin-bottom: 25px;
+        }
+
+        .lead {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 24px;
+          color: #333333;
+          letter-spacing: 2px;
+          line-height: 2em;
+          max-width: 800px;
+          margin: 0 auto;
+
+          .keyword {
+            background: linear-gradient(transparent 55%, #f9e615 55%);
+            padding: 0 4px;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+          }
+        }
+      }
+
+      .mainproduct-tab {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-top: 60px;
+        gap: 0;
+
+        li {
+          width: 50%;
+          text-align: center;
+          border: solid 1px #333333;
+          transition: .3s;
+
+          &:hover {
+            background: #333333;
+
+            a,
+            .mp-tab-label,
+            .mp-tab-name {
+              color: white;
+            }
+          }
+
+          &.active {
+            background: #333333;
+            border: solid 1px #333333;
+
+            a,
+            .mp-tab-label,
+            .mp-tab-name {
+              color: white;
+            }
+          }
+
+          a {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 18px 15px;
+            width: 100%;
+            color: #333333;
+            text-decoration: none;
+            transition: .3s;
+          }
+        }
+
+        .mp-tab-label {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-size: 11px;
+          font-weight: 400;
+          letter-spacing: 2px;
+          color: #333333;
+          opacity: .85;
+          transition: .3s;
+        }
+
+        .mp-tab-name {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-size: 17px;
+          font-weight: bold;
+          letter-spacing: 4px;
+          color: #333333;
+          transition: .3s;
+        }
+      }
+
+      .mainproduct-wrapper {
+        .mainproduct-item {
+          display: none;
+          opacity: 0;
+
+          &.is-active {
+            display: block;
+            animation-name: mpDisplayAnime;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+
+          .mp-target-label {
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: #333333;
+            background: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-top: 40px;
+          }
+
+          .mp-catch {
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            color: #333333;
+            letter-spacing: 4px;
+            line-height: 1.7em;
+            margin-top: 20px;
+          }
+
+          .mp-desc {
+            border: solid 1px white;
+            padding: 40px 50px;
+            margin-top: 40px;
+            background: rgba(0, 0, 0, .08);
+            border-radius: 6px;
+
+            .mp-desc-grid {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              align-items: center;
+              gap: 30px;
+            }
+
+            .mp-desc-content {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 18px;
+            }
+
+            .mp-desc-visual {
+              img {
+                width: 100%;
+                height: auto;
+                display: block;
+              }
+            }
+
+            &.mp-desc--ec {
+              .mp-desc-visual {
+                img {
+                  width: 70%;
+                  margin-left: 20px;
+                  margin-right: auto;
+                }
+              }
+            }
+
+            .mp-type {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              color: white;
+              font-size: 20px;
+              font-weight: bold;
+              letter-spacing: 4px;
+              margin: 0;
+            }
+
+            .mp-name {
+              font-size: 50px;
+              color: white;
+              margin: -18px 0 0;
+              line-height: 1;
+
+              img {
+                width: 380px;
+                max-width: 100%;
+                display: block;
+              }
+            }
+
+            .mp-name--ec {
+              font-size: 54px;
+              letter-spacing: 6px;
+              font-weight: 900;
+              padding: 7px 0;
+            }
+
+            .mp-badges {
+              display: flex;
+              flex-wrap: nowrap;
+              gap: 10px;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              width: 100%;
+
+              li {
+                flex: 1;
+                min-width: 0;
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                font-weight: bold;
+                font-size: 15px;
+                color: #333333;
+                letter-spacing: 1px;
+                line-height: 1.4em;
+                text-align: center;
+                background: white;
+                padding: 14px 10px;
+                border-radius: 8px;
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, .1);
+              }
+            }
+
+            .mp-description {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              font-size: 18px;
+              color: white;
+              letter-spacing: 2px;
+              line-height: 1.9em;
+              text-align: center;
+              margin-top: 28px;
+              padding-top: 24px;
+              border-top: solid 1px rgba(255, 255, 255, .25);
+            }
+          }
+
+          .mp-btn {
+            margin-top: 60px;
+            text-align: center;
+
+            .mp-btn-link {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: 20px;
+              padding: 22px 50px;
+              background: #333333;
+              border: solid 1px #333333;
+              border-radius: 40px;
+              text-decoration: none;
+              transition: .5s;
+
+              &:hover {
+                opacity: .85;
+
+                .mp-btn-arrow {
+                  transform: translateX(8px);
+                }
+              }
+            }
+
+            .mp-btn-text {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              font-size: 15px;
+              color: white;
+              letter-spacing: 3px;
+              white-space: nowrap;
+
+              .pc {
+                color: white;
+              }
+            }
+
+            .mp-btn-arrow {
+              font-size: 18px;
+              color: white;
+              transition: .5s;
+            }
+          }
+        }
+
+        @keyframes mpDisplayAnime {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-topv3-whatwedo {
+  .container {
+    background: #fafafa;
+    padding: 120px 0 100px 0;
+    position: relative;
+
+    .wrapper {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+
+      .whatwedo-header {
+        text-align: center;
+        margin-bottom: 80px;
+
+        .en {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 900;
+          font-size: 60px;
+          letter-spacing: 5px;
+          color: #7fbabd;
+          opacity: .1;
+          margin-bottom: -35px;
+        }
+
+        h2 {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-size: 26px;
+          color: #333333;
+          letter-spacing: 8px;
+          margin-top: 0;
+          margin-bottom: 25px;
+        }
+
+        .lead {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 16px;
+          color: #595959;
+          letter-spacing: 3px;
+          line-height: 1.9em;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+      }
+
+      .whatwedo-list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+
+        .whatwedo-item {
+          grid-column: span 2;
+          display: flex;
+          flex-direction: column;
+          background: #ffffff;
+          border-top: solid 3px #7fbabd;
+          border-radius: 6px;
+          padding: 40px 30px;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+          text-decoration: none;
+          color: inherit;
+          transition: transform .8s cubic-bezier(.2, .8, .2, 1), box-shadow .8s cubic-bezier(.2, .8, .2, 1);
+
+          &,
+          & *,
+          &:hover,
+          &:hover *,
+          &:focus,
+          &:focus * {
+            text-decoration: none;
+          }
+
+          &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
+
+            .whatwedo-link-arrow {
+              transform: translateX(6px);
+            }
+          }
+
+          // 下段2枚 (4・5枚目) を中央寄せ
+          &:nth-child(4) {
+            grid-column: 2 / span 2;
+          }
+
+          &:nth-child(5) {
+            grid-column: 4 / span 2;
+          }
+
+          .whatwedo-item-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            box-sizing: content-box;
+            min-height: 80px;
+            padding-bottom: 18px;
+            border-bottom: solid 1px #e8e8e8;
+
+            .whatwedo-number {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 500;
+              font-size: 36px;
+              letter-spacing: 2px;
+              color: #7fbabd;
+              line-height: 1em;
+              flex-shrink: 0;
+            }
+
+            h3 {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 500;
+              font-size: 22px;
+              color: #333333;
+              letter-spacing: 3px;
+              line-height: 1.5em;
+              margin: 0;
+            }
+          }
+
+          .whatwedo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            width: 80px;
+            height: 80px;
+            margin: 24px 0 4px;
+            background: rgba(127, 186, 189, .12);
+            border-radius: 50%;
+
+            i {
+              font-size: 36px;
+              color: #7fbabd;
+            }
+          }
+
+          .whatwedo-catch {
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            color: #333333;
+            letter-spacing: 1.5px;
+            line-height: 1.7em;
+            padding-left: 12px;
+            border-left: solid 3px #f9e615;
+            margin: 20px 0 18px;
+          }
+
+          .whatwedo-body {
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            font-size: 15px;
+            color: #474747;
+            letter-spacing: 1.5px;
+            line-height: 2em;
+            margin: 0 0 20px;
+          }
+
+          .whatwedo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: solid 1px #e8e8e8;
+
+            .whatwedo-link-text {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              font-size: 14px;
+              color: #333333;
+              letter-spacing: 2px;
+            }
+
+            .whatwedo-link-arrow {
+              font-size: 16px;
+              color: #7fbabd;
+              transition: .4s;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.page-topv3-diagnosis {
+  .container {
+    background: linear-gradient(90deg, #28849c 0%, #28849c 50%, #7dacaf 50%, #7dacaf 100%);
+    padding: 110px 40px;
+    position: relative;
+
+    .diagnosis-section-head {
+      max-width: 1080px;
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+
+    .diagnosis-eyebrow {
+      display: inline-block;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      opacity: 0.3;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .diagnosis-title {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+      margin: 0 0 16px;
+
+      .diagnosis-keyword {
+        color: #ffffff;
+        border-bottom: solid 4px #f9e615;
+        padding-bottom: 2px;
+      }
+    }
+
+    .diagnosis-lead {
+      font-family: YuGothic, 'Yu Gothic', sans-serif;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    .diagnosis-panel {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 50px 50px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .diagnosis-panel-title {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #333333;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+      text-align: center;
+      margin: 0;
+    }
+
+    .diagnosis-panel-text {
+      font-family: YuGothic, 'Yu Gothic', sans-serif;
+      font-size: 14px;
+      color: #474747;
+      line-height: 1.9;
+      letter-spacing: 0.04em;
+      margin: 0;
+      text-align: center;
+    }
+
+    .diagnosis-features {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        color: #333333;
+        letter-spacing: 1.5px;
+        padding: 7px 16px;
+        background: #f5f5f5;
+        border-radius: 30px;
+      }
+    }
+
+    .diagnosis-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 18px 24px;
+      background: #333333;
+      color: #ffffff;
+      font-family: YuGothic, 'Yu Gothic', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+      margin-top: auto;
+      transition: opacity 0.3s, transform 0.3s;
+
+      &:hover {
+        opacity: 0.85;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.page-topv3-ebook {
+  .container {
+    background: #ffffff;
+    padding: 120px 0 100px 0;
+    position: relative;
+
+    .wrapper {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .ebook-header {
+      text-align: center;
+      margin-bottom: 70px;
+
+      .en {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        letter-spacing: 5px;
+        color: #7fbabd;
+        opacity: .1;
+        margin-bottom: -35px;
+      }
+
+      h2 {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-size: 26px;
+        color: #333333;
+        letter-spacing: 6px;
+        line-height: 1.7em;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+
+      .lead {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #595959;
+        letter-spacing: 2px;
+        line-height: 1.9em;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    .ebook-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .ebook-card {
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      border: solid 1px #f0f0f0;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+      transition: transform .4s cubic-bezier(.2, .8, .2, 1), box-shadow .4s cubic-bezier(.2, .8, .2, 1);
+
+      &,
+      & *,
+      &:hover,
+      &:hover *,
+      &:focus,
+      &:focus * {
+        text-decoration: none;
+      }
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, .12);
+
+        .ebook-card-cta-arrow {
+          transform: translateX(6px);
+        }
+      }
+
+      &--01 .ebook-card-thumb {
+        background: linear-gradient(135deg, #7fbabd 0%, #5fa3a6 100%);
+      }
+
+      &--02 .ebook-card-thumb {
+        background: linear-gradient(135deg, #5fa3a6 0%, #4a8a8d 100%);
+      }
+
+      &--03 .ebook-card-thumb {
+        background: linear-gradient(135deg, #6fb0b3 0%, #5fa3a6 100%);
+      }
+
+      &--04 .ebook-card-thumb {
+        background: linear-gradient(135deg, #7fbabd 0%, #6fb0b3 100%);
+      }
+    }
+
+    .ebook-card-thumb {
+      position: relative;
+      width: 100%;
+      padding-top: 75%;
+      background: linear-gradient(135deg, #7fbabd 0%, #5fa3a6 100%);
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .ebook-card-thumb-placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ebook-card-no {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-size: 22px;
+        letter-spacing: 4px;
+        color: rgba(255, 255, 255, .9);
+      }
+    }
+
+    .ebook-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 25px 22px 22px;
+    }
+
+    .ebook-card-title {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #333333;
+      letter-spacing: 1.5px;
+      line-height: 1.6em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(16px * 1.6 * 2);
+      margin: 0 0 15px;
+    }
+
+    .ebook-card-catch-wrap {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(13px * 1.6 * 2);
+      margin: 0 0 12px;
+    }
+
+    .ebook-card-catch {
+      font-family: YuGothic, 'Yu Gothic', sans-serif;
+      font-weight: bold;
+      font-size: 13px;
+      color: #333333;
+      letter-spacing: 1px;
+      line-height: 1.6em;
+      border-bottom: solid 2px #f9e615;
+      padding-bottom: 1px;
+    }
+
+    .ebook-card-desc {
+      font-family: YuGothic, 'Yu Gothic', sans-serif;
+      font-size: 13px;
+      color: #595959;
+      letter-spacing: 1px;
+      line-height: 1.9em;
+      text-align: left;
+      margin: 12px 0 20px;
+      flex: 1;
+    }
+
+    .ebook-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 15px;
+      border-top: solid 1px #e8e8e8;
+
+      .ebook-card-cta-text {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        color: #333333;
+        letter-spacing: 2px;
+      }
+
+      .ebook-card-cta-arrow {
+        font-size: 14px;
+        color: #7fbabd;
+        transition: .4s;
+      }
+    }
+
+    .ebook-bottom-cta {
+      margin-top: 60px;
+      text-align: center;
+
+      .ebook-bottom-cta-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding: 20px 50px;
+        background: #ffffff;
+        border: solid 1px #333333;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: .5s;
+
+        &:hover {
+          background: #333333;
+
+          .ebook-bottom-cta-text {
+            color: #ffffff;
+          }
+
+          .ebook-bottom-cta-arrow {
+            color: #ffffff;
+            transform: translateX(8px);
+          }
+        }
+      }
+
+      .ebook-bottom-cta-text {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 3px;
+        transition: .5s;
+      }
+
+      .ebook-bottom-cta-arrow {
+        font-size: 16px;
+        color: #333333;
+        transition: .5s;
+      }
+    }
+  }
+}
+
+.page-topv3-youtube {
+  .container {
+    background: #f7f7f7;
+    padding: 120px 0 100px 0;
+    position: relative;
+
+    .wrapper {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .youtube-header {
+      text-align: center;
+      margin-bottom: 70px;
+
+      .en {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        letter-spacing: 5px;
+        color: #7fbabd;
+        opacity: .1;
+        margin-bottom: -35px;
+      }
+
+      h2 {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-size: 26px;
+        color: #333333;
+        letter-spacing: 6px;
+        line-height: 1.7em;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+
+      .lead {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #595959;
+        letter-spacing: 2px;
+        line-height: 1.9em;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    }
+
+    .youtube-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .youtube-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .youtube-thumb {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #1a1a1a;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .15);
+      transition: .4s;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .youtube-thumb-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    }
+
+    .youtube-thumb-no {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 4px;
+      color: rgba(255, 255, 255, .6);
+    }
+
+    .youtube-thumb-coming {
+      font-family: YuGothic, 'Yu Gothic', sans-serif;
+      font-weight: bold;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: rgba(255, 255, 255, .4);
+    }
+
+    .youtube-thumb-play {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: rgba(255, 0, 0, .9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .3);
+
+      .youtube-thumb-play-icon {
+        color: #ffffff;
+        font-size: 22px;
+        margin-left: 4px;
+      }
+    }
+
+    .youtube-info {
+      padding: 20px 4px 0;
+    }
+
+    .youtube-title {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      color: #333333;
+      letter-spacing: 1px;
+      line-height: 1.7em;
+      margin: 0 0 18px;
+    }
+
+    .youtube-related {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      text-decoration: none;
+      padding: 10px 16px;
+      background: #ffffff;
+      border-left: solid 3px #f9e615;
+      border-radius: 0 4px 4px 0;
+      transition: .4s;
+
+      &:hover {
+        background: #fafafa;
+
+        .youtube-related-arrow {
+          transform: translateX(4px);
+        }
+      }
+
+      .youtube-related-label {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: #7fbabd;
+        padding: 3px 8px;
+        border: solid 1px #7fbabd;
+        border-radius: 3px;
+      }
+
+      .youtube-related-text {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        color: #333333;
+        letter-spacing: 1px;
+      }
+
+      .youtube-related-arrow {
+        font-size: 13px;
+        color: #7fbabd;
+        transition: .4s;
+      }
+    }
+
+    .youtube-bottom-cta {
+      margin-top: 70px;
+      text-align: center;
+
+      .youtube-bottom-cta-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        padding: 20px 50px;
+        background: #ffffff;
+        border: solid 1px #333333;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: .5s;
+
+        &:hover {
+          background: #333333;
+
+          .youtube-bottom-cta-text {
+            color: #ffffff;
+          }
+
+          .youtube-bottom-cta-arrow {
+            color: #ffffff;
+            transform: translateX(8px);
+          }
+
+          .youtube-bottom-cta-icon {
+            color: #ff0000;
+          }
+        }
+      }
+
+      .youtube-bottom-cta-icon {
+        display: inline-flex;
+        align-items: center;
+        color: #ff0000;
+        transition: .5s;
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .youtube-bottom-cta-text {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 3px;
+        transition: .5s;
+      }
+
+      .youtube-bottom-cta-arrow {
+        font-size: 16px;
+        color: #333333;
+        transition: .5s;
+      }
+    }
+  }
+}
+
+.page-topv3-contact {
+  .container {
+    position: relative;
+    background-image: url(img/page-top2-contact-bg.png);
+    background-position: center;
+    background-size: cover;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .5);
+      z-index: 1;
+    }
+
+    .wrapper {
+      padding: 100px 0;
+      position: relative;
+      z-index: 2;
+
+      h2 {
+        text-align: center;
+        font-size: 20px;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        letter-spacing: 4px;
+        color: white;
+      }
+
+      .contact-btn {
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          display: inline-block;
+
+          // background: pink;
+          span {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 70px;
+            letter-spacing: 10px;
+            color: white;
+            transition: .5s;
+          }
+
+          img {
+            width: 50px;
+            transform: translateY(-20px);
+            margin-left: 30px;
+            transition: .5s;
+          }
+
+          &:hover {
+            span {
+              opacity: .7;
+            }
+
+            img {
+              transform: translate(13px, -20px);
+            }
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        color: white;
+        letter-spacing: 3px;
+        line-height: 2em;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+/* ============================================
+   Section 13 .page-topv3-contact-v5 (構成書 v5 / 2026-04-29 新設)
+   既存 .page-topv3-contact のスタイルは温存し別ブロックで実装。
+============================================ */
+.page-topv3-contact-v5 {
+  .container {
+    position: relative;
+    background-image: url(img/page-top2-contact-bg.png);
+    background-position: center;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .55);
+      z-index: 1;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 110px 0 100px;
+      text-align: center;
+    }
+  }
+
+  .contact-v5-header {
+    margin-bottom: 40px;
+
+    .contact-v5-en {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 900;
+      font-size: 60px;
+      letter-spacing: 5px;
+      color: #ffffff;
+      opacity: .15;
+      line-height: 1em;
+      margin: 0 0 -32px;
+    }
+
+    .contact-v5-section-title {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 500;
+      font-size: 22px;
+      color: #ffffff;
+      letter-spacing: 8px;
+      line-height: 1em;
+      margin: 0;
+    }
+  }
+
+  .contact-v5-headline {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    line-height: 1.7em;
+    margin: 0 0 30px;
+
+    .contact-v5-headline-keyword {
+      color: #ffffff;
+      border-bottom: solid 4px #f9e615;
+      padding-bottom: 2px;
+    }
+  }
+
+  .contact-v5-lead {
+    font-family: YuGothic, 'Yu Gothic', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(255, 255, 255, .9);
+    letter-spacing: 2px;
+    line-height: 2em;
+    max-width: 700px;
+    margin: 0 auto 55px;
+  }
+
+  .contact-v5-cta-group {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .contact-v5-cta {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-width: 320px;
+    padding: 14px 60px 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: .5s;
+    position: relative;
+
+    .contact-v5-cta-arrow {
+      position: absolute;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      transition: .5s;
+    }
+
+    &:hover {
+      .contact-v5-cta-arrow {
+        transform: translateY(-50%) translateX(8px);
+      }
+    }
+  }
+
+  .contact-v5-cta-label {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .contact-v5-cta-text {
+    font-family: YuGothic, 'Yu Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  .contact-v5-cta--outline {
+    background: transparent;
+    border: solid 1px rgba(255, 255, 255, .8);
+
+    .contact-v5-cta-label {
+      color: #f9e615;
+    }
+
+    .contact-v5-cta-text {
+      color: #ffffff;
+    }
+
+    .contact-v5-cta-arrow {
+      color: #ffffff;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, .1);
+      border-color: #ffffff;
+    }
+  }
+
+  .contact-v5-cta--solid {
+    background: #7fbabd;
+    border: solid 1px #7fbabd;
+    box-shadow: 0 8px 28px rgba(127, 186, 189, .5);
+    transform: scale(1.02);
+
+    .contact-v5-cta-label {
+      color: #ffffff;
+      opacity: .9;
+    }
+
+    .contact-v5-cta-text {
+      color: #ffffff;
+    }
+
+    .contact-v5-cta-arrow {
+      color: #ffffff;
+    }
+
+    &:hover {
+      background: #ffffff;
+      border-color: #ffffff;
+      box-shadow: 0 12px 36px rgba(255, 255, 255, .3);
+
+      .contact-v5-cta-label {
+        color: #7fbabd;
+      }
+
+      .contact-v5-cta-text {
+        color: #333333;
+      }
+
+      .contact-v5-cta-arrow {
+        color: #333333;
+      }
+    }
+  }
+}
+
+/* ============================================
+   旧 Section 10 .page-topv3-works スタイル
+   保存日: 2026-04-29
+   保存理由: 構成書 v5 に合わせ中央拡大カルーセル+
+   各カード4要素構造へ刷新。問題発生時は本コメントを
+   解除し、新スタイルをコメントアウトすることで
+   旧表示に戻せる。
+============================================ */
+/*
+.page-topv3-works {
+  .container {
+    background-image: url(img/page-top2-works-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0 100px 0;
+
+    .wrapper {
+      position: relative;
+
+      >img {
+        width: 300px;
+        position: absolute;
+        top: -10px;
+        left: 25%;
+      }
+
+      h2 {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        color: #595959;
+        font-size: 1em;
+        font-weight: normal;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+
+        span {
+          display: block;
+          line-height: 1em;
+          width: 150px;
+          height: 1px;
+          background: #b5b3b3;
+          margin-right: 30px;
+          position: relative;
+          margin-top: 5px;
+
+          &:before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: black;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            animation: stretch-shrink 2s infinite;
+          }
+        }
+
+        @keyframes stretch-shrink {
+          0% {
+            transform-origin: left;
+            transform: scaleX(0);
+          }
+
+          50% {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+
+          51% {
+            transform-origin: right;
+            transform: scaleX(1);
+          }
+
+          100% {
+            transform-origin: right;
+            transform: scaleX(0);
+          }
+        }
+      }
+
+      .carousel-wrapper {
+        margin-top: 70px;
+
+        .carousel {
+          .work {
+            padding: 0 30px;
+
+            a {
+              text-decoration: none;
+
+              .text-wrapper {
+                p {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+
+                  &:nth-child(1) {
+                    font-size: 14px;
+                    color: #797979;
+                  }
+
+                  &:nth-child(2) {
+                    // font-size: 22px;
+                    font-size: 18px;
+                    color: #595959;
+                    border-bottom: solid 1px transparent;
+                    display: inline-block;
+                    transition: .3s;
+                  }
+
+                  &:nth-child(3) {
+                    font-size: 14px;
+                    color: #a6a0a0;
+                  }
+                }
+              }
+
+              &:hover {
+                p {
+                  &:nth-child(2) {
+                    border-bottom: solid 1px #333333;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .slick-dots {
+          bottom: -50px;
+        }
+      }
+
+      .page-topv3-btn {
+        margin: 0 auto;
+        margin-top: 130px;
+      }
+    }
+  }
+}
+*/
+/* 旧 .page-topv3-works ここまで(温存) */
+
+.page-topv3-works {
+  .container {
+    background: #ffffff;
+    padding: 120px 0 100px 0;
+    position: relative;
+
+    .wrapper {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .works-header {
+      text-align: center;
+      margin-bottom: 80px;
+
+      .en {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        letter-spacing: 5px;
+        color: #7fbabd;
+        opacity: .1;
+        margin-bottom: -35px;
+      }
+
+      h2 {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-size: 26px;
+        color: #333333;
+        letter-spacing: 6px;
+        line-height: 1.7em;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+
+      .lead {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #595959;
+        letter-spacing: 2px;
+        line-height: 1.9em;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    .works-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 48px 40px;
+      margin-bottom: 80px;
+    }
+
+    .works-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+
+      &,
+      & *,
+      &:hover,
+      &:hover * {
+        text-decoration: none;
+      }
+
+      &:hover {
+        .works-card-thumb img {
+          transform: scale(1.03);
+        }
+
+        .works-card-name {
+          color: #7fbabd;
+        }
+      }
+    }
+
+    .works-card-thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: transparent;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        transition: transform .6s ease;
+      }
+    }
+
+    .works-card-body {
+      padding: 18px 0 0;
+      text-align: center;
+    }
+
+    .works-card-industry {
+      display: inline-block;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #7fbabd;
+      background: #f0f5f5;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .works-card-name {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: #333333;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      text-align: center;
+      margin: 0;
+      transition: color .3s;
+    }
+
+    .works-empty {
+      text-align: center;
+      font-family: YuGothic, 'Yu Gothic', sans-serif;
+      color: #797979;
+      letter-spacing: 2px;
+      padding: 40px 0;
+    }
+
+    .works-bottom-cta {
+      margin-top: 60px;
+      text-align: center;
+
+      .works-bottom-cta-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding: 20px 50px;
+        background: #ffffff;
+        border: solid 1px #333333;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: .5s;
+
+        &:hover {
+          background: #333333;
+
+          .works-bottom-cta-text {
+            color: #ffffff;
+          }
+
+          .works-bottom-cta-arrow {
+            color: #ffffff;
+            transform: translateX(8px);
+          }
+        }
+      }
+
+      .works-bottom-cta-text {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 3px;
+        transition: .5s;
+      }
+
+      .works-bottom-cta-arrow {
+        font-size: 16px;
+        color: #333333;
+        transition: .5s;
+      }
+    }
+  }
+}
+
+.page-topv3-blog {
+  .blog-v5-bottom-cta--sp {
+    display: none;
+  }
+
+  .container {
+    background: #F4F4F4;
+
+    .wrapper {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+
+      .sticky {
+        width: 25%;
+        padding-bottom: 200px;
+
+        .sticky-container {
+          position: sticky;
+          display: fixed;
+          top: 70px;
+          left: 0;
+
+          .sticky-wrapper {
+            position: relative;
+
+            .page-topv3-btn {
+              margin-top: 130px;
+            }
+
+            .blog-v5-header {
+              margin-top: 60px;
+              margin-bottom: 30px;
+            }
+
+            .en {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 900;
+              font-size: 60px;
+              letter-spacing: 5px;
+              color: #7fbabd;
+              opacity: .1;
+              margin-bottom: -35px;
+            }
+
+            .blog-v5-headline {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 500;
+              font-size: 22px;
+              color: #333333;
+              letter-spacing: 3px;
+              line-height: 1.7em;
+              margin: 0 0 18px;
+            }
+
+            .blog-v5-lead {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              font-size: 13px;
+              color: #595959;
+              letter-spacing: 1.5px;
+              line-height: 1.9em;
+              margin: 0;
+            }
+
+            .blog-v5-bottom-cta {
+              margin-top: 30px;
+
+              .blog-v5-bottom-cta-link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                padding: 18px 38px;
+                background: #ffffff;
+                border: solid 1px #333333;
+                border-radius: 40px;
+                text-decoration: none;
+                transition: .5s;
+
+                &:hover {
+                  background: #333333;
+
+                  .blog-v5-bottom-cta-text {
+                    color: #ffffff;
+                  }
+
+                  .blog-v5-bottom-cta-arrow {
+                    color: #ffffff;
+                    transform: translateX(8px);
+                  }
+                }
+              }
+
+              .blog-v5-bottom-cta-text {
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                font-weight: bold;
+                font-size: 13px;
+                color: #333333;
+                letter-spacing: 2px;
+                transition: .5s;
+              }
+
+              .blog-v5-bottom-cta-arrow {
+                font-size: 15px;
+                color: #333333;
+                transition: .5s;
+              }
+            }
+
+            >img {
+              width: 200px;
+              position: absolute;
+              top: 28%;
+              left: -44%;
+            }
+          }
+        }
+      }
+
+      .content-wrapper {
+        width: 72%;
+        padding: 140px 0;
+
+        /* ============================================
+           旧 .content(RSSフィード用)スタイル
+           保存日: 2026-04-29
+           保存理由: 構成書 v5 で WP_Query 6本固定+
+           3×2グリッドへ刷新。問題発生時は本コメントを
+           解除し、新スタイルをコメントアウトすることで
+           旧表示に戻せる。
+        ============================================ */
+        /*
+        .content {
+          padding: 0 20px 40px 20px;
+          border-bottom: solid 1px silver;
+
+          &+.content {
+            margin-top: 40px;
+          }
+
+          a {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+
+            img {
+              width: 33%;
+              transition: .5s;
+              box-shadow: 3px 3px 6px silver;
+            }
+
+            .text-wrapper {
+              width: 60%;
+              transition: .5s;
+
+              .above {
+                margin-top: 15px;
+
+                .date {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  letter-spacing: 1px;
+                }
+
+                .category {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 12px;
+                  color: #b5b3b3;
+                  margin-left: 20px;
+                }
+              }
+
+              .title {
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                font-size: 18px;
+                margin-top: 10px;
+              }
+            }
+
+            &:hover {
+              img {
+                border-radius: 0 60px 0 60px;
+              }
+
+              .text-wrapper {
+                opacity: .6;
+              }
+            }
+          }
+        }
+        */
+        /* 旧 .content ここまで(温存) */
+
+        .blog-v5-grid {
+          display: block;
+        }
+
+        .blog-v5-card {
+          padding: 0 20px 40px 20px;
+          border-bottom: solid 1px silver;
+
+          & + .blog-v5-card {
+            margin-top: 40px;
+          }
+
+          a {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+
+            &,
+            & *,
+            &:hover,
+            &:hover * {
+              text-decoration: none;
+            }
+
+            img {
+              width: 35%;
+              aspect-ratio: 16 / 9;
+              object-fit: cover;
+              transition: .5s;
+              box-shadow: 3px 3px 6px silver;
+            }
+
+            .text-wrapper {
+              width: 60%;
+              transition: .5s;
+
+              .above {
+                margin-top: 15px;
+
+                .date {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  letter-spacing: 1px;
+                  color: #595959;
+                }
+
+                .category {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 12px;
+                  color: #b5b3b3;
+                  margin-left: 20px;
+                }
+              }
+
+              .title {
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                font-size: 18px;
+                color: #333333;
+                line-height: 1.6em;
+                margin-top: 10px;
+              }
+            }
+
+            &:hover {
+              img {
+                border-radius: 0 60px 0 60px;
+              }
+
+              .text-wrapper {
+                opacity: .6;
+              }
+            }
+          }
+        }
+
+        .blog-v5-empty {
+          text-align: center;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #797979;
+          letter-spacing: 2px;
+          padding: 40px 0;
+        }
+      }
+    }
+  }
+}
+
+.page-topv3-insta {
+  .container {
+    padding: 160px 0 100px 0;
+
+    .wrapper {
+      position: relative;
+
+      >img {
+        width: 500px;
+        position: absolute;
+        top: -40px;
+        left: 25%;
+      }
+
+      h2 {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        color: #595959;
+        font-size: 1em;
+        font-weight: normal;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+
+        span {
+          display: block;
+          line-height: 1em;
+          width: 150px;
+          height: 1px;
+          background: #b5b3b3;
+          margin-right: 30px;
+          position: relative;
+          margin-top: 5px;
+
+          &:before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: black;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            animation: stretch-shrink 2s infinite;
+          }
+        }
+
+        @keyframes stretch-shrink {
+          0% {
+            transform-origin: left;
+            transform: scaleX(0);
+          }
+
+          50% {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+
+          51% {
+            transform-origin: right;
+            transform: scaleX(1);
+          }
+
+          100% {
+            transform-origin: right;
+            transform: scaleX(0);
+          }
+        }
+      }
+
+      .insta-wrapper {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+        margin-top: 70px;
+      }
+
+      .page-topv3-btn {
+        margin: 0 auto;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.page-topv3-about {
+  .container {
+    background: #fafafa;
+
+    .wrapper {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding-bottom: 80px;
+
+      /* 旧 .wrapper h2 縦書き(PC版・温存・2026-04-29)
+         構成書 v5 で空 h2 を削除し .about-v5-headline を h2 化したため不要。 */
+      /*
+      h2 {
+        writing-mode: vertical-lr;
+        margin-left: auto;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        color: #595959;
+        font-size: 1em;
+        font-weight: normal;
+        letter-spacing: 3px;
+        display: flex;
+        // align-items: center;
+
+        span {
+          display: block;
+          line-height: 1em;
+          width: 1px;
+          height: 150px;
+          background: #b5b3b3;
+          margin-right: 30px;
+          position: relative;
+          margin-bottom: 15px;
+          margin-left: 12px;
+
+          &:before {
+            content: "";
+            width: 2px;
+            height: 100%;
+            background: black;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            animation: animate 2s infinite;
+          }
+        }
+
+        @keyframes animate {
+          0% {
+            transform-origin: top;
+            transform: scaleY(0);
+          }
+
+          50% {
+            transform-origin: top;
+            transform: scaleY(1);
+          }
+
+          51% {
+            transform-origin: bottom;
+            transform: scaleY(1);
+          }
+
+          100% {
+            transform-origin: bottom;
+            transform: scaleY(0);
+          }
+        }
+      }
+      */
+
+      >img {
+        width: 450px;
+        position: absolute;
+        top: 100px;
+        right: -80px;
+      }
+
+      .content-wrapper {
+        // background: pink;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          width: 45%;
+          transform: translateY(-60px);
+        }
+
+        /* ============================================
+           旧 .content-wrapper > p(本文段落)スタイル
+           保存日: 2026-04-29
+           保存理由: 構成書 v5 でミッション主役型に刷新。
+           旧スタイルを温存し復旧可能性を残す。
+        ============================================ */
+        /*
+        p {
+          width: 50%;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #474747;
+          line-height: 2.5em;
+          letter-spacing: 3px;
+          margin-top: 60px;
+        }
+        */
+        /* 旧 p ここまで(温存) */
+
+        .about-v5-text {
+          width: 50%;
+          margin-top: 60px;
+        }
+
+        .about-v5-header {
+          margin-bottom: 30px;
+
+          .about-v5-en {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 900;
+            font-size: 60px;
+            letter-spacing: 5px;
+            color: #7fbabd;
+            opacity: .1;
+            line-height: 1em;
+            margin: 0 0 -60px;
+          }
+
+          .about-v5-section-title {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 500;
+            font-size: 26px;
+            color: #333333;
+            letter-spacing: 8px;
+            line-height: 1em;
+            margin: 0;
+          }
+        }
+
+        .about-v5-headline {
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-size: 26px;
+          color: #333333;
+          letter-spacing: 4px;
+          line-height: 1.8em;
+          margin: 0 0 30px;
+        }
+
+        .about-v5-lead {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: normal;
+          font-size: 14px;
+          color: #474747;
+          letter-spacing: 2px;
+          line-height: 2.2em;
+          margin: 0;
+        }
+      }
+
+      /* ============================================
+         旧 .page-topv3-btn(ボタン)スタイル
+         保存日: 2026-04-29
+         保存理由: 構成書 v5 で他セクション統一スタイルへ刷新。
+      ============================================ */
+      /*
+      .page-topv3-btn {
+        width: 280px;
+        margin-left: auto;
+      }
+      */
+      /* 旧 .page-topv3-btn ここまで(温存) */
+
+      .about-v5-bottom-cta {
+        text-align: right;
+
+        .about-v5-bottom-cta-link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 18px;
+          padding: 20px 50px;
+          background: #ffffff;
+          border: solid 1px #333333;
+          border-radius: 40px;
+          text-decoration: none;
+          transition: .5s;
+
+          &:hover {
+            background: #333333;
+
+            .about-v5-bottom-cta-text {
+              color: #ffffff;
+            }
+
+            .about-v5-bottom-cta-arrow {
+              color: #ffffff;
+              transform: translateX(8px);
+            }
+          }
+        }
+
+        .about-v5-bottom-cta-text {
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #333333;
+          letter-spacing: 3px;
+          transition: .5s;
+        }
+
+        .about-v5-bottom-cta-arrow {
+          font-size: 16px;
+          color: #333333;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}
+
+.footer02 {
+  .footer-container {
+    background: #4e4e4e;
+
+    .footer-wrapper {
+      padding: 50px 0 20px 0;
+      width: 95%;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      >a {
+        display: block;
+        margin: 0 auto;
+        width: 170px;
+      }
+
+      .link-wrapper {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        .left-wrapper {
+          .address {
+            span {
+              color: white;
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: 2px;
+            }
+          }
+          a {
+            i {
+              color: white;
+              font-size: 2em;
+              margin-top: 30px;
+            }
+          }
+        }
+
+        .right-wrapper {
+          width: 40%;
+
+          // background: pink;
+          ul {
+            list-style: none;
+
+            li {
+              a {
+                text-decoration: none;
+                color: white;
+                font-family: "Zen Kaku Gothic New", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 2px;
+                border-bottom: solid 1px transparent;
+                padding-bottom: 3px;
+                transition: .3s;
+
+                &:hover {
+                  border-bottom: solid 1px white;
+                }
+              }
+            }
+
+            &.menu-wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap;
+
+              li {
+                width: 49%;
+                margin-top: 10px;
+              }
+            }
+
+            &.service-wrapper {
+              margin-top: 10px;
+
+              li {
+                position: relative;
+                margin-left: 30px;
+                font-size: .9em;
+
+                &+li {
+                  margin-top: 10px;
+                }
+
+                &:before {
+                  content: "";
+                  width: 5px;
+                  height: 1px;
+                  background: white;
+                  position: absolute;
+                  top: 50%;
+                  left: -20px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .copy {
+        text-align: center;
+        font-size: small;
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        color: white;
+        letter-spacing: 2px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .page-topv3-blog {
+    .container {
+      background: #F4F4F4;
+
+      .wrapper {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .sticky {
+          padding-bottom: 200px;
+
+          .sticky-container {
+            position: sticky;
+            display: fixed;
+            top: 70px;
+            left: 0;
+
+            .sticky-wrapper {
+              position: relative;
+
+              .page-topv3-btn {
+                margin-top: 130px;
+              }
+
+              >img {
+                width: 200px;
+                position: absolute;
+                top: 28%;
+                left: -34%;
+              }
+            }
+          }
+        }
+
+        .content-wrapper {
+          width: 67%;
+          padding: 140px 0;
+
+          /* 旧 .content (1100px版・温存・2026-04-29) */
+          /*
+          .content {
+            padding: 0 20px 40px 20px;
+            border-bottom: solid 1px silver;
+
+            &+.content {
+              margin-top: 40px;
+            }
+
+            a {
+              display: flex;
+              justify-content: space-between;
+              text-decoration: none;
+
+              img {
+                width: 33%;
+                transition: .5s;
+                box-shadow: 3px 3px 6px silver;
+              }
+
+              .text-wrapper {
+                width: 60%;
+                transition: .5s;
+                .above {
+                  margin-top: 15px;
+
+                  .date {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    letter-spacing: 1px;
+                  }
+
+                  .category {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: 12px;
+                    color: #b5b3b3;
+                    margin-left: 20px;
+                  }
+                }
+
+                .title {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 18px;
+                  margin-top: 10px;
+                }
+              }
+
+              &:hover {
+                img {
+                  border-radius: 0 60px 0 60px;
+                }
+
+                .text-wrapper {
+                  opacity: .6;
+                }
+              }
+            }
+          }
+          */
+          /* 旧 .content (1100px版) ここまで */
+
+          // v5 では PC と同じ 3列維持(別途上書き不要)
+        }
+      }
+    }
+  }
+
+  .page-topv3-about {
+    .container {
+      .wrapper {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 80px;
+
+        /* 旧 .wrapper h2 縦書き(1100px版・温存・2026-04-29) */
+        /*
+        h2 {
+          writing-mode: vertical-lr;
+          margin-left: auto;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #595959;
+          font-size: 1em;
+          font-weight: normal;
+          letter-spacing: 3px;
+          display: flex;
+          // align-items: center;
+
+          span {
+            display: block;
+            line-height: 1em;
+            width: 1px;
+            height: 150px;
+            background: #b5b3b3;
+            margin-right: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            margin-left: 12px;
+
+            &:before {
+              content: "";
+              width: 2px;
+              height: 100%;
+              background: black;
+              position: absolute;
+              left: 0;
+              top: -1px;
+              animation: animate 2s infinite;
+            }
+          }
+
+          @keyframes animate {
+            0% {
+              transform-origin: top;
+              transform: scaleY(0);
+            }
+
+            50% {
+              transform-origin: top;
+              transform: scaleY(1);
+            }
+
+            51% {
+              transform-origin: bottom;
+              transform: scaleY(1);
+            }
+
+            100% {
+              transform-origin: bottom;
+              transform: scaleY(0);
+            }
+          }
+        }
+        */
+
+        >img {
+          width: 450px;
+          position: absolute;
+          top: 100px;
+          right: 5%;
+        }
+
+        .content-wrapper {
+          // background: pink;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          img {
+            width: 45%;
+            transform: translateY(-60px);
+          }
+
+          /* 旧 .content-wrapper > p (1100px版・温存・2026-04-29) */
+          /*
+          p {
+            width: 50%;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            color: #474747;
+            line-height: 2.5em;
+            letter-spacing: 3px;
+            margin-top: 60px;
+          }
+          */
+
+          .about-v5-text {
+            width: 50%;
+            margin-top: 60px;
+          }
+
+          .about-v5-headline {
+            font-size: 22px;
+            letter-spacing: 3px;
+          }
+
+          .about-v5-lead {
+            font-size: 13px;
+            letter-spacing: 1.5px;
+          }
+        }
+
+        /* 旧 .page-topv3-btn (1100px版・温存・2026-04-29) */
+        /*
+        .page-topv3-btn {
+          margin-left: auto;
+        }
+        */
+      }
+    }
+  }
+
+  .page-topv3-ebook {
+    .container {
+      .ebook-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .page-topv3-fv-sp {
+    .container {
+      .wrapper {
+        position: relative;
+        .fv-sp-video {
+          position: relative;
+          video {
+            width: 100%;
+            display: block;
+          }
+
+          .logo-wrapper {
+            position: absolute;
+            top: 18px;
+            left: 4%;
+            z-index: 2;
+            display: flex;
+            .logo-text {
+              writing-mode: vertical-rl;
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              user-select: none;
+
+              .text1 {
+                color: white;
+                font-size: 11px;
+                letter-spacing: 1.5px;
+              }
+
+              .text2 {
+                color: white;
+                font-size: 14px;
+                letter-spacing: 2px;
+              }
+            }
+
+            .logo-img {
+              width: 45px;
+              display: block;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          .fv-message-wrapper {
+            position: absolute;
+            z-index: 2;
+            bottom: 5%;
+            left: 5%;
+
+            .ja {
+              color: white;
+              font-size: 28px;
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 500;
+              font-style: normal;
+              letter-spacing: 5px;
+              line-height: 1em;
+            }
+
+            .sub1 {
+              margin-top: 12px;
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 700;
+              font-size: 16px;
+              color: white;
+              letter-spacing: 1.5px;
+              line-height: 1.3em;
+            }
+
+            .sub2 {
+              margin-top: 1.5px;
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 700;
+              font-size: 16px;
+              color: rgba(255, 255, 255, .85);
+              letter-spacing: 1.5px;
+              line-height: 1.3em;
+            }
+          }
+        }
+        .fv-cta-cards-sp {
+          padding: 30px 5% 40px 5%;
+          background: white;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .fv-cta-card {
+            width: 100%;
+            background: white;
+            border: solid 1px #e0e0e0;
+            border-radius: 4px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, .08);
+
+            .cta-label {
+              display: none;
+            }
+
+            .cta-text {
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              font-size: 13px;
+              color: #333333;
+              letter-spacing: 1px;
+              flex: 1;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-topv3-issue {
+    .container {
+      position: relative;
+      padding: 35px 0 70px;
+      max-width: 1440px;
+      margin: 0 auto;
+
+      .wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        .issue-header {
+          margin-bottom: 30px;
+
+          .en {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+          }
+
+          h2 {
+            font-size: 1.2em;
+            letter-spacing: 5px;
+          }
+        }
+
+        .issue-wrapper {
+          width: 100%;
+          display: block;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin-top: 30px;
+
+          .issue {
+            border: solid 1px #F7F7F7;
+            box-shadow: 3px 3px 6px #ACACAC;
+            width: 90%;
+            margin: 0 auto;
+            padding: 25px 15px;
+            font-size: .85em;
+            margin-bottom: 15px;
+            background: white;
+            min-height: auto;
+            gap: 8px;
+
+            .issue-number {
+              font-size: 14px;
+              letter-spacing: 1.5px;
+            }
+
+            p {
+              color: #333333;
+              text-align: center;
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              line-height: 1.7em;
+              letter-spacing: 2px;
+            }
+          }
+        }
+
+        .issue-bridge {
+          margin-top: 40px;
+          padding: 0 5%;
+
+          p {
+            font-size: 14px;
+            letter-spacing: 2px;
+            line-height: 1.9em;
+          }
+
+          .bridge-keyword {
+            font-size: 1.05em;
+            border-bottom-width: 5px;
+          }
+        }
+
+        .issue-next {
+          margin-top: 35px;
+
+          .issue-next-arrow {
+            font-size: 20px;
+          }
+
+          .issue-next-text {
+            font-size: 13px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+
+      .text-image {
+        width: 100%;
+        max-width: 800px;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        z-index: 1;
+      }
+
+      .logo-image {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .page-topv3-concept {
+    .container {
+      padding: 70px 0 70px 0;
+
+      .wrapper {
+        width: 90%;
+
+        .concept-header {
+          margin-bottom: 50px;
+
+          .en {
+            font-weight: 900;
+            font-size: 36px;
+            letter-spacing: 4px;
+            opacity: .1;
+            margin-bottom: -21px;
+          }
+
+          h2 {
+            font-size: 22px;
+            letter-spacing: 5px;
+            margin-top: 0;
+            margin-bottom: 18px;
+          }
+
+          .subtitle {
+            font-size: 13px;
+            letter-spacing: 2px;
+            line-height: 1.9em;
+          }
+        }
+
+        .concept-blocks {
+          display: block;
+        }
+
+        .concept-block {
+          margin-bottom: 40px;
+          padding: 30px 20px;
+
+          .concept-block-header {
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+
+            .block-number {
+              font-size: 22px;
+            }
+
+            h3 {
+              font-size: 17px;
+              letter-spacing: 3px;
+            }
+          }
+
+          .concept-block-body {
+            p {
+              font-size: 14px;
+              letter-spacing: 1.5px;
+              line-height: 2em;
+
+              & + p {
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+
+        .concept-video {
+          margin-top: 50px;
+
+          .concept-video-lead {
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+          }
+
+          .concept-video-frame {
+            .video-placeholder {
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .concept-next {
+          margin-top: 50px;
+
+          .concept-next-arrow {
+            font-size: 20px;
+          }
+
+          .concept-next-text {
+            font-size: 13px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .page-topv3-strength {
+    .container {
+      padding: 70px 0 70px 0;
+
+      .wrapper {
+        width: 90%;
+
+        .strength-header {
+          margin-bottom: 50px;
+
+          .en {
+            font-weight: 900;
+            font-size: 36px;
+            letter-spacing: 4px;
+            opacity: .1;
+            margin-bottom: -21px;
+          }
+
+          h2 {
+            font-size: 22px;
+            letter-spacing: 5px;
+            margin-top: 0;
+            margin-bottom: 18px;
+          }
+
+          .subtitle {
+            font-size: 13px;
+            letter-spacing: 2px;
+            line-height: 1.9em;
+          }
+        }
+
+        .strength-list {
+          .strength-item {
+            padding: 30px 20px;
+            border-left-width: 3px;
+
+            & + .strength-item {
+              margin-top: 20px;
+            }
+
+            .strength-item-header {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 10px;
+              margin-bottom: 18px;
+              padding-bottom: 15px;
+
+              .strength-number {
+                font-size: 26px;
+              }
+
+              h3 {
+                font-size: 17px;
+                letter-spacing: 2px;
+                line-height: 1.6em;
+              }
+            }
+
+            .strength-item-body {
+              p {
+                font-size: 14px;
+                letter-spacing: 1.5px;
+                line-height: 2em;
+              }
+            }
+          }
+        }
+
+        .strength-cta {
+          margin-top: 50px;
+
+          .strength-cta-link {
+            padding: 18px 30px;
+            gap: 15px;
+          }
+
+          .strength-cta-text {
+            font-size: 13px;
+            letter-spacing: 2px;
+          }
+
+          .strength-cta-arrow {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  /* 旧 Section 05 .page-topv3-service SP版 (温存・2026-04-29) */
+  /*
+  .page-topv3-service {
+    .container {
+      background: #7fbabd;
+      padding: 70px 0 70px 0;
+      position: relative;
+
+      >img {
+        width: 80px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        z-index: 1;
+      }
+
+      .wrapper {
+        width: 90%;
+        max-width: 950px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        h2 {
+          color: #333333;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          text-align: center;
+          letter-spacing: 3px;
+          font-size: 1.2em;
+        }
+
+        .tab {
+          display: block;
+          align-items: center;
+          list-style: none;
+          margin-top: 30px;
+
+          li {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 10px;
+            text-align: center;
+            border: solid 1px #333333;
+            transition: .3s;
+
+            a {
+              color: #333333;
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              text-decoration: none;
+              display: inline-block;
+              padding: 15px;
+              width: 100%;
+              letter-spacing: 5px;
+              transition: .3s;
+            }
+            &:hover {
+              background: #333333;
+
+              a {
+                color: white;
+              }
+            }
+
+            &.active {
+              background: #333333;
+              border: solid 1px #333333;
+
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+
+        .service-wrapper {
+          .service {
+            display: none;
+            opacity: 0;
+
+            &.is-active {
+              display: block;
+              animation-name: displayAnime;
+              animation-duration: 1s;
+              animation-fill-mode: forwards;
+            }
+
+            @keyframes displayAnime {
+              from {
+                opacity: 0;
+              }
+
+              to {
+                opacity: 1;
+              }
+            }
+
+            >p {
+              color: #333333;
+              font-family: YuGothic, 'Yu Gothic', sans-serif;
+              font-weight: bold;
+              letter-spacing: 1px;
+              font-size: .9em;
+              line-height: 2em;
+              margin-top: 40px;
+
+              span {
+                color: #333333;
+                display: inline-block;
+                font-size: 1.5em;
+                border-bottom: solid 5px #f9e615;
+              }
+            }
+
+            .service-desc {
+              border: solid 1px white;
+              padding: 20px 10px;
+              margin-top: 40px;
+
+              p {
+                font-family: YuGothic, 'Yu Gothic', sans-serif;
+                color: white;
+                font-size: 1em;
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: 5px;
+              }
+
+              h3 {
+                text-align: center;
+                font-size: 24px;
+                color: white;
+
+                &.ec {
+                  font-size: 35px;
+                }
+
+                img {
+                  width: 60%;
+                }
+              }
+
+              .desc-wrapper {
+                margin-top: 45px;
+                display: block;
+                justify-content: space-between;
+
+                ul {
+                  list-style: none;
+
+                  li {
+                    display: flex;
+                    align-items: center;
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: .9em;
+                    font-weight: bold;
+                    color: white;
+                    letter-spacing: 2px;
+
+                    &+li {
+                      margin-top: 7px;
+                    }
+
+                    img {
+                      width: 15px;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+
+                .desc-image {
+                  display: block;
+                  width: 50%;
+                  height: 100%;
+                  margin: 0 auto;
+                  margin-top: 10px;
+                  // background: pink;
+                }
+              }
+            }
+
+            .btn-more {
+              background: #333333;
+              border: solid 1px #333333;
+              width: 250px;
+              border-radius: 40px;
+              margin: 0 auto;
+              margin-top: 60px;
+              transition: .5s;
+
+              a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                padding: 20px 10px 20px 40px;
+                letter-spacing: 3px;
+
+                img {
+                  width: 35px;
+                  margin-left: 20px;
+                  transition: .5s;
+                }
+              }
+              &:hover {
+                opacity: .8;
+                a {
+                  img {
+                    margin-left: 30px;
+                  }
+                }
+              }
+            }
+            &:nth-child(2) {
+              .service-desc {
+                h3 {
+                  text-align: center;
+                  margin-top: 10px;
+
+                  img {
+                    width: 75%;
+                    display: block;
+                    margin: 0 auto;
+
+                    &.pc {
+                      display: none;
+                    }
+                  }
+                }
+
+                .desc-wrapper {
+                  margin-top: 45px;
+                  display: block;
+                  justify-content: space-between;
+
+                  ul {
+                    list-style: none;
+
+                    li {
+                      display: flex;
+                      align-items: center;
+                      font-family: YuGothic, 'Yu Gothic', sans-serif;
+                      font-size: .9em;
+                      font-weight: bold;
+                      color: white;
+                      letter-spacing: 1px;
+
+                      &+li {
+                        margin-top: 7px;
+                      }
+
+                      img {
+                        width: 15px;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+
+                  .desc-image {
+                    width: 50%;
+                    height: 100%;
+                    // background: pink;
+                  }
+                }
+              }
+
+              .btn-more {
+                background: #333333;
+                border: solid 1px #333333;
+                width: 250px;
+                border-radius: 40px;
+                margin: 0 auto;
+                margin-top: 60px;
+
+                a {
+                  display: flex;
+                  align-items: center;
+                  text-decoration: none;
+                  color: white;
+                  padding: 20px 10px 20px 40px;
+                  letter-spacing: 3px;
+
+                  img {
+                    width: 35px;
+                    margin-left: 20px;
+                    transition: .5s;
+                  }
+                }
+
+                &:hover {
+                  a {
+                    img {
+                      margin-left: 30px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              .service-desc {
+                h3 {
+                  text-align: center;
+                  margin-top: 10px;
+
+                  img {
+                    width: 80%;
+                    display: block;
+                    margin: 0 auto;
+
+                    &.pc {
+                      display: none;
+                    }
+                  }
+                }
+
+                .desc-wrapper {
+                  margin-top: 45px;
+                  display: block;
+                  justify-content: space-between;
+
+                  ul {
+                    list-style: none;
+
+                    li {
+                      display: flex;
+                      align-items: center;
+                      font-family: YuGothic, 'Yu Gothic', sans-serif;
+                      font-size: .9em;
+                      font-weight: bold;
+                      color: white;
+                      letter-spacing: 2px;
+
+                      &+li {
+                        margin-top: 7px;
+                      }
+
+                      img {
+                        width: 15px;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+                  .desc-image {
+                    width: 40%;
+                    height: 100%;
+                    // background: pink;
+                  }
+                }
+              }
+              .btn-more {
+                background: #333333;
+                border: solid 1px #333333;
+                width: 250px;
+                border-radius: 40px;
+                margin: 0 auto;
+                margin-top: 60px;
+
+                a {
+                  display: flex;
+                  align-items: center;
+                  text-decoration: none;
+                  color: white;
+                  padding: 20px 10px 20px 40px;
+                  letter-spacing: 3px;
+
+                  img {
+                    width: 35px;
+                    margin-left: 20px;
+                    transition: .5s;
+                  }
+                }
+
+                &:hover {
+                  a {
+                    img {
+                      margin-left: 30px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  */
+  /* 旧 .page-topv3-service SP版 ここまで(温存) */
+
+  .page-topv3-mainproduct {
+    .container {
+      background: #7fbabd;
+      padding: 70px 0 70px 0;
+      position: relative;
+
+      > img {
+        width: 80px;
+        top: 20%;
+        right: 10%;
+      }
+
+      .wrapper {
+        width: 90%;
+
+        .mainproduct-header {
+          margin-bottom: 35px;
+
+          .en {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+          }
+
+          h2 {
+            font-size: 22px;
+            letter-spacing: 5px;
+            margin-bottom: 18px;
+          }
+
+          .lead {
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            line-height: 1.9em;
+            padding: 0 5%;
+          }
+        }
+
+        .mainproduct-tab {
+          display: flex;
+          gap: 6px;
+          margin-top: 30px;
+
+          li {
+            width: 50%;
+            margin: 0;
+
+            a {
+              padding: 14px 8px;
+            }
+          }
+
+          .mp-tab-label {
+            font-size: 9px;
+            letter-spacing: 1px;
+          }
+
+          .mp-tab-name {
+            font-size: 14px;
+            letter-spacing: 2px;
+          }
+        }
+
+        .mainproduct-wrapper {
+          .mainproduct-item {
+            .mp-target-label {
+              font-size: 10px;
+              padding: 5px 12px;
+              margin-top: 30px;
+            }
+
+            .mp-catch {
+              font-size: 17px;
+              letter-spacing: 2px;
+              line-height: 1.6em;
+              margin-top: 15px;
+            }
+
+            .mp-desc {
+              padding: 25px 18px;
+              margin-top: 30px;
+
+              .mp-desc-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+              }
+
+              .mp-desc-content {
+                align-items: center;
+                gap: 14px;
+              }
+
+              .mp-desc-visual {
+                order: 2;
+                max-width: 80%;
+                margin: 0 auto;
+              }
+
+              .mp-type {
+                font-size: 14px;
+                letter-spacing: 2px;
+                text-align: center;
+              }
+
+              .mp-name {
+                font-size: 22px;
+                text-align: center;
+
+                img {
+                  width: 70%;
+                  margin: 0 auto;
+                }
+              }
+
+              .mp-name--ec {
+                font-size: 26px;
+                letter-spacing: 3px;
+              }
+
+              .mp-badges {
+                justify-content: center;
+                gap: 6px;
+
+                li {
+                  font-size: 11px;
+                  padding: 8px 4px;
+                  letter-spacing: 0;
+                }
+              }
+
+              .mp-description {
+                font-size: 14px;
+                letter-spacing: 1.5px;
+                line-height: 1.9em;
+                margin-top: 22px;
+                padding-top: 18px;
+              }
+            }
+
+            .mp-btn {
+              margin-top: 40px;
+
+              .mp-btn-link {
+                gap: 15px;
+                padding: 18px 30px;
+              }
+
+              .mp-btn-text {
+                font-size: 13px;
+                letter-spacing: 2px;
+              }
+
+              .mp-btn-arrow {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-topv3-whatwedo {
+    .container {
+      padding: 70px 0 70px 0;
+
+      .wrapper {
+        width: 90%;
+
+        .whatwedo-header {
+          margin-bottom: 50px;
+
+          .en {
+            font-size: 36px;
+            letter-spacing: 4px;
+            margin-bottom: -21px;
+          }
+
+          h2 {
+            font-size: 22px;
+            letter-spacing: 5px;
+            margin-bottom: 18px;
+          }
+
+          .lead {
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            line-height: 1.9em;
+
+            br {
+              display: none;
+            }
+          }
+        }
+
+        .whatwedo-list {
+          display: flex;
+          flex-direction: column;
+          grid-template-columns: none;
+          gap: 20px;
+
+          .whatwedo-item {
+            grid-column: auto;
+            padding: 28px 20px;
+
+            &:nth-child(4),
+            &:nth-child(5) {
+              grid-column: auto;
+            }
+
+            .whatwedo-item-header {
+              gap: 14px;
+              box-sizing: content-box;
+              min-height: 65px;
+              padding-bottom: 14px;
+
+              .whatwedo-number {
+                font-size: 26px;
+              }
+
+              h3 {
+                font-size: 17px;
+                letter-spacing: 2px;
+                line-height: 1.6em;
+              }
+            }
+
+            .whatwedo-icon {
+              width: 68px;
+              height: 68px;
+              margin: 18px 0 2px;
+
+              i {
+                font-size: 28px;
+              }
+            }
+
+            .whatwedo-catch {
+              font-size: 14px;
+              letter-spacing: 1px;
+              line-height: 1.7em;
+              margin: 16px 0 14px;
+              padding-left: 10px;
+            }
+
+            .whatwedo-body {
+              font-size: 14px;
+              letter-spacing: 1px;
+              line-height: 1.9em;
+              margin: 0 0 16px;
+            }
+
+            .whatwedo-link {
+              padding-top: 12px;
+
+              .whatwedo-link-text {
+                font-size: 13px;
+                letter-spacing: 1.5px;
+              }
+
+              .whatwedo-link-arrow {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-topv3-diagnosis {
+    .container {
+      background: #28849c;
+      padding: 70px 20px;
+
+      .diagnosis-section-head {
+        margin-bottom: 35px;
+      }
+
+      .diagnosis-eyebrow {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .diagnosis-title {
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+
+        .diagnosis-keyword {
+          border-bottom-width: 3px;
+        }
+      }
+
+      .diagnosis-lead {
+        font-size: 13px;
+        line-height: 1.9;
+        letter-spacing: 0.03em;
+      }
+
+      .diagnosis-panel {
+        padding: 30px 22px;
+        gap: 18px;
+      }
+
+      .diagnosis-panel-title {
+        font-size: 18px;
+        letter-spacing: 0.04em;
+      }
+
+      .diagnosis-panel-text {
+        font-size: 13px;
+        line-height: 1.9;
+        text-align: left;
+      }
+
+      .diagnosis-features {
+        flex-wrap: wrap;
+        gap: 8px;
+
+        li {
+          font-size: 11px;
+          padding: 6px 12px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .diagnosis-btn {
+        padding: 16px 20px;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+      }
+    }
+  }
+
+  .page-topv3-ebook {
+    .container {
+      padding: 70px 0 70px 0;
+
+      .ebook-header {
+        margin-bottom: 40px;
+
+        .en {
+          font-size: 36px;
+          letter-spacing: 4px;
+          margin-bottom: -21px;
+        }
+
+        h2 {
+          font-size: 18px;
+          letter-spacing: 3px;
+          line-height: 1.7em;
+          margin-bottom: 18px;
+        }
+
+        .lead {
+          font-size: 13px;
+          letter-spacing: 1px;
+          line-height: 1.9em;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .ebook-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .ebook-card-body {
+        padding: 18px 14px 16px;
+      }
+
+      .ebook-card-title {
+        font-size: 17px;
+        letter-spacing: 0.5px;
+        line-height: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .ebook-card-catch {
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: 1.5em;
+      }
+
+      .ebook-card-desc {
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: 1.7em;
+        margin-bottom: 14px;
+      }
+
+      .ebook-card-cta {
+        gap: 8px;
+        padding-top: 12px;
+
+        .ebook-card-cta-text {
+          font-size: 13px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .ebook-card-no {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+
+      .ebook-bottom-cta {
+        margin-top: 40px;
+
+        .ebook-bottom-cta-link {
+          padding: 16px 30px;
+          gap: 12px;
+        }
+
+        .ebook-bottom-cta-text {
+          font-size: 12px;
+          letter-spacing: 2px;
+        }
+
+        .ebook-bottom-cta-arrow {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .page-topv3-youtube {
+    .container {
+      padding: 70px 0 70px 0;
+
+      .youtube-header {
+        margin-bottom: 40px;
+
+        .en {
+          font-size: 36px;
+          letter-spacing: 4px;
+          margin-bottom: -21px;
+        }
+
+        h2 {
+          font-size: 18px;
+          letter-spacing: 3px;
+          line-height: 1.7em;
+          margin-bottom: 18px;
+        }
+
+        .lead {
+          font-size: 13px;
+          letter-spacing: 1px;
+          line-height: 1.9em;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .youtube-grid {
+        grid-template-columns: 1fr;
+        gap: 25px 12px;
+      }
+
+      .youtube-thumb-no {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .youtube-thumb-coming {
+        font-size: 9px;
+        letter-spacing: 2px;
+      }
+
+      .youtube-thumb-play {
+        width: 44px;
+        height: 44px;
+
+        .youtube-thumb-play-icon {
+          font-size: 14px;
+        }
+      }
+
+      .youtube-info {
+        padding: 14px 2px 0;
+      }
+
+      .youtube-title {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        line-height: 1.6em;
+        margin-bottom: 12px;
+      }
+
+      .youtube-related {
+        flex-wrap: nowrap;
+        padding: 8px 10px;
+        gap: 6px 8px;
+
+        .youtube-related-label {
+          flex-shrink: 0;
+          font-size: 11px;
+          letter-spacing: 1px;
+          padding: 2px 6px;
+        }
+
+        .youtube-related-text {
+          flex: 1 1 0;
+          min-width: 0;
+          font-size: 13px;
+          letter-spacing: 0;
+        }
+
+        .youtube-related-arrow {
+          flex-shrink: 0;
+          font-size: 13px;
+        }
+      }
+
+      .youtube-bottom-cta {
+        margin-top: 50px;
+
+        .youtube-bottom-cta-link {
+          padding: 16px 30px;
+          gap: 10px;
+        }
+
+        .youtube-bottom-cta-icon svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        .youtube-bottom-cta-text {
+          font-size: 12px;
+          letter-spacing: 2px;
+        }
+
+        .youtube-bottom-cta-arrow {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .page-topv3-contact {
+    .container {
+      position: relative;
+      background-image: url(img/page-top2-contact-bg.png);
+      background-position: center;
+      background-size: cover;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .5);
+        z-index: 1;
+      }
+
+      .wrapper {
+        padding: 70px 0;
+        position: relative;
+        z-index: 2;
+
+        h2 {
+          text-align: center;
+          font-size: .9em;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          letter-spacing: 4px;
+          color: white;
+        }
+
+        .contact-btn {
+          text-align: center;
+
+          a {
+            text-decoration: none;
+            display: inline-block;
+
+            // background: pink;
+            span {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 900;
+              font-style: normal;
+              font-size: 2.5em;
+              letter-spacing: 5px;
+              color: white;
+              transition: .5s;
+            }
+
+            img {
+              width: 35px;
+              transform: translateY(-8px);
+              margin-left: 10px;
+              transition: .5s;
+            }
+
+            &:hover {
+              span {
+                opacity: .7;
+              }
+
+              img {
+                transform: translate(13px, -20px);
+              }
+            }
+          }
+        }
+
+        p {
+          text-align: center;
+          color: white;
+          letter-spacing: 1px;
+          line-height: 2em;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          font-size: .8em;
+          width: 90%;
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  /* Section 13 .page-topv3-contact-v5 SP (820px) */
+  .page-topv3-contact-v5 {
+    .container {
+      .wrapper {
+        padding: 70px 0 65px;
+      }
+    }
+
+    .contact-v5-header {
+      margin-bottom: 28px;
+
+      .contact-v5-en {
+        font-size: 36px;
+        letter-spacing: 4px;
+        margin: 0 0 -19px;
+      }
+
+      .contact-v5-section-title {
+        font-size: 18px;
+        letter-spacing: 5px;
+      }
+    }
+
+    .contact-v5-headline {
+      font-size: 21px;
+      letter-spacing: 2px;
+      line-height: 1.7em;
+      margin-bottom: 22px;
+
+      .contact-v5-headline-keyword {
+        border-bottom-width: 3px;
+      }
+    }
+
+    .contact-v5-lead {
+      font-size: 13px;
+      letter-spacing: 1px;
+      line-height: 1.9em;
+      margin-bottom: 38px;
+      padding: 0 5%;
+    }
+
+    .contact-v5-cta-group {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-v5-cta {
+      min-width: 0;
+      width: 90%;
+      max-width: 360px;
+      padding: 11px 50px 11px 30px;
+
+      .contact-v5-cta-arrow {
+        right: 22px;
+        font-size: 14px;
+      }
+    }
+
+    .contact-v5-cta-label {
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    .contact-v5-cta-text {
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .contact-v5-cta--solid {
+      transform: none;
+      box-shadow: 0 6px 20px rgba(127, 186, 189, .45);
+    }
+  }
+
+  /* 旧 Section 10 .page-topv3-works SP版 (温存・2026-04-29) */
+  /*
+  .page-topv3-works {
+    .container {
+      background-image: url(img/page-top2-works-bg.png);
+      background-size: cover;
+      background-position: center;
+      padding: 70px 0 70px 0;
+
+      .wrapper {
+        position: relative;
+
+        >img {
+          width: 200px;
+          position: absolute;
+          top: -10px;
+          left: 5%;
+        }
+
+        h2 {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #595959;
+          font-size: 1em;
+          font-weight: normal;
+          letter-spacing: 2px;
+          display: flex;
+          align-items: center;
+
+          span {
+            display: block;
+            line-height: 1em;
+            width: 50px;
+            height: 1px;
+            background: #b5b3b3;
+            margin-right: 10px;
+            position: relative;
+            margin-top: 5px;
+
+            &:before {
+              content: "";
+              width: 100%;
+              height: 2px;
+              background: black;
+              position: absolute;
+              left: 0;
+              top: -1px;
+              animation: stretch-shrink 2s infinite;
+            }
+          }
+
+          @keyframes stretch-shrink {
+            0% {
+              transform-origin: left;
+              transform: scaleX(0);
+            }
+
+            50% {
+              transform-origin: left;
+              transform: scaleX(1);
+            }
+
+            51% {
+              transform-origin: right;
+              transform: scaleX(1);
+            }
+
+            100% {
+              transform-origin: right;
+              transform: scaleX(0);
+            }
+          }
+        }
+
+        .carousel-wrapper {
+          margin-top: 70px;
+
+          .carousel {
+            .work {
+              padding: 0 10px;
+
+              a {
+                text-decoration: none;
+
+                .text-wrapper {
+                  text-align: center;
+
+                  p {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+
+                    &:nth-child(1) {
+                      font-size: .8em;
+                      color: #797979;
+                    }
+
+                    &:nth-child(2) {
+                      font-size: 1.1em;
+                      color: #595959;
+                      border-bottom: solid 1px transparent;
+                      display: inline-block;
+                      transition: .3s;
+                    }
+
+                    &:nth-child(3) {
+                      font-size: .8em;
+                      color: #a6a0a0;
+                    }
+                  }
+                }
+
+                &:hover {
+                  p {
+                    &:nth-child(2) {
+                      border-bottom: solid 1px #333333;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .slick-dots {
+            bottom: -50px;
+          }
+        }
+
+        .page-topv3-btn {
+          margin: 0 auto;
+          margin-top: 90px;
+        }
+      }
+    }
+  }
+  */
+  /* 旧 .page-topv3-works SP版 ここまで(温存) */
+
+  .page-topv3-works {
+    .container {
+      background: #ffffff;
+      padding: 70px 0 70px 0;
+
+      .works-header {
+        margin-bottom: 50px;
+
+        .en {
+          font-size: 36px;
+          letter-spacing: 4px;
+          margin-bottom: -21px;
+        }
+
+        h2 {
+          font-size: 18px;
+          letter-spacing: 3px;
+          line-height: 1.7em;
+          margin-bottom: 18px;
+        }
+
+        .lead {
+          font-size: 13px;
+          letter-spacing: 1px;
+          line-height: 1.9em;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .works-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 18px;
+        margin-bottom: 40px;
+      }
+
+      .works-card-body {
+        padding: 12px 0 0;
+      }
+
+      .works-card-industry {
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 4px 10px;
+        margin-bottom: 8px;
+      }
+
+      .works-card-name {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+      }
+
+      .works-bottom-cta {
+        margin-top: 40px;
+
+        .works-bottom-cta-link {
+          padding: 16px 30px;
+          gap: 12px;
+        }
+
+        .works-bottom-cta-text {
+          font-size: 12px;
+          letter-spacing: 2px;
+        }
+
+        .works-bottom-cta-arrow {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .page-topv3-blog {
+    .sticky-wrapper > .blog-v5-bottom-cta {
+      display: none;
+    }
+
+    .blog-v5-bottom-cta--sp {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      padding-bottom: 50px;
+
+      .blog-v5-bottom-cta-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 28px;
+        background: #ffffff;
+        border: solid 1px #333333;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: .5s;
+      }
+
+      .blog-v5-bottom-cta-text {
+        font-family: YuGothic, 'Yu Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 11px;
+        color: #333333;
+        letter-spacing: 2px;
+      }
+
+      .blog-v5-bottom-cta-arrow {
+        font-size: 13px;
+        color: #333333;
+      }
+    }
+
+    .container {
+      background: #F4F4F4;
+      padding-top: 40px;
+
+      .wrapper {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: block;
+        justify-content: space-between;
+
+        .sticky {
+          width: 100%;
+          padding-bottom: 0px;
+
+          .sticky-container {
+            position: static;
+            display: fixed;
+            top: 70px;
+            left: 0;
+
+            .sticky-wrapper {
+              position: relative;
+
+              .page-topv3-btn {
+                margin-top: 130px;
+              }
+
+              .blog-v5-header {
+                margin-top: 0;
+                margin-bottom: 25px;
+              }
+
+              .en {
+                font-size: 36px;
+                letter-spacing: 4px;
+                margin-bottom: -21px;
+              }
+
+              .blog-v5-headline {
+                font-size: 18px;
+                letter-spacing: 2px;
+                line-height: 1.7em;
+                margin-bottom: 14px;
+              }
+
+              .blog-v5-lead {
+                font-size: 12px;
+                letter-spacing: 0.5px;
+                line-height: 1.9em;
+              }
+
+              .blog-v5-bottom-cta {
+                margin-top: 25px;
+
+                .blog-v5-bottom-cta-link {
+                  padding: 14px 28px;
+                  gap: 10px;
+                }
+
+                .blog-v5-bottom-cta-text {
+                  font-size: 11px;
+                  letter-spacing: 2px;
+                }
+
+                .blog-v5-bottom-cta-arrow {
+                  font-size: 13px;
+                }
+              }
+
+              >img {
+                width: 150px;
+                position: absolute;
+                top: 40px;
+                left: 0%;
+              }
+            }
+          }
+        }
+
+        .content-wrapper {
+          width: 100%;
+          padding: 50px 0;
+
+          /* 旧 .content (SP版・温存・2026-04-29) */
+          /*
+          .content {
+            padding: 0 10px 40px 10px;
+            border-bottom: solid 1px silver;
+
+            &+.content {
+              margin-top: 40px;
+            }
+
+            a {
+              display: block;
+              justify-content: space-between;
+              text-decoration: none;
+
+              img {
+                width: 100%;
+                transition: .5s;
+                box-shadow: 3px 3px 6px silver;
+              }
+
+              .text-wrapper {
+                width: 100%;
+                transition: .5s;
+
+                .above {
+                  margin-top: 15px;
+
+                  .date {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    letter-spacing: 1px;
+                  }
+
+                  .category {
+                    font-family: YuGothic, 'Yu Gothic', sans-serif;
+                    font-size: 12px;
+                    color: #b5b3b3;
+                    margin-left: 0;
+                  }
+                }
+
+                .title {
+                  font-family: YuGothic, 'Yu Gothic', sans-serif;
+                  font-size: 18px;
+                  margin-top: 10px;
+                }
+              }
+
+              &:hover {
+                img {
+                  border-radius: 0 60px 0 60px;
+                }
+
+                .text-wrapper {
+                  opacity: .6;
+                }
+              }
+            }
+          }
+          */
+          /* 旧 .content (SP版) ここまで */
+
+          .blog-v5-card {
+            padding: 0 10px 30px 10px;
+
+            & + .blog-v5-card {
+              margin-top: 30px;
+            }
+
+            a {
+              display: block;
+
+              img {
+                width: 100%;
+              }
+
+              .text-wrapper {
+                width: 100%;
+
+                .above {
+                  margin-top: 12px;
+
+                  .date {
+                    font-size: 12px;
+                  }
+
+                  .category {
+                    font-size: 11px;
+                    margin-left: 0;
+                  }
+                }
+
+                .title {
+                  font-size: 14px;
+                  line-height: 1.6em;
+                  margin-top: 8px;
+                }
+              }
+            }
+          }
+
+          .page-topv3-btn {
+            margin: 0 auto;
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .page-topv3-insta {
+    .container {
+      padding: 160px 0 100px 0;
+
+      .wrapper {
+        position: relative;
+
+        >img {
+          width: 90%;
+          position: absolute;
+          top: -30px;
+          left: 5%;
+        }
+
+        h2 {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #595959;
+          font-size: 1em;
+          font-weight: normal;
+          letter-spacing: 2px;
+          display: flex;
+          align-items: center;
+
+          span {
+            display: block;
+            line-height: 1em;
+            width: 50px;
+            height: 1px;
+            background: #b5b3b3;
+            margin-right: 15px;
+            position: relative;
+            margin-top: 5px;
+
+            &:before {
+              content: "";
+              width: 100%;
+              height: 2px;
+              background: black;
+              position: absolute;
+              left: 0;
+              top: -1px;
+              animation: stretch-shrink 2s infinite;
+            }
+          }
+
+          @keyframes stretch-shrink {
+            0% {
+              transform-origin: left;
+              transform: scaleX(0);
+            }
+
+            50% {
+              transform-origin: left;
+              transform: scaleX(1);
+            }
+
+            51% {
+              transform-origin: right;
+              transform: scaleX(1);
+            }
+
+            100% {
+              transform-origin: right;
+              transform: scaleX(0);
+            }
+          }
+        }
+
+        .insta-wrapper {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .page-topv3-btn {
+          margin: 0 auto;
+          margin-top: 130px;
+        }
+      }
+    }
+  }
+
+  .page-topv3-about {
+    .container {
+      .wrapper {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 80px;
+
+        /* 旧 .wrapper h2 縦書き(SP版・温存・2026-04-29) */
+        /*
+        h2 {
+          writing-mode: vertical-lr;
+          margin-left: auto;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: #595959;
+          font-size: .9em;
+          font-weight: normal;
+          letter-spacing: 3px;
+          display: flex;
+          // align-items: center;
+
+          span {
+            display: block;
+            line-height: 1em;
+            width: 1px;
+            height: 50px;
+            background: #b5b3b3;
+            margin-right: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            margin-left: 12px;
+
+            &:before {
+              content: "";
+              width: 2px;
+              height: 100%;
+              background: black;
+              position: absolute;
+              left: 0;
+              top: -1px;
+              animation: animate 2s infinite;
+            }
+          }
+
+          @keyframes animate {
+            0% {
+              transform-origin: top;
+              transform: scaleY(0);
+            }
+
+            50% {
+              transform-origin: top;
+              transform: scaleY(1);
+            }
+
+            51% {
+              transform-origin: bottom;
+              transform: scaleY(1);
+            }
+
+            100% {
+              transform-origin: bottom;
+              transform: scaleY(0);
+            }
+          }
+        }
+        */
+
+        >img {
+          width: 100%;
+          position: absolute;
+          top: 100px;
+          right: 0;
+        }
+
+        .content-wrapper {
+          // background: pink;
+          display: block;
+          justify-content: space-between;
+          align-items: center;
+
+          img {
+            width: 100%;
+            transform: translateY(0px);
+            margin-top: 20px;
+          }
+
+          /* 旧 .content-wrapper > p (SP版・温存・2026-04-29) */
+          /*
+          p {
+            width: 100%;
+            font-family: YuGothic, 'Yu Gothic', sans-serif;
+            color: #474747;
+            line-height: 2.5em;
+            letter-spacing: 1px;
+            font-size: .9em;
+            margin-top: 30px;
+          }
+          */
+
+          .about-v5-text {
+            width: 100%;
+            margin-top: 30px;
+          }
+
+          .about-v5-header {
+            margin-bottom: 20px;
+
+            .about-v5-en {
+              font-size: 36px;
+              letter-spacing: 4px;
+              opacity: .1;
+              margin: 0 0 -21px;
+            }
+
+            .about-v5-section-title {
+              font-size: 22px;
+              letter-spacing: 5px;
+            }
+          }
+
+          .about-v5-headline {
+            font-size: 19px;
+            letter-spacing: 2px;
+            line-height: 1.7em;
+            margin-bottom: 22px;
+
+            br {
+              display: none;
+            }
+          }
+
+          .about-v5-lead {
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 2em;
+
+            br.pc {
+              display: none;
+            }
+          }
+        }
+
+        /* 旧 .page-topv3-btn (SP版・温存・2026-04-29) */
+        /*
+        .page-topv3-btn {
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+        */
+
+        .about-v5-bottom-cta {
+          text-align: center;
+          margin-top: 30px;
+
+          .about-v5-bottom-cta-link {
+            padding: 16px 30px;
+            gap: 12px;
+          }
+
+          .about-v5-bottom-cta-text {
+            font-size: 12px;
+            letter-spacing: 2px;
+          }
+
+          .about-v5-bottom-cta-arrow {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer02 {
+    .footer-container {
+      background: #4e4e4e;
+
+      .footer-wrapper {
+        padding: 50px 0 20px 0;
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        >a {
+          display: block;
+          margin: 0 auto;
+          width: 170px;
+        }
+
+        .link-wrapper {
+          margin-top: 40px;
+          display: block;
+          justify-content: space-between;
+
+          .left-wrapper {
+            .address {
+              width: 90%;
+              margin: 0 auto;
+
+              span {
+                color: white;
+                font-family: "Zen Kaku Gothic New", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 2px;
+              }
+            }
+
+            a {
+              display: block;
+              width: 35px;
+              margin: 0 auto;
+
+              i {
+                color: white;
+                font-size: 2em;
+                margin-top: 30px;
+              }
+            }
+          }
+
+          .right-wrapper {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 30px;
+
+            // background: pink;
+            ul {
+              list-style: none;
+
+              li {
+                a {
+                  text-decoration: none;
+                  color: white;
+                  font-family: "Zen Kaku Gothic New", sans-serif;
+                  font-weight: 400;
+                  font-style: normal;
+                  letter-spacing: 2px;
+                  border-bottom: solid 1px transparent;
+                  padding-bottom: 3px;
+                  transition: .3s;
+
+                  &:hover {
+                    border-bottom: solid 1px white;
+                  }
+                }
+              }
+
+              &.menu-wrapper {
+                display: block;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                li {
+                  width: 100%;
+                  margin-top: 10px;
+                  border-bottom: solid 1px silver;
+                  padding: 10px 0 10px 10px;
+                }
+              }
+
+              &.service-wrapper {
+                margin-top: 10px;
+
+                li {
+                  position: relative;
+                  margin-left: 30px;
+                  font-size: .9em;
+
+                  &+li {
+                    margin-top: 10px;
+                  }
+
+                  &:before {
+                    content: "";
+                    width: 5px;
+                    height: 1px;
+                    background: white;
+                    position: absolute;
+                    top: 50%;
+                    left: -20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .copy {
+          text-align: center;
+          font-size: small;
+          font-family: YuGothic, 'Yu Gothic', sans-serif;
+          color: white;
+          letter-spacing: 2px;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}

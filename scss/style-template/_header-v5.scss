@@ -1,0 +1,389 @@
+// =====================================================
+// SP Header v5 / SP Menu v5
+// 作成日: 2026-04-29
+// 用途: page-topv3.php(トップ v3)専用 SP フローティングヘッダー + ドロワー
+// 対応PHPテンプレート: header-v3.php
+// 対応HTMLクラス: .sp-header-v5 / .sp-menu-v5
+// 対応JS: js/sp-menu-v5.js
+//
+// 注意:
+// - 既存 .sp-menu-icon / .sp-menu(_header.scss)とは独立したスタイル
+// - 既存スタイルには影響しない
+// - .sp / .pc は _general.scss の表示制御に追従(770px が境界)
+// =====================================================
+
+$sp-v5-primary: #7fbabd;
+$sp-v5-text: #333333;
+$sp-v5-muted: #888888;
+$sp-v5-border: rgba(127, 186, 189, .25);
+$sp-v5-card: rgba(255, 255, 255, .92);
+
+// PC では非表示(770px 超)。.sp-header-v5 / .sp-menu-v5 は自身のスタイルで
+// display を上書きしているため、.sp クラスの汎用ルールでは打ち消せない。
+@media screen and (min-width: 771px) {
+  .sp-header-v5,
+  .sp-menu-v5 {
+    display: none !important;
+  }
+}
+
+// ----- フローティングヘッダー -----
+// ローディング中は完全に非表示(SP のみ)。body.appear 付与後に表示してフェードイン
+@media screen and (max-width: 770px) {
+  .sp-header-v5 {
+    display: none !important;
+  }
+
+  body.appear .sp-header-v5 {
+    display: flex !important;
+    animation: spHeaderV5Appear 1.5s ease 1.5s both;
+  }
+}
+
+@keyframes spHeaderV5Appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sp-header-v5 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  background: transparent;
+  transition: background .3s ease, box-shadow .3s ease;
+
+  &.is-scrolled {
+    background: rgba(255, 255, 255, .95);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+  }
+  .sp-header-v5__logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    img {
+      width: 110px;
+      height: auto;
+      display: block;
+      transition: filter .3s ease;
+    }
+  }
+  &.is-scrolled .sp-header-v5__logo {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.is-scrolled .sp-header-v5__logo img {
+    filter: brightness(0) saturate(100%) invert(13%);
+  }
+
+  .sp-header-v5__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 8px 14px;
+    background: $sp-v5-card;
+    color: $sp-v5-text;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background .3s ease, color .3s ease;
+
+    &:hover,
+    &:focus {
+      background: $sp-v5-primary;
+      color: #ffffff;
+    }
+  }
+
+  .sp-header-v5__hamburger {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+
+    span {
+      position: absolute;
+      left: 7px;
+      right: 7px;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 1px;
+      transition: transform .3s ease, opacity .3s ease, background .3s ease, top .3s ease;
+
+      &:nth-child(1) { top: 11px; }
+      &:nth-child(2) { top: 17px; }
+      &:nth-child(3) { top: 23px; }
+    }
+
+    &.is-active {
+      span {
+        background: $sp-v5-text;
+
+        &:nth-child(1) {
+          top: 17px;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          top: 17px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &.is-scrolled .sp-header-v5__hamburger span {
+    background: $sp-v5-text;
+  }
+}
+
+// ----- ドロワー -----
+.sp-menu-v5 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background: #ffffff;
+  transform: translateX(100%);
+  opacity: 0;
+  // visibility は transform 完了後にだけ hidden へ切替(閉じるアニメを最後まで見せる)
+  transition:
+    transform 1s cubic-bezier(.22, 1, .36, 1),
+    opacity .9s ease,
+    visibility 0s linear 1s;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+
+  &.is-open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    transition:
+      transform 1s cubic-bezier(.22, 1, .36, 1),
+      opacity .9s ease,
+      visibility 0s linear 0s;
+  }
+
+  .sp-menu-v5__inner {
+    padding: 80px 24px 40px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $sp-v5-text;
+  }
+}
+
+// 主力サービス枠(独立配置・最上段)
+.sp-menu-v5__featured {
+  margin-bottom: 28px;
+  padding: 18px 18px 8px;
+  background: rgba(127, 186, 189, .06);
+  border: solid 1px $sp-v5-border;
+  border-radius: 10px;
+
+  .sp-menu-v5__group-label {
+    margin: 0 0 12px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: $sp-v5-primary;
+  }
+
+  ul {
+    li {
+      &:not(:last-child) {
+        border-bottom: dashed 1px $sp-v5-border;
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px 0;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        color: $sp-v5-text;
+
+        span {
+          font-weight: 400;
+          font-size: 11px;
+          letter-spacing: 1px;
+          color: $sp-v5-muted;
+        }
+      }
+    }
+  }
+}
+
+// アコーディオングループ(SERVICES / CONTENTS / COMPANY)
+.sp-menu-v5__group {
+  border-bottom: solid 1px rgba(0, 0, 0, .08);
+
+  &:first-of-type {
+    border-top: solid 1px rgba(0, 0, 0, .08);
+  }
+
+  > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 4px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: $sp-v5-text;
+    position: relative;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "+";
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1;
+      color: $sp-v5-primary;
+      transition: transform .3s ease;
+    }
+  }
+
+  &[open] > summary::after {
+    content: "−";
+  }
+
+  > ul {
+    padding: 0 4px 14px;
+
+    li {
+      a {
+        display: block;
+        padding: 11px 0;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: $sp-v5-text;
+        position: relative;
+        padding-left: 16px;
+
+        &::before {
+          content: "→";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $sp-v5-primary;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+// 並列CTA(Section 13 と呼応)
+.sp-menu-v5__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px 0 24px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 18px;
+    border-radius: 999px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: background .3s ease, color .3s ease, border-color .3s ease;
+  }
+
+  .sp-menu-v5__cta-primary {
+    background: $sp-v5-primary;
+    color: #ffffff;
+    border: solid 1px $sp-v5-primary;
+
+    &:hover,
+    &:focus {
+      background: #73a8ab;
+      border-color: #73a8ab;
+    }
+  }
+
+  .sp-menu-v5__cta-secondary {
+    background: #ffffff;
+    color: $sp-v5-primary;
+    border: solid 1px $sp-v5-primary;
+
+    &:hover,
+    &:focus {
+      background: rgba(127, 186, 189, .08);
+    }
+  }
+}
+
+// 法務リンク(認知優先度を下げる)
+.sp-menu-v5__legal {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    justify-content: center;
+
+    li {
+      a {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: $sp-v5-muted;
+      }
+    }
+  }
+}
+
+// body スクロールロック
+body.is-sp-menu-open {
+  overflow: hidden;
+}
