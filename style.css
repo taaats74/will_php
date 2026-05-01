@@ -376,6 +376,107 @@ body.appear .loading-container {
     }
   }
 }
+#splash-v2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7fbabd;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  animation: splashV2Hide 0.3s ease 1.3s forwards;
+}
+
+.loading-v2--line .loading-v2__line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: splashV2LineDraw 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.loading-v2--logo .loading-v2__logo {
+  display: block;
+  width: 200px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: splashV2LogoFluffy 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0s forwards;
+}
+
+body.appear.has-loading-v2::before {
+  display: none !important;
+}
+
+body.has-loading-v2.appear .loading-container {
+  animation: splashV2ContentIn 0.8s ease 0s forwards !important;
+  opacity: 0;
+}
+
+body.has-loading-v2 .header-child-v2 {
+  opacity: 0;
+}
+
+body.has-loading-v2.appear .header-child-v2 {
+  animation: splashV2ContentIn 0.8s ease 0s forwards !important;
+}
+
+@media screen and (max-width: 770px) {
+  body.has-loading-v2.appear .sp-header-v5 {
+    animation: spHeaderV5Appear 0.8s ease 0s both !important;
+  }
+}
+@keyframes splashV2LineDraw {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes splashV2LogoFluffy {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes splashV2Hide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+@keyframes splashV2ContentIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 770px) {
+  .loading-v2--logo .loading-v2__logo {
+    width: 150px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #splash-v2 {
+    display: none;
+  }
+}
 .header-page-top .container {
   padding-top: 10px;
   background: #f4f4f4;
@@ -1015,6 +1116,323 @@ body.is-sp-menu-open {
   overflow: hidden;
 }
 
+.header-child-v2 {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+}
+.header-child-v2__inner {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header-child-v2__brand {
+  flex-shrink: 0;
+}
+.header-child-v2__logo {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  transition: opacity 0.25s ease;
+}
+.header-child-v2__logo img {
+  width: auto;
+  height: 100%;
+  display: block;
+}
+.header-child-v2__logo:hover {
+  opacity: 0.75;
+}
+.header-child-v2__nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.header-child-v2__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header-child-v2__nav-link {
+  display: inline-flex;
+  align-items: center;
+  height: 80px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.header-child-v2__nav-link:hover, .header-child-v2__nav-link:focus-visible {
+  color: #7fbabd;
+}
+.header-child-v2__nav-item--has-mega {
+  position: static;
+}
+.header-child-v2__nav-item--has-mega > .header-child-v2__nav-link::after {
+  content: "▼";
+  margin-left: 6px;
+  font-size: 9px;
+  transform: translateY(1px);
+  color: #595959;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+.header-child-v2__nav-item--has-mega:hover > .header-child-v2__nav-link::after {
+  transform: translateY(1px) rotate(180deg);
+  color: #7fbabd;
+}
+.header-child-v2__nav-item--has-mega:hover .header-child-v2__megamenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.header-child-v2__cta {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-child-v2__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
+}
+.header-child-v2__btn--ghost {
+  background: transparent;
+  color: #333333;
+  border: solid 1px transparent;
+}
+.header-child-v2__btn--ghost:hover, .header-child-v2__btn--ghost:focus-visible {
+  color: #7fbabd;
+}
+.header-child-v2__btn--outline {
+  background: transparent;
+  color: #7fbabd;
+  border: solid 2px #7fbabd;
+}
+.header-child-v2__btn--outline:hover, .header-child-v2__btn--outline:focus-visible {
+  background: #7fbabd;
+  color: #ffffff;
+}
+.header-child-v2__btn--solid {
+  background: #7fbabd;
+  color: #ffffff;
+  border: solid 2px #7fbabd;
+}
+.header-child-v2__btn--solid:hover, .header-child-v2__btn--solid:focus-visible {
+  background: #5fa3a6;
+  border-color: #5fa3a6;
+}
+
+.header-child-v2__megamenu {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  width: 800px;
+  max-width: calc(100vw - 80px);
+  background: #ffffff;
+  border: solid 1px rgba(127, 186, 189, 0.25);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  z-index: 99;
+}
+.header-child-v2__megamenu__group-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #7fbabd;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px rgba(127, 186, 189, 0.25);
+}
+.header-child-v2__megamenu__featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.header-child-v2__megamenu__featured-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  background: #f0f8f9;
+  border: solid 1px rgba(127, 186, 189, 0.25);
+  border-radius: 6px;
+  color: #333333;
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.header-child-v2__megamenu__featured-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #333333;
+}
+.header-child-v2__megamenu__featured-card-sub {
+  font-size: 11px;
+  color: #595959;
+  letter-spacing: 0.5px;
+}
+.header-child-v2__megamenu__featured-card:hover, .header-child-v2__megamenu__featured-card:focus-visible {
+  background: rgba(127, 186, 189, 0.14);
+  border-color: #7fbabd;
+  transform: translateY(-2px);
+}
+.header-child-v2__megamenu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.header-child-v2__megamenu__list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.header-child-v2__megamenu__list li a::before {
+  content: "→";
+  color: #7fbabd;
+  font-size: 12px;
+}
+.header-child-v2__megamenu__list li a:hover, .header-child-v2__megamenu__list li a:focus-visible {
+  color: #7fbabd;
+}
+
+@media screen and (max-width: 770px) {
+  .header-child-v2 {
+    display: none !important;
+  }
+}
+body.has-header-v4 .loading-container {
+  animation-delay: 0s !important;
+  animation-duration: 0.4s !important;
+}
+
+@media screen and (max-width: 770px) {
+  body.has-header-v4 .sp-header-v5 {
+    animation: spHeaderV5Appear 0.4s ease 0s both !important;
+  }
+}
+.page-hero {
+  background: #F0F8F9;
+  padding: 150px 0 70px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  color: #3E5054;
+}
+.page-hero__inner {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.page-hero__en {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  letter-spacing: 5px;
+  color: #7CC1C9;
+  opacity: 0.25;
+  line-height: 1em;
+  margin: 0 0 -28px;
+}
+.page-hero__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: #28849D;
+  margin: 0 0 24px;
+}
+.page-hero__lead {
+  font-size: 15px;
+  line-height: 2em;
+  letter-spacing: 1.5px;
+  color: #3E5054;
+  margin: 0 0 20px;
+}
+.page-hero__badge {
+  display: inline-block;
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  color: #28849D;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  margin: 0;
+}
+.page-hero__badge strong {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 4px;
+}
+
+@media screen and (max-width: 770px) {
+  .page-hero {
+    padding: 100px 0 50px;
+  }
+  .page-hero__en {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: -19px;
+  }
+  .page-hero__title {
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+  }
+  .page-hero__lead {
+    font-size: 13px;
+    line-height: 1.9em;
+    letter-spacing: 1px;
+  }
+  .page-hero__badge {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+  .page-hero__badge strong {
+    font-size: 16px;
+  }
+}
 .section-fv .container {
   background: #f4f4f4;
   padding-bottom: 50px;
@@ -11145,33 +11563,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.about .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-  }
-  .hero-section.about .container .wrapper {
-    padding-top: 56px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.about .container .wrapper .img-wrapper {
-    width: 100%;
-    max-width: none;
-    overflow: hidden;
-  }
-  .hero-section.about .container .wrapper .img-wrapper img {
-    width: 125%;
-  }
-  .hero-section.about .container .wrapper .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-  }
-  .hero-section.about .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .mission .container {
     margin-top: 75px;
   }
@@ -12177,32 +12568,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.price .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-  }
-  .hero-section.price .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.price .container .wrapper .img-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-  .hero-section.price .container .wrapper .img-wrapper img {
-    width: 130%;
-  }
-  .hero-section.price .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.price .container .wrapper .hero-text .section-header {
-    font-size: 2.2em;
-    letter-spacing: 4px;
-  }
   .service-price .container .wrapper {
     width: 95%;
     max-width: 1200px;
@@ -12579,29 +12944,6 @@ body.is-sp-menu-open {
     padding: 0.5em 2.5em;
   }
 }
-.hero-section.partner .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-}
-.hero-section.partner .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.partner .container .wrapper .img-wrapper {
-  width: 83%;
-}
-.hero-section.partner .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.partner .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .page-partner-message .container .wrapper {
   width: 83%;
   max-width: 1200px;
@@ -12802,32 +13144,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.partner .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-  }
-  .hero-section.partner .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.partner .container .wrapper .img-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-  .hero-section.partner .container .wrapper .img-wrapper img {
-    width: 180%;
-  }
-  .hero-section.partner .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.partner .container .wrapper .hero-text .section-header {
-    font-size: 2.2em;
-    letter-spacing: 4px;
-  }
   .page-partner-message .container .wrapper {
     width: 83%;
     max-width: 1200px;
@@ -12964,29 +13280,6 @@ body.is-sp-menu-open {
     padding: 0.5em 2.5em;
   }
 }
-.hero-section.contact .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-}
-.hero-section.contact .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.contact .container .wrapper .img-wrapper {
-  width: 83%;
-}
-.hero-section.contact .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.contact .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .page-contact .container .wrapper {
   width: 83%;
   max-width: 1200px;
@@ -13238,32 +13531,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.contact .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-  }
-  .hero-section.contact .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.contact .container .wrapper .img-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-  .hero-section.contact .container .wrapper .img-wrapper img {
-    width: 180%;
-  }
-  .hero-section.contact .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.contact .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .page-contact .container .wrapper {
     width: 95%;
     max-width: 1200px;
@@ -13406,29 +13673,6 @@ body.is-sp-menu-open {
 }
 .page-contact .container .wrapper .text-wrapper p {
   margin-top: 1em;
-}
-
-.hero-section.service .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-}
-.hero-section.service .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.service .container .wrapper .img-wrapper {
-  width: 77%;
-}
-.hero-section.service .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.service .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
 }
 
 .archive-service-service .container .wrapper {
@@ -13866,32 +14110,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.service .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-  }
-  .hero-section.service .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.service .container .wrapper .img-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-  .hero-section.service .container .wrapper .img-wrapper img {
-    width: 170%;
-  }
-  .hero-section.service .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.service .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .archive-service-service .container .wrapper {
     width: 95%;
     max-width: 1200px;
@@ -14114,33 +14332,6 @@ body.is-sp-menu-open {
     margin-top: 70px;
   }
 }
-.hero-section.single-service .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-  overflow: hidden;
-}
-.hero-section.single-service .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.single-service .container .wrapper .img-wrapper {
-  width: 100%;
-}
-.hero-section.single-service .container .wrapper .img-wrapper img {
-  width: 166%;
-}
-.hero-section.single-service .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.single-service .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .single-service-copy .container .wrapper {
   margin-top: 80px;
 }
@@ -14819,32 +15010,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.single-service .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-    overflow: hidden;
-  }
-  .hero-section.single-service .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.single-service .container .wrapper .img-wrapper {
-    width: 100%;
-  }
-  .hero-section.single-service .container .wrapper .img-wrapper img {
-    width: 380%;
-  }
-  .hero-section.single-service .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.single-service .container .wrapper .hero-text .section-header {
-    font-size: 2em;
-    letter-spacing: 4px;
-  }
   .single-service-copy .container .wrapper {
     width: 95%;
     margin: 0 auto;
@@ -15229,16 +15394,6 @@ body.is-sp-menu-open {
     margin-top: 40px;
   }
 }
-.hero-section.single-service-web .container {
-  overflow: hidden;
-}
-.hero-section.single-service-web .container .wrapper .img-wrapper {
-  width: 100%;
-}
-.hero-section.single-service-web .container .wrapper .img-wrapper img {
-  width: 135%;
-}
-
 .single-service-price.web .container .wrapper {
   width: 83%;
   max-width: 1200px;
@@ -15487,21 +15642,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.single-service-web .container {
-    overflow: hidden;
-  }
-  .hero-section.single-service-web .container .wrapper .img-wrapper {
-    width: 220%;
-  }
-  .hero-section.single-service-web .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.single-service-web .container .wrapper .hero-text .section-header {
-    font-size: 2em;
-    letter-spacing: 4px;
-  }
   .single-service-price.web .container .wrapper {
     width: 95%;
     max-width: 1200px;
@@ -15620,33 +15760,6 @@ body.is-sp-menu-open {
     font-size: 1.8em;
   }
 }
-.hero-section.wm .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-  overflow: hidden;
-}
-.hero-section.wm .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.wm .container .wrapper .img-wrapper {
-  width: 100%;
-}
-.hero-section.wm .container .wrapper .img-wrapper img {
-  width: 155%;
-}
-.hero-section.wm .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.wm .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .single-service-problem.wm .container .wrapper {
   margin-top: 70px;
 }
@@ -15966,32 +16079,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.wm .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-    overflow: hidden;
-  }
-  .hero-section.wm .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.wm .container .wrapper .img-wrapper {
-    width: 100%;
-  }
-  .hero-section.wm .container .wrapper .img-wrapper img {
-    width: 325%;
-  }
-  .hero-section.wm .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 3%;
-  }
-  .hero-section.wm .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .single-service-price.wm .container .wrapper {
     width: 95%;
     max-width: 1200px;
@@ -16120,33 +16207,6 @@ body.is-sp-menu-open {
     font-size: 1.8em;
   }
 }
-.hero-section.ad .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-  overflow: hidden;
-}
-.hero-section.ad .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.ad .container .wrapper .img-wrapper {
-  width: 100%;
-}
-.hero-section.ad .container .wrapper .img-wrapper img {
-  width: 120%;
-}
-.hero-section.ad .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.ad .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .single-service-problem.ad .container .wrapper {
   margin-top: 70px;
 }
@@ -16214,32 +16274,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.ad .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-    overflow: hidden;
-  }
-  .hero-section.ad .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.ad .container .wrapper .img-wrapper {
-    width: 100%;
-  }
-  .hero-section.ad .container .wrapper .img-wrapper img {
-    width: 260%;
-  }
-  .hero-section.ad .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.ad .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .single-service-problem.ad .container .wrapper {
     margin-top: 70px;
   }
@@ -16273,33 +16307,6 @@ body.is-sp-menu-open {
     margin-top: 1em;
   }
 }
-.hero-section.gp .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-  overflow: hidden;
-}
-.hero-section.gp .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.gp .container .wrapper .img-wrapper {
-  width: 80%;
-}
-.hero-section.gp .container .wrapper .img-wrapper img {
-  width: 100%;
-}
-.hero-section.gp .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.gp .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .single-service-price.gp .container .wrapper {
   width: 83%;
   max-width: 1200px;
@@ -16406,32 +16413,6 @@ body.is-sp-menu-open {
 }
 
 @media screen and (max-width: 770px) {
-  .hero-section.gp .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-    overflow: hidden;
-  }
-  .hero-section.gp .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.gp .container .wrapper .img-wrapper {
-    width: 170%;
-  }
-  .hero-section.gp .container .wrapper .img-wrapper img {
-    width: 100%;
-  }
-  .hero-section.gp .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.gp .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .single-service-price.gp .container .wrapper {
     width: 90%;
     max-width: 1200px;
@@ -16537,33 +16518,6 @@ body.is-sp-menu-open {
     font-size: 1.8em;
   }
 }
-.hero-section.info .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-  overflow: hidden;
-}
-.hero-section.info .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.info .container .wrapper .img-wrapper {
-  width: 130%;
-}
-.hero-section.info .container .wrapper .img-wrapper img {
-  width: 100%;
-}
-.hero-section.info .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.info .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .archive-info {
   padding-bottom: 70px;
 }
@@ -16668,32 +16622,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.info .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-    overflow: hidden;
-  }
-  .hero-section.info .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.info .container .wrapper .img-wrapper {
-    width: 320%;
-  }
-  .hero-section.info .container .wrapper .img-wrapper img {
-    width: 100%;
-  }
-  .hero-section.info .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.info .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .archive-info {
     padding-bottom: 70px;
   }
@@ -16800,33 +16728,1314 @@ body.is-sp-menu-open {
     margin-top: 1em;
   }
 }
-.hero-section.works .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-  overflow: hidden;
-}
-.hero-section.works .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.works .container .wrapper .img-wrapper {
-  width: 65%;
-}
-.hero-section.works .container .wrapper .img-wrapper img {
-  width: 100%;
-}
-.hero-section.works .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.works .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
+.ebooks-archive {
+  background: #ffffff;
+  color: #3E5054;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  padding-bottom: 0;
 }
 
+.ebooks-header {
+  background: #F0F8F9;
+  padding: 150px 0 70px;
+  text-align: center;
+}
+.ebooks-header__inner {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.ebooks-header__en {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  letter-spacing: 5px;
+  color: #7CC1C9;
+  opacity: 0.25;
+  line-height: 1em;
+  margin: 0 0 -28px;
+}
+.ebooks-header__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: #28849D;
+  margin: 0 0 24px;
+}
+.ebooks-header__lead {
+  font-size: 15px;
+  line-height: 2em;
+  letter-spacing: 1.5px;
+  color: #3E5054;
+  margin: 0 0 20px;
+}
+.ebooks-header__count {
+  display: inline-block;
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  color: #28849D;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  margin: 0;
+}
+.ebooks-header__count strong {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 4px;
+}
+
+.ebooks-tabs-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  border-bottom: solid 1px #C0D5D8;
+}
+
+.ebooks-tabs {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+.ebooks-tabs__btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 22px 12px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #8AA0A4;
+  cursor: pointer;
+  border-bottom: solid 3px transparent;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.ebooks-tabs__btn:hover, .ebooks-tabs__btn:focus-visible {
+  color: #28849D;
+}
+.ebooks-tabs__btn.is-active {
+  color: #28849D;
+  border-bottom-color: #28849D;
+}
+.ebooks-tabs__count {
+  margin-left: 6px;
+  font-size: 13px;
+  color: #8AA0A4;
+}
+
+.ebooks-tab-panel {
+  display: none;
+}
+.ebooks-tab-panel.is-active {
+  display: block;
+}
+.ebooks-tab-panel__inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0 20px;
+}
+
+.ebooks-section-title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #28849D;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ebooks-section-title__en {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #7CC1C9;
+  text-transform: uppercase;
+}
+
+.ebooks-section-subtitle {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: #28849D;
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: solid 4px #7CC1C9;
+}
+
+.ebooks-list .ebooks-list--by-theme {
+  margin-top: 36px;
+  margin-bottom: 0;
+}
+.ebooks-list .ebooks-list--by-theme:first-of-type {
+  margin-top: 0;
+}
+
+.ebooks-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 24px;
+}
+.ebooks-cards-grid--pickup {
+  margin-bottom: 16px;
+}
+.ebooks-cards-grid--related {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ebooks-pickup,
+.ebooks-list {
+  margin-bottom: 60px;
+}
+
+.ebooks-card {
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.ebooks-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(40, 132, 157, 0.12);
+}
+.ebooks-card__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.ebooks-card__link * {
+  text-decoration: none;
+}
+.ebooks-card__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1200/630;
+  background: #F0F8F9;
+  overflow: hidden;
+}
+.ebooks-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.ebooks-card:hover .ebooks-card__thumb img {
+  transform: scale(1.04);
+}
+.ebooks-card__thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #B4DBE0, #7CC1C9);
+  color: #ffffff;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+.ebooks-card__pages {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(40, 132, 157, 0.9);
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.ebooks-card__body {
+  padding: 18px 20px 22px;
+}
+.ebooks-card__themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.ebooks-card__themes li {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #28849D;
+  background: #F0F8F9;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+.ebooks-card__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.55em;
+  letter-spacing: 0.5px;
+  color: #3E5054;
+  margin: 0 0 8px;
+}
+.ebooks-card__subtitle {
+  font-size: 13px;
+  line-height: 1.7em;
+  color: #8AA0A4;
+  margin: 0 0 14px;
+}
+.ebooks-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #28849D;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.ebooks-card__cta-arrow {
+  transition: transform 0.3s ease;
+}
+.ebooks-card:hover .ebooks-card__cta-arrow {
+  transform: translateX(4px);
+}
+
+.ebooks-empty {
+  text-align: center;
+  color: #8AA0A4;
+  padding: 40px 0;
+}
+
+.ebooks-cta-banner {
+  background: linear-gradient(135deg, #28849D, #7CC1C9);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 50px 30px;
+  margin: 40px 0 0;
+}
+.ebooks-cta-banner--alt {
+  background: linear-gradient(135deg, #7CC1C9, #B4DBE0);
+  color: #3E5054;
+}
+.ebooks-cta-banner__inner {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ebooks-cta-banner__label {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin: 0 0 12px;
+  opacity: 0.85;
+}
+.ebooks-cta-banner__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.6em;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin: 0 0 16px;
+}
+.ebooks-cta-banner__lead {
+  font-size: 14px;
+  line-height: 1.9em;
+  color: #ffffff;
+  margin: 0 0 24px;
+  opacity: 0.9;
+}
+.ebooks-cta-banner__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.ebooks-cta-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.ebooks-cta-banner__btn--primary {
+  background: #ffffff;
+  color: #28849D;
+  border: solid 1px #ffffff;
+}
+.ebooks-cta-banner__btn--primary:hover {
+  background: #F0F8F9;
+}
+.ebooks-cta-banner__btn--secondary {
+  background: transparent;
+  color: #ffffff;
+  border: solid 1px rgba(255, 255, 255, 0.8);
+}
+.ebooks-cta-banner__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.ebooks-cta-banner--alt .ebooks-cta-banner__btn--secondary {
+  color: #28849D;
+  border-color: rgba(40, 132, 157, 0.35);
+}
+.ebooks-cta-banner--alt .ebooks-cta-banner__btn--secondary:hover {
+  background: rgba(40, 132, 157, 0.08);
+}
+
+.ebooks-trust {
+  background: #F0F8F9;
+  padding: 80px 0;
+  margin-top: 60px;
+}
+.ebooks-trust__inner {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.ebooks-trust__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #28849D;
+  margin: 0 0 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ebooks-trust__title-en {
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #7CC1C9;
+}
+.ebooks-trust__author {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+.ebooks-trust__author-photo {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #F0F8F9;
+}
+.ebooks-trust__author-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ebooks-trust__author-text {
+  flex: 1;
+}
+.ebooks-trust__author-name {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 0 0 4px;
+  color: #3E5054;
+}
+.ebooks-trust__author-title {
+  font-size: 12px;
+  color: #8AA0A4;
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+.ebooks-trust__author-bio {
+  font-size: 13px;
+  line-height: 1.9em;
+  margin: 0;
+  color: #3E5054;
+}
+.ebooks-trust__company {
+  display: grid;
+  gap: 14px;
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  border-radius: 12px;
+  padding: 22px 28px;
+}
+.ebooks-trust__company > div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 18px;
+  font-size: 13px;
+}
+.ebooks-trust__company dt {
+  color: #28849D;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.ebooks-trust__company dd {
+  margin: 0;
+  color: #3E5054;
+  line-height: 1.7em;
+}
+
+@media screen and (max-width: 770px) {
+  .ebooks-archive {
+    padding-bottom: 0;
+  }
+  .ebooks-header {
+    padding: 100px 0 50px;
+  }
+  .ebooks-header__en {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: -19px;
+  }
+  .ebooks-header__title {
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+  }
+  .ebooks-header__lead {
+    font-size: 13px;
+    line-height: 1.9em;
+    letter-spacing: 1px;
+  }
+  .ebooks-header__count {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+  .ebooks-header__count strong {
+    font-size: 16px;
+  }
+  .ebooks-tabs {
+    width: 94%;
+  }
+  .ebooks-tabs__btn {
+    padding: 16px 6px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .ebooks-tabs__count {
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .ebooks-tab-panel__inner {
+    padding: 36px 0 16px;
+  }
+  .ebooks-section-title {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .ebooks-section-title__en {
+    font-size: 11px;
+  }
+  .ebooks-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .ebooks-cards-grid--related {
+    grid-template-columns: 1fr;
+  }
+  .ebooks-card__body {
+    padding: 16px 16px 20px;
+  }
+  .ebooks-card__title {
+    font-size: 15px;
+  }
+  .ebooks-card__subtitle {
+    font-size: 12px;
+  }
+  .ebooks-pickup,
+  .ebooks-list {
+    margin-bottom: 40px;
+  }
+  .ebooks-cta-banner {
+    padding: 36px 20px;
+  }
+  .ebooks-cta-banner__title {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+  }
+  .ebooks-cta-banner__lead {
+    font-size: 12px;
+  }
+  .ebooks-cta-banner__btn {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+  .ebooks-trust {
+    padding: 50px 0;
+    margin-top: 40px;
+  }
+  .ebooks-trust__title {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .ebooks-trust__author {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 22px;
+    gap: 18px;
+  }
+  .ebooks-trust__author-photo {
+    width: 90px;
+    height: 90px;
+  }
+  .ebooks-trust__author-name {
+    font-size: 16px;
+  }
+  .ebooks-trust__author-bio {
+    font-size: 12px;
+    text-align: left;
+  }
+  .ebooks-trust__company {
+    padding: 18px 20px;
+  }
+  .ebooks-trust__company > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ebooks-card,
+  .ebooks-card__thumb img,
+  .ebooks-card__cta-arrow,
+  .ebooks-tabs__btn {
+    transition: none !important;
+  }
+  .ebooks-card:hover {
+    transform: none;
+  }
+}
+.ebooks-single-header {
+  background: #F0F8F9;
+  padding: 150px 0 70px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+}
+.ebooks-single-header__inner {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.ebooks-single-header__en {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  letter-spacing: 5px;
+  color: #7CC1C9;
+  opacity: 0.25;
+  line-height: 1em;
+  margin: 0 0 -28px;
+}
+.ebooks-single-header__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.55em;
+  letter-spacing: 4px;
+  color: #28849D;
+  margin: 0 0 24px;
+}
+.ebooks-single-header__lead {
+  font-size: 15px;
+  line-height: 2em;
+  letter-spacing: 1.5px;
+  color: #3E5054;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+@media screen and (max-width: 770px) {
+  .ebooks-single-header {
+    padding: 100px 0 50px;
+  }
+  .ebooks-single-header__en {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: -19px;
+  }
+  .ebooks-single-header__title {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+  .ebooks-single-header__lead {
+    font-size: 13px;
+    line-height: 1.9em;
+    letter-spacing: 1px;
+  }
+}
+.ebooks-single {
+  background: #ffffff;
+  color: #3E5054;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  padding: 80px 0 100px;
+}
+.ebooks-single__layout {
+  width: 92%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.ebooks-single__main {
+  display: contents;
+}
+
+.ebooks-form-sidebar__inner {
+  position: static !important;
+}
+
+.ebooks-form-sidebar--top {
+  display: block;
+}
+
+.ebooks-hero {
+  order: 1;
+}
+
+.ebooks-form-sidebar.ebooks-form-sidebar--top {
+  order: 2;
+}
+
+.ebooks-content {
+  order: 3;
+}
+
+.ebooks-form-sidebar {
+  order: 4;
+}
+
+.ebooks-author {
+  order: 5;
+}
+
+.ebooks-related {
+  order: 6;
+}
+
+.ebooks-single .ebooks-section-title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #28849D;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ebooks-single .ebooks-section-title__en {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #7CC1C9;
+  text-transform: uppercase;
+}
+
+.ebooks-hero {
+  margin-bottom: 56px;
+}
+.ebooks-hero__themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+.ebooks-hero__themes li {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #28849D;
+  background: #F0F8F9;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+.ebooks-hero__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.55em;
+  letter-spacing: 2px;
+  color: #28849D;
+  margin: 0 0 16px;
+}
+.ebooks-hero__subtitle {
+  font-size: 16px;
+  line-height: 1.9em;
+  letter-spacing: 1px;
+  color: #3E5054;
+  margin: 0 0 28px;
+}
+.ebooks-hero__cover {
+  margin: 0;
+  border: solid 1px #C0D5D8;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #F0F8F9;
+  text-align: center;
+}
+.ebooks-hero__cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ebooks-hero__pages {
+  background: #ffffff;
+  color: #28849D;
+  padding: 10px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  border-top: solid 1px #C0D5D8;
+}
+
+.ebooks-target {
+  background: #F0F8F9;
+  border-radius: 12px;
+  padding: 36px 36px 32px;
+  margin-bottom: 56px;
+}
+.ebooks-target__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.ebooks-target__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.7em;
+  letter-spacing: 0.5px;
+  color: #3E5054;
+}
+.ebooks-target__check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background: #28849D;
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+.ebooks-benefits {
+  margin-bottom: 56px;
+}
+.ebooks-benefits__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.ebooks-benefits__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  border-radius: 8px;
+  padding: 18px 22px;
+}
+.ebooks-benefits__num {
+  flex-shrink: 0;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #7CC1C9;
+  line-height: 1em;
+  width: 38px;
+}
+.ebooks-benefits__text {
+  font-size: 15px;
+  line-height: 1.75em;
+  letter-spacing: 0.5px;
+  color: #3E5054;
+}
+
+.ebooks-toc {
+  margin-bottom: 56px;
+}
+.ebooks-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: ebooks-toc;
+}
+.ebooks-toc__item {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: solid 1px #C0D5D8;
+}
+.ebooks-toc__item:first-child {
+  border-top: solid 1px #C0D5D8;
+}
+.ebooks-toc__label {
+  flex-shrink: 0;
+  width: 80px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #7CC1C9;
+  padding-top: 4px;
+}
+.ebooks-toc__body {
+  flex: 1;
+  min-width: 0;
+}
+.ebooks-toc__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+  color: #3E5054;
+  margin: 0 0 6px;
+}
+.ebooks-toc__desc {
+  font-size: 13px;
+  line-height: 1.8em;
+  color: #8AA0A4;
+  margin: 0;
+}
+
+.ebooks-message {
+  background: #F0F8F9;
+  border-left: solid 4px #28849D;
+  border-radius: 8px;
+  padding: 32px 36px;
+  margin-bottom: 56px;
+}
+.ebooks-message__body {
+  font-size: 14px;
+  line-height: 2em;
+  letter-spacing: 0.5px;
+  color: #3E5054;
+  margin: 0;
+}
+
+.ebooks-author {
+  margin-bottom: 56px;
+}
+.ebooks-author__card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 18px;
+}
+.ebooks-author__photo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #F0F8F9;
+}
+.ebooks-author__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ebooks-author__text {
+  flex: 1;
+}
+.ebooks-author__name {
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin: 0 0 4px;
+  color: #3E5054;
+}
+.ebooks-author__title {
+  font-size: 12px;
+  color: #8AA0A4;
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+.ebooks-author__bio {
+  font-size: 13px;
+  line-height: 1.85em;
+  color: #3E5054;
+  margin: 0;
+}
+.ebooks-author__company {
+  background: #F0F8F9;
+  border-radius: 12px;
+  padding: 20px 26px;
+  display: grid;
+  gap: 12px;
+}
+.ebooks-author__company > div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  font-size: 13px;
+}
+.ebooks-author__company dt {
+  color: #28849D;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.ebooks-author__company dd {
+  margin: 0;
+  color: #3E5054;
+  line-height: 1.7em;
+}
+
+.ebooks-related {
+  margin-bottom: 30px;
+}
+.ebooks-related .ebooks-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+.ebooks-related .ebooks-cards-grid--related {
+  grid-template-columns: repeat(2, 1fr);
+}
+.ebooks-related__more {
+  text-align: center;
+  margin: 32px 0 0;
+}
+.ebooks-related__more a {
+  color: #28849D;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  transition: opacity 0.25s ease;
+}
+.ebooks-related__more a:hover {
+  opacity: 0.7;
+}
+
+.ebooks-single .ebooks-card {
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.ebooks-single .ebooks-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(40, 132, 157, 0.12);
+}
+.ebooks-single .ebooks-card__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.ebooks-single .ebooks-card__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1200/630;
+  background: #F0F8F9;
+  overflow: hidden;
+}
+.ebooks-single .ebooks-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ebooks-single .ebooks-card__thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #B4DBE0, #7CC1C9);
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.ebooks-single .ebooks-card__pages {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(40, 132, 157, 0.9);
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.ebooks-single .ebooks-card__body {
+  padding: 16px 18px 20px;
+}
+.ebooks-single .ebooks-card__themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+}
+.ebooks-single .ebooks-card__themes li {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #28849D;
+  background: #F0F8F9;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+.ebooks-single .ebooks-card__title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.55em;
+  color: #3E5054;
+  margin: 0 0 6px;
+}
+.ebooks-single .ebooks-card__subtitle {
+  font-size: 12px;
+  line-height: 1.7em;
+  color: #8AA0A4;
+  margin: 0 0 12px;
+}
+.ebooks-single .ebooks-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #28849D;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.ebooks-form-sidebar__inner {
+  background: #ffffff;
+  border: solid 1px #C0D5D8;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.08);
+}
+.ebooks-form-sidebar__thumb {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #F0F8F9;
+  margin-bottom: 18px;
+  aspect-ratio: 1200/630;
+}
+.ebooks-form-sidebar__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ebooks-form-sidebar__heading {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: #28849D;
+  margin: 0 0 10px;
+  line-height: 1.5em;
+}
+.ebooks-form-sidebar__lead {
+  font-size: 13px;
+  line-height: 1.85em;
+  color: #3E5054;
+  margin: 0 0 18px;
+}
+.ebooks-form-sidebar__form {
+  margin-bottom: 14px;
+}
+.ebooks-form-sidebar__placeholder {
+  font-size: 13px;
+  color: #8AA0A4;
+  line-height: 1.8em;
+  background: #F0F8F9;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin: 0 0 14px;
+}
+.ebooks-form-sidebar__placeholder a {
+  color: #28849D;
+  text-decoration: underline;
+}
+.ebooks-form-sidebar__privacy {
+  font-size: 11px;
+  color: #8AA0A4;
+  line-height: 1.7em;
+  margin: 0;
+}
+.ebooks-form-sidebar__privacy a {
+  color: #28849D;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 770px) {
+  .ebooks-single {
+    padding: 50px 0 70px;
+  }
+  .ebooks-single__layout {
+    width: 92%;
+    gap: 40px;
+  }
+  .ebooks-form-sidebar.ebooks-form-sidebar--top {
+    margin-top: -46px;
+  }
+  .ebooks-single .ebooks-section-title {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+  }
+  .ebooks-single .ebooks-section-title__en {
+    font-size: 11px;
+  }
+  .ebooks-hero {
+    margin-bottom: 36px;
+  }
+  .ebooks-hero__title {
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    line-height: 1.55em;
+  }
+  .ebooks-hero__subtitle {
+    font-size: 14px;
+    line-height: 1.85em;
+    margin-bottom: 22px;
+  }
+  .ebooks-target {
+    padding: 26px 22px;
+    margin-bottom: 36px;
+  }
+  .ebooks-target__list li {
+    font-size: 13px;
+    line-height: 1.7em;
+  }
+  .ebooks-benefits {
+    margin-bottom: 36px;
+  }
+  .ebooks-benefits__list li {
+    gap: 14px;
+    padding: 14px 16px;
+  }
+  .ebooks-benefits__num {
+    font-size: 18px;
+    width: 30px;
+  }
+  .ebooks-benefits__text {
+    font-size: 13px;
+  }
+  .ebooks-toc {
+    margin-bottom: 36px;
+  }
+  .ebooks-toc__item {
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 0;
+  }
+  .ebooks-toc__label {
+    width: auto;
+  }
+  .ebooks-toc__title {
+    font-size: 14px;
+  }
+  .ebooks-toc__desc {
+    font-size: 12px;
+  }
+  .ebooks-message {
+    padding: 22px 22px;
+    margin-bottom: 36px;
+  }
+  .ebooks-message__body {
+    font-size: 13px;
+    line-height: 1.9em;
+  }
+  .ebooks-author {
+    margin-bottom: 36px;
+  }
+  .ebooks-author__card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 22px;
+    gap: 16px;
+  }
+  .ebooks-author__photo {
+    width: 80px;
+    height: 80px;
+  }
+  .ebooks-author__name {
+    font-size: 16px;
+  }
+  .ebooks-author__bio {
+    font-size: 12px;
+    text-align: left;
+  }
+  .ebooks-author__company {
+    padding: 18px 20px;
+  }
+  .ebooks-author__company > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .ebooks-related .ebooks-cards-grid,
+  .ebooks-related .ebooks-cards-grid--related {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .ebooks-form-sidebar__inner {
+    padding: 22px;
+  }
+  .ebooks-form-sidebar__heading {
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+  .ebooks-form-sidebar__lead {
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ebooks-single .ebooks-card {
+    transition: none !important;
+  }
+  .ebooks-single .ebooks-card:hover {
+    transform: none;
+  }
+}
 .archive-works-works .container .wrapper {
   width: 83%;
   max-width: 1200px;
@@ -17071,32 +18280,6 @@ body.is-sp-menu-open {
   }
 }
 @media screen and (max-width: 770px) {
-  .hero-section.works .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-    overflow: hidden;
-  }
-  .hero-section.works .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.works .container .wrapper .img-wrapper {
-    width: 125%;
-  }
-  .hero-section.works .container .wrapper .img-wrapper img {
-    width: 100%;
-  }
-  .hero-section.works .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-  }
-  .hero-section.works .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .archive-works-works .container .wrapper {
     width: 95%;
     max-width: 1200px;
@@ -17335,33 +18518,6 @@ body.is-sp-menu-open {
     width: 70%;
   }
 }
-.hero-section.policy .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-  overflow: hidden;
-}
-.hero-section.policy .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.policy .container .wrapper .img-wrapper {
-  width: 155%;
-}
-.hero-section.policy .container .wrapper .img-wrapper img {
-  width: 100%;
-}
-.hero-section.policy .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.policy .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .page-privacypolicy-policy .container .wrapper {
   width: 83%;
   max-width: 950px;
@@ -17396,32 +18552,6 @@ body.is-sp-menu-open {
 }
 
 @media screen and (max-width: 770px) {
-  .hero-section.policy .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-    overflow: hidden;
-  }
-  .hero-section.policy .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-section.policy .container .wrapper .img-wrapper {
-    width: 380%;
-  }
-  .hero-section.policy .container .wrapper .img-wrapper img {
-    width: 100%;
-  }
-  .hero-section.policy .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 3%;
-  }
-  .hero-section.policy .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .page-privacypolicy-policy .container .wrapper {
     width: 95%;
     max-width: 850px;
@@ -17576,29 +18706,6 @@ body.is-sp-menu-open {
     font-size: 0.9em;
   }
 }
-.hero-section.tradelaw .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-}
-.hero-section.tradelaw .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section.tradelaw .container .wrapper .img-wrapper {
-  width: 100%;
-}
-.hero-section.tradelaw .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section.tradelaw .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .page-tradelaw-table .container .wrapper {
   padding-bottom: 100px;
 }
@@ -17640,29 +18747,6 @@ body.is-sp-menu-open {
 }
 
 @media screen and (max-width: 770px) {
-  .hero-section.tradelaw .container {
-    background: rgba(125, 172, 175, 0.2);
-    border-bottom: solid 1px #b1cdcf;
-  }
-  .hero-section.tradelaw .container .wrapper {
-    padding-top: 68px;
-    max-width: 1950px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-section.tradelaw .container .wrapper .img-wrapper {
-    width: 220%;
-  }
-  .hero-section.tradelaw .container .wrapper .hero-text {
-    position: absolute;
-    top: 55%;
-    left: 18%;
-  }
-  .hero-section.tradelaw .container .wrapper .hero-text .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-  }
   .page-tradelaw-table .container .wrapper {
     padding-bottom: 100px;
   }
@@ -18522,4 +19606,4 @@ footer .container .wrapper .small {
     letter-spacing: 1.5px;
     padding-top: 20px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
