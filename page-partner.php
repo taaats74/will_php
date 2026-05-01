@@ -5,21 +5,15 @@
   */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-  <section class="hero-section partner">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/partner.png" alt="">
-        </div>
-        <div class="hero-text">
-          <h2 class="section-header"><span class="green">p</span>artner</h2>
-          <p class="sub-title">パートナー募集</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'PARTNER',
+  'title' => 'パートナープログラム',
+  'lead'  => '制作会社・代理店様向けの提携プログラム。',
+] );
+?>
 
   <?php
     if(have_posts()):
@@ -111,4 +105,4 @@
     </div>
   </section> -->
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

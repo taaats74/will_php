@@ -5,23 +5,16 @@ Template Post Type: service
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-  <section class="hero-section single-service-web">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/web creative.png" alt="">
-        </div>
-        <div class="hero-text">
-          <h2 class="section-header"><span class="green">w</span>eb creative</h2>
-          <p class="sub-title">Webサイト制作</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'SERVICES',
+  'title' => 'Webサイト制作',
+  'lead'  => '営業基盤として機能する Web サイトを設計・制作します。',
+] );
+?>
 
-  <?php get_header(); ?>
   <?php
     if(have_posts()):
     while(have_posts()): the_post();
@@ -32,4 +25,4 @@ Template Post Type: service
   endif;
   ?>
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

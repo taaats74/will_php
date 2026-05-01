@@ -5,21 +5,15 @@ Template Post Type: service
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-  <section class="hero-section single-service gp">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/graphic.png" alt="">
-        </div>
-        <div class="hero-text">
-          <h2 class="section-header"><span class="green">g</span>raphic</h2>
-          <p class="sub-title">バナー・チラシ作成</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'SERVICES',
+  'title' => 'グラフィック制作',
+  'lead'  => 'バナー・チラシ・販促物を一貫したトーンで設計します。',
+] );
+?>
 
     <?php
       if(have_posts()):
@@ -31,4 +25,4 @@ Template Post Type: service
     endif;
     ?>
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

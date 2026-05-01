@@ -1,18 +1,12 @@
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-  <section class="hero-section single-service info">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/information.png" alt="お知らせ">
-        </div>
-        <div class="hero-text">
-          <h2 class="section-header"><span class="green">i</span>nformation</h2>
-          <p class="sub-title">お知らせ</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'INFORMATION',
+  'title' => 'お知らせ',
+  'lead'  => 'ウィルからの最新情報をお届けします。',
+] );
+?>
 
   <section class="archive-info info">
     <div class="container">
@@ -46,4 +40,4 @@
     </div>
   </section>
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>
