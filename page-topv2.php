@@ -417,4 +417,4 @@
       </div>
     </section>
 
-    <?php get_footer("v2"); ?>
+    <?php get_footer("v3"); ?>
