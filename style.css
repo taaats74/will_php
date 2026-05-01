@@ -132,29 +132,6 @@ img {
   transform: translateX(10px);
 }
 
-.hero-section .container {
-  background: rgba(125, 172, 175, 0.2);
-  border-bottom: solid 1px #b1cdcf;
-}
-.hero-section .container .wrapper {
-  padding-top: 68px;
-  max-width: 1950px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-section .container .wrapper .img-wrapper {
-  width: 60%;
-}
-.hero-section .container .wrapper .hero-text {
-  position: absolute;
-  top: 55%;
-  left: 18%;
-}
-.hero-section .container .wrapper .hero-text .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-}
-
 .sp {
   display: none;
 }
