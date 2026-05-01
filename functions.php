@@ -3,21 +3,54 @@
   function theme_file_scripts(){
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
-    wp_enqueue_script('loading', get_template_directory_uri() . '/js/loading.js', array(), '20240102', true);
-    wp_enqueue_script('loading-child', get_template_directory_uri() . '/js/loading-child.js', array(), '20240102', true);
+    // 旧ローディング:page-topv2.php 限定 enqueue(Phase 7)
+    if ( is_page_template( 'page-topv2.php' ) ) {
+      wp_enqueue_script('loading', get_template_directory_uri() . '/js/loading.js', array(), '20240102', true);
+      wp_enqueue_script('loading-child', get_template_directory_uri() . '/js/loading-child.js', array(), '20240102', true);
+    }
+
+    // 新ローディングアニメーション(全ページ enqueue・#splash-v2 不在時は早期 return)
+    wp_enqueue_script(
+      'loading-v2',
+      get_template_directory_uri() . '/js/loading-v2.js',
+      array(),
+      filemtime( get_template_directory() . '/js/loading-v2.js' ),
+      true
+    );
+
     wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), '20240102', true);
     wp_enqueue_script('accordion-js', get_template_directory_uri() . '/js/accordion.js', array(), '20240102', true);
     wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js');
     wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
     wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), '20240717', true);
 
-    // page-topv3.php 専用 SP ヘッダー / ドロワー JS
-    if ( is_page_template( 'page-topv3.php' ) ) {
+    // SP ヘッダー / ドロワー JS(.sp-header-v5 / .sp-menu-v5 制御)
+    // page-topv3.php(トップ)+ header-v4.php を呼ぶ下層ページで使用。
+    // LP 自己完結型・旧トップは除外。要素が無いページでは JS が早期 return するため
+    // 残りはすべて全ページ enqueue で問題なし。
+    $sp_menu_v5_excluded = array(
+      'page-topv2.php',
+      'page-willsupport.php',
+      'page-willsupport-v2.php',
+      'page-will-support-ec.php',
+    );
+    if ( ! is_page_template( $sp_menu_v5_excluded ) ) {
       wp_enqueue_script(
         'sp-menu-v5',
         get_template_directory_uri() . '/js/sp-menu-v5.js',
         array(),
         filemtime( get_template_directory() . '/js/sp-menu-v5.js' ),
+        true
+      );
+    }
+
+    // archive-ebooks.php 専用 タブ切替 JS
+    if ( is_post_type_archive( 'ebooks' ) ) {
+      wp_enqueue_script(
+        'ebooks-archive',
+        get_template_directory_uri() . '/js/ebooks-archive.js',
+        array(),
+        filemtime( get_template_directory() . '/js/ebooks-archive.js' ),
         true
       );
     }
@@ -144,6 +177,20 @@ function wpcf7_autop_return_false() {
   }
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+  // ebooks アーカイブの表示件数(全件)
+  function will_ebooks_archive_query( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_post_type_archive( 'ebooks' ) ) {
+      $query->set( 'posts_per_page', -1 );
+    }
+  }
+  add_action( 'pre_get_posts', 'will_ebooks_archive_query' );
+
+  // ACF: フィールドグループ JSON を acf-json/ から読み込む
+  add_filter( 'acf/settings/load_json', function( $paths ) {
+    $paths[] = get_template_directory() . '/acf-json';
+    return $paths;
+  });
 
 // 不要な管理画面項目の削除
 // add_action( 'admin_menu', 'remove_menus' );

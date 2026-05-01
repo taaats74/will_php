@@ -31,15 +31,6 @@
     })(document);
   </script>
   <title>定額サブスクホームページ/ウィルサポ</title>
-		<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S1MX9T90DT"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-S1MX9T90DT');
-	</script>
   <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
   <!-- End of HubSpot Embed Code -->

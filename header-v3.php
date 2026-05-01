@@ -82,17 +82,10 @@
   </script>
 
   <?php wp_head(); ?>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S1MX9T90DT"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-S1MX9T90DT');
-	</script>
 </head>
-<body>
+<body <?php body_class('has-loading-v2'); ?>>
+
+<?php /* Phase 7 で削除予定:旧 splash(loading.js 連動)
   <div id="splash">
     <div id="splash-logo">
       <div class="img-wrapper">
@@ -101,6 +94,17 @@
       <p class="loading-message">ともに、未来を創る。</p>
     </div>
   </div>
+*/ ?>
+
+  <!-- ===================================================== -->
+  <!-- ローディング v2(トップページ用:ロゴふわっとバリアント) ここから -->
+  <!-- ===================================================== -->
+  <div id="splash-v2" class="loading-v2 loading-v2--logo">
+    <div class="loading-v2__logo">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="合同会社ウィル">
+    </div>
+  </div>
+  <!-- ローディング v2 ここまで -->
 
   <div class="sp-header-v5 sp">
     <a href="<?php echo home_url('/'); ?>" class="sp-header-v5__logo" aria-label="トップページへ">

@@ -1,0 +1,128 @@
+// =====================================================
+// Page Hero(下層ページ共通ヒーロー)
+// 作成日: 2026-05-01
+// 基準デザイン: .ebooks-header(_archive-ebooks.scss)
+// 対応PHP: template-parts/page-hero.php
+//
+// 使い方:
+//   <?php get_template_part( 'template-parts/page-hero', null, [
+//     'en'    => 'ABOUT',
+//     'title' => 'ウィルについて',
+//     'lead'  => '福岡から、BtoB中小企業の営業基盤を設計する。',
+//     // 'badge' => '...',  // Phase 1 では未使用
+//   ] ); ?>
+//
+// 注意:
+// - 既存 .ebooks-header(_archive-ebooks.scss)とは独立した名前空間
+// - 既存 .ebooks-header のスタイルには影響しない
+// - $ph-* ローカル変数は同色を別変数として独立保持(方針A)
+// =====================================================
+
+// ローカル変数(.ebooks-header と同色だが独立した名前空間)
+$ph-primary:   #7CC1C9;   // 装飾英語ラベル色
+$ph-accent:    #28849D;   // タイトル色
+$ph-text:      #3E5054;   // 本文色
+$ph-bg-pale:   #F0F8F9;   // 背景色
+$ph-border:    #C0D5D8;   // バッジ枠線色
+
+// =====================================================
+// コンテナ
+// =====================================================
+.page-hero {
+  background: $ph-bg-pale;
+  // 固定ヘッダー(.header-child-v2 80px sticky)が被るぶんの上余白を確保
+  padding: 150px 0 70px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+  color: $ph-text;
+
+  &__inner {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  // 装飾英語ラベル(透過25%、タイトル背面に重なる位置)
+  &__en {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    letter-spacing: 5px;
+    color: $ph-primary;
+    opacity: .25;
+    line-height: 1em;
+    margin: 0 0 -28px;
+  }
+
+  // 日本語タイトル(各ページ唯一の h1)
+  &__title {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: $ph-accent;
+    margin: 0 0 24px;
+  }
+
+  // リード(任意・<br> のみ可)
+  &__lead {
+    font-size: 15px;
+    line-height: 2em;
+    letter-spacing: 1.5px;
+    color: $ph-text;
+    margin: 0 0 20px;
+  }
+
+  // バッジ(任意・件数等の丸囲み・Phase 1 では未使用)
+  &__badge {
+    display: inline-block;
+    background: #ffffff;
+    border: solid 1px $ph-border;
+    color: $ph-accent;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border-radius: 999px;
+    margin: 0;
+
+    strong {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 4px;
+    }
+  }
+}
+
+// =====================================================
+// SP(770px 以下)
+// =====================================================
+@media screen and (max-width: 770px) {
+  .page-hero {
+    padding: 100px 0 50px;
+
+    &__en {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: -19px;
+    }
+
+    &__title {
+      font-size: 22px;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    &__lead {
+      font-size: 13px;
+      line-height: 1.9em;
+      letter-spacing: 1px;
+    }
+
+    &__badge {
+      font-size: 12px;
+      padding: 7px 16px;
+
+      strong { font-size: 16px; }
+    }
+  }
+}

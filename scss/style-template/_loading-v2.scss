@@ -1,0 +1,182 @@
+// =====================================================
+// Loading v2(新ローディングアニメーション)
+// 作成日: 2026-05-01
+//
+// 2 バリアント構成:
+//   .loading-v2--line  : 下層ページ用(線のみ。0.3-0.9s で左→右に伸びる)
+//   .loading-v2--logo  : トップページ用(ロゴのみ。ふわっとフェードイン)
+//
+// 全体タイムライン: 1.6 秒
+//   0.0 - 1.3s : --logo はロゴふわっと、--line は 0.3 秒待機後に線が左→右へ伸びる
+//   1.3 - 1.6s : 全体フェードアウト(共通)
+//   1.6 - 2.4s : ヘッダー & コンテンツが 0.8 秒で同時フェードイン(JS 経由)
+//
+// 想定マークアップ:
+//
+//   下層ページ用(線のみ):
+//   <div id="splash-v2" class="loading-v2 loading-v2--line">
+//     <span class="loading-v2__line" aria-hidden="true"></span>
+//   </div>
+//
+//   トップページ用(ロゴふわっと):
+//   <div id="splash-v2" class="loading-v2 loading-v2--logo">
+//     <div class="loading-v2__logo">
+//       <img src="img/white_yoko.png" alt="合同会社ウィル">
+//     </div>
+//   </div>
+//
+// 必要な body クラス: has-loading-v2
+//   ヘッダー側で body_class('has-loading-v2') として付与する想定
+//
+// 注意:
+// - 既存 _loading.scss(#splash / #splash-child)とは独立した名前空間
+// - 既存 #splash / #splash-child のスタイルには影響しない
+// - body.appear.has-loading-v2::before のみ旧幕アニメを無効化
+// =====================================================
+
+// ローカル変数
+$lv2-bg:        #7fbabd;   // 背景:キーカラー(構成書 v5)
+$lv2-line:      #ffffff;   // 下線:白(コントラスト確保)
+$lv2-logo-pc:   200px;     // ロゴ幅(PC)
+$lv2-logo-sp:   150px;     // ロゴ幅(SP)
+$lv2-z:         9999999;   // 既存 #splash と同等の z-index
+
+// =====================================================
+// スプラッシュコンテナ(共通)
+// =====================================================
+#splash-v2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $lv2-bg;
+  z-index: $lv2-z;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+
+  // 1.3 秒後に 0.3 秒かけてフェードアウト(両バリアント共通)
+  animation: splashV2Hide .3s ease 1.3s forwards;
+}
+
+// =====================================================
+// バリアント 1:線のみ(下層ページ)
+//   0.3 - 1.3s で左→右に 1px の線が伸びる(1.0 秒)
+// =====================================================
+.loading-v2--line .loading-v2__line {
+  display: block;
+  width: 100%;             // viewport の左端から右端まで
+  height: 1px;
+  background: $lv2-line;
+  transform: scaleX(0);
+  transform-origin: left center;
+  // 「スッと伸びて、右端に着くにつれて少しゆっくりになる」easeOutQuart 系カーブ
+  animation: splashV2LineDraw 1s cubic-bezier(.16, 1, .3, 1) .3s forwards;
+}
+
+// =====================================================
+// バリアント 2:ロゴふわっと(トップページ)
+//   0.0 - 1.3s で translateY(10px) → 0 + opacity 0 → 1
+//   ウィルサポ LP の wsv2-loader と同じ「ふわっと」感
+// =====================================================
+.loading-v2--logo .loading-v2__logo {
+  display: block;
+  width: $lv2-logo-pc;
+  height: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: splashV2LogoFluffy 1.3s cubic-bezier(.16, 1, .3, 1) 0s forwards;
+}
+
+// =====================================================
+// 旧 _loading.scss の幕アニメを無効化
+// has-loading-v2 が付与されているページのみ
+// =====================================================
+body.appear.has-loading-v2::before {
+  display: none !important;
+}
+
+// 新ローディング使用時はコンテンツ表示の遅延も短縮
+// (旧仕様は 0.8s 遅延 + 1.0s フェードで 1.8s 待ちが発生)
+// 新仕様では splash 完全消失(1.6s)後に 0.8 秒かけてコンテンツが現れる
+body.has-loading-v2.appear .loading-container {
+  animation: splashV2ContentIn .8s ease 0s forwards !important;
+  opacity: 0;
+}
+
+// PC ヘッダーもコンテンツと同時にフェードイン
+// (PC ヘッダーは .loading-container の外にあるため、デフォルトでは
+//  スプラッシュ消失と同時に完全表示されてしまい、コンテンツより先に見える)
+body.has-loading-v2 .header-child-v2 {
+  opacity: 0;
+}
+
+body.has-loading-v2.appear .header-child-v2 {
+  animation: splashV2ContentIn .8s ease 0s forwards !important;
+}
+
+// SP ヘッダー(.sp-header-v5)も同じ 0.8 秒タイミングで同期させる
+// (_header-v4.scss / _header-v5.scss の旧仕様 .4s を上書き)
+@media screen and (max-width: 770px) {
+  body.has-loading-v2.appear .sp-header-v5 {
+    animation: spHeaderV5Appear .8s ease 0s both !important;
+  }
+}
+
+// =====================================================
+// キーフレーム
+// =====================================================
+@keyframes splashV2LineDraw {
+  to { transform: scaleX(1); }
+}
+
+@keyframes splashV2LogoFluffy {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes splashV2Hide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@keyframes splashV2ContentIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+// =====================================================
+// SP(770px 以下)
+// =====================================================
+@media screen and (max-width: 770px) {
+  .loading-v2--logo .loading-v2__logo {
+    width: $lv2-logo-sp;
+  }
+  // .loading-v2__line は width: 100% のまま(SP でも viewport 全幅)
+}
+
+// =====================================================
+// アクセシビリティ:動きを抑える設定
+// prefers-reduced-motion 適用時はスプラッシュを表示しない
+// =====================================================
+@media (prefers-reduced-motion: reduce) {
+  #splash-v2 {
+    display: none;
+  }
+}

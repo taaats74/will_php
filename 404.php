@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
   <section class="page-not-found">
     <div class="container">
@@ -16,4 +16,4 @@
       </div>
     </div>
   </section>
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

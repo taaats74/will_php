@@ -1,8 +1,10 @@
 @use "general";
 @use "loading";
+@use "loading-v2";
 @use "header";
 @use "header-v5";
-@use "page-top";
+@use "header-v4";
+@use "page-hero";
 @use "page-top2";
 @use "page-top3";
 @use "page-about";
@@ -18,11 +20,12 @@
 @use "single-service-graphic";
 @use "archive-info";
 @use "single-info";
+@use "archive-ebooks";
+@use "single-ebooks";
 @use "archive-works";
 @use "single-works";
 @use "page-privacypolicy";
 @use "page-notfound";
 @use "page-tradelaw";
-@use "page-contentdl";
 @use "footer";
 @use "footer-v5";
