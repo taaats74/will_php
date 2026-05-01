@@ -1,18 +1,12 @@
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-  <section class="hero-section service">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/service.png" alt="">
-        </div>
-        <div class="hero-text">
-          <h2 class="section-header"><span class="green">s</span>ervice</h2>
-          <p class="sub-title">サービス内容</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'SERVICES',
+  'title' => 'サービス一覧',
+  'lead'  => '営業基盤を統合的に支援する5つのサービス。',
+] );
+?>
 
   <section class="archive-service-service">
     <div class="container">
@@ -194,4 +188,4 @@
     </div>
   </section>
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

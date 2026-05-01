@@ -5,21 +5,15 @@ Template Post Type: service
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-  <section class="hero-section single-service ad">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/Advertising.png" alt="">
-        </div>
-        <div class="hero-text">
-          <h2 class="section-header"><span class="green">a</span>dvertising</h2>
-          <p class="sub-title">Web広告運用代行</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'SERVICES',
+  'title' => 'Web広告運用代行',
+  'lead'  => '検索広告・SNS広告で、確実な接点を作ります。',
+] );
+?>
 
   <?php
     if(have_posts()):
@@ -31,4 +25,4 @@ Template Post Type: service
   endif;
   ?>
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

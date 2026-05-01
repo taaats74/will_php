@@ -1,0 +1,191 @@
+{
+  "key": "group_ebooks_settings",
+  "title": "ダウンロード資料設定",
+  "fields": [
+    {
+      "key": "field_dl_subtitle",
+      "label": "サブコピー",
+      "name": "dl_subtitle",
+      "type": "text",
+      "instructions": "資料タイトル直下に表示されるサブコピー",
+      "required": 0
+    },
+    {
+      "key": "field_dl_page_count",
+      "label": "全ページ数",
+      "name": "dl_page_count",
+      "type": "number",
+      "instructions": "PDF の総ページ数(数値のみ)",
+      "required": 0,
+      "min": 1
+    },
+    {
+      "key": "field_dl_target_items",
+      "label": "こんな方におすすめ",
+      "name": "dl_target_items",
+      "type": "repeater",
+      "instructions": "ターゲットとなる読み手を 3〜6 件程度",
+      "required": 0,
+      "min": 0,
+      "layout": "table",
+      "button_label": "項目を追加",
+      "sub_fields": [
+        {
+          "key": "field_dl_target_item",
+          "label": "テキスト",
+          "name": "target_item",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "field_dl_benefit_items",
+      "label": "この資料でわかること",
+      "name": "dl_benefit_items",
+      "type": "repeater",
+      "instructions": "資料を読むことで得られる成果を 3〜5 件",
+      "required": 0,
+      "layout": "table",
+      "button_label": "項目を追加",
+      "sub_fields": [
+        {
+          "key": "field_dl_benefit_item",
+          "label": "テキスト",
+          "name": "benefit_item",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "field_dl_toc_items",
+      "label": "資料の目次",
+      "name": "dl_toc_items",
+      "type": "repeater",
+      "instructions": "章ごとに「ラベル / 章タイトル / 説明」を入力",
+      "required": 0,
+      "layout": "row",
+      "button_label": "章を追加",
+      "sub_fields": [
+        {
+          "key": "field_dl_chapter_label",
+          "label": "章ラベル",
+          "name": "chapter_label",
+          "type": "text",
+          "instructions": "例: CHAPTER 01"
+        },
+        {
+          "key": "field_dl_chapter_title",
+          "label": "章タイトル",
+          "name": "chapter_title",
+          "type": "text"
+        },
+        {
+          "key": "field_dl_chapter_desc",
+          "label": "章の説明",
+          "name": "chapter_desc",
+          "type": "textarea",
+          "rows": 3,
+          "new_lines": ""
+        }
+      ]
+    },
+    {
+      "key": "field_dl_message_heading",
+      "label": "制作背景見出し",
+      "name": "dl_message_heading",
+      "type": "text",
+      "default_value": "本資料を作成した背景"
+    },
+    {
+      "key": "field_dl_message_body",
+      "label": "制作背景本文",
+      "name": "dl_message_body",
+      "type": "textarea",
+      "rows": 6
+    },
+    {
+      "key": "field_dl_author_photo",
+      "label": "著者写真",
+      "name": "dl_author_photo",
+      "type": "image",
+      "return_format": "id",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_dl_author_name",
+      "label": "著者名",
+      "name": "dl_author_name",
+      "type": "text",
+      "default_value": "高橋 竜也"
+    },
+    {
+      "key": "field_dl_author_title",
+      "label": "著者肩書",
+      "name": "dl_author_title",
+      "type": "text",
+      "default_value": "合同会社ウィル 代表"
+    },
+    {
+      "key": "field_dl_author_bio",
+      "label": "著者略歴",
+      "name": "dl_author_bio",
+      "type": "textarea",
+      "rows": 5
+    },
+    {
+      "key": "field_dl_hubspot_portal_id",
+      "label": "HubSpot Portal ID",
+      "name": "dl_hubspot_portal_id",
+      "type": "text",
+      "instructions": "HubSpot のアカウント識別子(例: 48153453)"
+    },
+    {
+      "key": "field_dl_hubspot_form_id",
+      "label": "HubSpot Form ID",
+      "name": "dl_hubspot_form_id",
+      "type": "text",
+      "instructions": "資料ごとに発行する HubSpot フォーム ID"
+    },
+    {
+      "key": "field_dl_form_heading",
+      "label": "フォーム見出し",
+      "name": "dl_form_heading",
+      "type": "text",
+      "default_value": "無料で資料をダウンロード"
+    },
+    {
+      "key": "field_dl_form_lead",
+      "label": "フォームリード文",
+      "name": "dl_form_lead",
+      "type": "text",
+      "default_value": "以下のフォームにご記入ください。ご登録いただいたメールアドレスに、資料 PDF のダウンロード URL をお送りします。"
+    },
+    {
+      "key": "field_dl_related_ebooks",
+      "label": "関連資料(手動指定)",
+      "name": "dl_related_ebooks",
+      "type": "relationship",
+      "instructions": "最大 3 件まで。空欄なら自動取得(同 type+theme → 同 type → 最新)",
+      "post_type": ["ebooks"],
+      "filters": ["search", "taxonomy"],
+      "max": 3,
+      "return_format": "id"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "ebooks"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "active": true,
+  "modified": 1714435200
+}

@@ -5,21 +5,15 @@
   */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-<section class="hero-section about">
-  <div class="container">
-    <div class="wrapper">
-      <div class="img-wrapper">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/about-hero.png" alt="">
-      </div>
-      <div class="hero-text">
-        <h2 class="section-header"><span class="green">a</span>bout</h2>
-        <p class="sub-title">ウィルについて</p>
-      </div>
-    </div>
-  </div>
-</section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'ABOUT',
+  'title' => 'ウィルについて',
+  'lead'  => '福岡から、BtoB中小企業の営業基盤を設計する。',
+] );
+?>
 
 <?php
   if(have_posts()):
@@ -31,4 +25,4 @@
 endif;
 ?>
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

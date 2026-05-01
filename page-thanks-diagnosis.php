@@ -5,21 +5,14 @@
   */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-  <section class="hero-section contact">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/contact.png" alt="">
-        </div>
-        <div class="hero-text">
-          <h2 class="section-header"><span class="green">d</span>iagnosis</h2>
-          <p class="sub-title">Webサイト無料診断</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'THANKS',
+  'title' => '診断レポート申込完了',
+] );
+?>
 
   <section class="page-contact">
     <div class="container">
@@ -37,4 +30,4 @@
     </div>
   </section>
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

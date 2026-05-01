@@ -5,21 +5,15 @@
   */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-  <section class="hero-section price">
-    <div class="container">
-      <div class="wrapper">
-        <div class="img-wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/price.png" alt="">
-        </div>
-        <div class="hero-text">
-          <h2 class="section-header"><span class="green">p</span>rice</h2>
-          <p class="sub-title">料金プラン</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'PRICE',
+  'title' => '料金プラン',
+  'lead'  => '事業フェーズに合わせた、無理のない料金体系。',
+] );
+?>
 
   <?php
     if(have_posts()):
@@ -414,4 +408,4 @@
     </div>
   </section> -->
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

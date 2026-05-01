@@ -1,0 +1,808 @@
+// =====================================================
+// single-ebooks.scss
+// 用途: single-ebooks.php(資料個別)
+// プレフィックス: .ebooks-
+// =====================================================
+
+$will-primary:   #7CC1C9;
+$will-light:     #B4DBE0;
+$will-accent:    #28849D;
+$will-highlight: #F0E74E;
+$will-text:      #3E5054;
+$will-bg-pale:   #F0F8F9;
+$will-border:    #C0D5D8;
+$will-subtle:    #8AA0A4;
+
+// ----- ページヘッダー(archive-ebooks .ebooks-header と統一) -----
+.ebooks-single-header {
+  background: $will-bg-pale;
+  // ヘッダーが被るぶんの余白を上に確保
+  padding: 150px 0 70px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+  &__inner {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__en {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    letter-spacing: 5px;
+    color: $will-primary;
+    opacity: .25;
+    line-height: 1em;
+    margin: 0 0 -28px;
+  }
+
+  &__title {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.55em;
+    letter-spacing: 4px;
+    color: $will-accent;
+    margin: 0 0 24px;
+  }
+
+  &__lead {
+    font-size: 15px;
+    line-height: 2em;
+    letter-spacing: 1.5px;
+    color: $will-text;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .ebooks-single-header {
+    padding: 100px 0 50px;
+
+    &__en {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: -19px;
+    }
+
+    &__title {
+      font-size: 22px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    &__lead {
+      font-size: 13px;
+      line-height: 1.9em;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.ebooks-single {
+  background: #ffffff;
+  color: $will-text;
+  font-family: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+  padding: 80px 0 100px;
+
+  &__layout {
+    width: 92%;
+    max-width: 900px;
+    margin: 0 auto;
+    // PC でも SP でも単一列のセクション流れ。
+    // article(.ebooks-single__main)を display: contents で透過し、
+    // 配下のセクションと aside(.ebooks-form-sidebar)をフラットに並べる。
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__main {
+    display: contents;
+  }
+}
+
+// すべてのブレイクポイントで sticky を解除
+.ebooks-form-sidebar__inner {
+  position: static !important;
+}
+
+// 上部フォーム(以前は SP 限定)を PC でも表示
+.ebooks-form-sidebar--top {
+  display: block;
+}
+
+// 表示順(PC・SP 共通)
+.ebooks-hero                                  { order: 1; }
+.ebooks-form-sidebar.ebooks-form-sidebar--top { order: 2; } // アイキャッチ直下
+.ebooks-content                               { order: 3; }
+.ebooks-form-sidebar                          { order: 4; } // 制作背景直下
+.ebooks-author                                { order: 5; }
+.ebooks-related                               { order: 6; }
+
+// ----- セクション共通 -----
+.ebooks-single .ebooks-section-title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: $will-accent;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &__en {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: $will-primary;
+    text-transform: uppercase;
+  }
+}
+
+// ----- ヒーロー -----
+.ebooks-hero {
+  margin-bottom: 56px;
+
+  &__themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+
+    li {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: $will-accent;
+      background: $will-bg-pale;
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+  }
+
+  &__title {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.55em;
+    letter-spacing: 2px;
+    color: $will-accent;
+    margin: 0 0 16px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 1.9em;
+    letter-spacing: 1px;
+    color: $will-text;
+    margin: 0 0 28px;
+  }
+
+  &__cover {
+    margin: 0;
+    border: solid 1px $will-border;
+    border-radius: 12px;
+    overflow: hidden;
+    background: $will-bg-pale;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__pages {
+    background: #ffffff;
+    color: $will-accent;
+    padding: 10px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    border-top: solid 1px $will-border;
+  }
+}
+
+// ----- こんな方におすすめ -----
+.ebooks-target {
+  background: $will-bg-pale;
+  border-radius: 12px;
+  padding: 36px 36px 32px;
+  margin-bottom: 56px;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.7em;
+      letter-spacing: 0.5px;
+      color: $will-text;
+    }
+  }
+
+  &__check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: $will-accent;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 3px;
+  }
+}
+
+// ----- この資料でわかること -----
+.ebooks-benefits {
+  margin-bottom: 56px;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+
+  &__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #ffffff;
+    border: solid 1px $will-border;
+    border-radius: 8px;
+    padding: 18px 22px;
+  }
+
+  &__num {
+    flex-shrink: 0;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: $will-primary;
+    line-height: 1em;
+    width: 38px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.75em;
+    letter-spacing: 0.5px;
+    color: $will-text;
+  }
+}
+
+// ----- 目次 -----
+.ebooks-toc {
+  margin-bottom: 56px;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: ebooks-toc;
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: solid 1px $will-border;
+
+    &:first-child {
+      border-top: solid 1px $will-border;
+    }
+  }
+
+  &__label {
+    flex-shrink: 0;
+    width: 80px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: $will-primary;
+    padding-top: 4px;
+  }
+
+  &__body {
+    flex: 1;
+    min-width: 0;
+  }
+  &__title {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6em;
+    letter-spacing: 1px;
+    color: $will-text;
+    margin: 0 0 6px;
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: 1.8em;
+    color: $will-subtle;
+    margin: 0;
+  }
+}
+// ----- 制作背景 -----
+.ebooks-message {
+  background: $will-bg-pale;
+  border-left: solid 4px $will-accent;
+  border-radius: 8px;
+  padding: 32px 36px;
+  margin-bottom: 56px;
+
+  &__body {
+    font-size: 14px;
+    line-height: 2em;
+    letter-spacing: 0.5px;
+    color: $will-text;
+    margin: 0;
+  }
+}
+
+// ----- 監修者・運営会社 -----
+.ebooks-author {
+  margin-bottom: 56px;
+
+  &__card {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    background: #ffffff;
+    border: solid 1px $will-border;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 18px;
+  }
+
+  &__photo {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: $will-bg-pale;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin: 0 0 4px;
+    color: $will-text;
+  }
+
+  &__title {
+    font-size: 12px;
+    color: $will-subtle;
+    margin: 0 0 12px;
+    letter-spacing: 1px;
+  }
+
+  &__bio {
+    font-size: 13px;
+    line-height: 1.85em;
+    color: $will-text;
+    margin: 0;
+  }
+
+  &__company {
+    background: $will-bg-pale;
+    border-radius: 12px;
+    padding: 20px 26px;
+    display: grid;
+    gap: 12px;
+
+    > div {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+      font-size: 13px;
+    }
+
+    dt {
+      color: $will-accent;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    dd {
+      margin: 0;
+      color: $will-text;
+      line-height: 1.7em;
+    }
+  }
+}
+
+// ----- 関連資料 -----
+.ebooks-related {
+  margin-bottom: 30px;
+
+  .ebooks-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+
+    &--related {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__more {
+    text-align: center;
+    margin: 32px 0 0;
+
+    a {
+      color: $will-accent;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      transition: opacity .25s ease;
+
+      &:hover { opacity: .7; }
+    }
+  }
+}
+
+// .ebooks-card は archive 側でも定義されているので最低限の上書きはしない。
+// 個別ページの related 内のカードは archive と同じ見た目を継承。
+.ebooks-single .ebooks-card {
+  background: #ffffff;
+  border: solid 1px $will-border;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.22, 1, .36, 1), box-shadow .35s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(40, 132, 157, .12);
+  }
+
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__thumb {
+    position: relative;
+    width: 100%;
+    // OGP 推奨比率 1200×630(1.91:1)
+    aspect-ratio: 1200 / 630;
+    background: $will-bg-pale;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__thumb-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, $will-light, $will-primary);
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  &__pages {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(40, 132, 157, .9);
+    color: #ffffff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  &__body {
+    padding: 16px 18px 20px;
+  }
+
+  &__themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+
+    li {
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: $will-accent;
+      background: $will-bg-pale;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.55em;
+    color: $will-text;
+    margin: 0 0 6px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    line-height: 1.7em;
+    color: $will-subtle;
+    margin: 0 0 12px;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: $will-accent;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
+// ----- フォームサイドバー -----
+// レイアウト全体が単一列セクション流れになったため、
+// __top の表示制御 / __inner の sticky はファイル冒頭で一括設定済み。
+.ebooks-form-sidebar {
+  &__inner {
+    background: #ffffff;
+    border: solid 1px $will-border;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(40, 132, 157, .08);
+  }
+
+  &__thumb {
+    border-radius: 10px;
+    overflow: hidden;
+    background: $will-bg-pale;
+    margin-bottom: 18px;
+    // OGP 推奨比率 1200×630(1.91:1)
+    aspect-ratio: 1200 / 630;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__heading {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    color: $will-accent;
+    margin: 0 0 10px;
+    line-height: 1.5em;
+  }
+
+  &__lead {
+    font-size: 13px;
+    line-height: 1.85em;
+    color: $will-text;
+    margin: 0 0 18px;
+  }
+
+  &__form {
+    margin-bottom: 14px;
+  }
+
+  &__placeholder {
+    font-size: 13px;
+    color: $will-subtle;
+    line-height: 1.8em;
+    background: $will-bg-pale;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin: 0 0 14px;
+
+    a {
+      color: $will-accent;
+      text-decoration: underline;
+    }
+  }
+
+  &__privacy {
+    font-size: 11px;
+    color: $will-subtle;
+    line-height: 1.7em;
+    margin: 0;
+
+    a {
+      color: $will-accent;
+      text-decoration: underline;
+    }
+  }
+}
+
+// =====================================================
+// SP(770px 以下)
+// =====================================================
+@media screen and (max-width: 770px) {
+  .ebooks-single {
+    padding: 50px 0 70px;
+
+    &__layout {
+      width: 92%;
+      // SP では gap を狭める(全体レイアウト・order はベース側で定義済み)
+      gap: 40px;
+    }
+  }
+
+  // SP のみ:アイキャッチ直下 form-sidebar の上余白を 30px に詰める
+  // .ebooks-hero の margin-bottom 36px + 親の gap 40px = 76px の自然な空きから
+  // 46px ぶんを負マージンで詰めて、視覚的な上余白を 30px に調整
+  .ebooks-form-sidebar.ebooks-form-sidebar--top {
+    margin-top: calc(30px - (36px + 40px));
+  }
+
+  .ebooks-single {
+
+    .ebooks-section-title {
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+
+      &__en {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .ebooks-hero {
+    margin-bottom: 36px;
+
+    &__title {
+      font-size: 22px;
+      letter-spacing: 1.5px;
+      line-height: 1.55em;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 1.85em;
+      margin-bottom: 22px;
+    }
+  }
+
+  .ebooks-target {
+    padding: 26px 22px;
+    margin-bottom: 36px;
+
+    &__list li {
+      font-size: 13px;
+      line-height: 1.7em;
+    }
+  }
+
+  .ebooks-benefits {
+    margin-bottom: 36px;
+
+    &__list li {
+      gap: 14px;
+      padding: 14px 16px;
+    }
+
+    &__num { font-size: 18px; width: 30px; }
+    &__text { font-size: 13px; }
+  }
+
+  .ebooks-toc {
+    margin-bottom: 36px;
+
+    &__item {
+      flex-direction: column;
+      gap: 6px;
+      padding: 16px 0;
+    }
+
+    &__label { width: auto; }
+    &__title { font-size: 14px; }
+    &__desc { font-size: 12px; }
+  }
+
+  .ebooks-message {
+    padding: 22px 22px;
+    margin-bottom: 36px;
+
+    &__body { font-size: 13px; line-height: 1.9em; }
+  }
+
+  .ebooks-author {
+    margin-bottom: 36px;
+
+    &__card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 22px;
+      gap: 16px;
+    }
+
+    &__photo { width: 80px; height: 80px; }
+    &__name  { font-size: 16px; }
+    &__bio   { font-size: 12px; text-align: left; }
+
+    &__company {
+      padding: 18px 20px;
+
+      > div {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  }
+
+  .ebooks-related {
+    .ebooks-cards-grid,
+    .ebooks-cards-grid--related {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  .ebooks-form-sidebar {
+    &__inner {
+      padding: 22px;
+    }
+
+    &__heading { font-size: 17px; letter-spacing: 1px; }
+    &__lead    { font-size: 12px; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ebooks-single .ebooks-card {
+    transition: none !important;
+
+    &:hover { transform: none; }
+  }
+}

@@ -5,21 +5,15 @@
   */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('v4'); ?>
 
-<section class="hero-section contact">
-<div class="container">
-<div class="wrapper">
-  <div class="img-wrapper">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/contact.png" alt="">
-  </div>
-  <div class="hero-text">
-    <h2 class="section-header"><span class="green">c</span>ontact</h2>
-    <p class="sub-title">お問い合わせ</p>
-  </div>
-</div>
-</div>
-</section>
+<?php
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'CONTACT',
+  'title' => 'お問い合わせ',
+  'lead'  => '「次の一手」を、一緒に考えましょう。',
+] );
+?>
 
 <section class="page-contact">
 <div class="container">
@@ -76,4 +70,4 @@
 </div>
 </section>
 
-<?php get_footer("v2"); ?>
+<?php get_footer("v3"); ?>

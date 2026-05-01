@@ -80,26 +80,27 @@
 
 
   <?php wp_head(); ?>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S1MX9T90DT"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-S1MX9T90DT');
-	</script>
 </head>
-<body>
+<body <?php body_class('has-loading-v2'); ?>>
 
+<?php /* Phase 7 で削除予定:旧 splash-child(loading-child.js 連動)
   <div id="splash-child">
-    <!-- <div id="splash-logo">
+    <div id="splash-logo">
       <div class="img-wrapper">
         <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="">
       </div>
       <p class="loading-message">ともに、未来を創る。</p>
-    </div> -->
+    </div>
   </div>
+*/ ?>
+
+  <!-- ===================================================== -->
+  <!-- ローディング v2(フォールバック用:線のみバリアント) ここから -->
+  <!-- ===================================================== -->
+  <div id="splash-v2" class="loading-v2 loading-v2--line">
+    <span class="loading-v2__line" aria-hidden="true"></span>
+  </div>
+  <!-- ローディング v2 ここまで -->
 
 
   <div class="loading-container">
