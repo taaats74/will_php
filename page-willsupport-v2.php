@@ -35,15 +35,6 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/style.css">
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1MX9T90DT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S1MX9T90DT');
-  </script>
-
   <!-- HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
 
