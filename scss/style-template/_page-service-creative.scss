@@ -1,0 +1,759 @@
+// =====================================================
+// page-service-creative.php 専用スタイル
+// 名前空間: .service-creative-* / BEM
+// トンマナ: page-topv3 / page-service-content-seo 準拠
+//
+// セクション構成:
+//   1. HERO       … template-parts/page-hero(下層共通)
+//   2. CONCEPT    … .service-creative-concept(セントラルメッセージ)
+//   3. PROBLEM    … .service-creative-problem(3カテゴリ・チェックリスト)
+//   4. FEATURE    … .service-creative-feature(4特徴・画像つき・2x2 grid)
+//   5. PRICE      … .service-creative-price(4プラン・2x2 grid)
+//   6. FAQ        … .service-creative-faq(.accordion 既存パターン流用・10問)
+//   7. CTA        … .service-web-cta(page-service-web の既存スタイルを流用・新規定義なし)
+// =====================================================
+
+// =========================================
+// ウィルブランドカラー(Brand Color Guideline v1.0準拠)
+// =========================================
+$color-primary:    #7CC1C9;
+$color-light:      #B4DBE0;
+$color-accent:     #28849D;
+$color-highlight:  #F0E74E;
+$color-text:       #3E5054;
+$color-bg-pale:    #F0F8F9;
+$color-border:     #C0D5D8;
+$color-subtle:     #8AA0A4;
+$color-white:      #FFFFFF;
+
+$sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+
+// keyword ハイライト共通(蛍光ペン風・黄色マーカー・前後の文章色を継承)
+%sc-keyword {
+  background: linear-gradient(
+    transparent 0%,
+    transparent 60%,
+    rgba(240, 231, 78, 0.65) 60%,
+    rgba(240, 231, 78, 0.65) 95%,
+    transparent 95%
+  );
+  color: inherit;
+  font-weight: 700;
+  padding: 0 2px;
+}
+
+// セクション内 .container 共通
+%sc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+// セクション内 inner 共通
+%sc-inner {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// 共通ヘッダー(.en + h2 + .subtitle・page-topv3 トンマナ)
+%sc-section-head {
+  text-align: center;
+  margin-bottom: 64px;
+
+  .en {
+    font-family: $sc-font-jp;
+    font-weight: 900;
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: #7fbabd;
+    opacity: .1;
+    line-height: 1;
+    margin: 0 0 -28px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: $sc-font-jp;
+    font-weight: 500;
+    font-size: 26px;
+    color: #333333;
+    letter-spacing: 8px;
+    line-height: 1.55;
+    margin: 0 0 22px;
+  }
+
+  .subtitle {
+    font-family: YuGothic, 'Yu Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #595959;
+    letter-spacing: 3px;
+    line-height: 1.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+// =========================================
+// [2] CONCEPT(セントラルメッセージ)
+// =========================================
+.service-creative-concept {
+  background: $color-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %sc-container; }
+}
+
+.service-creative-concept__inner {
+  @extend %sc-inner;
+  text-align: center;
+}
+
+.service-creative-concept__headline {
+  font-family: $sc-font-jp;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.55;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0 0 48px;
+
+  .keyword { @extend %sc-keyword; }
+}
+
+.service-creative-concept__body {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+
+  p {
+    font-family: $sc-font-jp;
+    font-size: 16px;
+    line-height: 2;
+    color: $color-text;
+    letter-spacing: 0.04em;
+    margin: 0 0 28px;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  .keyword { @extend %sc-keyword; }
+}
+
+// =========================================
+// [3] PROBLEM(3カテゴリ・チェックリスト)
+// =========================================
+.service-creative-problem {
+  background: $color-white;
+  padding: 120px 0;
+
+  .container { @extend %sc-container; }
+}
+
+.service-creative-problem__inner { @extend %sc-inner; }
+
+.service-creative-problem__head { @extend %sc-section-head; }
+
+.service-creative-problem__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-creative-problem__category {
+  list-style: none;
+  background: $color-bg-pale;
+  border-radius: 8px;
+  padding: 36px 40px;
+}
+
+.service-creative-problem__category-title {
+  font-family: $sc-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.06em;
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $color-border;
+}
+
+.service-creative-problem__check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    font-family: $sc-font-jp;
+    font-size: 15px;
+    line-height: 1.85;
+    color: $color-text;
+    letter-spacing: 0.04em;
+    padding-left: 26px;
+    margin: 0 0 12px;
+
+    &:last-child { margin-bottom: 0; }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 14px;
+      height: 14px;
+      background: $color-primary;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 3px $color-bg-pale;
+    }
+  }
+}
+
+// =========================================
+// [4] FEATURE(4特徴・画像つき・2x2 grid)
+// =========================================
+.service-creative-feature {
+  background: $color-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %sc-container; }
+}
+
+.service-creative-feature__inner { @extend %sc-inner; }
+
+.service-creative-feature__head { @extend %sc-section-head; }
+
+.service-creative-feature__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-creative-feature__item {
+  list-style: none;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: 0 0 36px;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.service-creative-feature__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: $color-bg-pale;
+  margin-bottom: 32px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.service-creative-feature__num {
+  font-family: $sc-font-jp;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1;
+  color: $color-primary;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  margin: 0 0 16px;
+  padding: 0 36px;
+}
+
+.service-creative-feature__title {
+  font-family: $sc-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin: 0 0 24px;
+  padding: 0 36px 18px;
+  border-bottom: 1px solid $color-border;
+  // 横並びで下線位置を揃える(2行分の高さ確保)
+  min-height: calc(22px * 1.5 * 2 + 18px);
+}
+
+.service-creative-feature__approach {
+  margin: 0 0 24px;
+  padding: 0 36px;
+  flex: 1 1 auto;
+
+  p {
+    font-family: $sc-font-jp;
+    font-size: 15px;
+    line-height: 2;
+    color: $color-text;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+}
+
+.service-creative-feature__benefit {
+  background: $color-bg-pale;
+  border-left: 4px solid $color-accent;
+  border-radius: 0 6px 6px 0;
+  padding: 18px 24px;
+  margin: 0 36px;
+
+  p {
+    font-family: $sc-font-jp;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.85;
+    color: $color-accent;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+
+  .keyword { @extend %sc-keyword; }
+}
+
+.service-creative-feature__benefit-arrow {
+  display: inline-block;
+  margin-right: 8px;
+  color: $color-primary;
+  font-weight: 800;
+}
+
+// =========================================
+// [5] PRICE(4プラン・2x2 grid)
+// =========================================
+.service-creative-price {
+  background: $color-white;
+  padding: 120px 0;
+
+  .container { @extend %sc-container; }
+}
+
+.service-creative-price__inner {
+  @extend %sc-inner;
+  max-width: 1100px;
+}
+
+.service-creative-price__head { @extend %sc-section-head; }
+
+.service-creative-price__lead {
+  text-align: center;
+  font-family: $sc-font-jp;
+  font-size: 15px;
+  line-height: 1.95;
+  color: $color-text;
+  margin: 0 0 56px;
+}
+
+.service-creative-price__plans { margin-bottom: 0; }
+
+.service-creative-price__plans-heading {
+  font-family: $sc-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.06em;
+  margin: 0 0 24px;
+  padding-left: 16px;
+  border-left: 4px solid $color-accent;
+}
+
+.service-creative-price__plans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.service-creative-price__plan-card {
+  background: $color-bg-pale;
+  border-radius: 8px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-creative-price__plan-num {
+  font-family: $sc-font-jp;
+  font-weight: 900;
+  font-size: 28px;
+  color: $color-primary;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0 0 14px;
+}
+
+.service-creative-price__plan-name {
+  font-family: $sc-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $color-border;
+}
+
+.service-creative-price__plan-desc {
+  font-family: $sc-font-jp;
+  font-size: 14px;
+  line-height: 1.9;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+  flex: 1 1 auto;
+}
+
+.service-creative-price__plan-price {
+  font-family: $sc-font-jp;
+  font-weight: 800;
+  font-size: 26px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-align: right;
+}
+
+// =========================================
+// [6] FAQ(.accordion 既存パターン流用)
+// =========================================
+.service-creative-faq {
+  background: $color-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %sc-container; }
+}
+
+.service-creative-faq__inner {
+  @extend %sc-inner;
+  max-width: 880px;
+}
+
+.service-creative-faq__head { @extend %sc-section-head; }
+
+.service-creative-faq__list {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  > ul > li {
+    list-style: none;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(40, 132, 157, 0.05);
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  .list.question {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.25s ease;
+
+    &:hover { background: $color-bg-pale; }
+
+    .text-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .list-icon {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: $color-accent;
+      color: $color-white;
+      font-family: $sc-font-jp;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .text {
+      font-family: $sc-font-jp;
+      font-weight: 700;
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: $color-accent;
+      letter-spacing: 0.04em;
+      margin: 0;
+    }
+
+    i.fa-solid {
+      flex-shrink: 0;
+      color: $color-accent;
+      font-size: 14px;
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+
+    &.active i.fa-solid { transform: rotate(0); }
+  }
+
+  .list.answer {
+    max-height: 0;
+    overflow: hidden;
+    background: $color-bg-pale;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+
+    .text-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 24px 22px;
+    }
+
+    .list-icon {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: $color-light;
+      color: $color-accent;
+      font-family: $sc-font-jp;
+      font-weight: 800;
+      font-size: 15px;
+      margin-top: 2px;
+    }
+
+    .text {
+      font-family: $sc-font-jp;
+      font-size: 14.5px;
+      line-height: 1.95;
+      color: $color-text;
+      letter-spacing: 0.04em;
+      margin: 0;
+      flex: 1;
+    }
+  }
+}
+
+// =====================================================
+// Tablet (max-width: 1024px)
+// =====================================================
+@media screen and (max-width: 1024px) {
+
+  // FEATURE:2 カラム維持(余白縮小)
+  .service-creative-feature__list {
+    gap: 24px;
+  }
+
+  .service-creative-feature__item {
+    padding: 0 0 28px;
+  }
+
+  .service-creative-feature__num,
+  .service-creative-feature__title,
+  .service-creative-feature__approach {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .service-creative-feature__benefit {
+    margin: 0 28px;
+  }
+
+  // PRICE:2 カラム維持
+  .service-creative-price__plans-grid {
+    gap: 20px;
+  }
+}
+
+// =====================================================
+// SP (max-width: 767px)
+// =====================================================
+@media screen and (max-width: 767px) {
+
+  // 共通ヘッダー SP 調整
+  .service-creative-problem__head,
+  .service-creative-feature__head,
+  .service-creative-price__head,
+  .service-creative-faq__head {
+    margin-bottom: 44px;
+
+    .en {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: -18px;
+    }
+
+    h2 {
+      font-size: 22px;
+      letter-spacing: 4px;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 13.5px;
+      letter-spacing: 1.5px;
+      line-height: 1.85;
+    }
+  }
+
+  // [2] CONCEPT
+  .service-creative-concept {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-creative-concept__headline {
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .service-creative-concept__body p {
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 22px;
+  }
+
+  // [3] PROBLEM
+  .service-creative-problem {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-creative-problem__list {
+    gap: 20px;
+  }
+
+  .service-creative-problem__category {
+    padding: 24px 22px;
+  }
+
+  .service-creative-problem__category-title {
+    font-size: 18px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+
+  .service-creative-problem__check-list li {
+    font-size: 13.5px;
+    line-height: 1.8;
+    padding-left: 22px;
+
+    &::before { width: 12px; height: 12px; box-shadow: inset 0 0 0 2.5px $color-bg-pale; }
+  }
+
+  // [4] FEATURE
+  .service-creative-feature {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-creative-feature__list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .service-creative-feature__item {
+    padding: 0 0 24px;
+    border-radius: 10px;
+  }
+
+  .service-creative-feature__img {
+    margin-bottom: 24px;
+  }
+
+  .service-creative-feature__num,
+  .service-creative-feature__title,
+  .service-creative-feature__approach {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .service-creative-feature__num { font-size: 44px; margin-bottom: 14px; }
+
+  .service-creative-feature__title {
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    min-height: 0;
+  }
+
+  .service-creative-feature__approach p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .service-creative-feature__benefit {
+    margin: 0 22px;
+    padding: 14px 18px;
+
+    p { font-size: 14px; line-height: 1.8; }
+  }
+
+  // [5] PRICE
+  .service-creative-price {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-creative-price__lead { font-size: 13.5px; margin-bottom: 36px; }
+
+  .service-creative-price__plans-heading { font-size: 18px; margin-bottom: 18px; }
+
+  .service-creative-price__plans-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-creative-price__plan-card { padding: 26px 22px; }
+  .service-creative-price__plan-num { font-size: 24px; }
+  .service-creative-price__plan-name { font-size: 19px; }
+  .service-creative-price__plan-desc { font-size: 13.5px; }
+  .service-creative-price__plan-price { font-size: 22px; }
+
+  // [6] FAQ
+  .service-creative-faq {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-creative-faq__list {
+    .list.question {
+      padding: 16px 18px;
+      gap: 10px;
+
+      .text-wrapper { gap: 12px; }
+      .list-icon { width: 28px; height: 28px; font-size: 13px; }
+      .text { font-size: 13.5px; line-height: 1.55; }
+    }
+
+    .list.answer {
+      .text-wrapper { padding: 16px 18px 18px; gap: 12px; }
+      .list-icon { width: 28px; height: 28px; font-size: 13px; }
+      .text { font-size: 13px; line-height: 1.85; }
+    }
+  }
+}
