@@ -16655,71 +16655,6 @@ body.has-header-v4 .loading-container {
   transform: translateX(4px);
 }
 
-.page-works__diagnosis {
-  background: #f4f8f8;
-  padding: 96px 0;
-}
-.page-works__diagnosis .container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.page-works__diagnosis-inner {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.page-works__diagnosis-eyebrow {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: #28849c;
-  margin-bottom: 16px;
-}
-
-.page-works__diagnosis-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #333333;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.page-works__diagnosis-lead {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #333333;
-  margin-bottom: 32px;
-}
-
-.page-works__diagnosis-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 40px;
-  background: #28849c;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  border-radius: 40px;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-.page-works__diagnosis-cta .page-works__diagnosis-cta-arrow {
-  transition: transform 0.3s ease;
-}
-.page-works__diagnosis-cta:hover {
-  background: #1e6b80;
-  transform: translateY(-2px);
-}
-.page-works__diagnosis-cta:hover .page-works__diagnosis-cta-arrow {
-  transform: translateX(4px);
-}
-
 @media screen and (max-width: 1024px) {
   .page-works__works {
     padding: 96px 0;
@@ -16740,12 +16675,6 @@ body.has-header-v4 .loading-container {
   .page-works__services-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
-  }
-  .page-works__diagnosis {
-    padding: 80px 0;
-  }
-  .page-works__diagnosis .container {
-    padding: 0 24px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -16798,23 +16727,6 @@ body.has-header-v4 .loading-container {
   }
   .page-works__service-title {
     font-size: 20px;
-  }
-  .page-works__diagnosis {
-    padding: 64px 0;
-  }
-  .page-works__diagnosis .container {
-    padding: 0 20px;
-  }
-  .page-works__diagnosis-title {
-    font-size: 22px;
-  }
-  .page-works__diagnosis-lead {
-    font-size: 14px;
-  }
-  .page-works__diagnosis-cta {
-    width: 100%;
-    justify-content: center;
-    padding: 16px 24px;
   }
 }
 .page-privacypolicy-policy .container .wrapper {
