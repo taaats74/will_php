@@ -179,29 +179,34 @@ get_template_part( 'template-parts/page-hero', null, [
 </section>
 
 <!-- ===================================================== -->
-<!-- Section 4: 無料診断 CTA                                  -->
+<!-- Section 4: 無料診断 CTA(page-topv3-diagnosis 構造踏襲)  -->
 <!-- ===================================================== -->
-<section class="page-works__diagnosis" id="diagnosis">
+<section class="page-topv3-diagnosis" id="diagnosis-banner">
   <div class="container">
-    <div class="wrapper">
-      <div class="page-works__diagnosis-inner">
 
-        <p class="page-works__diagnosis-eyebrow">DIAGNOSIS</p>
-        <h2 class="page-works__diagnosis-title">
-          Webサイトの現状、無料で診断します
-        </h2>
-        <p class="page-works__diagnosis-lead">
-          貴社のWebサイトの構造や訴求を、第三者視点で整理します。<br class="pc">
-          1分の入力で、改善ポイントをまとめてお返しします。
-        </p>
-
-        <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="page-works__diagnosis-cta">
-          <span class="page-works__diagnosis-cta-text">1分でできる無料診断</span>
-          <span class="page-works__diagnosis-cta-arrow">→</span>
-        </a>
-
-      </div>
+    <div class="diagnosis-section-head">
+      <span class="diagnosis-eyebrow">DIAGNOSIS</span>
+      <h2 class="diagnosis-title">
+        1分の入力で、<br class="pc">
+        貴社のBtoBマーケで<span class="diagnosis-keyword">「最優先すべき一手」</span>が見えます。
+      </h2>
+      <p class="diagnosis-lead">
+        運用体制・現在の施策・抱えている課題。<br class="pc">
+        10問の質問からウィルが構造的に分析し、改善すべき優先順位をまとめたレポートをお送りします。
+      </p>
     </div>
+
+    <div class="diagnosis-panel">
+      <h3 class="diagnosis-panel-title">無料診断レポートをお送りします</h3>
+      <p class="diagnosis-panel-text">所要時間は1分。面談は不要です。<br>回答内容に基づき、貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
+      <ul class="diagnosis-features">
+        <li>所要1分</li>
+        <li>面談不要</li>
+        <li>個別レポート送付</li>
+      </ul>
+      <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="diagnosis-btn">1分でできる無料診断を受ける</a>
+    </div>
+
   </div>
 </section>
 
