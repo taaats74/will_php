@@ -12132,6 +12132,109 @@ body.has-header-v4 .loading-container {
     padding: 12px 28px;
   }
 }
+.page-diagnosis {
+  background: #ffffff;
+  padding: 100px 0 120px;
+}
+.page-diagnosis .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.page-diagnosis__inner {
+  width: 90%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.page-diagnosis__lead {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.85;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin: 0 auto 32px;
+  max-width: 760px;
+}
+
+.page-diagnosis__body {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin: 0 auto 56px;
+  max-width: 760px;
+}
+
+.page-diagnosis__form {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+}
+.page-diagnosis__form .hbspt-form,
+.page-diagnosis__form .hs-form-frame {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.page-diagnosis__form p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+}
+.page-diagnosis__form p:last-child {
+  margin-bottom: 0;
+}
+.page-diagnosis__form a {
+  color: #28849D;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.page-diagnosis__form a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-diagnosis {
+    padding: 80px 0 100px;
+  }
+  .page-diagnosis__lead {
+    margin-bottom: 28px;
+  }
+  .page-diagnosis__body {
+    margin-bottom: 44px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-diagnosis {
+    padding: 56px 0 72px;
+  }
+  .page-diagnosis .container {
+    padding: 0 20px;
+  }
+  .page-diagnosis__lead {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+  .page-diagnosis__body {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 36px;
+    text-align: left;
+  }
+  .page-diagnosis__form p {
+    font-size: 13.5px;
+    line-height: 1.85;
+  }
+}
 .archive-service-service .container .wrapper {
   width: 83%;
   max-width: 1200px;
