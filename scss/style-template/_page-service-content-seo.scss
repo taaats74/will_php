@@ -327,6 +327,8 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   margin: 0 0 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid $color-border;
+  // 横並びで下線位置を揃える(2行分の高さ確保)
+  min-height: calc(19px * 1.5 * 2 + 12px);
 }
 
 .service-seo-role__layer-text {
@@ -1182,6 +1184,7 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     font-size: 17px;
     margin-bottom: 12px;
     padding-bottom: 10px;
+    min-height: 0;
   }
   .service-seo-role__layer-text { font-size: 13.5px; line-height: 1.85; }
 

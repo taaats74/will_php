@@ -18648,6 +18648,7 @@ body.has-header-v4 .loading-container {
   margin: 0 0 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid #C0D5D8;
+  min-height: 69px;
 }
 
 .service-seo-role__layer-text {
@@ -19400,6 +19401,7 @@ body.has-header-v4 .loading-container {
     font-size: 17px;
     margin-bottom: 12px;
     padding-bottom: 10px;
+    min-height: 0;
   }
   .service-seo-role__layer-text {
     font-size: 13.5px;

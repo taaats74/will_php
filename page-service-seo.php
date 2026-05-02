@@ -53,7 +53,7 @@ get_template_part( 'template-parts/page-hero', null, [
     <div class="service-seo-concept__inner">
 
       <h2 class="service-seo-concept__headline">
-        コンテンツSEOは、Webサイトを<span class="keyword">"育てる"</span>ための<br>
+        コンテンツSEOは、<span class="keyword">Webサイトを"育てる"</span>ための<br>
         最も重要な施策です。
       </h2>
 
@@ -325,11 +325,10 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-seo-principle__head principle-header">
         <p class="en">PRINCIPLE</p>
         <h2>私たちが大切にしている<br class="sp">3つのこと</h2>
-        <p class="subtitle">「安いから簡易的」ではなく、「無駄をなくしたから、必要な部分に集中できる」サービス設計の根拠をお伝えします。</p>
+        <p class="subtitle">サービス設計を貫く、3つの軸をお伝えします。</p>
       </div>
-
       <p class="service-seo-principle__lead">
-        ウィルがこのサービス設計を貫く理由を3つご説明します。
+        BtoB中小企業の現場で培った経験から、私たちは以下の3つを軸にサービスを組み立てています。
       </p>
 
       <ul class="service-seo-principle__list">
