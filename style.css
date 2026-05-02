@@ -16043,7 +16043,7 @@ body.has-header-v4 .loading-container {
 }
 
 .service-ma-problem {
-  background: #FFFFFF;
+  background: #F0F8F9;
   padding: 120px 0;
 }
 .service-ma-problem__list {
@@ -16057,9 +16057,10 @@ body.has-header-v4 .loading-container {
 
 .service-ma-problem__category {
   list-style: none;
-  background: #F0F8F9;
+  background: #FFFFFF;
   border-radius: 8px;
   padding: 36px 40px;
+  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
 }
 
 .service-ma-problem__category-title {
@@ -16100,7 +16101,7 @@ body.has-header-v4 .loading-container {
   height: 14px;
   background: #7CC1C9;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 3px #F0F8F9;
+  box-shadow: inset 0 0 0 3px #FFFFFF;
 }
 
 .service-ma-problem__closing {
@@ -16950,7 +16951,7 @@ body.has-header-v4 .loading-container {
   .service-ma-problem__check-list li::before {
     width: 12px;
     height: 12px;
-    box-shadow: inset 0 0 0 2.5px #F0F8F9;
+    box-shadow: inset 0 0 0 2.5px #FFFFFF;
   }
   .service-ma-problem__closing {
     font-size: 14px;
