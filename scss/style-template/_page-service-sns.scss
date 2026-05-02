@@ -934,14 +934,17 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   .keyword { @extend %ss-keyword; }
 }
 
-// page-service-web の .service-web-cta__grid と同型(3 カード並列)
+// page-service-web の .service-web-cta__grid と同型(2 カード並列)
 .service-sns-cta__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-sns-cta__card {

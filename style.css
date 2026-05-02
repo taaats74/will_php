@@ -17943,11 +17943,14 @@ body.has-header-v4 .loading-container {
 }
 .service-sns-cta__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-sns-cta__card {
