@@ -41,61 +41,14 @@
 
   /**
    * 資料カードを描画するヘルパ
+   * 実装は template-parts/ebooks-card.php に切り出し済み。
+   * single-ebooks.php からも同パーツを利用してマークアップ統一。
+   *
    * @param int $post_id
    */
   if ( ! function_exists( 'will_ebooks_render_card' ) ) {
     function will_ebooks_render_card( $post_id ) {
-      $title     = get_the_title( $post_id );
-      $permalink = get_permalink( $post_id );
-      $thumb_id  = get_post_thumbnail_id( $post_id );
-      $subtitle  = get_post_meta( $post_id, 'dl_subtitle', true );
-      $pages     = get_post_meta( $post_id, 'dl_page_count', true );
-      $themes    = get_the_terms( $post_id, 'ebook_theme' );
-      ?>
-      <article class="ebooks-card">
-        <a href="<?php echo esc_url( $permalink ); ?>" class="ebooks-card__link">
-          <div class="ebooks-card__thumb">
-            <?php if ( $thumb_id ) : ?>
-              <?php
-                // srcset 自動付与:WP が登録済みの全サイズ(300/768/1024/1536/2048w)から
-                // ブラウザが DPR / 表示サイズに最適なものを選択する。
-                // sizes:SP(≤768)はカードがほぼ全幅 → 90vw、PC は 3カラムで ≈ 30vw。
-                echo wp_get_attachment_image( $thumb_id, 'large', false, [
-                  'alt'      => $title,
-                  'loading'  => 'lazy',
-                  'decoding' => 'async',
-                  'sizes'    => '(max-width: 768px) 90vw, 33vw',
-                ] );
-              ?>
-            <?php else : ?>
-              <div class="ebooks-card__thumb-placeholder">
-                <span>EBOOK</span>
-              </div>
-            <?php endif; ?>
-            <?php if ( $pages ) : ?>
-              <span class="ebooks-card__pages"><?php echo esc_html( $pages ); ?>P</span>
-            <?php endif; ?>
-          </div>
-          <div class="ebooks-card__body">
-            <?php if ( ! empty( $themes ) && ! is_wp_error( $themes ) ) : ?>
-              <ul class="ebooks-card__themes">
-                <?php foreach ( $themes as $theme ) : ?>
-                  <li><?php echo esc_html( $theme->name ); ?></li>
-                <?php endforeach; ?>
-              </ul>
-            <?php endif; ?>
-            <h3 class="ebooks-card__title"><?php echo esc_html( $title ); ?></h3>
-            <?php if ( $subtitle ) : ?>
-              <p class="ebooks-card__subtitle"><?php echo esc_html( $subtitle ); ?></p>
-            <?php endif; ?>
-            <span class="ebooks-card__cta">
-              資料をダウンロード
-              <span class="ebooks-card__cta-arrow" aria-hidden="true">→</span>
-            </span>
-          </div>
-        </a>
-      </article>
-      <?php
+      get_template_part( 'template-parts/ebooks-card', null, [ 'post_id' => (int) $post_id ] );
     }
   }
 
