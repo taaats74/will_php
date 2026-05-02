@@ -702,25 +702,24 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-sns-cta__grid">
 
         <li class="service-sns-cta__card">
-          <a class="service-sns-cta__card-link" href="<?php echo esc_url( home_url('/ebook/') ); ?>">
-            <p class="service-sns-cta__label">まずは資料で確認したい方へ</p>
-            <p class="service-sns-cta__desc">Instagram運用の全体像とサービス詳細をまとめた資料をお送りします</p>
-            <p class="service-sns-cta__action">
-              <span class="service-sns-cta__action-text"><span class="keyword">資料を請求する</span></span>
-              <span class="service-sns-cta__action-arrow">→</span>
-            </p>
-          </a>
+          <p class="service-sns-cta__label">[初期検討の方へ]</p>
+          <h3 class="service-sns-cta__title">1分でできる無料診断</h3>
+          <p class="service-sns-cta__desc">現在のWeb・SNS活用の課題を整理します</p>
+          <a class="service-sns-cta__btn" href="<?php echo esc_url( home_url('/diagnosis/') ); ?>">診断する →</a>
         </li>
 
         <li class="service-sns-cta__card">
-          <a class="service-sns-cta__card-link" href="<?php echo esc_url( home_url('/contact/') ); ?>">
-            <p class="service-sns-cta__label">具体的に相談したい方へ</p>
-            <p class="service-sns-cta__desc">個別相談で、貴社の課題と次の一手を整理します(60分・無料)</p>
-            <p class="service-sns-cta__action">
-              <span class="service-sns-cta__action-text"><span class="keyword">無料相談を申し込む</span></span>
-              <span class="service-sns-cta__action-arrow">→</span>
-            </p>
-          </a>
+          <p class="service-sns-cta__label">[情報収集の方へ]</p>
+          <h3 class="service-sns-cta__title">無料ダウンロード資料</h3>
+          <p class="service-sns-cta__desc">Instagram運用の全体像とサービス詳細をまとめた資料を配布中</p>
+          <a class="service-sns-cta__btn" href="<?php echo esc_url( home_url('/ebook/') ); ?>">資料を見る →</a>
+        </li>
+
+        <li class="service-sns-cta__card">
+          <p class="service-sns-cta__label">[具体的な相談の方へ]</p>
+          <h3 class="service-sns-cta__title">お問い合わせ・お見積もり</h3>
+          <p class="service-sns-cta__desc">Instagram運用の具体的なご相談・お見積もりはこちら</p>
+          <a class="service-sns-cta__btn" href="<?php echo esc_url( home_url('/contact/') ); ?>">問い合わせる →</a>
         </li>
 
       </ul>
