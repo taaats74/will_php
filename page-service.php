@@ -100,14 +100,23 @@ get_template_part('template-parts/page-hero', null, [
               競合と比較されたときに勝てていますか？
             </p>
 
-            <p class="page-service__main-card-type">サブスク型ホームページサービス</p>
-            <h3 class="page-service__main-card-name">ウィルサポ</h3>
-
-            <ul class="page-service__main-card-badges">
-              <li>初期費用<br>無料</li>
-              <li>契約期間の<br>縛りなし</li>
-              <li>BtoB特化の<br>構成設計</li>
-            </ul>
+            <div class="page-service__main-card-row">
+              <div class="page-service__main-card-info">
+                <p class="page-service__main-card-type">サブスク型ホームページサービス</p>
+                <h3 class="page-service__main-card-name">ウィルサポ</h3>
+                <ul class="page-service__main-card-badges">
+                  <li>初期費用<br>無料</li>
+                  <li>契約期間の<br>縛りなし</li>
+                  <li>BtoB特化の<br>構成設計</li>
+                </ul>
+              </div>
+              <div class="page-service__main-card-visual">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-v2-assets/img/fv-illust.png' ); ?>"
+                     alt=""
+                     loading="lazy"
+                     decoding="async">
+              </div>
+            </div>
 
             <p class="page-service__main-card-desc">
               BtoB中小企業のための戦略設計から運用まで伴走する、月額費用型のサブスクホームページ制作サービスです。
@@ -147,14 +156,23 @@ get_template_part('template-parts/page-hero', null, [
 
             <p class="page-service__main-card-catch">スモールスタートで、本気のECを。</p>
 
-            <p class="page-service__main-card-type">EC事業者向けサブスクサービス</p>
-            <h3 class="page-service__main-card-name">ウィルサポEC</h3>
-
-            <ul class="page-service__main-card-badges">
-              <li>初期費用<br>無料</li>
-              <li>契約期間の<br>縛りなし</li>
-              <li>自由な<br>デザイン</li>
-            </ul>
+            <div class="page-service__main-card-row">
+              <div class="page-service__main-card-info">
+                <p class="page-service__main-card-type">EC事業者向けサブスクサービス</p>
+                <h3 class="page-service__main-card-name">ウィルサポEC</h3>
+                <ul class="page-service__main-card-badges">
+                  <li>初期費用<br>無料</li>
+                  <li>契約期間の<br>縛りなし</li>
+                  <li>自由な<br>デザイン</li>
+                </ul>
+              </div>
+              <div class="page-service__main-card-visual">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-ec-assets/img/page-willsuppoec-hero1.png' ); ?>"
+                     alt=""
+                     loading="lazy"
+                     decoding="async">
+              </div>
+            </div>
 
             <p class="page-service__main-card-desc">
               ECサイト制作会社をお探しの方や、構築を代行してほしい企業様へ。
