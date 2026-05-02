@@ -204,9 +204,9 @@ $philo-bg: #28849b;
   letter-spacing: 0.02em;
 }
 
-// カードコンテナ(タブ切替で 1 枚表示)
+// カードコンテナ(タブ切替で 1 枚表示・横長レイアウト)
 .page-service__main-cards {
-  max-width: 720px;
+  max-width: 1080px;
   margin: 0 auto;
   position: relative;
 }
@@ -242,42 +242,42 @@ $philo-bg: #28849b;
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 36px 32px 32px;
+  padding: 56px 64px 48px;
   text-decoration: none;
   color: inherit;
 }
 
 .page-service__main-card-target {
   display: inline-block;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: $will-accent;
   letter-spacing: 0.08em;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .page-service__main-card-catch {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   color: $will-text;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.65;
+  margin-bottom: 32px;
 }
 
 .page-service__main-card-type {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: $will-subtle;
   letter-spacing: 0.08em;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .page-service__main-card-name {
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 700;
   color: $will-accent;
   line-height: 1.2;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 // 情報ブロック + イラストの 2 カラム配置(均等 48% : 48%)
@@ -318,57 +318,57 @@ $philo-bg: #28849b;
     justify-content: center;
     background: $will-accent;
     color: #ffffff;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.4;
     text-align: center;
-    padding: 12px 8px;
+    padding: 14px 10px;
     border-radius: 8px;
-    min-height: 60px;
+    min-height: 70px;
   }
 }
 
 .page-service__main-card-desc {
-  font-size: 14px;
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.95;
   color: $will-text;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .page-service__main-card-benefit {
   background: $will-bg-pale;
   border-left: 4px solid $will-primary;
-  padding: 18px 20px;
+  padding: 22px 26px;
   border-radius: 0 6px 6px 0;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .page-service__main-card-benefit-feature {
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
   color: $will-text;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .page-service__main-card-benefit-label {
   display: inline-block;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   color: $will-accent;
   letter-spacing: 0.08em;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .page-service__main-card-benefit-result {
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
   color: $will-accent;
   font-weight: 600;
 }
 
 .page-service__main-card-benefit-arrow {
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 8px;
   color: $will-primary;
   font-weight: 700;
 }
@@ -376,10 +376,10 @@ $philo-bg: #28849b;
 .page-service__main-card-cta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin-top: auto;
   padding-top: 4px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: $will-accent;
 
