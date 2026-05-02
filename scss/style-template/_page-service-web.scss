@@ -180,16 +180,14 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   text-align: center;
 }
 
-.service-web-concept__head { @extend %sw-section-head; }
-
 .service-web-concept__headline {
   font-family: $sw-font-jp;
   font-weight: 700;
-  font-size: 38px;
-  line-height: 1.6;
+  font-size: 42px;
+  line-height: 1.55;
   color: $color-accent;
   letter-spacing: 0.04em;
-  margin: 0 0 56px;
+  margin: 0 0 48px;
 
   .keyword { @extend %sw-keyword; }
 }
@@ -1242,7 +1240,6 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 @media screen and (max-width: 767px) {
 
   // 共通ヘッダーの SP 調整(.en + h2 + .subtitle)
-  .service-web-concept__head,
   .service-web-target__head,
   .service-web-problem__head,
   .service-web-reason__head,
@@ -1308,9 +1305,9 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .service-web-concept__headline {
-    font-size: 22px;
-    line-height: 1.7;
-    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 32px;
   }
 
   .service-web-concept__body p {

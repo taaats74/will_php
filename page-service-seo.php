@@ -32,7 +32,7 @@ get_template_part( 'template-parts/page-hero', null, [
     <div class="service-seo-hero__inner">
 
       <h2 class="service-seo-hero__catch">
-        記事を増やすのではなく、<br class="sp">
+        記事を増やすのではなく、<br>
         <span class="keyword">検索と商談につながるコンテンツ</span>を積み上げます。
       </h2>
 
@@ -52,23 +52,14 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-seo-concept__inner">
 
-      <div class="service-seo-concept__head concept-header">
-        <p class="en">CONCEPT</p>
-        <h2>コンセプト</h2>
-        <p class="subtitle">コンテンツSEOの本当の役割を、私たちはこう考えています。</p>
-      </div>
-
-      <h3 class="service-seo-concept__headline">
+      <h2 class="service-seo-concept__headline">
         コンテンツSEOは、Webサイトを<span class="keyword">"育てる"</span>ための<br>
         最も重要な施策です。
-      </h3>
+      </h2>
 
       <div class="service-seo-concept__body">
         <p>
-          リード獲得も、温度感の高い商談獲得も、Webサイトの集客力も。
-        </p>
-        <p>
-          検索とAIから選ばれるコンテンツを積み上げることで、
+          リード獲得も、温度感の高い商談獲得も、Webサイトの集客力も。<br>検索とAIから選ばれるコンテンツを積み上げることで、
           Webは<span class="keyword">"営業を支える資産"</span>へと変わります。
         </p>
       </div>

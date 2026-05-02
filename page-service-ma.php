@@ -56,16 +56,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-ma-concept__inner">
 
-      <div class="service-ma-concept__head concept-header">
-        <p class="en">CONCEPT</p>
-        <h2>コンセプト</h2>
-        <p class="subtitle">MAを単独で導入するのではなく、<br>営業の土台の上で見込み客を育てる仕組みとして設計します。</p>
-      </div>
-
-      <h3 class="service-ma-concept__headline">
+      <h2 class="service-ma-concept__headline">
         Webサイトは営業の土台。<br>
         MAは、その土台の上で<span class="keyword">見込み客を育てる仕組み</span>。
-      </h3>
+      </h2>
 
       <div class="service-ma-concept__body">
         <p>
