@@ -16963,6 +16963,10 @@ body.has-header-v4 .loading-container {
 .page-service__main-card--ec .page-service__main-card-name {
   font-size: 64px;
 }
+.page-service__main-card--ec .page-service__main-card-visual img {
+  max-width: 85%;
+  margin: 0 auto;
+}
 
 .page-service__main-card-row {
   display: grid;
