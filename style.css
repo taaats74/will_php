@@ -16804,6 +16804,16 @@ body.has-header-v4 .loading-container {
   margin: 0 auto;
   padding: 0 40px;
 }
+.page-service__main .page-service__eyebrow {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  opacity: 0.18;
+  margin-bottom: -32px;
+  text-transform: uppercase;
+}
 
 .page-service__main-head {
   text-align: center;
@@ -16811,11 +16821,14 @@ body.has-header-v4 .loading-container {
 }
 
 .page-service__main-title {
-  font-size: 30px;
-  font-weight: 700;
-  color: #28849D;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: #ffffff;
   line-height: 1.4;
-  letter-spacing: 0.01em;
+  letter-spacing: 8px;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .page-service__main-lead {
@@ -16823,7 +16836,7 @@ body.has-header-v4 .loading-container {
   margin: 24px auto 0;
   font-size: 15px;
   line-height: 1.9;
-  color: #3E5054;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .page-service__main-tabs {
