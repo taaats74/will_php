@@ -894,8 +894,8 @@
               <?php
                 // 別WordPress (https://will-corp.co.jp/blog/) の REST API から
                 // 指定ID 6本を順序維持で取得し、6時間キャッシュする
-                $featured_ids = array(710, 656, 705, 748, 762, 715);
-                $cache_key    = 'top_blog_featured_v2';
+                $featured_ids = array(710, 762, 705, 748, 656, 715);
+                $cache_key    = 'top_blog_featured_v3';
                 $featured_posts = get_transient($cache_key);
 
                 if ($featured_posts === false) {
