@@ -80,6 +80,68 @@ $av2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // =====================================================
+// MISSION セクション(.about-v2-mission)
+// page-topv3 トンマナ準拠・ステートメント中央配置
+// =====================================================
+.about-v2-mission {
+  background: $av2-card-bg;
+  padding: 120px 0 60px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .mission-header {
+    margin-bottom: 48px;
+
+    .en {
+      font-family: $av2-font-jp;
+      font-weight: 900;
+      font-size: 60px;
+      letter-spacing: 5px;
+      color: $av2-primary;
+      opacity: .1;
+      line-height: 1;
+      margin: 0 0 -28px;
+    }
+
+    h2 {
+      font-family: $av2-font-jp;
+      font-weight: 700;
+      font-size: 30px;
+      color: $av2-heading;
+      letter-spacing: 6px;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
+  .mission-body {
+    font-family: $av2-font-jp;
+    font-size: 16px;
+    line-height: 2.05;
+    color: $av2-body;
+    letter-spacing: 0.04em;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 740px;
+
+    .keyword {
+      @extend %av2-keyword;
+    }
+  }
+}
+
+// =====================================================
 // CONCEPT セクション(.about-v2-concept)
 // page-topv3-concept パターン踏襲
 // =====================================================
@@ -335,6 +397,150 @@ $av2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // =====================================================
+// MESSAGE セクション(.about-v2-message)
+// 縦並びカード(写真 + テキスト)
+// =====================================================
+.about-v2-message {
+  background: $av2-bg-pale;
+  padding: 120px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .message-header {
+    @extend %av2-section-header;
+  }
+
+  .message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .message-item {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
+    align-items: center;
+    background: $av2-card-bg;
+    border-radius: 8px;
+    padding: 48px 56px;
+    box-shadow: 0 6px 18px rgba(40, 132, 155, 0.08);
+  }
+
+  .message-item-photo {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1.05;
+    }
+  }
+
+  .message-item-name {
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid $av2-border;
+
+    .corp {
+      font-family: $av2-font-jp;
+      font-size: 13px;
+      color: $av2-primary;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      margin: 0 0 4px;
+    }
+
+    .name {
+      font-family: $av2-font-jp;
+      font-weight: 700;
+      font-size: 22px;
+      color: $av2-heading;
+      letter-spacing: 0.06em;
+      margin: 0;
+    }
+  }
+
+  .message-item-text {
+    font-family: $av2-font-jp;
+    font-size: 14.5px;
+    line-height: 1.95;
+    color: $av2-body;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+}
+
+// =====================================================
+// COMPANY セクション(.about-v2-company)
+// dl/dt/dd の罫線テーブル(行ボーダー区切り)
+// =====================================================
+.about-v2-company {
+  background: $av2-card-bg;
+  padding: 120px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .company-header {
+    @extend %av2-section-header;
+  }
+
+  .company-table {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $av2-border;
+  }
+
+  .company-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+    padding: 22px 8px;
+    border-bottom: 1px solid $av2-border;
+
+    dt {
+      font-family: $av2-font-jp;
+      font-weight: 700;
+      font-size: 15px;
+      color: $av2-heading;
+      letter-spacing: 0.08em;
+      margin: 0;
+    }
+
+    dd {
+      font-family: $av2-font-jp;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.85;
+      color: $av2-body;
+      letter-spacing: 0.04em;
+      margin: 0;
+    }
+  }
+}
+
+// =====================================================
 // SP (max-width: 767px)
 // =====================================================
 @media screen and (max-width: 767px) {
@@ -342,7 +548,9 @@ $av2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   // 共通ヘッダーの SP 調整
   .about-v2-concept .concept-header,
   .about-v2-solve .solve-header,
-  .about-v2-strength .strength-header {
+  .about-v2-strength .strength-header,
+  .about-v2-message .message-header,
+  .about-v2-company .company-header {
     margin-bottom: 48px;
 
     .en {
@@ -361,6 +569,40 @@ $av2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
       font-size: 13.5px;
       letter-spacing: 1.5px;
       line-height: 1.85;
+    }
+  }
+
+  // MISSION
+  .about-v2-mission {
+    padding: 64px 0 32px;
+
+    .container {
+      padding: 0 20px;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+    .mission-header {
+      margin-bottom: 32px;
+
+      .en {
+        font-size: 36px;
+        letter-spacing: 3px;
+        margin-bottom: -18px;
+      }
+
+      h2 {
+        font-size: 22px;
+        letter-spacing: 4px;
+        line-height: 1.7;
+      }
+    }
+
+    .mission-body {
+      font-size: 14px;
+      line-height: 1.9;
     }
   }
 
@@ -483,6 +725,86 @@ $av2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
       font-size: 14px;
       line-height: 1.9;
       margin-bottom: 14px;
+    }
+  }
+
+  // MESSAGE
+  .about-v2-message {
+    padding: 64px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+    .message-list {
+      gap: 24px;
+    }
+
+    .message-item {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 28px 22px;
+      border-radius: 6px;
+    }
+
+    .message-item-photo {
+      max-width: 200px;
+      margin: 0 auto;
+
+      img {
+        aspect-ratio: 1 / 1;
+      }
+    }
+
+    .message-item-name {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+
+      .corp {
+        font-size: 11.5px;
+      }
+
+      .name {
+        font-size: 18px;
+      }
+    }
+
+    .message-item-text {
+      font-size: 13.5px;
+      line-height: 1.9;
+    }
+  }
+
+  // COMPANY
+  .about-v2-company {
+    padding: 64px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+    .company-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding: 18px 4px;
+
+      dt {
+        font-size: 13px;
+        color: $av2-primary;
+      }
+
+      dd {
+        font-size: 14px;
+        line-height: 1.85;
+      }
     }
   }
 }
