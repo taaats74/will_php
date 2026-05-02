@@ -910,6 +910,21 @@ body.has-loading-v2.appear .header-child-v2 {
   background: #333333;
 }
 
+body.has-header-v4 .sp-header-v5 {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+body.has-header-v4 .sp-header-v5 .sp-header-v5__logo {
+  opacity: 1;
+  visibility: visible;
+}
+body.has-header-v4 .sp-header-v5 .sp-header-v5__logo img {
+  filter: brightness(0) saturate(100%) invert(13%);
+}
+body.has-header-v4 .sp-header-v5 .sp-header-v5__hamburger span {
+  background: #333333;
+}
+
 .sp-menu-v5 {
   position: fixed;
   top: 0;

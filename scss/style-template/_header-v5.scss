@@ -158,6 +158,26 @@ $sp-v5-card: rgba(255, 255, 255, .92);
   }
 }
 
+// 下層ページ(header-v4 利用)では SP ヘッダーを最初から
+// スクロール後と同じ見た目にする(背景が白系のためコントラスト確保)
+body.has-header-v4 .sp-header-v5 {
+  background: rgba(255, 255, 255, .95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+
+  .sp-header-v5__logo {
+    opacity: 1;
+    visibility: visible;
+
+    img {
+      filter: brightness(0) saturate(100%) invert(13%);
+    }
+  }
+
+  .sp-header-v5__hamburger span {
+    background: $sp-v5-text;
+  }
+}
+
 // ----- ドロワー -----
 .sp-menu-v5 {
   position: fixed;
