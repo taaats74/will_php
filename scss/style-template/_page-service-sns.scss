@@ -934,44 +934,28 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   .keyword { @extend %ss-keyword; }
 }
 
+// page-service-web の .service-web-cta__grid と同型(3 カード並列)
 .service-sns-cta__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 880px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-// カード全体がリンク化(ボタン形式ではなく、テキスト+黄色マーカー強調)
 .service-sns-cta__card {
   list-style: none;
   background: $color-white;
   border-radius: 10px;
+  padding: 36px 32px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
-
-    .service-sns-cta__action-arrow {
-      transform: translateX(4px);
-    }
   }
-}
-
-.service-sns-cta__card-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 36px 32px;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 10px;
 }
 
 .service-sns-cta__label {
@@ -980,44 +964,43 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   font-weight: 600;
   color: $color-subtle;
   letter-spacing: 0.08em;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
+}
+
+.service-sns-cta__title {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 19px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+  line-height: 1.5;
 }
 
 .service-sns-cta__desc {
   font-family: $ss-font-jp;
-  font-size: 14px;
-  line-height: 1.85;
+  font-size: 13.5px;
+  line-height: 1.7;
   color: $color-text;
   letter-spacing: 0.04em;
   margin: 0 0 24px;
-  flex: 1 1 auto;
+  min-height: 3.4em;
 }
 
-// アクション(ボタン形式ではなくテキストリンク + 黄色マーカー)
-.service-sns-cta__action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+.service-sns-cta__btn {
+  display: inline-block;
   font-family: $ss-font-jp;
   font-weight: 700;
-  font-size: 16px;
-  color: $color-accent;
-  letter-spacing: 0.04em;
-  margin: 0;
-}
+  font-size: 14px;
+  color: $color-white;
+  background: $color-accent;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  transition: background 0.3s ease;
 
-.service-sns-cta__action-text {
-  display: inline-block;
-
-  .keyword { @extend %ss-keyword; }
-}
-
-.service-sns-cta__action-arrow {
-  display: inline-block;
-  color: $color-accent;
-  font-weight: 800;
-  transition: transform 0.3s ease;
+  &:hover { background: #1f6f82; }
 }
 
 // =====================================================
@@ -1338,8 +1321,9 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     gap: 14px;
   }
 
-  .service-sns-cta__card-link { padding: 28px 22px; }
-  .service-sns-cta__label { font-size: 11.5px; margin-bottom: 14px; }
-  .service-sns-cta__desc { font-size: 13.5px; line-height: 1.85; margin-bottom: 22px; }
-  .service-sns-cta__action { font-size: 14.5px; }
+  .service-sns-cta__card { padding: 28px 22px; }
+  .service-sns-cta__label { font-size: 11.5px; margin-bottom: 12px; }
+  .service-sns-cta__title { font-size: 17px; }
+  .service-sns-cta__desc { font-size: 13px; line-height: 1.7; min-height: 0; margin-bottom: 20px; }
+  .service-sns-cta__btn { font-size: 13px; padding: 11px 24px; }
 }

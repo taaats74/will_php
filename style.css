@@ -17191,7 +17191,7 @@ body.has-header-v4 .loading-container {
     padding: 11px 24px;
   }
 }
-.service-sns-cta__action-text .keyword, .service-sns-cta__lead .keyword, .service-sns-flow__step-text .keyword, .service-sns-principle__text .keyword, .service-sns-feature__benefit .keyword, .service-sns-role__closing .keyword, .service-sns-role__layer-text .keyword, .service-sns-role__lead .keyword, .service-sns-concept__body .keyword, .service-sns-concept__headline .keyword, .service-sns-hero__catch .keyword {
+.service-sns-cta__lead .keyword, .service-sns-flow__step-text .keyword, .service-sns-principle__text .keyword, .service-sns-feature__benefit .keyword, .service-sns-role__closing .keyword, .service-sns-role__layer-text .keyword, .service-sns-role__lead .keyword, .service-sns-concept__body .keyword, .service-sns-concept__headline .keyword, .service-sns-hero__catch .keyword {
   background: linear-gradient(transparent 0%, transparent 60%, rgba(240, 231, 78, 0.65) 60%, rgba(240, 231, 78, 0.65) 95%, transparent 95%);
   color: inherit;
   font-weight: 700;
@@ -17943,39 +17943,24 @@ body.has-header-v4 .loading-container {
 }
 .service-sns-cta__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 880px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .service-sns-cta__card {
   list-style: none;
   background: #FFFFFF;
   border-radius: 10px;
+  padding: 36px 32px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-sns-cta__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
-}
-.service-sns-cta__card:hover .service-sns-cta__action-arrow {
-  transform: translateX(4px);
-}
-
-.service-sns-cta__card-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 36px 32px;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 10px;
 }
 
 .service-sns-cta__label {
@@ -17984,40 +17969,44 @@ body.has-header-v4 .loading-container {
   font-weight: 600;
   color: #8AA0A4;
   letter-spacing: 0.08em;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
+}
+
+.service-sns-cta__title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+  line-height: 1.5;
 }
 
 .service-sns-cta__desc {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-size: 14px;
-  line-height: 1.85;
+  font-size: 13.5px;
+  line-height: 1.7;
   color: #3E5054;
   letter-spacing: 0.04em;
   margin: 0 0 24px;
-  flex: 1 1 auto;
+  min-height: 3.4em;
 }
 
-.service-sns-cta__action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+.service-sns-cta__btn {
+  display: inline-block;
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 16px;
-  color: #28849D;
-  letter-spacing: 0.04em;
-  margin: 0;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #28849D;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  transition: background 0.3s ease;
 }
-
-.service-sns-cta__action-text {
-  display: inline-block;
-}
-.service-sns-cta__action-arrow {
-  display: inline-block;
-  color: #28849D;
-  font-weight: 800;
-  transition: transform 0.3s ease;
+.service-sns-cta__btn:hover {
+  background: #1f6f82;
 }
 
 @media screen and (max-width: 1024px) {
@@ -18381,20 +18370,25 @@ body.has-header-v4 .loading-container {
     grid-template-columns: 1fr;
     gap: 14px;
   }
-  .service-sns-cta__card-link {
+  .service-sns-cta__card {
     padding: 28px 22px;
   }
   .service-sns-cta__label {
     font-size: 11.5px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
+  }
+  .service-sns-cta__title {
+    font-size: 17px;
   }
   .service-sns-cta__desc {
-    font-size: 13.5px;
-    line-height: 1.85;
-    margin-bottom: 22px;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 0;
+    margin-bottom: 20px;
   }
-  .service-sns-cta__action {
-    font-size: 14.5px;
+  .service-sns-cta__btn {
+    font-size: 13px;
+    padding: 11px 24px;
   }
 }
 .single-service-problem.wm .container .wrapper {
