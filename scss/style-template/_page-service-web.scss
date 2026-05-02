@@ -190,6 +190,8 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   color: $color-accent;
   letter-spacing: 0.04em;
   margin: 0 0 56px;
+
+  .keyword { @extend %sw-keyword; }
 }
 
 .service-web-concept__body {
