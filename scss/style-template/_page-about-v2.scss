@@ -144,9 +144,10 @@ $av2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 // =====================================================
 // CONCEPT セクション(.about-v2-concept)
 // page-topv3-concept パターン踏襲
+// 背景は MISSION(白)との差別化のため明るいオフホワイト系
 // =====================================================
 .about-v2-concept {
-  background: $av2-card-bg;
+  background: $av2-bg-soft;
   padding: 120px 0;
 
   .container {
@@ -172,7 +173,7 @@ $av2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .concept-block {
-    background: $av2-bg-soft;
+    background: $av2-card-bg;
     border-radius: 8px;
     padding: 48px 56px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
