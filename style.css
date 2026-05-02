@@ -1331,7 +1331,7 @@ body.has-header-v4 .loading-container {
 }
 .page-hero {
   background: #F0F8F9;
-  padding: 150px 0 70px;
+  padding: 150px 0;
   text-align: center;
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   color: #3E5054;
@@ -1385,7 +1385,7 @@ body.has-header-v4 .loading-container {
 
 @media screen and (max-width: 770px) {
   .page-hero {
-    padding: 100px 0 50px;
+    padding: 100px 0;
   }
   .page-hero__en {
     font-size: 36px;
