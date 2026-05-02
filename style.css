@@ -16797,7 +16797,7 @@ body.has-header-v4 .loading-container {
 
 .page-service__main {
   background: #ffffff;
-  padding: 110px 0;
+  padding: 55px 0 110px;
 }
 .page-service__main .container {
   max-width: 1200px;
@@ -17105,7 +17105,7 @@ body.has-header-v4 .loading-container {
     border-radius: 14px;
   }
   .page-service__main {
-    padding: 96px 0;
+    padding: 48px 0 96px;
   }
   .page-service__main .container {
     padding: 0 24px;
@@ -17157,7 +17157,7 @@ body.has-header-v4 .loading-container {
     margin-top: 28px;
   }
   .page-service__main {
-    padding: 72px 0;
+    padding: 36px 0 72px;
   }
   .page-service__main .container {
     padding: 0 20px;
