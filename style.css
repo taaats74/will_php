@@ -14352,9 +14352,39 @@ body.has-header-v4 .loading-container {
   margin: 0 auto;
 }
 
-.service-web-faq__head, .service-web-works__head, .service-web-price__head, .service-web-flow__head, .service-web-reason__head, .service-web-problem__head, .service-web-target__head, .service-web-concept__head {
+.service-web-cta__head, .service-web-faq__head, .service-web-works__head, .service-web-price__head, .service-web-flow__head, .service-web-reason__head, .service-web-problem__head, .service-web-target__head, .service-web-concept__head {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
+}
+.service-web-cta__head .en, .service-web-faq__head .en, .service-web-works__head .en, .service-web-price__head .en, .service-web-flow__head .en, .service-web-reason__head .en, .service-web-problem__head .en, .service-web-target__head .en, .service-web-concept__head .en {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: #7fbabd;
+  opacity: 0.1;
+  line-height: 1;
+  margin: 0 0 -28px;
+  text-transform: uppercase;
+}
+.service-web-cta__head h2, .service-web-faq__head h2, .service-web-works__head h2, .service-web-price__head h2, .service-web-flow__head h2, .service-web-reason__head h2, .service-web-problem__head h2, .service-web-target__head h2, .service-web-concept__head h2 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #333333;
+  letter-spacing: 8px;
+  line-height: 1.55;
+  margin: 0 0 22px;
+}
+.service-web-cta__head .subtitle, .service-web-faq__head .subtitle, .service-web-works__head .subtitle, .service-web-price__head .subtitle, .service-web-flow__head .subtitle, .service-web-reason__head .subtitle, .service-web-problem__head .subtitle, .service-web-target__head .subtitle, .service-web-concept__head .subtitle {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #595959;
+  letter-spacing: 3px;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .service-web-hero {
@@ -15238,15 +15268,17 @@ body.has-header-v4 .loading-container {
   padding: 110px 0;
 }
 .service-web-cta__head {
-  text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
-.service-web-cta__head .section-header,
-.service-web-cta__head .sub-title {
-  color: #FFFFFF;
+.service-web-cta__head .en {
+  color: #ffffff;
+  opacity: 0.18;
 }
-.service-web-cta__head .green {
-  color: #B4DBE0 !important;
+.service-web-cta__head h2 {
+  color: #ffffff;
+}
+.service-web-cta__head .subtitle {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .service-web-cta__lead {
@@ -15328,6 +15360,56 @@ body.has-header-v4 .loading-container {
 }
 
 @media screen and (max-width: 767px) {
+  .service-web-concept__head,
+  .service-web-target__head,
+  .service-web-problem__head,
+  .service-web-reason__head,
+  .service-web-flow__head,
+  .service-web-price__head,
+  .service-web-works__head,
+  .service-web-faq__head,
+  .service-web-cta__head {
+    margin-bottom: 44px;
+  }
+  .service-web-concept__head .en,
+  .service-web-target__head .en,
+  .service-web-problem__head .en,
+  .service-web-reason__head .en,
+  .service-web-flow__head .en,
+  .service-web-price__head .en,
+  .service-web-works__head .en,
+  .service-web-faq__head .en,
+  .service-web-cta__head .en {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: -18px;
+  }
+  .service-web-concept__head h2,
+  .service-web-target__head h2,
+  .service-web-problem__head h2,
+  .service-web-reason__head h2,
+  .service-web-flow__head h2,
+  .service-web-price__head h2,
+  .service-web-works__head h2,
+  .service-web-faq__head h2,
+  .service-web-cta__head h2 {
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+  }
+  .service-web-concept__head .subtitle,
+  .service-web-target__head .subtitle,
+  .service-web-problem__head .subtitle,
+  .service-web-reason__head .subtitle,
+  .service-web-flow__head .subtitle,
+  .service-web-price__head .subtitle,
+  .service-web-works__head .subtitle,
+  .service-web-faq__head .subtitle,
+  .service-web-cta__head .subtitle {
+    font-size: 13.5px;
+    letter-spacing: 1.5px;
+    line-height: 1.85;
+  }
   .service-web-hero {
     padding: 48px 0 40px;
   }

@@ -53,10 +53,44 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   margin: 0 auto;
 }
 
-// 見出しエリア共通(.section-header + .sub-title は既存テーマ流用)
+// 見出しエリア共通(page-topv3 トンマナ準拠:.en + h2 + .subtitle パターン)
+// 大きく薄い英字を後ろに敷き、その上に細字 letter-spacing 広めの h2 を重ねる
 %sw-section-head {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
+
+  .en {
+    font-family: $sw-font-jp;
+    font-weight: 900;
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: #7fbabd;
+    opacity: .1;
+    line-height: 1;
+    margin: 0 0 -28px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: $sw-font-jp;
+    font-weight: 500;
+    font-size: 26px;
+    color: #333333;
+    letter-spacing: 8px;
+    line-height: 1.55;
+    margin: 0 0 22px;
+  }
+
+  .subtitle {
+    font-family: YuGothic, 'Yu Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #595959;
+    letter-spacing: 3px;
+    line-height: 1.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
 
 // =========================================
@@ -1058,17 +1092,22 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
 .service-web-cta__inner { @extend %sw-inner; }
 
+// CTA は ACCENT 濃色背景なので、共通ヘッダーの色だけ白系に上書き
 .service-web-cta__head {
-  text-align: center;
-  margin-bottom: 32px;
+  @extend %sw-section-head;
+  margin-bottom: 40px;
 
-  .section-header,
-  .sub-title {
-    color: $color-white;
+  .en {
+    color: #ffffff;
+    opacity: 0.18;
   }
 
-  .green {
-    color: $color-light !important;
+  h2 {
+    color: #ffffff;
+  }
+
+  .subtitle {
+    color: rgba(255, 255, 255, 0.92);
   }
 }
 
@@ -1154,6 +1193,37 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 // SP (max-width: 767px)
 // =====================================================
 @media screen and (max-width: 767px) {
+
+  // 共通ヘッダーの SP 調整(.en + h2 + .subtitle)
+  .service-web-concept__head,
+  .service-web-target__head,
+  .service-web-problem__head,
+  .service-web-reason__head,
+  .service-web-flow__head,
+  .service-web-price__head,
+  .service-web-works__head,
+  .service-web-faq__head,
+  .service-web-cta__head {
+    margin-bottom: 44px;
+
+    .en {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: -18px;
+    }
+
+    h2 {
+      font-size: 22px;
+      letter-spacing: 4px;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 13.5px;
+      letter-spacing: 1.5px;
+      line-height: 1.85;
+    }
+  }
 
   // [1] HERO 補足
   .service-web-hero {
