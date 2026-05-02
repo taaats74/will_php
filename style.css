@@ -15755,11 +15755,10 @@ body.has-header-v4 .loading-container {
   }
 }
 .service-ma-reason__benefit .keyword, .service-ma-principle__reasoning .keyword, .service-ma-problem__closing .keyword, .service-ma-concept__body .keyword, .service-ma-concept__headline .keyword, .service-ma-hero__catch .keyword {
-  background: rgba(124, 193, 201, 0.18);
-  color: #28849D;
+  background: linear-gradient(transparent 0%, transparent 60%, rgba(240, 231, 78, 0.65) 60%, rgba(240, 231, 78, 0.65) 95%, transparent 95%);
+  color: #3E5054;
   font-weight: 700;
-  padding: 0 4px;
-  border-radius: 2px;
+  padding: 0 2px;
 }
 
 .service-ma-cta .container, .service-ma-faq .container, .service-ma-price .container, .service-ma-flow .container, .service-ma-reason .container, .service-ma-principle .container, .service-ma-problem .container, .service-ma-target .container, .service-ma-concept .container, .service-ma-hero .container {
@@ -15962,7 +15961,7 @@ body.has-header-v4 .loading-container {
 }
 
 .service-ma-target__alt-block {
-  background: #B4DBE0;
+  background: #d5e8ea;
   border-radius: 12px;
   padding: 40px 48px;
 }
@@ -16006,7 +16005,7 @@ body.has-header-v4 .loading-container {
   height: 12px;
   background: #28849D;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2.5px #B4DBE0;
+  box-shadow: inset 0 0 0 2.5px #d5e8ea;
 }
 
 .service-ma-target__alt-text {

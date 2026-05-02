@@ -31,13 +31,19 @@ $color-white:      #FFFFFF;
 
 $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
-// keyword ハイライト共通
+// keyword ハイライト共通(蛍光ペン風・黄色マーカー)
+// 文字の下半分に HIGHLIGHT 色をひいて、自然な強調表現
 %sm-keyword {
-  background: rgba(124, 193, 201, 0.18);
-  color: $color-accent;
+  background: linear-gradient(
+    transparent 0%,
+    transparent 60%,
+    rgba(240, 231, 78, 0.65) 60%,
+    rgba(240, 231, 78, 0.65) 95%,
+    transparent 95%
+  );
+  color: $color-text;
   font-weight: 700;
-  padding: 0 4px;
-  border-radius: 2px;
+  padding: 0 2px;
 }
 
 // セクション内 .container 共通
@@ -284,7 +290,8 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 .service-ma-target__alt-block {
-  background: $color-light;
+  // $color-light(#B4DBE0)より気持ち薄め(文字視認性確保)
+  background: #d5e8ea;
   border-radius: 12px;
   padding: 40px 48px;
 }
@@ -327,7 +334,7 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
       height: 12px;
       background: $color-accent;
       border-radius: 50%;
-      box-shadow: inset 0 0 0 2.5px $color-light;
+      box-shadow: inset 0 0 0 2.5px #d5e8ea;
     }
   }
 }
