@@ -196,84 +196,72 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-sns-feature__list">
 
         <li class="service-sns-feature__item">
-          <div class="service-sns-feature__visual">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/img/single-servivec-sns-img1.png' ); ?>" alt="営業構造から逆算したInstagram設計を示すイメージ" loading="lazy" decoding="async">
+          <p class="service-sns-feature__num">01</p>
+          <h3 class="service-sns-feature__title">営業構造から逆算したInstagram設計</h3>
+          <div class="service-sns-feature__approach">
+            <p>
+              Instagramを「集客ツール」としてではなく、「認知 → 興味関心 → 比較検討 → 商談」のどの役割を担うのかを明確にした上で設計します。
+              発信内容・導線・KPIを営業プロセスと連動させることで、投稿が「作業」ではなく「商談前の信頼形成」として機能します。
+            </p>
           </div>
-          <div class="service-sns-feature__text-wrapper">
-            <p class="service-sns-feature__num">01</p>
-            <h3 class="service-sns-feature__title">営業構造から逆算したInstagram設計</h3>
-            <div class="service-sns-feature__desc">
-              <p>
-                Instagramを「集客ツール」としてではなく、「認知 → 興味関心 → 比較検討 → 商談」のどの役割を担うのかを明確にした上で設計します。
-                発信内容・導線・KPIを営業プロセスと連動させることで、投稿が「作業」ではなく「商談前の信頼形成」として機能します。
-              </p>
-              <p class="service-sns-feature__benefit">
-                <span class="service-sns-feature__benefit-arrow">→</span>
-                <span class="keyword">「投稿のための投稿」から脱却し、商談前の信頼を積み上げる仕組み</span>に変わる
-              </p>
-            </div>
+          <div class="service-sns-feature__benefit">
+            <p>
+              <span class="service-sns-feature__benefit-arrow">→</span>
+              <span class="keyword">「投稿のための投稿」から脱却し、商談前の信頼を積み上げる仕組み</span>に変わる
+            </p>
           </div>
         </li>
 
         <li class="service-sns-feature__item">
-          <div class="service-sns-feature__visual">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/img/single-servivec-sns-img2.png' ); ?>" alt="Web基盤と一体で設計するイメージ" loading="lazy" decoding="async">
+          <p class="service-sns-feature__num">02</p>
+          <h3 class="service-sns-feature__title">Web基盤と一体で設計</h3>
+          <div class="service-sns-feature__approach">
+            <p>
+              Instagram単体で完結させません。
+              ブログ、ホワイトペーパー、資料請求ページなどと接続し、InstagramからWebへ、Webから商談へとつながる導線を設計します。
+              投稿が「入口」となり、全体の仕組みに組み込まれる状態をつくります。
+            </p>
           </div>
-          <div class="service-sns-feature__text-wrapper">
-            <p class="service-sns-feature__num">02</p>
-            <h3 class="service-sns-feature__title">Web基盤と一体で設計</h3>
-            <div class="service-sns-feature__desc">
-              <p>
-                Instagram単体で完結させません。
-                ブログ、ホワイトペーパー、資料請求ページなどと接続し、InstagramからWebへ、Webから商談へとつながる導線を設計します。
-                投稿が「入口」となり、全体の仕組みに組み込まれる状態をつくります。
-              </p>
-              <p class="service-sns-feature__benefit">
-                <span class="service-sns-feature__benefit-arrow">→</span>
-                Instagramが孤立した発信から脱却し、<span class="keyword">サイトと連動した「入口」として機能</span>する
-              </p>
-            </div>
+          <div class="service-sns-feature__benefit">
+            <p>
+              <span class="service-sns-feature__benefit-arrow">→</span>
+              Instagramが孤立した発信から脱却し、<span class="keyword">サイトと連動した「入口」として機能</span>する
+            </p>
           </div>
         </li>
 
         <li class="service-sns-feature__item">
-          <div class="service-sns-feature__visual">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/img/single-servivec-sns-img3.png' ); ?>" alt="ブランドと印象を設計するデザインのイメージ" loading="lazy" decoding="async">
+          <p class="service-sns-feature__num">03</p>
+          <h3 class="service-sns-feature__title">ブランドと印象を設計するデザイン</h3>
+          <div class="service-sns-feature__approach">
+            <p>
+              ターゲット業界や企業規模に合わせたトンマナ設計を行い、投稿テンプレートやプロフィールを最適化します。
+              Instagramは視覚的印象が信頼に直結します。
+              一貫した世界観を構築することで、ブランド価値を高めます。
+            </p>
           </div>
-          <div class="service-sns-feature__text-wrapper">
-            <p class="service-sns-feature__num">03</p>
-            <h3 class="service-sns-feature__title">ブランドと印象を設計するデザイン</h3>
-            <div class="service-sns-feature__desc">
-              <p>
-                ターゲット業界や企業規模に合わせたトンマナ設計を行い、投稿テンプレートやプロフィールを最適化します。
-                Instagramは視覚的印象が信頼に直結します。
-                一貫した世界観を構築することで、ブランド価値を高めます。
-              </p>
-              <p class="service-sns-feature__benefit">
-                <span class="service-sns-feature__benefit-arrow">→</span>
-                投稿ごとの印象がブレなくなり、<span class="keyword">視覚的な信頼が積み上がる</span>
-              </p>
-            </div>
+          <div class="service-sns-feature__benefit">
+            <p>
+              <span class="service-sns-feature__benefit-arrow">→</span>
+              投稿ごとの印象がブレなくなり、<span class="keyword">視覚的な信頼が積み上がる</span>
+            </p>
           </div>
         </li>
 
         <li class="service-sns-feature__item">
-          <div class="service-sns-feature__visual">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/img/single-servivec-sns-img4.png' ); ?>" alt="伴走型で社内にノウハウを蓄積する支援イメージ" loading="lazy" decoding="async">
+          <p class="service-sns-feature__num">04</p>
+          <h3 class="service-sns-feature__title">伴走型で社内にノウハウを蓄積</h3>
+          <div class="service-sns-feature__approach">
+            <p>
+              完全丸投げ型ではなく、共同制作を前提とした伴走型支援を行います。
+              戦略MTG・構成支援・改善提案を通じて、最終的には社内でInstagramを自走できる体制づくりを目指します。
+            </p>
           </div>
-          <div class="service-sns-feature__text-wrapper">
-            <p class="service-sns-feature__num">04</p>
-            <h3 class="service-sns-feature__title">伴走型で社内にノウハウを蓄積</h3>
-            <div class="service-sns-feature__desc">
-              <p>
-                完全丸投げ型ではなく、共同制作を前提とした伴走型支援を行います。
-                戦略MTG・構成支援・改善提案を通じて、最終的には社内でInstagramを自走できる体制づくりを目指します。
-              </p>
-              <p class="service-sns-feature__benefit">
-                <span class="service-sns-feature__benefit-arrow">→</span>
-                外注依存から脱却し、<span class="keyword">社内でInstagramを自走できる状態</span>が手に入る
-              </p>
-            </div>
+          <div class="service-sns-feature__benefit">
+            <p>
+              <span class="service-sns-feature__benefit-arrow">→</span>
+              外注依存から脱却し、<span class="keyword">社内でInstagramを自走できる状態</span>が手に入る
+            </p>
           </div>
         </li>
 
@@ -714,15 +702,25 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-sns-cta__grid">
 
         <li class="service-sns-cta__card">
-          <p class="service-sns-cta__label">まずは資料で確認したい方へ</p>
-          <p class="service-sns-cta__desc">Instagram運用の全体像とサービス詳細をまとめた資料をお送りします</p>
-          <a class="service-sns-cta__btn" href="<?php echo esc_url( home_url('/ebook/') ); ?>">資料を請求する →</a>
+          <a class="service-sns-cta__card-link" href="<?php echo esc_url( home_url('/ebook/') ); ?>">
+            <p class="service-sns-cta__label">まずは資料で確認したい方へ</p>
+            <p class="service-sns-cta__desc">Instagram運用の全体像とサービス詳細をまとめた資料をお送りします</p>
+            <p class="service-sns-cta__action">
+              <span class="service-sns-cta__action-text"><span class="keyword">資料を請求する</span></span>
+              <span class="service-sns-cta__action-arrow">→</span>
+            </p>
+          </a>
         </li>
 
         <li class="service-sns-cta__card">
-          <p class="service-sns-cta__label">具体的に相談したい方へ</p>
-          <p class="service-sns-cta__desc">個別相談で、貴社の課題と次の一手を整理します(60分・無料)</p>
-          <a class="service-sns-cta__btn" href="<?php echo esc_url( home_url('/contact/') ); ?>">無料相談を申し込む →</a>
+          <a class="service-sns-cta__card-link" href="<?php echo esc_url( home_url('/contact/') ); ?>">
+            <p class="service-sns-cta__label">具体的に相談したい方へ</p>
+            <p class="service-sns-cta__desc">個別相談で、貴社の課題と次の一手を整理します(60分・無料)</p>
+            <p class="service-sns-cta__action">
+              <span class="service-sns-cta__action-text"><span class="keyword">無料相談を申し込む</span></span>
+              <span class="service-sns-cta__action-arrow">→</span>
+            </p>
+          </a>
         </li>
 
       </ul>
