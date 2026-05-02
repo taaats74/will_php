@@ -702,17 +702,21 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-sns-cta__grid">
 
         <li class="service-sns-cta__card">
-          <p class="service-sns-cta__label">[情報収集の方へ]</p>
-          <h3 class="service-sns-cta__title">無料ダウンロード資料</h3>
-          <p class="service-sns-cta__desc">Instagram運用の全体像とサービス詳細をまとめた資料を配布中</p>
-          <a class="service-sns-cta__btn" href="<?php echo esc_url( home_url('/ebook/') ); ?>">資料を見る →</a>
+          <a class="service-sns-cta__card-link" href="<?php echo esc_url( home_url('/ebook/') ); ?>">
+            <p class="service-sns-cta__label">[情報収集の方へ]</p>
+            <h3 class="service-sns-cta__title">無料ダウンロード資料</h3>
+            <p class="service-sns-cta__desc">Instagram運用の全体像とサービス詳細をまとめた資料を配布中</p>
+            <span class="service-sns-cta__btn">資料を見る →</span>
+          </a>
         </li>
 
         <li class="service-sns-cta__card">
-          <p class="service-sns-cta__label">[具体的な相談の方へ]</p>
-          <h3 class="service-sns-cta__title">お問い合わせ・お見積もり</h3>
-          <p class="service-sns-cta__desc">Instagram運用の具体的なご相談・お見積もりはこちら</p>
-          <a class="service-sns-cta__btn" href="<?php echo esc_url( home_url('/contact/') ); ?>">問い合わせる →</a>
+          <a class="service-sns-cta__card-link" href="<?php echo esc_url( home_url('/contact/') ); ?>">
+            <p class="service-sns-cta__label">[具体的な相談の方へ]</p>
+            <h3 class="service-sns-cta__title">お問い合わせ・お見積もり</h3>
+            <p class="service-sns-cta__desc">Instagram運用の具体的なご相談・お見積もりはこちら</p>
+            <span class="service-sns-cta__btn">問い合わせる →</span>
+          </a>
         </li>
 
       </ul>

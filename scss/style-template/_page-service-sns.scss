@@ -951,14 +951,26 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   list-style: none;
   background: $color-white;
   border-radius: 10px;
-  padding: 36px 32px;
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+
+    .service-sns-cta__btn { background: #1f6f82; }
   }
+}
+
+// カード全体クリック可
+.service-sns-cta__card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 36px 32px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
 }
 
 .service-sns-cta__label {
@@ -992,18 +1004,17 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
 .service-sns-cta__btn {
   display: inline-block;
+  align-self: center;
+  margin-top: auto;
   font-family: $ss-font-jp;
   font-weight: 700;
   font-size: 14px;
   color: $color-white;
   background: $color-accent;
   letter-spacing: 0.06em;
-  text-decoration: none;
   padding: 12px 28px;
   border-radius: 999px;
   transition: background 0.3s ease;
-
-  &:hover { background: #1f6f82; }
 }
 
 // =====================================================
