@@ -15756,7 +15756,7 @@ body.has-header-v4 .loading-container {
 }
 .service-ma-reason__benefit .keyword, .service-ma-principle__reasoning .keyword, .service-ma-problem__closing .keyword, .service-ma-concept__body .keyword, .service-ma-concept__headline .keyword, .service-ma-hero__catch .keyword {
   background: linear-gradient(transparent 0%, transparent 60%, rgba(240, 231, 78, 0.65) 60%, rgba(240, 231, 78, 0.65) 95%, transparent 95%);
-  color: #3E5054;
+  color: inherit;
   font-weight: 700;
   padding: 0 2px;
 }
