@@ -60,11 +60,11 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // =========================================
-// [1] HERO
+// [1] HERO 補足(template-parts/page-hero 直後の補足ブロック)
 // =========================================
 .service-web-hero {
   background: $color-white;
-  padding: 110px 0 90px;
+  padding: 80px 0 60px;
 
   .container { @extend %sw-container; }
 }
@@ -74,18 +74,16 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   text-align: center;
 }
 
-.service-web-hero__head {
-  margin-bottom: 40px;
-}
-
 .service-web-hero__tagline {
   font-family: $sw-font-jp;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.55;
+  font-size: 28px;
+  line-height: 1.7;
   color: $color-accent;
   letter-spacing: 0.04em;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
+
+  .keyword { @extend %sw-keyword; }
 }
 
 .service-web-hero__lead {
@@ -94,7 +92,10 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   line-height: 2;
   color: $color-text;
   letter-spacing: 0.04em;
-  margin: 0 0 28px;
+  margin: 0 0 32px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-web-hero__alternative {
@@ -1154,16 +1155,16 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 // =====================================================
 @media screen and (max-width: 767px) {
 
-  // [1] HERO
+  // [1] HERO 補足
   .service-web-hero {
-    padding: 64px 0 56px;
+    padding: 48px 0 40px;
     .container { padding: 0 20px; }
   }
 
   .service-web-hero__tagline {
-    font-size: 24px;
-    line-height: 1.6;
-    margin-bottom: 24px;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 22px;
   }
 
   .service-web-hero__lead {

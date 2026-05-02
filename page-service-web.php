@@ -14,26 +14,30 @@
 get_header('v4');
 ?>
 
+<?php
+// ヒーロー(下層ページ共通の template-parts/page-hero を流用)
+get_template_part( 'template-parts/page-hero', null, [
+  'en'    => 'WEB CREATIVE',
+  'title' => 'Webサイト制作',
+  'lead'  => '営業構造から逆算した、フルオーダーのBtoB Webサイト制作',
+] );
+?>
+
 <!-- ===================================================== -->
-<!-- [1] HERO                                                -->
+<!-- [1] HERO 補足(キャッチコピー + ウィルサポ並列提示)      -->
 <!-- ===================================================== -->
 <section class="service-web-hero">
   <div class="container">
     <div class="service-web-hero__inner">
 
-      <div class="service-web-hero__head">
-        <h1 class="section-header"><span class="green">w</span>eb creative</h1>
-        <p class="sub-title">Webサイト制作</p>
-      </div>
-
       <h2 class="service-web-hero__tagline">
-        営業構造から逆算した、<br>
-        フルオーダーのBtoB Webサイト制作。
+        自社で運用体制を持ち、<br class="sp">Webサイトを資産として<br>
+        しっかり作り込みたい会社のための、<span class="keyword">一括制作型サービス</span>です。
       </h2>
 
       <p class="service-web-hero__lead">
-        自社で運用体制を持ち、Webサイトを資産として<br class="pc">
-        しっかり作り込みたい会社のための、一括制作型サービスです。
+        ヒアリングから構成設計・デザイン・実装・公開まで、フルオーダーで伴走します。<br class="pc">
+        営業基盤として機能するWebサイトを、貴社の事業フェーズに合わせて構築します。
       </p>
 
       <p class="service-web-hero__alternative">
