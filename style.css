@@ -12098,9 +12098,83 @@ body.has-header-v4 .loading-container {
   transform: translateY(-2px);
 }
 
+.page-thanks__next {
+  margin-top: 72px;
+  padding-top: 56px;
+  border-top: 1px solid #C0D5D8;
+  text-align: center;
+}
+
+.page-thanks__next-heading {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #28849D;
+  letter-spacing: 0.06em;
+  line-height: 1.55;
+  margin: 0 0 32px;
+}
+
+.page-thanks__next-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.page-thanks__next-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #F0F8F9;
+  border: 1px solid #C0D5D8;
+  border-radius: 10px;
+  padding: 26px 28px;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.page-thanks__next-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(40, 132, 157, 0.12);
+  border-color: #28849D;
+}
+
+.page-thanks__next-label {
+  display: block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.page-thanks__next-text {
+  display: block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  line-height: 1.85;
+}
+
 @media screen and (max-width: 1024px) {
   .page-thanks {
     padding: 80px 0 100px;
+  }
+  .page-thanks__next {
+    margin-top: 60px;
+    padding-top: 48px;
+  }
+  .page-thanks__next-items {
+    gap: 16px;
+  }
+  .page-thanks__next-item {
+    padding: 22px 24px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -12130,6 +12204,30 @@ body.has-header-v4 .loading-container {
   .page-thanks__back {
     font-size: 13px;
     padding: 12px 28px;
+  }
+  .page-thanks__next {
+    margin-top: 48px;
+    padding-top: 36px;
+  }
+  .page-thanks__next-heading {
+    font-size: 17px;
+    letter-spacing: 0.04em;
+    margin-bottom: 22px;
+  }
+  .page-thanks__next-items {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .page-thanks__next-item {
+    padding: 20px 22px;
+    gap: 8px;
+  }
+  .page-thanks__next-label {
+    font-size: 14.5px;
+  }
+  .page-thanks__next-text {
+    font-size: 13px;
+    line-height: 1.8;
   }
 }
 .page-diagnosis {
