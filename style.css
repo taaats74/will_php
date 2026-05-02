@@ -15754,6 +15754,1566 @@ body.has-header-v4 .loading-container {
     padding: 11px 24px;
   }
 }
+.service-ma-reason__benefit .keyword, .service-ma-principle__reasoning .keyword, .service-ma-problem__closing .keyword, .service-ma-concept__body .keyword, .service-ma-concept__headline .keyword, .service-ma-hero__catch .keyword {
+  background: rgba(124, 193, 201, 0.18);
+  color: #28849D;
+  font-weight: 700;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.service-ma-cta .container, .service-ma-faq .container, .service-ma-works .container, .service-ma-price .container, .service-ma-flow .container, .service-ma-reason .container, .service-ma-principle .container, .service-ma-problem .container, .service-ma-target .container, .service-ma-concept .container, .service-ma-hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.service-ma-cta__inner, .service-ma-faq__inner, .service-ma-works__inner, .service-ma-price__inner, .service-ma-flow__inner, .service-ma-reason__inner, .service-ma-principle__inner, .service-ma-problem__inner, .service-ma-target__inner, .service-ma-concept__inner, .service-ma-hero__inner {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-ma-cta__head, .service-ma-faq__head, .service-ma-works__head, .service-ma-price__head, .service-ma-flow__head, .service-ma-reason__head, .service-ma-principle__head, .service-ma-problem__head, .service-ma-target__head, .service-ma-concept__head {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.service-ma-cta__head .en, .service-ma-faq__head .en, .service-ma-works__head .en, .service-ma-price__head .en, .service-ma-flow__head .en, .service-ma-reason__head .en, .service-ma-principle__head .en, .service-ma-problem__head .en, .service-ma-target__head .en, .service-ma-concept__head .en {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: #7fbabd;
+  opacity: 0.1;
+  line-height: 1;
+  margin: 0 0 -28px;
+  text-transform: uppercase;
+}
+.service-ma-cta__head h2, .service-ma-faq__head h2, .service-ma-works__head h2, .service-ma-price__head h2, .service-ma-flow__head h2, .service-ma-reason__head h2, .service-ma-principle__head h2, .service-ma-problem__head h2, .service-ma-target__head h2, .service-ma-concept__head h2 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #333333;
+  letter-spacing: 8px;
+  line-height: 1.55;
+  margin: 0 0 22px;
+}
+.service-ma-cta__head .subtitle, .service-ma-faq__head .subtitle, .service-ma-works__head .subtitle, .service-ma-price__head .subtitle, .service-ma-flow__head .subtitle, .service-ma-reason__head .subtitle, .service-ma-principle__head .subtitle, .service-ma-problem__head .subtitle, .service-ma-target__head .subtitle, .service-ma-concept__head .subtitle {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #595959;
+  letter-spacing: 3px;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-ma-hero {
+  background: #FFFFFF;
+  padding: 80px 0 60px;
+}
+.service-ma-hero__inner {
+  background: #F0F8F9;
+  border-radius: 16px;
+  padding: 56px 64px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+}
+
+.service-ma-hero__catch {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.7;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+}
+.service-ma-hero__lead {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 32px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-ma-hero__alternative {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #8AA0A4;
+  letter-spacing: 0.04em;
+  margin: 0;
+  padding: 12px 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+.service-ma-hero__alternative a {
+  color: #28849D;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.service-ma-concept {
+  background: #F0F8F9;
+  padding: 120px 0;
+}
+.service-ma-concept__inner {
+  text-align: center;
+}
+
+.service-ma-concept__headline {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.6;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 56px;
+}
+.service-ma-concept__body {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+.service-ma-concept__body p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+}
+.service-ma-concept__body p:last-child {
+  margin-bottom: 0;
+}
+.service-ma-concept__note-box {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #B4DBE0;
+  border-radius: 8px;
+  padding: 24px 32px;
+}
+.service-ma-concept__note-box p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-align: left;
+}
+.service-ma-concept__note-box p a {
+  color: #28849D;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.service-ma-target {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.service-ma-target__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 64px;
+}
+
+.service-ma-target__item {
+  list-style: none;
+  background: #F0F8F9;
+  border-radius: 8px;
+  padding: 28px 26px 26px;
+  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-ma-target__category-label {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #28849D;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #C0D5D8;
+}
+
+.service-ma-target__text {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.service-ma-target__alt-block {
+  background: #B4DBE0;
+  border-radius: 12px;
+  padding: 40px 48px;
+}
+
+.service-ma-target__alt-title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #28849D;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+  margin: 0 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(40, 132, 157, 0.18);
+}
+
+.service-ma-target__alt-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+.service-ma-target__alt-list li {
+  position: relative;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  padding-left: 24px;
+  margin: 0 0 8px;
+}
+.service-ma-target__alt-list li:last-child {
+  margin-bottom: 0;
+}
+.service-ma-target__alt-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 12px;
+  height: 12px;
+  background: #28849D;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2.5px #B4DBE0;
+}
+
+.service-ma-target__alt-text {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+}
+
+.service-ma-target__alt-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.service-ma-target__alt-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #28849D;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #28849D;
+  padding-bottom: 2px;
+  transition: opacity 0.3s ease;
+}
+.service-ma-target__alt-link:hover {
+  opacity: 0.7;
+}
+
+.service-ma-problem {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.service-ma-problem__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 56px;
+}
+
+.service-ma-problem__category {
+  list-style: none;
+  background: #F0F8F9;
+  border-radius: 8px;
+  padding: 36px 40px;
+}
+
+.service-ma-problem__category-title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #28849D;
+  letter-spacing: 0.06em;
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #C0D5D8;
+}
+
+.service-ma-problem__check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-ma-problem__check-list li {
+  position: relative;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  padding-left: 26px;
+  margin: 0 0 12px;
+}
+.service-ma-problem__check-list li:last-child {
+  margin-bottom: 0;
+}
+.service-ma-problem__check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 14px;
+  height: 14px;
+  background: #7CC1C9;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px #F0F8F9;
+}
+
+.service-ma-problem__closing {
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.service-ma-principle {
+  background: #c9ddde;
+  padding: 120px 0;
+}
+.service-ma-principle__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-ma-principle__item {
+  list-style: none;
+  position: relative;
+  background: #FFFFFF;
+  border-top: 4px solid #7CC1C9;
+  border-radius: 0 0 12px 12px;
+  padding: 48px 52px 44px;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.08);
+}
+
+.service-ma-principle__number {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1;
+  color: #7CC1C9;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  margin: 0 0 14px;
+}
+
+.service-ma-principle__title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #28849D;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #C0D5D8;
+}
+
+.service-ma-principle__thinking {
+  margin-bottom: 22px;
+}
+.service-ma-principle__thinking p:not(.service-ma-principle__label) {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.service-ma-principle__reasoning {
+  background: #F0F8F9;
+  border-left: 4px solid #28849D;
+  border-radius: 0 6px 6px 0;
+  padding: 20px 26px;
+}
+.service-ma-principle__reasoning p:not(.service-ma-principle__label) {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.service-ma-principle__label {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #7CC1C9;
+  margin: 0 0 8px;
+}
+.service-ma-principle__label--reason {
+  color: #28849D;
+}
+
+.service-ma-reason {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.service-ma-reason__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-ma-reason__item {
+  list-style: none;
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 12px;
+  padding: 40px 36px 36px;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-ma-reason__number {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1;
+  color: #7CC1C9;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  margin: 0 0 16px;
+}
+
+.service-ma-reason__title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #28849D;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #C0D5D8;
+  min-height: 84px;
+}
+
+.service-ma-reason__approach {
+  margin-bottom: 24px;
+  flex: 1 1 auto;
+}
+.service-ma-reason__approach p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.service-ma-reason__benefit {
+  background: #F0F8F9;
+  border-left: 4px solid #28849D;
+  border-radius: 0 6px 6px 0;
+  padding: 18px 24px;
+}
+.service-ma-reason__benefit p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.85;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.service-ma-reason__benefit-arrow {
+  display: inline-block;
+  margin-right: 8px;
+  color: #7CC1C9;
+  font-weight: 800;
+}
+
+.service-ma-flow {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.service-ma-flow__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.service-ma-flow__item {
+  list-style: none;
+  position: relative;
+  background: #F0F8F9;
+  border-radius: 8px;
+  padding: 28px 36px 28px 200px;
+  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
+}
+
+.service-ma-flow__step-number {
+  position: absolute;
+  top: 28px;
+  left: 36px;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: #28849D;
+  letter-spacing: 0.16em;
+  margin: 0;
+  padding: 6px 16px;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 999px;
+}
+
+.service-ma-flow__title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+}
+
+.service-ma-flow__text {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.service-ma-price {
+  background: #F0F8F9;
+  padding: 120px 0;
+}
+.service-ma-price__inner {
+  max-width: 1100px;
+}
+
+.service-ma-price__plans {
+  margin-bottom: 56px;
+}
+
+.service-ma-price__plans-heading {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #28849D;
+  letter-spacing: 0.06em;
+  margin: 0 0 24px;
+  padding-left: 16px;
+  border-left: 4px solid #28849D;
+}
+
+.service-ma-price__plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-ma-price__plan-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 32px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-ma-price__plan-num {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: #7CC1C9;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0 0 12px;
+}
+
+.service-ma-price__plan-name {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #C0D5D8;
+}
+
+.service-ma-price__plan-desc {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 22px;
+  text-align: left;
+  flex: 1 1 auto;
+}
+
+.service-ma-price__plan-price {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.service-ma-price__plan-price .service-ma-price__plan-tax {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8AA0A4;
+  margin-left: 4px;
+}
+
+.service-ma-price__order-block {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 48px 56px;
+  margin: 64px 0;
+}
+
+.service-ma-price__order-heading {
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #28849D;
+  letter-spacing: 0.06em;
+  margin: 0 0 16px;
+}
+
+.service-ma-price__order-lead {
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+}
+
+.service-ma-price__order-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  counter-reset: ma-order;
+}
+.service-ma-price__order-list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #F0F8F9;
+  border-radius: 8px;
+  padding: 18px 24px;
+}
+.service-ma-price__order-list li p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.service-ma-price__order-list li p strong {
+  font-weight: 700;
+  color: #28849D;
+}
+
+.service-ma-price__order-num {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #28849D;
+  color: #FFFFFF;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.service-ma-price__order-note {
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+  color: #8AA0A4;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.service-ma-price__philosophy-heading {
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #28849D;
+  letter-spacing: 0.06em;
+  margin: 0 0 32px;
+}
+
+.service-ma-price__philosophy-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-ma-price__philosophy-card {
+  list-style: none;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 32px 28px;
+}
+
+.service-ma-price__philosophy-title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #C0D5D8;
+}
+
+.service-ma-price__philosophy-text {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.service-ma-works {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.service-ma-works__inner {
+  max-width: 1100px;
+}
+
+.service-ma-works__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 48px;
+}
+
+.service-ma-works__card {
+  list-style: none;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-ma-works__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(40, 132, 157, 0.12);
+}
+
+.service-ma-works__card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-ma-works__card-thumb {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: #F0F8F9;
+}
+.service-ma-works__card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-ma-works__card-body {
+  padding: 22px 22px 24px;
+}
+
+.service-ma-works__card-title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 10px;
+}
+
+.service-ma-works__card-tag {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #3E5054;
+  background: #F0F8F9;
+  border: 1px solid #C0D5D8;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.service-ma-works__card-cta {
+  display: block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin-top: 6px;
+}
+
+.service-ma-works__more {
+  text-align: center;
+  margin: 0;
+}
+
+.service-ma-works__more-link {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #28849D;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #28849D;
+  padding-bottom: 2px;
+  transition: opacity 0.3s ease;
+}
+.service-ma-works__more-link:hover {
+  opacity: 0.7;
+}
+
+.service-ma-faq {
+  background: #F0F8F9;
+  padding: 120px 0;
+}
+.service-ma-faq__inner {
+  max-width: 880px;
+}
+
+.service-ma-faq__list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-ma-faq__list > ul > li {
+  list-style: none;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(40, 132, 157, 0.05);
+}
+.service-ma-faq__list > ul > li:last-child {
+  margin-bottom: 0;
+}
+.service-ma-faq__list .list.question {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.25s ease;
+}
+.service-ma-faq__list .list.question:hover {
+  background: #F0F8F9;
+}
+.service-ma-faq__list .list.question .text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+.service-ma-faq__list .list.question .list-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #28849D;
+  color: #FFFFFF;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+}
+.service-ma-faq__list .list.question .text {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.service-ma-faq__list .list.question i.fa-solid {
+  flex-shrink: 0;
+  color: #28849D;
+  font-size: 14px;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+.service-ma-faq__list .list.question.active i.fa-solid {
+  transform: rotate(0);
+}
+.service-ma-faq__list .list.answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #F0F8F9;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.service-ma-faq__list .list.answer .text-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px 22px;
+}
+.service-ma-faq__list .list.answer .list-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #B4DBE0;
+  color: #28849D;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  margin-top: 2px;
+}
+.service-ma-faq__list .list.answer .text {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0;
+  flex: 1;
+}
+.service-ma-faq__list .list.answer .text p {
+  margin: 0 0 14px;
+}
+.service-ma-faq__list .list.answer .text p:last-child {
+  margin-bottom: 0;
+}
+
+.service-ma-cta {
+  background: #28849D;
+  padding: 110px 0;
+}
+.service-ma-cta__head {
+  margin-bottom: 40px;
+}
+.service-ma-cta__head .en {
+  color: #FFFFFF;
+  opacity: 0.18;
+}
+.service-ma-cta__head h2 {
+  color: #FFFFFF;
+}
+.service-ma-cta__head .subtitle {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.service-ma-cta__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-ma-cta__card {
+  list-style: none;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 36px 32px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-ma-cta__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+
+.service-ma-cta__label {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8AA0A4;
+  letter-spacing: 0.08em;
+  margin: 0 0 12px;
+}
+
+.service-ma-cta__title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.service-ma-cta__desc {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+  min-height: 3.4em;
+}
+
+.service-ma-cta__btn {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #28849D;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  transition: background 0.3s ease;
+}
+.service-ma-cta__btn:hover {
+  background: #1f6f82;
+}
+
+@media screen and (max-width: 1024px) {
+  .service-ma-target__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .service-ma-price__plans-grid,
+  .service-ma-price__philosophy-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .service-ma-concept__head,
+  .service-ma-target__head,
+  .service-ma-problem__head,
+  .service-ma-principle__head,
+  .service-ma-reason__head,
+  .service-ma-flow__head,
+  .service-ma-price__head,
+  .service-ma-works__head,
+  .service-ma-faq__head,
+  .service-ma-cta__head {
+    margin-bottom: 44px;
+  }
+  .service-ma-concept__head .en,
+  .service-ma-target__head .en,
+  .service-ma-problem__head .en,
+  .service-ma-principle__head .en,
+  .service-ma-reason__head .en,
+  .service-ma-flow__head .en,
+  .service-ma-price__head .en,
+  .service-ma-works__head .en,
+  .service-ma-faq__head .en,
+  .service-ma-cta__head .en {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: -18px;
+  }
+  .service-ma-concept__head h2,
+  .service-ma-target__head h2,
+  .service-ma-problem__head h2,
+  .service-ma-principle__head h2,
+  .service-ma-reason__head h2,
+  .service-ma-flow__head h2,
+  .service-ma-price__head h2,
+  .service-ma-works__head h2,
+  .service-ma-faq__head h2,
+  .service-ma-cta__head h2 {
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+  }
+  .service-ma-concept__head .subtitle,
+  .service-ma-target__head .subtitle,
+  .service-ma-problem__head .subtitle,
+  .service-ma-principle__head .subtitle,
+  .service-ma-reason__head .subtitle,
+  .service-ma-flow__head .subtitle,
+  .service-ma-price__head .subtitle,
+  .service-ma-works__head .subtitle,
+  .service-ma-faq__head .subtitle,
+  .service-ma-cta__head .subtitle {
+    font-size: 13.5px;
+    letter-spacing: 1.5px;
+    line-height: 1.85;
+  }
+  .service-ma-hero {
+    padding: 48px 0 40px;
+  }
+  .service-ma-hero .container {
+    padding: 0 20px;
+  }
+  .service-ma-hero__inner {
+    padding: 32px 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(40, 132, 157, 0.08);
+  }
+  .service-ma-hero__catch {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+  .service-ma-hero__lead {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .service-ma-hero__alternative {
+    font-size: 12px;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .service-ma-concept {
+    padding: 60px 0;
+  }
+  .service-ma-concept .container {
+    padding: 0 20px;
+  }
+  .service-ma-concept__headline {
+    font-size: 22px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+  .service-ma-concept__body {
+    margin-bottom: 36px;
+  }
+  .service-ma-concept__body p {
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 22px;
+  }
+  .service-ma-concept__note-box {
+    padding: 18px 20px;
+  }
+  .service-ma-concept__note-box p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+  .service-ma-target {
+    padding: 60px 0;
+  }
+  .service-ma-target .container {
+    padding: 0 20px;
+  }
+  .service-ma-target__list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  .service-ma-target__item {
+    padding: 22px;
+  }
+  .service-ma-target__category-label {
+    font-size: 17px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+  .service-ma-target__text {
+    font-size: 13.5px;
+    line-height: 1.85;
+  }
+  .service-ma-target__alt-block {
+    padding: 28px 22px;
+    border-radius: 8px;
+  }
+  .service-ma-target__alt-title {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+  .service-ma-target__alt-list li {
+    font-size: 13.5px;
+    line-height: 1.85;
+    padding-left: 22px;
+  }
+  .service-ma-target__alt-text {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 18px;
+  }
+  .service-ma-target__alt-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .service-ma-target__alt-link {
+    font-size: 13.5px;
+  }
+  .service-ma-problem {
+    padding: 60px 0;
+  }
+  .service-ma-problem .container {
+    padding: 0 20px;
+  }
+  .service-ma-problem__list {
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+  .service-ma-problem__category {
+    padding: 24px 22px;
+  }
+  .service-ma-problem__category-title {
+    font-size: 18px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+  .service-ma-problem__check-list li {
+    font-size: 13.5px;
+    line-height: 1.8;
+    padding-left: 22px;
+  }
+  .service-ma-problem__check-list li::before {
+    width: 12px;
+    height: 12px;
+    box-shadow: inset 0 0 0 2.5px #F0F8F9;
+  }
+  .service-ma-problem__closing {
+    font-size: 14px;
+    line-height: 1.95;
+  }
+  .service-ma-principle {
+    padding: 60px 0;
+  }
+  .service-ma-principle .container {
+    padding: 0 20px;
+  }
+  .service-ma-principle__list {
+    gap: 24px;
+  }
+  .service-ma-principle__item {
+    padding: 32px 24px 28px;
+    border-top-width: 3px;
+    border-radius: 0 0 10px 10px;
+  }
+  .service-ma-principle__number {
+    font-size: 44px;
+    margin-bottom: 12px;
+  }
+  .service-ma-principle__title {
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+  }
+  .service-ma-principle__thinking p:not(.service-ma-principle__label) {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .service-ma-principle__reasoning {
+    padding: 16px 18px;
+  }
+  .service-ma-principle__reasoning p:not(.service-ma-principle__label) {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .service-ma-principle__label {
+    font-size: 11.5px;
+  }
+  .service-ma-reason {
+    padding: 60px 0;
+  }
+  .service-ma-reason .container {
+    padding: 0 20px;
+  }
+  .service-ma-reason__list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .service-ma-reason__item {
+    padding: 28px 22px 24px;
+    border-radius: 10px;
+  }
+  .service-ma-reason__number {
+    font-size: 44px;
+    margin-bottom: 14px;
+  }
+  .service-ma-reason__title {
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    min-height: 0;
+  }
+  .service-ma-reason__approach p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .service-ma-reason__benefit {
+    padding: 14px 18px;
+  }
+  .service-ma-reason__benefit p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .service-ma-flow {
+    padding: 60px 0;
+  }
+  .service-ma-flow .container {
+    padding: 0 20px;
+  }
+  .service-ma-flow__list {
+    gap: 16px;
+  }
+  .service-ma-flow__item {
+    padding: 56px 22px 22px;
+  }
+  .service-ma-flow__step-number {
+    position: static;
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 14px;
+    margin-bottom: 14px;
+  }
+  .service-ma-flow__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .service-ma-flow__text {
+    font-size: 13.5px;
+    line-height: 1.85;
+  }
+  .service-ma-price {
+    padding: 60px 0;
+  }
+  .service-ma-price .container {
+    padding: 0 20px;
+  }
+  .service-ma-price__plans {
+    margin-bottom: 36px;
+  }
+  .service-ma-price__plans-heading {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  .service-ma-price__plans-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .service-ma-price__plan-card {
+    padding: 24px 22px;
+  }
+  .service-ma-price__plan-num {
+    font-size: 24px;
+  }
+  .service-ma-price__plan-name {
+    font-size: 17px;
+  }
+  .service-ma-price__plan-desc {
+    font-size: 13px;
+  }
+  .service-ma-price__plan-price {
+    font-size: 19px;
+  }
+  .service-ma-price__order-block {
+    padding: 28px 22px;
+    margin: 36px 0;
+  }
+  .service-ma-price__order-heading {
+    font-size: 18px;
+  }
+  .service-ma-price__order-lead {
+    font-size: 13.5px;
+    margin-bottom: 22px;
+  }
+  .service-ma-price__order-list li {
+    padding: 14px 18px;
+    gap: 14px;
+  }
+  .service-ma-price__order-list li p {
+    font-size: 13.5px;
+  }
+  .service-ma-price__order-num {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .service-ma-price__philosophy-heading {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .service-ma-price__philosophy-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .service-ma-price__philosophy-card {
+    padding: 22px 22px;
+  }
+  .service-ma-price__philosophy-title {
+    font-size: 15.5px;
+  }
+  .service-ma-price__philosophy-text {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+  .service-ma-works {
+    padding: 60px 0;
+  }
+  .service-ma-works .container {
+    padding: 0 20px;
+  }
+  .service-ma-works__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .service-ma-works__card-body {
+    padding: 16px 18px 20px;
+  }
+  .service-ma-works__card-title {
+    font-size: 15px;
+  }
+  .service-ma-faq {
+    padding: 60px 0;
+  }
+  .service-ma-faq .container {
+    padding: 0 20px;
+  }
+  .service-ma-faq__list .list.question {
+    padding: 16px 18px;
+    gap: 10px;
+  }
+  .service-ma-faq__list .list.question .text-wrapper {
+    gap: 12px;
+  }
+  .service-ma-faq__list .list.question .list-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+  .service-ma-faq__list .list.question .text {
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  .service-ma-faq__list .list.answer .text-wrapper {
+    padding: 16px 18px 18px;
+    gap: 12px;
+  }
+  .service-ma-faq__list .list.answer .list-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+  .service-ma-faq__list .list.answer .text {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+  .service-ma-cta {
+    padding: 56px 0;
+  }
+  .service-ma-cta .container {
+    padding: 0 20px;
+  }
+  .service-ma-cta__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .service-ma-cta__card {
+    padding: 28px 22px;
+  }
+  .service-ma-cta__title {
+    font-size: 17px;
+  }
+  .service-ma-cta__desc {
+    font-size: 13px;
+    min-height: 0;
+  }
+  .service-ma-cta__btn {
+    font-size: 13px;
+    padding: 11px 24px;
+  }
+}
 .single-service-problem.wm .container .wrapper {
   margin-top: 70px;
 }
