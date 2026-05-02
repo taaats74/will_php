@@ -55,9 +55,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-concept__inner">
 
-      <div class="service-web-concept__head">
-        <h2 class="section-header"><span class="green">c</span>oncept</h2>
-        <p class="sub-title">コンセプト</p>
+      <div class="service-web-concept__head concept-header">
+        <p class="en">CONCEPT</p>
+        <h2>コンセプト</h2>
+        <p class="subtitle">Webサイトの本当の役割を、私たちはこう考えています。</p>
       </div>
 
       <h3 class="service-web-concept__headline">
@@ -95,9 +96,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-target__inner">
 
-      <div class="service-web-target__head">
-        <h2 class="section-header"><span class="green">f</span>or whom</h2>
-        <p class="sub-title">こんな会社のためのサービスです</p>
+      <div class="service-web-target__head target-header">
+        <p class="en">FOR WHOM</p>
+        <h2>こんな会社のためのサービスです</h2>
+        <p class="subtitle">本サービスは、特に以下のような会社向けにご提供しています。</p>
       </div>
 
       <p class="service-web-target__lead">
@@ -153,9 +155,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-problem__inner">
 
-      <div class="service-web-problem__head">
-        <h2 class="section-header"><span class="green">p</span>roblem</h2>
-        <p class="sub-title">こんなお悩みはありませんか?</p>
+      <div class="service-web-problem__head problem-header">
+        <p class="en">PROBLEM</p>
+        <h2>こんなお悩みはありませんか?</h2>
+        <p class="subtitle">BtoB中小企業のWebサイト制作で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
       <p class="service-web-problem__lead">
@@ -211,9 +214,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-reason__inner">
 
-      <div class="service-web-reason__head">
-        <h2 class="section-header"><span class="green">r</span>eason</h2>
-        <p class="sub-title">ウィルが選ばれる4つの理由</p>
+      <div class="service-web-reason__head reason-header">
+        <p class="en">REASON</p>
+        <h2>ウィルが選ばれる<br class="sp">4つの理由</h2>
+        <p class="subtitle">数あるWebサイト制作会社の中から、ウィルが選ばれる理由をお伝えします。</p>
       </div>
 
       <p class="service-web-reason__lead">
@@ -313,9 +317,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-flow__inner">
 
-      <div class="service-web-flow__head">
-        <h2 class="section-header"><span class="green">f</span>low</h2>
-        <p class="sub-title">制作の流れ</p>
+      <div class="service-web-flow__head flow-header">
+        <p class="en">FLOW</p>
+        <h2>制作の流れ</h2>
+        <p class="subtitle">ヒアリングと設計に十分な時間をかけて、6ステップで進めます。</p>
       </div>
 
       <p class="service-web-flow__lead">
@@ -391,9 +396,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-price__inner">
 
-      <div class="service-web-price__head">
-        <h2 class="section-header"><span class="green">p</span>rice</h2>
-        <p class="sub-title">料金プラン</p>
+      <div class="service-web-price__head price-header">
+        <p class="en">PRICE</p>
+        <h2>料金プラン</h2>
+        <p class="subtitle">目的・体制・必要な制作範囲に応じて、最適な構成をご提案します。</p>
       </div>
 
       <p class="service-web-price__lead">
@@ -569,9 +575,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-works__inner">
 
-      <div class="service-web-works__head">
-        <h2 class="section-header"><span class="green">w</span>orks</h2>
-        <p class="sub-title">制作実績</p>
+      <div class="service-web-works__head works-header">
+        <p class="en">WORKS</p>
+        <h2>制作実績</h2>
+        <p class="subtitle">業種・規模を問わず、BtoB中小企業を中心にご支援しています。</p>
       </div>
 
       <p class="service-web-works__lead">
@@ -637,9 +644,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-faq__inner">
 
-      <div class="service-web-faq__head">
-        <h2 class="section-header"><span class="green">f</span>aq</h2>
-        <p class="sub-title">よくあるご質問</p>
+      <div class="service-web-faq__head faq-header">
+        <p class="en">FAQ</p>
+        <h2>よくあるご質問</h2>
+        <p class="subtitle">お問い合わせ前によくいただく質問をまとめました。</p>
       </div>
 
       <ul class="accordion service-web-faq__list">
@@ -749,14 +757,11 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-cta__inner">
 
-      <div class="service-web-cta__head">
-        <h2 class="section-header"><span class="green">c</span>ontact</h2>
-        <p class="sub-title">3つの相談入口をご用意しています</p>
+      <div class="service-web-cta__head cta-header">
+        <p class="en">CONTACT</p>
+        <h2>3つの相談入口をご用意しています</h2>
+        <p class="subtitle">ご検討の段階に合わせて、お気軽にお問い合わせください。</p>
       </div>
-
-      <p class="service-web-cta__lead">
-        ご検討の段階に合わせて、お気軽にお問い合わせください。
-      </p>
 
       <ul class="service-web-cta__grid">
 
