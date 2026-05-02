@@ -23738,88 +23738,124 @@ body.has-header-v4 .loading-container {
     font-size: 0.9em;
   }
 }
-.page-tradelaw-table .container .wrapper {
-  padding-bottom: 100px;
+.page-tradelaw {
+  background: #ffffff;
+  padding: 100px 0 120px;
 }
-.page-tradelaw-table .container .wrapper h2 {
-  font-family: "fot-matisse-pron", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 1em;
-  text-align: center;
-  margin-top: 120px;
-}
-.page-tradelaw-table .container .wrapper h2 span {
-  color: #7dacaf;
-}
-.page-tradelaw-table .container .wrapper table {
-  width: 90%;
-  max-width: 800px;
+.page-tradelaw .container {
+  max-width: 1200px;
   margin: 0 auto;
-  margin-top: 50px;
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.page-tradelaw-table .container .wrapper table tr th {
-  font-weight: bold;
-  width: 30%;
-  padding: 30px 0;
-  border-bottom: solid 1px black;
-}
-.page-tradelaw-table .container .wrapper table tr td {
-  width: 70%;
-  padding: 30px 10px;
-  border-bottom: solid 1px silver;
-}
-.page-tradelaw-table .container .wrapper table tr td ul {
-  margin-left: 30px;
+  padding: 0 40px;
 }
 
-@media screen and (max-width: 770px) {
-  .page-tradelaw-table .container .wrapper {
-    padding-bottom: 100px;
+.page-tradelaw__inner {
+  width: 90%;
+  max-width: 880px;
+  margin: 0 auto;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+}
+
+.page-tradelaw__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+}
+.page-tradelaw__table th,
+.page-tradelaw__table td {
+  padding: 22px 20px;
+  border-bottom: 1px solid #C0D5D8;
+  vertical-align: top;
+  text-align: left;
+}
+.page-tradelaw__table th {
+  width: 32%;
+  font-weight: 700;
+  color: #28849D;
+  background: #F0F8F9;
+  white-space: nowrap;
+}
+.page-tradelaw__table td {
+  width: 68%;
+}
+.page-tradelaw__table td p {
+  margin: 0 0 14px;
+}
+.page-tradelaw__table td p:last-child {
+  margin-bottom: 0;
+}
+.page-tradelaw__table td ul,
+.page-tradelaw__table td ol {
+  margin: 8px 0 0 22px;
+  padding: 0;
+}
+.page-tradelaw__table td ul li,
+.page-tradelaw__table td ol li {
+  margin: 0 0 6px;
+  line-height: 1.85;
+}
+.page-tradelaw__table td ul li:last-child,
+.page-tradelaw__table td ol li:last-child {
+  margin-bottom: 0;
+}
+.page-tradelaw__table tr:first-child th,
+.page-tradelaw__table tr:first-child td {
+  border-top: 1px solid #C0D5D8;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-tradelaw {
+    padding: 80px 0 100px;
   }
-  .page-tradelaw-table .container .wrapper h2 {
-    font-family: "fot-matisse-pron", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.4em;
-    line-height: 1em;
-    text-align: center;
-    margin-top: 70px;
+}
+@media screen and (max-width: 767px) {
+  .page-tradelaw {
+    padding: 56px 0 72px;
   }
-  .page-tradelaw-table .container .wrapper h2 span {
-    color: #7dacaf;
+  .page-tradelaw .container {
+    padding: 0 20px;
   }
-  .page-tradelaw-table .container .wrapper table {
-    width: 95%;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 30px;
-    font-family: "toppan-bunkyu-gothic-pr6n", serif;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .page-tradelaw__table {
+    font-size: 13.5px;
+    line-height: 1.85;
   }
-  .page-tradelaw-table .container .wrapper table tr th {
-    font-weight: bold;
-    width: 30%;
-    padding: 10px 0;
-    font-size: 0.8em;
-    border-bottom: solid 1px black;
-    line-height: 1.2em;
+  .page-tradelaw__table thead, .page-tradelaw__table tbody, .page-tradelaw__table tr {
+    display: block;
+    width: 100%;
   }
-  .page-tradelaw-table .container .wrapper table tr td {
-    width: 70%;
-    padding: 10px;
-    font-size: 0.8em;
-    border-bottom: solid 1px silver;
+  .page-tradelaw__table th,
+  .page-tradelaw__table td {
+    display: block;
+    width: 100%;
+    white-space: normal;
+    padding: 14px 16px;
+    border-bottom: none;
   }
-  .page-tradelaw-table .container .wrapper table tr td ul {
-    margin-left: 10px;
+  .page-tradelaw__table th {
+    width: 100%;
+    background: #F0F8F9;
+    border-radius: 6px 6px 0 0;
+    padding: 12px 16px;
+  }
+  .page-tradelaw__table td {
+    padding: 14px 16px 18px;
+    border-bottom: 1px solid #C0D5D8;
+  }
+  .page-tradelaw__table tr:first-child th,
+  .page-tradelaw__table tr:first-child td {
+    border-top: none;
+  }
+  .page-tradelaw__table tr {
+    margin-bottom: 12px;
+  }
+  .page-tradelaw__table td ul,
+  .page-tradelaw__table td ol {
+    margin-left: 18px;
   }
 }
 footer .container {
