@@ -27,7 +27,7 @@ get_template_part('template-parts/page-hero', null, [
     <div class="wrapper">
 
       <div class="page-service__philosophy-head">
-        <p class="page-service__eyebrow">PHILOSOPHY</p>
+        <!-- <p class="page-service__eyebrow">PHILOSOPHY</p> -->
         <h2 class="page-service__philosophy-title">
           サービス単体ではなく、<br>
           営業基盤として設計しています
@@ -53,7 +53,7 @@ get_template_part('template-parts/page-hero', null, [
 
       <div class="page-service__main-head">
         <p class="page-service__eyebrow">MAIN SERVICES</p>
-        <h2 class="page-service__main-title">伴走型の主力サービス</h2>
+        <h2 class="page-service__main-title">伴走型のサブスクサービス</h2>
         <p class="page-service__main-lead">
           Webサイトの構築から運用改善まで、月額制で伴走するサブスク型サービス。<br>
           事業フェーズに合った形で、営業基盤の構築を支援します。
@@ -63,7 +63,11 @@ get_template_part('template-parts/page-hero', null, [
       <ul class="page-service__main-list">
 
         <li class="page-service__main-card page-service__main-card--ws">
-          <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="page-service__main-card-link">
+          <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>"
+             class="page-service__main-card-link"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="ウィルサポのサービス詳細を新しいタブで開く">
 
             <div class="page-service__main-card-target">[BtoB中小企業向け]</div>
 
@@ -106,7 +110,11 @@ get_template_part('template-parts/page-hero', null, [
         </li>
 
         <li class="page-service__main-card page-service__main-card--ec">
-          <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="page-service__main-card-link">
+          <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>"
+             class="page-service__main-card-link"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="ウィルサポECのサービス詳細を新しいタブで開く">
 
             <div class="page-service__main-card-target">[EC事業者向け]</div>
 
