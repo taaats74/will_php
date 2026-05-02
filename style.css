@@ -23586,6 +23586,10 @@ body.has-header-v4 .loading-container {
   background: #F0F8F9;
   border-radius: 8px;
 }
+.page-privacypolicy__inner .page-privacypolicy__close {
+  text-align: right;
+  margin-top: 36px;
+}
 
 @media screen and (max-width: 1024px) {
   .page-privacypolicy {

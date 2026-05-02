@@ -103,6 +103,12 @@ $pp-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     background: $pp-color-bg-pale;
     border-radius: 8px;
   }
+
+  // 文末の「以上」
+  .page-privacypolicy__close {
+    text-align: right;
+    margin-top: 36px;
+  }
 }
 
 // =====================================================
