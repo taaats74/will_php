@@ -102,10 +102,6 @@ get_template_part( 'template-parts/page-hero', null, [
         <p class="subtitle">本サービスは、特に以下のような会社向けにご提供しています。</p>
       </div>
 
-      <p class="service-web-target__lead">
-        本サービスは、特に以下のような会社向けにご提供しています。
-      </p>
-
       <ul class="service-web-target__list">
 
         <li class="service-web-target__item">
@@ -161,10 +157,6 @@ get_template_part( 'template-parts/page-hero', null, [
         <p class="subtitle">BtoB中小企業のWebサイト制作で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
-      <p class="service-web-problem__lead">
-        BtoB中小企業のWebサイト制作で、よくいただくご相談を3つの観点で整理しました。
-      </p>
-
       <ul class="service-web-problem__list">
 
         <li class="service-web-problem__category">
@@ -219,11 +211,6 @@ get_template_part( 'template-parts/page-hero', null, [
         <h2>ウィルが選ばれる<br class="sp">4つの理由</h2>
         <p class="subtitle">数あるWebサイト制作会社の中から、ウィルが選ばれる理由をお伝えします。</p>
       </div>
-
-      <p class="service-web-reason__lead">
-        Webサイト制作会社は数多くあります。<br>
-        そのなかで、ウィルが選ばれる理由をお伝えします。
-      </p>
 
       <ul class="service-web-reason__list">
 
@@ -831,24 +818,30 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-web-cta__grid">
 
         <li class="service-web-cta__card">
-          <p class="service-web-cta__label">[初期検討の方へ]</p>
-          <h3 class="service-web-cta__title">1分でできる無料診断</h3>
-          <p class="service-web-cta__desc">現在のWebサイトの課題を整理します</p>
-          <a class="service-web-cta__btn" href="<?php echo esc_url( home_url('/diagnosis/') ); ?>">診断する →</a>
+          <a class="service-web-cta__card-link" href="<?php echo esc_url( home_url('/diagnosis/') ); ?>">
+            <p class="service-web-cta__label">[初期検討の方へ]</p>
+            <h3 class="service-web-cta__title">1分でできる無料診断</h3>
+            <p class="service-web-cta__desc">現在のWebサイトの課題を整理します</p>
+            <span class="service-web-cta__btn">診断する →</span>
+          </a>
         </li>
 
         <li class="service-web-cta__card">
-          <p class="service-web-cta__label">[情報収集の方へ]</p>
-          <h3 class="service-web-cta__title">無料ダウンロード資料</h3>
-          <p class="service-web-cta__desc">BtoB Web制作のお役立ち資料を配布中</p>
-          <a class="service-web-cta__btn" href="<?php echo esc_url( home_url('/ebooks/') ); ?>">資料を見る →</a>
+          <a class="service-web-cta__card-link" href="<?php echo esc_url( home_url('/ebooks/') ); ?>">
+            <p class="service-web-cta__label">[情報収集の方へ]</p>
+            <h3 class="service-web-cta__title">無料ダウンロード資料</h3>
+            <p class="service-web-cta__desc">BtoB Web制作のお役立ち資料を配布中</p>
+            <span class="service-web-cta__btn">資料を見る →</span>
+          </a>
         </li>
 
         <li class="service-web-cta__card">
-          <p class="service-web-cta__label">[具体的な相談の方へ]</p>
-          <h3 class="service-web-cta__title">お問い合わせ・お見積もり</h3>
-          <p class="service-web-cta__desc">具体的なご相談・お見積もりはこちら</p>
-          <a class="service-web-cta__btn" href="<?php echo esc_url( get_page_link(15) ); ?>">問い合わせる →</a>
+          <a class="service-web-cta__card-link" href="<?php echo esc_url( get_page_link(15) ); ?>">
+            <p class="service-web-cta__label">[具体的な相談の方へ]</p>
+            <h3 class="service-web-cta__title">お問い合わせ・お見積もり</h3>
+            <p class="service-web-cta__desc">具体的なご相談・お見積もりはこちら</p>
+            <span class="service-web-cta__btn">問い合わせる →</span>
+          </a>
         </li>
 
       </ul>
