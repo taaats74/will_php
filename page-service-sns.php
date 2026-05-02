@@ -702,13 +702,6 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-sns-cta__grid">
 
         <li class="service-sns-cta__card">
-          <p class="service-sns-cta__label">[初期検討の方へ]</p>
-          <h3 class="service-sns-cta__title">1分でできる無料診断</h3>
-          <p class="service-sns-cta__desc">現在のWeb・SNS活用の課題を整理します</p>
-          <a class="service-sns-cta__btn" href="<?php echo esc_url( home_url('/diagnosis/') ); ?>">診断する →</a>
-        </li>
-
-        <li class="service-sns-cta__card">
           <p class="service-sns-cta__label">[情報収集の方へ]</p>
           <h3 class="service-sns-cta__title">無料ダウンロード資料</h3>
           <p class="service-sns-cta__desc">Instagram運用の全体像とサービス詳細をまとめた資料を配布中</p>
