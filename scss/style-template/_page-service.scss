@@ -301,132 +301,10 @@ $philo-bg: #28849b;
 }
 
 // =============================================
-// Section 4: SUPPORT AREAS(5カード)
-// =============================================
-.page-service__support {
-  background: $will-bg-pale;
-  padding: 110px 0;
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-}
-
-.page-service__support-head {
-  text-align: center;
-  margin-bottom: 56px;
-}
-
-.page-service__support-title {
-  font-size: 30px;
-  font-weight: 700;
-  color: $will-accent;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
-}
-
-.page-service__support-lead {
-  max-width: 720px;
-  margin: 24px auto 0;
-  font-size: 15px;
-  line-height: 1.9;
-  color: $will-text;
-}
-
-.page-service__support-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.page-service__support-card {
-  list-style: none;
-}
-
-.page-service__support-card-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background: #ffffff;
-  border: 1px solid $will-border;
-  border-radius: 10px;
-  padding: 32px 28px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: $will-primary;
-    box-shadow: 0 12px 24px rgba(40, 132, 157, 0.12);
-  }
-}
-
-.page-service__support-card-header {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  margin-bottom: 16px;
-}
-
-.page-service__support-card-num {
-  font-size: 32px;
-  font-weight: 800;
-  color: $will-primary;
-  line-height: 1;
-  letter-spacing: 0.05em;
-}
-
-.page-service__support-card-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: $will-accent;
-  line-height: 1.4;
-}
-
-.page-service__support-card-catch {
-  font-size: 14px;
-  font-weight: 700;
-  color: $will-accent;
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-
-.page-service__support-card-body {
-  font-size: 13px;
-  line-height: 1.85;
-  color: $will-text;
-  margin-bottom: 20px;
-  flex: 1;
-}
-
-.page-service__support-card-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 700;
-  color: $will-accent;
-
-  .page-service__support-card-cta-arrow {
-    transition: transform 0.3s ease;
-  }
-}
-
-.page-service__support-card-link:hover .page-service__support-card-cta-arrow {
-  transform: translateX(4px);
-}
-
-// =============================================
-// Section 5/6/7
-// page-topv3-diagnosis / page-topv3-ebook / page-topv3-contact-v5 のラッパー
-// クラスを page-service.php 側で直接使用しているため、
-// _page-top3.scss のネスト定義がそのまま適用される。
+// Section 4: SUPPORT AREAS / Section 5/6/7
+// page-topv3-whatwedo / page-topv3-diagnosis / page-topv3-ebook /
+// page-topv3-contact-v5 のラッパークラスを page-service.php 側で直接
+// 使用しているため、_page-top3.scss のネスト定義がそのまま適用される。
 // このファイル側での独自スタイル定義は不要。
 // =============================================
 
@@ -473,19 +351,6 @@ $philo-bg: #28849b;
     font-size: 11px;
     padding: 10px 6px;
     min-height: 56px;
-  }
-
-  .page-service__support {
-    padding: 96px 0;
-
-    .container {
-      padding: 0 24px;
-    }
-  }
-
-  .page-service__support-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
   }
 }
 
@@ -570,42 +435,5 @@ $philo-bg: #28849b;
 
   .page-service__main-card-benefit {
     padding: 14px 16px;
-  }
-
-  .page-service__support {
-    padding: 72px 0;
-
-    .container {
-      padding: 0 20px;
-    }
-  }
-
-  .page-service__support-head {
-    margin-bottom: 40px;
-  }
-
-  .page-service__support-title {
-    font-size: 24px;
-  }
-
-  .page-service__support-lead {
-    font-size: 14px;
-  }
-
-  .page-service__support-list {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .page-service__support-card-link {
-    padding: 24px 20px;
-  }
-
-  .page-service__support-card-num {
-    font-size: 28px;
-  }
-
-  .page-service__support-card-title {
-    font-size: 17px;
   }
 }
