@@ -1,41 +1,90 @@
 // =====================================================
-// page-about-v2.php 専用スタイル(新規セクションのみ)
+// page-about-v2.php 専用スタイル(page-topv3 トンマナ準拠)
 // 既存 .mission / .message / .company は _page-about.scss を流用
 //
 // 対応PHP: page-about-v2.php
 // 構成:
 //   2. MISSION       … 既存 .mission(_page-about.scss)
-//   3. CONCEPT       … .about-concept(本ファイル)
-//   4. WHAT WE SOLVE … .about-solve(本ファイル)
-//   5. STRENGTH      … .about-strength(本ファイル・縦並び3カード)
+//   3. CONCEPT       … .about-v2-concept(本ファイル・page-topv3-concept パターン)
+//   4. WHAT WE SOLVE … .about-v2-solve(本ファイル・page-topv3-issue + concept-block パターン)
+//   5. STRENGTH      … .about-v2-strength(本ファイル・page-topv3-strength パターン・縦並び)
 //   6. MESSAGE       … 既存 .message(_page-about.scss)
 //   7. COMPANY       … 既存 .company(_page-about.scss)
 // =====================================================
 
-// =========================================
-// ウィルブランドカラー(Brand Color Guideline v1.0準拠)
-// =========================================
-$color-primary:    #7CC1C9;  // ターコイズブルー(メイン)
-$color-light:      #B4DBE0;  // ペールターコイズ(背景補助)
-$color-accent:     #28849D;  // ディープティール(強調・CTA・見出し)
-$color-highlight:  #F0E74E;  // マーカーイエロー(注目・極稀)
-$color-text:       #3E5054;  // チャコールグレー(本文)
-$color-bg-pale:    #F0F8F9;  // 極淡背景
-$color-border:     #C0D5D8;  // 薄罫線
-$color-subtle:     #8AA0A4;  // サブテキスト
-$color-white:      #FFFFFF;
+// =====================================================
+// page-topv3 で実際に使われているカラー(トンマナ統一)
+// =====================================================
+$av2-primary:     #7fbabd;   // ターコイズ系(英字あしらい・装飾)
+$av2-accent:      #28849b;   // ディープティール(キーワード・番号)
+$av2-heading:     #333333;   // 見出し
+$av2-body:        #595959;   // 本文(やや暗いグレー)
+$av2-text:        #333333;   // メインテキスト
+$av2-bg-pale:     #c9ddde;   // 極淡背景(ターコイズ寄り)
+$av2-bg-soft:     #f4f8f9;   // 明るい背景
+$av2-border:      #d8e6e7;   // 罫線
+$av2-card-bg:     #ffffff;   // カード背景
+$av2-keyword-bg:  rgba(127, 186, 189, 0.18); // .keyword 用ハイライト
 
-// =========================================
-// 共通:セクション内の見出しヘッダー(.section-header / .sub-title / .border)は
-// 既存テーマのものをそのまま継承するため、ここでは定義しない。
-// .green は _general.scss(または _header.scss)で定義済み($color-primary 相当)。
-// =========================================
+// 共通フォント
+$av2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
-// =========================================
-// CONCEPT セクション(.about-concept)
-// =========================================
-.about-concept {
-  background: $color-white;
+// =====================================================
+// 共通の英字あしらい(.{section}-header > .en + h2 + .subtitle)
+// page-topv3 の .concept-header / .strength-header と同じパターン
+// =====================================================
+%av2-section-header {
+  text-align: center;
+  margin-bottom: 80px;
+
+  .en {
+    font-family: $av2-font-jp;
+    font-weight: 900;
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: $av2-primary;
+    opacity: .1;
+    line-height: 1;
+    margin: 0 0 -28px;
+  }
+
+  h2 {
+    font-family: $av2-font-jp;
+    font-weight: 500;
+    font-size: 26px;
+    color: $av2-heading;
+    letter-spacing: 8px;
+    line-height: 1.55;
+    margin: 0 0 25px;
+  }
+
+  .subtitle {
+    font-family: YuGothic, 'Yu Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: $av2-body;
+    letter-spacing: 3px;
+    line-height: 1.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+// keyword ハイライト共通(.keyword)
+%av2-keyword {
+  background: $av2-keyword-bg;
+  color: $av2-accent;
+  font-weight: 700;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+// =====================================================
+// CONCEPT セクション(.about-v2-concept)
+// page-topv3-concept パターン踏襲
+// =====================================================
+.about-v2-concept {
+  background: $av2-card-bg;
   padding: 120px 0;
 
   .container {
@@ -43,361 +92,397 @@ $color-white:      #FFFFFF;
     margin: 0 auto;
     padding: 0 40px;
   }
-}
 
-.about-concept__inner {
-  max-width: 880px;
-  margin: 0 auto;
-  text-align: center;
-}
+  .wrapper {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
 
-.about-concept__head {
-  margin-bottom: 56px;
-}
+  .concept-header {
+    @extend %av2-section-header;
+  }
 
-.about-concept__title {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: $color-accent;
-  line-height: 1.6;
-  letter-spacing: 0.04em;
-  margin: 0 0 48px;
-}
+  .concept-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
 
-.about-concept__body {
-  font-size: 16px;
-  line-height: 2;
-  color: $color-text;
-  letter-spacing: 0.02em;
+  .concept-block {
+    background: $av2-bg-soft;
+    border-radius: 8px;
+    padding: 48px 56px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
 
-  p {
-    margin: 0 0 32px;
+    p {
+      font-family: $av2-font-jp;
+      font-size: 16px;
+      line-height: 2;
+      color: $av2-text;
+      letter-spacing: 0.04em;
+      margin: 0 0 20px;
 
-    &:last-child {
-      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-  }
 
-  .about-concept__closing {
-    font-size: 18px;
-    font-weight: 700;
-    color: $color-accent;
-    margin-top: 48px;
-  }
-}
-
-// =========================================
-// WHAT WE SOLVE セクション(.about-solve)
-// =========================================
-.about-solve {
-  background: $color-bg-pale;
-  padding: 120px 0;
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-}
-
-.about-solve__inner {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.about-solve__head {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.about-solve__lead {
-  font-size: 17px;
-  line-height: 1.9;
-  color: $color-text;
-  text-align: center;
-  margin: 0 auto 64px;
-  max-width: 720px;
-}
-
-.about-solve__list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 64px;
-}
-
-.about-solve__item {
-  list-style: none;
-  position: relative;
-  background: $color-white;
-  border-left: 4px solid $color-accent;
-  border-radius: 0 8px 8px 0;
-  padding: 36px 40px 36px 44px;
-  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
-}
-
-.about-solve__item-num {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0.16em;
-  color: $color-primary;
-  margin: 0 0 8px;
-}
-
-.about-solve__item-category {
-  font-size: 22px;
-  font-weight: 700;
-  color: $color-accent;
-  line-height: 1.4;
-  margin: 0 0 16px;
-}
-
-.about-solve__item-text {
-  font-size: 15px;
-  line-height: 1.95;
-  color: $color-text;
-  margin: 0;
-}
-
-.about-solve__closing {
-  font-size: 16px;
-  line-height: 1.95;
-  color: $color-text;
-  text-align: center;
-  background: $color-light;
-  padding: 32px 36px;
-  border-radius: 8px;
-  margin: 0 auto;
-  max-width: 800px;
-  letter-spacing: 0.02em;
-}
-
-// =========================================
-// STRENGTH セクション(.about-strength)
-// 縦並び3カード(横並びはトップページとの被りを避ける)
-// =========================================
-.about-strength {
-  background: $color-white;
-  padding: 120px 0;
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-}
-
-.about-strength__inner {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.about-strength__head {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.about-strength__lead {
-  font-size: 17px;
-  line-height: 1.9;
-  color: $color-text;
-  text-align: center;
-  margin: 0 0 80px;
-}
-
-.about-strength__list {
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.about-strength__item {
-  list-style: none;
-  position: relative;
-  background: $color-white;
-  border: 1px solid $color-border;
-  border-radius: 12px;
-  padding: 64px 64px 56px;
-  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
-}
-
-.about-strength__number {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 900;
-  font-size: 64px;
-  letter-spacing: 0.04em;
-  color: $color-primary;
-  line-height: 1;
-  margin: 0 0 24px;
-  opacity: 0.85;
-}
-
-.about-strength__title {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: $color-accent;
-  line-height: 1.55;
-  letter-spacing: 0.02em;
-  margin: 0 0 32px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid $color-border;
-}
-
-.about-strength__body {
-  font-size: 15.5px;
-  line-height: 2;
-  color: $color-text;
-  letter-spacing: 0.02em;
-
-  p {
-    margin: 0 0 24px;
-
-    &:last-child {
-      margin-bottom: 0;
+    .keyword {
+      @extend %av2-keyword;
     }
   }
 }
 
-// =========================================
+// =====================================================
+// WHAT WE SOLVE セクション(.about-v2-solve)
+// page-topv3-issue + concept-block の融合パターン
+// =====================================================
+.about-v2-solve {
+  background: $av2-bg-pale;
+  padding: 120px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .solve-header {
+    @extend %av2-section-header;
+  }
+
+  .solve-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .solve-item {
+    background: $av2-card-bg;
+    border-radius: 8px;
+    padding: 40px 48px;
+    box-shadow: 0 6px 18px rgba(40, 132, 155, 0.08);
+  }
+
+  .solve-item-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $av2-border;
+
+    h3 {
+      font-family: $av2-font-jp;
+      font-weight: 700;
+      font-size: 22px;
+      color: $av2-heading;
+      letter-spacing: 0.06em;
+      margin: 0;
+    }
+  }
+
+  .solve-number {
+    font-family: $av2-font-jp;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1;
+    color: $av2-primary;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+
+  .solve-item-body {
+    p {
+      font-family: $av2-font-jp;
+      font-size: 15px;
+      line-height: 1.95;
+      color: $av2-body;
+      letter-spacing: 0.04em;
+      margin: 0 0 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .keyword {
+      @extend %av2-keyword;
+    }
+  }
+
+  // 結論ブリッジ(page-topv3-issue の issue-bridge 踏襲)
+  .solve-bridge {
+    text-align: center;
+
+    p {
+      display: inline-block;
+      font-family: $av2-font-jp;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.95;
+      color: $av2-heading;
+      letter-spacing: 0.06em;
+      background: $av2-card-bg;
+      padding: 28px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .05);
+      margin: 0;
+    }
+
+    .bridge-keyword {
+      color: $av2-accent;
+      font-weight: 800;
+    }
+  }
+}
+
+// =====================================================
+// STRENGTH セクション(.about-v2-strength)
+// page-topv3-strength パターン踏襲・縦並び3カード
+// =====================================================
+.about-v2-strength {
+  background: $av2-card-bg;
+  padding: 120px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .strength-header {
+    @extend %av2-section-header;
+  }
+
+  // 縦並びリスト(横並びはトップ被り回避)
+  .strength-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .strength-item {
+    background: $av2-card-bg;
+    border-top: solid 3px $av2-primary;
+    border-radius: 6px;
+    padding: 56px 56px 48px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+  }
+
+  .strength-item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid $av2-border;
+
+    h3 {
+      font-family: $av2-font-jp;
+      font-weight: 700;
+      font-size: 24px;
+      color: $av2-heading;
+      letter-spacing: 0.06em;
+      line-height: 1.5;
+      margin: 0;
+      padding-top: 6px;
+    }
+  }
+
+  .strength-number {
+    font-family: $av2-font-jp;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1;
+    color: $av2-primary;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+
+  .strength-item-body {
+    p {
+      font-family: $av2-font-jp;
+      font-size: 15px;
+      line-height: 2;
+      color: $av2-body;
+      letter-spacing: 0.04em;
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .keyword {
+      @extend %av2-keyword;
+    }
+  }
+}
+
+// =====================================================
 // SP (max-width: 767px)
-// =========================================
+// =====================================================
 @media screen and (max-width: 767px) {
 
+  // 共通ヘッダーの SP 調整
+  .about-v2-concept .concept-header,
+  .about-v2-solve .solve-header,
+  .about-v2-strength .strength-header {
+    margin-bottom: 48px;
+
+    .en {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: -18px;
+    }
+
+    h2 {
+      font-size: 22px;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      font-size: 13.5px;
+      letter-spacing: 1.5px;
+      line-height: 1.85;
+    }
+  }
+
   // CONCEPT
-  .about-concept {
-    padding: 60px 0;
+  .about-v2-concept {
+    padding: 64px 0;
 
     .container {
       padding: 0 20px;
     }
-  }
 
-  .about-concept__head {
-    margin-bottom: 36px;
-  }
-
-  .about-concept__title {
-    font-size: 24px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    margin-bottom: 32px;
-  }
-
-  .about-concept__body {
-    font-size: 14px;
-    line-height: 1.95;
-
-    p {
-      margin-bottom: 24px;
+    .wrapper {
+      width: 100%;
     }
 
-    .about-concept__closing {
-      font-size: 16px;
-      margin-top: 32px;
+    .concept-blocks {
+      gap: 20px;
+    }
+
+    .concept-block {
+      padding: 28px 22px;
+      border-radius: 6px;
+
+      p {
+        font-size: 14px;
+        line-height: 1.9;
+        margin-bottom: 16px;
+      }
     }
   }
 
   // WHAT WE SOLVE
-  .about-solve {
-    padding: 60px 0;
+  .about-v2-solve {
+    padding: 64px 0;
 
     .container {
       padding: 0 20px;
     }
-  }
 
-  .about-solve__head {
-    margin-bottom: 28px;
-  }
+    .wrapper {
+      width: 100%;
+    }
 
-  .about-solve__lead {
-    font-size: 14px;
-    margin-bottom: 36px;
-  }
+    .solve-list {
+      gap: 16px;
+      margin-bottom: 40px;
+    }
 
-  .about-solve__list {
-    gap: 16px;
-    margin-bottom: 36px;
-  }
+    .solve-item {
+      padding: 24px 22px;
+      border-radius: 6px;
+    }
 
-  .about-solve__item {
-    padding: 24px 22px 24px 26px;
-    border-left-width: 3px;
-  }
+    .solve-item-header {
+      gap: 16px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
 
-  .about-solve__item-num {
-    font-size: 12px;
-  }
+      h3 {
+        font-size: 17px;
+      }
+    }
 
-  .about-solve__item-category {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
+    .solve-number {
+      font-size: 28px;
+    }
 
-  .about-solve__item-text {
-    font-size: 13.5px;
-    line-height: 1.9;
-  }
+    .solve-item-body p {
+      font-size: 13.5px;
+      line-height: 1.85;
+      margin-bottom: 8px;
+    }
 
-  .about-solve__closing {
-    font-size: 14px;
-    line-height: 1.9;
-    padding: 22px 20px;
+    .solve-bridge p {
+      font-size: 14px;
+      line-height: 1.85;
+      padding: 22px 20px;
+    }
   }
 
   // STRENGTH
-  .about-strength {
-    padding: 60px 0;
+  .about-v2-strength {
+    padding: 64px 0;
 
     .container {
       padding: 0 20px;
     }
-  }
 
-  .about-strength__head {
-    margin-bottom: 16px;
-  }
+    .wrapper {
+      width: 100%;
+    }
 
-  .about-strength__lead {
-    font-size: 14px;
-    margin-bottom: 44px;
-  }
+    .strength-list {
+      gap: 24px;
+    }
 
-  .about-strength__list {
-    gap: 40px;
-  }
+    .strength-item {
+      padding: 32px 22px 28px;
+      border-top-width: 2px;
+    }
 
-  .about-strength__item {
-    padding: 36px 24px 32px;
-    border-radius: 10px;
-  }
-
-  .about-strength__number {
-    font-size: 44px;
-    margin-bottom: 16px;
-  }
-
-  .about-strength__title {
-    font-size: 20px;
-    line-height: 1.55;
-    margin-bottom: 22px;
-    padding-bottom: 18px;
-  }
-
-  .about-strength__body {
-    font-size: 14px;
-    line-height: 1.9;
-
-    p {
+    .strength-item-header {
+      flex-direction: column;
+      gap: 8px;
       margin-bottom: 18px;
+      padding-bottom: 16px;
+
+      h3 {
+        font-size: 18px;
+        line-height: 1.5;
+        padding-top: 0;
+      }
+    }
+
+    .strength-number {
+      font-size: 36px;
+    }
+
+    .strength-item-body p {
+      font-size: 14px;
+      line-height: 1.9;
+      margin-bottom: 14px;
     }
   }
 }

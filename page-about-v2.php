@@ -3,17 +3,16 @@
  * Template Name: About v2
  * Template Post Type: page
  *
- * About ページ v2:7セクション構成
- *   1. Hero(template-parts/page-hero)
- *   2. MISSION(.mission・既存スタイル流用)
- *   3. CONCEPT(.about-concept・新規 BEM)
- *   4. WHAT WE SOLVE(.about-solve・新規 BEM)
- *   5. STRENGTH(.about-strength・新規 BEM・縦並び3カード)
- *   6. MESSAGE(.message・既存スタイル流用)
- *   7. COMPANY(.company・既存スタイル流用)
+ * About ページ v2:7セクション構成(トップページ page-topv3 トンマナ準拠)
+ *   1. Hero        … template-parts/page-hero
+ *   2. MISSION     … 既存 .mission(_page-about.scss 流用)
+ *   3. CONCEPT     … .about-v2-concept(page-topv3-concept パターン踏襲)
+ *   4. WHAT WE SOLVE … .about-v2-solve(page-topv3-issue + concept-block パターン踏襲)
+ *   5. STRENGTH    … .about-v2-strength(page-topv3-strength パターン踏襲・縦並び3カード)
+ *   6. MESSAGE     … 既存 .message(_page-about.scss 流用)
+ *   7. COMPANY     … 既存 .company(_page-about.scss 流用)
  *
- * 対応SCSS: scss/style-template/_page-about-v2.scss(新規セクションのみ)
- *           scss/style-template/_page-about.scss(.mission / .message / .company を流用)
+ * 対応SCSS: scss/style-template/_page-about-v2.scss
  *
  * @package will-corp
  */
@@ -49,50 +48,98 @@ get_template_part( 'template-parts/page-hero', null, [
 </section>
 
 <!-- ===================================================== -->
-<!-- [3] CONCEPT(新規)                                       -->
+<!-- [3] CONCEPT(page-topv3-concept パターン踏襲)            -->
 <!-- ===================================================== -->
-<section class="about-concept">
+<section class="about-v2-concept" id="about-v2-concept">
   <div class="container">
-    <div class="about-concept__inner">
+    <div class="wrapper">
 
-      <div class="about-concept__head">
-        <h2 class="section-header"><span class="green">c</span>oncept</h2>
-        <p class="sub-title">コンセプト</p>
-        <div class="border"></div>
+      <div class="concept-header">
+        <p class="en">CONCEPT</p>
+        <h2>BtoB中小企業の営業基盤を、<br>Webから設計する。</h2>
+        <p class="subtitle">私たちが向き合っているのは、Webサイトの問題ではなく、<br class="pc">「Webを使えていないことで起きている、経営上の損失」です。</p>
       </div>
 
-      <h3 class="about-concept__title">
-        BtoB中小企業の営業基盤を、<br>
-        Webから設計する。
-      </h3>
+      <div class="concept-blocks">
 
-      <div class="about-concept__body">
+        <div class="concept-block">
+          <p>
+            紹介・展示会への依存、属人的な営業、価格競争。BtoB中小企業の多くが抱えるこれらの課題は、<span class="keyword">単発の施策では解決できません</span>。
+          </p>
+          <p>
+            見込み客との接点をどう作り、どう比較検討の俎上に乗せ、どう意思決定を後押しするか。<span class="keyword">その全体設計を、Webを起点に組み立てる</span>のが私たちの仕事です。
+          </p>
+        </div>
+
+        <div class="concept-block">
+          <p>
+            Webサイト・コンテンツSEO・MA・SNS・広告。それぞれの施策を点で打つのではなく、営業構造から逆算して、線でつなぎ、仕組みに変える。
+          </p>
+          <p>
+            私たちは、貴社の<span class="keyword">営業基盤そのものを、Webから設計</span>します。
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- [4] WHAT WE SOLVE(page-topv3-issue + concept-block 参考) -->
+<!-- ===================================================== -->
+<section class="about-v2-solve" id="about-v2-solve">
+  <div class="container">
+    <div class="wrapper">
+
+      <div class="solve-header">
+        <p class="en">WHAT WE SOLVE</p>
+        <h2>解決する経営課題</h2>
+        <p class="subtitle">私たちが解決するのは、Webサイトの問題ではありません。<br class="pc">Webを使えていないことで起きている、経営上の損失です。</p>
+      </div>
+
+      <div class="solve-list">
+
+        <div class="solve-item">
+          <div class="solve-item-header">
+            <span class="solve-number">01</span>
+            <h3>入口の課題</h3>
+          </div>
+          <div class="solve-item-body">
+            <p>展示会・紹介で接点を持った見込み客が、<span class="keyword">比較検討で他社に流れている</span>。</p>
+            <p>SEO・広告で獲得したアクセスが、問い合わせにつながっていない。</p>
+          </div>
+        </div>
+
+        <div class="solve-item">
+          <div class="solve-item-header">
+            <span class="solve-number">02</span>
+            <h3>構造の課題</h3>
+          </div>
+          <div class="solve-item-body">
+            <p>既存サイトが「会社案内」止まりで、<span class="keyword">比較検討の判断材料になっていない</span>。</p>
+            <p>営業現場で聞かれる質問・不安が、サイト上で先回りして解消されていない。</p>
+          </div>
+        </div>
+
+        <div class="solve-item">
+          <div class="solve-item-header">
+            <span class="solve-number">03</span>
+            <h3>運用の課題</h3>
+          </div>
+          <div class="solve-item-body">
+            <p>Web担当者が不在で、更新・改善にまで手が回らない。</p>
+            <p>施策が単発で打たれ、<span class="keyword">データとして蓄積・活用されていない</span>。</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="solve-bridge">
         <p>
-          紹介・展示会への依存、属人的な営業、価格競争。<br>
-          BtoB中小企業の多くが抱えるこれらの課題は、<br>
-          単発の施策では解決できません。
-        </p>
-
-        <p>
-          私たちが向き合っているのは、Webサイトの問題ではなく、<br>
-          「Webを使えていないことで起きている、経営上の損失」です。
-        </p>
-
-        <p>
-          見込み客との接点をどう作り、<br>
-          どう比較検討の俎上に乗せ、<br>
-          どう意思決定を後押しするか。
-        </p>
-
-        <p>
-          その全体設計を、Webを起点に組み立てるのが私たちの仕事です。<br>
-          Webサイト・コンテンツSEO・MA・SNS・広告。<br>
-          それぞれの施策を点で打つのではなく、<br>
-          営業構造から逆算して、線でつなぎ、仕組みに変える。
-        </p>
-
-        <p class="about-concept__closing">
-          私たちは、貴社の営業基盤そのものを、Webから設計します。
+          紹介依存・属人営業・価格競争。これらの構造課題は、Webだけで解決するものではありません。<br>
+          だからこそ私たちは、Webを<span class="bridge-keyword">「営業基盤の設計」</span>として捉え直し、認知施策・営業活動と連動した一気通貫の設計を支援します。
         </p>
       </div>
 
@@ -101,146 +148,73 @@ get_template_part( 'template-parts/page-hero', null, [
 </section>
 
 <!-- ===================================================== -->
-<!-- [4] WHAT WE SOLVE(新規)                                 -->
+<!-- [5] STRENGTH(page-topv3-strength パターン踏襲・縦並び3カード) -->
 <!-- ===================================================== -->
-<section class="about-solve">
+<section class="about-v2-strength" id="about-v2-strength">
   <div class="container">
-    <div class="about-solve__inner">
+    <div class="wrapper">
 
-      <div class="about-solve__head">
-        <h2 class="section-header"><span class="green">w</span>hat we solve</h2>
-        <p class="sub-title">解決する経営課題</p>
-        <div class="border"></div>
+      <div class="strength-header">
+        <p class="en">OUR STRENGTH</p>
+        <h2>私たちが大切にしている、<br class="sp">3つの思想</h2>
+        <p class="subtitle">良い商品・良いサービスの価値を、<br class="sp">お客様以上に理解し、広めるために。</p>
       </div>
 
-      <p class="about-solve__lead">
-        私たちが解決するのは、Webサイトの問題ではありません。<br>
-        Webを使えていないことで起きている、経営上の損失です。
-      </p>
+      <div class="strength-list">
 
-      <ul class="about-solve__list">
-
-        <li class="about-solve__item">
-          <p class="about-solve__item-num">01</p>
-          <p class="about-solve__item-category">入口の課題</p>
-          <p class="about-solve__item-text">
-            展示会・紹介で接点を持った見込み客が、比較検討で他社に流れている。<br>
-            SEO・広告で獲得したアクセスが、問い合わせにつながっていない。
-          </p>
-        </li>
-
-        <li class="about-solve__item">
-          <p class="about-solve__item-num">02</p>
-          <p class="about-solve__item-category">構造の課題</p>
-          <p class="about-solve__item-text">
-            既存サイトが「会社案内」止まりで、比較検討の判断材料になっていない。<br>
-            営業現場で聞かれる質問・不安が、サイト上で先回りして解消されていない。
-          </p>
-        </li>
-
-        <li class="about-solve__item">
-          <p class="about-solve__item-num">03</p>
-          <p class="about-solve__item-category">運用の課題</p>
-          <p class="about-solve__item-text">
-            Web担当者が不在で、更新・改善にまで手が回らない。<br>
-            施策が単発で打たれ、データとして蓄積・活用されていない。
-          </p>
-        </li>
-
-      </ul>
-
-      <p class="about-solve__closing">
-        紹介依存・属人営業・価格競争。<br>
-        これらの構造課題は、Webだけで解決するものではありません。<br>
-        だからこそ私たちは、Webを「営業基盤の設計」として捉え直し、<br>
-        認知施策・営業活動と連動した一気通貫の設計を支援します。
-      </p>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================== -->
-<!-- [5] STRENGTH(全面刷新・縦並び3カード)                  -->
-<!-- ===================================================== -->
-<section class="about-strength">
-  <div class="container">
-    <div class="about-strength__inner">
-
-      <div class="about-strength__head">
-        <h2 class="section-header"><span class="green">s</span>trength</h2>
-        <p class="sub-title">ウィルの強み</p>
-        <div class="border"></div>
-      </div>
-
-      <p class="about-strength__lead">私たちが大切にしている、3つの思想。</p>
-
-      <ul class="about-strength__list">
-
-        <li class="about-strength__item">
-          <p class="about-strength__number">01</p>
-          <h3 class="about-strength__title">顧客の価値を、顧客以上に理解する</h3>
-          <div class="about-strength__body">
+        <div class="strength-item">
+          <div class="strength-item-header">
+            <span class="strength-number">01</span>
+            <h3>顧客の価値を、顧客以上に理解する</h3>
+          </div>
+          <div class="strength-item-body">
             <p>
-              良い商品・良いサービスを持ちながら、その価値が伝わっていない。
-              私たちが日々向き合っているBtoB中小企業の多くは、そんな状況にあります。
+              良い商品・良いサービスを持ちながら、その価値が伝わっていない。私たちが日々向き合っているBtoB中小企業の多くは、そんな状況にあります。
             </p>
             <p>
-              だから私たちは、施策設計の前に、対話に時間をかけます。
-              お客様自身が言語化できていない強みや独自性、
-              お客様自身が気づいていない事業の本質的な価値を、
-              丁寧なヒアリングを通じて掘り起こすところから始めます。
+              だから私たちは、施策設計の前に、<span class="keyword">対話に時間をかけます</span>。お客様自身が言語化できていない強みや独自性、お客様自身が気づいていない事業の本質的な価値を、丁寧なヒアリングを通じて掘り起こすところから始めます。
             </p>
             <p>
-              何を伝えるかが見えなければ、どう伝えるかは決まりません。
-              私たちの仕事は、デザインやコーディングよりも前に、
-              お客様の価値を、お客様以上に深く理解することから始まります。
+              何を伝えるかが見えなければ、どう伝えるかは決まりません。私たちの仕事は、デザインやコーディングよりも前に、<span class="keyword">お客様の価値を、お客様以上に深く理解すること</span>から始まります。
             </p>
           </div>
-        </li>
+        </div>
 
-        <li class="about-strength__item">
-          <p class="about-strength__number">02</p>
-          <h3 class="about-strength__title">施策を点で打たず、線で設計する</h3>
-          <div class="about-strength__body">
+        <div class="strength-item">
+          <div class="strength-item-header">
+            <span class="strength-number">02</span>
+            <h3>施策を点で打たず、線で設計する</h3>
+          </div>
+          <div class="strength-item-body">
             <p>
-              Webサイト・MA・SEO・SNS・広告。
-              ひとつひとつの施策は、それ単体では大きな成果を生みません。
+              Webサイト・MA・SEO・SNS・広告。ひとつひとつの施策は、それ単体では大きな成果を生みません。
             </p>
             <p>
-              本当に必要なのは、認知・比較検討・意思決定という
-              見込み客の購買プロセスに沿って、施策を線で設計すること。
-              そして、施策同士を連動させ、再現性のある仕組みに変えることです。
+              本当に必要なのは、認知・比較検討・意思決定という見込み客の購買プロセスに沿って、<span class="keyword">施策を線で設計すること</span>。そして、施策同士を連動させ、再現性のある仕組みに変えることです。
             </p>
             <p>
-              私たちは、Webを起点に営業基盤の全体像を組み立てます。
-              営業構造から逆算し、点で打たれた施策を、線でつなぎ、仕組みに変える。
-              それが、紹介や属人営業に頼らない、
-              継続的に成果が積み上がる事業の土台になります。
+              私たちは、Webを起点に営業基盤の全体像を組み立てます。営業構造から逆算し、点で打たれた施策を、<span class="keyword">線でつなぎ、仕組みに変える</span>。それが、紹介や属人営業に頼らない、継続的に成果が積み上がる事業の土台になります。
             </p>
           </div>
-        </li>
+        </div>
 
-        <li class="about-strength__item">
-          <p class="about-strength__number">03</p>
-          <h3 class="about-strength__title">制作会社ではなく、事業のパートナーになる</h3>
-          <div class="about-strength__body">
+        <div class="strength-item">
+          <div class="strength-item-header">
+            <span class="strength-number">03</span>
+            <h3>制作会社ではなく、事業のパートナーになる</h3>
+          </div>
+          <div class="strength-item-body">
             <p>納品して終わり、ツールを入れて終わりにはしません。</p>
             <p>
-              お客様の事業フェーズ・社内体制・予算は、会社ごとに違います。
-              だから私たちは、理想論を押し付けるのではなく、
-              今の状況に合った現実的な提案を行うことを大切にしています。
-              小さく始めて、改善を重ねながら、少しずつ強くしていく。
+              お客様の事業フェーズ・社内体制・予算は、会社ごとに違います。だから私たちは、理想論を押し付けるのではなく、<span class="keyword">今の状況に合った現実的な提案</span>を行うことを大切にしています。小さく始めて、改善を重ねながら、少しずつ強くしていく。
             </p>
             <p>
-              制作会社や外注先ではなく、事業のパートナーとして、
-              長期的な関係性のなかでお客様の事業成長と並走する。
-              それが、私たちが選ぶ関わり方です。
+              制作会社や外注先ではなく、<span class="keyword">事業のパートナー</span>として、長期的な関係性のなかでお客様の事業成長と並走する。それが、私たちが選ぶ関わり方です。
             </p>
           </div>
-        </li>
+        </div>
 
-      </ul>
+      </div>
 
     </div>
   </div>
