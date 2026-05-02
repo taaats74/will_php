@@ -530,96 +530,31 @@
             </p>
           </div>
 
-          <div class="ebook-cards">
+          <div class="ebooks-cards-grid">
+            <?php
+              // ebook_pickup タクソノミー = top_featured(トップページ掲載)に紐づく資料を最大4件
+              $top_ebooks = new WP_Query([
+                'post_type'      => 'ebooks',
+                'posts_per_page' => 4,
+                'tax_query'      => [
+                  [
+                    'taxonomy' => 'ebook_pickup',
+                    'field'    => 'slug',
+                    'terms'    => 'top_featured',
+                  ],
+                ],
+                'orderby'        => 'date',
+                'order'          => 'DESC',
+              ]);
 
-            <a href="#" class="ebook-card ebook-card--01 animation-target to-up">
-              <!-- TODO: HubSpotフォームURL差し替え -->
-              <div class="ebook-card-thumb">
-                <!-- TODO: サムネイル画像が用意でき次第、以下と差し替え -->
-                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/ebook-01.png" alt="BtoB Webマーケティング戦略ロードマップ"> -->
-                <div class="ebook-card-thumb-placeholder">
-                  <span class="ebook-card-no">EBOOK 01</span>
-                </div>
-              </div>
-              <div class="ebook-card-body">
-                <h3 class="ebook-card-title">BtoB Webマーケティング<br>戦略ロードマップ</h3>
-                <p class="ebook-card-catch-wrap"><span class="ebook-card-catch">BtoBマーケの全体像を、1冊で。</span></p>
-                <p class="ebook-card-desc">
-                  Webサイト・SEO・MA・コンテンツまで、BtoBマーケに必要な打ち手の全体像と進め方を体系的に整理した総合ガイドです。何から始めるべきか迷っている方に。
-                </p>
-                <span class="ebook-card-cta">
-                  <span class="ebook-card-cta-text">資料をダウンロード</span>
-                  <span class="ebook-card-cta-arrow">→</span>
-                </span>
-              </div>
-            </a>
-
-            <a href="#" class="ebook-card ebook-card--02 animation-target to-up">
-              <!-- TODO: HubSpotフォームURL差し替え -->
-              <div class="ebook-card-thumb">
-                <!-- TODO: サムネイル画像が用意でき次第、以下と差し替え -->
-                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/ebook-02.png" alt="商談化率を上げるBtoBサイトの設計原則"> -->
-                <div class="ebook-card-thumb-placeholder">
-                  <span class="ebook-card-no">EBOOK 02</span>
-                </div>
-              </div>
-              <div class="ebook-card-body">
-                <h3 class="ebook-card-title">商談化率を上げる<br>BtoBサイトの設計原則</h3>
-                <p class="ebook-card-catch-wrap"><span class="ebook-card-catch">サイトを、商談につながる構造に。</span></p>
-                <p class="ebook-card-desc">
-                  「制作したのに問い合わせが来ない」をなくす、BtoBサイトの設計原則を解説。営業構造から逆算したサイト設計の考え方をまとめました。
-                </p>
-                <span class="ebook-card-cta">
-                  <span class="ebook-card-cta-text">資料をダウンロード</span>
-                  <span class="ebook-card-cta-arrow">→</span>
-                </span>
-              </div>
-            </a>
-
-            <a href="#" class="ebook-card ebook-card--03 animation-target to-up">
-              <!-- TODO: HubSpotフォームURL差し替え -->
-              <div class="ebook-card-thumb">
-                <!-- TODO: サムネイル画像が用意でき次第、以下と差し替え -->
-                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/ebook-03.png" alt="Web×MA連携設計図"> -->
-                <div class="ebook-card-thumb-placeholder">
-                  <span class="ebook-card-no">EBOOK 03</span>
-                </div>
-              </div>
-              <div class="ebook-card-body">
-                <h3 class="ebook-card-title">Web×MA連携設計図</h3>
-                <p class="ebook-card-catch-wrap"><span class="ebook-card-catch">WebとMAを<br>営業の仕組みに変える。</span></p>
-                <p class="ebook-card-desc">
-                  Webサイトで獲得したリードを、MAで育成し、商談につなげるまでの設計図。ツール導入だけで止まらないMA活用の本質を解説します。
-                </p>
-                <span class="ebook-card-cta">
-                  <span class="ebook-card-cta-text">資料をダウンロード</span>
-                  <span class="ebook-card-cta-arrow">→</span>
-                </span>
-              </div>
-            </a>
-
-            <a href="#" class="ebook-card ebook-card--04 animation-target to-up">
-              <!-- TODO: HubSpotフォームURL差し替え -->
-              <div class="ebook-card-thumb">
-                <!-- TODO: サムネイル画像が用意でき次第、以下と差し替え -->
-                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/ebook-04.png" alt="BtoBコンテンツSEO実践ガイド"> -->
-                <div class="ebook-card-thumb-placeholder">
-                  <span class="ebook-card-no">EBOOK 04</span>
-                </div>
-              </div>
-              <div class="ebook-card-body">
-                <h3 class="ebook-card-title">BtoBコンテンツ<br>SEO実践ガイド</h3>
-                <p class="ebook-card-catch-wrap"><span class="ebook-card-catch">検索流入を、商談につなげる。</span></p>
-                <p class="ebook-card-desc">
-                  検索順位ではなく商談化率で見るBtoBコンテンツSEOの考え方と、キーワード戦略・記事構造・運用設計を実装手順としてまとめた実践ガイドです。
-                </p>
-                <span class="ebook-card-cta">
-                  <span class="ebook-card-cta-text">資料をダウンロード</span>
-                  <span class="ebook-card-cta-arrow">→</span>
-                </span>
-              </div>
-            </a>
-
+              if ( $top_ebooks->have_posts() ) :
+                while ( $top_ebooks->have_posts() ) : $top_ebooks->the_post();
+                  // archive-ebooks / single-ebooks 関連グリッドと同じ共通パーツを使用
+                  get_template_part( 'template-parts/ebooks-card', null, [ 'post_id' => get_the_ID() ] );
+                endwhile;
+                wp_reset_postdata();
+              endif;
+            ?>
           </div>
 
           <div class="ebook-bottom-cta">
@@ -992,29 +927,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section class="page-topv3-insta">
-      <div class="container">
-        <div class="wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-instagram.png" alt="instagram">
-          <h2 class="rellax-horizontal"><span></span>インスタグラム</h2>
-          <?php
-            if(have_posts()):
-              while(have_posts()): the_post();
-          ?>
-          <div class="insta-wrapper">
-            <?php the_content(); ?>
-          </div>
-          <?php
-            endwhile;
-          endif;
-          ?>
-          <div class="page-topv3-btn">
-            <a href="<?php echo get_page_link(43) ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section class="page-topv3-about">
       <div class="container">
