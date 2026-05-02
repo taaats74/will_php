@@ -16720,25 +16720,6 @@ body.has-header-v4 .loading-container {
   transform: translateX(4px);
 }
 
-.page-works__ebook {
-  padding: 110px 0;
-}
-.page-works__ebook .container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.page-works__contact {
-  background: #f4f8f8;
-  padding: 110px 0;
-}
-.page-works__contact .container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
 @media screen and (max-width: 1024px) {
   .page-works__works {
     padding: 96px 0;
@@ -16764,18 +16745,6 @@ body.has-header-v4 .loading-container {
     padding: 80px 0;
   }
   .page-works__diagnosis .container {
-    padding: 0 24px;
-  }
-  .page-works__ebook {
-    padding: 96px 0;
-  }
-  .page-works__ebook .container {
-    padding: 0 24px;
-  }
-  .page-works__contact {
-    padding: 96px 0;
-  }
-  .page-works__contact .container {
     padding: 0 24px;
   }
 }
@@ -16846,18 +16815,6 @@ body.has-header-v4 .loading-container {
     width: 100%;
     justify-content: center;
     padding: 16px 24px;
-  }
-  .page-works__ebook {
-    padding: 72px 0;
-  }
-  .page-works__ebook .container {
-    padding: 0 20px;
-  }
-  .page-works__contact {
-    padding: 72px 0;
-  }
-  .page-works__contact .container {
-    padding: 0 20px;
   }
 }
 .page-privacypolicy-policy .container .wrapper {
