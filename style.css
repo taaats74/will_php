@@ -17191,30 +17191,30 @@ body.has-header-v4 .loading-container {
     padding: 11px 24px;
   }
 }
-.service-sns-cta__lead .keyword, .service-sns-flow__step-text .keyword, .service-sns-principle__text .keyword, .service-sns-feature__benefit .keyword, .service-sns-role__closing .keyword, .service-sns-role__layer-text .keyword, .service-sns-role__lead .keyword, .service-sns-concept__body .keyword, .service-sns-concept__headline .keyword, .service-sns-hero__catch .keyword {
+.service-sns-flow__step-text .keyword, .service-sns-principle__text .keyword, .service-sns-feature__benefit .keyword, .service-sns-role__closing .keyword, .service-sns-role__layer-text .keyword, .service-sns-role__lead .keyword, .service-sns-concept__body .keyword, .service-sns-concept__headline .keyword, .service-sns-hero__catch .keyword {
   background: linear-gradient(transparent 0%, transparent 60%, rgba(240, 231, 78, 0.65) 60%, rgba(240, 231, 78, 0.65) 95%, transparent 95%);
   color: inherit;
   font-weight: 700;
   padding: 0 2px;
 }
 
-.service-sns-cta .container, .service-sns-faq .container, .service-sns-flow .container, .service-sns-principle .container, .service-sns-price .container, .service-sns-feature .container, .service-sns-role .container, .service-sns-problem .container, .service-sns-concept .container, .service-sns-hero .container {
+.service-sns-faq .container, .service-sns-flow .container, .service-sns-principle .container, .service-sns-price .container, .service-sns-feature .container, .service-sns-role .container, .service-sns-problem .container, .service-sns-concept .container, .service-sns-hero .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-.service-sns-cta__inner, .service-sns-faq__inner, .service-sns-flow__inner, .service-sns-principle__inner, .service-sns-price__inner, .service-sns-feature__inner, .service-sns-role__inner, .service-sns-problem__inner, .service-sns-concept__inner, .service-sns-hero__inner {
+.service-sns-faq__inner, .service-sns-flow__inner, .service-sns-principle__inner, .service-sns-price__inner, .service-sns-feature__inner, .service-sns-role__inner, .service-sns-problem__inner, .service-sns-concept__inner, .service-sns-hero__inner {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.service-sns-cta__head, .service-sns-faq__head, .service-sns-flow__head, .service-sns-principle__head, .service-sns-price__head, .service-sns-feature__head, .service-sns-role__head, .service-sns-problem__head, .service-sns-concept__head {
+.service-sns-faq__head, .service-sns-flow__head, .service-sns-principle__head, .service-sns-price__head, .service-sns-feature__head, .service-sns-role__head, .service-sns-problem__head, .service-sns-concept__head {
   text-align: center;
   margin-bottom: 64px;
 }
-.service-sns-cta__head .en, .service-sns-faq__head .en, .service-sns-flow__head .en, .service-sns-principle__head .en, .service-sns-price__head .en, .service-sns-feature__head .en, .service-sns-role__head .en, .service-sns-problem__head .en, .service-sns-concept__head .en {
+.service-sns-faq__head .en, .service-sns-flow__head .en, .service-sns-principle__head .en, .service-sns-price__head .en, .service-sns-feature__head .en, .service-sns-role__head .en, .service-sns-problem__head .en, .service-sns-concept__head .en {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 900;
   font-size: 60px;
@@ -17225,7 +17225,7 @@ body.has-header-v4 .loading-container {
   margin: 0 0 -28px;
   text-transform: uppercase;
 }
-.service-sns-cta__head h2, .service-sns-faq__head h2, .service-sns-flow__head h2, .service-sns-principle__head h2, .service-sns-price__head h2, .service-sns-feature__head h2, .service-sns-role__head h2, .service-sns-problem__head h2, .service-sns-concept__head h2 {
+.service-sns-faq__head h2, .service-sns-flow__head h2, .service-sns-principle__head h2, .service-sns-price__head h2, .service-sns-feature__head h2, .service-sns-role__head h2, .service-sns-problem__head h2, .service-sns-concept__head h2 {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 500;
   font-size: 26px;
@@ -17234,7 +17234,7 @@ body.has-header-v4 .loading-container {
   line-height: 1.55;
   margin: 0 0 22px;
 }
-.service-sns-cta__head .subtitle, .service-sns-faq__head .subtitle, .service-sns-flow__head .subtitle, .service-sns-principle__head .subtitle, .service-sns-price__head .subtitle, .service-sns-feature__head .subtitle, .service-sns-role__head .subtitle, .service-sns-problem__head .subtitle, .service-sns-concept__head .subtitle {
+.service-sns-faq__head .subtitle, .service-sns-flow__head .subtitle, .service-sns-principle__head .subtitle, .service-sns-price__head .subtitle, .service-sns-feature__head .subtitle, .service-sns-role__head .subtitle, .service-sns-problem__head .subtitle, .service-sns-concept__head .subtitle {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -17935,104 +17935,54 @@ body.has-header-v4 .loading-container {
   flex: 1;
 }
 
-.service-sns-cta {
-  background: #28849D;
-  padding: 110px 0;
+.cta-double {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 48px;
 }
-.service-sns-cta__head {
-  margin-bottom: 28px;
-}
-.service-sns-cta__head .en {
-  color: #FFFFFF;
-  opacity: 0.18;
-}
-.service-sns-cta__head h2 {
-  color: #FFFFFF;
-}
-.service-sns-cta__head .subtitle {
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.service-sns-cta__lead {
+.cta-double__item {
+  flex: 1;
+  max-width: 480px;
   text-align: center;
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-size: 16px;
-  line-height: 1.95;
-  color: rgba(255, 255, 255, 0.92);
-  letter-spacing: 0.04em;
-  margin: 0 0 48px;
-}
-.service-sns-cta__buttons {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 880px;
-  margin: 0 auto;
-}
-
-.service-sns-cta__btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  padding: 32px 28px;
-  border-radius: 12px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
-.service-sns-cta__btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
-}
-.service-sns-cta__btn:hover .service-sns-cta__btn-arrow {
-  transform: translateX(4px);
-}
-.service-sns-cta__btn--primary {
-  background: #FFFFFF;
-  color: #28849D;
-}
-.service-sns-cta__btn--primary .service-sns-cta__btn-label {
-  color: #28849D;
-}
-.service-sns-cta__btn--primary .service-sns-cta__btn-note {
-  color: #3E5054;
-}
-.service-sns-cta__btn--outline {
-  background: transparent;
-  border: 2px solid #FFFFFF;
-  color: #FFFFFF;
-}
-.service-sns-cta__btn--outline .service-sns-cta__btn-label {
-  color: #FFFFFF;
-}
-.service-sns-cta__btn--outline .service-sns-cta__btn-note {
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.service-sns-cta__btn-label {
+.cta-double__label {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-weight: 700;
-  font-size: 19px;
-  letter-spacing: 0.06em;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #8AA0A4;
+  margin: 0 0 12px;
 }
-
-.service-sns-cta__btn-arrow {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 800;
-  transition: transform 0.3s ease;
-}
-
-.service-sns-cta__btn-note {
+.cta-double__desc {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 0.02em;
-  margin: 4px 0 0;
-  text-align: center;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+}
+.cta-double .btn {
+  width: 100%;
+  max-width: 320px;
+}
+.cta-double .btn a {
+  width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .cta-double {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .cta-double__item {
+    max-width: 100%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .service-sns-role__layers {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -18060,8 +18010,7 @@ body.has-header-v4 .loading-container {
   .service-sns-price__head,
   .service-sns-principle__head,
   .service-sns-flow__head,
-  .service-sns-faq__head,
-  .service-sns-cta__head {
+  .service-sns-faq__head {
     margin-bottom: 44px;
   }
   .service-sns-concept__head .en,
@@ -18071,8 +18020,7 @@ body.has-header-v4 .loading-container {
   .service-sns-price__head .en,
   .service-sns-principle__head .en,
   .service-sns-flow__head .en,
-  .service-sns-faq__head .en,
-  .service-sns-cta__head .en {
+  .service-sns-faq__head .en {
     font-size: 36px;
     letter-spacing: 3px;
     margin-bottom: -18px;
@@ -18084,8 +18032,7 @@ body.has-header-v4 .loading-container {
   .service-sns-price__head h2,
   .service-sns-principle__head h2,
   .service-sns-flow__head h2,
-  .service-sns-faq__head h2,
-  .service-sns-cta__head h2 {
+  .service-sns-faq__head h2 {
     font-size: 22px;
     letter-spacing: 4px;
     margin-bottom: 16px;
@@ -18097,8 +18044,7 @@ body.has-header-v4 .loading-container {
   .service-sns-price__head .subtitle,
   .service-sns-principle__head .subtitle,
   .service-sns-flow__head .subtitle,
-  .service-sns-faq__head .subtitle,
-  .service-sns-cta__head .subtitle {
+  .service-sns-faq__head .subtitle {
     font-size: 13.5px;
     letter-spacing: 1.5px;
     line-height: 1.85;
@@ -18389,34 +18335,6 @@ body.has-header-v4 .loading-container {
   .service-sns-faq__list .list.answer .text {
     font-size: 13px;
     line-height: 1.85;
-  }
-  .service-sns-cta {
-    padding: 60px 0;
-  }
-  .service-sns-cta .container {
-    padding: 0 20px;
-  }
-  .service-sns-cta__lead {
-    font-size: 14px;
-    line-height: 1.9;
-    margin-bottom: 36px;
-  }
-  .service-sns-cta__buttons {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .service-sns-cta__btn {
-    padding: 24px 22px;
-  }
-  .service-sns-cta__btn--outline {
-    border-width: 2px;
-  }
-  .service-sns-cta__btn-label {
-    font-size: 17px;
-  }
-  .service-sns-cta__btn-note {
-    font-size: 12px;
-    line-height: 1.65;
   }
 }
 .single-service-problem.wm .container .wrapper {
