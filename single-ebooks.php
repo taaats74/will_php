@@ -11,7 +11,7 @@
  * 編集時はそのコメントを目印に該当箇所を書き換えてください。
  */
 ?>
-<?php get_header('v4'); ?>
+<?php get_header(); ?>
 
 <?php
   if ( have_posts() ) :
@@ -400,4 +400,4 @@
   endif;
 ?>
 
-<?php get_footer( 'v3' ); ?>
+<?php get_footer(); ?>

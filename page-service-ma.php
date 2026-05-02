@@ -6,13 +6,13 @@
  * MA構築・運用支援サービスの新ページ(10セクション構成)。
  * 中心メッセージ:「Webサイトは営業の土台。MAは、その土台の上で見込み客を育てる仕組み。」
  *
- * - header-v4 + footer-v3 + template-parts/page-hero
+ * - header + footer + template-parts/page-hero
  * - ブランド・メッセージガイドライン v2.0 / カラーガイドライン v1.0 準拠
  * - トップページ(page-topv3)のトンマナ踏襲(.en + h2 + .subtitle ヘッダー)
  *
  * @package will-corp
  */
-get_header('v4');
+get_header();
 ?>
 
 <?php
@@ -824,4 +824,4 @@ get_template_part( 'template-parts/page-hero', null, [
   </div>
 </section>
 
-<?php get_footer('v3'); ?>
+<?php get_footer(); ?>

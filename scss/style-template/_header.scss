@@ -1,401 +1,329 @@
-.header-page-top{
-  .container{
-    padding-top: 10px;
-    background: #f4f4f4;
-    .wrapper{
-      width: 83%;
-      max-width: 1618px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .logo{
-        width: 100px;
-        .img-wrapper{
-          width: 100px;
-        }
-      }
-      .menu-header-menu-top-container{
-        width: 90%;
-        >ul{
-          list-style: none;
-          display: flex;
-          justify-content: end;
-          padding-bottom: 20px;
-          li{
-            margin-left: 8.3%;
-            a{
-              // color: red;
-              font-family: "bebas-neue", sans-serif;
-              font-weight: 400;
-              font-style: normal;
-              letter-spacing: 2px;
-              text-decoration: none;
-              font-size: 1.3em;
-              transition: .3s;
-              &:hover{
-                // opacity: .5;
-                // color: #7dacaf;
-                color: #8bbcbf;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// =====================================================
+// PC Header v4(下層ページ用)
+// 作成日: 2026-04-29
+// 用途: header.php(下層ページ全般 PC ヘッダー)
+// 対応HTMLクラス: .header-child-v2
+// SP 側は _header-v5.scss(.sp-header-v5 / .sp-menu-v5)を流用
+//
+// 注意:
+// - 既存 .header-child-page(_header.scss / header.php)とは独立した名前空間
+// - 770px 以下では非表示(SP は .sp-header-v5 を使う)
+// - body.has-header は header.php で body_class() に付与される識別クラス
+// =====================================================
+$h4-primary:    #7fbabd;  // メインプライマリ(SP ヘッダーと共通)
+$h4-primary-d:  #5fa3a6;  // ホバー時の濃ティール
+$h4-accent:     #28849D;  // 強調用アクセント(ebooks 系と統一)
+$h4-text:       #333333;  // 主テキスト
+$h4-text-mute:  #595959;  // 副テキスト
+$h4-border:     rgba(127, 186, 189, .25);
+$h4-bg:         #ffffff;
+$h4-bg-pale:    #f0f8f9;  // メガメニューのホバー背景
 
-.header-child-page {
-  position: absolute;
-  width: 100%;
+// =====================================================
+// レイアウト
+// =====================================================
+.header-child-v2 {
+  position: sticky;
   top: 0;
-  left: 0;
-  .container {
-    padding-top: 10px;
-    background: transparent;
+  z-index: 100;
+  width: 100%;
+  height: 80px;
+  background: $h4-bg;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+  font-family: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+
+  &__inner {
     position: relative;
-    .cover-white{
-      position: absolute;
-      width: 100%;
-      height: 68px;
-      background: rgba(255, 255, 255, .5);
-      // background: pink;
-      top: 0;
-      left: 0;
-      z-index: 1;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  // ----- ロゴ -----
+  &__brand {
+    flex-shrink: 0;
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    transition: opacity .25s ease;
+
+    img {
+      width: auto;
+      height: 100%;
+      display: block;
     }
 
-    .wrapper {
-      width: 83%;
-      max-width: 1618px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 2;
+    &:hover {
+      opacity: .75;
+    }
+  }
 
-      .logo {
-        width: 15%;
+  // ----- メインメニュー -----
+  &__nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
 
-        .img-wrapper {
-          width: 100px;
-        }
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav-link {
+    display: inline-flex;
+    align-items: center;
+    height: 80px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: $h4-text;
+    text-decoration: none;
+    transition: color .25s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $h4-primary;
+    }
+  }
+
+  // 「サービス▼」ホバーでメガメニュー展開
+  &__nav-item--has-mega {
+    position: static; // メガメニューはヘッダー直下絶対配置のため static で受ける
+
+    > .header-child-v2__nav-link::after {
+      content: "▼";
+      margin-left: 6px;
+      font-size: 9px;
+      transform: translateY(1px);
+      color: $h4-text-mute;
+      transition: transform .25s ease, color .25s ease;
+    }
+
+    &:hover > .header-child-v2__nav-link::after {
+      transform: translateY(1px) rotate(180deg);
+      color: $h4-primary;
+    }
+
+    &:hover .header-child-v2__megamenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  // ----- CTA(右端固定) -----
+  &__cta {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background .25s ease, color .25s ease, border-color .25s ease;
+    white-space: nowrap;
+
+    // ゴースト型(無料診断・補助動線)
+    &--ghost {
+      background: transparent;
+      color: $h4-text;
+      border: solid 1px transparent;
+
+      &:hover,
+      &:focus-visible {
+        color: $h4-primary;
       }
+    }
 
-      .menu-header-menu-child-container {
-        width: 90%;
+    // アウトライン型(資料DL)
+    &--outline {
+      background: transparent;
+      color: $h4-primary;
+      border: solid 2px $h4-primary;
 
-        >ul {
-          list-style: none;
-          display: flex;
-          justify-content: end;
-          padding-bottom: 20px;
+      &:hover,
+      &:focus-visible {
+        background: $h4-primary;
+        color: #ffffff;
+      }
+    }
 
-          li {
-            margin-left: 8.3%;
+    // ソリッド型(お問い合わせ・主CV)
+    &--solid {
+      background: $h4-primary;
+      color: #ffffff;
+      border: solid 2px $h4-primary;
 
-            a {
-              // color: red;
-              font-family: "bebas-neue", sans-serif;
-              font-weight: 400;
-              font-style: normal;
-              letter-spacing: 2px;
-              text-decoration: none;
-              font-size: 1.3em;
-              transition: .3s;
-
-              &:hover {
-                // opacity: .5;
-                // color: #7dacaf;
-                color: #8bbcbf;
-              }
-            }
-          }
-        }
+      &:hover,
+      &:focus-visible {
+        background: $h4-primary-d;
+        border-color: $h4-primary-d;
       }
     }
   }
 }
 
-@media screen and (max-width: 1050px)  {
-  .header-page-top {
-    .container {
-      padding-top: 10px;
-      background: #f4f4f4;
+// =====================================================
+// メガメニュー(「サービス▼」用)
+// =====================================================
+.header-child-v2__megamenu {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  width: 800px;
+  max-width: calc(100vw - 80px);
+  background: $h4-bg;
+  border: solid 1px $h4-border;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .1);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+  z-index: 99;
 
-      .wrapper {
-        width: 95%;
-        max-width: 1618px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .logo {
-          width: 15%;
-
-          .img-wrapper {
-            width: 80px;
-          }
-        }
-
-        .menu-header-menu-top-container {
-          width: 90%;
-
-          >ul {
-            list-style: none;
-            display: flex;
-            justify-content: end;
-            padding-bottom: 20px;
-
-            li {
-              margin-left: 7%;
-
-              a {
-                // color: red;
-                font-family: "bebas-neue", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                letter-spacing: 2px;
-                text-decoration: none;
-                font-size: 1.3em;
-                transition: .3s;
-                &:hover {
-                  // opacity: .5;
-                  // color: #7dacaf;
-                  color: #8bbcbf;
-                }
-              }
-            }
-          }
-        }
-      }
+  &__group {
+    &-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: $h4-primary;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: solid 1px $h4-border;
     }
   }
 
-  .header-child-page {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
+  // 主力サービス(2 カラム横並び)
+  &__featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
 
-    .container {
-      padding-top: 10px;
-      background: transparent;
-      position: relative;
+  &__featured-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    background: $h4-bg-pale;
+    border: solid 1px $h4-border;
+    border-radius: 6px;
+    color: $h4-text;
+    text-decoration: none;
+    transition: background .25s ease, border-color .25s ease, transform .25s ease;
 
-      .cover-white {
-        position: absolute;
-        width: 100%;
-        height: 56px;
-        background: rgba(255, 255, 255, .5);
-        // background: pink;
-        top: 0;
-        left: 0;
-        z-index: 1;
+    &-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: $h4-text;
+    }
+
+    &-sub {
+      font-size: 11px;
+      color: $h4-text-mute;
+      letter-spacing: .5px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(127, 186, 189, .14);
+      border-color: $h4-primary;
+      transform: translateY(-2px);
+    }
+  }
+
+  // 支援領域(縦リスト)
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    li a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 4px;
+      font-size: 13px;
+      font-weight: 500;
+      color: $h4-text;
+      text-decoration: none;
+      transition: color .25s ease;
+
+      &::before {
+        content: "→";
+        color: $h4-primary;
+        font-size: 12px;
       }
 
-      .wrapper {
-        width: 95%;
-        max-width: 1618px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-
-        .logo {
-          width: 15%;
-
-          .img-wrapper {
-            width: 80px;
-          }
-        }
-
-        .menu-header-menu-child-container {
-          width: 90%;
-
-          >ul {
-            list-style: none;
-            display: flex;
-            justify-content: end;
-            padding-bottom: 20px;
-
-            li {
-              margin-left: 8.3%;
-
-              a {
-                // color: red;
-                font-family: "bebas-neue", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                letter-spacing: 2px;
-                text-decoration: none;
-                font-size: 1.3em;
-                transition: .3s;
-
-                &:hover {
-                  // opacity: .5;
-                  // color: #7dacaf;
-                  color: #8bbcbf;
-                }
-              }
-            }
-          }
-        }
+      &:hover,
+      &:focus-visible {
+        color: $h4-primary;
       }
     }
+  }
+}
+
+// =====================================================
+// SP(770px 以下)では PC ヘッダーを非表示
+// SP 側は .sp-header-v5 / .sp-menu-v5(_header-v5.scss)を使う
+// =====================================================
+@media screen and (max-width: 770px) {
+  .header-child-v2 {
+    display: none !important;
+  }
+}
+
+// =====================================================
+// 下層ページ専用オーバーライド(splash 無し前提)
+// header.php で body.has-header が付与され、
+// 直後の inline JS で body.appear も付くため、以下は
+// 「動作するが、トップページの 1.5s 遅延は冗長」を解消する
+// =====================================================
+body.has-header {
+  // .loading-container はデフォルトで opacity:0 + 0.8s 遅延フェードイン。
+  // 下層ページでは即時表示で良いため、アニメーションを短縮する。
+  .loading-container {
+    animation-delay: 0s !important;
+    animation-duration: .4s !important;
   }
 }
 
 @media screen and (max-width: 770px) {
-  .sp-logo{
-    .img-wrapper{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 10%;
-      min-width: 60px;
-    }
-    &.sp-page-top-logo{
-      .img-wrapper{
-        top: 2%;
-        left: 6%;
-        width: 18%;
-      }
-    }
-  }
-  .sp-menu-icon {
-    position: fixed;
-    z-index: 999;
-    right: 8px;
-    top: 8px;
-
-    ul {
-      position: relative;
-      padding: 5px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      list-style: none;
-      background: rgb(0, 0, 0);
-      cursor: pointer;
-
-      li {
-        width: 25px;
-        height: 2px;
-        background: white;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        border-radius: 5px;
-        transition: .8s;
-
-        &:nth-child(1) {
-          top: 11px;
-        }
-
-        &:nth-child(2) {
-          top: 19px;
-        }
-
-        &:nth-child(3) {
-          bottom: 11px;
-        }
-      }
-    }
-
-    &.active {
-      ul {
-        li {
-          &:nth-child(1) {
-            top: 19px;
-            transform: rotate(45deg);
-          }
-
-          &:nth-child(2) {
-            opacity: 0;
-          }
-
-          &:nth-child(3) {
-            bottom: 19px;
-            transform: rotate(-45deg);
-          }
-        }
-      }
-    }
-  }
-
-  .sp-menu {
-    position: fixed;
-    z-index: 998;
-    transition: .8s;
-    transform: translateX(100%);
-    overflow-y: scroll;
-    height: 100%;
-    opacity: 0;
-
-    .container {
-      width: 100vw;
-      height: 100%;
-      min-height: 800px;
-      // background: rgba(250, 250, 250, .95);
-      background: rgba(125, 172, 175, .95);
-
-      .wrapper {
-        display: block;
-        .img-wrapper {
-          margin: 0 auto;
-          padding-top: 30px;
-          width: 150px;
-        }
-
-        .menu {
-          list-style: none;
-          width: 80%;
-          margin: 0 auto;
-          margin-top: 30px;
-
-          li {
-            text-align: center;
-
-            &+li {
-              border-top: solid 1px white;
-            }
-
-            &.only {
-              border-bottom: solid 1px white;
-            }
-
-            a {
-              font-family: "bebas-neue", sans-serif;
-              font-weight: 400;
-              font-style: normal;
-              font-size: 1.3em;
-              letter-spacing: 2px;
-              text-decoration: none;
-              padding: 30px;
-              display: block;
-              display: flex;
-              justify-content: space-between;
-              // font-weight: bold;
-              color: white;
-              i{
-                color: white;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &.active {
-      transform: translateX(0%);
-      opacity: 1;
+  body.has-header {
+    // SP ヘッダーも splash 無し前提で即時フェードイン
+    .sp-header-v5 {
+      animation: spHeaderV5Appear .4s ease 0s both !important;
     }
   }
 }

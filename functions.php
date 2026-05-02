@@ -25,7 +25,7 @@
     wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), '20240717', true);
 
     // SP ヘッダー / ドロワー JS(.sp-header-v5 / .sp-menu-v5 制御)
-    // page-topv3.php(トップ)+ header-v4.php を呼ぶ下層ページで使用。
+    // page-topv3.php(トップ)+ header.php を呼ぶ下層ページで使用。
     // LP 自己完結型・旧トップは除外。要素が無いページでは JS が早期 return するため
     // 残りはすべて全ページ enqueue で問題なし。
     $sp_menu_v5_excluded = array(

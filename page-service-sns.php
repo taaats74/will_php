@@ -6,12 +6,12 @@
  * Instagram構築・運用支援サービスページ(11セクション構成)
  * 中心メッセージ:Instagramは、フォロワーを集めるツールではなく、比較検討で選ばれるためのツール
  *
- * - header-v4 + footer-v3 + template-parts/page-hero
+ * - header + footer + template-parts/page-hero
  * - トップページ(page-topv3)+ page-service-web / ma のトンマナ準拠
  *
  * @package will-corp
  */
-get_header('v4');
+get_header();
 ?>
 
 <?php
@@ -720,4 +720,4 @@ get_template_part( 'template-parts/page-hero', null, [
   </div>
 </section>
 
-<?php get_footer('v3'); ?>
+<?php get_footer(); ?>

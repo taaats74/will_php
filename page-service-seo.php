@@ -6,13 +6,13 @@
  * コンテンツSEO構築・運用支援サービスページ(11セクション構成)
  * 中心メッセージ:コンテンツSEOは、Webサイトを"育てる"ための最も重要な施策
  *
- * - header-v4 + footer-v3 + template-parts/page-hero
+ * - header + footer + template-parts/page-hero
  * - page-service-sns 構造踏襲(クラス名 sns → seo)
  * - 最終 CTA は page-service-web パターン(3 カード)を採用
  *
  * @package will-corp
  */
-get_header('v4');
+get_header();
 ?>
 
 <?php
@@ -740,4 +740,4 @@ get_template_part( 'template-parts/page-hero', null, [
   </div>
 </section>
 
-<?php get_footer('v3'); ?>
+<?php get_footer(); ?>
