@@ -63,7 +63,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <h3 class="service-web-concept__headline">
         Webサイトは、集めるツールではなく、<br>
-        選ばれるためのツール。
+        <span class="keyword">選ばれるためのツール</span>。
       </h3>
 
       <div class="service-web-concept__body">
@@ -416,7 +416,7 @@ get_template_part( 'template-parts/page-hero', null, [
             <p class="service-web-price__plan-num">01</p>
             <p class="service-web-price__plan-name">小規模サイト</p>
             <ul class="service-web-price__plan-spec">
-              <li>ページ数:〜6ページ</li>
+              <li>ページ数:6ページ</li>
               <li>デザイン:フルオーダー</li>
               <li>CMS:WordPress</li>
               <li>工期:2ヶ月〜</li>
@@ -428,7 +428,7 @@ get_template_part( 'template-parts/page-hero', null, [
             <p class="service-web-price__plan-num">02</p>
             <p class="service-web-price__plan-name">中規模サイト</p>
             <ul class="service-web-price__plan-spec">
-              <li>ページ数:〜12ページ</li>
+              <li>ページ数:12ページ</li>
               <li>デザイン:フルオーダー</li>
               <li>CMS:WordPress</li>
               <li>工期:2.5ヶ月〜</li>
@@ -440,12 +440,12 @@ get_template_part( 'template-parts/page-hero', null, [
             <p class="service-web-price__plan-num">03</p>
             <p class="service-web-price__plan-name">大規模サイト</p>
             <ul class="service-web-price__plan-spec">
-              <li>ページ数:13ページ〜</li>
+              <li>ページ数:18ページ</li>
               <li>デザイン:フルオーダー</li>
               <li>CMS:WordPress</li>
               <li>工期:3.5ヶ月〜</li>
             </ul>
-            <p class="service-web-price__plan-price">120万円〜<span class="service-web-price__plan-tax">(税別)</span></p>
+            <p class="service-web-price__plan-price">160万円〜<span class="service-web-price__plan-tax">(税別)</span></p>
           </div>
 
         </div>
@@ -465,7 +465,7 @@ get_template_part( 'template-parts/page-hero', null, [
               <li>CMS:WordPress</li>
               <li>工期:1ヶ月〜</li>
             </ul>
-            <p class="service-web-price__plan-price">30万円〜<span class="service-web-price__plan-tax">(税別)</span></p>
+            <p class="service-web-price__plan-price">35万円〜<span class="service-web-price__plan-tax">(税別)</span></p>
           </div>
 
         </div>
