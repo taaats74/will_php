@@ -272,83 +272,6 @@
       </div>
     </section>
 
-<?php /*
-======================================================
-旧 Section 05 .page-topv3-service (タブ切り替え3タブ→2タブ構成)
-保存日: 2026-04-29
-保存理由: 構成書v5刷新により .page-topv3-mainproduct に置き換え。
-復旧方法: 本HTMLコメントを解除し、新セクション .page-topv3-mainproduct
-をコメントアウトすることで旧表示に戻せる。
-====================================================== */ ?>
-<!-- 旧Section 05 ここから(温存) -->
-<!--
-    <section class="page-topv3-service">
-      <div class="container">
-        <div class="wrapper">
-          <h2>ウィルではBtoBの中小企業様を中心に<br>ウェブ・デジタルマーケティングをサポートしております。</h2>
-          <ul class="tab">
-            <li data-tab="tab1">
-              <a href="#web">サブスクHP制作</a>
-            </li>
-            <li data-tab="tab2">
-              <a href="#ec">サブスクECサイト</a>
-            </li>
-          </ul>
-          <div class="service-wrapper animation-target to-up">
-            <div id="tab1" class="service is-active">
-              <p>ウィルサポは、自由なデザインの高品質ホームページを<span>月額9,800円から</span>ご利用いただける定額サブスクサービスです。</p>
-              <div class="service-desc">
-                <p>定額サブスクホームページ</p>
-                <h3><img src="THEME_URI/img/page-top2-willsupport-logo-white.png" alt="ウィルサポ"></h3>
-                <div class="desc-wrapper">
-                  <ul>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">限られた予算で本格的なサイトが持てる</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">フルオーダーでデザイン作成</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">初期費用無料</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">サーバー、ドメイン費用無料</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">サイトの更新や保守費用無料</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">契約期間の縛りなし</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">Webサイトの買取可能</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">集客サポートプランあり</li>
-                  </ul>
-                  <img src="THEME_URI/img/page-top2-willsupport-illust.png" alt="" class="desc-image">
-                </div>
-              </div>
-              <div class="btn-more">
-                <a href="https://will-corp.co.jp/willsupport/" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="THEME_URI/img/page-top2-arrow-white.png" alt=""></a>
-              </div>
-            </div>
-            <div id="tab2" class="service">
-              <p>ECサイト制作会社をお探しの方や、構築を代行してほしい企業様へ。ウィルサポECは、構成設計から公開後の運用・保守まで一括対応する月額型サービスです。</p>
-              <div class="service-desc">
-                <p>定額サブスクECサイト</p>
-                <h3 class="ec">ウィルサポEC</h3>
-                <div class="desc-wrapper">
-                  <ul>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">初期費用0円から本格ECをスタート</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">保守・更新込みで追加費用の不安を軽減</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">ブランド価値を高めるオリジナルデザイン</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">中小企業に最適なスモールスタート設計</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">高水準のセキュリティ環境</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">スマートフォン最適化を前提とした設計</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">将来的な機能追加・拡張にも柔軟対応</li>
-                    <li><img src="THEME_URI/img/page-top2-check.png" alt="">相談しやすい伴走型サポート体制</li>
-                  </ul>
-                  <img src="THEME_URI/img/page-top2-insta.png" alt="" class="desc-image">
-                </div>
-              </div>
-              <div class="btn-more">
-                <a href="https://will-corp.co.jp/will-support-ec/" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポECの</span>詳細はこちら<img src="THEME_URI/img/page-top2-arrow-white.png" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img src="THEME_URI/img/page-top2-Service.png" alt="Service" class="rellax-down">
-      </div>
-    </section>
--->
-<!-- 旧Section 05 ここまで(温存) ※THEME_URI は復旧時 <?php echo get_template_directory_uri(); ?> に置換 -->
-
     <section class="page-topv3-mainproduct" id="mainproduct">
       <div class="container">
         <div class="wrapper">
@@ -845,31 +768,6 @@
       </div>
     </section>
 
-    <?php /*
-======================================================
-旧 .page-topv3-contact(1箇所目・YouTube ~ Works 間)
-保存日: 2026-04-29
-保存理由: 構成書 v5 で Section 13 を末尾に新設し、
-このセクションは不要となった。ただし復旧可能性のため
-PHPコメントアウトで温存する。
-復旧方法: 本コメントを解除すれば旧表示に戻せる。
-======================================================
-    <section class="page-topv3-contact">
-      <div class="container">
-        <div class="wrapper">
-          <h2>無料相談・お問い合わせ</h2>
-          <div class="contact-btn">
-            <a href="<?php echo get_page_link(15); ?>">
-              <span>CONTACT</span>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
-            </a>
-          </div>
-          <p>Web制作や集客などに関するお悩みがある個人・中小企業の経営者様、担当者様はお気軽にご相談ください。<br>具体的な内容が決まっていない場合でも、しっかりと相談に乗らせていただきます。</p>
-        </div>
-      </div>
-    </section>
-*/ ?>
-
     <section class="page-topv3-works" id="works">
       <div class="container">
         <div class="wrapper">
@@ -888,52 +786,67 @@ PHPコメントアウトで温存する。
 
           <div class="works-list">
             <?php
-              $args = array(
-                'post_type' => 'works',
-                'posts_per_page' => 6,
-              );
-              $works = new WP_Query($args);
-              if ($works->have_posts()):
-                while ($works->have_posts()):
-                  $works->the_post();
-
-                  // 業種・規模(新フィールド「業種規模」優先、なければ既存「プロジェクト名」をフォールバック)
-                  $industry_scale = get_post_meta($post->ID, '業種規模', true);
-                  if (empty($industry_scale)) {
-                    $industry_scale = get_post_meta($post->ID, 'プロジェクト名', true);
-                  }
+              // 制作実績(page-works.php と同じハードコード配列形式・トップは厳選6件)
+              $topv3_works_items = [
+                [
+                  'name' => 'ジャパンマーベラス様',
+                  'url'  => 'https://japanmarvelous.com/',
+                  'img'  => 'marvelous.png',
+                  'tag'  => 'BtoB',
+                ],
+                [
+                  'name' => '株式会社システムライン様',
+                  'url'  => 'https://systemline.jp/',
+                  'img'  => 'systemline.png',
+                  'tag'  => 'BtoB',
+                ],
+                [
+                  'name' => '株式会社Mr財務屋様',
+                  'url'  => 'https://mrzaimuya.com/',
+                  'img'  => 'mrzaimuya.png',
+                  'tag'  => '税務・財務',
+                ],
+                [
+                  'name' => '村岡測量登記事務所様',
+                  'url'  => 'https://muraoka-touki.com/',
+                  'img'  => 'muraoka.png',
+                  'tag'  => '士業',
+                ],
+                [
+                  'name' => '株式会社GRIT様',
+                  'url'  => 'https://gritcoco-realestate.com/',
+                  'img'  => 'grit.png',
+                  'tag'  => '不動産',
+                ],
+                [
+                  'name' => '株式会社Lily様',
+                  'url'  => 'https://lilyproductionjp.com/',
+                  'img'  => 'lily.png',
+                  'tag'  => 'BtoB',
+                ],
+              ];
             ?>
 
-            <a href="<?php the_permalink(); ?>" class="works-card animation-target to-up">
+            <?php foreach ( $topv3_works_items as $item ) : ?>
+              <a href="<?php echo esc_url( $item['url'] ); ?>"
+                 class="works-card animation-target to-up"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="<?php echo esc_attr( $item['name'] ); ?>のWebサイトを新しいタブで開く">
 
-              <div class="works-card-thumb">
-                <?php
-                  if (has_post_thumbnail()):
-                    the_post_thumbnail('large');
-                  else:
-                ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
-                <?php endif; ?>
-              </div>
+                <div class="works-card-thumb">
+                  <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-v2-assets/img/' . $item['img'] ); ?>"
+                       alt="<?php echo esc_attr( $item['name'] ); ?> Webサイト制作実績"
+                       width="800" height="450" loading="lazy" decoding="async">
+                </div>
 
-              <div class="works-card-body">
-                <?php if (!empty($industry_scale)): ?>
-                  <span class="works-card-industry"><?php echo esc_html($industry_scale); ?></span>
-                <?php endif; ?>
-                <p class="works-card-name"><?php the_title(); ?></p>
-              </div>
+                <div class="works-card-body">
+                  <span class="works-card-industry"><?php echo esc_html( $item['tag'] ); ?></span>
+                  <p class="works-card-name"><?php echo esc_html( $item['name'] ); ?></p>
+                </div>
 
-            </a>
-
-            <?php
-                endwhile;
-              else:
-            ?>
-              <p class="works-empty">制作実績はまだありません。</p>
-            <?php
-              endif;
-              wp_reset_postdata();
-            ?>
+              </a>
+            <?php endforeach; ?>
           </div>
 
           <div class="works-bottom-cta">
