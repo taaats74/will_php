@@ -11935,39 +11935,137 @@ body.has-header-v4 .loading-container {
     line-height: 1.85;
   }
 }
-.page-contact .container .wrapper {
-  width: 83%;
+.page-thanks {
+  background: #ffffff;
+  padding: 100px 0 120px;
+}
+.page-thanks .container {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 140px;
-  margin-bottom: 90px;
-}
-.page-contact .container .wrapper .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-  text-align: center;
-}
-.page-contact .container .wrapper .sub-title {
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-}
-.page-contact .container .wrapper .border {
-  margin: 0 auto;
-  margin-top: 30px;
-}
-.page-contact .container .wrapper .text-wrapper {
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 2px;
-  margin-top: 80px;
-}
-.page-contact .container .wrapper .text-wrapper p {
-  margin-top: 1em;
+  padding: 0 40px;
 }
 
+.page-thanks__inner {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.page-thanks__lead {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.85;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 auto 40px;
+  max-width: 720px;
+}
+
+.page-thanks__body {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 auto 24px;
+  max-width: 720px;
+  text-align: left;
+}
+.page-thanks__body a {
+  color: #28849D;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-all;
+}
+.page-thanks__body a:hover {
+  text-decoration: none;
+}
+
+.page-thanks__inline-link {
+  margin: 0 auto 28px;
+  text-align: center;
+}
+.page-thanks__inline-link a {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #28849D;
+  background: #F0F8F9;
+  border: 1px solid #C0D5D8;
+  border-radius: 999px;
+  padding: 12px 24px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.page-thanks__inline-link a:hover {
+  background: #28849D;
+  color: #FFFFFF;
+}
+
+.page-thanks__actions {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.page-thanks__back {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #28849D;
+  letter-spacing: 0.06em;
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.page-thanks__back:hover {
+  background: #1f6f82;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 1024px) {
+  .page-thanks {
+    padding: 80px 0 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-thanks {
+    padding: 56px 0 72px;
+  }
+  .page-thanks .container {
+    padding: 0 20px;
+  }
+  .page-thanks__lead {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .page-thanks__body {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+  .page-thanks__inline-link a {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+  .page-thanks__actions {
+    margin-top: 44px;
+  }
+  .page-thanks__back {
+    font-size: 13px;
+    padding: 12px 28px;
+  }
+}
 .archive-service-service .container .wrapper {
   width: 83%;
   max-width: 1200px;
