@@ -33,11 +33,11 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <h2 class="service-ma-hero__catch">
         Webサイトを「営業の土台」として整えた次のステップ。<br>
-        属人化したフォローを<span class="keyword">仕組み</span>に変え、商談化率と営業生産性を高めます。
+        属人化したフォローを<span class="keyword">仕組み</span>に変え、<span class="keyword">商談化率</span>と<span class="keyword">営業生産性</span>を高めます。
       </h2>
 
       <p class="service-ma-hero__lead">
-        MAは万能ツールではありません。Web基盤が整って初めて、見込み客を育てる仕組みとして機能します。<br class="pc">
+        MAは万能ツールではありません。<br>Web基盤が整って初めて、見込み客を育てる仕組みとして機能します。<br class="pc">
         貴社の事業フェーズに合わせて、ツールではなく仕組みから設計します。
       </p>
 
@@ -59,7 +59,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-ma-concept__head concept-header">
         <p class="en">CONCEPT</p>
         <h2>コンセプト</h2>
-        <p class="subtitle">MAを単独で導入するのではなく、営業の土台の上で見込み客を育てる仕組みとして設計します。</p>
+        <p class="subtitle">MAを単独で導入するのではなく、<br>営業の土台の上で見込み客を育てる仕組みとして設計します。</p>
       </div>
 
       <h3 class="service-ma-concept__headline">
