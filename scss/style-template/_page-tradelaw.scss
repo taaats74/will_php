@@ -1,102 +1,154 @@
-.page-tradelaw-table{
-  .container{
-    .wrapper{
-      padding-bottom: 100px;
-      h2{
-        font-family: "fot-matisse-pron", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 2em;
-        line-height: 1em;
-        text-align: center;
-        margin-top: 120px;
-        span {
-          color: #7dacaf;
-        }
-      }
-      table{
-        width: 90%;
-        max-width: 800px;
-        margin: 0 auto;
-        margin-top: 50px;
-        font-family: "toppan-bunkyu-gothic-pr6n", serif;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        tr{
-          th{
-            font-weight: bold;
-            width: 30%;
-            padding: 30px 0;
-            border-bottom: solid 1px black;
-          }
-          td{
-            width: 70%;
-            padding: 30px 10px;
-            border-bottom: solid 1px silver;
-            ul{
-              margin-left: 30px;
-            }
-          }
-        }
-      }
-    }
+// =====================================================
+// page-tradelaw.php 専用スタイル
+// 名前空間: .page-tradelaw
+// トンマナ: page-service-* / page-contact / page-privacypolicy 準拠
+//   - フォントは Zen Kaku Gothic New(下層共通)
+//   - 2 列の縦長テーブルで「特定商取引法に基づく表記」を整然と表示
+// =====================================================
+
+$pt-color-text:    #3E5054;
+$pt-color-accent:  #28849D;
+$pt-color-border:  #C0D5D8;
+$pt-color-bg-pale: #F0F8F9;
+
+$pt-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+
+.page-tradelaw {
+  background: #ffffff;
+  padding: 100px 0 120px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 }
 
-@media screen and (max-width: 770px) {
-  .page-tradelaw-table {
-    .container {
-      .wrapper {
-        padding-bottom: 100px;
+.page-tradelaw__inner {
+  width: 90%;
+  max-width: 880px;
+  margin: 0 auto;
+  font-family: $pt-font-jp;
+  color: $pt-color-text;
+  letter-spacing: 0.04em;
+}
 
-        h2 {
-          font-family: "fot-matisse-pron", sans-serif;
-          font-weight: 500;
-          font-style: normal;
-          font-size: 1.4em;
-          line-height: 1em;
-          text-align: center;
-          margin-top: 70px;
+.page-tradelaw__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $pt-font-jp;
+  font-size: 15px;
+  line-height: 1.85;
+  color: $pt-color-text;
+  letter-spacing: 0.04em;
 
-          span {
-            color: #7dacaf;
-          }
-        }
+  th,
+  td {
+    padding: 22px 20px;
+    border-bottom: 1px solid $pt-color-border;
+    vertical-align: top;
+    text-align: left;
+  }
 
-        table {
-          width: 95%;
-          max-width: 800px;
-          margin: 0 auto;
-          margin-top: 30px;
-          font-family: "toppan-bunkyu-gothic-pr6n", serif;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+  th {
+    width: 32%;
+    font-weight: 700;
+    color: $pt-color-accent;
+    background: $pt-color-bg-pale;
+    white-space: nowrap;
+  }
 
-          tr {
-            th {
-              font-weight: bold;
-              width: 30%;
-              padding: 10px 0;
-              font-size: .8em;
-              border-bottom: solid 1px black;
-              line-height: 1.2em;
-            }
+  td {
+    width: 68%;
 
-            td {
-              width: 70%;
-              padding: 10px;
-              font-size: .8em;
-              border-bottom: solid 1px silver;
+    p {
+      margin: 0 0 14px;
+      &:last-child { margin-bottom: 0; }
+    }
 
-              ul {
-                margin-left: 10px;
-              }
-            }
-          }
-        }
+    ul,
+    ol {
+      margin: 8px 0 0 22px;
+      padding: 0;
+
+      li {
+        margin: 0 0 6px;
+        line-height: 1.85;
+
+        &:last-child { margin-bottom: 0; }
       }
+    }
+  }
+
+  // 1行目の上にも border を引いて表全体をフレーム化
+  tr:first-child th,
+  tr:first-child td {
+    border-top: 1px solid $pt-color-border;
+  }
+}
+
+// =====================================================
+// Tablet (max-width: 1024px)
+// =====================================================
+@media screen and (max-width: 1024px) {
+  .page-tradelaw {
+    padding: 80px 0 100px;
+  }
+}
+
+// =====================================================
+// SP (max-width: 767px)
+// =====================================================
+@media screen and (max-width: 767px) {
+  .page-tradelaw {
+    padding: 56px 0 72px;
+
+    .container { padding: 0 20px; }
+  }
+
+  // SP は th を上、td を下に積み上げて読みやすく
+  .page-tradelaw__table {
+    font-size: 13.5px;
+    line-height: 1.85;
+
+    thead, tbody, tr {
+      display: block;
+      width: 100%;
+    }
+
+    th,
+    td {
+      display: block;
+      width: 100%;
+      white-space: normal;
+      padding: 14px 16px;
+      border-bottom: none;
+    }
+
+    th {
+      width: 100%;
+      background: $pt-color-bg-pale;
+      border-radius: 6px 6px 0 0;
+      padding: 12px 16px;
+    }
+
+    td {
+      padding: 14px 16px 18px;
+      border-bottom: 1px solid $pt-color-border;
+    }
+
+    tr:first-child th,
+    tr:first-child td {
+      border-top: none;
+    }
+
+    tr {
+      margin-bottom: 12px;
+    }
+
+    td ul,
+    td ol {
+      margin-left: 18px;
     }
   }
 }
