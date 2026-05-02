@@ -11852,366 +11852,87 @@ body.has-header-v4 .loading-container {
     padding: 0.5em 2.5em;
   }
 }
-.page-contact .container .wrapper {
-  width: 83%;
+.page-contact {
+  background: #ffffff;
+  padding: 100px 0 120px;
+}
+.page-contact .container {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 140px;
-  margin-bottom: 90px;
-}
-.page-contact .container .wrapper .section-header {
-  font-size: 2.5em;
-  letter-spacing: 4px;
-  text-align: center;
-}
-.page-contact .container .wrapper .sub-title {
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-}
-.page-contact .container .wrapper .border {
-  margin: 0 auto;
-  margin-top: 30px;
-}
-.page-contact .container .wrapper .content {
-  max-width: 800px;
-  margin: 0 auto;
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 2px;
-  margin-top: 80px;
-}
-.page-contact .container .wrapper .hubspot-form-wrapper {
-  max-width: 750px;
-  margin: 0 auto;
-}
-.page-contact .container .wrapper form ul {
-  list-style: none;
-  width: 56%;
-  min-width: 800px;
-  margin: 0 auto;
-  margin-top: 70px;
-}
-.page-contact .container .wrapper form ul li {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.page-contact .container .wrapper form ul li label {
-  width: 25%;
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 0.8em;
-}
-.page-contact .container .wrapper form ul li label .required {
-  color: #FF5042;
-  margin-left: 3px;
-}
-.page-contact .container .wrapper form ul li span {
-  width: 75%;
-}
-.page-contact .container .wrapper form ul li span input {
-  width: 100%;
-  padding: 1em;
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.page-contact .container .wrapper form ul li span textarea {
-  width: 100%;
-  padding: 1em;
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.page-contact .container .wrapper form .wpcf7-response-output {
-  border-color: none;
-  margin: 2em 0.5em 1em;
-  padding: 0.2em 1em;
-  text-align: center;
-  border: none;
-  color: #7dacaf;
-}
-.page-contact .container .wrapper .privacy-policy {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.8em;
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.page-contact .container .wrapper .checkbox {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.8em;
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.page-contact .container .wrapper .checkbox .required {
-  color: #FF5042;
-}
-.page-contact .container .wrapper .contact-btn {
-  text-align: center;
-  margin-top: 40px;
-}
-.page-contact .container .wrapper .contact-btn button {
-  display: inline-block;
-  padding: 0.5em 4em;
-  text-decoration: none;
-  color: white;
-  background: black;
-  border: solid 1px black;
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-  z-index: 1;
-  transition: 0.3s;
-}
-.page-contact .container .wrapper .contact-btn button:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: white;
-  transition: transform ease 0.3s;
-  transform-origin: 100% 50%;
-  transform: scaleX(0);
-}
-.page-contact .container .wrapper .contact-btn button:hover {
-  color: black;
-}
-.page-contact .container .wrapper .contact-btn button:hover::before {
-  transform-origin: 0% 50%;
-  transform: scaleX(1);
+  padding: 0 40px;
 }
 
-@media screen and (max-width: 1050px) {
-  .page-contact .container .wrapper {
-    width: 83%;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 140px;
-    margin-bottom: 90px;
+.page-contact__inner {
+  width: 90%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.page-contact__lead {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin: 0 auto 64px;
+  max-width: 760px;
+}
+
+.page-contact__form {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+}
+.page-contact__form .hbspt-form,
+.page-contact__form .hs-form-frame {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.page-contact__form p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+}
+.page-contact__form p:last-child {
+  margin-bottom: 0;
+}
+.page-contact__form a {
+  color: #28849D;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.page-contact__form a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-contact {
+    padding: 80px 0 100px;
   }
-  .page-contact .container .wrapper .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-    text-align: center;
-  }
-  .page-contact .container .wrapper .sub-title {
-    font-family: "toppan-bunkyu-gothic-pr6n", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-  .page-contact .container .wrapper .border {
-    margin: 0 auto;
-    margin-top: 30px;
-  }
-  .page-contact .container .wrapper .content {
-    font-family: "toppan-bunkyu-gothic-pr6n", serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 2px;
-    margin-top: 80px;
-  }
-  .page-contact .container .wrapper form ul {
-    list-style: none;
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
-    margin-top: 70px;
-  }
-  .page-contact .container .wrapper form ul li {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .page-contact .container .wrapper form ul li label {
-    width: 25%;
-  }
-  .page-contact .container .wrapper form ul li label .required {
-    color: #FF5042;
-    margin-left: 3px;
-  }
-  .page-contact .container .wrapper form ul li span {
-    width: 75%;
-  }
-  .page-contact .container .wrapper form ul li span input {
-    width: 100%;
-    padding: 1em;
-  }
-  .page-contact .container .wrapper form ul li span textarea {
-    width: 100%;
-    padding: 1em;
-  }
-  .page-contact .container .wrapper .privacy-policy {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.8em;
-  }
-  .page-contact .container .wrapper .checkbox {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.8em;
-  }
-  .page-contact .container .wrapper .contact-btn {
-    text-align: center;
-    margin-top: 40px;
-  }
-  .page-contact .container .wrapper .contact-btn button {
-    display: inline-block;
-    padding: 0.5em 4em;
-    text-decoration: none;
-    color: white;
-    background: black;
-    border: solid 1px black;
-    font-family: "toppan-bunkyu-gothic-pr6n", serif;
-    font-weight: 400;
-    font-style: normal;
-    position: relative;
-    z-index: 1;
-    transition: 0.3s;
-  }
-  .page-contact .container .wrapper .contact-btn button:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: white;
-    transition: transform ease 0.3s;
-    transform-origin: 100% 50%;
-    transform: scaleX(0);
-  }
-  .page-contact .container .wrapper .contact-btn button:hover {
-    color: black;
-  }
-  .page-contact .container .wrapper .contact-btn button:hover::before {
-    transform-origin: 0% 50%;
-    transform: scaleX(1);
+  .page-contact__lead {
+    margin-bottom: 48px;
   }
 }
-@media screen and (max-width: 770px) {
-  .page-contact .container .wrapper {
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 80px;
-    margin-bottom: 90px;
+@media screen and (max-width: 767px) {
+  .page-contact {
+    padding: 56px 0 72px;
   }
-  .page-contact .container .wrapper .section-header {
-    font-size: 2.5em;
-    letter-spacing: 4px;
-    text-align: center;
+  .page-contact .container {
+    padding: 0 20px;
   }
-  .page-contact .container .wrapper .sub-title {
-    font-family: "toppan-bunkyu-gothic-pr6n", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
+  .page-contact__lead {
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 36px;
   }
-  .page-contact .container .wrapper .border {
-    margin: 0 auto;
-    margin-top: 30px;
-  }
-  .page-contact .container .wrapper .content {
-    font-family: "toppan-bunkyu-gothic-pr6n", serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 2px;
-    margin-top: 40px;
-  }
-  .page-contact .container .wrapper form ul {
-    list-style: none;
-    width: 100%;
-    min-width: 1px;
-    margin: 0 auto;
-    margin-top: 70px;
-  }
-  .page-contact .container .wrapper form ul li {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .page-contact .container .wrapper form ul li label {
-    width: 100%;
-  }
-  .page-contact .container .wrapper form ul li label .required {
-    color: #FF5042;
-    margin-left: 3px;
-  }
-  .page-contact .container .wrapper form ul li span {
-    width: 100%;
-  }
-  .page-contact .container .wrapper form ul li span input {
-    width: 100%;
-    padding: 1em;
-    margin-top: 1em;
-  }
-  .page-contact .container .wrapper form ul li span textarea {
-    width: 100%;
-    padding: 1em;
-    margin-top: 1em;
-  }
-  .page-contact .container .wrapper .privacy-policy {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.8em;
-  }
-  .page-contact .container .wrapper .checkbox {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.8em;
-  }
-  .page-contact .container .wrapper .contact-btn {
-    text-align: center;
-    margin-top: 40px;
-  }
-  .page-contact .container .wrapper .contact-btn button {
-    display: inline-block;
-    padding: 0.5em 4em;
-    text-decoration: none;
-    color: white;
-    background: black;
-    border: solid 1px black;
-    font-family: "toppan-bunkyu-gothic-pr6n", serif;
-    font-weight: 400;
-    font-style: normal;
-    position: relative;
-    z-index: 1;
-    transition: 0.3s;
-  }
-  .page-contact .container .wrapper .contact-btn button:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: white;
-    transition: transform ease 0.3s;
-    transform-origin: 100% 50%;
-    transform: scaleX(0);
-  }
-  .page-contact .container .wrapper .contact-btn button:hover {
-    color: black;
-  }
-  .page-contact .container .wrapper .contact-btn button:hover::before {
-    transform-origin: 0% 50%;
-    transform: scaleX(1);
+  .page-contact__form p {
+    font-size: 13.5px;
+    line-height: 1.85;
   }
 }
 .page-contact .container .wrapper {

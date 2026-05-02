@@ -1,421 +1,114 @@
+// =====================================================
+// page-contact.php 専用スタイル
+// 名前空間: .page-contact
+// トンマナ: page-service-* / page-privacypolicy 準拠
+//   - フォントは Zen Kaku Gothic New(下層共通)
+//   - ヒーロー直下の intro 段落 + HubSpot フォーム埋め込み枠のみ
+// =====================================================
+
+$pc-color-text:    #3E5054;
+$pc-color-border:  #C0D5D8;
+$pc-color-bg-pale: #F0F8F9;
+
+$pc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+
 .page-contact {
+  background: #ffffff;
+  padding: 100px 0 120px;
+
   .container {
-    .wrapper {
-      width: 83%;
-      max-width: 1200px;
-      margin: 0 auto;
-      margin-top: 140px;
-      margin-bottom: 90px;
-
-      .section-header {
-        font-size: 2.5em;
-        letter-spacing: 4px;
-        text-align: center;
-      }
-
-      .sub-title {
-        font-family: "toppan-bunkyu-gothic-pr6n", serif;
-        font-weight: 400;
-        font-style: normal;
-        text-align: center;
-      }
-
-      .border {
-        margin: 0 auto;
-        margin-top: 30px;
-      }
-      .content{
-        max-width: 800px;
-        margin: 0 auto;
-        font-family: "toppan-bunkyu-gothic-pr6n", serif;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: 2px;
-        margin-top: 80px;
-      }
-      .hubspot-form-wrapper{
-        max-width: 750px;
-        margin: 0 auto;
-      }
-      form{
-        ul{
-          list-style: none;
-          width: 56%;
-          min-width: 800px;
-          margin: 0 auto;
-          margin-top: 70px;
-          li{
-            margin-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            label{
-              width: 25%;
-              font-family: "toppan-bunkyu-gothic-pr6n", serif;
-              font-weight: 400;
-              font-style: normal;
-              margin-top: .8em;
-              .required{
-                color: #FF5042;
-                margin-left: 3px;
-              }
-            }
-            span{
-              width: 75%;
-              input{
-                width: 100%;
-                padding: 1em;
-                font-family: "toppan-bunkyu-gothic-pr6n", serif;
-                font-weight: 400;
-                font-style: normal;
-              }
-              textarea{
-                width: 100%;
-                padding: 1em;
-                font-family: "toppan-bunkyu-gothic-pr6n", serif;
-                font-weight: 400;
-                font-style: normal;
-              }
-            }
-          }
-        }
-        .wpcf7-response-output{
-          border-color: none;
-          margin: 2em 0.5em 1em;
-          padding: 0.2em 1em;
-          text-align: center;
-          border: none;
-          color: #7dacaf;
-        }
-      }
-      .privacy-policy{
-        text-align: center;
-        margin-top: 30px;
-        font-size: .8em;
-        font-family: "toppan-bunkyu-gothic-pr6n", serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      .checkbox{
-        text-align: center;
-        margin-top: 20px;
-        font-size: .8em;
-        font-family: "toppan-bunkyu-gothic-pr6n", serif;
-        font-weight: 400;
-        font-style: normal;
-        .required{
-          color: #FF5042;
-        }
-      }
-      .contact-btn{
-        text-align: center;
-        margin-top: 40px;
-        button {
-          display: inline-block;
-          padding: .5em 4em;
-          text-decoration: none;
-          color: white;
-          background: black;
-          border: solid 1px black;
-          font-family: "toppan-bunkyu-gothic-pr6n", serif;
-          font-weight: 400;
-          font-style: normal;
-          position: relative;
-          z-index: 1;
-          transition: .3s;
-
-          &:before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background: white;
-            transition: transform ease .3s;
-            transform-origin: 100% 50%;
-            transform: scaleX(0);
-          }
-
-          &:hover {
-            color: black;
-
-            &::before {
-              transform-origin: 0% 50%;
-              transform: scaleX(1);
-            }
-          }
-        }
-      }
-    }
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 }
 
-@media screen and (max-width: 1050px) {
-  .page-contact {
-    .container {
-      .wrapper {
-        width: 83%;
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 140px;
-        margin-bottom: 90px;
+.page-contact__inner {
+  width: 90%;
+  max-width: 880px;
+  margin: 0 auto;
+}
 
-        .section-header {
-          font-size: 2.5em;
-          letter-spacing: 4px;
-          text-align: center;
-        }
+.page-contact__lead {
+  font-family: $pc-font-jp;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  color: $pc-color-text;
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin: 0 auto 64px;
+  max-width: 760px;
+}
 
-        .sub-title {
-          font-family: "toppan-bunkyu-gothic-pr6n", serif;
-          font-weight: 400;
-          font-style: normal;
-          text-align: center;
-        }
+// HubSpot フォームの差し込み枠
+// the_content() で HubSpot フォームショートコードが描画される想定
+.page-contact__form {
+  font-family: $pc-font-jp;
+  color: $pc-color-text;
+  letter-spacing: 0.04em;
 
-        .border {
-          margin: 0 auto;
-          margin-top: 30px;
-        }
+  // HubSpot 側生成の hbspt-form / .hs-form は外側 wrapper にだけ最低限の余白制御
+  .hbspt-form,
+  .hs-form-frame {
+    max-width: 720px;
+    margin: 0 auto;
+  }
 
-        .content {
-          font-family: "toppan-bunkyu-gothic-pr6n", serif;
-          font-weight: 400;
-          font-style: normal;
-          letter-spacing: 2px;
-          margin-top: 80px;
-        }
+  // 本文中の素の段落・リンク(WordPress エディタ直書きにも対応)
+  p {
+    font-family: $pc-font-jp;
+    font-size: 15px;
+    line-height: 1.95;
+    color: $pc-color-text;
+    letter-spacing: 0.04em;
+    margin: 0 0 18px;
 
-        form {
-          ul {
-            list-style: none;
-            width: 80%;
-            min-width: 600px;
-            margin: 0 auto;
-            margin-top: 70px;
+    &:last-child { margin-bottom: 0; }
+  }
 
-            li {
-              margin-top: 30px;
-              display: flex;
-              justify-content: space-between;
+  a {
+    color: #28849D;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 
-              label {
-                width: 25%;
-
-                .required {
-                  color: #FF5042;
-                  margin-left: 3px;
-                }
-              }
-              span{
-                width: 75%;
-                input {
-                  width: 100%;
-                  padding: 1em;
-                }
-
-                textarea {
-                  width: 100%;
-                  padding: 1em;
-                }
-              }
-
-            }
-          }
-        }
-
-        .privacy-policy {
-          text-align: center;
-          margin-top: 30px;
-          font-size: .8em;
-        }
-
-        .checkbox {
-          text-align: center;
-          margin-top: 20px;
-          font-size: .8em;
-        }
-
-        .contact-btn {
-          text-align: center;
-          margin-top: 40px;
-
-          button {
-            display: inline-block;
-            padding: .5em 4em;
-            text-decoration: none;
-            color: white;
-            background: black;
-            border: solid 1px black;
-            font-family: "toppan-bunkyu-gothic-pr6n", serif;
-            font-weight: 400;
-            font-style: normal;
-            position: relative;
-            z-index: 1;
-            transition: .3s;
-
-            &:before {
-              content: "";
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: -1;
-              background: white;
-              transition: transform ease .3s;
-              transform-origin: 100% 50%;
-              transform: scaleX(0);
-            }
-
-            &:hover {
-              color: black;
-
-              &::before {
-                transform-origin: 0% 50%;
-                transform: scaleX(1);
-              }
-            }
-          }
-        }
-      }
-    }
+    &:hover { text-decoration: none; }
   }
 }
 
-@media screen and (max-width: 770px) {
+// =====================================================
+// Tablet (max-width: 1024px)
+// =====================================================
+@media screen and (max-width: 1024px) {
   .page-contact {
-    .container {
-      .wrapper {
-        width: 95%;
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 80px;
-        margin-bottom: 90px;
+    padding: 80px 0 100px;
+  }
 
-        .section-header {
-          font-size: 2.5em;
-          letter-spacing: 4px;
-          text-align: center;
-        }
+  .page-contact__lead {
+    margin-bottom: 48px;
+  }
+}
 
-        .sub-title {
-          font-family: "toppan-bunkyu-gothic-pr6n", serif;
-          font-weight: 400;
-          font-style: normal;
-          text-align: center;
-        }
+// =====================================================
+// SP (max-width: 767px)
+// =====================================================
+@media screen and (max-width: 767px) {
+  .page-contact {
+    padding: 56px 0 72px;
 
-        .border {
-          margin: 0 auto;
-          margin-top: 30px;
-        }
+    .container { padding: 0 20px; }
+  }
 
-        .content {
-          font-family: "toppan-bunkyu-gothic-pr6n", serif;
-          font-weight: 400;
-          font-style: normal;
-          letter-spacing: 2px;
-          margin-top: 40px;
-        }
+  .page-contact__lead {
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 36px;
+  }
 
-        form {
-          ul {
-            list-style: none;
-            width: 100%;
-            min-width: 1px;
-            margin: 0 auto;
-            margin-top: 70px;
-
-            li {
-              margin-top: 30px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-
-              label {
-                width: 100%;
-
-                .required {
-                  color: #FF5042;
-                  margin-left: 3px;
-                }
-              }
-              span{
-                width: 100%;
-                input {
-                  width: 100%;
-                  padding: 1em;
-                  margin-top: 1em;
-                }
-
-                textarea {
-                  width: 100%;
-                  padding: 1em;
-                  margin-top: 1em;
-                }
-              }
-
-            }
-          }
-        }
-
-        .privacy-policy {
-          text-align: center;
-          margin-top: 30px;
-          font-size: .8em;
-        }
-
-        .checkbox {
-          text-align: center;
-          margin-top: 20px;
-          font-size: .8em;
-        }
-
-        .contact-btn {
-          text-align: center;
-          margin-top: 40px;
-
-          button {
-            display: inline-block;
-            padding: .5em 4em;
-            text-decoration: none;
-            color: white;
-            background: black;
-            border: solid 1px black;
-            font-family: "toppan-bunkyu-gothic-pr6n", serif;
-            font-weight: 400;
-            font-style: normal;
-            position: relative;
-            z-index: 1;
-            transition: .3s;
-
-            &:before {
-              content: "";
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: -1;
-              background: white;
-              transition: transform ease .3s;
-              transform-origin: 100% 50%;
-              transform: scaleX(0);
-            }
-
-            &:hover {
-              color: black;
-
-              &::before {
-                transform-origin: 0% 50%;
-                transform: scaleX(1);
-              }
-            }
-          }
-        }
-      }
+  .page-contact__form {
+    p {
+      font-size: 13.5px;
+      line-height: 1.85;
     }
   }
 }
