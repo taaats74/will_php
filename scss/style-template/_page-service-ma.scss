@@ -279,6 +279,10 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   margin: 0 0 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid $color-border;
+  // 横並び 3 カラムで区切り線位置を揃えるため 2 行分の高さを確保
+  min-height: calc(20px * 1.5 * 2 + 12px);
+  display: flex;
+  align-items: flex-start;
 }
 
 .service-ma-target__text {
@@ -291,10 +295,11 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 .service-ma-target__alt-block {
-  // $color-light(#B4DBE0)より気持ち薄め(文字視認性確保)
-  background: #d5e8ea;
+  background: $color-white;
   border-radius: 12px;
   padding: 40px 48px;
+  // 浮かせる影(他カードよりやや強めで視覚的に独立感)
+  box-shadow: 0 14px 36px rgba(40, 132, 157, 0.14);
 }
 
 .service-ma-target__alt-title {
@@ -335,7 +340,7 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
       height: 12px;
       background: $color-accent;
       border-radius: 50%;
-      box-shadow: inset 0 0 0 2.5px #d5e8ea;
+      box-shadow: inset 0 0 0 2.5px $color-white;
     }
   }
 }
