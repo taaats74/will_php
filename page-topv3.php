@@ -5,7 +5,7 @@
   */
 ?>
 
-  <?php get_header("v3"); ?>
+  <?php get_header('top'); ?>
 
   <div class="loading-container">
     <section class="page-topv3-fv pc">
@@ -1030,4 +1030,4 @@ PHPコメントアウトで温存する。
       </div>
     </section>
 
-    <?php get_footer("v3"); ?>
+    <?php get_footer(); ?>

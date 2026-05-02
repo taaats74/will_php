@@ -5,7 +5,7 @@
   */
 ?>
 
-  <?php get_header("topv2"); ?>
+  <?php get_header(); ?>
 
   <div class="loading-container">
     <section class="page-top2-fv pc">
@@ -417,4 +417,4 @@
       </div>
     </section>
 
-    <?php get_footer("v3"); ?>
+    <?php get_footer(); ?>

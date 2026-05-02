@@ -6,13 +6,13 @@
  * クリエイティブ制作サービスページ(7セクション構成)
  * 中心メッセージ:オンラインも、オフラインも。顧客接点のすべてに、一貫したブランドと営業導線を。
  *
- * - header-v4 + footer-v3 + template-parts/page-hero
+ * - header + footer + template-parts/page-hero
  * - page-service-content-seo 構造踏襲(クラス名 seo → creative)
  * - 最終 CTA は page-service-web の .service-web-cta クラスを直接流用(SCSS 新規定義不要)
  *
  * @package will-corp
  */
-get_header('v4');
+get_header();
 ?>
 
 <?php
@@ -502,4 +502,4 @@ get_template_part( 'template-parts/page-hero', null, [
   </div>
 </section>
 
-<?php get_footer('v3'); ?>
+<?php get_footer(); ?>

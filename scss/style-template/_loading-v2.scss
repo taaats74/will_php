@@ -118,7 +118,7 @@ body.has-loading-v2.appear .header-child-v2 {
 }
 
 // SP ヘッダー(.sp-header-v5)も同じ 0.8 秒タイミングで同期させる
-// (_header-v4.scss / _header-v5.scss の旧仕様 .4s を上書き)
+// (_header.scss / _header-v5.scss の旧仕様 .4s を上書き)
 @media screen and (max-width: 770px) {
   body.has-loading-v2.appear .sp-header-v5 {
     animation: spHeaderV5Appear .8s ease 0s both !important;

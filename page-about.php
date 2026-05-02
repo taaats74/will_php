@@ -5,7 +5,7 @@
   */
 ?>
 
-<?php get_header('v4'); ?>
+<?php get_header(); ?>
 
 <?php
 get_template_part( 'template-parts/page-hero', null, [
@@ -25,4 +25,4 @@ get_template_part( 'template-parts/page-hero', null, [
 endif;
 ?>
 
-<?php get_footer("v3"); ?>
+<?php get_footer(); ?>

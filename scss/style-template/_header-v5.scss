@@ -2,7 +2,7 @@
 // SP Header v5 / SP Menu v5
 // 作成日: 2026-04-29
 // 用途: page-topv3.php(トップ v3)専用 SP フローティングヘッダー + ドロワー
-// 対応PHPテンプレート: header-v3.php
+// 対応PHPテンプレート: header-top.php
 // 対応HTMLクラス: .sp-header-v5 / .sp-menu-v5
 // 対応JS: js/sp-menu-v5.js
 //
@@ -158,9 +158,9 @@ $sp-v5-card: rgba(255, 255, 255, .92);
   }
 }
 
-// 下層ページ(header-v4 利用)では SP ヘッダーを最初から
+// 下層ページ(header 利用)では SP ヘッダーを最初から
 // スクロール後と同じ見た目にする(背景が白系のためコントラスト確保)
-body.has-header-v4 .sp-header-v5 {
+body.has-header .sp-header-v5 {
   background: rgba(255, 255, 255, .95);
   box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
 
