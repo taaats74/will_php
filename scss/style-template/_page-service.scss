@@ -48,7 +48,7 @@ $will-subtle:     #8AA0A4;
 $philo-bg: #28849b;
 
 .page-service__philosophy {
-  background: $philo-bg;
+  background: #ffffff;
   padding: 110px 0;
 
   .container {
@@ -57,9 +57,14 @@ $philo-bg: #28849b;
     padding: 0 40px;
   }
 
+  // .wrapper をボックス化(セクション全幅ではなく内側ボックスを #28849b で塗る)
   .wrapper {
-    max-width: 880px;
+    background: $philo-bg;
+    max-width: 960px;
     margin: 0 auto;
+    padding: 72px 64px;
+    border-radius: 16px;
+    box-shadow: 0 18px 48px rgba(40, 132, 155, 0.18);
   }
 
   // 共通 eyebrow をこのセクション内のみ白で上書き
@@ -436,6 +441,11 @@ $philo-bg: #28849b;
     .container {
       padding: 0 24px;
     }
+
+    .wrapper {
+      padding: 56px 40px;
+      border-radius: 14px;
+    }
   }
 
   .page-service__main {
@@ -489,6 +499,12 @@ $philo-bg: #28849b;
 
     .container {
       padding: 0 20px;
+    }
+
+    .wrapper {
+      padding: 44px 24px;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(40, 132, 155, 0.15);
     }
   }
 
