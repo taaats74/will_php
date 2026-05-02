@@ -32,6 +32,20 @@ get_template_part( 'template-parts/page-hero', null, [
         お気軽にお問い合わせください。
       </p>
 
+      <div class="page-contact__privacy-notice" role="note">
+        <p class="page-contact__privacy-notice-text">
+          お問い合わせフォームを送信される前に、
+          <a class="page-contact__privacy-notice-link" href="<?php echo esc_url( home_url('/privacy-policy/') ); ?>" target="_blank" rel="noopener noreferrer">
+            プライバシーポリシー
+            <span class="page-contact__privacy-notice-icon" aria-hidden="true">↗</span>
+          </a>
+          をご確認ください。
+        </p>
+        <p class="page-contact__privacy-notice-sub">
+          本フォームを送信いただいた時点で、プライバシーポリシーに同意いただいたものとみなします。
+        </p>
+      </div>
+
       <div class="page-contact__form">
         <?php
           if ( have_posts() ) :
