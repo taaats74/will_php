@@ -31,7 +31,7 @@ get_template_part( 'template-parts/page-hero', null, [
     <div class="service-sns-hero__inner">
 
       <h2 class="service-sns-hero__catch">
-        Instagram単体ではなく、<br class="sp">
+        Instagram単体ではなく、<br>
         <span class="keyword">Webと接続した「営業基盤の入口」</span>として設計します。
       </h2>
 
@@ -50,28 +50,23 @@ get_template_part( 'template-parts/page-hero', null, [
 <section class="service-sns-concept">
   <div class="container">
     <div class="service-sns-concept__inner">
-
-      <div class="service-sns-concept__head concept-header">
-        <p class="en">CONCEPT</p>
-        <h2>コンセプト</h2>
-        <p class="subtitle">Instagramの本当の役割を、私たちはこう考えています。</p>
-      </div>
-
-      <h3 class="service-sns-concept__headline">
+      <h2 class="service-sns-concept__headline">
         Instagramは、フォロワーを集めるツールではなく、<br>
-        <span class="keyword">比較検討で選ばれるためのツール</span>です。
-      </h3>
-
+        <span class="keyword">"知ってもらう"から"検討してもらう"まで進めるツール</span>です。
+      </h2>
       <div class="service-sns-concept__body">
         <p>
-          発信を「作業」で終わらせず、Webと接続し、商談前の信頼を積み上げる装置として設計します。
+          Instagramの役割は、まず「知ってもらうこと」。<br>
+          そして、ターゲットに刺さる発信を積み重ねることで、
+          "なんとなく知っている"段階のお客様を、
+          <span class="keyword">"この会社に相談してみたい"という比較検討の段階</span>まで引き上げていきます。
         </p>
         <p>
-          ターゲットを定義し、構成を設計し、運用を仕組み化することで、
-          Instagramは<span class="keyword">「投稿しているアカウント」から「比較検討時に選ばれるアカウント」</span>へと変わります。
+          ターゲットを定義し、構成を設計し、運用を仕組み化する。
+          さらにWebと接続することで、Instagramは
+          <span class="keyword">「ただ投稿しているアカウント」から「認知から商談前の信頼形成までを担うアカウント」</span>へと変わります。
         </p>
       </div>
-
     </div>
   </div>
 </section>
