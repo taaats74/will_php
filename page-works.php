@@ -110,7 +110,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="page-works__works-head">
         <p class="page-works__eyebrow">CASE STUDIES</p>
-        <h2 class="page-works__works-title">「比較検討で選ばれる」を、<br>業種ごとに設計してきました</h2>
+        <h2 class="page-works__works-title">「比較検討で選ばれる」を<br>業種ごとに設計してきました</h2>
         <p class="page-works__works-lead">
           BtoB中小企業に特化し、製造・IT・士業・不動産など幅広い業種のホームページ制作を伴走支援してきました。<br>
           業種は異なっても、「比較検討で選ばれる構造」という設計思想は共通しています。業種ごとの設計意図とあわせて実績をご覧ください。

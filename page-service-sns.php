@@ -52,7 +52,7 @@ get_template_part( 'template-parts/page-hero', null, [
     <div class="service-sns-concept__inner">
       <h2 class="service-sns-concept__headline">
         Instagramは、フォロワーを集めるツールではなく、<br>
-        <span class="keyword">"知ってもらう"から"検討してもらう"まで進めるツール</span>です。
+        <span class="keyword">"知ってもらう"から"検討してもらう"まで<br>進めるツール</span>です。
       </h2>
       <div class="service-sns-concept__body">
         <p>

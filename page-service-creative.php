@@ -32,7 +32,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <h2 class="service-creative-concept__headline">
         オンラインも、オフラインも。<br>
-        顧客接点のすべてに、<span class="keyword">一貫したブランドと営業導線</span>を。
+        顧客接点のすべてに、<br><span class="keyword">一貫したブランドと営業導線</span>を。
       </h2>
 
       <div class="service-creative-concept__body">
