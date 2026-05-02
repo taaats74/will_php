@@ -534,6 +534,13 @@ $philo-bg: #28849b;
     .container {
       padding: 0 20px;
     }
+
+    // SP: 英字あしらいの縮小・タイトル重なり調整
+    .page-service__eyebrow {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: -12px;
+    }
   }
 
   .page-service__main-head {
@@ -541,22 +548,25 @@ $philo-bg: #28849b;
   }
 
   .page-service__main-title {
-    font-size: 24px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-top: -16px;
   }
 
   .page-service__main-lead {
     font-size: 14px;
   }
 
+  // タブ:padding/gap を詰める
   .page-service__main-tabs {
-    gap: 8px;
+    gap: 6px;
     margin-bottom: 24px;
   }
 
   .page-service__main-tab {
     min-width: 0;
     flex: 1;
-    padding: 12px 14px;
+    padding: 10px 8px;
   }
 
   .page-service__main-tab-label {
@@ -591,9 +601,25 @@ $philo-bg: #28849b;
     font-size: 15px;
   }
 
+  // ws カード(共通) name / type のサイズ調整
+  .page-service__main-card-type {
+    font-size: 15px;
+  }
+
   .page-service__main-card-name {
-    font-size: 24px;
+    font-size: 42px;
     margin-bottom: 20px;
+  }
+
+  // ec カード:type/name は ws より小さく
+  .page-service__main-card--ec {
+    .page-service__main-card-type {
+      font-size: 14px;
+    }
+
+    .page-service__main-card-name {
+      font-size: 36px;
+    }
   }
 
   .page-service__main-card-badges {
@@ -605,10 +631,14 @@ $philo-bg: #28849b;
   }
 
   .page-service__main-card-desc {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .page-service__main-card-benefit {
     padding: 14px 16px;
+  }
+
+  .page-service__main-card-cta {
+    font-size: 14px;
   }
 }
