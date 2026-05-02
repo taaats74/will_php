@@ -16740,7 +16740,7 @@ body.has-header-v4 .loading-container {
 }
 
 .page-service__philosophy {
-  background: #28849b;
+  background: #ffffff;
   padding: 110px 0;
 }
 .page-service__philosophy .container {
@@ -16749,8 +16749,12 @@ body.has-header-v4 .loading-container {
   padding: 0 40px;
 }
 .page-service__philosophy .wrapper {
-  max-width: 880px;
+  background: #28849b;
+  max-width: 960px;
   margin: 0 auto;
+  padding: 72px 64px;
+  border-radius: 16px;
+  box-shadow: 0 18px 48px rgba(40, 132, 155, 0.18);
 }
 .page-service__philosophy .page-service__eyebrow {
   color: #ffffff;
@@ -17096,6 +17100,10 @@ body.has-header-v4 .loading-container {
   .page-service__philosophy .container {
     padding: 0 24px;
   }
+  .page-service__philosophy .wrapper {
+    padding: 56px 40px;
+    border-radius: 14px;
+  }
   .page-service__main {
     padding: 96px 0;
   }
@@ -17134,6 +17142,11 @@ body.has-header-v4 .loading-container {
   }
   .page-service__philosophy .container {
     padding: 0 20px;
+  }
+  .page-service__philosophy .wrapper {
+    padding: 44px 24px;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(40, 132, 155, 0.15);
   }
   .page-service__philosophy-title {
     font-size: 24px;
