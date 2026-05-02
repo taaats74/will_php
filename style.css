@@ -23501,77 +23501,122 @@ body.has-header-v4 .loading-container {
     font-size: 14px;
   }
 }
-.page-privacypolicy-policy .container .wrapper {
-  width: 83%;
-  max-width: 950px;
+.page-privacypolicy {
+  background: #ffffff;
+  padding: 100px 0 120px;
+}
+.page-privacypolicy .container {
+  max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 140px;
-}
-.page-privacypolicy-policy .container .wrapper .section-header {
-  font-size: 2.5em;
-  text-align: center;
-  margin-top: 75px;
-}
-.page-privacypolicy-policy .container .wrapper .sub-title {
-  text-align: center;
-}
-.page-privacypolicy-policy .container .wrapper .border {
-  margin: 30px auto 30px auto;
-}
-.page-privacypolicy-policy .container .wrapper .text-wrapper {
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.page-privacypolicy-policy .container .wrapper .text-wrapper h2 {
-  margin-top: 20px;
-  font-size: 1.4em;
-}
-.page-privacypolicy-policy .container .wrapper .text-wrapper ul {
-  margin-left: 30px;
-}
-.page-privacypolicy-policy .container .wrapper .text-wrapper .corp-info {
-  margin-top: 20px;
+  padding: 0 40px;
 }
 
-@media screen and (max-width: 770px) {
-  .page-privacypolicy-policy .container .wrapper {
-    width: 95%;
-    max-width: 850px;
-    margin: 0 auto;
-    margin-bottom: 100px;
+.page-privacypolicy__inner {
+  width: 90%;
+  max-width: 880px;
+  margin: 0 auto;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+}
+.page-privacypolicy__inner h2 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #28849D;
+  line-height: 1.55;
+  letter-spacing: 0.06em;
+  margin: 56px 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #C0D5D8;
+}
+.page-privacypolicy__inner h2:first-child {
+  margin-top: 0;
+}
+.page-privacypolicy__inner h3 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #28849D;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin: 36px 0 14px;
+}
+.page-privacypolicy__inner p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+}
+.page-privacypolicy__inner p:last-child {
+  margin-bottom: 0;
+}
+.page-privacypolicy__inner ul,
+.page-privacypolicy__inner ol {
+  margin: 0 0 18px 28px;
+  padding: 0;
+}
+.page-privacypolicy__inner ul li,
+.page-privacypolicy__inner ol li {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+}
+.page-privacypolicy__inner ul li:last-child,
+.page-privacypolicy__inner ol li:last-child {
+  margin-bottom: 0;
+}
+.page-privacypolicy__inner a {
+  color: #28849D;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-all;
+}
+.page-privacypolicy__inner a:hover {
+  text-decoration: none;
+}
+.page-privacypolicy__inner .corp-info {
+  margin-top: 36px;
+  padding: 24px 28px;
+  background: #F0F8F9;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-privacypolicy {
+    padding: 80px 0 100px;
   }
-  .page-privacypolicy-policy .container .wrapper .section-header {
-    font-size: 2em;
-    text-align: center;
-    margin-top: 75px;
+}
+@media screen and (max-width: 767px) {
+  .page-privacypolicy {
+    padding: 56px 0 72px;
   }
-  .page-privacypolicy-policy .container .wrapper .sub-title {
-    text-align: center;
-    font-size: 0.8em;
+  .page-privacypolicy .container {
+    padding: 0 20px;
   }
-  .page-privacypolicy-policy .container .wrapper .border {
-    margin: 30px auto 30px auto;
+  .page-privacypolicy__inner h2 {
+    font-size: 18px;
+    margin-top: 40px;
+    padding-bottom: 10px;
   }
-  .page-privacypolicy-policy .container .wrapper .text-wrapper {
-    font-family: "toppan-bunkyu-gothic-pr6n", serif;
-    font-weight: 400;
-    font-style: normal;
+  .page-privacypolicy__inner h3 {
+    font-size: 15.5px;
+    margin-top: 28px;
   }
-  .page-privacypolicy-policy .container .wrapper .text-wrapper h2 {
-    margin-top: 20px;
-    font-size: 1.2em;
-    line-height: 1.2em;
+  .page-privacypolicy__inner p,
+  .page-privacypolicy__inner ul li,
+  .page-privacypolicy__inner ol li {
+    font-size: 13.5px;
+    line-height: 1.85;
   }
-  .page-privacypolicy-policy .container .wrapper .text-wrapper p {
-    font-size: 0.9em;
-  }
-  .page-privacypolicy-policy .container .wrapper .text-wrapper ul {
-    margin-left: 30px;
-    font-size: 0.9em;
-  }
-  .page-privacypolicy-policy .container .wrapper .text-wrapper .corp-info {
-    margin-top: 20px;
+  .page-privacypolicy__inner .corp-info {
+    padding: 18px 20px;
+    margin-top: 28px;
   }
 }
 .page-not-found .container {
