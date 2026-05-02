@@ -19890,8 +19890,8 @@ body.has-header-v4 .loading-container {
 
 .service-creative-price__plans-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
 }
 
 .service-creative-price__plan-card {
@@ -20064,7 +20064,6 @@ body.has-header-v4 .loading-container {
     padding: 32px 28px 28px;
   }
   .service-creative-price__plans-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
   }
 }
