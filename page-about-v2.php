@@ -30,19 +30,19 @@ get_template_part( 'template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <!-- [2] MISSION                                             -->
 <!-- ===================================================== -->
-<section class="mission">
+<section class="about-v2-mission" id="about-v2-mission">
   <div class="container">
     <div class="wrapper">
-      <h2 class="section-header"><span class="green">m</span>ission</h2>
-      <p class="sub-title">ミッション</p>
-      <div class="border"></div>
-      <h3 class="mission-statement">あなたの価値をあなた以上に理解し、広める。</h3>
-      <p class="content">
-        ウィルのミッションは、事業の価値をクライアント以上に理解して広めることです。
-        特に地方の中小企業のサポートを得意とし、企業とともに成長しながら、
-        地域の活性化に貢献します。地方企業の独自性を最大限に引き出し、
-        ウェブマーケティングを通じて、地域社会に新たな価値を生み出します。
+
+      <div class="mission-header">
+        <p class="en">MISSION</p>
+        <h2>あなたの価値を、<br>あなた以上に理解し、広める。</h2>
+      </div>
+
+      <p class="mission-body">
+        ウィルのミッションは、事業の価値を<span class="keyword">クライアント以上に理解して広めること</span>です。特に地方の中小企業のサポートを得意とし、企業とともに成長しながら、地域の活性化に貢献します。地方企業の独自性を最大限に引き出し、ウェブマーケティングを通じて、地域社会に新たな価値を生み出します。
       </p>
+
     </div>
   </div>
 </section>
@@ -223,41 +223,50 @@ get_template_part( 'template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <!-- [6] MESSAGE                                             -->
 <!-- ===================================================== -->
-<section class="message">
+<section class="about-v2-message" id="about-v2-message">
   <div class="container">
     <div class="wrapper">
-      <h2 class="section-header"><span class="green">a</span>bout</h2>
-      <p class="sub-title">メッセージ</p>
-      <div class="border"></div>
-      <div class="message-container">
 
-        <div class="message-wrapper">
-          <div class="img-wrapper">
-            <img decoding="async" src="<?php echo get_template_directory_uri(); ?>/img/tatsuya.jpg" alt="">
+      <div class="message-header">
+        <p class="en">MESSAGE</p>
+        <h2>代表からのご挨拶</h2>
+        <p class="subtitle">事業のパートナーとして、<br class="sp">ともに歩む2人の代表より。</p>
+      </div>
+
+      <div class="message-list">
+
+        <div class="message-item">
+          <div class="message-item-photo">
+            <img decoding="async" loading="lazy"
+                 src="<?php echo esc_url( get_template_directory_uri() . '/img/tatsuya.jpg' ); ?>"
+                 alt="代表 高橋竜也">
           </div>
-          <div class="text-wrapper">
-            <div class="name-wrapper">
+          <div class="message-item-body">
+            <div class="message-item-name">
               <p class="corp">合同会社ウィル</p>
               <p class="name">代表 高橋竜也</p>
             </div>
-            <p class="text">アメリカの大学でマネジメントとマーケティングを学び、その後、IT企業でマーケティング部門に7年間携わりました。マーケティングから内勤営業チームのマネジメントなど、集客から販売までの実践的なビジネススキルを磨いてきました。マーケティングを通じて地方の個人や中小企業様の事業の発展をサポートし、地域経済の活性化に貢献していきたいと思います。私たちは、お客様一人ひとりのご要望に合わせた最適な集客戦略を提供することで、皆様のビジネスの成長をサポートしてまいります。</p>
+            <p class="message-item-text">アメリカの大学でマネジメントとマーケティングを学び、その後、IT企業でマーケティング部門に7年間携わりました。マーケティングから内勤営業チームのマネジメントなど、集客から販売までの実践的なビジネススキルを磨いてきました。マーケティングを通じて地方の個人や中小企業様の事業の発展をサポートし、地域経済の活性化に貢献していきたいと思います。私たちは、お客様一人ひとりのご要望に合わせた最適な集客戦略を提供することで、皆様のビジネスの成長をサポートしてまいります。</p>
           </div>
         </div>
 
-        <div class="message-wrapper">
-          <div class="img-wrapper">
-            <img decoding="async" src="<?php echo get_template_directory_uri(); ?>/img/ami.jpg" alt="">
+        <div class="message-item">
+          <div class="message-item-photo">
+            <img decoding="async" loading="lazy"
+                 src="<?php echo esc_url( get_template_directory_uri() . '/img/ami.jpg' ); ?>"
+                 alt="代表 岩田あゆみ">
           </div>
-          <div class="text-wrapper">
-            <div class="name-wrapper">
+          <div class="message-item-body">
+            <div class="message-item-name">
               <p class="corp">合同会社ウィル</p>
               <p class="name">代表 岩田あゆみ</p>
             </div>
-            <p class="text">九州大学大学院卒業後、研究職をしておりましたが、Webデザインやマーケティングに可能性を感じ、制作会社へ転職しました。その後独立し、個人事業で制作全般業務・インスタなどの集客サポートや講師業の経験を経て、集客で悩んでいる多くの方々のサポートしたいという想いから会社を設立。お客様とのスムーズなコミュニケーションを意識しながら、お客様の価値をお客様以上に理解し、広めるというミッションで貢献していきます。弊社では主にデザイン全般・SNS集客・ディレクションを担当しております。</p>
+            <p class="message-item-text">九州大学大学院卒業後、研究職をしておりましたが、Webデザインやマーケティングに可能性を感じ、制作会社へ転職しました。その後独立し、個人事業で制作全般業務・インスタなどの集客サポートや講師業の経験を経て、集客で悩んでいる多くの方々のサポートしたいという想いから会社を設立。お客様とのスムーズなコミュニケーションを意識しながら、お客様の価値をお客様以上に理解し、広めるというミッションで貢献していきます。弊社では主にデザイン全般・SNS集客・ディレクションを担当しております。</p>
           </div>
         </div>
 
       </div>
+
     </div>
   </div>
 </section>
@@ -265,34 +274,38 @@ get_template_part( 'template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <!-- [7] COMPANY                                             -->
 <!-- ===================================================== -->
-<section class="company">
+<section class="about-v2-company" id="about-v2-company">
   <div class="container">
     <div class="wrapper">
-      <h2 class="section-header"><span class="green">c</span>ompany</h2>
-      <p class="sub-title">会社概要</p>
-      <div class="border"></div>
-      <ul>
-        <li>
-          <p class="table-header">会社名</p>
-          <p class="table-content">合同会社ウィル</p>
-        </li>
-        <li>
-          <p class="table-header">代表者</p>
-          <p class="table-content">高橋竜也・岩田あゆみ</p>
-        </li>
-        <li>
-          <p class="table-header">所在地</p>
-          <p class="table-content">〒812-0011<br>福岡県福岡市博多区博多駅前1丁目23番2号<br>ParkFront博多駅前1丁目5F-B</p>
-        </li>
-        <li>
-          <p class="table-header">設立</p>
-          <p class="table-content">2023年11月</p>
-        </li>
-        <li>
-          <p class="table-header">業務内容</p>
-          <p class="table-content">WEBサイト制作・WEBマーケティング支援・SNS運用サポート・広告運用代行</p>
-        </li>
-      </ul>
+
+      <div class="company-header">
+        <p class="en">COMPANY</p>
+        <h2>会社概要</h2>
+      </div>
+
+      <dl class="company-table">
+        <div class="company-row">
+          <dt>会社名</dt>
+          <dd>合同会社ウィル</dd>
+        </div>
+        <div class="company-row">
+          <dt>代表者</dt>
+          <dd>高橋竜也・岩田あゆみ</dd>
+        </div>
+        <div class="company-row">
+          <dt>所在地</dt>
+          <dd>〒812-0011<br>福岡県福岡市博多区博多駅前1丁目23番2号<br>ParkFront博多駅前1丁目5F-B</dd>
+        </div>
+        <div class="company-row">
+          <dt>設立</dt>
+          <dd>2023年11月</dd>
+        </div>
+        <div class="company-row">
+          <dt>業務内容</dt>
+          <dd>WEBサイト制作・WEBマーケティング支援・SNS運用サポート・広告運用代行</dd>
+        </div>
+      </dl>
+
     </div>
   </div>
 </section>
