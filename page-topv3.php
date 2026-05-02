@@ -841,7 +841,6 @@
                 </div>
 
                 <div class="works-card-body">
-                  <span class="works-card-industry"><?php echo esc_html( $item['tag'] ); ?></span>
                   <p class="works-card-name"><?php echo esc_html( $item['name'] ); ?></p>
                 </div>
 
