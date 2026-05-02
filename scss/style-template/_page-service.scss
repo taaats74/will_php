@@ -126,14 +126,16 @@ $philo-bg: #28849b;
 
   // Section 3 内の eyebrow(MAIN SERVICES)を whatwedo-header の .en と同じ
   // 「大きく薄く後ろに敷く英字あしらい」スタイルに上書き
+  // タイトルとは 10px 程度重ねる(margin-bottom: -10px)
   .page-service__eyebrow {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 900;
     font-size: 60px;
+    line-height: 1;
     letter-spacing: 5px;
     color: #ffffff;
     opacity: 0.18;
-    margin-bottom: -32px;
+    margin-bottom: -10px;
     text-transform: uppercase;
   }
 }
