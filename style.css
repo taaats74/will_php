@@ -14333,11 +14333,10 @@ body.has-header-v4 .loading-container {
   }
 }
 .service-web-reason__benefit .keyword, .service-web-problem__closing .keyword, .service-web-concept__body .keyword, .service-web-hero__tagline .keyword {
-  background: rgba(124, 193, 201, 0.18);
-  color: #28849D;
+  background: linear-gradient(transparent 0%, transparent 60%, rgba(240, 231, 78, 0.65) 60%, rgba(240, 231, 78, 0.65) 95%, transparent 95%);
+  color: inherit;
   font-weight: 700;
-  padding: 0 4px;
-  border-radius: 2px;
+  padding: 0 2px;
 }
 
 .service-web-cta .container, .service-web-faq .container, .service-web-works .container, .service-web-price .container, .service-web-flow .container, .service-web-reason .container, .service-web-problem .container, .service-web-target .container, .service-web-concept .container, .service-web-hero .container {
