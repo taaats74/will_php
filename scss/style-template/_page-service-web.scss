@@ -95,9 +95,10 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
 // =========================================
 // [1] HERO 補足(template-parts/page-hero 直後の補足ブロック)
+// 背景は page-hero(#F0F8F9)と一体化させて、concept(白)との境界を明確化
 // =========================================
 .service-web-hero {
-  background: $color-white;
+  background: $color-bg-pale;
   padding: 80px 0 60px;
 
   .container { @extend %sw-container; }
