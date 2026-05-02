@@ -280,6 +280,17 @@ $philo-bg: #28849b;
   margin-bottom: 40px;
 }
 
+// EC カード(ウィルサポEC)は文字数が長いため type / name のみ一回り小さく
+.page-service__main-card--ec {
+  .page-service__main-card-type {
+    font-size: 22px;
+  }
+
+  .page-service__main-card-name {
+    font-size: 64px;
+  }
+}
+
 // 情報ブロック + イラストの 2 カラム配置(均等 48% : 48%)
 .page-service__main-card-row {
   display: grid;

@@ -16957,6 +16957,13 @@ body.has-header-v4 .loading-container {
   margin-bottom: 40px;
 }
 
+.page-service__main-card--ec .page-service__main-card-type {
+  font-size: 22px;
+}
+.page-service__main-card--ec .page-service__main-card-name {
+  font-size: 64px;
+}
+
 .page-service__main-card-row {
   display: grid;
   grid-template-columns: 48% 48%;
