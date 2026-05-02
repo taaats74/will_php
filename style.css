@@ -9753,323 +9753,352 @@ body.has-header-v4 .loading-container {
     letter-spacing: 2px;
   }
 }
-.about-concept {
-  background: #FFFFFF;
-  padding: 120px 0;
-}
-.about-concept .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.about-concept__inner {
-  max-width: 880px;
-  margin: 0 auto;
+.about-v2-strength .strength-header, .about-v2-solve .solve-header, .about-v2-concept .concept-header {
   text-align: center;
+  margin-bottom: 80px;
 }
-
-.about-concept__head {
-  margin-bottom: 56px;
+.about-v2-strength .strength-header .en, .about-v2-solve .solve-header .en, .about-v2-concept .concept-header .en {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: #7fbabd;
+  opacity: 0.1;
+  line-height: 1;
+  margin: 0 0 -28px;
 }
-
-.about-concept__title {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: #28849D;
-  line-height: 1.6;
-  letter-spacing: 0.04em;
-  margin: 0 0 48px;
+.about-v2-strength .strength-header h2, .about-v2-solve .solve-header h2, .about-v2-concept .concept-header h2 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #333333;
+  letter-spacing: 8px;
+  line-height: 1.55;
+  margin: 0 0 25px;
 }
-
-.about-concept__body {
+.about-v2-strength .strength-header .subtitle, .about-v2-solve .solve-header .subtitle, .about-v2-concept .concept-header .subtitle {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
   font-size: 16px;
-  line-height: 2;
-  color: #3E5054;
-  letter-spacing: 0.02em;
-}
-.about-concept__body p {
-  margin: 0 0 32px;
-}
-.about-concept__body p:last-child {
-  margin-bottom: 0;
-}
-.about-concept__body .about-concept__closing {
-  font-size: 18px;
-  font-weight: 700;
-  color: #28849D;
-  margin-top: 48px;
+  color: #595959;
+  letter-spacing: 3px;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.about-solve {
-  background: #F0F8F9;
+.about-v2-strength .strength-item-body .keyword, .about-v2-solve .solve-item-body .keyword, .about-v2-concept .concept-block .keyword {
+  background: rgba(127, 186, 189, 0.18);
+  color: #28849b;
+  font-weight: 700;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.about-v2-concept {
+  background: #ffffff;
   padding: 120px 0;
 }
-.about-solve .container {
+.about-v2-concept .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
-
-.about-solve__inner {
+.about-v2-concept .wrapper {
+  width: 90%;
   max-width: 960px;
   margin: 0 auto;
 }
-
-.about-solve__head {
-  text-align: center;
-  margin-bottom: 40px;
+.about-v2-concept .concept-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
-
-.about-solve__lead {
-  font-size: 17px;
-  line-height: 1.9;
-  color: #3E5054;
-  text-align: center;
-  margin: 0 auto 64px;
-  max-width: 720px;
+.about-v2-concept .concept-block {
+  background: #f4f8f9;
+  border-radius: 8px;
+  padding: 48px 56px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
-
-.about-solve__list {
+.about-v2-concept .concept-block p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #333333;
+  letter-spacing: 0.04em;
+  margin: 0 0 20px;
+}
+.about-v2-concept .concept-block p:last-child {
+  margin-bottom: 0;
+}
+.about-v2-solve {
+  background: #c9ddde;
+  padding: 120px 0;
+}
+.about-v2-solve .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.about-v2-solve .wrapper {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.about-v2-solve .solve-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 64px;
+  margin-bottom: 64px;
 }
-
-.about-solve__item {
-  list-style: none;
-  position: relative;
-  background: #FFFFFF;
-  border-left: 4px solid #28849D;
-  border-radius: 0 8px 8px 0;
-  padding: 36px 40px 36px 44px;
-  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
+.about-v2-solve .solve-item {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 48px;
+  box-shadow: 0 6px 18px rgba(40, 132, 155, 0.08);
 }
-
-.about-solve__item-num {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0.16em;
-  color: #7CC1C9;
-  margin: 0 0 8px;
+.about-v2-solve .solve-item-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #d8e6e7;
 }
-
-.about-solve__item-category {
-  font-size: 22px;
+.about-v2-solve .solve-item-header h3 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  color: #28849D;
-  line-height: 1.4;
-  margin: 0 0 16px;
-}
-
-.about-solve__item-text {
-  font-size: 15px;
-  line-height: 1.95;
-  color: #3E5054;
+  font-size: 22px;
+  color: #333333;
+  letter-spacing: 0.06em;
   margin: 0;
 }
-
-.about-solve__closing {
-  font-size: 16px;
+.about-v2-solve .solve-number {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1;
+  color: #7fbabd;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.about-v2-solve .solve-item-body p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
   line-height: 1.95;
-  color: #3E5054;
+  color: #595959;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+}
+.about-v2-solve .solve-item-body p:last-child {
+  margin-bottom: 0;
+}
+.about-v2-solve .solve-bridge {
   text-align: center;
-  background: #B4DBE0;
-  padding: 32px 36px;
+}
+.about-v2-solve .solve-bridge p {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.95;
+  color: #333333;
+  letter-spacing: 0.06em;
+  background: #ffffff;
+  padding: 28px 40px;
   border-radius: 8px;
-  margin: 0 auto;
-  max-width: 800px;
-  letter-spacing: 0.02em;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  margin: 0;
+}
+.about-v2-solve .solve-bridge .bridge-keyword {
+  color: #28849b;
+  font-weight: 800;
 }
 
-.about-strength {
-  background: #FFFFFF;
+.about-v2-strength {
+  background: #ffffff;
   padding: 120px 0;
 }
-.about-strength .container {
+.about-v2-strength .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
-
-.about-strength__inner {
+.about-v2-strength .wrapper {
+  width: 90%;
   max-width: 960px;
   margin: 0 auto;
 }
-
-.about-strength__head {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.about-strength__lead {
-  font-size: 17px;
-  line-height: 1.9;
-  color: #3E5054;
-  text-align: center;
-  margin: 0 0 80px;
-}
-
-.about-strength__list {
+.about-v2-strength .strength-list {
   display: flex;
   flex-direction: column;
-  gap: 96px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 40px;
 }
-
-.about-strength__item {
-  list-style: none;
-  position: relative;
-  background: #FFFFFF;
-  border: 1px solid #C0D5D8;
-  border-radius: 12px;
-  padding: 64px 64px 56px;
-  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+.about-v2-strength .strength-item {
+  background: #ffffff;
+  border-top: solid 3px #7fbabd;
+  border-radius: 6px;
+  padding: 56px 56px 48px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
-
-.about-strength__number {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 900;
-  font-size: 64px;
-  letter-spacing: 0.04em;
-  color: #7CC1C9;
-  line-height: 1;
-  margin: 0 0 24px;
-  opacity: 0.85;
+.about-v2-strength .strength-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #d8e6e7;
 }
-
-.about-strength__title {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 30px;
+.about-v2-strength .strength-item-header h3 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  color: #28849D;
-  line-height: 1.55;
-  letter-spacing: 0.02em;
-  margin: 0 0 32px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #C0D5D8;
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 6px;
 }
-
-.about-strength__body {
-  font-size: 15.5px;
+.about-v2-strength .strength-number {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1;
+  color: #7fbabd;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.about-v2-strength .strength-item-body p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
   line-height: 2;
-  color: #3E5054;
-  letter-spacing: 0.02em;
+  color: #595959;
+  letter-spacing: 0.04em;
+  margin: 0 0 20px;
 }
-.about-strength__body p {
-  margin: 0 0 24px;
-}
-.about-strength__body p:last-child {
+.about-v2-strength .strength-item-body p:last-child {
   margin-bottom: 0;
 }
-
 @media screen and (max-width: 767px) {
-  .about-concept {
-    padding: 60px 0;
+  .about-v2-concept .concept-header,
+  .about-v2-solve .solve-header,
+  .about-v2-strength .strength-header {
+    margin-bottom: 48px;
   }
-  .about-concept .container {
-    padding: 0 20px;
+  .about-v2-concept .concept-header .en,
+  .about-v2-solve .solve-header .en,
+  .about-v2-strength .strength-header .en {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: -18px;
   }
-  .about-concept__head {
-    margin-bottom: 36px;
+  .about-v2-concept .concept-header h2,
+  .about-v2-solve .solve-header h2,
+  .about-v2-strength .strength-header h2 {
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
   }
-  .about-concept__title {
-    font-size: 24px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    margin-bottom: 32px;
-  }
-  .about-concept__body {
-    font-size: 14px;
-    line-height: 1.95;
-  }
-  .about-concept__body p {
-    margin-bottom: 24px;
-  }
-  .about-concept__body .about-concept__closing {
-    font-size: 16px;
-    margin-top: 32px;
-  }
-  .about-solve {
-    padding: 60px 0;
-  }
-  .about-solve .container {
-    padding: 0 20px;
-  }
-  .about-solve__head {
-    margin-bottom: 28px;
-  }
-  .about-solve__lead {
-    font-size: 14px;
-    margin-bottom: 36px;
-  }
-  .about-solve__list {
-    gap: 16px;
-    margin-bottom: 36px;
-  }
-  .about-solve__item {
-    padding: 24px 22px 24px 26px;
-    border-left-width: 3px;
-  }
-  .about-solve__item-num {
-    font-size: 12px;
-  }
-  .about-solve__item-category {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
-  .about-solve__item-text {
+  .about-v2-concept .concept-header .subtitle,
+  .about-v2-solve .solve-header .subtitle,
+  .about-v2-strength .strength-header .subtitle {
     font-size: 13.5px;
-    line-height: 1.9;
+    letter-spacing: 1.5px;
+    line-height: 1.85;
   }
-  .about-solve__closing {
+  .about-v2-concept {
+    padding: 64px 0;
+  }
+  .about-v2-concept .container {
+    padding: 0 20px;
+  }
+  .about-v2-concept .wrapper {
+    width: 100%;
+  }
+  .about-v2-concept .concept-blocks {
+    gap: 20px;
+  }
+  .about-v2-concept .concept-block {
+    padding: 28px 22px;
+    border-radius: 6px;
+  }
+  .about-v2-concept .concept-block p {
     font-size: 14px;
     line-height: 1.9;
+    margin-bottom: 16px;
+  }
+  .about-v2-solve {
+    padding: 64px 0;
+  }
+  .about-v2-solve .container {
+    padding: 0 20px;
+  }
+  .about-v2-solve .wrapper {
+    width: 100%;
+  }
+  .about-v2-solve .solve-list {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .about-v2-solve .solve-item {
+    padding: 24px 22px;
+    border-radius: 6px;
+  }
+  .about-v2-solve .solve-item-header {
+    gap: 16px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+  }
+  .about-v2-solve .solve-item-header h3 {
+    font-size: 17px;
+  }
+  .about-v2-solve .solve-number {
+    font-size: 28px;
+  }
+  .about-v2-solve .solve-item-body p {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 8px;
+  }
+  .about-v2-solve .solve-bridge p {
+    font-size: 14px;
+    line-height: 1.85;
     padding: 22px 20px;
   }
-  .about-strength {
-    padding: 60px 0;
+  .about-v2-strength {
+    padding: 64px 0;
   }
-  .about-strength .container {
+  .about-v2-strength .container {
     padding: 0 20px;
   }
-  .about-strength__head {
-    margin-bottom: 16px;
+  .about-v2-strength .wrapper {
+    width: 100%;
   }
-  .about-strength__lead {
-    font-size: 14px;
-    margin-bottom: 44px;
+  .about-v2-strength .strength-list {
+    gap: 24px;
   }
-  .about-strength__list {
-    gap: 40px;
+  .about-v2-strength .strength-item {
+    padding: 32px 22px 28px;
+    border-top-width: 2px;
   }
-  .about-strength__item {
-    padding: 36px 24px 32px;
-    border-radius: 10px;
+  .about-v2-strength .strength-item-header {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
   }
-  .about-strength__number {
-    font-size: 44px;
-    margin-bottom: 16px;
+  .about-v2-strength .strength-item-header h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-top: 0;
   }
-  .about-strength__title {
-    font-size: 20px;
-    line-height: 1.55;
-    margin-bottom: 22px;
-    padding-bottom: 18px;
+  .about-v2-strength .strength-number {
+    font-size: 36px;
   }
-  .about-strength__body {
+  .about-v2-strength .strength-item-body p {
     font-size: 14px;
     line-height: 1.9;
-  }
-  .about-strength__body p {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
 }
 .page-price-contact .container .wrapper {
