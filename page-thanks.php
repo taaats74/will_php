@@ -5,12 +5,12 @@
  *
  * お問い合わせ完了ページ。
  *
- * - header-v4 + footer-v3 + template-parts/page-hero
+ * - header + footer + template-parts/page-hero
  * - トンマナ: page-service-* / page-contact / page-privacypolicy 準拠(Zen Kaku Gothic + 共通余白)
  *
  * @package will-corp
  */
-get_header('v4');
+get_header();
 ?>
 
 <?php
@@ -45,4 +45,4 @@ get_template_part( 'template-parts/page-hero', null, [
   </div>
 </section>
 
-<?php get_footer('v3'); ?>
+<?php get_footer(); ?>

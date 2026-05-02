@@ -3,12 +3,12 @@
  * Template Name: サービス一覧(service)
  *
  * BtoB中小企業の営業基盤を統合的に支援する2層構造のサービス一覧ページ。
- * - header-v4 + footer-v3 + template-parts/page-hero
+ * - header + footer + template-parts/page-hero
  * - ブランド・メッセージガイドライン v2.0 / カラーガイドライン v1.0 準拠
  *
  * @package will-corp
  */
-get_header('v4');
+get_header();
 ?>
 
 <?php
@@ -542,4 +542,4 @@ get_template_part('template-parts/page-hero', null, [
   </div>
 </section>
 
-<?php get_footer('v3'); ?>
+<?php get_footer(); ?>

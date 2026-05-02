@@ -8,7 +8,7 @@
  * - サービス紹介はテーマ別(ebook_theme)に分割表示
  */
 ?>
-<?php get_header('v4'); ?>
+<?php get_header(); ?>
 
 <?php
   $useful_count_posts  = get_posts([
@@ -409,4 +409,4 @@
 
 </main>
 
-<?php get_footer( 'v3' ); ?>
+<?php get_footer(); ?>
