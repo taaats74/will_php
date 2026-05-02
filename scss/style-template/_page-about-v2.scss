@@ -1,0 +1,403 @@
+// =====================================================
+// page-about-v2.php 専用スタイル(新規セクションのみ)
+// 既存 .mission / .message / .company は _page-about.scss を流用
+//
+// 対応PHP: page-about-v2.php
+// 構成:
+//   2. MISSION       … 既存 .mission(_page-about.scss)
+//   3. CONCEPT       … .about-concept(本ファイル)
+//   4. WHAT WE SOLVE … .about-solve(本ファイル)
+//   5. STRENGTH      … .about-strength(本ファイル・縦並び3カード)
+//   6. MESSAGE       … 既存 .message(_page-about.scss)
+//   7. COMPANY       … 既存 .company(_page-about.scss)
+// =====================================================
+
+// =========================================
+// ウィルブランドカラー(Brand Color Guideline v1.0準拠)
+// =========================================
+$color-primary:    #7CC1C9;  // ターコイズブルー(メイン)
+$color-light:      #B4DBE0;  // ペールターコイズ(背景補助)
+$color-accent:     #28849D;  // ディープティール(強調・CTA・見出し)
+$color-highlight:  #F0E74E;  // マーカーイエロー(注目・極稀)
+$color-text:       #3E5054;  // チャコールグレー(本文)
+$color-bg-pale:    #F0F8F9;  // 極淡背景
+$color-border:     #C0D5D8;  // 薄罫線
+$color-subtle:     #8AA0A4;  // サブテキスト
+$color-white:      #FFFFFF;
+
+// =========================================
+// 共通:セクション内の見出しヘッダー(.section-header / .sub-title / .border)は
+// 既存テーマのものをそのまま継承するため、ここでは定義しない。
+// .green は _general.scss(または _header.scss)で定義済み($color-primary 相当)。
+// =========================================
+
+// =========================================
+// CONCEPT セクション(.about-concept)
+// =========================================
+.about-concept {
+  background: $color-white;
+  padding: 120px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.about-concept__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-concept__head {
+  margin-bottom: 56px;
+}
+
+.about-concept__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: $color-accent;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin: 0 0 48px;
+}
+
+.about-concept__body {
+  font-size: 16px;
+  line-height: 2;
+  color: $color-text;
+  letter-spacing: 0.02em;
+
+  p {
+    margin: 0 0 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .about-concept__closing {
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-accent;
+    margin-top: 48px;
+  }
+}
+
+// =========================================
+// WHAT WE SOLVE セクション(.about-solve)
+// =========================================
+.about-solve {
+  background: $color-bg-pale;
+  padding: 120px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.about-solve__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-solve__head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-solve__lead {
+  font-size: 17px;
+  line-height: 1.9;
+  color: $color-text;
+  text-align: center;
+  margin: 0 auto 64px;
+  max-width: 720px;
+}
+
+.about-solve__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 64px;
+}
+
+.about-solve__item {
+  list-style: none;
+  position: relative;
+  background: $color-white;
+  border-left: 4px solid $color-accent;
+  border-radius: 0 8px 8px 0;
+  padding: 36px 40px 36px 44px;
+  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
+}
+
+.about-solve__item-num {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  color: $color-primary;
+  margin: 0 0 8px;
+}
+
+.about-solve__item-category {
+  font-size: 22px;
+  font-weight: 700;
+  color: $color-accent;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+
+.about-solve__item-text {
+  font-size: 15px;
+  line-height: 1.95;
+  color: $color-text;
+  margin: 0;
+}
+
+.about-solve__closing {
+  font-size: 16px;
+  line-height: 1.95;
+  color: $color-text;
+  text-align: center;
+  background: $color-light;
+  padding: 32px 36px;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 800px;
+  letter-spacing: 0.02em;
+}
+
+// =========================================
+// STRENGTH セクション(.about-strength)
+// 縦並び3カード(横並びはトップページとの被りを避ける)
+// =========================================
+.about-strength {
+  background: $color-white;
+  padding: 120px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.about-strength__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-strength__head {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.about-strength__lead {
+  font-size: 17px;
+  line-height: 1.9;
+  color: $color-text;
+  text-align: center;
+  margin: 0 0 80px;
+}
+
+.about-strength__list {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-strength__item {
+  list-style: none;
+  position: relative;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: 64px 64px 56px;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+}
+
+.about-strength__number {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: 0.04em;
+  color: $color-primary;
+  line-height: 1;
+  margin: 0 0 24px;
+  opacity: 0.85;
+}
+
+.about-strength__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: $color-accent;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  margin: 0 0 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $color-border;
+}
+
+.about-strength__body {
+  font-size: 15.5px;
+  line-height: 2;
+  color: $color-text;
+  letter-spacing: 0.02em;
+
+  p {
+    margin: 0 0 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// =========================================
+// SP (max-width: 767px)
+// =========================================
+@media screen and (max-width: 767px) {
+
+  // CONCEPT
+  .about-concept {
+    padding: 60px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .about-concept__head {
+    margin-bottom: 36px;
+  }
+
+  .about-concept__title {
+    font-size: 24px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    margin-bottom: 32px;
+  }
+
+  .about-concept__body {
+    font-size: 14px;
+    line-height: 1.95;
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    .about-concept__closing {
+      font-size: 16px;
+      margin-top: 32px;
+    }
+  }
+
+  // WHAT WE SOLVE
+  .about-solve {
+    padding: 60px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .about-solve__head {
+    margin-bottom: 28px;
+  }
+
+  .about-solve__lead {
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+
+  .about-solve__list {
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .about-solve__item {
+    padding: 24px 22px 24px 26px;
+    border-left-width: 3px;
+  }
+
+  .about-solve__item-num {
+    font-size: 12px;
+  }
+
+  .about-solve__item-category {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .about-solve__item-text {
+    font-size: 13.5px;
+    line-height: 1.9;
+  }
+
+  .about-solve__closing {
+    font-size: 14px;
+    line-height: 1.9;
+    padding: 22px 20px;
+  }
+
+  // STRENGTH
+  .about-strength {
+    padding: 60px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .about-strength__head {
+    margin-bottom: 16px;
+  }
+
+  .about-strength__lead {
+    font-size: 14px;
+    margin-bottom: 44px;
+  }
+
+  .about-strength__list {
+    gap: 40px;
+  }
+
+  .about-strength__item {
+    padding: 36px 24px 32px;
+    border-radius: 10px;
+  }
+
+  .about-strength__number {
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+
+  .about-strength__title {
+    font-size: 20px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+  }
+
+  .about-strength__body {
+    font-size: 14px;
+    line-height: 1.9;
+
+    p {
+      margin-bottom: 18px;
+    }
+  }
+}

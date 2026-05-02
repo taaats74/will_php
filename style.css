@@ -9753,6 +9753,325 @@ body.has-header-v4 .loading-container {
     letter-spacing: 2px;
   }
 }
+.about-concept {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.about-concept .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.about-concept__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-concept__head {
+  margin-bottom: 56px;
+}
+
+.about-concept__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #28849D;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin: 0 0 48px;
+}
+
+.about-concept__body {
+  font-size: 16px;
+  line-height: 2;
+  color: #3E5054;
+  letter-spacing: 0.02em;
+}
+.about-concept__body p {
+  margin: 0 0 32px;
+}
+.about-concept__body p:last-child {
+  margin-bottom: 0;
+}
+.about-concept__body .about-concept__closing {
+  font-size: 18px;
+  font-weight: 700;
+  color: #28849D;
+  margin-top: 48px;
+}
+
+.about-solve {
+  background: #F0F8F9;
+  padding: 120px 0;
+}
+.about-solve .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.about-solve__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-solve__head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-solve__lead {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #3E5054;
+  text-align: center;
+  margin: 0 auto 64px;
+  max-width: 720px;
+}
+
+.about-solve__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 64px;
+}
+
+.about-solve__item {
+  list-style: none;
+  position: relative;
+  background: #FFFFFF;
+  border-left: 4px solid #28849D;
+  border-radius: 0 8px 8px 0;
+  padding: 36px 40px 36px 44px;
+  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
+}
+
+.about-solve__item-num {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  color: #7CC1C9;
+  margin: 0 0 8px;
+}
+
+.about-solve__item-category {
+  font-size: 22px;
+  font-weight: 700;
+  color: #28849D;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+
+.about-solve__item-text {
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  margin: 0;
+}
+
+.about-solve__closing {
+  font-size: 16px;
+  line-height: 1.95;
+  color: #3E5054;
+  text-align: center;
+  background: #B4DBE0;
+  padding: 32px 36px;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 800px;
+  letter-spacing: 0.02em;
+}
+
+.about-strength {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.about-strength .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.about-strength__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-strength__head {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.about-strength__lead {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #3E5054;
+  text-align: center;
+  margin: 0 0 80px;
+}
+
+.about-strength__list {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-strength__item {
+  list-style: none;
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 12px;
+  padding: 64px 64px 56px;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+}
+
+.about-strength__number {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: 0.04em;
+  color: #7CC1C9;
+  line-height: 1;
+  margin: 0 0 24px;
+  opacity: 0.85;
+}
+
+.about-strength__title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #28849D;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  margin: 0 0 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #C0D5D8;
+}
+
+.about-strength__body {
+  font-size: 15.5px;
+  line-height: 2;
+  color: #3E5054;
+  letter-spacing: 0.02em;
+}
+.about-strength__body p {
+  margin: 0 0 24px;
+}
+.about-strength__body p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .about-concept {
+    padding: 60px 0;
+  }
+  .about-concept .container {
+    padding: 0 20px;
+  }
+  .about-concept__head {
+    margin-bottom: 36px;
+  }
+  .about-concept__title {
+    font-size: 24px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    margin-bottom: 32px;
+  }
+  .about-concept__body {
+    font-size: 14px;
+    line-height: 1.95;
+  }
+  .about-concept__body p {
+    margin-bottom: 24px;
+  }
+  .about-concept__body .about-concept__closing {
+    font-size: 16px;
+    margin-top: 32px;
+  }
+  .about-solve {
+    padding: 60px 0;
+  }
+  .about-solve .container {
+    padding: 0 20px;
+  }
+  .about-solve__head {
+    margin-bottom: 28px;
+  }
+  .about-solve__lead {
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+  .about-solve__list {
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .about-solve__item {
+    padding: 24px 22px 24px 26px;
+    border-left-width: 3px;
+  }
+  .about-solve__item-num {
+    font-size: 12px;
+  }
+  .about-solve__item-category {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .about-solve__item-text {
+    font-size: 13.5px;
+    line-height: 1.9;
+  }
+  .about-solve__closing {
+    font-size: 14px;
+    line-height: 1.9;
+    padding: 22px 20px;
+  }
+  .about-strength {
+    padding: 60px 0;
+  }
+  .about-strength .container {
+    padding: 0 20px;
+  }
+  .about-strength__head {
+    margin-bottom: 16px;
+  }
+  .about-strength__lead {
+    font-size: 14px;
+    margin-bottom: 44px;
+  }
+  .about-strength__list {
+    gap: 40px;
+  }
+  .about-strength__item {
+    padding: 36px 24px 32px;
+    border-radius: 10px;
+  }
+  .about-strength__number {
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+  .about-strength__title {
+    font-size: 20px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+  }
+  .about-strength__body {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .about-strength__body p {
+    margin-bottom: 18px;
+  }
+}
 .page-price-contact .container .wrapper {
   width: 83%;
   max-width: 1200px;
