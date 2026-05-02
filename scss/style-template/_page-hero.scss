@@ -30,9 +30,9 @@ $ph-border:    #C0D5D8;   // バッジ枠線色
 // =====================================================
 .page-hero {
   background: $ph-bg-pale;
-  // 上余白:固定ヘッダー(.header-child-v2 80px sticky)被り 80px + 視覚余白 70px
-  // 下余白:上と同値で対称化(全ページ共通の見た目を担保)
-  padding: 150px 0;
+  // 上下対称(全ページ共通の見た目を担保)
+  // 上余白には固定ヘッダー(.header-child-v2 80px sticky)被りを内包
+  padding: 90px 0;
   text-align: center;
   font-family: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   color: $ph-text;
