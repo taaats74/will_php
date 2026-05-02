@@ -116,11 +116,93 @@ $pth-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // =====================================================
+// 次のアクション誘導(page-thanks-download.php で使用)
+// 既存 __lead / __body / __inline-link の余白・色トーンと整合
+// =====================================================
+.page-thanks__next {
+  margin-top: 72px;
+  padding-top: 56px;
+  border-top: 1px solid $pth-color-border;
+  text-align: center;
+}
+
+.page-thanks__next-heading {
+  font-family: $pth-font-jp;
+  font-weight: 700;
+  font-size: 20px;
+  color: $pth-color-accent;
+  letter-spacing: 0.06em;
+  line-height: 1.55;
+  margin: 0 0 32px;
+}
+
+.page-thanks__next-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.page-thanks__next-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: $pth-color-bg-pale;
+  border: 1px solid $pth-color-border;
+  border-radius: 10px;
+  padding: 26px 28px;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(40, 132, 157, 0.12);
+    border-color: $pth-color-accent;
+  }
+}
+
+.page-thanks__next-label {
+  display: block;
+  font-family: $pth-font-jp;
+  font-weight: 700;
+  font-size: 16px;
+  color: $pth-color-accent;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.page-thanks__next-text {
+  display: block;
+  font-family: $pth-font-jp;
+  font-size: 14px;
+  font-weight: 500;
+  color: $pth-color-text;
+  letter-spacing: 0.04em;
+  line-height: 1.85;
+}
+
+// =====================================================
 // Tablet (max-width: 1024px)
 // =====================================================
 @media screen and (max-width: 1024px) {
   .page-thanks {
     padding: 80px 0 100px;
+  }
+
+  .page-thanks__next {
+    margin-top: 60px;
+    padding-top: 48px;
+  }
+
+  .page-thanks__next-items {
+    gap: 16px;
+  }
+
+  .page-thanks__next-item {
+    padding: 22px 24px;
   }
 }
 
@@ -159,4 +241,29 @@ $pth-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     font-size: 13px;
     padding: 12px 28px;
   }
+
+  // 次のアクション誘導 SP
+  .page-thanks__next {
+    margin-top: 48px;
+    padding-top: 36px;
+  }
+
+  .page-thanks__next-heading {
+    font-size: 17px;
+    letter-spacing: 0.04em;
+    margin-bottom: 22px;
+  }
+
+  .page-thanks__next-items {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .page-thanks__next-item {
+    padding: 20px 22px;
+    gap: 8px;
+  }
+
+  .page-thanks__next-label { font-size: 14.5px; }
+  .page-thanks__next-text  { font-size: 13px; line-height: 1.8; }
 }
