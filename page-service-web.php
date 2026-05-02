@@ -610,101 +610,206 @@ get_template_part( 'template-parts/page-hero', null, [
         <p class="subtitle">お問い合わせ前によくいただく質問をまとめました。</p>
       </div>
 
-      <ul class="accordion service-web-faq__list">
+      <div class="accordion service-web-faq__list">
+        <ul>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>ウェブサイト制作にかかる予算はどれくらいですか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>目的(問い合わせ増、採用強化、資料請求など)と必要なページ構成により変わります。現状と目標を伺った上で、優先順位を整理し最適な範囲でお見積もりします。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">ウェブサイト制作にかかる予算はどれくらいですか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">目的(問い合わせ増、採用強化、資料請求など)と必要なページ構成により変わります。現状と目標を伺った上で、優先順位を整理し最適な範囲でお見積もりします。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>制作期間はどのくらいかかりますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>小規模で約2ヶ月〜、中規模で約2.5ヶ月〜が目安です。原稿や写真素材の準備状況によって前後するため、開始時にスケジュールを明確化します。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">制作期間はどのくらいかかりますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">小規模で約2ヶ月〜、中規模で約2.5ヶ月〜が目安です。原稿や写真素材の準備状況によって前後するため、開始時にスケジュールを明確化します。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>公開後の運用や改善までお願いできますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>可能です。アクセス解析、導線改善、CV改善、コンテンツ追加など、公開後を前提にした改善サイクル(PDCA)まで含めて伴走します。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">公開後の運用や改善までお願いできますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">可能です。アクセス解析、導線改善、CV改善、コンテンツ追加など、公開後を前提にした改善サイクル(PDCA)まで含めて伴走します。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>SEO対策は含まれていますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>はい、基本的なSEO(サイト構造・内部設計・表示速度・メタ情報など)は含みます。さらにコンテンツSEOを強化する場合は、別途運用設計をご提案します。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">SEO対策は含まれていますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">はい、基本的なSEO(サイト構造・内部設計・表示速度・メタ情報など)は含みます。さらにコンテンツSEOを強化する場合は、別途運用設計をご提案します。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>スマートフォン対応はサービスに含まれますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>はい、全プランでレスポンシブ対応(スマホ・タブレット最適化)を行います。主要ブラウザでの表示確認も含め、ストレスなく閲覧できる状態を整えます。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">スマートフォン対応はサービスに含まれますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">はい、全プランでレスポンシブ対応(スマホ・タブレット最適化)を行います。主要ブラウザでの表示確認も含め、ストレスなく閲覧できる状態を整えます。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>原稿や写真素材がなくても進められますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>可能です。ヒアリング内容をもとに構成案・文章のたたき台を作成し、必要に応じて撮影や素材準備の進め方もご提案します(別途費用の場合あり)。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">原稿や写真素材がなくても進められますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">可能です。ヒアリング内容をもとに構成案・文章のたたき台を作成し、必要に応じて撮影や素材準備の進め方もご提案します(別途費用の場合あり)。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>制作途中の進捗状況は確認できますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>はい、定例共有・制作環境URLの共有などで随時確認いただけます。認識違いが起きないよう、要所で確認ポイントを設けて進行します。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">制作途中の進捗状況は確認できますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">はい、定例共有・制作環境URLの共有などで随時確認いただけます。認識違いが起きないよう、要所で確認ポイントを設けて進行します。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>公開後に自社で更新できるようにできますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>可能です。WordPressで更新しやすい設計にし、更新マニュアルの整備や操作レクチャーも対応します。将来的な内製化を前提にした運用体制づくりも支援できます。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">公開後に自社で更新できるようにできますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">可能です。WordPressで更新しやすい設計にし、更新マニュアルの整備や操作レクチャーも対応します。将来的な内製化を前提にした運用体制づくりも支援できます。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>著作権についてはどうなりますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>原則、納品物の取り扱いは契約で明確にします。使用素材(写真・フォント等)のライセンス条件に応じて、適切に整理した上でご案内します。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">著作権についてはどうなりますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <p class="text">原則、納品物の取り扱いは契約で明確にします。使用素材(写真・フォント等)のライセンス条件に応じて、適切に整理した上でご案内します。</p>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>公開後どれくらいで成果が出ますか?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>Webサイトは「比較検討時に選ばれる状態」を作るツールです。見込み客がサイトに訪れるための認知施策(コンテンツSEO・SNS・広告・営業活動など)と連動してはじめて、成果が生まれます。</p>
-            <p>そのため「公開後◯ヶ月で問い合わせが◯件」という約束はいたしかねますが、認知施策と並行して整えていくことで、6ヶ月〜1年のスパンで成果が現れ始めるケースが多くあります。</p>
-            <p>現状の集客施策の状況もお伺いしたうえで、現実的な見通しをお伝えします。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">公開後どれくらいで成果が出ますか?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <div class="text">
+                  <p>Webサイトは「比較検討時に選ばれる状態」を作るツールです。見込み客がサイトに訪れるための認知施策(コンテンツSEO・SNS・広告・営業活動など)と連動してはじめて、成果が生まれます。</p>
+                  <p>そのため「公開後◯ヶ月で問い合わせが◯件」という約束はいたしかねますが、認知施策と並行して整えていくことで、6ヶ月〜1年のスパンで成果が現れ始めるケースが多くあります。</p>
+                  <p>現状の集客施策の状況もお伺いしたうえで、現実的な見通しをお伝えします。</p>
+                </div>
+              </div>
+            </div>
+          </li>
 
-        <li class="accordion-item">
-          <div class="accordion-q"><span class="accordion-mark">Q</span>月額制サービス「ウィルサポ」との違いと使い分けは?</div>
-          <div class="accordion-a"><span class="accordion-mark">A</span>
-            <p>ウィルでは2つのWebサイト制作プランをご用意しています。考え方(営業構造から逆算した設計)は共通ですが、運用スタイルが異なります。</p>
-            <p class="service-web-faq__sub">[本ページの一括制作型がおすすめの方]</p>
-            <ul class="service-web-faq__inner-list">
-              <li>自社で更新・運用できる体制があり、サイトを資産として保有したい</li>
-              <li>大規模・独自要件があり、一度しっかり作り込みたい</li>
-              <li>月額継続契約より、初期投資型を好む</li>
-            </ul>
-            <p class="service-web-faq__sub">[ウィルサポがおすすめの方]</p>
-            <ul class="service-web-faq__inner-list">
-              <li>Web担当者が不在で、更新・運用も任せたい</li>
-              <li>初期投資を抑えて、月次経費として継続的に活用したい</li>
-              <li>育てながら長く使えるWebサイトが欲しい</li>
-            </ul>
-            <p>どちらが合うか分からない場合は、まず無料診断またはお問い合わせください。現状の体制と目的に合わせて、最適なプランをご提案します。</p>
-          </div>
-        </li>
+          <li>
+            <div class="list question">
+              <div class="text-wrapper">
+                <div class="list-icon">Q</div>
+                <p class="text">月額制サービス「ウィルサポ」との違いと使い分けは?</p>
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="list answer">
+              <div class="text-wrapper">
+                <div class="list-icon">A</div>
+                <div class="text">
+                  <p>ウィルでは2つのWebサイト制作プランをご用意しています。考え方(営業構造から逆算した設計)は共通ですが、運用スタイルが異なります。</p>
+                  <p class="service-web-faq__sub">[本ページの一括制作型がおすすめの方]</p>
+                  <ul class="service-web-faq__inner-list">
+                    <li>自社で更新・運用できる体制があり、サイトを資産として保有したい</li>
+                    <li>大規模・独自要件があり、一度しっかり作り込みたい</li>
+                    <li>月額継続契約より、初期投資型を好む</li>
+                  </ul>
+                  <p class="service-web-faq__sub">[ウィルサポがおすすめの方]</p>
+                  <ul class="service-web-faq__inner-list">
+                    <li>Web担当者が不在で、更新・運用も任せたい</li>
+                    <li>初期投資を抑えて、月次経費として継続的に活用したい</li>
+                    <li>育てながら長く使えるWebサイトが欲しい</li>
+                  </ul>
+                  <p>どちらが合うか分からない場合は、まず無料診断またはお問い合わせください。現状の体制と目的に合わせて、最適なプランをご提案します。</p>
+                </div>
+              </div>
+            </div>
+          </li>
 
-      </ul>
+        </ul>
+      </div>
 
     </div>
   </div>
