@@ -16741,7 +16741,7 @@ body.has-header-v4 .loading-container {
 
 .page-service__philosophy {
   background: #ffffff;
-  padding: 110px 0;
+  padding: 110px 0 55px;
 }
 .page-service__philosophy .container {
   max-width: 1160px;
@@ -17095,7 +17095,7 @@ body.has-header-v4 .loading-container {
 
 @media screen and (max-width: 1024px) {
   .page-service__philosophy {
-    padding: 96px 0;
+    padding: 96px 0 48px;
   }
   .page-service__philosophy .container {
     padding: 0 24px;
@@ -17138,7 +17138,7 @@ body.has-header-v4 .loading-container {
 }
 @media screen and (max-width: 767px) {
   .page-service__philosophy {
-    padding: 72px 0;
+    padding: 72px 0 36px;
   }
   .page-service__philosophy .container {
     padding: 0 20px;

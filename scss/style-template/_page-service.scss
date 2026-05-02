@@ -49,7 +49,7 @@ $philo-bg: #28849b;
 
 .page-service__philosophy {
   background: #ffffff;
-  padding: 110px 0;
+  padding: 110px 0 55px;
 
   .container {
     max-width: 1160px;
@@ -436,7 +436,7 @@ $philo-bg: #28849b;
 @media screen and (max-width: 1024px) {
 
   .page-service__philosophy {
-    padding: 96px 0;
+    padding: 96px 0 48px;
 
     .container {
       padding: 0 24px;
@@ -495,7 +495,7 @@ $philo-bg: #28849b;
 @media screen and (max-width: 767px) {
 
   .page-service__philosophy {
-    padding: 72px 0;
+    padding: 72px 0 36px;
 
     .container {
       padding: 0 20px;
