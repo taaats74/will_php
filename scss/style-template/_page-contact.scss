@@ -37,8 +37,60 @@ $pc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   color: $pc-color-text;
   letter-spacing: 0.04em;
   text-align: center;
-  margin: 0 auto 64px;
+  margin: 0 auto 48px;
   max-width: 760px;
+}
+
+// プライバシーポリシー確認導線
+// (HubSpot フォーム送信前の同意取得 + 本ページ → /privacy-policy/ への導線)
+.page-contact__privacy-notice {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  padding: 24px 28px;
+  background: $pc-color-bg-pale;
+  border-left: 4px solid #28849D;
+  border-radius: 0 8px 8px 0;
+}
+
+.page-contact__privacy-notice-text {
+  font-family: $pc-font-jp;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.85;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+}
+
+.page-contact__privacy-notice-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #28849D;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.page-contact__privacy-notice-icon {
+  display: inline-block;
+  font-size: 0.9em;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.page-contact__privacy-notice-sub {
+  font-family: $pc-font-jp;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: $pc-color-text;
+  letter-spacing: 0.04em;
+  margin: 0;
 }
 
 // HubSpot フォームの差し込み枠
@@ -85,7 +137,12 @@ $pc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .page-contact__lead {
-    margin-bottom: 48px;
+    margin-bottom: 36px;
+  }
+
+  .page-contact__privacy-notice {
+    padding: 22px 24px;
+    margin-bottom: 44px;
   }
 }
 
@@ -102,8 +159,17 @@ $pc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   .page-contact__lead {
     font-size: 14px;
     line-height: 1.95;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
+
+  .page-contact__privacy-notice {
+    padding: 18px 20px;
+    margin-bottom: 32px;
+    border-left-width: 3px;
+  }
+
+  .page-contact__privacy-notice-text { font-size: 13.5px; line-height: 1.8; }
+  .page-contact__privacy-notice-sub { font-size: 12.5px; line-height: 1.75; }
 
   .page-contact__form {
     p {
