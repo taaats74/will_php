@@ -9843,7 +9843,7 @@ body.has-header-v4 .loading-container {
   max-width: 740px;
 }
 .about-v2-concept {
-  background: #ffffff;
+  background: #f4f8f9;
   padding: 120px 0;
 }
 .about-v2-concept .container {
@@ -9862,7 +9862,7 @@ body.has-header-v4 .loading-container {
   gap: 36px;
 }
 .about-v2-concept .concept-block {
-  background: #f4f8f9;
+  background: #ffffff;
   border-radius: 8px;
   padding: 48px 56px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
