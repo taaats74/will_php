@@ -3,7 +3,7 @@
  * Template Name: Service - MA構築・運用支援
  * Template Post Type: page
  *
- * MA構築・運用支援サービスの新ページ(11セクション構成)。
+ * MA構築・運用支援サービスの新ページ(10セクション構成)。
  * 中心メッセージ:「Webサイトは営業の土台。MAは、その土台の上で見込み客を育てる仕組み。」
  *
  * - header-v4 + footer-v3 + template-parts/page-hero
@@ -580,74 +580,8 @@ get_template_part( 'template-parts/page-hero', null, [
   </div>
 </section>
 
-<?php
-// works CPT のクエリ(0件なら WORKS セクションは非表示)
-$ma_works_query = new WP_Query([
-  'post_type'      => 'works',
-  'posts_per_page' => 6,
-  'post_status'    => 'publish',
-  'orderby'        => 'date',
-  'order'          => 'DESC',
-]);
-?>
-
-<?php if ( $ma_works_query->have_posts() ) : ?>
 <!-- ===================================================== -->
-<!-- [9] WORKS(works CPT 最新6件・0件時非表示)              -->
-<!-- ===================================================== -->
-<section class="service-ma-works">
-  <div class="container">
-    <div class="service-ma-works__inner">
-
-      <div class="service-ma-works__head works-header">
-        <p class="en">WORKS</p>
-        <h2>支援実績</h2>
-        <p class="subtitle">業種・規模を問わず、BtoB中小企業を中心にMA構築・運用をご支援しています。</p>
-      </div>
-
-      <ul class="service-ma-works__grid">
-        <?php while ( $ma_works_query->have_posts() ) : $ma_works_query->the_post(); ?>
-          <li class="service-ma-works__card">
-            <a href="<?php the_permalink(); ?>" class="service-ma-works__card-link">
-              <div class="service-ma-works__card-thumb">
-                <?php if ( has_post_thumbnail() ) : ?>
-                  <?php the_post_thumbnail( 'large' ); ?>
-                <?php else : ?>
-                  <img src="<?php echo esc_url( get_template_directory_uri() . '/img/about-strength01.jpg' ); ?>" alt="">
-                <?php endif; ?>
-              </div>
-              <div class="service-ma-works__card-body">
-                <p class="service-ma-works__card-title"><?php the_title(); ?></p>
-                <?php
-                $terms = get_the_terms( get_the_ID(), 'works' );
-                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
-                  $first_term = reset( $terms );
-                ?>
-                  <span class="service-ma-works__card-tag"><?php echo esc_html( $first_term->name ); ?></span>
-                <?php endif; ?>
-                <span class="service-ma-works__card-cta">詳しく見る →</span>
-              </div>
-            </a>
-          </li>
-        <?php endwhile; ?>
-      </ul>
-
-      <p class="service-ma-works__more">
-        <a class="service-ma-works__more-link" href="<?php echo esc_url( home_url('/works/') ); ?>">
-          すべての制作実績を見る →
-        </a>
-      </p>
-
-    </div>
-  </div>
-</section>
-<?php
-  wp_reset_postdata();
-endif;
-?>
-
-<!-- ===================================================== -->
-<!-- [10] FAQ                                                 -->
+<!-- [9] FAQ(WORKS セクションは支援実績がないため削除済み)   -->
 <!-- ===================================================== -->
 <section class="service-ma-faq">
   <div class="container">
@@ -797,7 +731,7 @@ endif;
             <div class="list question">
               <div class="text-wrapper">
                 <div class="list-icon">Q</div>
-                <p class="text">月額運用伴走プランは契約期間の縛りがありますか?</div>
+                <p class="text">月額運用伴走プランは契約期間の縛りがありますか?</p>
               </div>
               <i class="fa-solid fa-chevron-up"></i>
             </div>
@@ -849,7 +783,7 @@ endif;
 </section>
 
 <!-- ===================================================== -->
-<!-- [11] CTA                                                 -->
+<!-- [10] CTA                                                 -->
 <!-- ===================================================== -->
 <section class="service-ma-cta">
   <div class="container">

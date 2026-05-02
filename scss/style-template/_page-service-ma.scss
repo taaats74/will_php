@@ -12,9 +12,8 @@
 //   6. REASON     … .service-ma-reason
 //   7. FLOW       … .service-ma-flow
 //   8. PRICE      … .service-ma-price(plans / order / philosophy)
-//   9. WORKS      … .service-ma-works(0件時非表示)
-//  10. FAQ        … .service-ma-faq(.accordion 既存パターン流用)
-//  11. CTA        … .service-ma-cta
+//   9. FAQ        … .service-ma-faq(.accordion 既存パターン流用)
+//  10. CTA        … .service-ma-cta
 // =====================================================
 
 // =========================================
@@ -116,8 +115,8 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 .service-ma-hero__catch {
   font-family: $sm-font-jp;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 1.7;
+  font-size: 24px;
+  line-height: 1.75;
   color: $color-accent;
   letter-spacing: 0.04em;
   margin: 0 0 28px;
@@ -946,123 +945,7 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // =========================================
-// [9] WORKS
-// =========================================
-.service-ma-works {
-  background: $color-white;
-  padding: 120px 0;
-
-  .container { @extend %sm-container; }
-}
-
-.service-ma-works__inner {
-  @extend %sm-inner;
-  max-width: 1100px;
-}
-
-.service-ma-works__head { @extend %sm-section-head; }
-
-.service-ma-works__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 48px;
-}
-
-.service-ma-works__card {
-  list-style: none;
-  background: $color-white;
-  border: 1px solid $color-border;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(40, 132, 157, 0.12);
-  }
-}
-
-.service-ma-works__card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.service-ma-works__card-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: $color-bg-pale;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-}
-
-.service-ma-works__card-body { padding: 22px 22px 24px; }
-
-.service-ma-works__card-title {
-  font-family: $sm-font-jp;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.55;
-  color: $color-accent;
-  letter-spacing: 0.04em;
-  margin: 0 0 10px;
-}
-
-.service-ma-works__card-tag {
-  display: inline-block;
-  font-family: $sm-font-jp;
-  font-size: 11.5px;
-  font-weight: 600;
-  color: $color-text;
-  background: $color-bg-pale;
-  border: 1px solid $color-border;
-  padding: 3px 10px;
-  border-radius: 999px;
-  letter-spacing: 0.04em;
-  margin-bottom: 14px;
-}
-
-.service-ma-works__card-cta {
-  display: block;
-  font-family: $sm-font-jp;
-  font-size: 13px;
-  font-weight: 700;
-  color: $color-accent;
-  letter-spacing: 0.04em;
-  margin-top: 6px;
-}
-
-.service-ma-works__more {
-  text-align: center;
-  margin: 0;
-}
-
-.service-ma-works__more-link {
-  display: inline-block;
-  font-family: $sm-font-jp;
-  font-size: 15px;
-  font-weight: 700;
-  color: $color-accent;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid $color-accent;
-  padding-bottom: 2px;
-  transition: opacity 0.3s ease;
-
-  &:hover { opacity: 0.7; }
-}
-
-// =========================================
-// [10] FAQ(.accordion 既存パターン流用)
+// [9] FAQ(.accordion 既存パターン流用)
 // =========================================
 .service-ma-faq {
   background: $color-bg-pale;
@@ -1197,7 +1080,7 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // =========================================
-// [11] CTA
+// [10] CTA
 // =========================================
 .service-ma-cta {
   background: $color-accent;
@@ -1362,8 +1245,8 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .service-ma-hero__catch {
-    font-size: 19px;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 1.75;
     margin-bottom: 22px;
   }
 
@@ -1641,22 +1524,7 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   .service-ma-price__philosophy-title { font-size: 15.5px; }
   .service-ma-price__philosophy-text { font-size: 13px; line-height: 1.85; }
 
-  // [9] WORKS
-  .service-ma-works {
-    padding: 60px 0;
-    .container { padding: 0 20px; }
-  }
-
-  .service-ma-works__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-
-  .service-ma-works__card-body { padding: 16px 18px 20px; }
-  .service-ma-works__card-title { font-size: 15px; }
-
-  // [10] FAQ
+  // [9] FAQ
   .service-ma-faq {
     padding: 60px 0;
     .container { padding: 0 20px; }
@@ -1683,7 +1551,7 @@ $sm-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     }
   }
 
-  // [11] CTA
+  // [10] CTA
   .service-ma-cta {
     padding: 56px 0;
     .container { padding: 0 20px; }
