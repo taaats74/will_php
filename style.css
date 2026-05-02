@@ -16808,10 +16808,11 @@ body.has-header-v4 .loading-container {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 900;
   font-size: 60px;
+  line-height: 1;
   letter-spacing: 5px;
   color: #ffffff;
   opacity: 0.18;
-  margin-bottom: -32px;
+  margin-bottom: -10px;
   text-transform: uppercase;
 }
 
