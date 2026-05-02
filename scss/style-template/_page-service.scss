@@ -42,9 +42,13 @@ $will-subtle:     #8AA0A4;
 
 // =============================================
 // Section 2: PHILOSOPHY
+// 背景にPRIMARY系の濃い色 #7fbabd を敷くため、
+// テキストは白系で構成し、装飾線は視認性を保つHIGHLIGHTのまま維持
 // =============================================
+$philo-bg: #7fbabd;
+
 .page-service__philosophy {
-  background: $will-bg-pale;
+  background: $philo-bg;
   padding: 110px 0;
 
   .container {
@@ -57,6 +61,12 @@ $will-subtle:     #8AA0A4;
     max-width: 880px;
     margin: 0 auto;
   }
+
+  // 共通 eyebrow をこのセクション内のみ白で上書き
+  .page-service__eyebrow {
+    color: #ffffff;
+    opacity: 0.9;
+  }
 }
 
 .page-service__philosophy-head {
@@ -66,7 +76,7 @@ $will-subtle:     #8AA0A4;
 .page-service__philosophy-title {
   font-size: 30px;
   font-weight: 700;
-  color: $will-accent;
+  color: #ffffff;
   line-height: 1.5;
   letter-spacing: 0.01em;
   position: relative;
@@ -74,6 +84,7 @@ $will-subtle:     #8AA0A4;
   padding-bottom: 16px;
 
   // スポットカラー(HIGHLIGHT)で下線アクセント1本
+  // 背景が #7fbabd なので HIGHLIGHT のコントラストがそのまま映える
   &::after {
     content: "";
     display: block;
@@ -90,7 +101,7 @@ $will-subtle:     #8AA0A4;
 .page-service__philosophy-lead {
   font-size: 16px;
   line-height: 2;
-  color: $will-text;
+  color: rgba(255, 255, 255, 0.92);
   text-align: left;
   margin-top: 36px;
 }

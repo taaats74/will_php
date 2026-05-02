@@ -16740,7 +16740,7 @@ body.has-header-v4 .loading-container {
 }
 
 .page-service__philosophy {
-  background: #F0F8F9;
+  background: #7fbabd;
   padding: 110px 0;
 }
 .page-service__philosophy .container {
@@ -16752,6 +16752,10 @@ body.has-header-v4 .loading-container {
   max-width: 880px;
   margin: 0 auto;
 }
+.page-service__philosophy .page-service__eyebrow {
+  color: #ffffff;
+  opacity: 0.9;
+}
 
 .page-service__philosophy-head {
   text-align: center;
@@ -16760,7 +16764,7 @@ body.has-header-v4 .loading-container {
 .page-service__philosophy-title {
   font-size: 30px;
   font-weight: 700;
-  color: #28849D;
+  color: #ffffff;
   line-height: 1.5;
   letter-spacing: 0.01em;
   position: relative;
@@ -16782,7 +16786,7 @@ body.has-header-v4 .loading-container {
 .page-service__philosophy-lead {
   font-size: 16px;
   line-height: 2;
-  color: #3E5054;
+  color: rgba(255, 255, 255, 0.92);
   text-align: left;
   margin-top: 36px;
 }
