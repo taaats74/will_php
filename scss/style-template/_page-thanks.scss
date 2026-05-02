@@ -1,40 +1,162 @@
-.page-contact {
+// =====================================================
+// page-thanks.php / page-thanks-diagnosis.php 専用スタイル
+// 名前空間: .page-thanks
+// トンマナ: page-service-* / page-contact / page-privacypolicy 準拠
+//   - フォントは Zen Kaku Gothic New(下層共通)
+//   - 完了ページ:lead 段落 + body 段落 + トップへ戻る ピル型ボタン
+// =====================================================
+
+$pth-color-text:    #3E5054;
+$pth-color-accent:  #28849D;
+$pth-color-border:  #C0D5D8;
+$pth-color-bg-pale: #F0F8F9;
+$pth-color-white:   #FFFFFF;
+
+$pth-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+
+.page-thanks {
+  background: #ffffff;
+  padding: 100px 0 120px;
+
   .container {
-    .wrapper {
-      width: 83%;
-      max-width: 1200px;
-      margin: 0 auto;
-      margin-top: 140px;
-      margin-bottom: 90px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
 
-      .section-header {
-        font-size: 2.5em;
-        letter-spacing: 4px;
-        text-align: center;
-      }
+.page-thanks__inner {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: $pth-font-jp;
+  color: $pth-color-text;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
 
-      .sub-title {
-        font-family: "toppan-bunkyu-gothic-pr6n", serif;
-        font-weight: 400;
-        font-style: normal;
-        text-align: center;
-      }
+.page-thanks__lead {
+  font-family: $pth-font-jp;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.85;
+  color: $pth-color-accent;
+  letter-spacing: 0.04em;
+  margin: 0 auto 40px;
+  max-width: 720px;
+}
 
-      .border {
-        margin: 0 auto;
-        margin-top: 30px;
-      }
+.page-thanks__body {
+  font-family: $pth-font-jp;
+  font-size: 15px;
+  line-height: 1.95;
+  color: $pth-color-text;
+  letter-spacing: 0.04em;
+  margin: 0 auto 24px;
+  max-width: 720px;
+  text-align: left;
 
-      .text-wrapper {
-        font-family: "toppan-bunkyu-gothic-pr6n", serif;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: 2px;
-        margin-top: 80px;
-        p{
-          margin-top: 1em;
-        }
-      }
+  a {
+    color: $pth-color-accent;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-all;
+
+    &:hover { text-decoration: none; }
+  }
+}
+
+.page-thanks__inline-link {
+  margin: 0 auto 28px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    font-family: $pth-font-jp;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: $pth-color-accent;
+    background: $pth-color-bg-pale;
+    border: 1px solid $pth-color-border;
+    border-radius: 999px;
+    padding: 12px 24px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
+
+    &:hover {
+      background: $pth-color-accent;
+      color: $pth-color-white;
     }
+  }
+}
+
+.page-thanks__actions {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.page-thanks__back {
+  display: inline-block;
+  font-family: $pth-font-jp;
+  font-weight: 700;
+  font-size: 14px;
+  color: $pth-color-white;
+  background: $pth-color-accent;
+  letter-spacing: 0.06em;
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background: #1f6f82;
+    transform: translateY(-2px);
+  }
+}
+
+// =====================================================
+// Tablet (max-width: 1024px)
+// =====================================================
+@media screen and (max-width: 1024px) {
+  .page-thanks {
+    padding: 80px 0 100px;
+  }
+}
+
+// =====================================================
+// SP (max-width: 767px)
+// =====================================================
+@media screen and (max-width: 767px) {
+  .page-thanks {
+    padding: 56px 0 72px;
+
+    .container { padding: 0 20px; }
+  }
+
+  .page-thanks__lead {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .page-thanks__body {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .page-thanks__inline-link a {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .page-thanks__actions {
+    margin-top: 44px;
+  }
+
+  .page-thanks__back {
+    font-size: 13px;
+    padding: 12px 28px;
   }
 }
