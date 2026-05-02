@@ -1,0 +1,1350 @@
+// =====================================================
+// page-service-sns.php 専用スタイル
+// 名前空間: .service-sns-* / BEM
+// トンマナ: page-topv3 / page-service-web / page-service-ma 準拠
+//
+// セクション構成:
+//   1. HERO       … .service-sns-hero(template-parts/page-hero 直後の補足)
+//   2. CONCEPT    … .service-sns-concept
+//   3. PROBLEM    … .service-sns-problem(3カテゴリ・チェックリスト)
+//   4. ROLE       … .service-sns-role(★3層構造・新規)
+//   5. FEATURE    … .service-sns-feature(4特徴・ベネフィット型・画像つき)
+//   6. PRICE      … .service-sns-price(2プラン)
+//   7. PRINCIPLE  … .service-sns-principle(3つのこと)
+//   8. FLOW       … .service-sns-flow(3ステップ)
+//   9. FAQ        … .service-sns-faq(.accordion 既存パターン流用・14問)
+//  10. CTA        … .service-sns-cta(並列2ボタン)
+// =====================================================
+
+// =========================================
+// ウィルブランドカラー(Brand Color Guideline v1.0準拠)
+// =========================================
+$color-primary:    #7CC1C9;
+$color-light:      #B4DBE0;
+$color-accent:     #28849D;
+$color-highlight:  #F0E74E;
+$color-text:       #3E5054;
+$color-bg-pale:    #F0F8F9;
+$color-border:     #C0D5D8;
+$color-subtle:     #8AA0A4;
+$color-white:      #FFFFFF;
+
+$ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+
+// keyword ハイライト共通(蛍光ペン風・黄色マーカー・前後の文章色を継承)
+%ss-keyword {
+  background: linear-gradient(
+    transparent 0%,
+    transparent 60%,
+    rgba(240, 231, 78, 0.65) 60%,
+    rgba(240, 231, 78, 0.65) 95%,
+    transparent 95%
+  );
+  color: inherit;
+  font-weight: 700;
+  padding: 0 2px;
+}
+
+// セクション内 .container 共通
+%ss-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+// セクション内 inner 共通
+%ss-inner {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// 共通ヘッダー(.en + h2 + .subtitle・page-topv3 トンマナ)
+%ss-section-head {
+  text-align: center;
+  margin-bottom: 64px;
+
+  .en {
+    font-family: $ss-font-jp;
+    font-weight: 900;
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: #7fbabd;
+    opacity: .1;
+    line-height: 1;
+    margin: 0 0 -28px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: $ss-font-jp;
+    font-weight: 500;
+    font-size: 26px;
+    color: #333333;
+    letter-spacing: 8px;
+    line-height: 1.55;
+    margin: 0 0 22px;
+  }
+
+  .subtitle {
+    font-family: YuGothic, 'Yu Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #595959;
+    letter-spacing: 3px;
+    line-height: 1.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+// =========================================
+// [1] HERO 補足
+// =========================================
+.service-sns-hero {
+  background: $color-white;
+  padding: 80px 0 60px;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-hero__inner {
+  @extend %ss-inner;
+  background: $color-bg-pale;
+  border-radius: 16px;
+  padding: 56px 64px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+}
+
+.service-sns-hero__catch {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.75;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+.service-sns-hero__lead {
+  font-family: $ss-font-jp;
+  font-size: 16px;
+  line-height: 2;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+// =========================================
+// [2] CONCEPT
+// =========================================
+.service-sns-concept {
+  background: $color-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-concept__inner {
+  @extend %ss-inner;
+  text-align: center;
+}
+
+.service-sns-concept__head { @extend %ss-section-head; }
+
+.service-sns-concept__headline {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.6;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0 0 56px;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+.service-sns-concept__body {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+
+  p {
+    font-family: $ss-font-jp;
+    font-size: 16px;
+    line-height: 2;
+    color: $color-text;
+    letter-spacing: 0.04em;
+    margin: 0 0 28px;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  .keyword { @extend %ss-keyword; }
+}
+
+// =========================================
+// [3] PROBLEM(3カテゴリ・チェックリスト)
+// =========================================
+.service-sns-problem {
+  background: $color-white;
+  padding: 120px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-problem__inner { @extend %ss-inner; }
+
+.service-sns-problem__head { @extend %ss-section-head; }
+
+.service-sns-problem__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-sns-problem__category {
+  list-style: none;
+  background: $color-bg-pale;
+  border-radius: 8px;
+  padding: 36px 40px;
+}
+
+.service-sns-problem__category-title {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.06em;
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $color-border;
+}
+
+.service-sns-problem__check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    font-family: $ss-font-jp;
+    font-size: 15px;
+    line-height: 1.85;
+    color: $color-text;
+    letter-spacing: 0.04em;
+    padding-left: 26px;
+    margin: 0 0 12px;
+
+    &:last-child { margin-bottom: 0; }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 14px;
+      height: 14px;
+      background: $color-primary;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 3px $color-bg-pale;
+    }
+  }
+}
+
+// =========================================
+// [4] ROLE(★3層構造・新規)
+// =========================================
+.service-sns-role {
+  background: $color-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-role__inner { @extend %ss-inner; }
+
+.service-sns-role__head { @extend %ss-section-head; }
+
+.service-sns-role__lead {
+  text-align: center;
+  font-family: $ss-font-jp;
+  font-size: 16px;
+  line-height: 1.95;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0 0 56px;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+.service-sns-role__layers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 56px;
+  counter-reset: ss-role;
+}
+
+.service-sns-role__layer {
+  list-style: none;
+  background: $color-white;
+  border-top: 4px solid $color-primary;
+  border-radius: 0 0 12px 12px;
+  padding: 36px 28px 32px;
+  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-sns-role__layer-num {
+  font-family: $ss-font-jp;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1;
+  color: $color-primary;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  margin: 0 0 12px;
+}
+
+.service-sns-role__layer-title {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 19px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $color-border;
+}
+
+.service-sns-role__layer-text {
+  font-family: $ss-font-jp;
+  font-size: 14px;
+  line-height: 1.95;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+.service-sns-role__closing {
+  text-align: center;
+  font-family: $ss-font-jp;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.95;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  background: $color-white;
+  padding: 28px 36px;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 820px;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+// =========================================
+// [5] FEATURE(4特徴・画像 + テキスト・ベネフィット行)
+// =========================================
+.service-sns-feature {
+  background: $color-white;
+  padding: 120px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-feature__inner {
+  @extend %ss-inner;
+  max-width: 1100px;
+}
+
+.service-sns-feature__head { @extend %ss-section-head; }
+
+.service-sns-feature__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.service-sns-feature__item {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 40px;
+  align-items: center;
+
+  // 偶数番目は画像を右に
+  &:nth-child(even) {
+    grid-template-columns: 1fr 360px;
+
+    .service-sns-feature__visual { order: 2; }
+    .service-sns-feature__text-wrapper { order: 1; }
+  }
+}
+
+.service-sns-feature__visual {
+  width: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+.service-sns-feature__text-wrapper {
+  min-width: 0;
+}
+
+.service-sns-feature__num {
+  font-family: $ss-font-jp;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1;
+  color: $color-primary;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  margin: 0 0 12px;
+}
+
+.service-sns-feature__title {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 24px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin: 0 0 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid $color-border;
+}
+
+.service-sns-feature__desc {
+  p {
+    font-family: $ss-font-jp;
+    font-size: 15px;
+    line-height: 2;
+    color: $color-text;
+    letter-spacing: 0.04em;
+    margin: 0 0 20px;
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+// ベネフィット行(矢印 + 強調・page-service-web/ma の reason__benefit と同型)
+.service-sns-feature__benefit {
+  background: $color-bg-pale;
+  border-left: 4px solid $color-accent;
+  border-radius: 0 6px 6px 0;
+  padding: 16px 22px;
+  font-family: $ss-font-jp;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.85;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+.service-sns-feature__benefit-arrow {
+  display: inline-block;
+  margin-right: 8px;
+  color: $color-primary;
+  font-weight: 800;
+}
+
+// =========================================
+// [6] PRICE(2プラン)
+// =========================================
+.service-sns-price {
+  background: $color-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-price__inner {
+  @extend %ss-inner;
+  max-width: 1100px;
+}
+
+.service-sns-price__head { @extend %ss-section-head; }
+
+.service-sns-price__lead {
+  text-align: center;
+  font-family: $ss-font-jp;
+  font-size: 15px;
+  line-height: 1.95;
+  color: $color-text;
+  margin: 0 0 56px;
+}
+
+.service-sns-price__plans { margin-bottom: 0; }
+
+.service-sns-price__plans-heading {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.06em;
+  margin: 0 0 24px;
+  padding-left: 16px;
+  border-left: 4px solid $color-accent;
+}
+
+.service-sns-price__plans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.service-sns-price__plan-card {
+  background: $color-white;
+  border-radius: 8px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-sns-price__plan-num {
+  font-family: $ss-font-jp;
+  font-weight: 900;
+  font-size: 28px;
+  color: $color-primary;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0 0 14px;
+}
+
+.service-sns-price__plan-name {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $color-border;
+}
+
+.service-sns-price__plan-desc {
+  font-family: $ss-font-jp;
+  font-size: 14px;
+  line-height: 1.9;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+  flex: 1 1 auto;
+}
+
+.service-sns-price__plan-price {
+  font-family: $ss-font-jp;
+  font-weight: 800;
+  font-size: 26px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-align: right;
+
+  .service-sns-price__plan-tax {
+    font-size: 13px;
+    font-weight: 600;
+    color: $color-subtle;
+    margin-left: 4px;
+  }
+}
+
+// =========================================
+// [7] PRINCIPLE(3つのこと)
+// =========================================
+.service-sns-principle {
+  background: $color-white;
+  padding: 120px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-principle__inner { @extend %ss-inner; }
+
+.service-sns-principle__head { @extend %ss-section-head; }
+
+.service-sns-principle__lead {
+  text-align: center;
+  font-family: $ss-font-jp;
+  font-size: 16px;
+  line-height: 1.95;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0 0 64px;
+}
+
+.service-sns-principle__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-sns-principle__item {
+  list-style: none;
+  background: $color-bg-pale;
+  border-left: 4px solid $color-accent;
+  border-radius: 0 8px 8px 0;
+  padding: 36px 44px;
+  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
+}
+
+.service-sns-principle__num {
+  font-family: $ss-font-jp;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1;
+  color: $color-primary;
+  letter-spacing: 0.16em;
+  margin: 0 0 12px;
+}
+
+.service-sns-principle__title {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $color-border;
+}
+
+.service-sns-principle__text {
+  font-family: $ss-font-jp;
+  font-size: 15px;
+  line-height: 1.95;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+// =========================================
+// [8] FLOW(3ステップ)
+// =========================================
+.service-sns-flow {
+  background: $color-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-flow__inner { @extend %ss-inner; }
+
+.service-sns-flow__head { @extend %ss-section-head; }
+
+.service-sns-flow__lead {
+  text-align: center;
+  font-family: $ss-font-jp;
+  font-size: 16px;
+  line-height: 1.95;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0 0 64px;
+}
+
+.service-sns-flow__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.service-sns-flow__step {
+  list-style: none;
+  position: relative;
+  background: $color-white;
+  border-radius: 12px;
+  padding: 36px 44px;
+  box-shadow: 0 6px 18px rgba(40, 132, 157, 0.08);
+}
+
+.service-sns-flow__step-num {
+  display: inline-block;
+  font-family: $ss-font-jp;
+  font-weight: 800;
+  font-size: 16px;
+  color: $color-white;
+  background: $color-accent;
+  letter-spacing: 0.16em;
+  margin: 0 0 12px;
+  padding: 5px 18px;
+  border-radius: 999px;
+}
+
+.service-sns-flow__step-period {
+  display: inline-block;
+  font-family: $ss-font-jp;
+  font-size: 13px;
+  font-weight: 600;
+  color: $color-subtle;
+  letter-spacing: 0.08em;
+  margin: 0 0 6px 12px;
+}
+
+.service-sns-flow__step-title {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.service-sns-flow__step-sub {
+  font-family: $ss-font-jp;
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-primary;
+  letter-spacing: 0.06em;
+  margin: 0 0 18px;
+}
+
+.service-sns-flow__step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    font-family: $ss-font-jp;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: $color-text;
+    letter-spacing: 0.04em;
+    padding-left: 22px;
+    margin: 0 0 10px;
+
+    &:last-child { margin-bottom: 0; }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 10px;
+      height: 10px;
+      background: $color-accent;
+      border-radius: 50%;
+    }
+  }
+}
+
+.service-sns-flow__step-text {
+  font-family: $ss-font-jp;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: $color-text;
+  letter-spacing: 0.04em;
+  margin: 0;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+// =========================================
+// [9] FAQ(.accordion 既存パターン流用)
+// =========================================
+.service-sns-faq {
+  background: $color-white;
+  padding: 120px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-faq__inner {
+  @extend %ss-inner;
+  max-width: 880px;
+}
+
+.service-sns-faq__head { @extend %ss-section-head; }
+
+.service-sns-faq__list {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  > ul > li {
+    list-style: none;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(40, 132, 157, 0.05);
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  .list.question {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.25s ease;
+
+    &:hover { background: $color-bg-pale; }
+
+    .text-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .list-icon {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: $color-accent;
+      color: $color-white;
+      font-family: $ss-font-jp;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .text {
+      font-family: $ss-font-jp;
+      font-weight: 700;
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: $color-accent;
+      letter-spacing: 0.04em;
+      margin: 0;
+    }
+
+    i.fa-solid {
+      flex-shrink: 0;
+      color: $color-accent;
+      font-size: 14px;
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+
+    &.active i.fa-solid { transform: rotate(0); }
+  }
+
+  .list.answer {
+    max-height: 0;
+    overflow: hidden;
+    background: $color-bg-pale;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+
+    .text-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 24px 22px;
+    }
+
+    .list-icon {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: $color-light;
+      color: $color-accent;
+      font-family: $ss-font-jp;
+      font-weight: 800;
+      font-size: 15px;
+      margin-top: 2px;
+    }
+
+    .text {
+      font-family: $ss-font-jp;
+      font-size: 14.5px;
+      line-height: 1.95;
+      color: $color-text;
+      letter-spacing: 0.04em;
+      margin: 0;
+      flex: 1;
+    }
+  }
+}
+
+// =========================================
+// [10] CTA(無料相談 + 資料請求の並列CTA)
+// =========================================
+.service-sns-cta {
+  background: $color-accent;
+  padding: 110px 0;
+
+  .container { @extend %ss-container; }
+}
+
+.service-sns-cta__inner { @extend %ss-inner; }
+
+.service-sns-cta__head {
+  @extend %ss-section-head;
+  margin-bottom: 28px;
+
+  .en {
+    color: $color-white;
+    opacity: 0.18;
+  }
+
+  h2 {
+    color: $color-white;
+  }
+
+  .subtitle {
+    color: rgba(255, 255, 255, 0.92);
+  }
+}
+
+.service-sns-cta__lead {
+  text-align: center;
+  font-family: $ss-font-jp;
+  font-size: 16px;
+  line-height: 1.95;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.04em;
+  margin: 0 0 48px;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+.service-sns-cta__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.service-sns-cta__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 32px 28px;
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+
+    .service-sns-cta__btn-arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  &--primary {
+    background: $color-white;
+    color: $color-accent;
+
+    .service-sns-cta__btn-label { color: $color-accent; }
+    .service-sns-cta__btn-note { color: $color-text; }
+  }
+
+  &--outline {
+    background: transparent;
+    border: 2px solid $color-white;
+    color: $color-white;
+
+    .service-sns-cta__btn-label { color: $color-white; }
+    .service-sns-cta__btn-note { color: rgba(255, 255, 255, 0.92); }
+  }
+}
+
+.service-sns-cta__btn-label {
+  font-family: $ss-font-jp;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.06em;
+}
+
+.service-sns-cta__btn-arrow {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 800;
+  transition: transform 0.3s ease;
+}
+
+.service-sns-cta__btn-note {
+  font-family: $ss-font-jp;
+  font-size: 12.5px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  margin: 4px 0 0;
+  text-align: center;
+}
+
+// =====================================================
+// Tablet (max-width: 1024px)
+// =====================================================
+@media screen and (max-width: 1024px) {
+
+  // ROLE:3 → 2 カラム(3層目は次行に回り込み・最終 li を全幅にしたい場合は span 2 で)
+  .service-sns-role__layers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    > .service-sns-role__layer:nth-child(3) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  // FEATURE:画像縮小・グリッド維持
+  .service-sns-feature__item {
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+
+    &:nth-child(even) {
+      grid-template-columns: 1fr 280px;
+    }
+  }
+
+  // PRICE:2 カラム維持
+  .service-sns-price__plans-grid {
+    gap: 20px;
+  }
+}
+
+// =====================================================
+// SP (max-width: 767px)
+// =====================================================
+@media screen and (max-width: 767px) {
+
+  // 共通ヘッダー SP 調整
+  .service-sns-concept__head,
+  .service-sns-problem__head,
+  .service-sns-role__head,
+  .service-sns-feature__head,
+  .service-sns-price__head,
+  .service-sns-principle__head,
+  .service-sns-flow__head,
+  .service-sns-faq__head,
+  .service-sns-cta__head {
+    margin-bottom: 44px;
+
+    .en {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: -18px;
+    }
+
+    h2 {
+      font-size: 22px;
+      letter-spacing: 4px;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 13.5px;
+      letter-spacing: 1.5px;
+      line-height: 1.85;
+    }
+  }
+
+  // [1] HERO 補足
+  .service-sns-hero {
+    padding: 48px 0 40px;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-hero__inner {
+    padding: 32px 22px;
+    border-radius: 12px;
+  }
+
+  .service-sns-hero__catch {
+    font-size: 17px;
+    line-height: 1.75;
+    margin-bottom: 22px;
+  }
+
+  .service-sns-hero__lead {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  // [2] CONCEPT
+  .service-sns-concept {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-concept__headline {
+    font-size: 22px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .service-sns-concept__body p {
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 22px;
+  }
+
+  // [3] PROBLEM
+  .service-sns-problem {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-problem__list {
+    gap: 20px;
+  }
+
+  .service-sns-problem__category {
+    padding: 24px 22px;
+  }
+
+  .service-sns-problem__category-title {
+    font-size: 18px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+
+  .service-sns-problem__check-list li {
+    font-size: 13.5px;
+    line-height: 1.8;
+    padding-left: 22px;
+
+    &::before { width: 12px; height: 12px; box-shadow: inset 0 0 0 2.5px $color-bg-pale; }
+  }
+
+  // [4] ROLE
+  .service-sns-role {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-role__lead {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 36px;
+  }
+
+  .service-sns-role__layers {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 36px;
+
+    > .service-sns-role__layer:nth-child(3) {
+      grid-column: auto;
+    }
+  }
+
+  .service-sns-role__layer {
+    padding: 26px 22px 24px;
+    border-top-width: 3px;
+  }
+
+  .service-sns-role__layer-num { font-size: 28px; }
+  .service-sns-role__layer-title {
+    font-size: 17px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+  .service-sns-role__layer-text { font-size: 13.5px; line-height: 1.85; }
+
+  .service-sns-role__closing {
+    font-size: 14px;
+    line-height: 1.9;
+    padding: 22px 22px;
+  }
+
+  // [5] FEATURE
+  .service-sns-feature {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-feature__list { gap: 40px; }
+
+  .service-sns-feature__item {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    &:nth-child(even) {
+      grid-template-columns: 1fr;
+
+      .service-sns-feature__visual { order: 0; }
+      .service-sns-feature__text-wrapper { order: 0; }
+    }
+  }
+
+  .service-sns-feature__visual { max-width: 320px; margin: 0 auto; }
+
+  .service-sns-feature__num { font-size: 40px; margin-bottom: 8px; }
+  .service-sns-feature__title {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .service-sns-feature__desc p { font-size: 14px; line-height: 1.9; margin-bottom: 16px; }
+
+  .service-sns-feature__benefit {
+    padding: 14px 18px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  // [6] PRICE
+  .service-sns-price {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-price__lead { font-size: 13.5px; margin-bottom: 36px; }
+
+  .service-sns-price__plans-heading { font-size: 18px; margin-bottom: 18px; }
+
+  .service-sns-price__plans-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-sns-price__plan-card { padding: 26px 22px; }
+  .service-sns-price__plan-num { font-size: 24px; }
+  .service-sns-price__plan-name { font-size: 19px; }
+  .service-sns-price__plan-desc { font-size: 13.5px; }
+  .service-sns-price__plan-price { font-size: 22px; }
+
+  // [7] PRINCIPLE
+  .service-sns-principle {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-principle__lead { font-size: 14px; margin-bottom: 36px; }
+
+  .service-sns-principle__list { gap: 18px; }
+
+  .service-sns-principle__item {
+    padding: 26px 22px;
+    border-left-width: 3px;
+  }
+
+  .service-sns-principle__num { font-size: 22px; }
+  .service-sns-principle__title {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+  .service-sns-principle__text { font-size: 13.5px; line-height: 1.85; }
+
+  // [8] FLOW
+  .service-sns-flow {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-flow__lead { font-size: 14px; margin-bottom: 40px; }
+
+  .service-sns-flow__list { gap: 18px; }
+
+  .service-sns-flow__step {
+    padding: 26px 22px;
+  }
+
+  .service-sns-flow__step-num { font-size: 13px; padding: 4px 14px; }
+  .service-sns-flow__step-period { font-size: 12px; margin-left: 10px; }
+  .service-sns-flow__step-title { font-size: 18px; margin-bottom: 6px; }
+  .service-sns-flow__step-sub { font-size: 12.5px; margin-bottom: 14px; }
+  .service-sns-flow__step-list li { font-size: 13.5px; line-height: 1.8; padding-left: 18px; }
+  .service-sns-flow__step-text { font-size: 13.5px; line-height: 1.85; }
+
+  // [9] FAQ
+  .service-sns-faq {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-faq__list {
+    .list.question {
+      padding: 16px 18px;
+      gap: 10px;
+
+      .text-wrapper { gap: 12px; }
+      .list-icon { width: 28px; height: 28px; font-size: 13px; }
+      .text { font-size: 13.5px; line-height: 1.55; }
+    }
+
+    .list.answer {
+      .text-wrapper { padding: 16px 18px 18px; gap: 12px; }
+      .list-icon { width: 28px; height: 28px; font-size: 13px; }
+      .text { font-size: 13px; line-height: 1.85; }
+    }
+  }
+
+  // [10] CTA
+  .service-sns-cta {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .service-sns-cta__lead { font-size: 14px; line-height: 1.9; margin-bottom: 36px; }
+
+  .service-sns-cta__buttons {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-sns-cta__btn {
+    padding: 24px 22px;
+
+    &--outline {
+      border-width: 2px;
+    }
+  }
+
+  .service-sns-cta__btn-label { font-size: 17px; }
+  .service-sns-cta__btn-note { font-size: 12px; line-height: 1.65; }
+}
