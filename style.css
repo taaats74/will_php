@@ -16942,19 +16942,19 @@ body.has-header-v4 .loading-container {
 }
 
 .page-service__main-card-type {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 600;
   color: #8AA0A4;
   letter-spacing: 0.08em;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .page-service__main-card-name {
-  font-size: 56px;
+  font-size: 76px;
   font-weight: 700;
   color: #28849D;
-  line-height: 1.15;
-  margin-bottom: 36px;
+  line-height: 1.1;
+  margin-bottom: 40px;
 }
 
 .page-service__main-card-row {
