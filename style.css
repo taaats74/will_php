@@ -21501,10 +21501,6 @@ body.has-header-v4 .loading-container {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
-}
-.ebooks-card:hover .ebooks-card__thumb img {
-  transform: scale(1.04);
 }
 .ebooks-card__thumb-placeholder {
   width: 100%;
@@ -21891,7 +21887,6 @@ body.has-header-v4 .loading-container {
 }
 @media (prefers-reduced-motion: reduce) {
   .ebooks-card,
-  .ebooks-card__thumb img,
   .ebooks-card__cta-arrow,
   .ebooks-tabs__btn {
     transition: none !important;
