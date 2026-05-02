@@ -257,27 +257,27 @@ $philo-bg: #28849b;
 }
 
 .page-service__main-card-catch {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: $will-text;
-  line-height: 1.65;
-  margin-bottom: 32px;
+  line-height: 1.6;
+  margin-bottom: 36px;
 }
 
 .page-service__main-card-type {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: $will-subtle;
   letter-spacing: 0.08em;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .page-service__main-card-name {
-  font-size: 38px;
+  font-size: 46px;
   font-weight: 700;
   color: $will-accent;
   line-height: 1.2;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 // 情報ブロック + イラストの 2 カラム配置(均等 48% : 48%)
@@ -318,13 +318,13 @@ $philo-bg: #28849b;
     justify-content: center;
     background: $will-accent;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.4;
     text-align: center;
-    padding: 14px 10px;
+    padding: 16px 10px;
     border-radius: 8px;
-    min-height: 70px;
+    min-height: 76px;
   }
 }
 
