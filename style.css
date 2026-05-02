@@ -19679,7 +19679,7 @@ body.has-header-v4 .loading-container {
 }
 
 .service-creative-concept {
-  background: #F0F8F9;
+  background: #FFFFFF;
   padding: 120px 0;
 }
 .service-creative-concept__inner {
@@ -19712,7 +19712,7 @@ body.has-header-v4 .loading-container {
   margin-bottom: 0;
 }
 .service-creative-problem {
-  background: #FFFFFF;
+  background: #F0F8F9;
   padding: 120px 0;
 }
 .service-creative-problem__list {
@@ -19726,9 +19726,10 @@ body.has-header-v4 .loading-container {
 
 .service-creative-problem__category {
   list-style: none;
-  background: #F0F8F9;
+  background: #FFFFFF;
   border-radius: 8px;
   padding: 36px 40px;
+  box-shadow: 0 4px 14px rgba(40, 132, 157, 0.05);
 }
 
 .service-creative-problem__category-title {
@@ -19769,11 +19770,11 @@ body.has-header-v4 .loading-container {
   height: 14px;
   background: #7CC1C9;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 3px #F0F8F9;
+  box-shadow: inset 0 0 0 3px #FFFFFF;
 }
 
 .service-creative-feature {
-  background: #F0F8F9;
+  background: #FFFFFF;
   padding: 120px 0;
 }
 .service-creative-feature__list {
@@ -19790,25 +19791,10 @@ body.has-header-v4 .loading-container {
   background: #FFFFFF;
   border: 1px solid #C0D5D8;
   border-radius: 12px;
-  padding: 0 0 36px;
+  padding: 40px 36px 36px;
   box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-}
-
-.service-creative-feature__img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  background: #F0F8F9;
-  margin-bottom: 32px;
-}
-.service-creative-feature__img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .service-creative-feature__num {
@@ -19820,7 +19806,6 @@ body.has-header-v4 .loading-container {
   letter-spacing: 0.04em;
   opacity: 0.85;
   margin: 0 0 16px;
-  padding: 0 36px;
 }
 
 .service-creative-feature__title {
@@ -19831,14 +19816,13 @@ body.has-header-v4 .loading-container {
   letter-spacing: 0.04em;
   line-height: 1.5;
   margin: 0 0 24px;
-  padding: 0 36px 18px;
+  padding-bottom: 18px;
   border-bottom: 1px solid #C0D5D8;
   min-height: 84px;
 }
 
 .service-creative-feature__approach {
-  margin: 0 0 24px;
-  padding: 0 36px;
+  margin-bottom: 24px;
   flex: 1 1 auto;
 }
 .service-creative-feature__approach p {
@@ -19855,7 +19839,6 @@ body.has-header-v4 .loading-container {
   border-left: 4px solid #28849D;
   border-radius: 0 6px 6px 0;
   padding: 18px 24px;
-  margin: 0 36px;
 }
 .service-creative-feature__benefit p {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
@@ -19874,7 +19857,7 @@ body.has-header-v4 .loading-container {
 }
 
 .service-creative-price {
-  background: #FFFFFF;
+  background: #F0F8F9;
   padding: 120px 0;
 }
 .service-creative-price__inner {
@@ -19912,7 +19895,7 @@ body.has-header-v4 .loading-container {
 }
 
 .service-creative-price__plan-card {
-  background: #F0F8F9;
+  background: #FFFFFF;
   border-radius: 8px;
   padding: 36px 32px;
   display: flex;
@@ -19961,7 +19944,7 @@ body.has-header-v4 .loading-container {
 }
 
 .service-creative-faq {
-  background: #F0F8F9;
+  background: #FFFFFF;
   padding: 120px 0;
 }
 .service-creative-faq__inner {
@@ -20078,16 +20061,7 @@ body.has-header-v4 .loading-container {
     gap: 24px;
   }
   .service-creative-feature__item {
-    padding: 0 0 28px;
-  }
-  .service-creative-feature__num,
-  .service-creative-feature__title,
-  .service-creative-feature__approach {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-  .service-creative-feature__benefit {
-    margin: 0 28px;
+    padding: 32px 28px 28px;
   }
   .service-creative-price__plans-grid {
     gap: 20px;
@@ -20165,7 +20139,7 @@ body.has-header-v4 .loading-container {
   .service-creative-problem__check-list li::before {
     width: 12px;
     height: 12px;
-    box-shadow: inset 0 0 0 2.5px #F0F8F9;
+    box-shadow: inset 0 0 0 2.5px #FFFFFF;
   }
   .service-creative-feature {
     padding: 60px 0;
@@ -20178,17 +20152,8 @@ body.has-header-v4 .loading-container {
     gap: 24px;
   }
   .service-creative-feature__item {
-    padding: 0 0 24px;
+    padding: 28px 22px 24px;
     border-radius: 10px;
-  }
-  .service-creative-feature__img {
-    margin-bottom: 24px;
-  }
-  .service-creative-feature__num,
-  .service-creative-feature__title,
-  .service-creative-feature__approach {
-    padding-left: 22px;
-    padding-right: 22px;
   }
   .service-creative-feature__num {
     font-size: 44px;
@@ -20206,7 +20171,6 @@ body.has-header-v4 .loading-container {
     line-height: 1.9;
   }
   .service-creative-feature__benefit {
-    margin: 0 22px;
     padding: 14px 18px;
   }
   .service-creative-feature__benefit p {

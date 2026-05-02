@@ -32,20 +32,17 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <h2 class="service-creative-concept__headline">
         オンラインも、オフラインも。<br>
-        顧客接点のすべてに、<br>
-        <span class="keyword">一貫したブランドと営業導線</span>を。
+        顧客接点のすべてに、<span class="keyword">一貫したブランドと営業導線</span>を。
       </h2>
 
       <div class="service-creative-concept__body">
         <p>
-          Webサイトだけが顧客接点ではありません。<br>
-          展示会のパンフレット、営業現場の資料、商談で渡す名刺。<br>
-          すべての接点でブランドと営業導線が揃ってこそ、<br>
-          比較検討で選ばれる確率が高まります。
+          Webサイトだけが顧客接点ではありません。
+          展示会のパンフレット、営業現場の資料、商談で渡す名刺。
+          すべての接点でブランドと営業導線が揃ってこそ、比較検討で選ばれる確率が高まります。
         </p>
         <p>
-          ウィルは、Web支援に加えて<br>
-          オフライン施策のクリエイティブも、<br>
+          ウィルは、Web支援に加えてオフライン施策のクリエイティブも、
           営業導線とブランド軸を踏まえて制作します。
         </p>
       </div>
@@ -118,9 +115,6 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-creative-feature__list">
 
         <li class="service-creative-feature__item">
-          <div class="service-creative-feature__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/single-service-creative-reason1.jpg" alt="営業導線を踏まえたデザイン提案のイメージ">
-          </div>
           <p class="service-creative-feature__num">01</p>
           <h3 class="service-creative-feature__title">営業導線を踏まえたデザイン提案</h3>
           <div class="service-creative-feature__approach">
@@ -141,9 +135,6 @@ get_template_part( 'template-parts/page-hero', null, [
         </li>
 
         <li class="service-creative-feature__item">
-          <div class="service-creative-feature__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/single-service-creative-reason2.jpg" alt="ブランド軸との整合性を考慮した制作のイメージ">
-          </div>
           <p class="service-creative-feature__num">02</p>
           <h3 class="service-creative-feature__title">ブランド軸との整合性を考慮した制作</h3>
           <div class="service-creative-feature__approach">
@@ -163,9 +154,6 @@ get_template_part( 'template-parts/page-hero', null, [
         </li>
 
         <li class="service-creative-feature__item">
-          <div class="service-creative-feature__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/single-service-creative-reason3.jpg" alt="オンラインとオフラインを横断した制作のイメージ">
-          </div>
           <p class="service-creative-feature__num">03</p>
           <h3 class="service-creative-feature__title">オンラインとオフラインを横断した制作</h3>
           <div class="service-creative-feature__approach">
@@ -185,9 +173,6 @@ get_template_part( 'template-parts/page-hero', null, [
         </li>
 
         <li class="service-creative-feature__item">
-          <div class="service-creative-feature__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/single-service-creative-reason4.jpg" alt="伴走型の制作プロセスのイメージ">
-          </div>
           <p class="service-creative-feature__num">04</p>
           <h3 class="service-creative-feature__title">伴走型の制作プロセス</h3>
           <div class="service-creative-feature__approach">
