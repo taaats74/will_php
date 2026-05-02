@@ -354,8 +354,8 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
 .service-creative-price__plans-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .service-creative-price__plan-card {
@@ -552,8 +552,9 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     padding: 32px 28px 28px;
   }
 
-  // PRICE:2 カラム維持
+  // PRICE:4 → 2 カラム
   .service-creative-price__plans-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
   }
 }
