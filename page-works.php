@@ -208,7 +208,7 @@ get_template_part( 'template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <!-- Section 5: 資料DL(page-topv3-ebook 構造踏襲)             -->
 <!-- ===================================================== -->
-<section class="page-works__ebook" id="ebook">
+<section class="page-topv3-ebook" id="ebook">
   <div class="container">
     <div class="wrapper">
 
@@ -318,7 +318,7 @@ get_template_part( 'template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <!-- Section 6: 問い合わせ(page-topv3-contact-v5 構造踏襲)    -->
 <!-- ===================================================== -->
-<section class="page-works__contact" id="contact">
+<section class="page-topv3-contact-v5" id="contact">
   <div class="container">
     <div class="wrapper">
 
