@@ -301,7 +301,6 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 .service-sns-role__layer {
   list-style: none;
   background: $color-white;
-  border-top: 4px solid $color-primary;
   border-radius: 12px;
   padding: 36px 28px 32px;
   box-shadow: 0 6px 18px rgba(40, 132, 157, 0.08);
@@ -344,7 +343,7 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 .service-sns-role__closing {
-  text-align: center;
+  text-align: left;
   font-family: $ss-font-jp;
   font-size: 16px;
   font-weight: 600;
@@ -353,7 +352,7 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   letter-spacing: 0.04em;
   background: $color-white;
   padding: 28px 36px;
-  border-radius: 8px;
+  border-left: 4px solid $color-accent;
   margin: 0 auto;
   max-width: 820px;
 
@@ -1175,7 +1174,6 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
   .service-sns-role__layer {
     padding: 26px 22px 24px;
-    border-top-width: 3px;
     border-radius: 10px;
   }
 
@@ -1190,7 +1188,8 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   .service-sns-role__closing {
     font-size: 14px;
     line-height: 1.9;
-    padding: 22px 22px;
+    padding: 20px 22px;
+    border-left-width: 3px;
   }
 
   // [5] FEATURE
