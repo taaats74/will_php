@@ -60,9 +60,33 @@ get_template_part('template-parts/page-hero', null, [
         </p>
       </div>
 
-      <ul class="page-service__main-list">
+      <ul class="page-service__main-tabs" role="tablist" aria-label="主力サービスの切替">
+        <li class="page-service__main-tab is-active"
+            data-ps-main-tab="ws"
+            role="tab"
+            tabindex="0"
+            aria-selected="true"
+            aria-controls="ps-main-tab-ws">
+          <span class="page-service__main-tab-label">BtoB中小企業向け</span>
+          <span class="page-service__main-tab-name">ウィルサポ</span>
+        </li>
+        <li class="page-service__main-tab"
+            data-ps-main-tab="ec"
+            role="tab"
+            tabindex="0"
+            aria-selected="false"
+            aria-controls="ps-main-tab-ec">
+          <span class="page-service__main-tab-label">EC事業者向け</span>
+          <span class="page-service__main-tab-name">ウィルサポEC</span>
+        </li>
+      </ul>
 
-        <li class="page-service__main-card page-service__main-card--ws">
+      <div class="page-service__main-cards">
+
+        <div id="ps-main-tab-ws"
+             class="page-service__main-card page-service__main-card--ws is-active"
+             role="tabpanel"
+             aria-labelledby="ps-main-tab-ws-label">
           <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>"
              class="page-service__main-card-link"
              target="_blank"
@@ -107,9 +131,12 @@ get_template_part('template-parts/page-hero', null, [
             </span>
 
           </a>
-        </li>
+        </div>
 
-        <li class="page-service__main-card page-service__main-card--ec">
+        <div id="ps-main-tab-ec"
+             class="page-service__main-card page-service__main-card--ec"
+             role="tabpanel"
+             hidden>
           <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>"
              class="page-service__main-card-link"
              target="_blank"
@@ -151,13 +178,52 @@ get_template_part('template-parts/page-hero', null, [
             </span>
 
           </a>
-        </li>
+        </div>
 
-      </ul>
+      </div>
 
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  'use strict';
+  var tabs = document.querySelectorAll('.page-service__main-tab');
+  var panels = document.querySelectorAll('.page-service__main-cards .page-service__main-card');
+  if (!tabs.length || !panels.length) return;
+
+  function activate(targetKey) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-ps-main-tab') === targetKey;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+    });
+    panels.forEach(function (p) {
+      var on = p.id === 'ps-main-tab-' + targetKey;
+      p.classList.toggle('is-active', on);
+      if (on) {
+        p.removeAttribute('hidden');
+      } else {
+        p.setAttribute('hidden', '');
+      }
+    });
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      activate(tab.getAttribute('data-ps-main-tab'));
+    });
+    tab.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activate(tab.getAttribute('data-ps-main-tab'));
+      }
+    });
+  });
+})();
+</script>
 
 <!-- ===================================================== -->
 <!-- Section 4: 支援領域(page-topv3-whatwedo 構造踏襲)        -->

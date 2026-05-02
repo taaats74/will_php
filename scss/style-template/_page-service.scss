@@ -146,28 +146,96 @@ $philo-bg: #28849b;
   color: $will-text;
 }
 
-.page-service__main-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
+// タブ UI(BtoB / EC 切替)
+.page-service__main-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 32px;
+  flex-wrap: wrap;
+}
+
+.page-service__main-tab {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 220px;
+  padding: 16px 28px;
+  background: #ffffff;
+  border: 2px solid $will-border;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  user-select: none;
+
+  &:hover:not(.is-active) {
+    border-color: $will-primary;
+    color: $will-accent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $will-accent;
+    outline-offset: 3px;
+  }
+
+  &.is-active {
+    background: $will-accent;
+    border-color: $will-accent;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(40, 132, 157, 0.18);
+  }
+}
+
+.page-service__main-tab-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.page-service__main-tab-name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+// カードコンテナ(タブ切替で 1 枚表示)
+.page-service__main-cards {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .page-service__main-card {
-  list-style: none;
   background: #ffffff;
   border: 1px solid $will-border;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
+  &[hidden] {
+    display: none;
+  }
+
+  &.is-active {
+    animation: psMainFade 0.35s ease forwards;
+  }
+
   &:hover {
     transform: translateY(-4px);
     border-color: $will-primary;
     box-shadow: 0 16px 32px rgba(40, 132, 157, 0.12);
   }
+}
+
+@keyframes psMainFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .page-service__main-card-link {
@@ -334,9 +402,13 @@ $philo-bg: #28849b;
     }
   }
 
-  .page-service__main-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+  .page-service__main-tab {
+    min-width: 180px;
+    padding: 14px 20px;
+  }
+
+  .page-service__main-tab-name {
+    font-size: 16px;
   }
 
   .page-service__main-card-link {
@@ -403,9 +475,23 @@ $philo-bg: #28849b;
     font-size: 14px;
   }
 
-  .page-service__main-list {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .page-service__main-tabs {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .page-service__main-tab {
+    min-width: 0;
+    flex: 1;
+    padding: 12px 14px;
+  }
+
+  .page-service__main-tab-label {
+    font-size: 11px;
+  }
+
+  .page-service__main-tab-name {
+    font-size: 15px;
   }
 
   .page-service__main-card-link {
