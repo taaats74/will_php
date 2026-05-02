@@ -14498,8 +14498,7 @@ body.has-header-v4 .loading-container {
 .service-web-target__item {
   list-style: none;
   background: #FFFFFF;
-  border-top: 4px solid #28849D;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
   padding: 28px 26px 26px;
   box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
   display: flex;
@@ -14509,10 +14508,13 @@ body.has-header-v4 .loading-container {
 .service-web-target__category-label {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   color: #28849D;
   letter-spacing: 0.06em;
-  margin: 0 0 14px;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #C0D5D8;
 }
 
 .service-web-target__text {
@@ -14635,7 +14637,7 @@ body.has-header-v4 .loading-container {
   margin: 0;
 }
 .service-web-reason {
-  background: #FFFFFF;
+  background: #c9ddde;
   padding: 120px 0;
 }
 .service-web-reason__lead {
@@ -14689,10 +14691,12 @@ body.has-header-v4 .loading-container {
   margin: 0 0 24px;
   padding-bottom: 18px;
   border-bottom: 1px solid #C0D5D8;
+  min-height: 84px;
 }
 
 .service-web-reason__approach {
   margin-bottom: 24px;
+  flex: 1 1 auto;
 }
 .service-web-reason__approach p {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
@@ -15098,6 +15102,7 @@ body.has-header-v4 .loading-container {
 
 .service-web-works__cta-arrow {
   display: inline-block;
+  color: #FFFFFF;
   transition: transform 0.3s ease;
 }
 
@@ -15109,78 +15114,120 @@ body.has-header-v4 .loading-container {
   max-width: 880px;
 }
 
-.service-web-faq__list {
+.service-web-faq__list ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
-.service-web-faq .accordion-item {
+.service-web-faq__list > ul > li {
   list-style: none;
-  background: #F0F8F9;
+  background: #FFFFFF;
   border: 1px solid #C0D5D8;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 14px rgba(40, 132, 157, 0.05);
 }
-
-.service-web-faq .accordion-q {
-  position: relative;
+.service-web-faq__list > ul > li:last-child {
+  margin-bottom: 0;
+}
+.service-web-faq__list .list.question {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.25s ease;
+}
+.service-web-faq__list .list.question:hover {
+  background: #F0F8F9;
+}
+.service-web-faq__list .list.question .text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+.service-web-faq__list .list.question .list-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #28849D;
+  color: #FFFFFF;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+.service-web-faq__list .list.question .text {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
   font-size: 15.5px;
   line-height: 1.6;
   color: #28849D;
   letter-spacing: 0.04em;
-  padding: 20px 56px 20px 64px;
-  cursor: pointer;
+  margin: 0;
 }
-
-.service-web-faq .accordion-a {
+.service-web-faq__list .list.question i.fa-solid {
+  flex-shrink: 0;
+  color: #28849D;
+  font-size: 14px;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+.service-web-faq__list .list.question.active i.fa-solid {
+  transform: rotate(0);
+}
+.service-web-faq__list .list.answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #F0F8F9;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.service-web-faq__list .list.answer .text-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px 22px;
+}
+.service-web-faq__list .list.answer .list-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #B4DBE0;
+  color: #28849D;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  margin-top: 2px;
+}
+.service-web-faq__list .list.answer .text {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-size: 14.5px;
   line-height: 1.95;
   color: #3E5054;
   letter-spacing: 0.04em;
-  padding: 0 56px 24px 64px;
-  background: #FFFFFF;
+  margin: 0;
+  flex: 1;
 }
-.service-web-faq .accordion-a p {
+.service-web-faq__list .list.answer .text p {
   margin: 0 0 14px;
 }
-.service-web-faq .accordion-a p:last-child {
+.service-web-faq__list .list.answer .text p:last-child {
   margin-bottom: 0;
 }
-.service-web-faq .accordion-a ul {
+.service-web-faq__list .list.answer .text ul {
   padding-left: 1.4em;
   margin: 0 0 14px;
-}
-
-.service-web-faq .accordion-mark {
-  position: absolute;
-  left: 18px;
-  top: 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0;
-  background: #28849D;
-  color: #FFFFFF;
-}
-
-.service-web-faq .accordion-a .accordion-mark {
-  position: relative;
-  left: -46px;
-  top: 0;
-  background: #B4DBE0;
-  color: #28849D;
-  margin-right: 8px;
 }
 
 .service-web-faq__sub {
@@ -15648,23 +15695,34 @@ body.has-header-v4 .loading-container {
   .service-web-faq .container {
     padding: 0 20px;
   }
-  .service-web-faq .accordion-q {
-    font-size: 14px;
-    padding: 16px 16px 16px 56px;
+  .service-web-faq__list .list.question {
+    padding: 16px 18px;
+    gap: 10px;
   }
-  .service-web-faq .accordion-a {
-    font-size: 13.5px;
-    padding: 0 16px 18px 56px;
+  .service-web-faq__list .list.question .text-wrapper {
+    gap: 12px;
   }
-  .service-web-faq .accordion-mark {
+  .service-web-faq__list .list.question .list-icon {
     width: 28px;
     height: 28px;
     font-size: 13px;
-    left: 14px;
-    top: 14px;
   }
-  .service-web-faq .accordion-a .accordion-mark {
-    left: -42px;
+  .service-web-faq__list .list.question .text {
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  .service-web-faq__list .list.answer .text-wrapper {
+    padding: 16px 18px 18px;
+    gap: 12px;
+  }
+  .service-web-faq__list .list.answer .list-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+  .service-web-faq__list .list.answer .text {
+    font-size: 13px;
+    line-height: 1.85;
   }
   .service-web-cta {
     padding: 56px 0;
