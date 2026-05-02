@@ -245,12 +245,7 @@ $will-subtle:    #8AA0A4;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform .5s ease;
     }
-  }
-
-  &:hover &__thumb img {
-    transform: scale(1.04);
   }
 
   &__thumb-placeholder {
@@ -708,7 +703,6 @@ $will-subtle:    #8AA0A4;
 
 @media (prefers-reduced-motion: reduce) {
   .ebooks-card,
-  .ebooks-card__thumb img,
   .ebooks-card__cta-arrow,
   .ebooks-tabs__btn {
     transition: none !important;
