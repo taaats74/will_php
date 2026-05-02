@@ -323,19 +323,7 @@
           </h2>
           <div class="ebooks-cards-grid ebooks-cards-grid--related">
             <?php foreach ( $related_ids as $rid ) : ?>
-              <article class="ebooks-card">
-                <a href="<?php echo esc_url( get_permalink( $rid ) ); ?>" class="ebooks-card__link">
-                  <?php if ( has_post_thumbnail( $rid ) ) : ?>
-                    <figure class="ebooks-card__thumb">
-                      <img src="<?php echo esc_url( get_the_post_thumbnail_url( $rid, 'medium' ) ); ?>" alt="<?php echo esc_attr( get_the_title( $rid ) ); ?>" loading="lazy">
-                    </figure>
-                  <?php endif; ?>
-                  <div class="ebooks-card__body">
-                    <h3 class="ebooks-card__title"><?php echo esc_html( get_the_title( $rid ) ); ?></h3>
-                    <p class="ebooks-card__excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt( $rid ), 40, '…' ) ); ?></p>
-                  </div>
-                </a>
-              </article>
+              <?php get_template_part( 'template-parts/ebooks-card', null, [ 'post_id' => (int) $rid ] ); ?>
             <?php endforeach; ?>
           </div>
           <p class="ebooks-related__more">
