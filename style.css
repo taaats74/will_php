@@ -15949,6 +15949,9 @@ body.has-header-v4 .loading-container {
   margin: 0 0 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid #C0D5D8;
+  min-height: 72px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .service-ma-target__text {
@@ -15961,9 +15964,10 @@ body.has-header-v4 .loading-container {
 }
 
 .service-ma-target__alt-block {
-  background: #d5e8ea;
+  background: #FFFFFF;
   border-radius: 12px;
   padding: 40px 48px;
+  box-shadow: 0 14px 36px rgba(40, 132, 157, 0.14);
 }
 
 .service-ma-target__alt-title {
@@ -16005,7 +16009,7 @@ body.has-header-v4 .loading-container {
   height: 12px;
   background: #28849D;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2.5px #d5e8ea;
+  box-shadow: inset 0 0 0 2.5px #FFFFFF;
 }
 
 .service-ma-target__alt-text {
