@@ -361,7 +361,7 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // =========================================
-// [5] FEATURE(4特徴・画像 + テキスト・ベネフィット行)
+// [5] FEATURE(4特徴・page-service-web の REASON 構造踏襲・2x2 grid)
 // =========================================
 .service-sns-feature {
   background: $color-white;
@@ -370,103 +370,84 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   .container { @extend %ss-container; }
 }
 
-.service-sns-feature__inner {
-  @extend %ss-inner;
-  max-width: 1100px;
-}
+.service-sns-feature__inner { @extend %ss-inner; }
 
 .service-sns-feature__head { @extend %ss-section-head; }
 
 .service-sns-feature__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
 }
 
 .service-sns-feature__item {
   list-style: none;
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 40px;
-  align-items: center;
-
-  // 偶数番目は画像を右に
-  &:nth-child(even) {
-    grid-template-columns: 1fr 360px;
-
-    .service-sns-feature__visual { order: 2; }
-    .service-sns-feature__text-wrapper { order: 1; }
-  }
-}
-
-.service-sns-feature__visual {
-  width: 100%;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-}
-
-.service-sns-feature__text-wrapper {
-  min-width: 0;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: 40px 36px 36px;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-sns-feature__num {
   font-family: $ss-font-jp;
   font-weight: 900;
-  font-size: 56px;
+  font-size: 64px;
   line-height: 1;
   color: $color-primary;
   letter-spacing: 0.04em;
   opacity: 0.85;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 
 .service-sns-feature__title {
   font-family: $ss-font-jp;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   color: $color-accent;
   letter-spacing: 0.04em;
   line-height: 1.5;
-  margin: 0 0 22px;
+  margin: 0 0 24px;
   padding-bottom: 18px;
   border-bottom: 1px solid $color-border;
+  // 横並びで下線位置を揃える(2行分の高さ確保)
+  min-height: calc(22px * 1.5 * 2 + 18px);
 }
 
-.service-sns-feature__desc {
+.service-sns-feature__approach {
+  margin-bottom: 24px;
+  flex: 1 1 auto;
+
   p {
     font-family: $ss-font-jp;
     font-size: 15px;
     line-height: 2;
     color: $color-text;
     letter-spacing: 0.04em;
-    margin: 0 0 20px;
-
-    &:last-child { margin-bottom: 0; }
+    margin: 0;
   }
 }
 
-// ベネフィット行(矢印 + 強調・page-service-web/ma の reason__benefit と同型)
 .service-sns-feature__benefit {
   background: $color-bg-pale;
   border-left: 4px solid $color-accent;
   border-radius: 0 6px 6px 0;
-  padding: 16px 22px;
-  font-family: $ss-font-jp;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.85;
-  color: $color-accent;
-  letter-spacing: 0.04em;
-  margin: 0;
+  padding: 18px 24px;
+
+  p {
+    font-family: $ss-font-jp;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.85;
+    color: $color-accent;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
 
   .keyword { @extend %ss-keyword; }
 }
@@ -965,20 +946,32 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   margin-right: auto;
 }
 
+// カード全体がリンク化(ボタン形式ではなく、テキスト+黄色マーカー強調)
 .service-sns-cta__card {
   list-style: none;
   background: $color-white;
   border-radius: 10px;
-  padding: 36px 32px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+
+    .service-sns-cta__action-arrow {
+      transform: translateX(4px);
+    }
   }
+}
+
+.service-sns-cta__card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 36px 32px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
 }
 
 .service-sns-cta__label {
@@ -996,24 +989,35 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   line-height: 1.85;
   color: $color-text;
   letter-spacing: 0.04em;
-  margin: 0 0 28px;
+  margin: 0 0 24px;
   flex: 1 1 auto;
 }
 
-.service-sns-cta__btn {
-  display: inline-block;
+// アクション(ボタン形式ではなくテキストリンク + 黄色マーカー)
+.service-sns-cta__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   font-family: $ss-font-jp;
   font-weight: 700;
-  font-size: 14px;
-  color: $color-white;
-  background: $color-accent;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 999px;
-  transition: background 0.3s ease;
+  font-size: 16px;
+  color: $color-accent;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
 
-  &:hover { background: #1f6f82; }
+.service-sns-cta__action-text {
+  display: inline-block;
+
+  .keyword { @extend %ss-keyword; }
+}
+
+.service-sns-cta__action-arrow {
+  display: inline-block;
+  color: $color-accent;
+  font-weight: 800;
+  transition: transform 0.3s ease;
 }
 
 // =====================================================
@@ -1031,14 +1035,13 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     }
   }
 
-  // FEATURE:画像縮小・グリッド維持
-  .service-sns-feature__item {
-    grid-template-columns: 280px 1fr;
-    gap: 32px;
+  // FEATURE:2 カラム維持(余白縮小)
+  .service-sns-feature__list {
+    gap: 24px;
+  }
 
-    &:nth-child(even) {
-      grid-template-columns: 1fr 280px;
-    }
+  .service-sns-feature__item {
+    padding: 32px 28px 28px;
   }
 
   // PRICE:2 カラム維持
@@ -1198,36 +1201,35 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     .container { padding: 0 20px; }
   }
 
-  .service-sns-feature__list { gap: 40px; }
+  .service-sns-feature__list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 
   .service-sns-feature__item {
-    grid-template-columns: 1fr;
-    gap: 18px;
-
-    &:nth-child(even) {
-      grid-template-columns: 1fr;
-
-      .service-sns-feature__visual { order: 0; }
-      .service-sns-feature__text-wrapper { order: 0; }
-    }
+    padding: 28px 22px 24px;
+    border-radius: 10px;
   }
 
-  .service-sns-feature__visual { max-width: 320px; margin: 0 auto; }
+  .service-sns-feature__num { font-size: 44px; margin-bottom: 14px; }
 
-  .service-sns-feature__num { font-size: 40px; margin-bottom: 8px; }
   .service-sns-feature__title {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.5;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    min-height: 0;
   }
 
-  .service-sns-feature__desc p { font-size: 14px; line-height: 1.9; margin-bottom: 16px; }
+  .service-sns-feature__approach p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
 
   .service-sns-feature__benefit {
     padding: 14px 18px;
-    font-size: 14px;
-    line-height: 1.8;
+
+    p { font-size: 14px; line-height: 1.8; }
   }
 
   // [6] PRICE
@@ -1336,8 +1338,8 @@ $ss-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     gap: 14px;
   }
 
-  .service-sns-cta__card { padding: 28px 22px; }
+  .service-sns-cta__card-link { padding: 28px 22px; }
   .service-sns-cta__label { font-size: 11.5px; margin-bottom: 14px; }
   .service-sns-cta__desc { font-size: 13.5px; line-height: 1.85; margin-bottom: 22px; }
-  .service-sns-cta__btn { font-size: 13px; padding: 12px 24px; }
+  .service-sns-cta__action { font-size: 14.5px; }
 }
