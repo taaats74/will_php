@@ -160,115 +160,115 @@ get_template_part('template-parts/page-hero', null, [
 </section>
 
 <!-- ===================================================== -->
-<!-- Section 4: 支援領域(5カード)                            -->
+<!-- Section 4: 支援領域(page-topv3-whatwedo 構造踏襲)        -->
 <!-- ===================================================== -->
-<section class="page-service__support" id="support">
+<section class="page-topv3-whatwedo" id="whatwedo">
   <div class="container">
     <div class="wrapper">
 
-      <div class="page-service__support-head">
-        <p class="page-service__eyebrow">SUPPORT AREAS</p>
-        <h2 class="page-service__support-title">課題に応じた、5つの支援領域</h2>
-        <p class="page-service__support-lead">
+      <div class="whatwedo-header">
+        <p class="en">SUPPORT AREAS</p>
+        <h2>課題に応じた、5つの<br class="sp">支援領域</h2>
+        <p class="lead">
           Webサイト制作を起点に、MA・コンテンツSEO・Instagram・グラフィックまで。<br>
           BtoB中小企業の営業基盤を統合的に支援する5つの領域で、貴社の課題に合わせた支援を提供します。
         </p>
       </div>
 
-      <ul class="page-service__support-list">
+      <div class="whatwedo-list">
 
-        <li class="page-service__support-card">
-          <a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>" class="page-service__support-card-link">
-            <div class="page-service__support-card-header">
-              <span class="page-service__support-card-num">01</span>
-              <h3 class="page-service__support-card-title">Webサイト制作</h3>
-            </div>
-            <p class="page-service__support-card-catch">営業基盤の中核となる、戦略設計型のWebサイト制作</p>
-            <p class="page-service__support-card-body">
-              ウィルサポ・ウィルサポECに加え、フルオーダー型・大規模リニューアルなど、
-              営業構造から逆算したWebサイト制作を、企業様の状況に合わせて提供します。
-            </p>
-            <span class="page-service__support-card-cta">
-              <span class="page-service__support-card-cta-text">サービス詳細を見る</span>
-              <span class="page-service__support-card-cta-arrow">→</span>
-            </span>
-          </a>
-        </li>
+        <a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>" class="whatwedo-item">
+          <div class="whatwedo-item-header">
+            <span class="whatwedo-number">01</span>
+            <h3>Webサイト制作</h3>
+          </div>
+          <div class="whatwedo-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <p class="whatwedo-catch">営業基盤の中核となる、戦略設計型のWebサイト制作</p>
+          <p class="whatwedo-body">
+            ウィルサポ・ウィルサポECに加え、フルオーダー型・大規模リニューアルなど、営業構造から逆算したWebサイト制作を、企業様の状況に合わせて提供します。
+          </p>
+          <div class="whatwedo-link">
+            <span class="whatwedo-link-text">サービス詳細を見る</span>
+            <span class="whatwedo-link-arrow">→</span>
+          </div>
+        </a>
 
-        <li class="page-service__support-card">
-          <a href="<?php echo esc_url( home_url('/service/web-marketing/') ); ?>" class="page-service__support-card-link">
-            <div class="page-service__support-card-header">
-              <span class="page-service__support-card-num">02</span>
-              <h3 class="page-service__support-card-title">MA構築・運用支援</h3>
-            </div>
-            <p class="page-service__support-card-catch">見込み客との関係構築を、仕組み化する</p>
-            <p class="page-service__support-card-body">
-              展示会や問い合わせで集めた見込み客情報を、その後の関係構築につなげる仕組みづくり。
-              MA導入から運用設計、シナリオ構築まで伴走し、属人化しない営業の流れを実装します。
-            </p>
-            <span class="page-service__support-card-cta">
-              <span class="page-service__support-card-cta-text">サービス詳細を見る</span>
-              <span class="page-service__support-card-cta-arrow">→</span>
-            </span>
-          </a>
-        </li>
+        <a href="<?php echo esc_url( home_url('/service/web-marketing/') ); ?>" class="whatwedo-item">
+          <div class="whatwedo-item-header">
+            <span class="whatwedo-number">02</span>
+            <h3>MA構築・運用支援</h3>
+          </div>
+          <div class="whatwedo-icon">
+            <i class="fas fa-gears"></i>
+          </div>
+          <p class="whatwedo-catch">見込み客との関係構築を、仕組み化する</p>
+          <p class="whatwedo-body">
+            展示会や問い合わせで集めた見込み客情報を、その後の関係構築につなげる仕組みづくり。MA導入から運用設計、シナリオ構築まで伴走し、属人化しない営業の流れを実装します。
+          </p>
+          <div class="whatwedo-link">
+            <span class="whatwedo-link-text">サービス詳細を見る</span>
+            <span class="whatwedo-link-arrow">→</span>
+          </div>
+        </a>
 
-        <li class="page-service__support-card">
-          <?php // TODO: 専用LP新設後にURL差替 ?>
-          <a href="<?php echo esc_url( home_url('/service/') ); ?>" class="page-service__support-card-link">
-            <div class="page-service__support-card-header">
-              <span class="page-service__support-card-num">03</span>
-              <h3 class="page-service__support-card-title">コンテンツSEO構築・運用支援</h3>
-            </div>
-            <p class="page-service__support-card-catch">継続的な認知獲得を、仕組みでつくる</p>
-            <p class="page-service__support-card-body">
-              検索流入を起点とした見込み客の獲得を、コンテンツの設計と継続運用で支援します。
-              記事戦略・キーワード設計・公開後の改善まで、認知層の課題解決を仕組み化します。
-            </p>
-            <span class="page-service__support-card-cta">
-              <span class="page-service__support-card-cta-text">サービス詳細を見る</span>
-              <span class="page-service__support-card-cta-arrow">→</span>
-            </span>
-          </a>
-        </li>
+        <?php // TODO: 専用LP新設後にURL差替 ?>
+        <a href="<?php echo esc_url( home_url('/service/') ); ?>" class="whatwedo-item">
+          <div class="whatwedo-item-header">
+            <span class="whatwedo-number">03</span>
+            <h3>コンテンツSEO構築・運用支援</h3>
+          </div>
+          <div class="whatwedo-icon">
+            <i class="fas fa-magnifying-glass-chart"></i>
+          </div>
+          <p class="whatwedo-catch">継続的な認知獲得を、仕組みでつくる</p>
+          <p class="whatwedo-body">
+            検索流入を起点とした見込み客の獲得を、コンテンツの設計と継続運用で支援します。記事戦略・キーワード設計・公開後の改善まで、認知層の課題解決を仕組み化します。
+          </p>
+          <div class="whatwedo-link">
+            <span class="whatwedo-link-text">サービス詳細を見る</span>
+            <span class="whatwedo-link-arrow">→</span>
+          </div>
+        </a>
 
-        <li class="page-service__support-card">
-          <a href="<?php echo esc_url( home_url('/service/sns-support/') ); ?>" class="page-service__support-card-link">
-            <div class="page-service__support-card-header">
-              <span class="page-service__support-card-num">04</span>
-              <h3 class="page-service__support-card-title">Instagram構築・運用支援</h3>
-            </div>
-            <p class="page-service__support-card-catch">BtoBでも届く、信頼形成型のSNS運用</p>
-            <p class="page-service__support-card-body">
-              BtoB中小企業向けに、認知拡大ではなく「信頼形成」を目的としたInstagram運用を支援。
-              アカウント設計から投稿運用まで、営業基盤の補完チャネルとして機能させます。
-            </p>
-            <span class="page-service__support-card-cta">
-              <span class="page-service__support-card-cta-text">サービス詳細を見る</span>
-              <span class="page-service__support-card-cta-arrow">→</span>
-            </span>
-          </a>
-        </li>
+        <a href="<?php echo esc_url( home_url('/service/sns-support/') ); ?>" class="whatwedo-item">
+          <div class="whatwedo-item-header">
+            <span class="whatwedo-number">04</span>
+            <h3>Instagram構築・運用支援</h3>
+          </div>
+          <div class="whatwedo-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <p class="whatwedo-catch">BtoBでも届く、信頼形成型のSNS運用</p>
+          <p class="whatwedo-body">
+            BtoB中小企業向けに、認知拡大ではなく「信頼形成」を目的としたInstagram運用を支援。アカウント設計から投稿運用まで、営業基盤の補完チャネルとして機能させます。
+          </p>
+          <div class="whatwedo-link">
+            <span class="whatwedo-link-text">サービス詳細を見る</span>
+            <span class="whatwedo-link-arrow">→</span>
+          </div>
+        </a>
 
-        <li class="page-service__support-card">
-          <a href="<?php echo esc_url( home_url('/service/graphic/') ); ?>" class="page-service__support-card-link">
-            <div class="page-service__support-card-header">
-              <span class="page-service__support-card-num">05</span>
-              <h3 class="page-service__support-card-title">グラフィック制作</h3>
-            </div>
-            <p class="page-service__support-card-catch">営業現場で使える、ビジュアルコミュニケーション</p>
-            <p class="page-service__support-card-body">
-              会社案内・サービス資料・展示会パネル・チラシなど、営業現場で使うグラフィック制作を支援します。
-              Web・MA・SNSと連動した一貫性のあるブランド表現を実現します。
-            </p>
-            <span class="page-service__support-card-cta">
-              <span class="page-service__support-card-cta-text">サービス詳細を見る</span>
-              <span class="page-service__support-card-cta-arrow">→</span>
-            </span>
-          </a>
-        </li>
+        <a href="<?php echo esc_url( home_url('/service/graphic/') ); ?>" class="whatwedo-item">
+          <div class="whatwedo-item-header">
+            <span class="whatwedo-number">05</span>
+            <h3>グラフィック制作</h3>
+          </div>
+          <div class="whatwedo-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <p class="whatwedo-catch">営業現場で使える、ビジュアルコミュニケーション</p>
+          <p class="whatwedo-body">
+            会社案内・サービス資料・展示会パネル・チラシなど、営業現場で使うグラフィック制作を支援します。Web・MA・SNSと連動した一貫性のあるブランド表現を実現します。
+          </p>
+          <div class="whatwedo-link">
+            <span class="whatwedo-link-text">サービス詳細を見る</span>
+            <span class="whatwedo-link-arrow">→</span>
+          </div>
+        </a>
 
-      </ul>
+      </div>
 
     </div>
   </div>
