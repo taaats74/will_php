@@ -55,16 +55,10 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-web-concept__inner">
 
-      <div class="service-web-concept__head concept-header">
-        <p class="en">CONCEPT</p>
-        <h2>コンセプト</h2>
-        <p class="subtitle">Webサイトの本当の役割を、私たちはこう考えています。</p>
-      </div>
-
-      <h3 class="service-web-concept__headline">
+      <h2 class="service-web-concept__headline">
         Webサイトは、集めるツールではなく、<br>
         <span class="keyword">選ばれるためのツール</span>。
-      </h3>
+      </h2>
 
       <div class="service-web-concept__body">
         <p>

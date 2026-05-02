@@ -14351,11 +14351,11 @@ body.has-header-v4 .loading-container {
   margin: 0 auto;
 }
 
-.service-web-cta__head, .service-web-faq__head, .service-web-works__head, .service-web-price__head, .service-web-flow__head, .service-web-reason__head, .service-web-problem__head, .service-web-target__head, .service-web-concept__head {
+.service-web-cta__head, .service-web-faq__head, .service-web-works__head, .service-web-price__head, .service-web-flow__head, .service-web-reason__head, .service-web-problem__head, .service-web-target__head {
   text-align: center;
   margin-bottom: 64px;
 }
-.service-web-cta__head .en, .service-web-faq__head .en, .service-web-works__head .en, .service-web-price__head .en, .service-web-flow__head .en, .service-web-reason__head .en, .service-web-problem__head .en, .service-web-target__head .en, .service-web-concept__head .en {
+.service-web-cta__head .en, .service-web-faq__head .en, .service-web-works__head .en, .service-web-price__head .en, .service-web-flow__head .en, .service-web-reason__head .en, .service-web-problem__head .en, .service-web-target__head .en {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 900;
   font-size: 60px;
@@ -14366,7 +14366,7 @@ body.has-header-v4 .loading-container {
   margin: 0 0 -28px;
   text-transform: uppercase;
 }
-.service-web-cta__head h2, .service-web-faq__head h2, .service-web-works__head h2, .service-web-price__head h2, .service-web-flow__head h2, .service-web-reason__head h2, .service-web-problem__head h2, .service-web-target__head h2, .service-web-concept__head h2 {
+.service-web-cta__head h2, .service-web-faq__head h2, .service-web-works__head h2, .service-web-price__head h2, .service-web-flow__head h2, .service-web-reason__head h2, .service-web-problem__head h2, .service-web-target__head h2 {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 500;
   font-size: 26px;
@@ -14375,7 +14375,7 @@ body.has-header-v4 .loading-container {
   line-height: 1.55;
   margin: 0 0 22px;
 }
-.service-web-cta__head .subtitle, .service-web-faq__head .subtitle, .service-web-works__head .subtitle, .service-web-price__head .subtitle, .service-web-flow__head .subtitle, .service-web-reason__head .subtitle, .service-web-problem__head .subtitle, .service-web-target__head .subtitle, .service-web-concept__head .subtitle {
+.service-web-cta__head .subtitle, .service-web-faq__head .subtitle, .service-web-works__head .subtitle, .service-web-price__head .subtitle, .service-web-flow__head .subtitle, .service-web-reason__head .subtitle, .service-web-problem__head .subtitle, .service-web-target__head .subtitle {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -14449,11 +14449,11 @@ body.has-header-v4 .loading-container {
 .service-web-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 38px;
-  line-height: 1.6;
+  font-size: 42px;
+  line-height: 1.55;
   color: #28849D;
   letter-spacing: 0.04em;
-  margin: 0 0 56px;
+  margin: 0 0 48px;
 }
 .service-web-concept__body {
   text-align: left;
@@ -15364,7 +15364,6 @@ body.has-header-v4 .loading-container {
   }
 }
 @media screen and (max-width: 767px) {
-  .service-web-concept__head,
   .service-web-target__head,
   .service-web-problem__head,
   .service-web-reason__head,
@@ -15375,7 +15374,6 @@ body.has-header-v4 .loading-container {
   .service-web-cta__head {
     margin-bottom: 44px;
   }
-  .service-web-concept__head .en,
   .service-web-target__head .en,
   .service-web-problem__head .en,
   .service-web-reason__head .en,
@@ -15388,7 +15386,6 @@ body.has-header-v4 .loading-container {
     letter-spacing: 3px;
     margin-bottom: -18px;
   }
-  .service-web-concept__head h2,
   .service-web-target__head h2,
   .service-web-problem__head h2,
   .service-web-reason__head h2,
@@ -15401,7 +15398,6 @@ body.has-header-v4 .loading-container {
     letter-spacing: 4px;
     margin-bottom: 16px;
   }
-  .service-web-concept__head .subtitle,
   .service-web-target__head .subtitle,
   .service-web-problem__head .subtitle,
   .service-web-reason__head .subtitle,
@@ -15446,9 +15442,9 @@ body.has-header-v4 .loading-container {
     padding: 0 20px;
   }
   .service-web-concept__headline {
-    font-size: 22px;
-    line-height: 1.7;
-    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 32px;
   }
   .service-web-concept__body p {
     font-size: 14px;
@@ -15781,11 +15777,11 @@ body.has-header-v4 .loading-container {
   margin: 0 auto;
 }
 
-.service-ma-cta__head, .service-ma-faq__head, .service-ma-price__head, .service-ma-flow__head, .service-ma-reason__head, .service-ma-principle__head, .service-ma-problem__head, .service-ma-target__head, .service-ma-concept__head {
+.service-ma-cta__head, .service-ma-faq__head, .service-ma-price__head, .service-ma-flow__head, .service-ma-reason__head, .service-ma-principle__head, .service-ma-problem__head, .service-ma-target__head {
   text-align: center;
   margin-bottom: 64px;
 }
-.service-ma-cta__head .en, .service-ma-faq__head .en, .service-ma-price__head .en, .service-ma-flow__head .en, .service-ma-reason__head .en, .service-ma-principle__head .en, .service-ma-problem__head .en, .service-ma-target__head .en, .service-ma-concept__head .en {
+.service-ma-cta__head .en, .service-ma-faq__head .en, .service-ma-price__head .en, .service-ma-flow__head .en, .service-ma-reason__head .en, .service-ma-principle__head .en, .service-ma-problem__head .en, .service-ma-target__head .en {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 900;
   font-size: 60px;
@@ -15796,7 +15792,7 @@ body.has-header-v4 .loading-container {
   margin: 0 0 -28px;
   text-transform: uppercase;
 }
-.service-ma-cta__head h2, .service-ma-faq__head h2, .service-ma-price__head h2, .service-ma-flow__head h2, .service-ma-reason__head h2, .service-ma-principle__head h2, .service-ma-problem__head h2, .service-ma-target__head h2, .service-ma-concept__head h2 {
+.service-ma-cta__head h2, .service-ma-faq__head h2, .service-ma-price__head h2, .service-ma-flow__head h2, .service-ma-reason__head h2, .service-ma-principle__head h2, .service-ma-problem__head h2, .service-ma-target__head h2 {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 500;
   font-size: 26px;
@@ -15805,7 +15801,7 @@ body.has-header-v4 .loading-container {
   line-height: 1.55;
   margin: 0 0 22px;
 }
-.service-ma-cta__head .subtitle, .service-ma-faq__head .subtitle, .service-ma-price__head .subtitle, .service-ma-flow__head .subtitle, .service-ma-reason__head .subtitle, .service-ma-principle__head .subtitle, .service-ma-problem__head .subtitle, .service-ma-target__head .subtitle, .service-ma-concept__head .subtitle {
+.service-ma-cta__head .subtitle, .service-ma-faq__head .subtitle, .service-ma-price__head .subtitle, .service-ma-flow__head .subtitle, .service-ma-reason__head .subtitle, .service-ma-principle__head .subtitle, .service-ma-problem__head .subtitle, .service-ma-target__head .subtitle {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -15879,11 +15875,11 @@ body.has-header-v4 .loading-container {
 .service-ma-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.6;
+  font-size: 42px;
+  line-height: 1.55;
   color: #28849D;
   letter-spacing: 0.04em;
-  margin: 0 0 56px;
+  margin: 0 0 48px;
 }
 .service-ma-concept__body {
   text-align: left;
@@ -16790,7 +16786,6 @@ body.has-header-v4 .loading-container {
   }
 }
 @media screen and (max-width: 767px) {
-  .service-ma-concept__head,
   .service-ma-target__head,
   .service-ma-problem__head,
   .service-ma-principle__head,
@@ -16802,7 +16797,6 @@ body.has-header-v4 .loading-container {
   .service-ma-cta__head {
     margin-bottom: 44px;
   }
-  .service-ma-concept__head .en,
   .service-ma-target__head .en,
   .service-ma-problem__head .en,
   .service-ma-principle__head .en,
@@ -16816,7 +16810,6 @@ body.has-header-v4 .loading-container {
     letter-spacing: 3px;
     margin-bottom: -18px;
   }
-  .service-ma-concept__head h2,
   .service-ma-target__head h2,
   .service-ma-problem__head h2,
   .service-ma-principle__head h2,
@@ -16830,7 +16823,6 @@ body.has-header-v4 .loading-container {
     letter-spacing: 4px;
     margin-bottom: 16px;
   }
-  .service-ma-concept__head .subtitle,
   .service-ma-target__head .subtitle,
   .service-ma-problem__head .subtitle,
   .service-ma-principle__head .subtitle,
@@ -16876,9 +16868,9 @@ body.has-header-v4 .loading-container {
     padding: 0 20px;
   }
   .service-ma-concept__headline {
-    font-size: 22px;
-    line-height: 1.7;
-    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 32px;
   }
   .service-ma-concept__body {
     margin-bottom: 36px;
@@ -17230,11 +17222,11 @@ body.has-header-v4 .loading-container {
   margin: 0 auto;
 }
 
-.service-sns-cta__head, .service-sns-faq__head, .service-sns-flow__head, .service-sns-principle__head, .service-sns-price__head, .service-sns-feature__head, .service-sns-role__head, .service-sns-problem__head, .service-sns-concept__head {
+.service-sns-cta__head, .service-sns-faq__head, .service-sns-flow__head, .service-sns-principle__head, .service-sns-price__head, .service-sns-feature__head, .service-sns-role__head, .service-sns-problem__head {
   text-align: center;
   margin-bottom: 64px;
 }
-.service-sns-cta__head .en, .service-sns-faq__head .en, .service-sns-flow__head .en, .service-sns-principle__head .en, .service-sns-price__head .en, .service-sns-feature__head .en, .service-sns-role__head .en, .service-sns-problem__head .en, .service-sns-concept__head .en {
+.service-sns-cta__head .en, .service-sns-faq__head .en, .service-sns-flow__head .en, .service-sns-principle__head .en, .service-sns-price__head .en, .service-sns-feature__head .en, .service-sns-role__head .en, .service-sns-problem__head .en {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 900;
   font-size: 60px;
@@ -17245,7 +17237,7 @@ body.has-header-v4 .loading-container {
   margin: 0 0 -28px;
   text-transform: uppercase;
 }
-.service-sns-cta__head h2, .service-sns-faq__head h2, .service-sns-flow__head h2, .service-sns-principle__head h2, .service-sns-price__head h2, .service-sns-feature__head h2, .service-sns-role__head h2, .service-sns-problem__head h2, .service-sns-concept__head h2 {
+.service-sns-cta__head h2, .service-sns-faq__head h2, .service-sns-flow__head h2, .service-sns-principle__head h2, .service-sns-price__head h2, .service-sns-feature__head h2, .service-sns-role__head h2, .service-sns-problem__head h2 {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 500;
   font-size: 26px;
@@ -17254,7 +17246,7 @@ body.has-header-v4 .loading-container {
   line-height: 1.55;
   margin: 0 0 22px;
 }
-.service-sns-cta__head .subtitle, .service-sns-faq__head .subtitle, .service-sns-flow__head .subtitle, .service-sns-principle__head .subtitle, .service-sns-price__head .subtitle, .service-sns-feature__head .subtitle, .service-sns-role__head .subtitle, .service-sns-problem__head .subtitle, .service-sns-concept__head .subtitle {
+.service-sns-cta__head .subtitle, .service-sns-faq__head .subtitle, .service-sns-flow__head .subtitle, .service-sns-principle__head .subtitle, .service-sns-price__head .subtitle, .service-sns-feature__head .subtitle, .service-sns-role__head .subtitle, .service-sns-problem__head .subtitle {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -17307,11 +17299,11 @@ body.has-header-v4 .loading-container {
 .service-sns-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.6;
+  font-size: 42px;
+  line-height: 1.55;
   color: #28849D;
   letter-spacing: 0.04em;
-  margin: 0 0 56px;
+  margin: 0 0 48px;
 }
 .service-sns-concept__body {
   text-align: left;
@@ -18060,7 +18052,6 @@ body.has-header-v4 .loading-container {
   }
 }
 @media screen and (max-width: 767px) {
-  .service-sns-concept__head,
   .service-sns-problem__head,
   .service-sns-role__head,
   .service-sns-feature__head,
@@ -18071,7 +18062,6 @@ body.has-header-v4 .loading-container {
   .service-sns-cta__head {
     margin-bottom: 44px;
   }
-  .service-sns-concept__head .en,
   .service-sns-problem__head .en,
   .service-sns-role__head .en,
   .service-sns-feature__head .en,
@@ -18084,7 +18074,6 @@ body.has-header-v4 .loading-container {
     letter-spacing: 3px;
     margin-bottom: -18px;
   }
-  .service-sns-concept__head h2,
   .service-sns-problem__head h2,
   .service-sns-role__head h2,
   .service-sns-feature__head h2,
@@ -18097,7 +18086,6 @@ body.has-header-v4 .loading-container {
     letter-spacing: 4px;
     margin-bottom: 16px;
   }
-  .service-sns-concept__head .subtitle,
   .service-sns-problem__head .subtitle,
   .service-sns-role__head .subtitle,
   .service-sns-feature__head .subtitle,
@@ -18136,9 +18124,9 @@ body.has-header-v4 .loading-container {
     padding: 0 20px;
   }
   .service-sns-concept__headline {
-    font-size: 22px;
-    line-height: 1.7;
-    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 32px;
   }
   .service-sns-concept__body p {
     font-size: 14px;
@@ -18443,11 +18431,11 @@ body.has-header-v4 .loading-container {
   margin: 0 auto;
 }
 
-.service-seo-cta__head, .service-seo-faq__head, .service-seo-flow__head, .service-seo-principle__head, .service-seo-price__head, .service-seo-feature__head, .service-seo-role__head, .service-seo-problem__head, .service-seo-concept__head {
+.service-seo-cta__head, .service-seo-faq__head, .service-seo-flow__head, .service-seo-principle__head, .service-seo-price__head, .service-seo-feature__head, .service-seo-role__head, .service-seo-problem__head {
   text-align: center;
   margin-bottom: 64px;
 }
-.service-seo-cta__head .en, .service-seo-faq__head .en, .service-seo-flow__head .en, .service-seo-principle__head .en, .service-seo-price__head .en, .service-seo-feature__head .en, .service-seo-role__head .en, .service-seo-problem__head .en, .service-seo-concept__head .en {
+.service-seo-cta__head .en, .service-seo-faq__head .en, .service-seo-flow__head .en, .service-seo-principle__head .en, .service-seo-price__head .en, .service-seo-feature__head .en, .service-seo-role__head .en, .service-seo-problem__head .en {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 900;
   font-size: 60px;
@@ -18458,7 +18446,7 @@ body.has-header-v4 .loading-container {
   margin: 0 0 -28px;
   text-transform: uppercase;
 }
-.service-seo-cta__head h2, .service-seo-faq__head h2, .service-seo-flow__head h2, .service-seo-principle__head h2, .service-seo-price__head h2, .service-seo-feature__head h2, .service-seo-role__head h2, .service-seo-problem__head h2, .service-seo-concept__head h2 {
+.service-seo-cta__head h2, .service-seo-faq__head h2, .service-seo-flow__head h2, .service-seo-principle__head h2, .service-seo-price__head h2, .service-seo-feature__head h2, .service-seo-role__head h2, .service-seo-problem__head h2 {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 500;
   font-size: 26px;
@@ -18467,7 +18455,7 @@ body.has-header-v4 .loading-container {
   line-height: 1.55;
   margin: 0 0 22px;
 }
-.service-seo-cta__head .subtitle, .service-seo-faq__head .subtitle, .service-seo-flow__head .subtitle, .service-seo-principle__head .subtitle, .service-seo-price__head .subtitle, .service-seo-feature__head .subtitle, .service-seo-role__head .subtitle, .service-seo-problem__head .subtitle, .service-seo-concept__head .subtitle {
+.service-seo-cta__head .subtitle, .service-seo-faq__head .subtitle, .service-seo-flow__head .subtitle, .service-seo-principle__head .subtitle, .service-seo-price__head .subtitle, .service-seo-feature__head .subtitle, .service-seo-role__head .subtitle, .service-seo-problem__head .subtitle {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -18520,11 +18508,11 @@ body.has-header-v4 .loading-container {
 .service-seo-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.6;
+  font-size: 42px;
+  line-height: 1.55;
   color: #28849D;
   letter-spacing: 0.04em;
-  margin: 0 0 56px;
+  margin: 0 0 48px;
 }
 .service-seo-concept__body {
   text-align: left;
@@ -19274,7 +19262,6 @@ body.has-header-v4 .loading-container {
   }
 }
 @media screen and (max-width: 767px) {
-  .service-seo-concept__head,
   .service-seo-problem__head,
   .service-seo-role__head,
   .service-seo-feature__head,
@@ -19285,7 +19272,6 @@ body.has-header-v4 .loading-container {
   .service-seo-cta__head {
     margin-bottom: 44px;
   }
-  .service-seo-concept__head .en,
   .service-seo-problem__head .en,
   .service-seo-role__head .en,
   .service-seo-feature__head .en,
@@ -19298,7 +19284,6 @@ body.has-header-v4 .loading-container {
     letter-spacing: 3px;
     margin-bottom: -18px;
   }
-  .service-seo-concept__head h2,
   .service-seo-problem__head h2,
   .service-seo-role__head h2,
   .service-seo-feature__head h2,
@@ -19311,7 +19296,6 @@ body.has-header-v4 .loading-container {
     letter-spacing: 4px;
     margin-bottom: 16px;
   }
-  .service-seo-concept__head .subtitle,
   .service-seo-problem__head .subtitle,
   .service-seo-role__head .subtitle,
   .service-seo-feature__head .subtitle,
@@ -19350,9 +19334,9 @@ body.has-header-v4 .loading-container {
     padding: 0 20px;
   }
   .service-seo-concept__headline {
-    font-size: 22px;
-    line-height: 1.7;
-    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 32px;
   }
   .service-seo-concept__body p {
     font-size: 14px;
