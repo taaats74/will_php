@@ -15762,23 +15762,23 @@ body.has-header-v4 .loading-container {
   border-radius: 2px;
 }
 
-.service-ma-cta .container, .service-ma-faq .container, .service-ma-works .container, .service-ma-price .container, .service-ma-flow .container, .service-ma-reason .container, .service-ma-principle .container, .service-ma-problem .container, .service-ma-target .container, .service-ma-concept .container, .service-ma-hero .container {
+.service-ma-cta .container, .service-ma-faq .container, .service-ma-price .container, .service-ma-flow .container, .service-ma-reason .container, .service-ma-principle .container, .service-ma-problem .container, .service-ma-target .container, .service-ma-concept .container, .service-ma-hero .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-.service-ma-cta__inner, .service-ma-faq__inner, .service-ma-works__inner, .service-ma-price__inner, .service-ma-flow__inner, .service-ma-reason__inner, .service-ma-principle__inner, .service-ma-problem__inner, .service-ma-target__inner, .service-ma-concept__inner, .service-ma-hero__inner {
+.service-ma-cta__inner, .service-ma-faq__inner, .service-ma-price__inner, .service-ma-flow__inner, .service-ma-reason__inner, .service-ma-principle__inner, .service-ma-problem__inner, .service-ma-target__inner, .service-ma-concept__inner, .service-ma-hero__inner {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.service-ma-cta__head, .service-ma-faq__head, .service-ma-works__head, .service-ma-price__head, .service-ma-flow__head, .service-ma-reason__head, .service-ma-principle__head, .service-ma-problem__head, .service-ma-target__head, .service-ma-concept__head {
+.service-ma-cta__head, .service-ma-faq__head, .service-ma-price__head, .service-ma-flow__head, .service-ma-reason__head, .service-ma-principle__head, .service-ma-problem__head, .service-ma-target__head, .service-ma-concept__head {
   text-align: center;
   margin-bottom: 64px;
 }
-.service-ma-cta__head .en, .service-ma-faq__head .en, .service-ma-works__head .en, .service-ma-price__head .en, .service-ma-flow__head .en, .service-ma-reason__head .en, .service-ma-principle__head .en, .service-ma-problem__head .en, .service-ma-target__head .en, .service-ma-concept__head .en {
+.service-ma-cta__head .en, .service-ma-faq__head .en, .service-ma-price__head .en, .service-ma-flow__head .en, .service-ma-reason__head .en, .service-ma-principle__head .en, .service-ma-problem__head .en, .service-ma-target__head .en, .service-ma-concept__head .en {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 900;
   font-size: 60px;
@@ -15789,7 +15789,7 @@ body.has-header-v4 .loading-container {
   margin: 0 0 -28px;
   text-transform: uppercase;
 }
-.service-ma-cta__head h2, .service-ma-faq__head h2, .service-ma-works__head h2, .service-ma-price__head h2, .service-ma-flow__head h2, .service-ma-reason__head h2, .service-ma-principle__head h2, .service-ma-problem__head h2, .service-ma-target__head h2, .service-ma-concept__head h2 {
+.service-ma-cta__head h2, .service-ma-faq__head h2, .service-ma-price__head h2, .service-ma-flow__head h2, .service-ma-reason__head h2, .service-ma-principle__head h2, .service-ma-problem__head h2, .service-ma-target__head h2, .service-ma-concept__head h2 {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 500;
   font-size: 26px;
@@ -15798,7 +15798,7 @@ body.has-header-v4 .loading-container {
   line-height: 1.55;
   margin: 0 0 22px;
 }
-.service-ma-cta__head .subtitle, .service-ma-faq__head .subtitle, .service-ma-works__head .subtitle, .service-ma-price__head .subtitle, .service-ma-flow__head .subtitle, .service-ma-reason__head .subtitle, .service-ma-principle__head .subtitle, .service-ma-problem__head .subtitle, .service-ma-target__head .subtitle, .service-ma-concept__head .subtitle {
+.service-ma-cta__head .subtitle, .service-ma-faq__head .subtitle, .service-ma-price__head .subtitle, .service-ma-flow__head .subtitle, .service-ma-reason__head .subtitle, .service-ma-principle__head .subtitle, .service-ma-problem__head .subtitle, .service-ma-target__head .subtitle, .service-ma-concept__head .subtitle {
   font-family: YuGothic, "Yu Gothic", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -15824,8 +15824,8 @@ body.has-header-v4 .loading-container {
 .service-ma-hero__catch {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 1.7;
+  font-size: 24px;
+  line-height: 1.75;
   color: #28849D;
   letter-spacing: 0.04em;
   margin: 0 0 28px;
@@ -16551,114 +16551,6 @@ body.has-header-v4 .loading-container {
   margin: 0;
 }
 
-.service-ma-works {
-  background: #FFFFFF;
-  padding: 120px 0;
-}
-.service-ma-works__inner {
-  max-width: 1100px;
-}
-
-.service-ma-works__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 48px;
-}
-
-.service-ma-works__card {
-  list-style: none;
-  background: #FFFFFF;
-  border: 1px solid #C0D5D8;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.service-ma-works__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(40, 132, 157, 0.12);
-}
-
-.service-ma-works__card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.service-ma-works__card-thumb {
-  width: 100%;
-  aspect-ratio: 16/10;
-  overflow: hidden;
-  background: #F0F8F9;
-}
-.service-ma-works__card-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.service-ma-works__card-body {
-  padding: 22px 22px 24px;
-}
-
-.service-ma-works__card-title {
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.55;
-  color: #28849D;
-  letter-spacing: 0.04em;
-  margin: 0 0 10px;
-}
-
-.service-ma-works__card-tag {
-  display: inline-block;
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-size: 11.5px;
-  font-weight: 600;
-  color: #3E5054;
-  background: #F0F8F9;
-  border: 1px solid #C0D5D8;
-  padding: 3px 10px;
-  border-radius: 999px;
-  letter-spacing: 0.04em;
-  margin-bottom: 14px;
-}
-
-.service-ma-works__card-cta {
-  display: block;
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #28849D;
-  letter-spacing: 0.04em;
-  margin-top: 6px;
-}
-
-.service-ma-works__more {
-  text-align: center;
-  margin: 0;
-}
-
-.service-ma-works__more-link {
-  display: inline-block;
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #28849D;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid #28849D;
-  padding-bottom: 2px;
-  transition: opacity 0.3s ease;
-}
-.service-ma-works__more-link:hover {
-  opacity: 0.7;
-}
-
 .service-ma-faq {
   background: #F0F8F9;
   padding: 120px 0;
@@ -16942,8 +16834,8 @@ body.has-header-v4 .loading-container {
     box-shadow: 0 6px 18px rgba(40, 132, 157, 0.08);
   }
   .service-ma-hero__catch {
-    font-size: 19px;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 1.75;
     margin-bottom: 22px;
   }
   .service-ma-hero__lead {
@@ -17236,23 +17128,6 @@ body.has-header-v4 .loading-container {
   .service-ma-price__philosophy-text {
     font-size: 13px;
     line-height: 1.85;
-  }
-  .service-ma-works {
-    padding: 60px 0;
-  }
-  .service-ma-works .container {
-    padding: 0 20px;
-  }
-  .service-ma-works__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-  .service-ma-works__card-body {
-    padding: 16px 18px 20px;
-  }
-  .service-ma-works__card-title {
-    font-size: 15px;
   }
   .service-ma-faq {
     padding: 60px 0;
