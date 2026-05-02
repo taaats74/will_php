@@ -36,7 +36,7 @@ get_template_part( 'template-parts/page-hero', null, [
       </h2>
 
       <p class="service-web-hero__lead">
-        ヒアリングから構成設計・デザイン・実装・公開まで、フルオーダーで伴走します。<br class="pc">
+        ヒアリングから構成設計・デザイン・実装・公開まで、フルオーダーで伴走。<br class="pc">
         営業基盤として機能するWebサイトを、貴社の事業フェーズに合わせて構築します。
       </p>
 
@@ -569,7 +569,7 @@ get_template_part( 'template-parts/page-hero', null, [
 </section>
 
 <!-- ===================================================== -->
-<!-- [8] WORKS(works CPT 最新6件)                          -->
+<!-- [8] WORKS(一覧ページへの誘導のみ)                       -->
 <!-- ===================================================== -->
 <section class="service-web-works">
   <div class="container">
@@ -582,54 +582,14 @@ get_template_part( 'template-parts/page-hero', null, [
       </div>
 
       <p class="service-web-works__lead">
-        業種・規模を問わず、BtoB中小企業を中心にご支援しています。
+        これまでに制作したBtoB企業様のWebサイトを、一覧ページにまとめています。<br>
+        業種・課題・設計の意図とあわせて、ぜひご覧ください。
       </p>
 
-      <?php
-      $works_query = new WP_Query([
-        'post_type'      => 'works',
-        'posts_per_page' => 6,
-        'post_status'    => 'publish',
-        'orderby'        => 'date',
-        'order'          => 'DESC',
-      ]);
-      ?>
-
-      <?php if ( $works_query->have_posts() ) : ?>
-        <ul class="service-web-works__grid">
-          <?php while ( $works_query->have_posts() ) : $works_query->the_post(); ?>
-            <li class="service-web-works__card">
-              <a href="<?php the_permalink(); ?>" class="service-web-works__card-link">
-                <div class="service-web-works__card-thumb">
-                  <?php if ( has_post_thumbnail() ) : ?>
-                    <?php the_post_thumbnail( 'large' ); ?>
-                  <?php else : ?>
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/img/about-strength01.jpg' ); ?>" alt="">
-                  <?php endif; ?>
-                </div>
-                <div class="service-web-works__card-body">
-                  <p class="service-web-works__card-title"><?php the_title(); ?></p>
-                  <?php
-                  $terms = get_the_terms( get_the_ID(), 'works' );
-                  if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
-                    $first_term = reset( $terms );
-                  ?>
-                    <span class="service-web-works__card-tag"><?php echo esc_html( $first_term->name ); ?></span>
-                  <?php endif; ?>
-                  <span class="service-web-works__card-cta">詳しく見る →</span>
-                </div>
-              </a>
-            </li>
-          <?php endwhile; ?>
-        </ul>
-        <?php wp_reset_postdata(); ?>
-      <?php else : ?>
-        <p class="service-web-works__empty">現在、表示できる制作実績がありません。</p>
-      <?php endif; ?>
-
-      <p class="service-web-works__more">
-        <a class="service-web-works__more-link" href="<?php echo esc_url( home_url('/works/') ); ?>">
-          すべての制作実績を見る →
+      <p class="service-web-works__cta-wrap">
+        <a class="service-web-works__cta-btn" href="<?php echo esc_url( home_url('/works/') ); ?>">
+          制作実績一覧を見る
+          <span class="service-web-works__cta-arrow">→</span>
         </a>
       </p>
 

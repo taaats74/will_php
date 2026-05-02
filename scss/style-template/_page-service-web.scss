@@ -228,8 +228,8 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 .service-web-target__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -239,10 +239,12 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 .service-web-target__item {
   list-style: none;
   background: $color-white;
-  border-left: 4px solid $color-accent;
-  border-radius: 0 8px 8px 0;
-  padding: 32px 36px;
+  border-top: 4px solid $color-accent;
+  border-radius: 0 0 8px 8px;
+  padding: 28px 26px 26px;
   box-shadow: 0 6px 18px rgba(40, 132, 157, 0.06);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-web-target__category-label {
@@ -411,9 +413,9 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 .service-web-reason__list {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -425,8 +427,10 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   background: $color-white;
   border: 1px solid $color-border;
   border-radius: 12px;
-  padding: 56px 56px 48px;
+  padding: 40px 36px 36px;
   box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-web-reason__number {
@@ -443,12 +447,12 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 .service-web-reason__title {
   font-family: $sw-font-jp;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 22px;
   color: $color-accent;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  margin: 0 0 28px;
-  padding-bottom: 22px;
+  margin: 0 0 24px;
+  padding-bottom: 18px;
   border-bottom: 1px solid $color-border;
 }
 
@@ -869,118 +873,47 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 .service-web-works__lead {
   text-align: center;
   font-family: $sw-font-jp;
-  font-size: 15px;
+  font-size: 15.5px;
   line-height: 1.95;
   color: $color-text;
-  margin: 0 0 56px;
-}
-
-.service-web-works__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  list-style: none;
-  padding: 0;
   margin: 0 0 48px;
 }
 
-.service-web-works__card {
-  list-style: none;
-  background: $color-white;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(40, 132, 157, 0.12);
-  }
-}
-
-.service-web-works__card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.service-web-works__card-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: $color-bg-pale;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-}
-
-.service-web-works__card-body {
-  padding: 22px 22px 24px;
-}
-
-.service-web-works__card-title {
-  font-family: $sw-font-jp;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.55;
-  color: $color-accent;
-  letter-spacing: 0.04em;
-  margin: 0 0 10px;
-}
-
-.service-web-works__card-tag {
-  display: inline-block;
-  font-family: $sw-font-jp;
-  font-size: 11.5px;
-  font-weight: 600;
-  color: $color-text;
-  background: $color-bg-pale;
-  border: 1px solid $color-border;
-  padding: 3px 10px;
-  border-radius: 999px;
-  letter-spacing: 0.04em;
-  margin-bottom: 14px;
-}
-
-.service-web-works__card-cta {
-  display: block;
-  font-family: $sw-font-jp;
-  font-size: 13px;
-  font-weight: 700;
-  color: $color-accent;
-  letter-spacing: 0.04em;
-  margin-top: 6px;
-}
-
-.service-web-works__empty {
-  text-align: center;
-  font-size: 14px;
-  color: $color-subtle;
-  padding: 40px 0;
-  margin: 0 0 48px;
-}
-
-.service-web-works__more {
+.service-web-works__cta-wrap {
   text-align: center;
   margin: 0;
 }
 
-.service-web-works__more-link {
-  display: inline-block;
+.service-web-works__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-family: $sw-font-jp;
-  font-size: 15px;
   font-weight: 700;
-  color: $color-accent;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: $color-white;
+  background: $color-accent;
   text-decoration: none;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid $color-accent;
-  padding-bottom: 2px;
-  transition: opacity 0.3s ease;
+  padding: 18px 48px;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(40, 132, 157, 0.24);
 
-  &:hover { opacity: 0.7; }
+  &:hover {
+    background: #1f6f82;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(40, 132, 157, 0.3);
+
+    .service-web-works__cta-arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.service-web-works__cta-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
 // =========================================
@@ -1196,6 +1129,26 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // =====================================================
+// Tablet (max-width: 1024px)
+// =====================================================
+@media screen and (max-width: 1024px) {
+  // FOR WHOM:3 → 2 カラム
+  .service-web-target__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  // REASON:2 → 2 カラム維持(余白だけ詰める)
+  .service-web-reason__list {
+    gap: 24px;
+  }
+
+  .service-web-reason__item {
+    padding: 32px 28px 28px;
+  }
+}
+
+// =====================================================
 // SP (max-width: 767px)
 // =====================================================
 @media screen and (max-width: 767px) {
@@ -1290,13 +1243,14 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .service-web-target__list {
+    grid-template-columns: 1fr;
     gap: 14px;
     margin-bottom: 32px;
   }
 
   .service-web-target__item {
     padding: 22px 22px;
-    border-left-width: 3px;
+    border-top-width: 3px;
   }
 
   .service-web-target__category-label {
@@ -1366,11 +1320,12 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .service-web-reason__list {
-    gap: 32px;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .service-web-reason__item {
-    padding: 32px 24px 28px;
+    padding: 28px 22px 24px;
     border-radius: 10px;
   }
 
@@ -1517,19 +1472,17 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .service-web-works__lead {
-    font-size: 13.5px;
-    margin-bottom: 36px;
-  }
-
-  .service-web-works__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    font-size: 14px;
+    line-height: 1.9;
     margin-bottom: 32px;
   }
 
-  .service-web-works__card-body { padding: 16px 18px 20px; }
-  .service-web-works__card-title { font-size: 15px; }
-  .service-web-works__card-tag { font-size: 11px; }
+  .service-web-works__cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 14px;
+  }
 
   // [9] FAQ
   .service-web-faq {
