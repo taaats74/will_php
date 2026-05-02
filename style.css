@@ -16866,6 +16866,11 @@ body.has-header-v4 .loading-container {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(40, 132, 157, 0.18);
 }
+.page-service__main-tab.is-active .page-service__main-tab-label,
+.page-service__main-tab.is-active .page-service__main-tab-name {
+  color: #ffffff;
+  opacity: 1;
+}
 
 .page-service__main-tab-label {
   font-size: 12px;

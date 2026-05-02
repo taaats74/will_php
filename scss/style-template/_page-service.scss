@@ -188,6 +188,13 @@ $philo-bg: #28849b;
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(40, 132, 157, 0.18);
+
+    // ACTIVE(背景ブルー)時:label / name を完全な白で統一
+    .page-service__main-tab-label,
+    .page-service__main-tab-name {
+      color: #ffffff;
+      opacity: 1;
+    }
   }
 }
 
