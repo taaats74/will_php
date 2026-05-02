@@ -47,7 +47,7 @@
     function will_ebooks_render_card( $post_id ) {
       $title     = get_the_title( $post_id );
       $permalink = get_permalink( $post_id );
-      $thumb     = get_the_post_thumbnail_url( $post_id, 'medium_large' );
+      $thumb_id  = get_post_thumbnail_id( $post_id );
       $subtitle  = get_post_meta( $post_id, 'dl_subtitle', true );
       $pages     = get_post_meta( $post_id, 'dl_page_count', true );
       $themes    = get_the_terms( $post_id, 'ebook_theme' );
@@ -55,8 +55,18 @@
       <article class="ebooks-card">
         <a href="<?php echo esc_url( $permalink ); ?>" class="ebooks-card__link">
           <div class="ebooks-card__thumb">
-            <?php if ( $thumb ) : ?>
-              <img src="<?php echo esc_url( $thumb ); ?>" alt="<?php echo esc_attr( $title ); ?>" loading="lazy">
+            <?php if ( $thumb_id ) : ?>
+              <?php
+                // srcset 自動付与:WP が登録済みの全サイズ(300/768/1024/1536/2048w)から
+                // ブラウザが DPR / 表示サイズに最適なものを選択する。
+                // sizes:SP(≤768)はカードがほぼ全幅 → 90vw、PC は 3カラムで ≈ 30vw。
+                echo wp_get_attachment_image( $thumb_id, 'large', false, [
+                  'alt'      => $title,
+                  'loading'  => 'lazy',
+                  'decoding' => 'async',
+                  'sizes'    => '(max-width: 768px) 90vw, 33vw',
+                ] );
+              ?>
             <?php else : ?>
               <div class="ebooks-card__thumb-placeholder">
                 <span>EBOOK</span>
