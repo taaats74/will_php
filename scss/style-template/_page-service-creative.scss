@@ -99,7 +99,7 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 // [2] CONCEPT(セントラルメッセージ)
 // =========================================
 .service-creative-concept {
-  background: $color-bg-pale;
+  background: $color-white;
   padding: 120px 0;
 
   .container { @extend %sc-container; }
@@ -145,7 +145,7 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 // [3] PROBLEM(3カテゴリ・チェックリスト)
 // =========================================
 .service-creative-problem {
-  background: $color-white;
+  background: $color-bg-pale;
   padding: 120px 0;
 
   .container { @extend %sc-container; }
@@ -166,9 +166,10 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
 .service-creative-problem__category {
   list-style: none;
-  background: $color-bg-pale;
+  background: $color-white;
   border-radius: 8px;
   padding: 36px 40px;
+  box-shadow: 0 4px 14px rgba(40, 132, 157, 0.05);
 }
 
 .service-creative-problem__category-title {
@@ -208,16 +209,16 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
       height: 14px;
       background: $color-primary;
       border-radius: 50%;
-      box-shadow: inset 0 0 0 3px $color-bg-pale;
+      box-shadow: inset 0 0 0 3px $color-white;
     }
   }
 }
 
 // =========================================
-// [4] FEATURE(4特徴・画像つき・2x2 grid)
+// [4] FEATURE(4特徴・2x2 grid・page-service-content-seo の FEATURE と同型)
 // =========================================
 .service-creative-feature {
-  background: $color-bg-pale;
+  background: $color-white;
   padding: 120px 0;
 
   .container { @extend %sc-container; }
@@ -241,26 +242,10 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   background: $color-white;
   border: 1px solid $color-border;
   border-radius: 12px;
-  padding: 0 0 36px;
+  padding: 40px 36px 36px;
   box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-}
-
-.service-creative-feature__img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: $color-bg-pale;
-  margin-bottom: 32px;
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
 
 .service-creative-feature__num {
@@ -272,7 +257,6 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   letter-spacing: 0.04em;
   opacity: 0.85;
   margin: 0 0 16px;
-  padding: 0 36px;
 }
 
 .service-creative-feature__title {
@@ -283,15 +267,14 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   letter-spacing: 0.04em;
   line-height: 1.5;
   margin: 0 0 24px;
-  padding: 0 36px 18px;
+  padding-bottom: 18px;
   border-bottom: 1px solid $color-border;
   // 横並びで下線位置を揃える(2行分の高さ確保)
   min-height: calc(22px * 1.5 * 2 + 18px);
 }
 
 .service-creative-feature__approach {
-  margin: 0 0 24px;
-  padding: 0 36px;
+  margin-bottom: 24px;
   flex: 1 1 auto;
 
   p {
@@ -309,7 +292,6 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   border-left: 4px solid $color-accent;
   border-radius: 0 6px 6px 0;
   padding: 18px 24px;
-  margin: 0 36px;
 
   p {
     font-family: $sc-font-jp;
@@ -335,7 +317,7 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 // [5] PRICE(4プラン・2x2 grid)
 // =========================================
 .service-creative-price {
-  background: $color-white;
+  background: $color-bg-pale;
   padding: 120px 0;
 
   .container { @extend %sc-container; }
@@ -377,7 +359,7 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 .service-creative-price__plan-card {
-  background: $color-bg-pale;
+  background: $color-white;
   border-radius: 8px;
   padding: 36px 32px;
   display: flex;
@@ -429,7 +411,7 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 // [6] FAQ(.accordion 既存パターン流用)
 // =========================================
 .service-creative-faq {
-  background: $color-bg-pale;
+  background: $color-white;
   padding: 120px 0;
 
   .container { @extend %sc-container; }
@@ -567,18 +549,7 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .service-creative-feature__item {
-    padding: 0 0 28px;
-  }
-
-  .service-creative-feature__num,
-  .service-creative-feature__title,
-  .service-creative-feature__approach {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-
-  .service-creative-feature__benefit {
-    margin: 0 28px;
+    padding: 32px 28px 28px;
   }
 
   // PRICE:2 カラム維持
@@ -661,7 +632,7 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     line-height: 1.8;
     padding-left: 22px;
 
-    &::before { width: 12px; height: 12px; box-shadow: inset 0 0 0 2.5px $color-bg-pale; }
+    &::before { width: 12px; height: 12px; box-shadow: inset 0 0 0 2.5px $color-white; }
   }
 
   // [4] FEATURE
@@ -676,19 +647,8 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .service-creative-feature__item {
-    padding: 0 0 24px;
+    padding: 28px 22px 24px;
     border-radius: 10px;
-  }
-
-  .service-creative-feature__img {
-    margin-bottom: 24px;
-  }
-
-  .service-creative-feature__num,
-  .service-creative-feature__title,
-  .service-creative-feature__approach {
-    padding-left: 22px;
-    padding-right: 22px;
   }
 
   .service-creative-feature__num { font-size: 44px; margin-bottom: 14px; }
@@ -707,7 +667,6 @@ $sc-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   }
 
   .service-creative-feature__benefit {
-    margin: 0 22px;
     padding: 14px 18px;
 
     p { font-size: 14px; line-height: 1.8; }
