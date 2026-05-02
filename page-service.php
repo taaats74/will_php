@@ -47,106 +47,115 @@ get_template_part('template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <!-- Section 3: 主力サービス(2カード並列)                    -->
 <!-- ===================================================== -->
-<section class="page-topv3-mainproduct" id="mainproduct">
+<section class="page-service__main" id="main-services">
   <div class="container">
     <div class="wrapper">
 
-      <div class="mainproduct-header">
-        <p class="lead">
-          ウィルが提供する5つの支援領域の中心にあるのが、<br>
-          <span class="keyword">月額制ホームページ制作サービス</span>です。<br>
-          事業フェーズに合った形で営業基盤の構築を支援します。
+      <div class="page-service__main-head">
+        <p class="page-service__eyebrow">MAIN SERVICES</p>
+        <h2 class="page-service__main-title">伴走型のサブスクサービス</h2>
+        <p class="page-service__main-lead">
+          Webサイトの構築から運用改善まで、月額制で伴走するサブスク型サービス。<br>
+          事業フェーズに合った形で、営業基盤の構築を支援します。
         </p>
       </div>
 
-      <ul class="mainproduct-tab">
-        <li data-mp-tab="mp-tab1" class="active">
-          <a href="#willsupport">
-            <span class="mp-tab-label">BtoB中小企業向け</span>
-            <span class="mp-tab-name">ウィルサポ</span>
+      <ul class="page-service__main-list">
+
+        <li class="page-service__main-card page-service__main-card--ws">
+          <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>"
+             class="page-service__main-card-link"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="ウィルサポのサービス詳細を新しいタブで開く">
+
+            <div class="page-service__main-card-target">[BtoB中小企業向け]</div>
+
+            <p class="page-service__main-card-catch">
+              あなたのWebサイトは、<br>
+              競合と比較されたときに勝てていますか？
+            </p>
+
+            <p class="page-service__main-card-type">サブスク型ホームページサービス</p>
+            <h3 class="page-service__main-card-name">ウィルサポ</h3>
+
+            <ul class="page-service__main-card-badges">
+              <li>初期費用<br>無料</li>
+              <li>契約期間の<br>縛りなし</li>
+              <li>BtoB特化の<br>構成設計</li>
+            </ul>
+
+            <p class="page-service__main-card-desc">
+              BtoB中小企業のための戦略設計から運用まで伴走する、月額費用型のサブスクホームページ制作サービスです。
+              比較検討フェーズで選ばれるWebサイトを、月額制で構築・改善し続けます。
+            </p>
+
+            <div class="page-service__main-card-benefit">
+              <p class="page-service__main-card-benefit-feature">
+                <span class="page-service__main-card-benefit-label">機能・特長</span>
+                営業構造から逆算した戦略設計と、月額制での継続運用
+              </p>
+              <p class="page-service__main-card-benefit-result">
+                <span class="page-service__main-card-benefit-arrow">→</span>
+                社内にWeb担当を置かずとも、サイトが見込み客を育てる仕組みになる
+              </p>
+            </div>
+
+            <span class="page-service__main-card-cta">
+              <span class="page-service__main-card-cta-text"><span class="pc">ウィルサポの</span>サービス詳細を見る</span>
+              <span class="page-service__main-card-cta-arrow">→</span>
+            </span>
+
           </a>
         </li>
-        <li data-mp-tab="mp-tab2">
-          <a href="#willsupport-ec">
-            <span class="mp-tab-label">EC事業者向け</span>
-            <span class="mp-tab-name">ウィルサポEC</span>
+
+        <li class="page-service__main-card page-service__main-card--ec">
+          <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>"
+             class="page-service__main-card-link"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="ウィルサポECのサービス詳細を新しいタブで開く">
+
+            <div class="page-service__main-card-target">[EC事業者向け]</div>
+
+            <p class="page-service__main-card-catch">スモールスタートで、本気のECを。</p>
+
+            <p class="page-service__main-card-type">EC事業者向けサブスクサービス</p>
+            <h3 class="page-service__main-card-name">ウィルサポEC</h3>
+
+            <ul class="page-service__main-card-badges">
+              <li>初期費用<br>無料</li>
+              <li>契約期間の<br>縛りなし</li>
+              <li>自由な<br>デザイン</li>
+            </ul>
+
+            <p class="page-service__main-card-desc">
+              ECサイト制作会社をお探しの方や、構築を代行してほしい企業様へ。
+              ウィルサポECは、構成設計から公開後の運用・保守まで一括対応する、Shopifyベースの月額型サービスです。
+            </p>
+
+            <div class="page-service__main-card-benefit">
+              <p class="page-service__main-card-benefit-feature">
+                <span class="page-service__main-card-benefit-label">機能・特長</span>
+                Shopifyベースのサブスク設計 + 構成設計から運用までの一括対応
+              </p>
+              <p class="page-service__main-card-benefit-result">
+                <span class="page-service__main-card-benefit-arrow">→</span>
+                大きな初期投資なくEC事業を立ち上げ、運用しながら改善し続けられる
+              </p>
+            </div>
+
+            <span class="page-service__main-card-cta">
+              <span class="page-service__main-card-cta-text"><span class="pc">ウィルサポECの</span>サービス詳細を見る</span>
+              <span class="page-service__main-card-cta-arrow">→</span>
+            </span>
+
           </a>
         </li>
+
       </ul>
 
-      <div class="mainproduct-wrapper">
-
-        <div id="mp-tab1" class="mainproduct-item is-active">
-          <div class="mp-target-label">[BtoB中小企業向け]</div>
-          <p class="mp-catch">
-            あなたのWebサイトは、<br>
-            競合と比較されたときに勝てていますか？
-          </p>
-          <div class="mp-desc mp-desc--ws">
-            <div class="mp-desc-grid">
-              <div class="mp-desc-content">
-                <p class="mp-type">サブスク型ホームページサービス</p>
-                <h3 class="mp-name">
-                  <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-v2-assets/img/fv-logotext.png' ); ?>" alt="ウィルサポ">
-                </h3>
-                <ul class="mp-badges">
-                  <li>初期費用<br>無料</li>
-                  <li>契約期間の<br>縛りなし</li>
-                  <li>BtoB特化の<br>構成設計</li>
-                </ul>
-              </div>
-              <div class="mp-desc-visual">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-v2-assets/img/fv-illust.png' ); ?>" alt="">
-              </div>
-            </div>
-            <p class="mp-description">
-              BtoB中小企業のための戦略設計から運用まで伴走する<br>
-              月額費用型のサブスクホームページ制作サービスです
-            </p>
-          </div>
-          <div class="mp-btn">
-            <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="mp-btn-link" target="_blank" rel="noopener noreferrer" aria-label="ウィルサポのサービス詳細を新しいタブで開く">
-              <span class="mp-btn-text"><span class="pc">ウィルサポの</span>サービス詳細を見る</span>
-              <span class="mp-btn-arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <div id="mp-tab2" class="mainproduct-item">
-          <div class="mp-target-label">[EC事業者向け]</div>
-          <p class="mp-catch">スモールスタートで、本気のECを。</p>
-          <div class="mp-desc mp-desc--ec">
-            <div class="mp-desc-grid">
-              <div class="mp-desc-content">
-                <p class="mp-type">EC事業者向けサブスクサービス</p>
-                <h3 class="mp-name mp-name--ec">ウィルサポEC</h3>
-                <ul class="mp-badges">
-                  <li>初期費用<br>無料</li>
-                  <li>契約期間の<br>縛りなし</li>
-                  <li>自由な<br>デザイン</li>
-                </ul>
-              </div>
-              <div class="mp-desc-visual">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-ec-assets/img/page-willsuppoec-hero1.png' ); ?>" alt="">
-              </div>
-            </div>
-            <p class="mp-description">
-              ECサイト制作会社をお探しの方や、構築を代行してほしい企業様へ。<br>
-              ウィルサポECは、構成設計から公開後の運用・保守まで一括対応する月額型サービスです。
-            </p>
-          </div>
-          <div class="mp-btn">
-            <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="mp-btn-link" target="_blank" rel="noopener noreferrer" aria-label="ウィルサポECのサービス詳細を新しいタブで開く">
-              <span class="mp-btn-text"><span class="pc">ウィルサポECの</span>サービス詳細を見る</span>
-              <span class="mp-btn-arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-    <img src="<?php echo esc_url( get_template_directory_uri() . '/img/page-top2-Service.png' ); ?>" alt="Service" class="rellax-down">
   </div>
 </section>
 
