@@ -15286,13 +15286,25 @@ body.has-header-v4 .loading-container {
   list-style: none;
   background: #FFFFFF;
   border-radius: 10px;
-  padding: 36px 32px;
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-web-cta__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+.service-web-cta__card:hover .service-web-cta__btn {
+  background: #1f6f82;
+}
+
+.service-web-cta__card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 36px 32px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
 }
 
 .service-web-cta__label {
@@ -15326,19 +15338,17 @@ body.has-header-v4 .loading-container {
 
 .service-web-cta__btn {
   display: inline-block;
+  align-self: center;
+  margin-top: auto;
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #FFFFFF;
   background: #28849D;
   letter-spacing: 0.06em;
-  text-decoration: none;
   padding: 12px 28px;
   border-radius: 999px;
   transition: background 0.3s ease;
-}
-.service-web-cta__btn:hover {
-  background: #1f6f82;
 }
 
 @media screen and (max-width: 1024px) {
@@ -16703,13 +16713,25 @@ body.has-header-v4 .loading-container {
   list-style: none;
   background: #FFFFFF;
   border-radius: 10px;
-  padding: 36px 32px;
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-ma-cta__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+.service-ma-cta__card:hover .service-ma-cta__btn {
+  background: #1f6f82;
+}
+
+.service-ma-cta__card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 36px 32px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
 }
 
 .service-ma-cta__label {
@@ -16743,19 +16765,17 @@ body.has-header-v4 .loading-container {
 
 .service-ma-cta__btn {
   display: inline-block;
+  align-self: center;
+  margin-top: auto;
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #FFFFFF;
   background: #28849D;
   letter-spacing: 0.06em;
-  text-decoration: none;
   padding: 12px 28px;
   border-radius: 999px;
   transition: background 0.3s ease;
-}
-.service-ma-cta__btn:hover {
-  background: #1f6f82;
 }
 
 @media screen and (max-width: 1024px) {
@@ -17957,13 +17977,25 @@ body.has-header-v4 .loading-container {
   list-style: none;
   background: #FFFFFF;
   border-radius: 10px;
-  padding: 36px 32px;
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-sns-cta__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+.service-sns-cta__card:hover .service-sns-cta__btn {
+  background: #1f6f82;
+}
+
+.service-sns-cta__card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 36px 32px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
 }
 
 .service-sns-cta__label {
@@ -17997,19 +18029,17 @@ body.has-header-v4 .loading-container {
 
 .service-sns-cta__btn {
   display: inline-block;
+  align-self: center;
+  margin-top: auto;
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #FFFFFF;
   background: #28849D;
   letter-spacing: 0.06em;
-  text-decoration: none;
   padding: 12px 28px;
   border-radius: 999px;
   transition: background 0.3s ease;
-}
-.service-sns-cta__btn:hover {
-  background: #1f6f82;
 }
 
 @media screen and (max-width: 1024px) {

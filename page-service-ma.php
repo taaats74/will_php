@@ -798,24 +798,30 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-ma-cta__grid">
 
         <li class="service-ma-cta__card">
-          <p class="service-ma-cta__label">[初期検討の方へ]</p>
-          <h3 class="service-ma-cta__title">1分でできる無料診断</h3>
-          <p class="service-ma-cta__desc">現在のWeb・営業基盤の課題を整理します</p>
-          <a class="service-ma-cta__btn" href="<?php echo esc_url( home_url('/diagnosis/') ); ?>">診断する →</a>
+          <a class="service-ma-cta__card-link" href="<?php echo esc_url( home_url('/diagnosis/') ); ?>">
+            <p class="service-ma-cta__label">[初期検討の方へ]</p>
+            <h3 class="service-ma-cta__title">1分でできる無料診断</h3>
+            <p class="service-ma-cta__desc">現在のWeb・営業基盤の課題を整理します</p>
+            <span class="service-ma-cta__btn">診断する →</span>
+          </a>
         </li>
 
         <li class="service-ma-cta__card">
-          <p class="service-ma-cta__label">[情報収集の方へ]</p>
-          <h3 class="service-ma-cta__title">無料ダウンロード資料</h3>
-          <p class="service-ma-cta__desc">BtoB Web集客・MA活用のお役立ち資料を配布中</p>
-          <a class="service-ma-cta__btn" href="<?php echo esc_url( home_url('/ebooks/') ); ?>">資料を見る →</a>
+          <a class="service-ma-cta__card-link" href="<?php echo esc_url( home_url('/ebooks/') ); ?>">
+            <p class="service-ma-cta__label">[情報収集の方へ]</p>
+            <h3 class="service-ma-cta__title">無料ダウンロード資料</h3>
+            <p class="service-ma-cta__desc">BtoB Web集客・MA活用のお役立ち資料を配布中</p>
+            <span class="service-ma-cta__btn">資料を見る →</span>
+          </a>
         </li>
 
         <li class="service-ma-cta__card">
-          <p class="service-ma-cta__label">[具体的な相談の方へ]</p>
-          <h3 class="service-ma-cta__title">お問い合わせ・お見積もり</h3>
-          <p class="service-ma-cta__desc">具体的なご相談・お見積もりはこちら</p>
-          <a class="service-ma-cta__btn" href="<?php echo esc_url( get_page_link(15) ); ?>">問い合わせる →</a>
+          <a class="service-ma-cta__card-link" href="<?php echo esc_url( get_page_link(15) ); ?>">
+            <p class="service-ma-cta__label">[具体的な相談の方へ]</p>
+            <h3 class="service-ma-cta__title">お問い合わせ・お見積もり</h3>
+            <p class="service-ma-cta__desc">具体的なご相談・お見積もりはこちら</p>
+            <span class="service-ma-cta__btn">問い合わせる →</span>
+          </a>
         </li>
 
       </ul>
