@@ -1,0 +1,495 @@
+// ===================================================
+// page-works.php 専用スタイル
+// 名前空間: .page-works__*
+//
+// Section 構成:
+//   1. hero        … template-parts/page-hero
+//   2. works       … wsv2-works を構造移植
+//   3. services    … 3カードナビ
+//   4. diagnosis   … 無料診断 CTA バナー
+//   5. ebook       … page-topv3-ebook 構造踏襲(.ebook-* セレクタは既存 _page-top3.scss を再利用)
+//   6. contact     … page-topv3-contact-v5 構造踏襲(.contact-v5-* セレクタは既存 _page-top3.scss を再利用)
+// ===================================================
+
+// ローカル変数(_general.scss / wsv2 LP の既存値に合わせる)
+$pw-primary:    #28849c;
+$pw-primary-hv: #1e6b80;
+$pw-heading:    #333333;
+$pw-body:       #333333;
+$pw-border:     #cccccc;
+$pw-surface:    #ffffff;
+$pw-bg-soft:    #c9ddde;
+$pw-bg-cta:     #f4f8f8;
+
+// =============================================
+// Section 2: 制作実績一覧(wsv2-works 移植)
+// =============================================
+.page-works__works {
+  background: $pw-bg-soft;
+  padding: 110px 0;
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.page-works__works-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.page-works__eyebrow {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  opacity: 0.3;
+  color: $pw-primary;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.page-works__works-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: $pw-heading;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.page-works__works-lead {
+  max-width: 650px;
+  margin: 31px auto 0;
+  text-align: left;
+}
+
+.page-works__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-works__card {
+  list-style: none;
+}
+
+.page-works__card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-works__card-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: $pw-bg-soft;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+}
+
+.page-works__card-link:hover .page-works__card-thumb img {
+  transform: scale(1.03);
+}
+
+.page-works__card-body {
+  padding: 15px 0 0;
+}
+
+.page-works__card-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: $pw-heading;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.page-works__card-tag {
+  display: none;
+}
+
+// =============================================
+// Section 3: サービス紹介(3カード)
+// =============================================
+.page-works__services {
+  background: $pw-surface;
+  padding: 110px 0;
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.page-works__services-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.page-works__services-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: $pw-heading;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.page-works__services-lead {
+  max-width: 650px;
+  margin: 31px auto 0;
+  text-align: center;
+}
+
+.page-works__services-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-works__service-card {
+  list-style: none;
+}
+
+.page-works__service-link {
+  display: block;
+  height: 100%;
+  padding: 32px 28px;
+  background: $pw-surface;
+  border: 1px solid $pw-border;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: $pw-primary;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(40, 132, 156, 0.12);
+  }
+}
+
+.page-works__service-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: $pw-primary;
+  margin-bottom: 12px;
+}
+
+.page-works__service-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: $pw-heading;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.page-works__service-lead {
+  font-size: 14px;
+  line-height: 1.7;
+  color: $pw-body;
+  margin-bottom: 24px;
+}
+
+.page-works__service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: $pw-primary;
+
+  .page-works__service-cta-arrow {
+    transition: transform 0.3s ease;
+  }
+}
+
+.page-works__service-link:hover .page-works__service-cta-arrow {
+  transform: translateX(4px);
+}
+
+// =============================================
+// Section 4: 無料診断 CTA バナー
+// =============================================
+.page-works__diagnosis {
+  background: $pw-bg-cta;
+  padding: 96px 0;
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.page-works__diagnosis-inner {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.page-works__diagnosis-eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: $pw-primary;
+  margin-bottom: 16px;
+}
+
+.page-works__diagnosis-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: $pw-heading;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.page-works__diagnosis-lead {
+  font-size: 15px;
+  line-height: 1.8;
+  color: $pw-body;
+  margin-bottom: 32px;
+}
+
+.page-works__diagnosis-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  background: $pw-primary;
+  color: $pw-surface;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  .page-works__diagnosis-cta-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: $pw-primary-hv;
+    transform: translateY(-2px);
+
+    .page-works__diagnosis-cta-arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// =============================================
+// Section 5: ebook(page-topv3-ebook 構造踏襲)
+// .ebook-* セレクタは _page-top3.scss が既に定義しているため、
+// page-works ではセクションラッパー .page-works__ebook の余白のみ調整
+// =============================================
+.page-works__ebook {
+  padding: 110px 0;
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+// =============================================
+// Section 6: contact(page-topv3-contact-v5 構造踏襲)
+// .contact-v5-* セレクタは _page-top3.scss が既に定義しているため、
+// page-works ではセクションラッパー .page-works__contact の余白のみ調整
+// =============================================
+.page-works__contact {
+  background: $pw-bg-cta;
+  padding: 110px 0;
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+// =============================================
+// Tablet (max-width: 1024px)
+// =============================================
+@media screen and (max-width: 1024px) {
+
+  .page-works__works {
+    padding: 96px 0;
+
+    .container {
+      padding: 0 24px;
+    }
+  }
+
+  .page-works__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .page-works__services {
+    padding: 96px 0;
+
+    .container {
+      padding: 0 24px;
+    }
+  }
+
+  .page-works__services-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .page-works__diagnosis {
+    padding: 80px 0;
+
+    .container {
+      padding: 0 24px;
+    }
+  }
+
+  .page-works__ebook {
+    padding: 96px 0;
+
+    .container {
+      padding: 0 24px;
+    }
+  }
+
+  .page-works__contact {
+    padding: 96px 0;
+
+    .container {
+      padding: 0 24px;
+    }
+  }
+}
+
+// =============================================
+// SP (max-width: 767px)
+// =============================================
+@media screen and (max-width: 767px) {
+
+  .page-works__works {
+    padding: 72px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .page-works__works-head {
+    margin-bottom: 40px;
+  }
+
+  .page-works__works-title {
+    font-size: 24px;
+  }
+
+  .page-works__works-lead {
+    font-size: 14px;
+  }
+
+  // 仕様書指示:SP 1カラム
+  .page-works__list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .page-works__card-body {
+    padding: 12px 14px;
+  }
+
+  .page-works__card-name {
+    font-size: 14px;
+  }
+
+  .page-works__services {
+    padding: 72px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .page-works__services-head {
+    margin-bottom: 40px;
+  }
+
+  .page-works__services-title {
+    font-size: 24px;
+  }
+
+  .page-works__services-lead {
+    font-size: 14px;
+  }
+
+  .page-works__services-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .page-works__service-link {
+    padding: 24px 20px;
+  }
+
+  .page-works__service-title {
+    font-size: 20px;
+  }
+
+  .page-works__diagnosis {
+    padding: 64px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .page-works__diagnosis-title {
+    font-size: 22px;
+  }
+
+  .page-works__diagnosis-lead {
+    font-size: 14px;
+  }
+
+  .page-works__diagnosis-cta {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+  }
+
+  .page-works__ebook {
+    padding: 72px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .page-works__contact {
+    padding: 72px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+}
