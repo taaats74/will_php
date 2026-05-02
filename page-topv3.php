@@ -633,6 +633,8 @@
       </div>
     </section>
 
+    <?php // TODO: YouTube動画作成後に「if ( false )」を「if ( true )」または条件削除で再有効化 ?>
+    <?php if ( false ) : ?>
     <section class="page-topv3-youtube" id="youtube">
       <div class="container">
         <div class="wrapper">
@@ -767,6 +769,7 @@
         </div>
       </div>
     </section>
+    <?php endif; ?>
 
     <section class="page-topv3-works" id="works">
       <div class="container">
