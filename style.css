@@ -1400,7 +1400,7 @@ body.has-header-v4 .loading-container {
 
 @media screen and (max-width: 770px) {
   .page-hero {
-    padding: 100px 0;
+    padding: 50px 0;
   }
   .page-hero__en {
     font-size: 36px;
