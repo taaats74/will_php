@@ -810,7 +810,7 @@ get_template_part( 'template-parts/page-hero', null, [
         </li>
 
         <li class="service-ma-cta__card">
-          <a class="service-ma-cta__card-link" href="<?php echo esc_url( get_page_link(15) ); ?>">
+          <a class="service-ma-cta__card-link" href="<?php echo esc_url( home_url('/contact/') ); ?>">
             <p class="service-ma-cta__label">[具体的な相談の方へ]</p>
             <h3 class="service-ma-cta__title">お問い合わせ・お見積もり</h3>
             <p class="service-ma-cta__desc">具体的なご相談・お見積もりはこちら</p>

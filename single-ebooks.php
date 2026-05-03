@@ -134,12 +134,12 @@
             </script>
           <?php else : ?>
             <p class="ebooks-form-sidebar__placeholder">
-              フォームを準備中です。お急ぎの方は<a href="/contact/">お問い合わせフォーム</a>からご連絡ください。
+              フォームを準備中です。お急ぎの方は<a href="<?php echo esc_url( home_url('/contact/') ); ?>">お問い合わせフォーム</a>からご連絡ください。
             </p>
           <?php endif; ?>
 
           <p class="ebooks-form-sidebar__privacy">
-            ご入力いただいた情報は<a href="/privacy-policy/">プライバシーポリシー</a>に基づき適切に管理します。
+            ご入力いただいた情報は<a href="<?php echo esc_url( home_url('/privacy-policy/') ); ?>">プライバシーポリシー</a>に基づき適切に管理します。
           </p>
 
         </div>
@@ -381,12 +381,12 @@
           </script>
         <?php else : ?>
           <p class="ebooks-form-sidebar__placeholder">
-            フォームを準備中です。お急ぎの方は<a href="/contact/">お問い合わせフォーム</a>からご連絡ください。
+            フォームを準備中です。お急ぎの方は<a href="<?php echo esc_url( home_url('/contact/') ); ?>">お問い合わせフォーム</a>からご連絡ください。
           </p>
         <?php endif; ?>
 
         <p class="ebooks-form-sidebar__privacy">
-          ご入力いただいた情報は<a href="/privacy-policy/">プライバシーポリシー</a>に基づき適切に管理します。
+          ご入力いただいた情報は<a href="<?php echo esc_url( home_url('/privacy-policy/') ); ?>">プライバシーポリシー</a>に基づき適切に管理します。
         </p>
 
       </div>

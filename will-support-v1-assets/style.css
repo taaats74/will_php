@@ -211,7 +211,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
 }
 
 .fv .container {
-  background-image: url(../willsupport-img/fv-bg.png);
+  background-image: url(img/fv-bg.png);
   background-position: center;
   background-size: cover;
 }
@@ -573,7 +573,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
 }
 
 .contact .container .wrapper {
-  background-image: url(../willsupport-img/contact-bg.png);
+  background-image: url(img/contact-bg.png);
   background-position: center;
   background-size: cover;
   padding: 100px 0;
@@ -902,7 +902,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
 }
 
 footer .container .wrapper {
-  background-image: url(../willsupport-img/footer-bg-img.png);
+  background-image: url(img/footer-bg-img.png);
   padding: 40px 0 15px 0;
 }
 footer .container .wrapper .footer-menu-wrapper {
@@ -961,7 +961,7 @@ footer .container .wrapper .copy {
 
 @media screen and (max-width: 1250px) {
   .fv .container {
-    background-image: url(../willsupport-img/fv-bg.png);
+    background-image: url(img/fv-bg.png);
     background-position: center;
     background-size: cover;
   }
@@ -1139,7 +1139,7 @@ footer .container .wrapper .copy {
     background: #5898a2;
   }
   .fv .container {
-    background-image: url(../willsupport-img/fv-bg.png);
+    background-image: url(img/fv-bg.png);
     background-position: center;
     background-size: cover;
   }
@@ -1511,7 +1511,7 @@ footer .container .wrapper .copy {
     letter-spacing: 5px;
   }
   footer .container .wrapper {
-    background-image: url(../willsupport-img/footer-bg-img.png);
+    background-image: url(img/footer-bg-img.png);
     padding: 40px 0 15px 0;
   }
   footer .container .wrapper .footer-menu-wrapper {
@@ -1933,7 +1933,7 @@ footer .container .wrapper .copy {
     opacity: 0.8;
   }
   .contact .container .wrapper {
-    background-image: url(../willsupport-img/contact-bg.png);
+    background-image: url(img/contact-bg.png);
     background-position: center;
     background-size: cover;
     padding: 50px 0;
@@ -2278,7 +2278,7 @@ footer .container .wrapper .copy {
     color: white;
   }
   footer .container .wrapper {
-    background-image: url(../willsupport-img/footer-bg-img.png);
+    background-image: url(img/footer-bg-img.png);
     padding: 40px 0 80px 0;
   }
   footer .container .wrapper .footer-menu-wrapper {

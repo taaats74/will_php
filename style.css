@@ -21137,6 +21137,13 @@ body.is-sp-menu-open {
 .ebooks-cards-grid--related {
   grid-template-columns: repeat(3, 1fr);
 }
+.ebooks-cards-grid--top-featured {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 36px;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .ebooks-pickup,
 .ebooks-list {
@@ -21496,6 +21503,9 @@ body.is-sp-menu-open {
   }
   .ebooks-cards-grid--related {
     grid-template-columns: 1fr;
+  }
+  .ebooks-cards-grid--top-featured {
+    gap: 24px;
   }
   .ebooks-card__body {
     padding: 16px 16px 20px;
