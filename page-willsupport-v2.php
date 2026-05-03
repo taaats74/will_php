@@ -9,34 +9,10 @@
 <head prefix="og: https://ogp.me/ns#">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ウィルサポは、BtoB中小企業のための戦略設計から運用まで伴走する月額制ホームページサービスです。比較検討フェーズで選ばれる構成・導線設計を、初期費用0円・月額9,800円からご提供します。福岡・全国対応。">
-  <title>BtoB中小企業のための月額ホームページ制作｜ウィルサポ｜合同会社ウィル</title>
 
-  <!-- OGP -->
-  <meta property="og:title" content="BtoB中小企業のための月額ホームページ制作｜ウィルサポ｜合同会社ウィル">
-  <meta property="og:description" content="ウィルサポは、BtoB中小企業のための戦略設計から運用まで伴走する月額制ホームページサービスです。比較検討フェーズで選ばれる構成・導線設計を、初期費用0円・月額9,800円からご提供します。福岡・全国対応。">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/will-support-v2-assets/img/willsupport-v2-ogp.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="合同会社ウィル">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:url" content="https://will-corp.co.jp/willsupport/">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BtoB中小企業のための月額ホームページ制作｜ウィルサポ｜合同会社ウィル">
-  <meta name="twitter:description" content="ウィルサポは、BtoB中小企業のための戦略設計から運用まで伴走する月額制ホームページサービスです。比較検討フェーズで選ばれる構成・導線設計を、初期費用0円・月額9,800円からご提供します。福岡・全国対応。">
-  <meta name="twitter:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/will-support-v2-assets/img/willsupport-v2-ogp.png">
-
-  <!-- preconnect -->
   <link rel="preconnect" href="https://js-na2.hsforms.net" crossorigin>
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/style.css">
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
-
-  <!-- HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
 
   <!-- 構造化データ：Service + Offer -->
   <script type="application/ld+json">
@@ -46,14 +22,7 @@
     "name": "ウィルサポ",
     "serviceType": "サブスク型ホームページ制作",
     "provider": {
-      "@type": "Organization",
-      "name": "合同会社ウィル",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "福岡市博多区",
-        "addressRegion": "福岡県",
-        "addressCountry": "JP"
-      }
+      "@id": "https://will-corp.co.jp/#organization"
     },
     "areaServed": "JP",
     "description": "BtoB中小企業のための月額制ホームページ制作・運用サービス",
@@ -77,7 +46,7 @@
         "name": "初期費用は本当に0円ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい、本当に0円です。制作開始時にまとまった費用は発生しません。追加費用が生じる場合も事前にご説明します。"
+          "text": "はい、本当に0円です。制作開始時にまとまった費用は発生しません。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。"
         }
       },
       {
@@ -101,7 +70,7 @@
         "name": "SEO対策は含まれますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "基本的な内部SEO対策は標準対応。タグ設定・表示速度など土台づくりをしっかり行います。SEOの全体設計についてはBtoB Web集客の基本もあわせてご覧ください。継続施策は別途ご提案可能です。"
+          "text": "はい、基本的な内部SEO対策は月額内で標準対応します。具体的には、タイトル・ディスクリプションの設計、表示速度の最適化、スマホ対応、XMLサイトマップの設置、内部リンクの整理などを行い、検索エンジンに評価されやすい土台をつくります。記事更新やキーワード戦略など、継続的なSEO施策についても別途ご提案可能です。"
         }
       },
       {
@@ -125,7 +94,7 @@
         "name": "成果（問い合わせ）が出るまでどのくらいかかりますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Webサイトの役割によってご期待いただく成果は異なります。私たちは、Webサイトは「比較検討時に選ばれる状態」を作るツールと考えています。つまり、見込み客がサイトに訪れるための認知施策（コンテンツSEO・SNS・広告・営業活動など）と、サイトでの意思決定を後押しする構造が揃ってはじめて、成果が生まれます。そのため「公開後◯ヶ月で問い合わせが◯件」という約束はいたしかねますが、サイト公開と並行して認知施策も整えていくことで、6ヶ月〜1年のスパンで成果が現れ始めるケースが多くあります。現状の集客施策の状況もお伺いしたうえで、現実的な見通しをお伝えします。"
+          "text": "Webサイトの役割によってご期待いただく成果は異なります。私たちは、Webサイトは「比較検討時に選ばれる状態」を作るツールと考えています。見込み客がサイトに訪れるための認知施策（コンテンツSEO・SNS・広告・営業活動など）と、サイトでの意思決定を後押しする構造が揃ってはじめて、成果が生まれます。そのため「公開後◯ヶ月で問い合わせが◯件」という約束はいたしかねますが、サイト公開と並行して認知施策も整えていくことで、6ヶ月〜1年のスパンで成果が現れ始めるケースが多くあります。"
         }
       },
       {
@@ -133,22 +102,57 @@
         "name": "既存サイトのリニューアルにも対応できますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい、対応しています。現状サイトのアクセス解析・課題整理から始め、リニューアルすべき構造・残すべき資産を見極めてご提案します。また、リニューアル時に検索順位や既存流入を落とさない移行設計（URL構造・リダイレクト・SEO資産の引き継ぎ）まで対応しますので、安心してご相談ください。詳しくはホームページリニューアルの進め方もご参考ください。"
+          "text": "はい、対応しています。現状サイトのアクセス解析・課題整理から始め、リニューアルすべき構造・残すべき資産を見極めてご提案します。また、リニューアル時に検索順位や既存流入を落とさない移行設計（URL構造・リダイレクト・SEO資産の引き継ぎ）まで対応しますので、安心してご相談ください。"
         }
       },
       {
         "@type": "Question",
-        "name": "制作実績や事例を見ることはできますか？",
+        "name": "契約終了後、サイトのデータはどうなりますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい、公式サイトの制作実績ページにてご覧いただけます。業種・規模・制作目的別にご紹介しており、無料相談の場では貴社の業種・事業フェーズに近い事例を個別にご紹介することも可能です。守秘義務の範囲内で、発注前の課題や導入後の成果まで詳しくお伝えします。"
+          "text": "契約終了後は、原則としてWebサイトは非公開となります。ウィルサポは月額制でサイトを継続的に運用・改善していくサービスのため、契約期間中のご利用を前提としているためです。ただし、一定期間以上ご契約を継続いただいたお客様には、所定の条件のもとでサイトデータ一式（WordPressのファイル・データベース）をお引き渡しすることが可能です。引き渡しの具体的な条件については、ご状況に応じてご案内しております。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "制作期間はどのくらいかかりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "最初のヒアリングから公開まで、おおよそ2〜3ヶ月が目安です。ページ数が多い場合や、原稿・写真のご準備にお時間がかかる場合は、もう少し長くなることもあります。お急ぎの事情がある場合は、優先順位を整理しながら最短で進められる進行プランをご提案します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "福岡以外の地域でも対応できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、全国どちらの地域でも対応可能です。打ち合わせはZoomなどのオンラインで実施し、画面共有をしながらサイトの状況や改善案をその場で確認できるため、地域を問わず同じ品質・スピードでご支援させていただきます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "自社ECサイトや自社ネットショップなども作成できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、対応可能です。ECサイト（ネットショップ）の構築・運用については、「ウィルサポEC」という専用プランでご支援しています。Shopifyを使って、商品登録・決済・配送設定まで含めたネットショップを構築・運用いたします。「ウィルサポ」は会社の信頼づくりや問い合わせ獲得を目的としたコーポレートサイト・サービスサイト向け、「ウィルサポEC」は商品をネットで販売したい方向けのプランです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "採用サイトは作成できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、採用サイトの制作にも対応しています。会社の想いや働く人の雰囲気、仕事内容、募集要項、エントリーフォームまでを含めた採用サイトを、月額制で構築・運用できます。求職者が知りたい情報を整理し、求人媒体（Indeed、タウンワークなど）との併用も見据えた設計でご提案します。"
         }
       }
     ]
   }
   </script>
+
+  <?php wp_head(); ?>
 </head>
 <body class="page-wsv2">
+<?php wp_body_open(); ?>
 
   <!-- ============================================
        Loader (初回訪問時のみ表示)
@@ -350,11 +354,11 @@
 
             <li class="wsv2-issue__item">
               <span class="wsv2-issue__marker" aria-hidden="true">01</span>
-              <p class="wsv2-issue__text">展示会・紹介で接点を持った見込み客が、比較検討で他社に流れてしまう</p>
+              <p class="wsv2-issue__text">営業活動・展示会・紹介で接点を持った見込み客が、サイトを見て他社に流れてしまう</p>
             </li>
             <li class="wsv2-issue__item">
               <span class="wsv2-issue__marker" aria-hidden="true">02</span>
-              <p class="wsv2-issue__text">SEO・広告で獲得したアクセスが、問い合わせにつながっていない</p>
+              <p class="wsv2-issue__text">SEO・広告・SNSで獲得したアクセスが、問い合わせにつながっていない</p>
             </li>
 
             <!-- カテゴリ2：構造の課題 -->
@@ -368,7 +372,7 @@
             </li>
             <li class="wsv2-issue__item">
               <span class="wsv2-issue__marker" aria-hidden="true">04</span>
-              <p class="wsv2-issue__text">営業現場で聞かれる質問・不安が、サイト上で先回りして解消されていない</p>
+              <p class="wsv2-issue__text">見た目は整っているが、問い合わせに繋がる設計になっていない</p>
             </li>
 
             <!-- カテゴリ3：運用の課題 -->
@@ -379,6 +383,10 @@
             <li class="wsv2-issue__item">
               <span class="wsv2-issue__marker" aria-hidden="true">05</span>
               <p class="wsv2-issue__text">Web担当者が不在で、更新・改善にまで手が回らない</p>
+            </li>
+            <li class="wsv2-issue__item">
+              <span class="wsv2-issue__marker" aria-hidden="true">06</span>
+              <p class="wsv2-issue__text">公開後に何を見て改善すべきか分からず、更新が止まってしまう</p>
             </li>
 
           </ul>
@@ -1277,5 +1285,6 @@
   <script src="https://js-na2.hsforms.net/forms/embed/48153453.js" defer></script>
 
   <script src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/js/script.js" defer></script>
+  <?php wp_footer(); ?>
 </body>
 </html>

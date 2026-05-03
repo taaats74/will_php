@@ -10,21 +10,132 @@
   <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="【定額サブスクECサイト】初期費用0円、契約期間の縛りなし。自由なデザインで、高品質なECサイトを月額制で構築・運用サポートします。" />
-    <meta property="og:url" content="<?php echo esc_url(get_permalink()); ?>" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="定額サブスクECサイト｜ウィルサポEC" />
-    <meta property="og:description" content="【定額サブスクECサイト】初期費用0円、契約期間の縛りなし。自由なデザインで、高品質なECサイトを月額制で構築・運用サポートします。" />
-    <meta property="og:site_name" content="定額サブスクECサイト｜ウィルサポEC" />
-    <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/will-support-ec-assets/img/fv-meta-image.png" />
-    <title>ウィルサポEC｜定額サブスクECサイト</title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/style.css" />
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
+
+    <!-- 構造化データ：Service + Offer -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "ウィルサポEC",
+      "serviceType": "サブスク型ECサイト制作",
+      "provider": {
+        "@id": "https://will-corp.co.jp/#organization"
+      },
+      "areaServed": "JP",
+      "description": "中小企業向けの月額制ECサイト構築・運用サービス。Shopifyを活用し、初期費用0円・契約期間の縛りなしで本格的なECサイトを月額型で構築・運用できます。",
+      "offers": [
+        {"@type": "Offer", "name": "シンプル", "price": "35000", "priceCurrency": "JPY"},
+        {"@type": "Offer", "name": "スタンダード", "price": "45000", "priceCurrency": "JPY"},
+        {"@type": "Offer", "name": "プレミアム", "price": "55000", "priceCurrency": "JPY"}
+      ]
+    }
+    </script>
+
+    <!-- 構造化データ：FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "本当に初期費用はかかりませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "35,000円プラン（シンプル）および45,000円プラン（スタンダード）は初期費用はかかりません。月額のみでECサイトを構築・公開いただけます。55,000円プラン（プレミアム）は、ページ数や構成規模に応じて初期費用が発生する場合があります。詳細は事前にお見積りいたします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "契約期間の縛りはありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "契約期間の縛りはありません。解約をご希望の場合は、1ヶ月前までにご連絡いただければお手続き可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "支払いはいつから発生しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "無料相談後、正式にご依頼いただきキックオフを実施した段階で月額契約が開始となります。初期費用が発生しないプランの場合は、月額のみのお支払いとなります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Shopifyの月額費用は別途かかりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、Shopifyの月額利用料は別途発生します。Shopifyとは直接ご契約いただく形となります。料金の詳細はShopify公式ページをご確認ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "決済手数料はいくらですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "決済手数料はShopifyの規定に基づきます。ご利用の決済方法により異なりますので、詳細はShopify公式ページをご確認ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "商品登録は何点まで含まれますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "商品登録は10点まで無料で対応いたします。11点目以降は、1点あたり2,000円で登録対応いたします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "デザインはどこまで自由ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ブランドイメージに合わせたオリジナルデザインで制作いたします。テンプレートに固定されることなく、構成・デザインともに柔軟に対応可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "将来的な機能追加や拡張は可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、可能です。将来の拡張を前提とした設計を行っていますので、機能追加やカスタマイズにも対応できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "更新や保守はどこまで含まれますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "サーバー・ドメインの管理を含め、保守対応は月額内で実施します。さらに、月2回までのテキスト修正や画像差し替えなどの更新作業も無料で対応いたします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "追加費用が発生するケースはありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "大幅なカスタマイズ、ページ追加、商品登録数の超過、有料アプリ導入などが必要な場合は追加費用が発生することがあります。その際は必ず事前にご説明いたします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ初期費用なしで提供できるのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "制作内容の標準化に加え、AIツールなどを活用することで設計・制作の効率化を図っています。さらに月額モデルで継続運用する仕組みにより、初期費用を抑えた合理的な価格を実現しています。"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <?php wp_head(); ?>
   </head>
   <body class="page-top">
+    <?php wp_body_open(); ?>
     <!-- ============================================
          Loader (毎回表示)
          ============================================ -->
@@ -555,5 +666,6 @@
       </div>
     </footer>
     <script src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/js/script.js" defer></script>
+    <?php wp_footer(); ?>
   </body>
 </html>

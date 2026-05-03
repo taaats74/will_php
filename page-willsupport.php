@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: ウィルサポLP
+  Template Name: 旧ウィルサポ
   Tempkate Post Type: page
 */
 ?>
@@ -10,14 +10,7 @@
 <head prefix="og: https://ogp.me/ns#">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:url" content="https://will-corp.co.jp/willsupport/" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="定額サブスクホームページ/ウィルサポ" />
-  <meta property="og:description" content="【定額サブスクホームページ】月額9800円から初期費用なし、契約期間の縛りなし、自由なデザインで高品質なホームページを提供いたします。" />
-  <meta property="og:site_name" content="定額サブスクホームページ/ウィルサポ" />
-  <meta property="og:image" content="http://will-corp.co.jp/blog/wp-content/uploads/2024/04/スクリーンショット-2024-04-29-5.01.50.png" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/style.css">
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
@@ -30,12 +23,11 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <title>定額サブスクホームページ/ウィルサポ</title>
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
-  <!-- End of HubSpot Embed Code -->
+
+  <?php wp_head(); ?>
 </head>
 <body>
+  <?php wp_body_open(); ?>
   <header>
     <div class="container pc">
       <div class="wrapper">
@@ -811,8 +803,7 @@
     </div>
   </footer>
   <script src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/js/script.js"></script>
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48153453.js"></script>
-  <!-- End of HubSpot Embed Code -->
+
+  <?php wp_footer(); ?>
 </body>
 </html>

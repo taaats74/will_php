@@ -42,7 +42,7 @@ get_template_part( 'template-parts/page-hero', null, [
       </p>
 
       <p class="service-ma-hero__alternative">
-        ※ Web基盤がまだ整っていない場合は、まず<a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>">「Webサイト制作」</a>または<a href="<?php echo esc_url( home_url('/willsupport/') ); ?>">「ウィルサポ」</a>からご検討ください。
+        ※ Web基盤がまだ整っていない場合は、まず<a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>">「Webサイト制作」</a>または<a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">「ウィルサポ」</a>からご検討ください。
       </p>
 
     </div>
@@ -84,7 +84,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-ma-concept__note-box">
         <p>
           本サービスは、すでに一定のWeb基盤を持つ企業様向けです。<br>
-          土台からの整備が必要な場合は、まず<a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>">「Webサイト制作」</a>または月額制の<a href="<?php echo esc_url( home_url('/willsupport/') ); ?>">「ウィルサポ」</a>からご検討ください。
+          土台からの整備が必要な場合は、まず<a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>">「Webサイト制作」</a>または月額制の<a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">「ウィルサポ」</a>からご検討ください。
         </p>
       </div>
 
@@ -154,7 +154,7 @@ get_template_part( 'template-parts/page-hero', null, [
           <a class="service-ma-target__alt-link" href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>">
             Webサイト制作の詳細 →
           </a>
-          <a class="service-ma-target__alt-link" href="<?php echo esc_url( home_url('/willsupport/') ); ?>">
+          <a class="service-ma-target__alt-link" href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">
             ウィルサポの詳細 →
           </a>
         </div>

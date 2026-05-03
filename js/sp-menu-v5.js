@@ -29,12 +29,25 @@
       });
     });
 
+    // トップページ FV(.page-topv3-fv)を取得・FV の 3/4 を超えたら通過判定
+    var fv = document.querySelector('.page-topv3-fv') || document.querySelector('.page-topv3-fv-sp');
+    var FV_PASS_RATIO = 0.75;
+
     var ticking = false;
     function onScroll() {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
         header.classList.toggle('is-scrolled', window.scrollY > 100);
+
+        // FV 通過判定:FV 高さの 75% 以上をスクロールしたら body.is-fv-passed
+        // → PC ヘッダー (.header-child-v2--top-scroll) の slide-in トリガー
+        if (fv) {
+          var fvTop = fv.getBoundingClientRect().top;
+          var passed = fvTop <= -fv.offsetHeight * FV_PASS_RATIO;
+          document.body.classList.toggle('is-fv-passed', passed);
+        }
+
         ticking = false;
       });
     }

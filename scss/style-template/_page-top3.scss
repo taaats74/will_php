@@ -564,7 +564,8 @@
           max-width: 800px;
           margin: 0 auto;
           position: relative;
-          padding-top: 56.25%;
+          // aspect-ratio で確実に 16:9 を維持(padding-top は親幅依存のためズレやすい)
+          aspect-ratio: 16 / 9;
           background: #e8e8e8;
           border-radius: 6px;
           overflow: hidden;

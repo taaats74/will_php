@@ -24,17 +24,19 @@ get_template_part('template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <section class="page-service__philosophy" id="philosophy">
   <div class="container">
-    <div class="wrapper">
+    <div class="page-service__philosophy-inner">
 
-      <div class="page-service__philosophy-head">
-        <!-- <p class="page-service__eyebrow">PHILOSOPHY</p> -->
-        <h2 class="page-service__philosophy-title">
-          サービス単体ではなく、<br>
-          営業基盤として設計しています
-        </h2>
-        <p class="page-service__philosophy-lead">
+      <h2 class="page-service__philosophy-headline">
+        サービス単体ではなく、<br>
+        <span class="keyword">営業基盤として設計</span>しています
+      </h2>
+
+      <div class="page-service__philosophy-body">
+        <p>
           BtoBマーケで成果を出すには、Webサイト・MA・SEO・コンテンツを単発の施策ではなく、
-          営業基盤の一部として統合的に設計する必要があります。<br>
+          営業基盤の一部として統合的に設計する必要があります。
+        </p>
+        <p>
           ウィルでは、伴走型の主力サービスと、課題に応じた支援領域の2層構造で、
           貴社の事業フェーズに合わせたサービスを提供しています。
         </p>
@@ -279,7 +281,7 @@ get_template_part('template-parts/page-hero', null, [
           </div>
         </a>
 
-        <a href="<?php echo esc_url( home_url('/service/web-marketing/') ); ?>" class="whatwedo-item">
+        <a href="<?php echo esc_url( home_url('/service/marketing-automation/') ); ?>" class="whatwedo-item">
           <div class="whatwedo-item-header">
             <span class="whatwedo-number">02</span>
             <h3>MA構築・運用支援</h3>
@@ -297,8 +299,7 @@ get_template_part('template-parts/page-hero', null, [
           </div>
         </a>
 
-        <?php // TODO: 専用LP新設後にURL差替 ?>
-        <a href="<?php echo esc_url( home_url('/service/') ); ?>" class="whatwedo-item">
+        <a href="<?php echo esc_url( home_url('/service/seo/') ); ?>" class="whatwedo-item">
           <div class="whatwedo-item-header">
             <span class="whatwedo-number">03</span>
             <h3>コンテンツSEO構築・運用支援</h3>
@@ -316,7 +317,7 @@ get_template_part('template-parts/page-hero', null, [
           </div>
         </a>
 
-        <a href="<?php echo esc_url( home_url('/service/sns-support/') ); ?>" class="whatwedo-item">
+        <a href="<?php echo esc_url( home_url('/service/instagram-support/') ); ?>" class="whatwedo-item">
           <div class="whatwedo-item-header">
             <span class="whatwedo-number">04</span>
             <h3>Instagram構築・運用支援</h3>
@@ -334,7 +335,7 @@ get_template_part('template-parts/page-hero', null, [
           </div>
         </a>
 
-        <a href="<?php echo esc_url( home_url('/service/graphic/') ); ?>" class="whatwedo-item">
+        <a href="<?php echo esc_url( home_url('/service/creative/') ); ?>" class="whatwedo-item">
           <div class="whatwedo-item-header">
             <span class="whatwedo-number">05</span>
             <h3>グラフィック制作</h3>

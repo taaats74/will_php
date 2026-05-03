@@ -1,38 +1,52 @@
 <?php
 // cssとjs読み込ませ
   function theme_file_scripts(){
+    // 自己完結型 LP 判定: テーマ汎用 CSS/JS は読み込まない
+    // (wp_head / wp_footer は呼ぶが、style.css の `* { color: black }` 等の
+    //  汎用ルールが LP の独自スタイルを破壊するのを避ける。
+    //  Slim SEO 等プラグイン経由の GA4 / HubSpot 注入は wp_head 経由で動作する)
+    $self_contained_lp_templates = array(
+      'page-willsupport.php',
+      'page-willsupport-v2.php',
+      'page-will-support-ec.php',
+    );
+    $is_self_contained_lp = is_page_template( $self_contained_lp_templates );
+
     wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+    if ( ! $is_self_contained_lp ) {
+      wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+    }
+
     // 旧ローディング:page-topv2.php 限定 enqueue(Phase 7)
     if ( is_page_template( 'page-topv2.php' ) ) {
       wp_enqueue_script('loading', get_template_directory_uri() . '/js/loading.js', array(), '20240102', true);
       wp_enqueue_script('loading-child', get_template_directory_uri() . '/js/loading-child.js', array(), '20240102', true);
     }
 
-    // 新ローディングアニメーション(全ページ enqueue・#splash-v2 不在時は早期 return)
-    wp_enqueue_script(
-      'loading-v2',
-      get_template_directory_uri() . '/js/loading-v2.js',
-      array(),
-      filemtime( get_template_directory() . '/js/loading-v2.js' ),
-      true
-    );
+    if ( ! $is_self_contained_lp ) {
+      // 新ローディングアニメーション(全ページ enqueue・#splash-v2 不在時は早期 return)
+      wp_enqueue_script(
+        'loading-v2',
+        get_template_directory_uri() . '/js/loading-v2.js',
+        array(),
+        filemtime( get_template_directory() . '/js/loading-v2.js' ),
+        true
+      );
 
-    wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), '20240102', true);
-    wp_enqueue_script('accordion-js', get_template_directory_uri() . '/js/accordion.js', array(), '20240102', true);
-    wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js');
-    wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
-    wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), '20240717', true);
+      wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), '20240102', true);
+      wp_enqueue_script('accordion-js', get_template_directory_uri() . '/js/accordion.js', array(), '20240102', true);
+      wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js');
+      wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
+      wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), '20240717', true);
+    }
 
     // SP ヘッダー / ドロワー JS(.sp-header-v5 / .sp-menu-v5 制御)
     // page-topv3.php(トップ)+ header.php を呼ぶ下層ページで使用。
     // LP 自己完結型・旧トップは除外。要素が無いページでは JS が早期 return するため
     // 残りはすべて全ページ enqueue で問題なし。
-    $sp_menu_v5_excluded = array(
-      'page-topv2.php',
-      'page-willsupport.php',
-      'page-willsupport-v2.php',
-      'page-will-support-ec.php',
+    $sp_menu_v5_excluded = array_merge(
+      array( 'page-topv2.php' ),
+      $self_contained_lp_templates
     );
     if ( ! is_page_template( $sp_menu_v5_excluded ) ) {
       wp_enqueue_script(
@@ -57,10 +71,12 @@
 
     // wordpressで使えない命名ルールがある「accordion」は使えなかったので「accordion-js」で記載してる↑
 
-    wp_enqueue_style('style_css', get_stylesheet_uri());
-    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
-    wp_enqueue_style('slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css');
-    wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css');
+    if ( ! $is_self_contained_lp ) {
+      wp_enqueue_style('style_css', get_stylesheet_uri());
+      wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+      wp_enqueue_style('slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css');
+      wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css');
+    }
   }
   add_action( 'wp_enqueue_scripts', 'theme_file_scripts' );
 
@@ -320,4 +336,40 @@ EOS;
 
   }
 }
+
+/**
+ * Slim SEO Organization 構造化データ詳細版上書き
+ * Phase 2 (2026-05-03 修正版):簡易版 Organization を logo / address / founder /
+ * foundingDate / sameAs 入りに上書きする。Service の provider (@id 参照) と
+ * 紐づくよう、@id は Slim SEO デフォルトのまま温存する。
+ */
+add_filter( 'slim_seo_schema_organization', function( $organization ) {
+    $organization['url']         = 'https://will-corp.co.jp/';
+    $organization['logo']        = 'https://will-corp.co.jp/wp-content/uploads/2025/08/logo_black.png';
+    $organization['description'] = 'BtoB中小企業の営業基盤をWebから設計する、福岡のWebマーケティング支援会社。Webサイト制作・MA・コンテンツSEO・SNS運用・グラフィック制作を統合的に提供。';
+    $organization['address']     = [
+        '@type'           => 'PostalAddress',
+        'streetAddress'   => '博多駅前1-23-2 ParkFront博多駅前1丁目5F-B',
+        'addressLocality' => '福岡市博多区',
+        'addressRegion'   => '福岡県',
+        'postalCode'      => '812-0011',
+        'addressCountry'  => 'JP',
+    ];
+    $organization['founder']     = [
+        [
+            '@type' => 'Person',
+            'name'  => '高橋 竜也',
+        ],
+        [
+            '@type' => 'Person',
+            'name'  => '岩田 あゆみ',
+        ],
+    ];
+    $organization['foundingDate'] = '2023-11';
+    $organization['sameAs']       = [
+        'https://www.instagram.com/will_marketing_branding',
+        'https://www.youtube.com/@will-btob-marketing',
+    ];
+    return $organization;
+} );
 ?>

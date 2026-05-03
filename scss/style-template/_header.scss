@@ -32,6 +32,14 @@ $h4-bg-pale:    #f0f8f9;  // メガメニューのホバー背景
   box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
   font-family: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 
+  // トップページ専用 modifier:FV 通過まで非表示 → body.is-fv-passed で slide-in
+  &--top-scroll {
+    position: fixed;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
   &__inner {
     position: relative;
     width: 100%;
@@ -302,6 +310,13 @@ $h4-bg-pale:    #f0f8f9;  // メガメニューのホバー背景
   .header-child-v2 {
     display: none !important;
   }
+}
+
+// トップページで FV を通過したら PC ヘッダーを slide-in
+// body.is-fv-passed は js/sp-menu-v5.js の IntersectionObserver で付与
+body.is-fv-passed .header-child-v2--top-scroll {
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 // =====================================================

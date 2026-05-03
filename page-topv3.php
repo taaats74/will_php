@@ -190,9 +190,7 @@
           <div class="concept-video">
             <p class="concept-video-lead">より具体的な内容は、こちらの動画で詳しく解説しています。</p>
             <div class="concept-video-frame">
-              <div class="video-placeholder">
-                <p>YouTube動画は今後追加予定</p>
-              </div>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/pZqpWtp93YY?si=keOuyA3kSIPjlsgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -330,7 +328,7 @@
                 </p>
               </div>
               <div class="mp-btn">
-                <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="mp-btn-link">
+                <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="mp-btn-link" target="_blank" rel="noopener noreferrer">
                   <span class="mp-btn-text"><span class="pc">ウィルサポの</span>サービス詳細を見る</span>
                   <span class="mp-btn-arrow">→</span>
                 </a>
@@ -361,7 +359,7 @@
                 </p>
               </div>
               <div class="mp-btn">
-                <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="mp-btn-link">
+                <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="mp-btn-link" target="_blank" rel="noopener noreferrer">
                   <span class="mp-btn-text"><span class="pc">ウィルサポECの</span>サービス詳細を見る</span>
                   <span class="mp-btn-arrow">→</span>
                 </a>
