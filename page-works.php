@@ -69,8 +69,7 @@ $works_items = [
 
 $service_cards = [
   [
-    // TODO: URL要確認(/willsupport/v2/ は暫定値)
-    'url'   => home_url('/willsupport/v2/'),
+    'url'   => home_url('/willsupport/'),
     'label' => 'WILLSUPPORT',
     'title' => 'ウィルサポ',
     'lead'  => 'BtoB中小企業向けのサブスク型ホームページサービス。月額制でサイト改善まで伴走します。',
@@ -79,11 +78,10 @@ $service_cards = [
     'url'   => home_url('/will-support-ec/'),
     'label' => 'WILLSUPPORT EC',
     'title' => 'ウィルサポEC',
-    'lead'  => 'EC事業者向けのShopifyベースサブスクサービス。商品登録から運用改善まで伴走します。',
+    'lead'  => 'EC事業者向けのECサイト制作のサブスクサービス。商品登録から運用改善まで伴走します。',
   ],
   [
-    // TODO: URL要確認(/service/web/ は暫定値)
-    'url'   => home_url('/service/web/'),
+    'url'   => home_url('/service/web-creative/'),
     'label' => 'WEB CREATIVE',
     'title' => 'Webサイト制作',
     'lead'  => '事業の構造から逆算した、単発のWebサイト制作。比較検討で選ばれる構造を設計します。',
@@ -104,40 +102,40 @@ get_template_part( 'template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <!-- Section 2: 制作実績一覧                                  -->
 <!-- ===================================================== -->
-<section class="page-works__works" id="works">
+<section class="page-topv3-works" id="works">
   <div class="container">
     <div class="wrapper">
 
-      <div class="page-works__works-head">
-        <p class="page-works__eyebrow">CASE STUDIES</p>
-        <h2 class="page-works__works-title">「比較検討で選ばれる」を<br>業種ごとに設計してきました</h2>
-        <p class="page-works__works-lead">
+      <div class="works-header">
+        <p class="en">CASE STUDIES</p>
+        <h2>「比較検討で選ばれる」を<br>業種ごとに設計してきました</h2>
+        <p class="lead">
           BtoB中小企業に特化し、製造・IT・士業・不動産など幅広い業種のホームページ制作を伴走支援してきました。<br>
           業種は異なっても、「比較検討で選ばれる構造」という設計思想は共通しています。業種ごとの設計意図とあわせて実績をご覧ください。
         </p>
       </div>
 
-      <ul class="page-works__list">
+      <div class="works-list">
         <?php foreach ( $works_items as $item ) : ?>
-          <li class="page-works__card">
-            <a href="<?php echo esc_url( $item['url'] ); ?>"
-               class="page-works__card-link"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="<?php echo esc_attr( $item['name'] ); ?>のWebサイトを新しいタブで開く">
-              <div class="page-works__card-thumb">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-v2-assets/img/' . $item['img'] ); ?>"
-                     alt="<?php echo esc_attr( $item['name'] ); ?> Webサイト制作実績"
-                     width="800" height="450" loading="lazy" decoding="async">
-              </div>
-              <div class="page-works__card-body">
-                <p class="page-works__card-name"><?php echo esc_html( $item['name'] ); ?></p>
-                <span class="page-works__card-tag"><?php echo esc_html( $item['tag'] ); ?></span>
-              </div>
-            </a>
-          </li>
+          <a href="<?php echo esc_url( $item['url'] ); ?>"
+             class="works-card animation-target to-up"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="<?php echo esc_attr( $item['name'] ); ?>のWebサイトを新しいタブで開く">
+
+            <div class="works-card-thumb">
+              <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-v2-assets/img/' . $item['img'] ); ?>"
+                   alt="<?php echo esc_attr( $item['name'] ); ?> Webサイト制作実績"
+                   width="800" height="450" loading="lazy" decoding="async">
+            </div>
+
+            <div class="works-card-body">
+              <p class="works-card-name"><?php echo esc_html( $item['name'] ); ?></p>
+            </div>
+
+          </a>
         <?php endforeach; ?>
-      </ul>
+      </div>
 
     </div>
   </div>
@@ -146,33 +144,44 @@ get_template_part( 'template-parts/page-hero', null, [
 <!-- ===================================================== -->
 <!-- Section 3: サービス紹介(3カード)                         -->
 <!-- ===================================================== -->
-<section class="page-works__services" id="services">
+<section class="page-topv3-whatwedo" id="services">
   <div class="container">
     <div class="wrapper">
 
-      <div class="page-works__services-head">
-        <p class="page-works__eyebrow">SERVICES</p>
-        <h2 class="page-works__services-title">提供サービス</h2>
-        <p class="page-works__services-lead">
+      <div class="whatwedo-header">
+        <p class="en">SERVICES</p>
+        <h2>提供サービス</h2>
+        <p class="lead">
           事業フェーズや課題に合わせて、最適なサービスをご提案します。
         </p>
       </div>
 
-      <ul class="page-works__services-list">
-        <?php foreach ( $service_cards as $card ) : ?>
-          <li class="page-works__service-card">
-            <a href="<?php echo esc_url( $card['url'] ); ?>" class="page-works__service-link">
-              <p class="page-works__service-label"><?php echo esc_html( $card['label'] ); ?></p>
-              <h3 class="page-works__service-title"><?php echo esc_html( $card['title'] ); ?></h3>
-              <p class="page-works__service-lead"><?php echo esc_html( $card['lead'] ); ?></p>
-              <span class="page-works__service-cta">
-                <span class="page-works__service-cta-text">詳しく見る</span>
-                <span class="page-works__service-cta-arrow">→</span>
-              </span>
-            </a>
-          </li>
-        <?php endforeach; ?>
-      </ul>
+      <div class="whatwedo-list">
+        <?php
+          $i = 1;
+          foreach ( $service_cards as $card ) :
+            // ウィルサポ / ウィルサポEC LP は別タブで開く
+            $is_external_lp = ( strpos( $card['url'], 'willsupport' ) !== false ) || ( strpos( $card['url'], 'will-support' ) !== false );
+        ?>
+          <a href="<?php echo esc_url( $card['url'] ); ?>"
+             class="whatwedo-item animation-target to-up"<?php if ( $is_external_lp ) : ?>
+             target="_blank"
+             rel="noopener noreferrer"<?php endif; ?>>
+            <div class="whatwedo-item-header">
+              <span class="whatwedo-number"><?php echo esc_html( str_pad( $i, 2, '0', STR_PAD_LEFT ) ); ?></span>
+              <h3><?php echo esc_html( $card['title'] ); ?></h3>
+            </div>
+            <p class="whatwedo-body"><?php echo esc_html( $card['lead'] ); ?></p>
+            <div class="whatwedo-link">
+              <span class="whatwedo-link-text">サービス詳細を見る</span>
+              <span class="whatwedo-link-arrow">→</span>
+            </div>
+          </a>
+        <?php
+          $i++;
+          endforeach;
+        ?>
+      </div>
 
     </div>
   </div>

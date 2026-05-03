@@ -41,7 +41,7 @@ get_template_part( 'template-parts/page-hero', null, [
       </p>
 
       <p class="service-web-hero__alternative">
-        ※ Web担当者がいない・運用も任せたい場合は、月額制の<a href="<?php echo esc_url( home_url('/willsupport/') ); ?>">「ウィルサポ」</a>もご用意しています。
+        ※ Web担当者がいない・運用も任せたい場合は、月額制の<a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">「ウィルサポ」</a>もご用意しています。
       </p>
 
     </div>
@@ -129,7 +129,7 @@ get_template_part( 'template-parts/page-hero', null, [
           「Web担当者がいない」「運用も含めて任せたい」「月額負担で始めたい」
           といったご要望の場合は、月額制の「ウィルサポ」がフィットします。
         </p>
-        <a class="service-web-target__alt-link" href="<?php echo esc_url( home_url('/willsupport/') ); ?>">
+        <a class="service-web-target__alt-link" href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">
           ウィルサポの詳細はこちら →
         </a>
       </div>
@@ -158,7 +158,7 @@ get_template_part( 'template-parts/page-hero', null, [
           <ul class="service-web-problem__check-list">
             <li>展示会・紹介で接点を持った見込み客が、サイトを見て他社に流れている</li>
             <li>SEO・広告で獲得したアクセスが、問い合わせにつながっていない</li>
-            <li>自社サイトが、認知獲得の受け皿になっていない</li>
+            <li>自社サイトが、認知獲得後の受け皿になっていない</li>
           </ul>
         </li>
 
@@ -508,7 +508,7 @@ get_template_part( 'template-parts/page-hero', null, [
         </div>
 
         <p class="service-web-price__comparison-link">
-          <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>">→ ウィルサポの詳細はこちら</a>
+          <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">→ ウィルサポの詳細はこちら</a>
         </p>
       </div>
 

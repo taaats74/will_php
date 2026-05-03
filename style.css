@@ -464,6 +464,12 @@ body.has-loading-v2.appear .header-child-v2 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
 }
+.header-child-v2--top-scroll {
+  position: fixed;
+  transform: translateY(-100%);
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
 .header-child-v2__inner {
   position: relative;
   width: 100%;
@@ -680,6 +686,11 @@ body.has-loading-v2.appear .header-child-v2 {
     display: none !important;
   }
 }
+body.is-fv-passed .header-child-v2--top-scroll {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 body.has-header .loading-container {
   animation-delay: 0s !important;
   animation-duration: 0.4s !important;
@@ -3837,7 +3848,7 @@ body.is-sp-menu-open {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
-  padding-top: 56.25%;
+  aspect-ratio: 16/9;
   background: #e8e8e8;
   border-radius: 6px;
   overflow: hidden;
@@ -14208,7 +14219,7 @@ body.is-sp-menu-open {
 .service-web-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 32px;
   line-height: 1.55;
   color: #28849D;
   letter-spacing: 0.04em;
@@ -15634,7 +15645,7 @@ body.is-sp-menu-open {
 .service-ma-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 32px;
   line-height: 1.55;
   color: #28849D;
   letter-spacing: 0.04em;
@@ -17058,7 +17069,7 @@ body.is-sp-menu-open {
 .service-sns-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.6;
   color: #28849D;
   letter-spacing: 0.04em;
@@ -18267,7 +18278,7 @@ body.is-sp-menu-open {
 .service-seo-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 32px;
   line-height: 1.55;
   color: #28849D;
   letter-spacing: 0.04em;
@@ -19448,7 +19459,7 @@ body.is-sp-menu-open {
 .service-creative-concept__headline {
   font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 32px;
   line-height: 1.55;
   color: #28849D;
   letter-spacing: 0.04em;
@@ -23046,58 +23057,52 @@ body.is-sp-menu-open {
 
 .page-service__philosophy {
   background: #ffffff;
-  padding: 110px 0 55px;
+  padding: 120px 0;
 }
 .page-service__philosophy .container {
-  max-width: 1160px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
-.page-service__philosophy .wrapper {
-  background: #28849b;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 72px 64px;
-  border-radius: 16px;
-  box-shadow: 0 18px 48px rgba(40, 132, 155, 0.18);
-}
-.page-service__philosophy .page-service__eyebrow {
-  color: #ffffff;
-  opacity: 0.9;
-}
 
-.page-service__philosophy-head {
+.page-service__philosophy-inner {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.page-service__philosophy-title {
-  font-size: 30px;
+.page-service__philosophy-headline {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
-  color: #ffffff;
-  line-height: 1.5;
-  letter-spacing: 0.01em;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 16px;
+  font-size: 32px;
+  line-height: 1.55;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 48px;
 }
-.page-service__philosophy-title::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 56px;
-  height: 3px;
-  background: #F0E74E;
+.page-service__philosophy-headline .keyword {
+  background: linear-gradient(transparent 0%, transparent 60%, rgba(240, 231, 78, 0.65) 60%, rgba(240, 231, 78, 0.65) 95%, transparent 95%);
+  color: inherit;
+  font-weight: 700;
+  padding: 0 2px;
 }
 
-.page-service__philosophy-lead {
+.page-service__philosophy-body {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.page-service__philosophy-body p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-size: 16px;
   line-height: 2;
-  color: rgba(255, 255, 255, 0.92);
-  text-align: left;
-  margin-top: 36px;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+}
+.page-service__philosophy-body p:last-child {
+  margin-bottom: 0;
 }
 
 .page-service__main {
@@ -23402,14 +23407,10 @@ body.is-sp-menu-open {
 
 @media screen and (max-width: 1024px) {
   .page-service__philosophy {
-    padding: 96px 0 48px;
+    padding: 80px 0;
   }
   .page-service__philosophy .container {
     padding: 0 24px;
-  }
-  .page-service__philosophy .wrapper {
-    padding: 56px 40px;
-    border-radius: 14px;
   }
   .page-service__main {
     padding: 48px 0 96px;
@@ -23442,23 +23443,20 @@ body.is-sp-menu-open {
 }
 @media screen and (max-width: 767px) {
   .page-service__philosophy {
-    padding: 72px 0 36px;
+    padding: 60px 0;
   }
   .page-service__philosophy .container {
     padding: 0 20px;
   }
-  .page-service__philosophy .wrapper {
-    padding: 44px 24px;
-    border-radius: 12px;
-    box-shadow: 0 12px 28px rgba(40, 132, 155, 0.15);
-  }
-  .page-service__philosophy-title {
+  .page-service__philosophy-headline {
     font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 32px;
   }
-  .page-service__philosophy-lead {
+  .page-service__philosophy-body p {
     font-size: 14px;
-    line-height: 1.9;
-    margin-top: 28px;
+    line-height: 1.95;
+    margin-bottom: 22px;
   }
   .page-service__main {
     padding: 36px 0 72px;
