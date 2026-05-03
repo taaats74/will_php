@@ -80,7 +80,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-problem__head problem-header">
         <p class="en">PROBLEM</p>
-        <h2>こんな企業様向けのサービスです</h2>
+        <h2>こんな企業様向けの<br class="sp">サービスです</h2>
         <p class="subtitle">BtoB中小企業のInstagram運用で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
@@ -184,7 +184,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-feature__head feature-header">
         <p class="en">FEATURE</p>
-        <h2>Instagram構築・運用支援の特徴</h2>
+        <h2>Instagram構築・<br class="sp">運用支援の特徴</h2>
         <p class="subtitle">数あるInstagram支援サービスの中で、ウィルが選ばれる4つの特徴をお伝えします。</p>
       </div>
 

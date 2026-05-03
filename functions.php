@@ -372,4 +372,9 @@ add_filter( 'slim_seo_schema_organization', function( $organization ) {
     ];
     return $organization;
 } );
+
+// タイトルの区切り文字を変更（例：「｜」に）
+add_filter('document_title_separator', function() {
+return '｜'; // ← ここを好きな文字に変更可能
+});
 ?>

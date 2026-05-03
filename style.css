@@ -1084,7 +1084,7 @@ body.is-sp-menu-open {
 
 @media screen and (max-width: 770px) {
   .page-hero {
-    padding: 50px 0;
+    padding: 97px 0 20px;
   }
   .page-hero__en {
     font-size: 36px;
@@ -11619,6 +11619,7 @@ body.is-sp-menu-open {
   letter-spacing: 0.04em;
 }
 .page-contact__form .hbspt-form,
+.page-contact__form .hs-form,
 .page-contact__form .hs-form-frame {
   max-width: 720px;
   margin: 0 auto;
@@ -11642,6 +11643,82 @@ body.is-sp-menu-open {
 .page-contact__form a:hover {
   text-decoration: none;
 }
+.page-contact__form .hs-form-field {
+  margin-bottom: 16px;
+}
+.page-contact__form .hs-form-field > label {
+  display: block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3E5054;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+.page-contact__form .hs-form-required {
+  color: #d24545;
+  margin-left: 4px;
+}
+.page-contact__form .hs-input {
+  width: 100% !important;
+  padding: 12px 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  background: #ffffff;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+.page-contact__form .hs-input:focus {
+  outline: none;
+  border-color: #28849D;
+}
+.page-contact__form textarea.hs-input {
+  min-height: 140px;
+  resize: vertical;
+}
+.page-contact__form .hs-button {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #28849D;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.page-contact__form .hs-button:hover {
+  background: #1c6f87;
+}
+.page-contact__form .hs-error-msgs {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+}
+.page-contact__form .hs-error-msg {
+  font-size: 12px;
+  color: #d24545;
+}
+.page-contact__form .legal-consent-container {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+  margin-top: 12px;
+}
+.page-contact__form .submitted-message {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 16px;
+  color: #28849D;
+  text-align: center;
+  padding: 24px;
+}
 
 @media screen and (max-width: 1024px) {
   .page-contact {
@@ -11660,7 +11737,10 @@ body.is-sp-menu-open {
     padding: 56px 0 72px;
   }
   .page-contact .container {
-    padding: 0 20px;
+    padding: 0 12px;
+  }
+  .page-contact__inner {
+    width: 100%;
   }
   .page-contact__lead {
     font-size: 14px;
@@ -11959,6 +12039,7 @@ body.is-sp-menu-open {
   letter-spacing: 0.04em;
 }
 .page-diagnosis__form .hbspt-form,
+.page-diagnosis__form .hs-form,
 .page-diagnosis__form .hs-form-frame {
   max-width: 720px;
   margin: 0 auto;
@@ -11982,6 +12063,93 @@ body.is-sp-menu-open {
 .page-diagnosis__form a:hover {
   text-decoration: none;
 }
+.page-diagnosis__form .hs-form-field {
+  margin-bottom: 16px;
+}
+.page-diagnosis__form .hs-form-field > label {
+  display: block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3E5054;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+.page-diagnosis__form .hs-form-required {
+  color: #d24545;
+  margin-left: 4px;
+}
+.page-diagnosis__form .hs-input {
+  width: 100% !important;
+  padding: 12px 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  background: #ffffff;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+.page-diagnosis__form .hs-input:focus {
+  outline: none;
+  border-color: #28849D;
+}
+.page-diagnosis__form textarea.hs-input {
+  min-height: 140px;
+  resize: vertical;
+}
+.page-diagnosis__form .hs-button {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #28849D;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.page-diagnosis__form .hs-button:hover {
+  background: #1c6f87;
+}
+.page-diagnosis__form .hs-error-msgs {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+}
+.page-diagnosis__form .hs-error-msg {
+  font-size: 12px;
+  color: #d24545;
+}
+.page-diagnosis__form .legal-consent-container {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+  margin-top: 12px;
+}
+.page-diagnosis__form .hs-fieldtype-booleancheckbox label,
+.page-diagnosis__form .hs-fieldtype-checkbox label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+.page-diagnosis__form .hs-fieldtype-booleancheckbox label input,
+.page-diagnosis__form .hs-fieldtype-checkbox label input {
+  margin-top: 4px;
+}
+.page-diagnosis__form .submitted-message {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 16px;
+  color: #28849D;
+  text-align: center;
+  padding: 24px;
+}
 
 @media screen and (max-width: 1024px) {
   .page-diagnosis {
@@ -11999,7 +12167,10 @@ body.is-sp-menu-open {
     padding: 56px 0 72px;
   }
   .page-diagnosis .container {
-    padding: 0 20px;
+    padding: 0 12px;
+  }
+  .page-diagnosis__inner {
+    width: 100%;
   }
   .page-diagnosis__lead {
     font-size: 17px;
@@ -15412,19 +15583,27 @@ body.is-sp-menu-open {
     font-size: 13px;
     margin-bottom: 22px;
   }
+  .service-web-price__comparison-tablewrap {
+    -webkit-overflow-scrolling: touch;
+  }
+  .service-web-price__comparison-table {
+    min-width: 640px;
+  }
   .service-web-price__comparison-table thead th {
-    font-size: 12.5px;
-    padding: 12px 8px;
-  }
-  .service-web-price__comparison-table .service-web-price__comparison-sub {
-    font-size: 10.5px;
-  }
-  .service-web-price__comparison-table tbody th, .service-web-price__comparison-table tbody td {
-    font-size: 12.5px;
+    font-size: 13px;
     padding: 12px 10px;
   }
+  .service-web-price__comparison-table .service-web-price__comparison-sub {
+    font-size: 11px;
+  }
+  .service-web-price__comparison-table tbody th, .service-web-price__comparison-table tbody td {
+    font-size: 13px;
+    padding: 12px 12px;
+    line-height: 1.7;
+  }
   .service-web-price__comparison-table tbody th {
-    width: 30%;
+    width: 25%;
+    white-space: nowrap;
   }
   .service-web-price__comparison-link a {
     font-size: 13px;

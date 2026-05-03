@@ -101,7 +101,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-target__head target-header">
         <p class="en">FOR WHOM</p>
-        <h2>こんな会社のためのサービスです</h2>
+        <h2>こんな会社のための<br class="sp">サービスです</h2>
         <p class="subtitle">本サービスは、特に以下のような会社向けにご提供しています。</p>
       </div>
 
@@ -173,7 +173,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-problem__head problem-header">
         <p class="en">PROBLEM</p>
-        <h2>こんなお悩みはありませんか?</h2>
+        <h2>こんなお悩みは<br class="sp">ありませんか?</h2>
         <p class="subtitle">BtoB中小企業のMA導入・運用で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
