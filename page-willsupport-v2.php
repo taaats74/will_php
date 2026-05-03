@@ -1227,7 +1227,32 @@
           </div>
 
           <div class="wsv2-contact__form">
-            <div class="hs-form-frame" data-region="na2" data-form-id="bf7c2589-af6c-47c8-a017-f6ae2303be47" data-portal-id="48153453"></div>
+            <div id="wsv2-contact-form"></div>
+            <script charset="utf-8" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+              (function(){
+                if (typeof hbspt === 'undefined') return;
+                hbspt.forms.create({
+                  region:   "na2",
+                  portalId: "48153453",
+                  formId:   "bf7c2589-af6c-47c8-a017-f6ae2303be47",
+                  target:   "#wsv2-contact-form",
+                  css: ''
+                    + '.hs-form-field { margin-bottom: 12px; }'
+                    + '.hs-form-field > label, .legal-consent-container { font-size: 13px; }'
+                    + '.hs-input { font-size: 14px; padding: 10px 12px; }'
+                    + '.hs-button { font-size: 14px; padding: 12px 26px; }'
+                    + '.hs-error-msg { font-size: 11px; }'
+                    + '@media (max-width: 768px) {'
+                    +   '.hs-form-field { margin-bottom: 10px; }'
+                    +   '.hs-form-field > label, .legal-consent-container { font-size: 12px; }'
+                    +   '.hs-input { font-size: 13px; padding: 9px 10px; }'
+                    +   '.hs-button { font-size: 13px; padding: 11px 22px; }'
+                    +   '.hs-error-msg { font-size: 11px; }'
+                    + '}'
+                });
+              })();
+            </script>
           </div>
 
         </div>
@@ -1280,9 +1305,6 @@
 
     </div>
   </footer>
-
-  <!-- HubSpot Forms v2 Script -->
-  <script src="https://js-na2.hsforms.net/forms/embed/48153453.js" defer></script>
 
   <script src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/js/script.js" defer></script>
   <?php wp_footer(); ?>

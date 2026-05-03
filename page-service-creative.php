@@ -31,7 +31,7 @@ get_template_part( 'template-parts/page-hero', null, [
     <div class="service-creative-concept__inner">
 
       <h2 class="service-creative-concept__headline">
-        オンラインも、オフラインも。<br>
+        オンラインも、<br class="sp">オフラインも。<br>
         顧客接点のすべてに、<br><span class="keyword">一貫したブランドと営業導線</span>を。
       </h2>
 
@@ -60,7 +60,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-creative-problem__head problem-header">
         <p class="en">PROBLEM</p>
-        <h2>クリエイティブ制作のよくある課題</h2>
+        <h2>クリエイティブ制作の<br class="sp">よくある課題</h2>
         <p class="subtitle">BtoB中小企業のクリエイティブ制作で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 

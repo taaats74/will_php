@@ -19,7 +19,7 @@ get_header();
 // [1] HERO(下層共通テンプレート)
 get_template_part( 'template-parts/page-hero', null, [
   'en'    => 'CONTENTS SEO',
-  'title' => 'コンテンツSEO構築・運用支援',
+  'title' => 'コンテンツSEO構築・<br class="sp">運用支援',
   'lead'  => '検索とAIから選ばれるコンテンツを積み上げ、Webを"育てる資産"へ。',
 ] );
 ?>
@@ -53,7 +53,7 @@ get_template_part( 'template-parts/page-hero', null, [
     <div class="service-seo-concept__inner">
 
       <h2 class="service-seo-concept__headline">
-        コンテンツSEOは、<span class="keyword">Webサイトを"育てる"</span>ための<br>
+        コンテンツSEOは、<br class="sp"><span class="keyword">Webサイトを"育てる"</span><br class="sp">ための<br class="pc">
         最も重要な施策です。
       </h2>
 
@@ -77,7 +77,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-seo-problem__head problem-header">
         <p class="en">PROBLEM</p>
-        <h2>コンテンツSEOのよくある課題</h2>
+        <h2>コンテンツSEOの<br class="sp">よくある課題</h2>
         <p class="subtitle">BtoB中小企業のコンテンツSEOで、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
@@ -125,7 +125,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-seo-role__head role-header">
         <p class="en">ROLE</p>
-        <h2>コンテンツSEOの本当の役割</h2>
+        <h2>コンテンツSEOの<br class="sp">本当の役割</h2>
         <p class="subtitle">検索やAIから選ばれるコンテンツを積み上げ、Webサイトを資産として育てる起点です。</p>
       </div>
 
@@ -184,7 +184,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-seo-feature__head feature-header">
         <p class="en">FEATURE</p>
-        <h2>コンテンツSEO構築・運用支援の特徴</h2>
+        <h2>コンテンツSEO構築・<br class="sp">運用支援の特徴</h2>
         <p class="subtitle">数あるコンテンツSEO支援サービスの中で、ウィルが選ばれる4つの特徴をお伝えします。</p>
       </div>
 

@@ -56,7 +56,7 @@ get_template_part( 'template-parts/page-hero', null, [
     <div class="service-web-concept__inner">
 
       <h2 class="service-web-concept__headline">
-        Webサイトは、集めるツールではなく、<br>
+        Webサイトは、<br class="sp">集めるツールではなく、<br>
         <span class="keyword">選ばれるためのツール</span>。
       </h2>
 
@@ -92,7 +92,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-web-target__head target-header">
         <p class="en">FOR WHOM</p>
-        <h2>こんな会社のためのサービスです</h2>
+        <h2>こんな会社のための<br class="sp">サービスです</h2>
         <p class="subtitle">本サービスは、特に以下のような会社向けにご提供しています。</p>
       </div>
 
@@ -115,7 +115,7 @@ get_template_part( 'template-parts/page-hero', null, [
         </li>
 
         <li class="service-web-target__item">
-          <p class="service-web-target__category-label">大規模・独自要件のあるプロジェクト</p>
+          <p class="service-web-target__category-label">大規模・独自要件のある<br class="sp">プロジェクト</p>
           <p class="service-web-target__text">
             ページ数が多い、独自機能の実装が必要、業界特性に合わせた設計が必要、
             など、テンプレート的な制作では対応できない要件を持つ会社。
@@ -147,7 +147,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-web-problem__head problem-header">
         <p class="en">PROBLEM</p>
-        <h2>こんなお悩みはありませんか?</h2>
+        <h2>こんなお悩みは<br class="sp">ありませんか?</h2>
         <p class="subtitle">BtoB中小企業のWebサイト制作で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
@@ -268,7 +268,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
         <li class="service-web-reason__item">
           <p class="service-web-reason__number">04</p>
-          <h3 class="service-web-reason__title">テンプレートに頼らないフルオーダーデザイン</h3>
+          <h3 class="service-web-reason__title">テンプレートに頼らない<br class="sp">フルオーダーデザイン</h3>
           <div class="service-web-reason__approach">
             <p>
               情報を載せるだけでは成果につながりません。
@@ -588,7 +588,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-web-faq__head faq-header">
         <p class="en">FAQ</p>
         <h2>よくあるご質問</h2>
-        <p class="subtitle">お問い合わせ前によくいただく質問をまとめました。</p>
+        <p class="subtitle">お問い合わせ前によくいただく質問を<br class="sp">まとめました。</p>
       </div>
 
       <div class="accordion service-web-faq__list">
@@ -805,8 +805,8 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-web-cta__head cta-header">
         <p class="en">CONTACT</p>
-        <h2>3つの相談入口をご用意しています</h2>
-        <p class="subtitle">ご検討の段階に合わせて、お気軽にお問い合わせください。</p>
+        <h2>3つの相談入口を<br class="sp">ご用意しています</h2>
+        <p class="subtitle">ご検討の段階に合わせて、<br class="sp">お気軽にお問い合わせください。</p>
       </div>
 
       <ul class="service-web-cta__grid">

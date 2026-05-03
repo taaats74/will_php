@@ -99,7 +99,8 @@ $ph-border:    #C0D5D8;   // バッジ枠線色
 // =====================================================
 @media screen and (max-width: 770px) {
   .page-hero {
-    padding: 50px 0;
+    // 上余白には固定 SP ヘッダー(.sp-header-v5 約 50px)被りを内包
+    padding: 97px 0 20px;
 
     &__en {
       font-size: 36px;
