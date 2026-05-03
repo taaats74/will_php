@@ -10,7 +10,7 @@
   <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/style.css" />
+    <link rel="stylesheet" href="<?php echo esc_url( will_asset_url( 'will-support-ec-assets/style.css' ) ); ?>" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -689,7 +689,7 @@
         <p class="ws-ec-footer__copy">© Will Support EC. All rights reserved.</p>
       </div>
     </footer>
-    <script src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/js/script.js" defer></script>
+    <script src="<?php echo esc_url( will_asset_url( 'will-support-ec-assets/js/script.js' ) ); ?>" defer></script>
     <?php wp_footer(); ?>
   </body>
 </html>

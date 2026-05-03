@@ -1,4 +1,17 @@
 <?php
+/**
+ * テーマ配下のアセットURLにfilemtimeベースのバージョンクエリを付与して返す
+ * (LP の直接 <link> / <script> 用。wp_enqueue_* には別途 filemtime を直接渡す)
+ *
+ * @param string $relative_path テーマディレクトリからの相対パス
+ * @return string バージョンクエリ付きの完全URL
+ */
+function will_asset_url( $relative_path ) {
+    $full_path = get_template_directory() . '/' . ltrim( $relative_path, '/' );
+    $ver = file_exists( $full_path ) ? filemtime( $full_path ) : '1';
+    return get_template_directory_uri() . '/' . ltrim( $relative_path, '/' ) . '?ver=' . $ver;
+}
+
 // cssとjs読み込ませ
   function theme_file_scripts(){
     // 自己完結型 LP 判定: テーマ汎用 CSS/JS は読み込まない
@@ -19,8 +32,8 @@
 
     // 旧ローディング:page-topv2.php 限定 enqueue(Phase 7)
     if ( is_page_template( 'page-topv2.php' ) ) {
-      wp_enqueue_script('loading', get_template_directory_uri() . '/js/loading.js', array(), '20240102', true);
-      wp_enqueue_script('loading-child', get_template_directory_uri() . '/js/loading-child.js', array(), '20240102', true);
+      wp_enqueue_script('loading', get_template_directory_uri() . '/js/loading.js', array(), filemtime( get_template_directory() . '/js/loading.js' ), true);
+      wp_enqueue_script('loading-child', get_template_directory_uri() . '/js/loading-child.js', array(), filemtime( get_template_directory() . '/js/loading-child.js' ), true);
     }
 
     if ( ! $is_self_contained_lp ) {
@@ -33,11 +46,11 @@
         true
       );
 
-      wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), '20240102', true);
-      wp_enqueue_script('accordion-js', get_template_directory_uri() . '/js/accordion.js', array(), '20240102', true);
+      wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), filemtime( get_template_directory() . '/js/sp-menu.js' ), true);
+      wp_enqueue_script('accordion-js', get_template_directory_uri() . '/js/accordion.js', array(), filemtime( get_template_directory() . '/js/accordion.js' ), true);
       wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js');
       wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
-      wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), '20240717', true);
+      wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), filemtime( get_template_directory() . '/js/pagetop2-script.js' ), true);
     }
 
     // SP ヘッダー / ドロワー JS(.sp-header-v5 / .sp-menu-v5 制御)
@@ -72,7 +85,7 @@
     // wordpressで使えない命名ルールがある「accordion」は使えなかったので「accordion-js」で記載してる↑
 
     if ( ! $is_self_contained_lp ) {
-      wp_enqueue_style('style_css', get_stylesheet_uri());
+      wp_enqueue_style('style_css', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ));
       wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
       wp_enqueue_style('slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css');
       wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css');

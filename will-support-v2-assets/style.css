@@ -3685,3 +3685,11 @@ body.wsv2-loading {
   text-align: center;
   padding: 24px;
 }
+
+/* ============================================
+   reCAPTCHA バッジ非表示(動作は維持)
+   Google の規約上、フッター等に保護表示文を別途明記すること
+   ============================================ */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
