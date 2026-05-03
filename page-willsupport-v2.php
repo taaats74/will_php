@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://js-na2.hsforms.net" crossorigin>
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/style.css">
+  <link rel="stylesheet" href="<?php echo esc_url( will_asset_url( 'will-support-v2-assets/style.css' ) ); ?>">
 
   <!-- 構造化データ：Service + Offer -->
   <script type="application/ld+json">
@@ -1306,7 +1306,7 @@
     </div>
   </footer>
 
-  <script src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/js/script.js" defer></script>
+  <script src="<?php echo esc_url( will_asset_url( 'will-support-v2-assets/js/script.js' ) ); ?>" defer></script>
   <?php wp_footer(); ?>
 </body>
 </html>

@@ -247,7 +247,7 @@ get_template_part( 'template-parts/page-hero', null, [
             <p class="service-ma-principle__label service-ma-principle__label--reason">[なぜか]</p>
             <p>
               ツール選定から入ると、ツールの機能に振り回され、本来やるべきことを見失います。
-              <span class="keyword">見込み客の育ち方から逆算</span>することで、自社にとって最適なツールと最適な使い方が決まります。
+              <span class="keyword">見込み客の育て方から逆算</span>することで、自社にとって最適なツールと最適な使い方が決まります。
             </p>
           </div>
         </li>
