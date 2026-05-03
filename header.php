@@ -16,7 +16,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
 
   <?php wp_head(); ?>
 </head>
@@ -87,7 +86,6 @@
                 <ul class="header-child-v2__megamenu__list">
                   <li><a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>" role="menuitem">Webサイト制作</a></li>
                   <li><a href="<?php echo esc_url( home_url('/service/marketing-automation/') ); ?>" role="menuitem">MA構築・運用支援</a></li>
-                  <!-- TODO: 専用LP新設後にURL差替 -->
                   <li><a href="<?php echo esc_url( home_url('/service/seo/') ); ?>" role="menuitem">コンテンツSEO構築・運用支援</a></li>
                   <li><a href="<?php echo esc_url( home_url('/service/instagram-support/') ); ?>" role="menuitem">Instagram構築・運用支援</a></li>
                   <li><a href="<?php echo esc_url( home_url('/service/creative/') ); ?>" role="menuitem">グラフィック制作</a></li>
@@ -150,7 +148,6 @@
         <ul>
           <li><a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>">Webサイト制作</a></li>
           <li><a href="<?php echo esc_url( home_url('/service/marketing-automation/') ); ?>">MA構築・運用支援</a></li>
-          <!-- TODO: 専用LP新設後にURL差替 -->
           <li><a href="<?php echo esc_url( home_url('/service/seo/') ); ?>">コンテンツSEO構築・運用支援</a></li>
           <li><a href="<?php echo esc_url( home_url('/service/instagram-support/') ); ?>">Instagram構築・運用支援</a></li>
           <li><a href="<?php echo esc_url( home_url('/service/creative/') ); ?>">グラフィック制作</a></li>

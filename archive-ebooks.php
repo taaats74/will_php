@@ -296,7 +296,7 @@
             まずは無料で診断・相談からどうぞ。
           </p>
           <div class="ebooks-cta-banner__buttons">
-            <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--primary">ウィルサポ詳細</a>
+            <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--primary" target="_blank" rel="noopener noreferrer">ウィルサポ詳細</a>
             <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--secondary">1分でできる無料診断</a>
           </div>
         </div>
