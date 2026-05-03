@@ -296,8 +296,8 @@
             まずは無料で診断・相談からどうぞ。
           </p>
           <div class="ebooks-cta-banner__buttons">
-            <a href="/willsupport/" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--primary">ウィルサポ詳細</a>
-            <a href="/diagnosis/" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--secondary">1分でできる無料診断</a>
+            <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--primary">ウィルサポ詳細</a>
+            <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--secondary">1分でできる無料診断</a>
           </div>
         </div>
       </aside>
@@ -359,7 +359,7 @@
             貴社の状況に合わせて、最適な活用方法をご提案します。
           </p>
           <div class="ebooks-cta-banner__buttons">
-            <a href="<?php echo esc_url( get_page_link( 15 ) ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--primary">無料相談はこちら</a>
+            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--primary">無料相談はこちら</a>
           </div>
         </div>
       </aside>

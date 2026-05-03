@@ -202,6 +202,17 @@ $will-subtle:    #8AA0A4;
   &--related {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  // page-topv3 / page-service / page-works の DOWNLOAD セクション用
+  // top_featured タクソノミーの 4 件を 2 カラムで表示
+  // カード一回りスリム + 余白多めの設計
+  &--top-featured {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 36px;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .ebooks-pickup,
@@ -619,6 +630,10 @@ $will-subtle:    #8AA0A4;
 
     &--related {
       grid-template-columns: 1fr;
+    }
+
+    &--top-featured {
+      gap: 24px;
     }
   }
 

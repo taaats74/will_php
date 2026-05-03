@@ -40,7 +40,7 @@
             <p class="ja">ともに、未来を創る</p>
           </div>
           <div class="mail-icon">
-            <a href="<?php echo get_page_link(15); ?>">
+            <a href="<?php echo esc_url( home_url('/contact/') ); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-mail-icon.png" alt="">
             </a>
           </div>
@@ -222,7 +222,7 @@
         <div class="wrapper">
           <h2>無料相談・お問い合わせ</h2>
           <div class="contact-btn">
-            <a href="<?php echo get_page_link(15); ?>">
+            <a href="<?php echo esc_url( home_url('/contact/') ); ?>">
               <span>CONTACT</span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
             </a>
@@ -291,7 +291,7 @@
             </div>
           </div>
           <div class="page-top2-btn">
-            <a href="<?php echo get_page_link(43) ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+            <a href="<?php echo esc_url( home_url('/works/') ); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -380,7 +380,7 @@
           endif;
           ?>
           <div class="page-top2-btn">
-            <a href="<?php echo get_page_link(43) ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+            <a href="<?php echo esc_url( home_url('/works/') ); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -396,7 +396,7 @@
             <p>わたしたちは、ウェブ制作やウェブ集客、SNS運用サポートをワンストップで提供することで、お客様のビジネスをトータルでサポートさせていただきます。<br>ウェブ担当者やマーケティング部門がない中小企業様にとって、戦略から戦術の策定、実行まで一気通貫で対応することは簡単ではありません。中小企業様のビジネスや課題を理解し、解決に全力で取り組ませていただきます。</p>
           </div>
           <div class="page-top2-btn">
-            <a href="<?php echo get_page_link(11) ?>">ウィルについて<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+            <a href="<?php echo esc_url( home_url('/about/') ); ?>">ウィルについて<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -407,7 +407,7 @@
         <div class="wrapper">
           <h2>無料相談・お問い合わせ</h2>
           <div class="contact-btn">
-            <a href="<?php echo get_page_link(15); ?>">
+            <a href="<?php echo esc_url( home_url('/contact/') ); ?>">
               <span>CONTACT</span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
             </a>

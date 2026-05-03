@@ -1,0 +1,6 @@
+# ID リンク監査ツールの出力(audit.php で再生成可)
+/results/
+
+# macOS
+.DS_Store
+**/.DS_Store
