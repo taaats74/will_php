@@ -83,31 +83,31 @@
 
   // aboutリンクショートコード
   function about_link(){
-    return get_page_link(11);
+    return home_url('/about/');
   }
   add_shortcode('about', 'about_link');
 
   // serviceリンクショートコード
   function service_link(){
-    return get_page_link(39);
+    return home_url('/service/');
   }
   add_shortcode('service', 'service_link');
 
   // worksリンクショートコード
   function works_link(){
-    return get_page_link(43);
+    return home_url('/works/');
   }
   add_shortcode('works', 'works_link');
 
   // conatctリンクショートコード
   function conatct_link(){
-    return get_page_link(15);
+    return home_url('/contact/');
   }
   add_shortcode('conatct', 'conatct_link');
 
   // partnerリンクショートコード
   function partner_link(){
-    return get_page_link(18);
+    return home_url('/partner/');
   }
   add_shortcode('partner', 'partner_link');
 

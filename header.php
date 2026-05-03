@@ -17,37 +17,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "合同会社ウィル",
-      "url": "https://will-corp.co.jp/",
-      "foundingDate": "2023-11",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "JP",
-        "addressRegion": "福岡県",
-        "addressLocality": "福岡市博多区",
-        "streetAddress": "博多駅前1丁目23番2号 ParkFront博多駅前1丁目5F-B",
-        "postalCode": "812-0011"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "url": "https://will-corp.co.jp/contact/",
-        "contactType": "customer service",
-        "availableLanguage": "Japanese"
-      },
-      "description": "BtoB中小企業の営業基盤をWebから設計する、福岡発のBtoBマーケティング支援会社",
-      "hasPart": [
-        { "@type": "WebPage", "name": "アバウト",       "url": "https://will-corp.co.jp/about/" },
-        { "@type": "WebPage", "name": "サービス",       "url": "https://will-corp.co.jp/service/" },
-        { "@type": "WebPage", "name": "制作実績",       "url": "https://will-corp.co.jp/works/" },
-        { "@type": "WebPage", "name": "ブログ",         "url": "https://will-corp.co.jp/blog/" },
-        { "@type": "WebPage", "name": "ダウンロード資料", "url": "https://will-corp.co.jp/ebooks/" }
-      ]
-    }
-  </script>
 
   <?php wp_head(); ?>
 </head>
@@ -87,22 +56,26 @@
         <ul class="header-child-v2__nav-list">
 
           <li class="header-child-v2__nav-item">
-            <a href="<?php echo esc_url( get_page_link( 11 ) ); ?>" class="header-child-v2__nav-link">私たちについて</a>
+            <a href="<?php echo esc_url( home_url('/') ); ?>" class="header-child-v2__nav-link">ホーム</a>
+          </li>
+
+          <li class="header-child-v2__nav-item">
+            <a href="<?php echo esc_url( home_url('/about/') ); ?>" class="header-child-v2__nav-link">私たちについて</a>
           </li>
 
           <li class="header-child-v2__nav-item header-child-v2__nav-item--has-mega">
-            <a href="/service/" class="header-child-v2__nav-link" aria-haspopup="true">サービス</a>
+            <a href="<?php echo esc_url( home_url('/service/') ); ?>" class="header-child-v2__nav-link" aria-haspopup="true">サービス</a>
 
             <div class="header-child-v2__megamenu" role="menu">
 
               <div class="header-child-v2__megamenu__group">
                 <p class="header-child-v2__megamenu__group-label">主力サービス</p>
                 <div class="header-child-v2__megamenu__featured">
-                  <a href="/willsupport/" class="header-child-v2__megamenu__featured-card" role="menuitem">
+                  <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="header-child-v2__megamenu__featured-card" role="menuitem" target="_blank" rel="noopener noreferrer">
                     <span class="header-child-v2__megamenu__featured-card-title">ウィルサポ</span>
                     <span class="header-child-v2__megamenu__featured-card-sub">BtoB中小企業向け</span>
                   </a>
-                  <a href="/will-support-ec/" class="header-child-v2__megamenu__featured-card" role="menuitem">
+                  <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="header-child-v2__megamenu__featured-card" role="menuitem" target="_blank" rel="noopener noreferrer">
                     <span class="header-child-v2__megamenu__featured-card-title">ウィルサポEC</span>
                     <span class="header-child-v2__megamenu__featured-card-sub">EC事業者向け</span>
                   </a>
@@ -112,12 +85,12 @@
               <div class="header-child-v2__megamenu__group">
                 <p class="header-child-v2__megamenu__group-label">支援領域</p>
                 <ul class="header-child-v2__megamenu__list">
-                  <li><a href="/service/web-creative/" role="menuitem">Webサイト制作</a></li>
-                  <li><a href="/service/web-marketing/" role="menuitem">MA構築・運用支援</a></li>
+                  <li><a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>" role="menuitem">Webサイト制作</a></li>
+                  <li><a href="<?php echo esc_url( home_url('/service/marketing-automation/') ); ?>" role="menuitem">MA構築・運用支援</a></li>
                   <!-- TODO: 専用LP新設後にURL差替 -->
-                  <li><a href="/service/" role="menuitem">コンテンツSEO構築・運用支援</a></li>
-                  <li><a href="/service/sns-support/" role="menuitem">Instagram構築・運用支援</a></li>
-                  <li><a href="/service/graphic/" role="menuitem">グラフィック制作</a></li>
+                  <li><a href="<?php echo esc_url( home_url('/service/seo/') ); ?>" role="menuitem">コンテンツSEO構築・運用支援</a></li>
+                  <li><a href="<?php echo esc_url( home_url('/service/instagram-support/') ); ?>" role="menuitem">Instagram構築・運用支援</a></li>
+                  <li><a href="<?php echo esc_url( home_url('/service/creative/') ); ?>" role="menuitem">グラフィック制作</a></li>
                 </ul>
               </div>
 
@@ -125,20 +98,20 @@
           </li>
 
           <li class="header-child-v2__nav-item">
-            <a href="<?php echo esc_url( get_page_link( 43 ) ); ?>" class="header-child-v2__nav-link">制作実績</a>
+            <a href="<?php echo esc_url( home_url('/works/') ); ?>" class="header-child-v2__nav-link">制作実績</a>
           </li>
 
           <li class="header-child-v2__nav-item">
-            <a href="/blog/" class="header-child-v2__nav-link">ブログ</a>
+            <a href="https://will-corp.co.jp/blog/" class="header-child-v2__nav-link" target="_blank" rel="noopener noreferrer">ブログ</a>
           </li>
 
         </ul>
       </nav>
 
       <div class="header-child-v2__cta">
-        <a href="/diagnosis/" class="header-child-v2__btn header-child-v2__btn--outline">無料診断</a>
-        <a href="/ebooks/" class="header-child-v2__btn header-child-v2__btn--outline">資料DL</a>
-        <a href="<?php echo esc_url( get_page_link( 15 ) ); ?>" class="header-child-v2__btn header-child-v2__btn--solid">お問い合わせ</a>
+        <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="header-child-v2__btn header-child-v2__btn--outline">無料診断</a>
+        <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="header-child-v2__btn header-child-v2__btn--outline">資料DL</a>
+        <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="header-child-v2__btn header-child-v2__btn--solid">お問い合わせ</a>
       </div>
 
     </div>
@@ -153,7 +126,7 @@
     <a href="<?php echo home_url('/'); ?>" class="sp-header-v5__logo" aria-label="トップページへ">
       <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="合同会社ウィル">
     </a>
-    <a href="/ebooks/" class="sp-header-v5__cta">資料DL</a>
+    <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="sp-header-v5__cta">資料DL</a>
     <button type="button" class="sp-header-v5__hamburger" aria-label="メニューを開く" aria-controls="sp-menu-v5" aria-expanded="false">
       <span></span>
       <span></span>
@@ -167,52 +140,52 @@
       <div class="sp-menu-v5__featured">
         <p class="sp-menu-v5__group-label">BtoB向けサブスクホームページ</p>
         <ul>
-          <li><a href="/willsupport/">ウィルサポ<span>BtoB中小企業向け</span></a></li>
-          <li><a href="/will-support-ec/">ウィルサポEC<span>EC事業者向け</span></a></li>
+          <li><a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポ<span>BtoB中小企業向け</span></a></li>
+          <li><a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポEC<span>EC事業者向け</span></a></li>
         </ul>
       </div>
 
       <details class="sp-menu-v5__group" open>
         <summary>SERVICES</summary>
         <ul>
-          <li><a href="/service/web-creative/">Webサイト制作</a></li>
-          <li><a href="/service/web-marketing/">MA構築・運用支援</a></li>
+          <li><a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>">Webサイト制作</a></li>
+          <li><a href="<?php echo esc_url( home_url('/service/marketing-automation/') ); ?>">MA構築・運用支援</a></li>
           <!-- TODO: 専用LP新設後にURL差替 -->
-          <li><a href="/service/">コンテンツSEO構築・運用支援</a></li>
-          <li><a href="/service/sns-support/">Instagram構築・運用支援</a></li>
-          <li><a href="/service/graphic/">グラフィック制作</a></li>
+          <li><a href="<?php echo esc_url( home_url('/service/seo/') ); ?>">コンテンツSEO構築・運用支援</a></li>
+          <li><a href="<?php echo esc_url( home_url('/service/instagram-support/') ); ?>">Instagram構築・運用支援</a></li>
+          <li><a href="<?php echo esc_url( home_url('/service/creative/') ); ?>">グラフィック制作</a></li>
         </ul>
       </details>
 
       <details class="sp-menu-v5__group">
         <summary>CONTENTS</summary>
         <ul>
-          <li><a href="/diagnosis/">無料診断</a></li>
-          <li><a href="/ebooks/">ダウンロード資料</a></li>
-          <li><a href="<?php echo esc_url( get_page_link( 43 ) ); ?>">制作実績</a></li>
-          <li><a href="/blog/">ブログ</a></li>
-          <!-- TODO: YouTubeチャンネルURL確定後に差替 -->
-          <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>">無料診断</a></li>
+          <li><a href="<?php echo esc_url( home_url('/ebooks/') ); ?>">ダウンロード資料</a></li>
+          <li><a href="<?php echo esc_url( home_url('/works/') ); ?>">制作実績</a></li>
+          <li><a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer">ブログ</a></li>
+          <li><a href="https://www.youtube.com/@will-btob-marketing" target="_blank" rel="noopener noreferrer">YouTube</a></li>
         </ul>
       </details>
 
       <details class="sp-menu-v5__group">
         <summary>COMPANY</summary>
         <ul>
-          <li><a href="<?php echo esc_url( get_page_link( 11 ) ); ?>">私たちについて</a></li>
-          <li><a href="<?php echo esc_url( get_page_link( 15 ) ); ?>">お問い合わせ</a></li>
+          <li><a href="<?php echo esc_url( home_url('/') ); ?>">ホーム</a></li>
+          <li><a href="<?php echo esc_url( home_url('/about/') ); ?>">私たちについて</a></li>
+          <li><a href="<?php echo esc_url( home_url('/contact/') ); ?>">お問い合わせ</a></li>
         </ul>
       </details>
 
       <div class="sp-menu-v5__cta">
-        <a href="/diagnosis/" class="sp-menu-v5__cta-secondary">1分でできる無料診断</a>
-        <a href="<?php echo esc_url( get_page_link( 15 ) ); ?>" class="sp-menu-v5__cta-primary">お問い合わせはこちら</a>
+        <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="sp-menu-v5__cta-secondary">1分でできる無料診断</a>
+        <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="sp-menu-v5__cta-primary">お問い合わせはこちら</a>
       </div>
 
       <div class="sp-menu-v5__legal">
         <ul>
-          <li><a href="/privacy-policy/">プライバシーポリシー</a></li>
-          <li><a href="/tradelaw/">特定商取引法に基づく表記</a></li>
+          <li><a href="<?php echo esc_url( home_url('/privacy-policy/') ); ?>">プライバシーポリシー</a></li>
+          <li><a href="<?php echo esc_url( home_url('/tradelaw/') ); ?>">特定商取引法に基づく表記</a></li>
         </ul>
       </div>
 

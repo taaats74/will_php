@@ -41,11 +41,11 @@
             <p class="sub2">事業のパートナーとして、ともに伴走します</p>
           </div>
           <div class="fv-cta-cards">
-            <a href="/ebook/" class="fv-cta-card fv-cta-card--ebook">
+            <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="fv-cta-card fv-cta-card--ebook">
               <span class="cta-label">DOWNLOAD</span>
               <span class="cta-text">BtoBマーケお役立ち<br>ダウンロード資料一覧はこちら</span>
             </a>
-            <a href="/diagnosis/" class="fv-cta-card fv-cta-card--diagnosis">
+            <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="fv-cta-card fv-cta-card--diagnosis">
               <span class="cta-label">DIAGNOSIS</span>
               <span class="cta-text">1分でできる<br>自社のWebマーケ診断はこちら</span>
             </a>
@@ -77,11 +77,11 @@
             </div>
           </div>
           <div class="fv-cta-cards-sp">
-            <a href="/ebook/" class="fv-cta-card fv-cta-card--ebook">
+            <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="fv-cta-card fv-cta-card--ebook">
               <span class="cta-label">DOWNLOAD</span>
               <span class="cta-text">BtoBマーケお役立ち<br>ダウンロード資料一覧はこちら</span>
             </a>
-            <a href="/diagnosis/" class="fv-cta-card fv-cta-card--diagnosis">
+            <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="fv-cta-card fv-cta-card--diagnosis">
               <span class="cta-label">DIAGNOSIS</span>
               <span class="cta-text">1分でできる<br>自社のWebマーケ診断はこちら</span>
             </a>
@@ -262,7 +262,7 @@
           </div>
 
           <div class="strength-cta">
-            <a href="/about/" class="strength-cta-link">
+            <a href="<?php echo esc_url( home_url('/about/') ); ?>" class="strength-cta-link">
               <span class="strength-cta-text">ウィルについて、もっと詳しく</span>
               <span class="strength-cta-arrow">→</span>
             </a>
@@ -330,7 +330,7 @@
                 </p>
               </div>
               <div class="mp-btn">
-                <a href="/willsupport/" class="mp-btn-link">
+                <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="mp-btn-link">
                   <span class="mp-btn-text"><span class="pc">ウィルサポの</span>サービス詳細を見る</span>
                   <span class="mp-btn-arrow">→</span>
                 </a>
@@ -361,7 +361,7 @@
                 </p>
               </div>
               <div class="mp-btn">
-                <a href="/will-support-ec/" class="mp-btn-link">
+                <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="mp-btn-link">
                   <span class="mp-btn-text"><span class="pc">ウィルサポECの</span>サービス詳細を見る</span>
                   <span class="mp-btn-arrow">→</span>
                 </a>
@@ -389,7 +389,7 @@
           </div>
 
           <div class="whatwedo-list">
-            <a href="/service/web-creative/" class="whatwedo-item animation-target to-up">
+            <a href="<?php echo esc_url( home_url('/service/web-creative/') ); ?>" class="whatwedo-item animation-target to-up">
               <div class="whatwedo-item-header">
                 <span class="whatwedo-number">01</span>
                 <h3>Webサイト制作</h3>
@@ -407,7 +407,7 @@
               </div>
             </a>
 
-            <a href="/service/web-marketing/" class="whatwedo-item animation-target to-up">
+            <a href="<?php echo esc_url( home_url('/service/marketing-automation/') ); ?>" class="whatwedo-item animation-target to-up">
               <div class="whatwedo-item-header">
                 <span class="whatwedo-number">02</span>
                 <h3>MA構築・運用支援</h3>
@@ -425,7 +425,7 @@
               </div>
             </a>
 
-            <a href="/service/" class="whatwedo-item animation-target to-up">
+            <a href="<?php echo esc_url( home_url('/service/seo/') ); ?>" class="whatwedo-item animation-target to-up">
               <div class="whatwedo-item-header">
                 <span class="whatwedo-number">03</span>
                 <h3>コンテンツSEO構築・運用支援</h3>
@@ -443,7 +443,7 @@
               </div>
             </a>
 
-            <a href="/service/sns-support/" class="whatwedo-item animation-target to-up">
+            <a href="<?php echo esc_url( home_url('/service/instagram-support/') ); ?>" class="whatwedo-item animation-target to-up">
               <div class="whatwedo-item-header">
                 <span class="whatwedo-number">04</span>
                 <h3>Instagram構築・運用支援</h3>
@@ -461,7 +461,7 @@
               </div>
             </a>
 
-            <a href="/service/graphic/" class="whatwedo-item animation-target to-up">
+            <a href="<?php echo esc_url( home_url('/service/creative/') ); ?>" class="whatwedo-item animation-target to-up">
               <div class="whatwedo-item-header">
                 <span class="whatwedo-number">05</span>
                 <h3>グラフィック制作</h3>
@@ -508,7 +508,7 @@
             <li>面談不要</li>
             <li>個別レポート送付</li>
           </ul>
-          <a href="/diagnosis/" class="diagnosis-btn">1分でできる無料診断を受ける</a>
+          <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="diagnosis-btn">1分でできる無料診断を受ける</a>
         </div>
 
       </div>
@@ -530,7 +530,7 @@
             </p>
           </div>
 
-          <div class="ebooks-cards-grid">
+          <div class="ebooks-cards-grid ebooks-cards-grid--top-featured">
             <?php
               // ebook_pickup タクソノミー = top_featured(トップページ掲載)に紐づく資料を最大4件
               $top_ebooks = new WP_Query([
@@ -558,7 +558,7 @@
           </div>
 
           <div class="ebook-bottom-cta">
-            <a href="/ebook/" class="ebook-bottom-cta-link">
+            <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="ebook-bottom-cta-link">
               <span class="ebook-bottom-cta-text">ダウンロード資料一覧はこちら</span>
               <span class="ebook-bottom-cta-arrow">→</span>
             </a>
@@ -691,8 +691,7 @@
           </div>
 
           <div class="youtube-bottom-cta">
-            <a href="#" class="youtube-bottom-cta-link" target="_blank" rel="noopener noreferrer">
-              <!-- TODO: YouTubeチャンネルURL差し替え (BtoBマーケ実践チャンネル by ウィル) -->
+            <a href="https://www.youtube.com/@will-btob-marketing" class="youtube-bottom-cta-link" target="_blank" rel="noopener noreferrer">
               <span class="youtube-bottom-cta-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
               </span>
@@ -787,7 +786,7 @@
           </div>
 
           <div class="works-bottom-cta">
-            <a href="<?php echo get_page_link(43); ?>" class="works-bottom-cta-link">
+            <a href="<?php echo esc_url( home_url('/works/') ); ?>" class="works-bottom-cta-link">
               <span class="works-bottom-cta-text">制作実績一覧はこちら</span>
               <span class="works-bottom-cta-arrow">→</span>
             </a>
@@ -817,7 +816,7 @@
                 </div>
 
                 <div class="blog-v5-bottom-cta">
-                  <a href="/blog/" class="blog-v5-bottom-cta-link">
+                  <a href="https://will-corp.co.jp/blog/" class="blog-v5-bottom-cta-link" target="_blank" rel="noopener noreferrer">
                     <span class="blog-v5-bottom-cta-text">ブログ一覧はこちら</span>
                     <span class="blog-v5-bottom-cta-arrow">→</span>
                   </a>
@@ -918,7 +917,7 @@
           </div>
 
           <div class="blog-v5-bottom-cta blog-v5-bottom-cta--sp">
-            <a href="/blog/" class="blog-v5-bottom-cta-link">
+            <a href="https://will-corp.co.jp/blog/" class="blog-v5-bottom-cta-link" target="_blank" rel="noopener noreferrer">
               <span class="blog-v5-bottom-cta-text">ブログ一覧はこちら</span>
               <span class="blog-v5-bottom-cta-arrow">→</span>
             </a>
@@ -956,7 +955,7 @@
           </div>
 
           <div class="about-v5-bottom-cta">
-            <a href="<?php echo get_page_link(11); ?>" class="about-v5-bottom-cta-link">
+            <a href="<?php echo esc_url( home_url('/about/') ); ?>" class="about-v5-bottom-cta-link">
               <span class="about-v5-bottom-cta-text">わたしたちの詳細はこちら</span>
               <span class="about-v5-bottom-cta-arrow">→</span>
             </a>
@@ -980,7 +979,7 @@ PHPコメントアウトで温存する。
         <div class="wrapper">
           <h2>無料相談・お問い合わせ</h2>
           <div class="contact-btn">
-            <a href="<?php echo get_page_link(15); ?>">
+            <a href="<?php echo esc_url( home_url('/contact/') ); ?>">
               <span>CONTACT</span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
             </a>
@@ -1012,13 +1011,13 @@ PHPコメントアウトで温存する。
 
           <div class="contact-v5-cta-group">
 
-            <a href="/diagnosis/" class="contact-v5-cta contact-v5-cta--outline">
+            <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="contact-v5-cta contact-v5-cta--outline">
               <span class="contact-v5-cta-label">DIAGNOSIS</span>
               <span class="contact-v5-cta-text">1分でできる無料診断</span>
               <span class="contact-v5-cta-arrow">→</span>
             </a>
 
-            <a href="<?php echo get_page_link(15); ?>" class="contact-v5-cta contact-v5-cta--solid">
+            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="contact-v5-cta contact-v5-cta--solid">
               <span class="contact-v5-cta-label">CONTACT</span>
               <span class="contact-v5-cta-text">お問い合わせはこちら</span>
               <span class="contact-v5-cta-arrow">→</span>
