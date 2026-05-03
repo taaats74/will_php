@@ -54,13 +54,14 @@ $pd-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // HubSpot フォームの差し込み枠
-// the_content() で HubSpot 診断フォームショートコードが描画される想定
+// HubSpot Legacy embed (hbspt.forms.create) で .hs-form を描画
 .page-diagnosis__form {
   font-family: $pd-font-jp;
   color: $pd-color-text;
   letter-spacing: 0.04em;
 
   .hbspt-form,
+  .hs-form,
   .hs-form-frame {
     max-width: 720px;
     margin: 0 auto;
@@ -84,6 +85,103 @@ $pd-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     text-underline-offset: 2px;
 
     &:hover { text-decoration: none; }
+  }
+
+  // HubSpot Legacy embed (.hs-form) override
+  .hs-form-field {
+    margin-bottom: 16px;
+
+    > label {
+      display: block;
+      font-family: $pd-font-jp;
+      font-size: 14px;
+      font-weight: 700;
+      color: $pd-color-text;
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .hs-form-required {
+    color: #d24545;
+    margin-left: 4px;
+  }
+
+  .hs-input {
+    width: 100% !important;
+    padding: 12px 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    background: #ffffff;
+    font-family: $pd-font-jp;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $pd-color-accent;
+    }
+  }
+
+  textarea.hs-input {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  .hs-button {
+    display: inline-block;
+    padding: 14px 36px;
+    background: $pd-color-accent;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    font-family: $pd-font-jp;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover { background: #1c6f87; }
+  }
+
+  .hs-error-msgs {
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0;
+  }
+
+  .hs-error-msg {
+    font-size: 12px;
+    color: #d24545;
+  }
+
+  .legal-consent-container {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #555;
+    margin-top: 12px;
+  }
+
+  .hs-fieldtype-booleancheckbox label,
+  .hs-fieldtype-checkbox label {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+
+    input { margin-top: 4px; }
+  }
+
+  .submitted-message {
+    font-family: $pd-font-jp;
+    font-size: 16px;
+    color: $pd-color-accent;
+    text-align: center;
+    padding: 24px;
   }
 }
 
@@ -111,7 +209,11 @@ $pd-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   .page-diagnosis {
     padding: 56px 0 72px;
 
-    .container { padding: 0 20px; }
+    .container { padding: 0 12px; }
+  }
+
+  .page-diagnosis__inner {
+    width: 100%;
   }
 
   .page-diagnosis__lead {

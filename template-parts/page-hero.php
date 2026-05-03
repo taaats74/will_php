@@ -23,8 +23,9 @@
  *   </section>
  *
  * セキュリティ:
- * - en / title:esc_html(プレーンテキストのみ)
- * - lead:wp_kses で <br> のみ許可(改行用)
+ * - en:esc_html(プレーンテキストのみ)
+ * - title:wp_kses で <br class> のみ許可(SP/PC 切替の改行用)
+ * - lead:wp_kses で <br class> のみ許可(SP/PC 切替の改行用)
  * - badge:wp_kses で <strong> / <br> 許可(件数強調用)
  */
 
@@ -41,11 +42,11 @@ $ph_badge = isset( $args['badge'] ) ? (string) $args['badge'] : '';
     <?php endif; ?>
 
     <?php if ( $ph_title ) : ?>
-      <h1 class="page-hero__title"><?php echo esc_html( $ph_title ); ?></h1>
+      <h1 class="page-hero__title"><?php echo wp_kses( $ph_title, [ 'br' => [ 'class' => true ] ] ); ?></h1>
     <?php endif; ?>
 
     <?php if ( $ph_lead ) : ?>
-      <p class="page-hero__lead"><?php echo wp_kses( $ph_lead, [ 'br' => [] ] ); ?></p>
+      <p class="page-hero__lead"><?php echo wp_kses( $ph_lead, [ 'br' => [ 'class' => true ] ] ); ?></p>
     <?php endif; ?>
 
     <?php if ( $ph_badge ) : ?>

@@ -1523,14 +1523,21 @@ $sw-font-jp:       "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     margin-bottom: 22px;
   }
 
-  .service-web-price__comparison-table {
-    thead th { font-size: 12.5px; padding: 12px 8px; }
+  // SP は横スクロール優先(見やすさ重視で table 自体の幅を確保)
+  .service-web-price__comparison-tablewrap {
+    -webkit-overflow-scrolling: touch;
+  }
 
-    .service-web-price__comparison-sub { font-size: 10.5px; }
+  .service-web-price__comparison-table {
+    min-width: 640px;
+
+    thead th { font-size: 13px; padding: 12px 10px; }
+
+    .service-web-price__comparison-sub { font-size: 11px; }
 
     tbody {
-      th, td { font-size: 12.5px; padding: 12px 10px; }
-      th { width: 30%; }
+      th, td { font-size: 13px; padding: 12px 12px; line-height: 1.7; }
+      th { width: 25%; white-space: nowrap; }
     }
   }
 
