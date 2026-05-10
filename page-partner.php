@@ -51,7 +51,7 @@ get_template_part( 'template-parts/page-hero', null, [
               </div>
             </div>
             <div class="img-wrapper">
-              <img src="[img]partner01.png" alt="">
+              <img src="[img]partner01.webp" alt="">
             </div>
             <div class="desc">
               <p>広告代理店やマーケティングコンサルティング会社の方々へ。弊社は共に成長できるビジネスパートナーを探しています。経験豊富なプロフェッショナルとして共に未来を築くためのパートナーシップを歓迎します。ご興味のある方はお気軽にご連絡ください。</p>
@@ -67,7 +67,7 @@ get_template_part( 'template-parts/page-hero', null, [
               </div>
             </div>
             <div class="img-wrapper">
-              <img src="[img]partner02.png" alt="">
+              <img src="[img]partner02.webp" alt="">
             </div>
             <div class="desc">
               <p>クリエイティブなホームページ制作やデザインのプロとして、一緒にプロジェクトを進めるパートナーを募集しています。クライアントのビジョンを形にし、オンラインでの存在感を高めませんか？経験豊富な方や新しいアイデアを持つ方、ぜひご応募ください。</p>
@@ -83,7 +83,7 @@ get_template_part( 'template-parts/page-hero', null, [
               </div>
             </div>
             <div class="img-wrapper">
-              <img src="[img]partner03.png" alt="">
+              <img src="[img]partner03.webp" alt="">
             </div>
             <div class="desc">
               <p>SNS運用やコンセプト設計のスペシャリストとして、一緒にプロジェクトを盛り上げるパートナーを求めています。クリエイティブな発想や実績を持つ方、お客様のストーリーを共に広げる仲間を募集中です。新しいアイデアやエキスパートなスキルをお持ちの方、ぜひご応募ください。</p>

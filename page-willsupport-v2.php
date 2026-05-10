@@ -160,7 +160,7 @@
   <div class="wsv2-loader" id="wsv2-loader" aria-hidden="true">
     <div class="wsv2-loader__inner">
       <img
-        src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.png"
+        src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp"
         alt=""
         class="wsv2-loader__logo"
         width="240"
@@ -179,7 +179,7 @@
         <div class="wsv2-header__inner">
           <div class="wsv2-header__brand">
             <a href="#top" class="wsv2-header__logo" aria-label="ウィルサポ トップへ戻る">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/header-logo.png" alt="ウィルサポ" width="169" height="42" loading="eager" decoding="async">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/header-logo.webp" alt="ウィルサポ" width="169" height="42" loading="eager" decoding="async">
             </a>
           </div>
           <nav class="wsv2-header__nav" aria-label="グローバルナビゲーション">
@@ -223,7 +223,7 @@
   <nav class="wsv2-fab-nav" id="wsv2-fab-nav" aria-label="モバイルナビゲーション">
     <div class="wsv2-fab-nav__logo">
       <a href="#top">
-        <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/header-logo.png" alt="ウィルサポ" width="140" height="35" loading="lazy" decoding="async">
+        <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/header-logo.webp" alt="ウィルサポ" width="140" height="35" loading="lazy" decoding="async">
       </a>
     </div>
     <ul class="wsv2-fab-nav__list">
@@ -275,7 +275,7 @@
             <div class="wsv2-fv__content">
               <p class="wsv2-fv__sublabel">サブスク型ホームページサービス</p>
               <h1 class="wsv2-fv__title">
-                <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.png" alt="ウィルサポ" loading="eager" decoding="async">
+                <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ" loading="eager" decoding="async">
               </h1>
               <ul class="wsv2-fv__points">
                 <li class="wsv2-fv__point">初期費用<br>無料</li>
@@ -289,7 +289,7 @@
 
             <!-- 右カラム：メインビジュアル -->
             <div class="wsv2-fv__visual">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-illust.png" alt="ウィルサポ サービスイメージ" loading="eager" fetchpriority="high" decoding="async">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-illust.webp" alt="ウィルサポ サービスイメージ" loading="eager" fetchpriority="high" decoding="async">
             </div>
 
           </div>
@@ -655,7 +655,7 @@
               <li class="wsv2-works__card">
                 <a href="https://japanmarvelous.com/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="ジャパンマーベラス様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/marvelous.png" alt="ジャパンマーベラス様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/marvelous.webp" alt="ジャパンマーベラス様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">ジャパンマーベラス様</p>
@@ -667,7 +667,7 @@
               <li class="wsv2-works__card">
                 <a href="https://systemline.jp/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="株式会社システムライン様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/systemline.png" alt="株式会社システムライン様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/systemline.webp" alt="株式会社システムライン様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">株式会社システムライン様</p>
@@ -679,7 +679,7 @@
               <li class="wsv2-works__card">
                 <a href="https://otg-koushu.com/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="株式会社OTG講習センター様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/otg.png" alt="株式会社OTG講習センター様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/otg.webp" alt="株式会社OTG講習センター様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">株式会社OTG講習センター様</p>
@@ -691,7 +691,7 @@
               <li class="wsv2-works__card">
                 <a href="https://mrzaimuya.com/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="株式会社Mr財務屋様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/mrzaimuya.png" alt="株式会社Mr財務屋様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/mrzaimuya.webp" alt="株式会社Mr財務屋様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">株式会社Mr財務屋様</p>
@@ -703,7 +703,7 @@
               <li class="wsv2-works__card">
                 <a href="https://mitsuyaweb.jp/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="株式会社みつや様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/mitsuya.png" alt="株式会社みつや様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/mitsuya.webp" alt="株式会社みつや様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">株式会社みつや様</p>
@@ -715,7 +715,7 @@
               <li class="wsv2-works__card">
                 <a href="https://flags-guide.com/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="株式会社フラッグス様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/flags.png" alt="株式会社フラッグス様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/flags.webp" alt="株式会社フラッグス様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">株式会社フラッグス様</p>
@@ -727,7 +727,7 @@
               <li class="wsv2-works__card">
                 <a href="https://muraoka-touki.com/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="村岡測量登記事務所様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/muraoka.png" alt="村岡測量登記事務所様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/muraoka.webp" alt="村岡測量登記事務所様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">村岡測量登記事務所様</p>
@@ -739,7 +739,7 @@
               <li class="wsv2-works__card">
                 <a href="https://maru-suru.com/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="株式会社maru-suru様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/maru-suru.png" alt="株式会社maru-suru様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/maru-suru.webp" alt="株式会社maru-suru様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">株式会社maru-suru様</p>
@@ -751,7 +751,7 @@
               <li class="wsv2-works__card">
                 <a href="https://gritcoco-realestate.com/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="株式会社GRIT様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/grit.png" alt="株式会社GRIT様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/grit.webp" alt="株式会社GRIT様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">株式会社GRIT様</p>
@@ -763,7 +763,7 @@
               <li class="wsv2-works__card">
                 <a href="https://lilyproductionjp.com/" class="wsv2-works__card-link" target="_blank" rel="noopener noreferrer" aria-label="株式会社Lily様のWebサイトを新しいタブで開く">
                   <div class="wsv2-works__card-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/lily.png" alt="株式会社Lily様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/lily.webp" alt="株式会社Lily様 Webサイト制作実績" width="800" height="450" loading="lazy" decoding="async">
                   </div>
                   <div class="wsv2-works__card-body">
                     <p class="wsv2-works__card-name">株式会社Lily様</p>
@@ -1272,7 +1272,7 @@
         <!-- ブランド -->
         <div class="wsv2-footer__brand">
           <a href="#top" class="wsv2-footer__logo" aria-label="ウィルサポ トップへ戻る">
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/header-logo.png" alt="ウィルサポ" width="140" height="35" loading="lazy" decoding="async">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/header-logo.webp" alt="ウィルサポ" width="140" height="35" loading="lazy" decoding="async">
           </a>
           <p class="wsv2-footer__site-link">
             <a
