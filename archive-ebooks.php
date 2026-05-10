@@ -5,7 +5,7 @@
  *
  * - お役立ち資料 / サービス紹介資料 のタブ切替
  * - 件数・ピックアップは ebook_type / ebook_pickup タクソノミーから動的生成
- * - サービス紹介はテーマ別(ebook_theme)に分割表示
+ * - サービス紹介は投稿日降順で 1 つの 3 列 grid に表示(1 サービス 1 資料想定)
  */
 ?>
 <?php get_header(); ?>
@@ -111,7 +111,7 @@
     'order'          => 'DESC',
   ]);
 
-  // service をテーマで分類
+  // サービス紹介資料(投稿日降順で全件取得・1 つの grid にそのまま並べる)
   $service_posts = get_posts([
     'post_type'      => 'ebooks',
     'posts_per_page' => -1,
@@ -123,30 +123,6 @@
     'orderby'        => 'date',
     'order'          => 'DESC',
   ]);
-
-  // テーマ別グルーピング(主要3テーマ + その他)
-  $theme_groups = [
-    'willsuppo'           => [ 'label' => 'ウィルサポ',           'items' => [] ],
-    'willsuppo-ec'        => [ 'label' => 'ウィルサポEC',         'items' => [] ],
-    'partner-program'     => [ 'label' => 'パートナープログラム', 'items' => [] ],
-    'other'               => [ 'label' => 'その他',               'items' => [] ],
-  ];
-  foreach ( $service_posts as $sp ) {
-    $themes = get_the_terms( $sp->ID, 'ebook_theme' );
-    $matched = false;
-    if ( ! empty( $themes ) && ! is_wp_error( $themes ) ) {
-      foreach ( $themes as $t ) {
-        if ( isset( $theme_groups[ $t->slug ] ) ) {
-          $theme_groups[ $t->slug ]['items'][] = $sp->ID;
-          $matched = true;
-          break;
-        }
-      }
-    }
-    if ( ! $matched ) {
-      $theme_groups['other']['items'][] = $sp->ID;
-    }
-  }
 ?>
 
 <main class="ebooks-archive">
@@ -335,14 +311,9 @@
         </h2>
 
         <?php if ( ! empty( $service_posts ) ) : ?>
-          <?php foreach ( $theme_groups as $slug => $group ) : ?>
-            <?php if ( empty( $group['items'] ) ) continue; ?>
-            <div class="ebooks-list ebooks-list--by-theme" data-theme="<?php echo esc_attr( $slug ); ?>">
-              <div class="ebooks-cards-grid">
-                <?php foreach ( $group['items'] as $pid ) : will_ebooks_render_card( $pid ); endforeach; ?>
-              </div>
-            </div>
-          <?php endforeach; ?>
+          <div class="ebooks-cards-grid">
+            <?php foreach ( $service_posts as $sp ) : will_ebooks_render_card( $sp->ID ); endforeach; ?>
+          </div>
         <?php else : ?>
           <p class="ebooks-empty">現在公開中のサービス紹介資料はありません。</p>
         <?php endif; ?>
