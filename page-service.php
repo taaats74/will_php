@@ -113,7 +113,7 @@ get_template_part('template-parts/page-hero', null, [
                 </ul>
               </div>
               <div class="page-service__main-card-visual">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-v2-assets/img/fv-illust.png' ); ?>"
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-v2-assets/img/fv-illust.webp' ); ?>"
                      alt=""
                      loading="lazy"
                      decoding="async">
@@ -169,7 +169,7 @@ get_template_part('template-parts/page-hero', null, [
                 </ul>
               </div>
               <div class="page-service__main-card-visual">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-ec-assets/img/page-willsuppoec-hero1.png' ); ?>"
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/will-support-ec-assets/img/page-willsuppoec-hero1.webp' ); ?>"
                      alt=""
                      loading="lazy"
                      decoding="async">
