@@ -48,8 +48,8 @@ function will_asset_url( $relative_path ) {
 
       wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), filemtime( get_template_directory() . '/js/sp-menu.js' ), true);
       wp_enqueue_script('accordion-js', get_template_directory_uri() . '/js/accordion.js', array(), filemtime( get_template_directory() . '/js/accordion.js' ), true);
-      wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array(), null, true);
-      wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js', array(), null, true);
+      wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js');
+      wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
       wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), filemtime( get_template_directory() . '/js/pagetop2-script.js' ), true);
     }
 
@@ -105,9 +105,9 @@ function will_asset_url( $relative_path ) {
   add_action( 'wp_enqueue_scripts', 'theme_file_scripts' );
 
   // レンダリングブロッキング CSS の非同期化(preload + onload パターン)
-  // 対象: fontawesome / slick-theme / slick-css(style_css はテーマ本体のため FOUC 回避で同期維持)
+  // 対象: fontawesome のみ(slick CSS は LCP 悪化のためロールバック / style_css はテーマ本体のため同期維持)
   function will_async_styles( $html, $handle ) {
-    $async_handles = array( 'fontawesome', 'slick-theme', 'slick-css' );
+    $async_handles = array( 'fontawesome' );
     if ( ! in_array( $handle, $async_handles, true ) ) {
       return $html;
     }
