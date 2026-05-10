@@ -22,7 +22,7 @@
           </header>
           <div class="bg-img">
             <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" alt=""> -->
-            <video autoplay muted loop playsinline id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie.mp4" ></video>
+            <video autoplay muted loop playsinline preload="metadata" poster="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie.mp4" ></video>
           </div>
           <div class="logo-wrapper">
             <div class="logo-text">
@@ -60,7 +60,7 @@
         <div class="wrapper">
           <div class="fv-sp-video">
             <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.webp" alt=""> -->
-            <video autoplay muted loop playsinline id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie-sp.mp4" ></video>
+            <video autoplay muted loop playsinline preload="metadata" poster="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.webp" id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie-sp.mp4" ></video>
             <div class="logo-wrapper">
               <div class="logo-text">
                 <p class="text1">BtoB Marketing & Web Strategy</p>
