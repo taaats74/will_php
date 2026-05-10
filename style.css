@@ -178,7 +178,7 @@ img {
   white-space: nowrap;
   color: white;
   font-size: 2em;
-  font-family: "source-han-sans-japanese", sans-serif;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
   font-weight: 700;
   font-style: normal;
   letter-spacing: 2px;
@@ -284,7 +284,7 @@ body.appear .loading-container {
     white-space: nowrap;
     color: white;
     font-size: 1.4em;
-    font-family: "source-han-sans-japanese", sans-serif;
+    font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
     font-weight: 700;
     font-style: normal;
     letter-spacing: 2px;
@@ -24416,6 +24416,53 @@ body.is-sp-menu-open {
     letter-spacing: 1.5px;
     padding-top: 20px;
   }
+}
+
+/* YouTube Facade */
+.yt-facade {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+.yt-facade__play {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.yt-facade__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.yt-facade__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.yt-facade:hover .yt-facade__icon,
+.yt-facade__play:focus .yt-facade__icon {
+  opacity: 1;
+}
+.yt-facade__play:focus {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
 }
 
 /*# sourceMappingURL=style.css.map */

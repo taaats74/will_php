@@ -48,8 +48,8 @@ function will_asset_url( $relative_path ) {
 
       wp_enqueue_script('sp-menu', get_template_directory_uri() . '/js/sp-menu.js', array(), filemtime( get_template_directory() . '/js/sp-menu.js' ), true);
       wp_enqueue_script('accordion-js', get_template_directory_uri() . '/js/accordion.js', array(), filemtime( get_template_directory() . '/js/accordion.js' ), true);
-      wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js');
-      wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js');
+      wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array(), null, true);
+      wp_enqueue_script('rellax-js', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js', array(), null, true);
       wp_enqueue_script('pagetop2-js', get_template_directory_uri() . '/js/pagetop2-script.js', array(), filemtime( get_template_directory() . '/js/pagetop2-script.js' ), true);
     }
 
@@ -82,6 +82,17 @@ function will_asset_url( $relative_path ) {
       );
     }
 
+    // yt-facade(YouTube ファサード)JS — トップ(page-topv3.php)限定
+    if ( is_page_template( 'page-topv3.php' ) ) {
+      wp_enqueue_script(
+        'yt-facade',
+        get_template_directory_uri() . '/js/yt-facade.js',
+        array(),
+        filemtime( get_template_directory() . '/js/yt-facade.js' ),
+        true
+      );
+    }
+
     // wordpressで使えない命名ルールがある「accordion」は使えなかったので「accordion-js」で記載してる↑
 
     if ( ! $is_self_contained_lp ) {
@@ -92,6 +103,31 @@ function will_asset_url( $relative_path ) {
     }
   }
   add_action( 'wp_enqueue_scripts', 'theme_file_scripts' );
+
+  // レンダリングブロッキング CSS の非同期化(preload + onload パターン)
+  // 対象: fontawesome / slick-theme / slick-css(style_css はテーマ本体のため FOUC 回避で同期維持)
+  function will_async_styles( $html, $handle ) {
+    $async_handles = array( 'fontawesome', 'slick-theme', 'slick-css' );
+    if ( ! in_array( $handle, $async_handles, true ) ) {
+      return $html;
+    }
+    // WordPress のクォート出力(' / ")両対応
+    if ( strpos( $html, "rel='stylesheet'" ) !== false ) {
+      $html = str_replace(
+        "rel='stylesheet'",
+        "rel='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"",
+        $html
+      );
+    } elseif ( strpos( $html, 'rel="stylesheet"' ) !== false ) {
+      $html = str_replace(
+        'rel="stylesheet"',
+        'rel="preload" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"',
+        $html
+      );
+    }
+    return $html;
+  }
+  add_filter( 'style_loader_tag', 'will_async_styles', 10, 2 );
 
   // メニュー登録
   register_nav_menus(array(
