@@ -282,7 +282,7 @@
         <div class="ebooks-author__card">
           <div class="ebooks-author__photo">
             <!-- 編集箇所:著者写真のパスを直書き -->
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/page-top2-tatsuya-img.png" alt="高橋 竜也">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/page-top2-tatsuya-img.webp" alt="高橋 竜也">
           </div>
           <div class="ebooks-author__text">
             <!-- 編集箇所:著者情報を直書き -->

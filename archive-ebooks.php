@@ -348,7 +348,7 @@
 
       <div class="ebooks-trust__author">
         <div class="ebooks-trust__author-photo">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/page-top2-tatsuya-img.png" alt="高橋 竜也">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/page-top2-tatsuya-img.webp" alt="高橋 竜也">
         </div>
         <div class="ebooks-trust__author-text">
           <p class="ebooks-trust__author-name">高橋 竜也</p>
