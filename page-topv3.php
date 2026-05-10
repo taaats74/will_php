@@ -138,7 +138,7 @@
             </p>
           </div>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.png" alt="management issue" class="text-image rellax-up">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.webp" alt="management issue" class="text-image rellax-up">
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.webp" alt="合同会社ウィル" class="logo-image rellax-up">
       </div>
     </section>
@@ -726,37 +726,37 @@
                 [
                   'name' => 'ジャパンマーベラス様',
                   'url'  => 'https://japanmarvelous.com/',
-                  'img'  => 'marvelous.png',
+                  'img'  => 'marvelous.webp',
                   'tag'  => 'BtoB',
                 ],
                 [
                   'name' => '株式会社システムライン様',
                   'url'  => 'https://systemline.jp/',
-                  'img'  => 'systemline.png',
+                  'img'  => 'systemline.webp',
                   'tag'  => 'BtoB',
                 ],
                 [
                   'name' => '株式会社Mr財務屋様',
                   'url'  => 'https://mrzaimuya.com/',
-                  'img'  => 'mrzaimuya.png',
+                  'img'  => 'mrzaimuya.webp',
                   'tag'  => '税務・財務',
                 ],
                 [
                   'name' => '村岡測量登記事務所様',
                   'url'  => 'https://muraoka-touki.com/',
-                  'img'  => 'muraoka.png',
+                  'img'  => 'muraoka.webp',
                   'tag'  => '士業',
                 ],
                 [
                   'name' => '株式会社GRIT様',
                   'url'  => 'https://gritcoco-realestate.com/',
-                  'img'  => 'grit.png',
+                  'img'  => 'grit.webp',
                   'tag'  => '不動産',
                 ],
                 [
                   'name' => '株式会社Lily様',
                   'url'  => 'https://lilyproductionjp.com/',
-                  'img'  => 'lily.png',
+                  'img'  => 'lily.webp',
                   'tag'  => 'BtoB',
                 ],
               ];

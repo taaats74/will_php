@@ -115,7 +115,7 @@
 
           </div>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.png" alt="management issue" class="text-image rellax-up">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.webp" alt="management issue" class="text-image rellax-up">
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.webp" alt="合同会社ウィル" class="logo-image rellax-up">
       </div>
     </section>
@@ -390,7 +390,7 @@
       <div class="container">
         <div class="wrapper">
           <h2><span></span>わたしたちについて</h2>
-          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-About us.png" alt="about">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-About us.webp" alt="about">
           <div class="content-wrapper animation-target to-up">
             <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-about-pic.webp" alt="">
             <p>わたしたちは、ウェブ制作やウェブ集客、SNS運用サポートをワンストップで提供することで、お客様のビジネスをトータルでサポートさせていただきます。<br>ウェブ担当者やマーケティング部門がない中小企業様にとって、戦略から戦術の策定、実行まで一気通貫で対応することは簡単ではありません。中小企業様のビジネスや課題を理解し、解決に全力で取り組ませていただきます。</p>

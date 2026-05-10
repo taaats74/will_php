@@ -142,7 +142,7 @@
     <div class="ws-ec-loader" id="ws-ec-loader" aria-hidden="true">
       <div class="ws-ec-loader__inner">
         <img
-          src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.png"
+          src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp"
           alt=""
           class="ws-ec-loader__logo"
           width="240"
@@ -194,14 +194,14 @@
             <li class="ws-ec-fv__point">自由な<br>デザイン</li>
           </ul>
           <div class="ws-ec-fv__visual-sp">
-            <img class="ws-ec-fv__mock ws-ec-fv__mock--main" src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero1.png" alt="ウィルサポEC サービスイメージ" />
+            <img class="ws-ec-fv__mock ws-ec-fv__mock--main" src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero1.webp" alt="ウィルサポEC サービスイメージ" />
           </div>
           <a class="ws-ec-fv__cta" href="https://site.will-corp.co.jp/will-support-ec-dl-contents" target="_blank" rel="noopener noreferrer">
             資料ダウンロード
           </a>
         </div>
         <div class="ws-ec-fv__visual" aria-label="ECサイトUIモック">
-          <img class="ws-ec-fv__mock ws-ec-fv__mock--main" src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero1.png" alt="ウィルサポEC サービスイメージ" />
+          <img class="ws-ec-fv__mock ws-ec-fv__mock--main" src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero1.webp" alt="ウィルサポEC サービスイメージ" />
         </div>
         <p class="ws-ec-fv__subcopy">ECサイト制作会社をお探しの方や、構築を代行してほしい企業様へ。<br>ウィルサポECは、構成設計から公開後の運用・保守まで一括対応する月額型サービスです。</p>
       </section>
@@ -333,7 +333,7 @@
           <div class="ws-ec-case__content">
             <figure class="ws-ec-case__image-wrap">
               <a href="https://frenchiecrew.jp/" target="_blank" rel="noopener">
-                <img class="ws-ec-case__image" src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero2.png" alt="制作事例サイトのトップページサムネイル" />
+                <img class="ws-ec-case__image" src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero2.webp" alt="制作事例サイトのトップページサムネイル" />
               </a>
             </figure>
             <div class="ws-ec-case__info">

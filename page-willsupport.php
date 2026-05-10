@@ -34,7 +34,7 @@
         <div class="logo">
           <a href="#">
 			  <h1>
-          <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/header-logo.png" alt="ウィルサポ おすすめ格安な定額サブスクホームページ 合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ホームページ制作">
+          <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/header-logo.webp" alt="ウィルサポ おすすめ格安な定額サブスクホームページ 合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ホームページ制作">
         </h1>
           </a>
         </div>
@@ -71,7 +71,7 @@
       <nav class="sp-menu">
         <div class="logo">
           <h1>
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/logo-white.png" alt="ウィルサポ おすすめ格安な定額サブスクホームページ 合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ホームページ制作">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/logo-white.webp" alt="ウィルサポ おすすめ格安な定額サブスクホームページ 合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ホームページ制作">
           </h1>
         </div>
         <ul>
@@ -120,7 +120,7 @@
           <div class="text-wrapper">
             <h2>定額サブスクホームページ</h2>
             <!-- <p class="fv-logo">ウィルサポ</p> -->
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/fv-logotext.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/fv-logotext.webp" alt="">
             <ul>
               <li>初期費用<br>なし</li>
               <li>契約期間の<br>縛りなし</li>
@@ -128,14 +128,14 @@
             </ul>
           </div>
           <div class="illust-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/fv-illust.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/fv-illust.webp" alt="">
           </div>
         </div>
         <p class="message">初期費用を抑えたい事業者様向けに、安くて高品質なWebサイトを。<br>管理コストを下げながら、Web集客に関する知見を社内に蓄積</p>
         <a href="https://site.will-corp.co.jp/content-fq349tq4jio" class="banner-tag" target="_blank" rel="noopener noreferrer">
           <div class="banner">
             <div class="banner-wrapper">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/banner.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/banner.webp" alt="">
               <p>まずは資料を<br>受け取る</p>
             </div>
           </div>
@@ -145,7 +145,7 @@
   </sectoin>
 
   <section class="fv-sp sp">
-    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/fv-sp.png" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/fv-sp.webp" alt="">
   </section>
 
   <section class="onayami">
@@ -155,17 +155,17 @@
 
         <div class="speechbubble-above">
           <div class="speech-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/speech-bubble.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/speech-bubble.webp" alt="">
             <p>ホームページを作り直したいが<br>初期費用に大きな予算は<br>かけられない</p>
           </div>
 
           <div class="speech-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/speech-bubble.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/speech-bubble.webp" alt="">
             <p>安価な制作だと<br>テンプレート感のあるデザインに<br>なりそうで不安</p>
           </div>
 
           <div class="speech-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/speech-bubble.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/speech-bubble.webp" alt="">
             <p>サーバーやドメインなど<br>Web周りの管理まで<br>任せられる先を探している</p>
           </div>
         </div>
@@ -176,7 +176,7 @@
           </div>
 
           <div class="speech-wrapper pc">
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/people.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/people.webp" alt="">
           </div>
 
           <div class="speech-wrapper">
@@ -185,7 +185,7 @@
         </div>
 
         <div class="img-arrow">
-          <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/arrow-down.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/arrow-down.webp" alt="">
         </div>
       </div>
     </div>
@@ -200,40 +200,40 @@
         <div class="list-wrapper">
           <ul>
             <li>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
               <p>限られた予算で本格的なサイトが持てる</p>
             </li>
             <li>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
               <p>フルオーダーでデザイン作成</p>
             </li>
             <li>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
               <p>初期費用無料</p>
             </li>
             <li>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
               <p>サーバー、ドメイン費用無料</p>
             </li>
             <li>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
               <p>サイトの更新や保守費用無料</p>
             </li>
             <li>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
               <p>契約期間の縛りなし</p>
             </li>
             <li>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
               <p>Webサイトの引き取り可能</p>
             </li>
             <li>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
               <p>集客サポートプランあり</p>
             </li>
           </ul>
           <div class="illust-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/product-illust.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/product-illust.webp" alt="">
           </div>
         </div>
       </div>
@@ -244,7 +244,7 @@
     <div class="container">
       <div class="wrapper">
         <div class="text-img">
-          <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/WILLSUPPORT WORKS.png" alt="willsupport works">
+          <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/WILLSUPPORT WORKS.webp" alt="willsupport works">
         </div>
         <div class="header-text">
           <h2>WORKS</h2>
@@ -253,37 +253,37 @@
         <div class="works-wrapper">
           <a href="https://japanmarvelous.com/" target="_blank" rel="noopener noreferrer">
             <div class="works" >
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc17.png" alt="ジャパンマーベラス様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc17.webp" alt="ジャパンマーベラス様制作実績">
               <p>ジャパンマーベラス様</p>
             </div>
           </a>
           <a href="https://systemline.jp/" target="_blank" rel="noopener noreferrer">
             <div class="works" >
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc23.png" alt="株式会社システムライン様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc23.webp" alt="株式会社システムライン様制作実績">
               <p>株式会社システムライン様</p>
             </div>
           </a>
           <a href="https://gritcoco-realestate.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc21.png" alt="株式会社GRIT様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc21.webp" alt="株式会社GRIT様制作実績">
               <p>株式会社GRIT様</p>
             </div>
           </a>
           <a href="https://otg-koushu.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc20.png" alt="株式会社OTG講習センター様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc20.webp" alt="株式会社OTG講習センター様制作実績">
               <p>株式会社OTG講習センター様</p>
             </div>
           </a>
           <a href="https://mrzaimuya.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc19.png" alt="株式会社Mr財務屋様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc19.webp" alt="株式会社Mr財務屋様制作実績">
               <p>株式会社Mr財務屋様</p>
             </div>
           </a>
           <a href="https://mitsuyaweb.jp/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc14.png" alt="みつや様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc14.webp" alt="みつや様制作実績">
               <p>株式会社みつや様</p>
             </div>
           </a>
@@ -295,49 +295,49 @@
           </a>
           <a href="https://flags-guide.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc18.png" alt="株式会社フラッグス様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc18.webp" alt="株式会社フラッグス様制作実績">
               <p>株式会社フラッグス様</p>
             </div>
           </a>
           <a href="https://kuikirizushi-nobu.com/" target="_blank" rel="noopener noreferrer">
             <div class="works" >
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/kuikiri.png" alt="喰い切り寿司のぶ様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/kuikiri.webp" alt="喰い切り寿司のぶ様制作実績">
               <p>喰い切り寿司のぶ様</p>
             </div>
           </a>
           <a href="https://ce-petmassage-fukuoka.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/cocoroekurere.png" alt="こころえくれれ様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/cocoroekurere.webp" alt="こころえくれれ様制作実績">
               <p>こころえくれれ様</p>
             </div>
           </a>
           <a href="https://muraoka-touki.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc26.png" alt="村岡測量登記事務所様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/pc26.webp" alt="村岡測量登記事務所様制作実績">
               <p>村岡測量登記事務所様</p>
             </div>
           </a>
           <a href="https://oneplus-salon.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/oneplus.png" alt="OnePlus+制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/oneplus.webp" alt="OnePlus+制作実績">
               <p>OnePlus+様</p>
             </div>
           </a>
           <a href="https://logosuki.biz/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/logosuki.png" alt="ロゴスキ様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/logosuki.webp" alt="ロゴスキ様制作実績">
               <p>ロゴスキ様</p>
             </div>
           </a>
           <a href="https://shibuya-shika.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/shibuyashika.png" alt="渋谷歯科医院様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/shibuyashika.webp" alt="渋谷歯科医院様制作実績">
               <p>渋谷歯科医院様</p>
             </div>
           </a>
           <a href="https://maru-suru.com/" target="_blank" rel="noopener noreferrer">
             <div class="works">
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/maru-suru.png" alt="maru-suru様制作実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/maru-suru.webp" alt="maru-suru様制作実績">
               <p>株式会社maru-suru様</p>
             </div>
           </a>
@@ -355,19 +355,19 @@
           <a href="https://will-corp.co.jp/contact/" target="_blank" rel="noopener noreferrer">
             <div class="btn">
               <p>無料相談はこちらから</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow.webp" alt="">
             </div>
           </a>
           <a href="https://site.will-corp.co.jp/content-fq349tq4jio" target="_blank" rel="noopener noreferrer">
             <div class="btn" style="background-color:#78c3ca; box-shadow: 3px 3px 6px rgba(0, 0, 0, .3);">
               <p>資料請求はこちらから</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow.webp" alt="">
             </div>
           </a>
           <!-- <a href="https://lin.ee/Twx5uF1" target="_blank" rel="noopener noreferrer">
             <div class="btn">
               <p>LINEでのお問い合わせ</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow-green.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow-green.webp" alt="">
             </div>
           </a> -->
         </div>
@@ -381,7 +381,7 @@
         <div class="header-wrapper">
           <h2>PLAN</h2>
           <p class="text">ページ数で選べる料金プラン</p>
-          <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/plan.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/plan.webp" alt="">
         </div>
         <div class="box-wrapper">
           <div class="box">
@@ -587,19 +587,19 @@
           <a href="https://will-corp.co.jp/contact/" target="_blank" rel="noopener noreferrer">
             <div class="btn">
               <p>無料相談はこちらから</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow.webp" alt="">
             </div>
           </a>
           <a href="https://site.will-corp.co.jp/content-fq349tq4jio" target="_blank" rel="noopener noreferrer">
             <div class="btn" style="background-color:#78c3ca; box-shadow: 3px 3px 6px rgba(0, 0, 0, .3);">
               <p>資料請求はこちらから</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow.webp" alt="">
             </div>
           </a>
           <!-- <a href="https://lin.ee/Twx5uF1" target="_blank" rel="noopener noreferrer">
             <div class="btn">
               <p>LINEでのお問い合わせ</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow-green.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/contact-arrow-green.webp" alt="">
             </div>
           </a> -->
         </div>
