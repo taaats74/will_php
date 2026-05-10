@@ -4,7 +4,7 @@
 
           <div class="footer-v5-brand">
             <a href="<?php echo home_url('/'); ?>" class="footer-v5-logo">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-white_yoko.png" alt="合同会社ウィル">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-white_yoko.webp" alt="合同会社ウィル">
             </a>
           </div>
 
