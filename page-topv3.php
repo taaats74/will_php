@@ -21,7 +21,7 @@
             ?>
           </header>
           <div class="bg-img">
-            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.png" alt=""> -->
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" alt=""> -->
             <video autoplay muted loop playsinline id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie.mp4" ></video>
           </div>
           <div class="logo-wrapper">
@@ -31,7 +31,7 @@
             </div>
             <h1 class="logo-img">
               <a href="<?php echo home_url( '/' ); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.png" alt="合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ウェブマーケティング ホームページ制作">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ウェブマーケティング ホームページ制作">
               </a>
             </h1>
           </div>
@@ -59,7 +59,7 @@
       <div class="container">
         <div class="wrapper">
           <div class="fv-sp-video">
-            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.jpg" alt=""> -->
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.webp" alt=""> -->
             <video autoplay muted loop playsinline id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie-sp.mp4" ></video>
             <div class="logo-wrapper">
               <div class="logo-text">
@@ -67,7 +67,7 @@
                 <p class="text2">Sales Foundation Design</p>
               </div>
               <a href="<?php echo home_url( '/' ); ?>" class="logo-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.png" alt="合同会社ウィル 福岡 ウェブ制作 ウェブマーケティング ホームページ制作">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル 福岡 ウェブ制作 ウェブマーケティング ホームページ制作">
               </a>
             </div>
             <div class="fv-message-wrapper">
@@ -139,7 +139,7 @@
           </div>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.png" alt="management issue" class="text-image rellax-up">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.png" alt="合同会社ウィル" class="logo-image rellax-up">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.webp" alt="合同会社ウィル" class="logo-image rellax-up">
       </div>
     </section>
 
@@ -310,7 +310,7 @@
                   <div class="mp-desc-content">
                     <p class="mp-type">サブスク型ホームページサービス</p>
                     <h3 class="mp-name">
-                      <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.png" alt="ウィルサポ">
+                      <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ">
                     </h3>
                     <ul class="mp-badges">
                       <li>初期費用<br>無料</li>
@@ -319,7 +319,7 @@
                     </ul>
                   </div>
                   <div class="mp-desc-visual">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-illust.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-illust.webp" alt="">
                   </div>
                 </div>
                 <p class="mp-description">
@@ -350,7 +350,7 @@
                     </ul>
                   </div>
                   <div class="mp-desc-visual">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero1.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-ec-assets/img/page-willsuppoec-hero1.webp" alt="">
                   </div>
                 </div>
                 <p class="mp-description">
@@ -369,7 +369,7 @@
           </div>
 
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Service.png" alt="Service" class="rellax-down">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Service.webp" alt="Service" class="rellax-down">
       </div>
     </section>
 
@@ -886,7 +886,7 @@
                   <?php if (!empty($thumb_url)): ?>
                     <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php echo esc_attr($title); ?>">
                   <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.webp" alt="">
                   <?php endif; ?>
 
                   <div class="text-wrapper">
@@ -929,7 +929,7 @@
       <div class="container">
         <div class="wrapper">
           <div class="content-wrapper animation-target to-up">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-about-pic.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-about-pic.webp" alt="">
 
             <div class="about-v5-text">
 
@@ -979,7 +979,7 @@ PHPコメントアウトで温存する。
           <div class="contact-btn">
             <a href="<?php echo esc_url( home_url('/contact/') ); ?>">
               <span>CONTACT</span>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.webp" alt="">
             </a>
           </div>
           <p>Web制作や集客などに関するお悩みがある個人・中小企業の経営者様、担当者様はお気軽にご相談ください。<br>具体的な内容が決まっていない場合でも、しっかりと相談に乗らせていただきます。</p>

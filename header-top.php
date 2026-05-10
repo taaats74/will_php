@@ -26,7 +26,7 @@
   <!-- ===================================================== -->
   <div id="splash-v2" class="loading-v2 loading-v2--logo">
     <div class="loading-v2__logo">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="合同会社ウィル">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.webp" alt="合同会社ウィル">
     </div>
   </div>
   <!-- ローディング v2 ここまで -->
@@ -40,7 +40,7 @@
 
       <div class="header-child-v2__brand">
         <a href="<?php echo home_url('/'); ?>" class="header-child-v2__logo" aria-label="合同会社ウィル トップへ">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/logo_black.png" alt="合同会社ウィル">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/logo_black.webp" alt="合同会社ウィル">
         </a>
       </div>
 
@@ -112,7 +112,7 @@
 
   <div class="sp-header-v5 sp">
     <a href="<?php echo home_url('/'); ?>" class="sp-header-v5__logo" aria-label="トップページへ">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.png" alt="合同会社ウィル">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.webp" alt="合同会社ウィル">
     </a>
     <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="sp-header-v5__cta">資料DL</a>
     <button type="button" class="sp-header-v5__hamburger" aria-label="メニューを開く" aria-controls="sp-menu-v5" aria-expanded="false">

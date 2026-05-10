@@ -21,7 +21,7 @@
             ?>
           </header>
           <div class="bg-img">
-            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.png" alt=""> -->
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" alt=""> -->
             <video autoplay muted loop playsinline id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie.mp4" ></video>
           </div>
           <div class="logo-wrapper">
@@ -31,7 +31,7 @@
             </div>
             <h1 class="logo-img">
               <a href="<?php echo home_url( '/' ); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.png" alt="合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ウェブマーケティング ホームページ制作">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ウェブマーケティング ホームページ制作">
               </a>
             </h1>
           </div>
@@ -41,7 +41,7 @@
           </div>
           <div class="mail-icon">
             <a href="<?php echo esc_url( home_url('/contact/') ); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-mail-icon.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-mail-icon.webp" alt="">
             </a>
           </div>
           <div class="scroll"></div>
@@ -52,10 +52,10 @@
     <section class="page-top2-fv-sp sp">
       <div class="container">
         <div class="wrapper">
-          <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.jpg" alt=""> -->
+          <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.webp" alt=""> -->
           <video autoplay muted loop playsinline id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie-sp.mp4" ></video>
           <a href="<?php echo home_url( '/' ); ?>" class="page-top2-sp-icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/black.png" alt="合同会社ウィル 福岡 ウェブ制作 ウェブマーケティング ホームページ制作">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/black.webp" alt="合同会社ウィル 福岡 ウェブ制作 ウェブマーケティング ホームページ制作">
           </a>
           <div class="fv-message-wrapper">
             <p class="en">Create the future together.</p>
@@ -116,7 +116,7 @@
           </div>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.png" alt="management issue" class="text-image rellax-up">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.png" alt="合同会社ウィル" class="logo-image rellax-up">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.webp" alt="合同会社ウィル" class="logo-image rellax-up">
       </div>
     </section>
 
@@ -140,23 +140,23 @@
               <p>ウィルサポは、自由なデザインの高品質ホームページを<span>月額9,800円から</span>ご利用いただける定額サブスクサービスです。</p>
               <div class="service-desc">
                 <p>定額サブスクホームページ</p>
-                <h3><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-willsupport-logo-white.png" alt="ウィルサポ"></h3>
+                <h3><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-willsupport-logo-white.webp" alt="ウィルサポ"></h3>
                 <div class="desc-wrapper">
                   <ul>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">限られた予算で本格的なサイトが持てる</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">フルオーダーでデザイン作成</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">初期費用無料</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">サーバー、ドメイン費用無料</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">サイトの更新や保守費用無料</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">契約期間の縛りなし</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">Webサイトの買取可能</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">集客サポートプランあり</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">限られた予算で本格的なサイトが持てる</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">フルオーダーでデザイン作成</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">初期費用無料</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">サーバー、ドメイン費用無料</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">サイトの更新や保守費用無料</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">契約期間の縛りなし</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">Webサイトの買取可能</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">集客サポートプランあり</li>
                   </ul>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-willsupport-illust.png" alt="" class="desc-image">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-willsupport-illust.webp" alt="" class="desc-image">
                 </div>
               </div>
               <div class="btn-more">
-                <a href="https://will-corp.co.jp/willsupport/" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="https://will-corp.co.jp/willsupport/" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.webp" alt=""></a>
               </div>
             </div>
             <div id="tab2" class="service">
@@ -164,26 +164,26 @@
               <div class="service-desc">
                 <p>定額サブスクECサイト</p>
                 <h3 class="ec">ウィルサポEC
-                  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-snslogo.png" alt="instagram運用戦略設計" class="pc">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-snslogo-sp.png" alt="instagram運用戦略設計" class="sp"> -->
+                  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-snslogo.webp" alt="instagram運用戦略設計" class="pc">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-snslogo-sp.webp" alt="instagram運用戦略設計" class="sp"> -->
 
                 </h3>
                 <div class="desc-wrapper">
                   <ul>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">初期費用0円から本格ECをスタート</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">保守・更新込みで追加費用の不安を軽減</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">ブランド価値を高めるオリジナルデザイン</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">中小企業に最適なスモールスタート設計</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">高水準のセキュリティ環境</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">スマートフォン最適化を前提とした設計</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">将来的な機能追加・拡張にも柔軟対応</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">相談しやすい伴走型サポート体制</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">初期費用0円から本格ECをスタート</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">保守・更新込みで追加費用の不安を軽減</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">ブランド価値を高めるオリジナルデザイン</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">中小企業に最適なスモールスタート設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">高水準のセキュリティ環境</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">スマートフォン最適化を前提とした設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">将来的な機能追加・拡張にも柔軟対応</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">相談しやすい伴走型サポート体制</li>
                   </ul>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-insta.png" alt="" class="desc-image">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-insta.webp" alt="" class="desc-image">
                 </div>
               </div>
               <div class="btn-more">
-                <a href="https://will-corp.co.jp/will-support-ec/" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポECの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="https://will-corp.co.jp/will-support-ec/" target="_blank" rel="noopener noreferrer"><span class="pc">ウィルサポECの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.webp" alt=""></a>
               </div>
             </div>
             <div id="tab3" class="service">
@@ -191,29 +191,29 @@
               <div class="service-desc">
                 <p>MA構築運用支援</p>
                 <h3>集客から商談化までを<br class="sp">一気通貫で設計
-                  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creativelogo.png" alt="クリエイティブ・コンサルティング" class="pc">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creativelogo-sp.png" alt="クリエイティブ・コンサルティング" class="sp"> -->
+                  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creativelogo.webp" alt="クリエイティブ・コンサルティング" class="pc">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creativelogo-sp.webp" alt="クリエイティブ・コンサルティング" class="sp"> -->
                 </h3>
                 <div class="desc-wrapper">
                   <ul>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">営業構造から設計するMA導入支援</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">Webと連動したリード獲得〜育成設計</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">人に依存しない営業体制の仕組み化支援</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">MAの構築・初期設定・自動化設計</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">シナリオ設計・メール設計・温度管理設計</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">リード管理・データクレンジング支援</li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.png" alt="">運用改善・数値分析・継続伴走サポート</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">営業構造から設計するMA導入支援</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">Webと連動したリード獲得〜育成設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">人に依存しない営業体制の仕組み化支援</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">MAの構築・初期設定・自動化設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">シナリオ設計・メール設計・温度管理設計</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">リード管理・データクレンジング支援</li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">運用改善・数値分析・継続伴走サポート</li>
                   </ul>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creative.png" alt="" class="desc-image">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-creative.webp" alt="" class="desc-image">
                 </div>
               </div>
               <div class="btn-more">
-                <a href="https://will-corp.co.jp/service/web-marketing/"><span class="pc">MAの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.png" alt=""></a>
+                <a href="https://will-corp.co.jp/service/web-marketing/"><span class="pc">MAの</span>詳細はこちら<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-white.webp" alt=""></a>
               </div>
             </div>
           </div>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Service.png" alt="Service" class="rellax-down">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Service.webp" alt="Service" class="rellax-down">
       </div>
     </section>
 
@@ -224,7 +224,7 @@
           <div class="contact-btn">
             <a href="<?php echo esc_url( home_url('/contact/') ); ?>">
               <span>CONTACT</span>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.webp" alt="">
             </a>
           </div>
           <p>Web制作や集客などに関するお悩みがある個人・中小企業の経営者様、担当者様はお気軽にご相談ください。<br>具体的な内容が決まっていない場合でも、しっかりと相談に乗らせていただきます。</p>
@@ -235,7 +235,7 @@
     <section class="page-top2-works">
       <div class="container">
         <div class="wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Works.png" alt="works" class="rellax-up2">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Works.webp" alt="works" class="rellax-up2">
           <h2 class="rellax-horizontal"><span></span>制作実績</h2>
           <div class="carousel-wrapper">
             <div class="carousel">
@@ -256,7 +256,7 @@
                       the_post_thumbnail();
                     else:
                       ?>
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.png" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-maru-suru.webp" alt="">
                     <?php
                       endif;
                     ?>
@@ -291,7 +291,7 @@
             </div>
           </div>
           <div class="page-top2-btn">
-            <a href="<?php echo esc_url( home_url('/works/') ); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+            <a href="<?php echo esc_url( home_url('/works/') ); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.webp" alt=""></a>
           </div>
         </div>
       </div>
@@ -305,9 +305,9 @@
               <div class="sticky-wrapper">
                 <h2><span></span>ブログ</h2>
                 <div class="page-top2-btn pc">
-                  <a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer" >一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+                  <a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer" >一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.webp" alt=""></a>
                 </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Blog.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Blog.webp" alt="">
               </div>
             </div>
           </div>
@@ -356,7 +356,7 @@
             <?php endforeach; ?>
             <?php endif; ?>
             <div class="page-top2-btn sp">
-              <a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+              <a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.webp" alt=""></a>
             </div>
           </div>
         </div>
@@ -366,7 +366,7 @@
     <!-- <section class="page-top2-insta">
       <div class="container">
         <div class="wrapper">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-instagram.png" alt="instagram">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Instagram.webp" alt="instagram">
           <h2 class="rellax-horizontal"><span></span>インスタグラム</h2>
           <?php
             if(have_posts()):
@@ -380,7 +380,7 @@
           endif;
           ?>
           <div class="page-top2-btn">
-            <a href="<?php echo esc_url( home_url('/works/') ); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+            <a href="<?php echo esc_url( home_url('/works/') ); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.webp" alt=""></a>
           </div>
         </div>
       </div>
@@ -392,11 +392,11 @@
           <h2><span></span>わたしたちについて</h2>
           <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-About us.png" alt="about">
           <div class="content-wrapper animation-target to-up">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-about-pic.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-about-pic.webp" alt="">
             <p>わたしたちは、ウェブ制作やウェブ集客、SNS運用サポートをワンストップで提供することで、お客様のビジネスをトータルでサポートさせていただきます。<br>ウェブ担当者やマーケティング部門がない中小企業様にとって、戦略から戦術の策定、実行まで一気通貫で対応することは簡単ではありません。中小企業様のビジネスや課題を理解し、解決に全力で取り組ませていただきます。</p>
           </div>
           <div class="page-top2-btn">
-            <a href="<?php echo esc_url( home_url('/about/') ); ?>">ウィルについて<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.png" alt=""></a>
+            <a href="<?php echo esc_url( home_url('/about/') ); ?>">ウィルについて<img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-arrow-black.webp" alt=""></a>
           </div>
         </div>
       </div>
@@ -409,7 +409,7 @@
           <div class="contact-btn">
             <a href="<?php echo esc_url( home_url('/contact/') ); ?>">
               <span>CONTACT</span>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-contactarrow.webp" alt="">
             </a>
           </div>
           <p>Web制作や集客などに関するお悩みがある個人・中小企業の経営者様、担当者様はお気軽にご相談ください。<br>具体的な内容が決まっていない場合でも、しっかりと相談に乗らせていただきます。</p>

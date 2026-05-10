@@ -235,7 +235,7 @@ get_template_part( 'template-parts/page-hero', null, [
         <div class="message-item">
           <div class="message-item-photo">
             <img decoding="async" loading="lazy"
-                 src="<?php echo esc_url( get_template_directory_uri() . '/img/tatsuya.jpg' ); ?>"
+                 src="<?php echo esc_url( get_template_directory_uri() . '/img/tatsuya.webp' ); ?>"
                  alt="代表 高橋竜也">
           </div>
           <div class="message-item-body">
@@ -250,7 +250,7 @@ get_template_part( 'template-parts/page-hero', null, [
         <div class="message-item">
           <div class="message-item-photo">
             <img decoding="async" loading="lazy"
-                 src="<?php echo esc_url( get_template_directory_uri() . '/img/ami.jpg' ); ?>"
+                 src="<?php echo esc_url( get_template_directory_uri() . '/img/ami.webp' ); ?>"
                  alt="代表 岩田あゆみ">
           </div>
           <div class="message-item-body">
