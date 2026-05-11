@@ -30,7 +30,7 @@
             <div class="footer-v5-col footer-v5-col--services">
               <h3 class="footer-v5-col-title">SERVICES</h3>
 
-              <p class="footer-v5-services-group-label">■ 主力サービス</p>
+              <p class="footer-v5-services-group-label">■ サブスクHPサービス</p>
               <ul class="footer-v5-services-list footer-v5-services-list--main">
                 <li><a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポ</a></li>
                 <li><a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポEC</a></li>
