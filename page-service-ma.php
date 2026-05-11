@@ -234,7 +234,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
         <li class="service-ma-principle__item">
           <p class="service-ma-principle__number">01</p>
-          <h3 class="service-ma-principle__title">ツールから入らない、見込み客の育ち方から入る</h3>
+          <h3 class="service-ma-principle__title">ツールから入らない、見込み客の育て方から入る</h3>
           <div class="service-ma-principle__thinking">
             <p class="service-ma-principle__label">[考え方]</p>
             <p>
@@ -547,7 +547,7 @@ get_template_part( 'template-parts/page-hero', null, [
         <ul class="service-ma-price__philosophy-list">
 
           <li class="service-ma-price__philosophy-card">
-            <h4 class="service-ma-price__philosophy-title">設計に時間をかけるから価格に反映されている</h4>
+            <h4 class="service-ma-price__philosophy-title">設計に時間をかけるから結果に反映されている</h4>
             <p class="service-ma-price__philosophy-text">
               表面的なテンプレート設定ではなく、貴社の営業構造を深く整理する時間にコストを投じています。
             </p>
