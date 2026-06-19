@@ -1227,32 +1227,8 @@
           </div>
 
           <div class="wsv2-contact__form">
-            <div id="wsv2-contact-form"></div>
-            <script charset="utf-8" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
-            <script>
-              (function(){
-                if (typeof hbspt === 'undefined') return;
-                hbspt.forms.create({
-                  region:   "na2",
-                  portalId: "48153453",
-                  formId:   "bf7c2589-af6c-47c8-a017-f6ae2303be47",
-                  target:   "#wsv2-contact-form",
-                  css: ''
-                    + '.hs-form-field { margin-bottom: 12px; }'
-                    + '.hs-form-field > label, .legal-consent-container { font-size: 13px; }'
-                    + '.hs-input { font-size: 14px; padding: 10px 12px; }'
-                    + '.hs-button { font-size: 14px; padding: 12px 26px; }'
-                    + '.hs-error-msg { font-size: 11px; }'
-                    + '@media (max-width: 768px) {'
-                    +   '.hs-form-field { margin-bottom: 10px; }'
-                    +   '.hs-form-field > label, .legal-consent-container { font-size: 12px; }'
-                    +   '.hs-input { font-size: 13px; padding: 9px 10px; }'
-                    +   '.hs-button { font-size: 13px; padding: 11px 22px; }'
-                    +   '.hs-error-msg { font-size: 11px; }'
-                    + '}'
-                });
-              })();
-            </script>
+            <script src="https://js-na2.hsforms.net/forms/embed/48153453.js" defer></script>
+            <div class="hs-form-frame" data-region="na2" data-form-id="0b0f5aea-44f3-4fd5-a387-1fed8640bcc5" data-portal-id="48153453"></div>
           </div>
 
         </div>
@@ -1307,6 +1283,189 @@
   </footer>
 
   <script src="<?php echo esc_url( will_asset_url( 'will-support-v2-assets/js/script.js' ) ); ?>" defer></script>
+
+  <!-- ============================================================
+       料金改定 追従バナー（sticky bottom bar）
+       - このブロックだけで自己完結（HTML + CSS + バニラJS）。不要になったら丸ごと削除可。
+       - ▼▼ 変更したい箇所はすべて下の JS 冒頭の「設定」にまとまっています ▼▼
+       ============================================================ -->
+  <div class="ws-price-banner" id="ws-price-banner" role="region" aria-label="料金改定のお知らせ" hidden>
+    <div class="ws-price-banner__inner">
+      <div class="ws-price-banner__text">
+        <!-- ▼文言（PC・768px以上）。一字一句の変更はここ -->
+        <p class="ws-price-banner__main ws-price-banner__main--pc">【8/1 料金改定】7/31までのご契約で、初期費用0円＆現行価格のままずっとご利用いただけます</p>
+        <p class="ws-price-banner__sub">改定後は初期費用100,000円／月額も改定。今がラストチャンスです。</p>
+        <!-- ▼文言（SP・767px以下） -->
+        <p class="ws-price-banner__main ws-price-banner__main--sp">【8/1料金改定】7/31までなら初期費用0円・現行価格で固定</p>
+      </div>
+      <!-- ▼リンク先PDFは JS 設定の PDF_URL を JSで流し込みます。ボタン文言の変更はここ -->
+      <a class="ws-price-banner__btn" id="ws-price-banner-btn" href="#" target="_blank" rel="noopener">
+        <span class="ws-price-banner__btn--pc">改定内容を見る</span>
+        <span class="ws-price-banner__btn--sp">詳しく見る</span>
+      </a>
+      <button type="button" class="ws-price-banner__close" id="ws-price-banner-close" aria-label="閉じる">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <style>
+    /* ===== 料金改定バナー（配色はPDFと統一。変更はこの変数で） ===== */
+    .ws-price-banner {
+      --wspb-navy:   #1a2b4a; /* ベース：ネイビー */
+      --wspb-gold:   #c9a14a; /* アクセント：ゴールド */
+      --wspb-text:   #ffffff; /* 文字：白 */
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 800; /* FABメニュー(900-1000)より下＝メニュー展開時はオーバーレイで覆われる */
+      background: var(--wspb-navy);
+      color: var(--wspb-text);
+      border-top-left-radius: 12px;   /* 上側だけ軽く角丸 */
+      border-top-right-radius: 12px;
+      box-shadow: 0 -6px 24px rgba(26, 43, 74, 0.28); /* 上方向への控えめなドロップシャドウ */
+      transform: translateY(110%);    /* 初期は画面外。JSで .is-visible を付けてスライドイン */
+      transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
+      will-change: transform;
+    }
+    .ws-price-banner.is-visible { transform: translateY(0); }
+
+    .ws-price-banner__inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 20px;
+    }
+    .ws-price-banner__text { flex: 1 1 auto; min-width: 0; line-height: 1.5; }
+    .ws-price-banner__main {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .ws-price-banner__sub {
+      margin: 3px 0 0;
+      font-size: 12.5px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.82);
+    }
+    .ws-price-banner__main--sp { display: none; } /* SP文言はPCでは隠す */
+
+    .ws-price-banner__btn {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--wspb-gold);
+      color: var(--wspb-navy);          /* ゴールド地に濃紺文字 */
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      padding: 11px 24px;
+      border-radius: 8px;
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    .ws-price-banner__btn:hover { filter: brightness(1.08); }  /* hoverで軽く明度変化 */
+    .ws-price-banner__btn:active { transform: translateY(1px); }
+    .ws-price-banner__btn--sp { display: none; }
+
+    .ws-price-banner__close {
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      color: var(--wspb-text);
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .ws-price-banner__close:hover { background: rgba(255, 255, 255, 0.14); }
+
+    /* キーボード操作のフォーカス可視化 */
+    .ws-price-banner__btn:focus-visible,
+    .ws-price-banner__close:focus-visible {
+      outline: 2px solid var(--wspb-gold);
+      outline-offset: 2px;
+    }
+
+    /* ===== SP（767px以下） ===== */
+    @media (max-width: 767px) {
+      .ws-price-banner { border-top-left-radius: 0; border-top-right-radius: 0; } /* SPは角丸なし */
+      .ws-price-banner__inner { gap: 10px; padding: 10px 12px; }
+      .ws-price-banner__main--pc,
+      .ws-price-banner__sub      { display: none; }
+      .ws-price-banner__main--sp { display: block; font-size: 13px; }
+      .ws-price-banner__btn      { padding: 9px 14px; font-size: 13px; }
+      .ws-price-banner__btn--pc  { display: none; }
+      .ws-price-banner__btn--sp  { display: inline; }
+      .ws-price-banner__close    { width: 30px; height: 30px; font-size: 18px; }
+    }
+
+    /* バナー表示中はページ最下部に余白を確保（コンテンツが隠れない） */
+    body.ws-price-banner-active { padding-bottom: 88px; }
+    @media (max-width: 767px) {
+      body.ws-price-banner-active { padding-bottom: 70px; }
+    }
+
+    /* モーション軽減設定の尊重 */
+    @media (prefers-reduced-motion: reduce) {
+      .ws-price-banner { transition: none; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      /* ========================= 設定（ここだけ触ればOK） ========================= */
+      var PDF_URL        = 'https://drive.google.com/file/d/1fKb17K9i6A_W6wpHXg3zrfTAkpSanty7/view'; // ボタンのリンク先PDF
+      var DEADLINE_JST   = '2026-08-01T00:00:00+09:00'; // この日時(JST)を過ぎたら自動で非表示
+      /* ========================================================================= */
+      /* ※「×」で閉じても、リロードすれば毎回再表示します（閉じた状態は記憶しません）。
+         閉じた後しばらく再表示しない挙動に戻したい場合は localStorage 版の履歴を参照。 */
+
+      var banner = document.getElementById('ws-price-banner');
+      if (!banner) return;
+
+      var btn   = document.getElementById('ws-price-banner-btn');
+      var close = document.getElementById('ws-price-banner-close');
+      var now   = Date.now();
+
+      // 1) 締切を過ぎていたら出さない
+      if (now >= new Date(DEADLINE_JST).getTime()) return;
+
+      // リンク先を設定
+      if (btn) btn.setAttribute('href', PDF_URL);
+
+      // 2) 表示（CLS回避：先に余白を確保してから position:fixed のバナーを出す）
+      document.body.classList.add('ws-price-banner-active');
+      banner.hidden = false;
+      // 次フレームでスライドイン（下からスッと）
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { banner.classList.add('is-visible'); });
+      });
+
+      // 3) 「×」で閉じる → その場で隠すだけ（記憶しないのでリロードで再表示）
+      function dismiss() {
+        banner.classList.remove('is-visible');
+        document.body.classList.remove('ws-price-banner-active');
+        var hide = function () { banner.hidden = true; };
+        banner.addEventListener('transitionend', hide, { once: true });
+        setTimeout(hide, 400); // transitionend が来ない場合の保険
+      }
+      if (close) close.addEventListener('click', dismiss);
+    })();
+  </script>
+  <!-- ===================== /料金改定 追従バナー ===================== -->
+
   <?php wp_footer(); ?>
 </body>
 </html>
