@@ -9,24 +9,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ウィルグロー｜問い合わせと商談を生み出す「営業の仕組み」へ｜BtoB集客・商談化支援</title>
-  <meta name="description" content="ウィルグローは、コンテンツSEO・導線改善・マーケティングオートメーションを組み合わせ、BtoB企業の集客から問い合わせ獲得・育成・商談創出までを一本の仕組みにつなぎます。運営は合同会社ウィル（福岡・博多）。まずは無料診断・無料相談へ。">
 
-  <!-- ========== OGP / Twitter Card ========== -->
-  <meta property="og:title" content="ウィルグロー｜問い合わせと商談を生み出す「営業の仕組み」へ">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="集客から問い合わせ獲得・育成・商談創出までを一本の仕組みにつなぐ、BtoB特化のワンストップ伴走支援。運営は合同会社ウィル（福岡・博多）。">
-  <meta property="og:url" content="【要差し替え：公開URL】">
-  <meta property="og:image" content="【要差し替え：OGP画像URL（1200×630推奨）】">
-  <meta property="og:site_name" content="合同会社ウィル">
-  <meta property="og:locale" content="ja_JP">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ウィルグロー｜問い合わせと商談を生み出す「営業の仕組み」へ">
-  <meta name="twitter:description" content="集客から問い合わせ獲得・育成・商談創出までを一本の仕組みにつなぐ、BtoB特化のワンストップ伴走支援。">
-  <meta name="twitter:image" content="【要差し替え：OGP画像URL】">
-
-  <!-- ========== GA4 / GTM（要差し替え：GTM-XXXXXXX） ========== -->
-  <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+  <!-- title / description / OGP / Twitter Card は Slim SEO が wp_head() で出力 -->
 
   <!-- ========== preconnect ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,21 +72,6 @@
   }
   </script>
 
-  <!-- (3) Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "合同会社ウィル",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "JP",
-      "addressRegion": "福岡県",
-      "addressLocality": "福岡市博多区"
-    }
-  }
-  </script>
-
   <?php wp_head(); ?>
 </head>
 <body>
@@ -111,7 +80,7 @@
   <header class="wg-header" id="wgHeader">
     <div class="wg-container wg-header__inner">
       <a href="#wg-hero" class="wg-header__logo">
-        WILL&nbsp;GROW<span class="wg-header__logo-sub">合同会社ウィル</span>
+        ウィルグロー<span class="wg-header__logo-sub">WILL&nbsp;GROW</span>
       </a>
       <nav class="wg-header__nav" aria-label="主要導線">
         <ul class="wg-header__links">
@@ -124,7 +93,24 @@
         </ul>
         <a href="#wg-form" class="wg-btn wg-btn--accent wg-btn--sm" data-cta="header-soudan">無料相談はこちら</a>
       </nav>
+      <button class="wg-burger" id="wgBurger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="wgDrawer">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="wg-drawer" id="wgDrawer" aria-label="モバイルメニュー">
+      <ul class="wg-drawer__links">
+        <li><a href="#wg-about">ウィルグローとは</a></li>
+        <li><a href="#wg-compare">他社との違い</a></li>
+        <li><a href="#wg-service">支援内容</a></li>
+        <li><a href="#wg-pricing">プラン</a></li>
+        <li><a href="#wg-flow">導入の流れ</a></li>
+        <li><a href="#wg-faq">よくある質問</a></li>
+      </ul>
+      <div class="wg-drawer__actions">
+        <a href="#wg-form" class="wg-btn wg-btn--accent wg-btn--block" data-cta="drawer-soudan">無料相談はこちら</a>
+        <a href="https://will-corp.co.jp/diagnosis/" class="wg-btn wg-btn--ghost wg-btn--block" target="_blank" rel="noopener" data-cta="drawer-shindan">無料診断レポート</a>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -133,10 +119,15 @@
     <section class="wg-hero" id="wg-hero">
       <div class="wg-container">
         <div class="wg-hero__grid">
+          <h1 class="wg-hero__title">
+            <span class="wg-hero__textbg">リード獲得から商談化まで</span><br><span class="wg-hero__textbg">BtoB企業の<span class="wg-hero__title-accent">マーケティングの仕組み</span>を作ります。</span>
+          </h1>
+
+          <div class="wg-hero__visual">
+            <img class="wg-hero__illust" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/fv-img.png' ) ); ?>" alt="Webサイトを起点に、集客・分析から商談化までを仕組み化するイメージ" width="1314" height="898">
+          </div>
+
           <div class="wg-hero__content">
-            <h1 class="wg-hero__title">
-              <span class="wg-hero__textbg">リード獲得から商談化まで</span><br><span class="wg-hero__textbg">BtoB企業の<span class="wg-hero__title-accent">マーケティングの仕組み</span>を作ります。</span>
-            </h1>
             <p class="wg-hero__sub">
               <span class="wg-hero__textbg">御社の<span class="wg-hero__title-accent">マーケティング部門</span>として、</span><br><span class="wg-hero__textbg">問い合わせの獲得から育成・商談化までを<span class="wg-hero__title-accent">仕組み化</span>し、</span><br><span class="wg-hero__textbg"><span class="wg-hero__title-accent">安定した見込み顧客の創出</span>を実現します。</span>
             </p>
@@ -146,10 +137,6 @@
             </div>
             <p class="wg-hero__sub-note">「無料診断」は10問・約1分。まず現状を可視化したい方へ。</p>
           </div>
-
-          <div class="wg-hero__visual">
-            <img class="wg-hero__illust" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/fv-img.png' ) ); ?>" alt="Webサイトを起点に、集客・分析から商談化までを仕組み化するイメージ" width="1314" height="898">
-          </div>
         </div>
       </div>
     </section>
@@ -157,7 +144,7 @@
     <!-- ============ 2. こんなお悩みはありませんか？ ============ -->
     <section class="wg-section wg-section--pale" id="wg-issue">
       <div class="wg-container">
-        <h2 class="wg-section__title" data-label="ISSUE">こんなお悩みはありませんか？</h2>
+        <h2 class="wg-section__title" data-label="ISSUE">こんなお悩みは<br class="wg-br-sp">ありませんか？</h2>
 
         <div class="wg-issue-groups">
           <div class="wg-issue-card">
@@ -183,14 +170,14 @@
           </div>
         </div>
 
-        <p class="wg-lead-emphasis">これらの背景には、<span class="wg-marker">ある共通した原因</span>があります。</p>
+        <p class="wg-lead-emphasis">これらの背景には、<br class="wg-br-sp"><span class="wg-marker">ある共通した原因</span>があります。</p>
       </div>
     </section>
 
     <!-- ============ 3. 問い合わせや商談が増えない本当の理由 ============ -->
     <section class="wg-section" id="wg-why">
       <div class="wg-container">
-        <h2 class="wg-section__title" data-label="WHY">問い合わせや商談が増えない本当の理由</h2>
+        <h2 class="wg-section__title" data-label="WHY">問い合わせや商談が<br class="wg-br-sp">増えない本当の理由</h2>
         <ol class="wg-cause">
           <li class="wg-cause__item">
             <span class="wg-cardnum">01</span>
@@ -277,7 +264,7 @@
     <!-- ============ 5. ウィルグローが選ばれる3つの理由 ============ -->
     <section class="wg-section wg-section--pale" id="wg-reasons">
       <div class="wg-container">
-        <h2 class="wg-section__title" data-label="REASON">ウィルグローが選ばれる3つの理由</h2>
+        <h2 class="wg-section__title" data-label="REASON">ウィルグローが<br class="wg-br-sp">選ばれる3つの理由</h2>
 
         <div class="wg-reasons">
           <article class="wg-reason">
@@ -603,7 +590,7 @@
     <!-- ============ 11. プラン別おすすめ企業の特徴 ============ -->
     <section class="wg-section wg-section--pale" id="wg-planfit">
       <div class="wg-container">
-        <h2 class="wg-section__title" data-label="WHICH PLAN">プラン別おすすめ企業の特徴</h2>
+        <h2 class="wg-section__title" data-label="WHICH PLAN">プラン別<br class="wg-br-sp">おすすめ企業の特徴</h2>
 
         <div class="wg-planfit">
           <article class="wg-planfit__card">
@@ -769,6 +756,7 @@
       <div class="wg-container wg-container--narrow">
         <h2 class="wg-section__title" data-label="CONTACT">無料相談はこちら</h2>
         <p class="wg-section__lead">オンライン（30〜60分）で、御社の課題整理と改善の方向性をご提案します。下記フォームよりお申し込みください（1〜2営業日以内にご連絡）。</p>
+        <p class="wg-form-note">ご入力いただいた個人情報の取り扱いについては<a href="https://will-corp.co.jp/privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a>をご確認ください。<br>フォームの送信をもって、内容に同意いただいたものとみなします。</p>
         <!-- HubSpot 埋め込みフォーム -->
         <div class="wg-form-embed">
           <div class="hs-form-frame" data-region="na2" data-form-id="0c0451c8-6e90-4f30-a2ec-7e6f83ec71fc" data-portal-id="48153453"></div>
@@ -781,12 +769,12 @@
   <!-- ============ フッター ============ -->
   <footer class="wg-footer">
     <div class="wg-container wg-footer__inner">
-      <p class="wg-footer__logo">WILL&nbsp;GROW</p>
+      <p class="wg-footer__logo">ウィルグロー<span class="wg-footer__logo-sub">WILL&nbsp;GROW</span></p>
       <p class="wg-footer__company">運営：合同会社ウィル（福岡・博多）</p>
       <ul class="wg-footer__links">
         <li><a href="#wg-form">無料相談</a></li>
         <li><a href="https://will-corp.co.jp/diagnosis/" target="_blank" rel="noopener">無料診断（1分）</a></li>
-        <li><a href="【要差し替え：プライバシーポリシーURL】">プライバシーポリシー</a></li>
+        <li><a href="https://will-corp.co.jp/privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
       </ul>
       <p class="wg-footer__copy">&copy; 2026 WILL, LLC. All rights reserved.</p>
     </div>
@@ -794,8 +782,8 @@
 
   <!-- ============ 追従CTA（モバイル） ============ -->
   <div class="wg-sticky-cta" id="wgStickyCta" aria-hidden="false">
-    <a href="#wg-form" class="wg-btn wg-btn--accent wg-btn--block" data-cta="sticky-soudan">無料相談</a>
-    <a href="https://will-corp.co.jp/diagnosis/" class="wg-btn wg-btn--ghost wg-btn--block" target="_blank" rel="noopener" data-cta="sticky-shindan">無料診断</a>
+    <a href="#wg-form" class="wg-btn wg-btn--accent wg-btn--block" data-cta="sticky-soudan">無料相談はこちら</a>
+    <a href="https://will-corp.co.jp/diagnosis/" class="wg-btn wg-btn--ghost wg-btn--block" target="_blank" rel="noopener" data-cta="sticky-shindan">無料診断レポート</a>
   </div>
 
   <!-- ============ 無料診断 追従バナー（右下・PC） ============ -->

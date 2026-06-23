@@ -35,17 +35,26 @@
     flex-direction: column;
     line-height: 1.1;
     font-weight: 900;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     letter-spacing: 0.04em;
     color: v.$accent;
+
+    // PC はさらに一回り大きく
+    @media (min-width: v.$bp-md) {
+      font-size: 1.5rem;
+    }
   }
 
   &__logo-sub {
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.08em;
     color: v.$subtle;
     margin-top: 3px;
+
+    @media (min-width: v.$bp-md) {
+      font-size: 0.82rem;
+    }
   }
 
   &__nav {
@@ -1542,6 +1551,23 @@
   }
 }
 
+.wg-form-note {
+  margin: -4px 0 4px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: v.$subtle;
+  text-align: center;
+
+  a {
+    color: v.$accent;
+    text-decoration: underline;
+
+    &:hover {
+      color: v.$accent-dark;
+    }
+  }
+}
+
 .wg-form-embed {
   display: grid;
   gap: 16px;
@@ -1599,10 +1625,23 @@
   }
 
   &__logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+    font-size: 1.3rem;
     font-weight: 900;
     letter-spacing: 0.05em;
     color: v.$white;
     margin-bottom: 8px;
+  }
+
+  &__logo-sub {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 3px;
   }
 
   &__company {
@@ -1765,4 +1804,140 @@
   html {
     scroll-behavior: auto;
   }
+}
+
+/* =========================================================
+   SP（スマホ ≤599px）専用調整 — PC/タブレットは変更しない
+   ※スマホ表示の微調整。min-width 系（PC/タブレット）には影響しません。
+   ========================================================= */
+.wg-br-sp { display: inline; }
+@media (min-width: 600px) {
+  .wg-br-sp { display: none; }
+}
+
+/* FV 再構成後も h1 を背景イラストより前面に保つ（PC維持用） */
+.wg-hero__title { position: relative; z-index: 1; }
+
+/* ハンバーガーメニュー（SP/タブレット用・PC≥900pxでは非表示＝横並びナビ維持） */
+.wg-burger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  margin-left: 8px;
+  margin-right: -20px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.wg-burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #3E5054;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.wg-burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.wg-burger.is-open span:nth-child(2) { opacity: 0; }
+.wg-burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 900px) {
+  .wg-burger { display: none; }
+}
+
+.wg-drawer {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #FFFFFF;
+  padding: 16px 24px calc(24px + env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  transform: translateY(-12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s;
+}
+.wg-drawer.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wg-drawer__links {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+.wg-drawer__links li { border-bottom: 1px solid #EEF3F4; }
+.wg-drawer__links a {
+  display: block;
+  padding: 14px 4px;
+  color: #3E5054;
+  font-weight: 700;
+  text-decoration: none;
+}
+.wg-drawer__links a:hover { color: #28849D; }
+.wg-drawer__actions { display: grid; gap: 10px; }
+/* ドロワー内のボタンは常に表示（ヘッダーのSP時 .wg-btn--accent 非表示ルールを上書き） */
+.wg-drawer__actions .wg-btn { display: flex; width: 100%; }
+@media (min-width: 900px) {
+  .wg-drawer { display: none; }
+}
+
+@media (max-width: 599.98px) {
+  /* FV: 見出し・サブをさらに一回り小さく／上padding 0 */
+  .wg-hero { padding-top: 0; }
+  .wg-hero__title { margin-top: 90px; margin-bottom: 9px; font-size: 1.4rem; }
+  .wg-hero__visual { margin-top: 9px; }
+  .wg-hero__sub { margin-top: 15px; font-size: 1rem; }
+
+  /* 集客→問い合わせ獲得→商談化: 縦表示（折り返さない） */
+  .wg-broken { padding: 32px 20px; }
+  .wg-broken__track { flex-direction: column; flex-wrap: nowrap; gap: 0; }
+  .wg-broken__node { width: 100%; font-size: 1rem; padding: 14px 16px; text-align: center; }
+  .wg-broken__cut { margin: 8px 0; }
+  .wg-broken__cut::after { content: "↓"; font-size: 1.8rem; }
+
+  /* 導入の流れ: 番号をボックス左上角／縦ボーダー削除／ボックスを横に広げる */
+  .wg-process__step { gap: 0; }
+  .wg-process__step:not(:last-child)::before { display: none; }
+  .wg-process__num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px 0 12px 0;
+    font-size: 0.95rem;
+  }
+  .wg-process__body { width: 100%; padding-top: 52px; }
+
+  /* 追従CTA: 全幅50%ずつ／角丸・余白・背景なし */
+  .wg-sticky-cta {
+    gap: 0;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-top: none;
+    box-shadow: none;
+  }
+  .wg-sticky-cta .wg-btn,
+  .wg-sticky-cta .wg-btn--ghost {
+    flex: 1 1 50%;
+    width: auto;
+    border-radius: 0;
+    padding-block: 16px;
+  }
+
+  /* モニター/CTA群: ボタン横幅80% */
+  .wg-monitor__cta .wg-btn { width: 80%; }
 }

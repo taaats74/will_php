@@ -24,6 +24,27 @@
     onHeaderScroll();
   }
 
+  /* --- ハンバーガーメニュー（SP/タブレット） --- */
+  var burger = document.getElementById('wgBurger');
+  var drawer = document.getElementById('wgDrawer');
+  if (burger && drawer) {
+    var setMenu = function (open) {
+      drawer.classList.toggle('is-open', open);
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    };
+    burger.addEventListener('click', function () {
+      setMenu(!drawer.classList.contains('is-open'));
+    });
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { setMenu(false); }
+    });
+  }
+
   /* --- 追従CTA（モバイル）：FVを過ぎたら表示 --- */
   var stickyCta = document.getElementById('wgStickyCta');
   if (stickyCta) {
