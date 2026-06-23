@@ -877,9 +877,9 @@
             <div class="blog-v5-grid">
               <?php
                 // 別WordPress (https://will-corp.co.jp/blog/) の REST API から
-                // 指定ID 6本を順序維持で取得し、6時間キャッシュする
-                $featured_ids = array(710, 762, 705, 748, 656, 715);
-                $cache_key    = 'top_blog_featured_v3';
+                // 指定ID 5本を順序維持で取得し、6時間キャッシュする
+                $featured_ids = array(810, 818, 813, 1155, 660);
+                $cache_key    = 'top_blog_featured_v4';
                 $featured_posts = get_transient($cache_key);
 
                 if ($featured_posts === false) {
