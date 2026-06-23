@@ -1,0 +1,197 @@
+@use "variables" as v;
+
+// =========================================
+// ベース / タイポグラフィ / レイアウト共通（wg-）
+// =========================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: v.$font-base;
+  color: v.$text;
+  background: v.$white;
+  line-height: 1.8;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  // 見出しの英字透かし等がはみ出しても横スクロールを生まないようガード
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+strong {
+  font-weight: 700;
+}
+
+// --- コンテナ ---
+.wg-container {
+  width: 100%;
+  max-width: v.$container;
+  margin-inline: auto;
+  padding-inline: v.$gutter;
+
+  &--narrow {
+    max-width: v.$container-narrow;
+  }
+}
+
+// --- セクション枠 ---
+.wg-section {
+  padding-block: 72px;
+
+  @media (min-width: v.$bp-md) {
+    padding-block: 104px;
+  }
+
+  &--pale {
+    background: v.$bg-pale;
+  }
+
+  &--primary {
+    background: v.$primary;
+    color: v.$text;
+  }
+}
+
+// --- セクション見出し ---
+.wg-section__title {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: v.$accent;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 0.12em;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 2rem;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 1px;
+    margin: 18px auto 0;
+    background: v.$accent;
+    border-radius: 1px;
+  }
+
+  &--light {
+    color: v.$white;
+
+    &::after {
+      background: v.$white;
+    }
+  }
+
+  // セクションラベル：data-label="ISSUE" 等を、見出し背景に薄い大きな英字透かしで重ねる
+  // 英字あしらいを上にずらし、下半分が見出しに重なるように
+  &[data-label]::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    color: rgba(v.$primary, 0.16);
+    white-space: nowrap;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &--light[data-label]::before {
+    color: rgba(v.$white, 0.18);
+  }
+}
+
+.wg-section__lead {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+  color: v.$text;
+}
+
+// --- 本文ブロック ---
+.wg-prose {
+  max-width: 760px;
+  margin-inline: auto;
+
+  p {
+    margin-bottom: 1.5em;
+    line-height: 1.9;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__emphasis {
+    font-weight: 700;
+    color: v.$accent;
+    font-size: 1.1rem;
+
+    &--center {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--on-primary {
+    color: v.$text;
+
+    .wg-prose__emphasis {
+      color: v.$accent;
+    }
+
+    // 淡い背景では黄色下線が見えづらいため、塗り・下線をやめてアクセント色の強調文字に
+    .wg-marker {
+      background: transparent;
+      border-bottom: 0;
+      color: v.$accent;
+      font-weight: 700;
+    }
+  }
+}
+
+// --- 蛍光マーカー（HIGHLIGHT） ---
+.wg-marker {
+  background: linear-gradient(transparent 58%, rgba(v.$highlight, 0.75) 58%);
+  font-weight: 700;
+  padding: 0 0.08em;
+}
+
+// --- 強調リード ---
+.wg-lead-emphasis {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: v.$text;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 1.35rem;
+  }
+}

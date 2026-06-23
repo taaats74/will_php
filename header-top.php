@@ -63,9 +63,13 @@
               <div class="header-child-v2__megamenu__group">
                 <p class="header-child-v2__megamenu__group-label">主力サービス</p>
                 <div class="header-child-v2__megamenu__featured">
+                  <a href="<?php echo esc_url( home_url('/willgrow/') ); ?>" class="header-child-v2__megamenu__featured-card header-child-v2__megamenu__featured-card--primary" role="menuitem" target="_blank" rel="noopener noreferrer">
+                    <span class="header-child-v2__megamenu__featured-card-title">ウィルグロー</span>
+                    <span class="header-child-v2__megamenu__featured-card-sub">BtoB向けリード獲得・商談化支援</span>
+                  </a>
                   <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="header-child-v2__megamenu__featured-card" role="menuitem" target="_blank" rel="noopener noreferrer">
                     <span class="header-child-v2__megamenu__featured-card-title">ウィルサポ</span>
-                    <span class="header-child-v2__megamenu__featured-card-sub">BtoB中小企業向け</span>
+                    <span class="header-child-v2__megamenu__featured-card-sub">BtoB向けサブスクHP</span>
                   </a>
                   <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="header-child-v2__megamenu__featured-card" role="menuitem" target="_blank" rel="noopener noreferrer">
                     <span class="header-child-v2__megamenu__featured-card-title">ウィルサポEC</span>
@@ -128,8 +132,9 @@
       <div class="sp-menu-v5__featured">
         <p class="sp-menu-v5__group-label">BtoB向けサブスクホームページ</p>
         <ul>
-          <li><a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポ<span>BtoB中小企業向け</span></a></li>
+          <li><a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポ<span>BtoB向けサブスクHP</span></a></li>
           <li><a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポEC<span>EC事業者向け</span></a></li>
+          <li><a href="<?php echo esc_url( home_url('/willgrow/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルグロー<span>BtoB向けリード獲得・商談化支援</span></a></li>
         </ul>
       </div>
 

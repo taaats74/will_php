@@ -37,7 +37,7 @@ get_template_part( 'template-parts/page-hero', null, [
       </h2>
 
       <p class="service-seo-hero__lead">
-        BtoB中小企業のコンテンツSEOを、検索 → 理解 → 比較 → 行動の導線として設計。<br class="pc">
+        BtoB企業のコンテンツSEOを、検索 → 理解 → 比較 → 行動の導線として設計。<br class="pc">
         記事を「資産」として育て、Webサイト全体の集客力と商談化率を底上げします。
       </p>
 
@@ -78,7 +78,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-seo-problem__head problem-header">
         <p class="en">PROBLEM</p>
         <h2>コンテンツSEOの<br class="sp">よくある課題</h2>
-        <p class="subtitle">BtoB中小企業のコンテンツSEOで、よくいただくご相談を3つの観点で整理しました。</p>
+        <p class="subtitle">BtoB企業のコンテンツSEOで、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
       <ul class="service-seo-problem__list">
@@ -295,17 +295,17 @@ get_template_part( 'template-parts/page-hero', null, [
             <p class="service-seo-price__plan-desc">
               営業構造整理、検索意図設計、キーワード戦略設計、コンテンツカテゴリ設計、内部リンク設計、CTA設計、編集ルール・運用ルール整備までを実施し、「リードと商談につながるSEO設計」を構築します。
             </p>
-            <p class="service-seo-price__plan-price">300,000円〜<span class="service-seo-price__plan-tax"> / 回</span></p>
+            <p class="service-seo-price__plan-price">200,000円〜<span class="service-seo-price__plan-tax"> / 回</span></p>
           </div>
 
           <div class="service-seo-price__plan-card">
             <p class="service-seo-price__plan-num">02</p>
             <p class="service-seo-price__plan-name">月額運用伴走プラン</p>
             <p class="service-seo-price__plan-desc">
-              月1回の戦略MTG、優先順位設計、記事テーマ設計、構成レビュー、リライト方針設計、内部リンク最適化、10記事作成、数値分析と改善提案を実施します。
+              月1回の戦略MTG、優先順位設計、記事テーマ設計、構成レビュー、リライト方針設計、内部リンク最適化、記事作成、数値分析と改善提案を実施します。
               改善を積み上げながら、Webサイトを「資産」として育てていきます。
             </p>
-            <p class="service-seo-price__plan-price">350,000円〜<span class="service-seo-price__plan-tax"> / 月</span></p>
+            <p class="service-seo-price__plan-price">200,000円〜<span class="service-seo-price__plan-tax"> / 月</span></p>
           </div>
 
         </div>
@@ -328,17 +328,17 @@ get_template_part( 'template-parts/page-hero', null, [
         <p class="subtitle">サービス設計を貫く、3つの軸をお伝えします。</p>
       </div>
       <p class="service-seo-principle__lead">
-        BtoB中小企業の現場で培った経験から、私たちは以下の3つを軸にサービスを組み立てています。
+        BtoB企業の現場で培った経験から、私たちは以下の3つを軸にサービスを組み立てています。
       </p>
 
       <ul class="service-seo-principle__list">
 
         <li class="service-seo-principle__item">
           <p class="service-seo-principle__num">01</p>
-          <h3 class="service-seo-principle__title">BtoB中小企業に特化した型化</h3>
+          <h3 class="service-seo-principle__title">BtoB企業に特化した型化</h3>
           <p class="service-seo-principle__text">
             業種・規模にあわせた支援フローを標準化することで、<span class="keyword">「刺さる型」を最短で構築できる体制</span>をつくっています。
-            50社以上のBtoB中小企業を支援してきた経験から、共通する成功パターンを型として持っているため、ゼロから設計するのではなく、貴社の状況にあわせて最適化する形で進められます。
+            50社以上のBtoB企業を支援してきた経験から、共通する成功パターンを型として持っているため、ゼロから設計するのではなく、貴社の状況にあわせて最適化する形で進められます。
           </p>
         </li>
 
@@ -407,7 +407,7 @@ get_template_part( 'template-parts/page-hero', null, [
           <ul class="service-seo-flow__step-list">
             <li>月1回の戦略MTG</li>
             <li>優先順位設計・記事テーマ設計</li>
-            <li>10記事の構成・原稿作成</li>
+            <li>記事の構成・原稿作成</li>
             <li>既存記事のリライト方針設計・内部リンク最適化</li>
             <li>数値分析と改善提案(検索順位・回遊・CTAクリック・問い合わせ)</li>
           </ul>
@@ -472,7 +472,7 @@ get_template_part( 'template-parts/page-hero', null, [
             <div class="list answer">
               <div class="text-wrapper">
                 <div class="list-icon">A</div>
-                <p class="text">むしろ、これまで以上に重要になっています。AI検索(ChatGPT・Perplexity・Google AI Overviewなど)は、Web上の情報を拾って回答を生成する仕組みです。そのため、AI検索が普及するほど「発信されているコンテンツ」が回答ソースとして引用される機会が増えます。検索エンジン対策とAI最適化を両立した記事設計を標準で行います。</p>
+                <p class="text">はい、あります。むしろ、これまで以上に重要になっています。AI検索(ChatGPT・Perplexity・Google AI Overviewなど)は、Web上の情報を拾って回答を生成する仕組みです。そのため、AI検索が普及するほど「発信されているコンテンツ」が回答ソースとして引用される機会が増えます。検索エンジン対策とAI最適化を両立した記事設計を標準で行います。</p>
               </div>
             </div>
           </li>
@@ -504,7 +504,7 @@ get_template_part( 'template-parts/page-hero', null, [
             <div class="list answer">
               <div class="text-wrapper">
                 <div class="list-icon">A</div>
-                <p class="text">可能です。月額運用伴走プランには10記事の構成・原稿作成が含まれます。ただし、最終的には社内にノウハウを残し、自走できる状態を目指すため、構成テンプレートや編集ルールの共有、改善観点の共有もセットで進めます。</p>
+                <p class="text">可能です。月額運用伴走プランには記事の構成・原稿作成が含まれます。ただし、最終的には社内にノウハウを残し、自走できる状態を目指すため、構成テンプレートや編集ルールの共有、改善観点の共有もセットで進めます。</p>
               </div>
             </div>
           </li>
@@ -665,22 +665,6 @@ get_template_part( 'template-parts/page-hero', null, [
               <div class="text-wrapper">
                 <div class="list-icon">A</div>
                 <p class="text">検索結果上位の競合記事の構成・情報量・E-E-A-T要素を分析し、貴社の強みを活かせるポジションを設計します。「競合に勝つ」のではなく、「検索者にとって最も役立つ記事」を作る視点で進めます。</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="list question">
-              <div class="text-wrapper">
-                <div class="list-icon">Q</div>
-                <p class="text">月10記事以上のボリュームでも対応できますか?</p>
-              </div>
-              <i class="fa-solid fa-chevron-up"></i>
-            </div>
-            <div class="list answer">
-              <div class="text-wrapper">
-                <div class="list-icon">A</div>
-                <p class="text">可能です。月15〜20記事規模の運用にも対応しています。ただし、記事数を増やすほど品質維持のために体制設計が重要になるため、ヒアリングのうえで最適なペースをご提案します。</p>
               </div>
             </div>
           </li>

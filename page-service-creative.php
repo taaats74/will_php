@@ -61,7 +61,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-creative-problem__head problem-header">
         <p class="en">PROBLEM</p>
         <h2>クリエイティブ制作の<br class="sp">よくある課題</h2>
-        <p class="subtitle">BtoB中小企業のクリエイティブ制作で、よくいただくご相談を3つの観点で整理しました。</p>
+        <p class="subtitle">BtoB企業のクリエイティブ制作で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
       <ul class="service-creative-problem__list">

@@ -11,7 +11,7 @@
 get_template_part( 'template-parts/page-hero', null, [
   'en'    => 'ABOUT',
   'title' => 'ウィルについて',
-  'lead'  => '福岡から、BtoB中小企業の営業基盤を設計する。',
+  'lead'  => '福岡から、BtoB企業の営業基盤を設計する。',
 ] );
 ?>
 

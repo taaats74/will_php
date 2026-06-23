@@ -148,7 +148,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-web-problem__head problem-header">
         <p class="en">PROBLEM</p>
         <h2>こんなお悩みは<br class="sp">ありませんか?</h2>
-        <p class="subtitle">BtoB中小企業のWebサイト制作で、よくいただくご相談を3つの観点で整理しました。</p>
+        <p class="subtitle">BtoB企業のWebサイト制作で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
       <ul class="service-web-problem__list">
@@ -559,7 +559,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-web-works__head works-header">
         <p class="en">WORKS</p>
         <h2>制作実績</h2>
-        <p class="subtitle">業種・規模を問わず、BtoB中小企業を中心にご支援しています。</p>
+        <p class="subtitle">業種・規模を問わず、BtoB企業を中心にご支援しています。</p>
       </div>
 
       <p class="service-web-works__lead">

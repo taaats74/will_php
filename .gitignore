@@ -4,3 +4,6 @@
 # macOS
 .DS_Store
 **/.DS_Store
+
+# willグロー LP のビルド依存
+will-grow-assets/node_modules/

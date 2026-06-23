@@ -2,7 +2,7 @@
 /**
  * Template Name: サービス一覧(service)
  *
- * BtoB中小企業の営業基盤を統合的に支援する2層構造のサービス一覧ページ。
+ * BtoB企業の営業基盤を統合的に支援する2層構造のサービス一覧ページ。
  * - header + footer + template-parts/page-hero
  * - ブランド・メッセージガイドライン v2.0 / カラーガイドライン v1.0 準拠
  *
@@ -15,7 +15,7 @@ get_header();
 get_template_part('template-parts/page-hero', null, [
   'en'    => 'SERVICES',
   'title' => 'サービス',
-  'lead'  => 'BtoB中小企業の事業成長を、Webサイト・マーケティングの両輪で伴走支援します。',
+  'lead'  => 'BtoB企業の事業成長を、Webサイト・マーケティングの両輪で伴走支援します。',
 ]);
 ?>
 
@@ -64,12 +64,21 @@ get_template_part('template-parts/page-hero', null, [
 
       <ul class="page-service__main-tabs" role="tablist" aria-label="主力サービスの切替">
         <li class="page-service__main-tab is-active"
-            data-ps-main-tab="ws"
+            data-ps-main-tab="wg"
             role="tab"
             tabindex="0"
             aria-selected="true"
+            aria-controls="ps-main-tab-wg">
+          <span class="page-service__main-tab-label">リード獲得・商談化支援</span>
+          <span class="page-service__main-tab-name">ウィルグロー</span>
+        </li>
+        <li class="page-service__main-tab"
+            data-ps-main-tab="ws"
+            role="tab"
+            tabindex="0"
+            aria-selected="false"
             aria-controls="ps-main-tab-ws">
-          <span class="page-service__main-tab-label">BtoB中小企業向け</span>
+          <span class="page-service__main-tab-label">BtoB企業向け</span>
           <span class="page-service__main-tab-name">ウィルサポ</span>
         </li>
         <li class="page-service__main-tab"
@@ -85,9 +94,69 @@ get_template_part('template-parts/page-hero', null, [
 
       <div class="page-service__main-cards">
 
-        <div id="ps-main-tab-ws"
-             class="page-service__main-card page-service__main-card--ws is-active"
+        <div id="ps-main-tab-wg"
+             class="page-service__main-card page-service__main-card--wg is-active"
              role="tabpanel"
+             aria-labelledby="ps-main-tab-wg-label">
+          <a href="<?php echo esc_url( home_url('/willgrow/') ); ?>"
+             class="page-service__main-card-link"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="ウィルグローのサービス詳細を新しいタブで開く">
+
+            <div class="page-service__main-card-target">[BtoB企業向け]</div>
+
+            <p class="page-service__main-card-catch">
+              リード獲得から商談化まで、<br>
+              BtoB企業のマーケティングの仕組みを作ります。
+            </p>
+
+            <div class="page-service__main-card-row">
+              <div class="page-service__main-card-info">
+                <p class="page-service__main-card-type">BtoBマーケティング伴走支援</p>
+                <h3 class="page-service__main-card-name">ウィルグロー</h3>
+                <ul class="page-service__main-card-badges">
+                  <li>リード<br>獲得</li>
+                  <li>見込み客<br>育成</li>
+                  <li>商談<br>創出</li>
+                </ul>
+              </div>
+              <div class="page-service__main-card-visual">
+                <img src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/fv-img.png' ) ); ?>"
+                     alt=""
+                     loading="lazy"
+                     decoding="async">
+              </div>
+            </div>
+
+            <p class="page-service__main-card-desc">
+              御社のマーケティング部門として、問い合わせの獲得から育成・商談化までを仕組み化。
+              コンテンツSEO・導線改善・マーケティングオートメーションを組み合わせ、安定した見込み顧客の創出を実現します。
+            </p>
+
+            <div class="page-service__main-card-benefit">
+              <p class="page-service__main-card-benefit-feature">
+                <span class="page-service__main-card-benefit-label">機能・特長</span>
+                集客から問い合わせ獲得・育成・商談創出までを一本の仕組みに統合
+              </p>
+              <p class="page-service__main-card-benefit-result">
+                <span class="page-service__main-card-benefit-arrow">→</span>
+                属人化せず、安定して見込み客と商談を生み出す営業基盤がつくれる
+              </p>
+            </div>
+
+            <span class="page-service__main-card-cta">
+              <span class="page-service__main-card-cta-text"><span class="pc">ウィルグローの</span>サービス詳細を見る</span>
+              <span class="page-service__main-card-cta-arrow">→</span>
+            </span>
+
+          </a>
+        </div>
+
+        <div id="ps-main-tab-ws"
+             class="page-service__main-card page-service__main-card--ws"
+             role="tabpanel"
+             hidden
              aria-labelledby="ps-main-tab-ws-label">
           <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>"
              class="page-service__main-card-link"
@@ -95,7 +164,7 @@ get_template_part('template-parts/page-hero', null, [
              rel="noopener noreferrer"
              aria-label="ウィルサポのサービス詳細を新しいタブで開く">
 
-            <div class="page-service__main-card-target">[BtoB中小企業向け]</div>
+            <div class="page-service__main-card-target">[BtoB企業向け]</div>
 
             <p class="page-service__main-card-catch">
               あなたのWebサイトは、<br>
@@ -121,7 +190,7 @@ get_template_part('template-parts/page-hero', null, [
             </div>
 
             <p class="page-service__main-card-desc">
-              BtoB中小企業のための戦略設計から運用まで伴走する、月額費用型のサブスクホームページ制作サービスです。
+              BtoB企業のための戦略設計から運用まで伴走する、月額費用型のサブスクホームページ制作サービスです。
               比較検討フェーズで選ばれるWebサイトを、月額制で構築・改善し続けます。
             </p>
 
@@ -257,7 +326,7 @@ get_template_part('template-parts/page-hero', null, [
         <h2>課題に応じた、5つの<br class="sp">支援領域</h2>
         <p class="lead">
           Webサイト制作を起点に、MA・コンテンツSEO・Instagram・グラフィックまで。<br>
-          BtoB中小企業の営業基盤を統合的に支援する5つの領域で、貴社の課題に合わせた支援を提供します。
+          BtoB企業の営業基盤を統合的に支援する5つの領域で、貴社の課題に合わせた支援を提供します。
         </p>
       </div>
 
@@ -327,7 +396,7 @@ get_template_part('template-parts/page-hero', null, [
           </div>
           <p class="whatwedo-catch">BtoBでも届く、信頼形成型のSNS運用</p>
           <p class="whatwedo-body">
-            BtoB中小企業向けに、認知拡大ではなく「信頼形成」を目的としたInstagram運用を支援。アカウント設計から投稿運用まで、営業基盤の補完チャネルとして機能させます。
+            BtoB企業向けに、認知拡大ではなく「信頼形成」を目的としたInstagram運用を支援。アカウント設計から投稿運用まで、営業基盤の補完チャネルとして機能させます。
           </p>
           <div class="whatwedo-link">
             <span class="whatwedo-link-text">サービス詳細を見る</span>

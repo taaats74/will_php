@@ -25,7 +25,7 @@
       "@id": "https://will-corp.co.jp/#organization"
     },
     "areaServed": "JP",
-    "description": "BtoB中小企業のための月額制ホームページ制作・運用サービス",
+    "description": "BtoB企業のための月額制ホームページ制作・運用サービス",
     "offers": [
       {"@type": "Offer", "name": "スタート", "price": "9800", "priceCurrency": "JPY"},
       {"@type": "Offer", "name": "シンプル", "price": "19800", "priceCurrency": "JPY"},
@@ -278,9 +278,9 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ" loading="eager" decoding="async">
               </h1>
               <ul class="wsv2-fv__points">
-                <li class="wsv2-fv__point">初期費用<br>無料</li>
-                <li class="wsv2-fv__point">契約期間の<br>縛りなし</li>
                 <li class="wsv2-fv__point">BtoB特化の<br>構成設計</li>
+                <li class="wsv2-fv__point">問い合わせに<br>つながる</li>
+                <li class="wsv2-fv__point">比較検討で<br>選ばれる</li>
               </ul>
               <div class="wsv2-fv__cta">
                 <a href="https://site.will-corp.co.jp/content-fq349tq4jio" class="wsv2-fv__cta-btn" target="_blank" rel="noopener noreferrer">資料をダウンロードする</a>
@@ -293,7 +293,7 @@
             </div>
 
           </div>
-          <p class="wsv2-fv__catchcopy">BtoB中小企業のための戦略設計から運用まで伴走する<br>月額費用型のサブスクホームページ制作サービスです</p>
+          <p class="wsv2-fv__catchcopy">BtoB企業のための戦略設計から運用まで伴走する<br>月額費用型のサブスクホームページ制作サービスです</p>
         </div>
       </div>
     </section>
@@ -407,7 +407,7 @@
             <div class="wsv2-feature__section-head">
               <p class="wsv2-feature__eyebrow">FEATURE</p>
               <h2 class="wsv2-feature__title wsv2-fade">ウィルサポが選ばれる<br>6つの理由</h2>
-              <p class="wsv2-feature__lead">BtoB中小企業の比較検討フェーズで「選ばれるWebサイト」をつくるために、ウィルサポは戦略設計から運用まで、6つの要素を一貫したサービスとして提供しています。</p>
+              <p class="wsv2-feature__lead">BtoB企業の比較検討フェーズで「選ばれるWebサイト」をつくるために、ウィルサポは戦略設計から運用まで、6つの要素を一貫したサービスとして提供しています。</p>
             </div>
           </div>
 
@@ -450,7 +450,7 @@
             <!-- カード05：伴走 -->
             <li class="wsv2-feature__card">
               <p class="wsv2-feature__card-num">05</p>
-              <h3 class="wsv2-feature__card-title">BtoB中小企業特化の<br>伴走支援</h3>
+              <h3 class="wsv2-feature__card-title">BtoB企業特化の<br>伴走支援</h3>
               <p class="wsv2-feature__card-text">営業の属人化・紹介依存・価格競争などの課題を整理し、Webサイトを集客施策全体の中でどう位置づけるかから設計します。サイト単体ではなく、SEO・広告・営業活動と連動した全体設計をご提案します。</p>
               <p class="wsv2-feature__card-benefit">→ Webサイト単体の悩みではなく、集客・営業の構造課題そのものが解きほぐされます</p>
             </li>
@@ -647,7 +647,7 @@
           <div class="wsv2-works__section-head">
             <p class="wsv2-works__eyebrow">WORKS</p>
             <h2 class="wsv2-works__title wsv2-fade">制作実績</h2>
-            <p class="wsv2-works__lead">BtoB中小企業に特化し、製造・IT・士業・不動産など幅広い業種のホームページ制作を伴走支援してきました。<br>業種は異なっても、「比較検討で選ばれる構造」という設計思想は共通しています。業種ごとの設計意図とあわせて実績をご覧ください。</p>
+            <p class="wsv2-works__lead">BtoB企業に特化し、製造・IT・士業・不動産など幅広い業種のホームページ制作を伴走支援してきました。<br>業種は異なっても、「比較検討で選ばれる構造」という設計思想は共通しています。業種ごとの設計意図とあわせて実績をご覧ください。</p>
           </div>
 
           <ul class="wsv2-works__list">

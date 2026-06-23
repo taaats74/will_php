@@ -30,10 +30,11 @@
             <div class="footer-v5-col footer-v5-col--services">
               <h3 class="footer-v5-col-title">SERVICES</h3>
 
-              <p class="footer-v5-services-group-label">■ サブスクHPサービス</p>
+              <p class="footer-v5-services-group-label">■ 主力サービス</p>
               <ul class="footer-v5-services-list footer-v5-services-list--main">
-                <li><a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポ</a></li>
-                <li><a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポEC</a></li>
+                <li><a href="<?php echo esc_url( home_url('/willgrow/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルグロー<span>BtoB向けリード獲得・商談化支援</span></a></li>
+                <li><a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポ<span>BtoB向けサブスクHP</span></a></li>
+                <li><a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポEC<span>EC事業者向け</span></a></li>
               </ul>
 
               <p class="footer-v5-services-group-label">■ 支援領域</p>

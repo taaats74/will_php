@@ -36,7 +36,7 @@ get_template_part( 'template-parts/page-hero', null, [
       </h2>
 
       <p class="service-sns-hero__lead">
-        BtoB中小企業の Instagram を、商談前の信頼形成と Web への導線として機能させる。<br class="pc">
+        BtoB企業の Instagram を、商談前の信頼形成と Web への導線として機能させる。<br class="pc">
         ターゲット・コンセプト・運用の仕組みまで、初期構築から伴走支援まで一貫してご提供します。
       </p>
 
@@ -81,7 +81,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-sns-problem__head problem-header">
         <p class="en">PROBLEM</p>
         <h2>こんな企業様向けの<br class="sp">サービスです</h2>
-        <p class="subtitle">BtoB中小企業のInstagram運用で、よくいただくご相談を3つの観点で整理しました。</p>
+        <p class="subtitle">BtoB企業のInstagram運用で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
       <ul class="service-sns-problem__list">
@@ -301,7 +301,7 @@ get_template_part( 'template-parts/page-hero', null, [
             <p class="service-sns-price__plan-num">02</p>
             <p class="service-sns-price__plan-name">月額運用伴走プラン</p>
             <p class="service-sns-price__plan-desc">
-              月1回の戦略MTGを軸に、投稿企画設計、投稿作成支援10件(構成 / テキスト / 台本作成)、数値分析、Web接続導線改善、導線最適化提案までを実施します。
+              月1回の戦略MTGを軸に、投稿企画設計、投稿作成支援(構成 / テキスト / 台本作成)、数値分析、Web接続導線改善、導線最適化提案までを実施します。
               運用を積み上げながら、共同制作へ段階的に移行します。
             </p>
             <p class="service-sns-price__plan-price">350,000円〜<span class="service-sns-price__plan-tax"> / 月</span></p>
@@ -335,10 +335,10 @@ get_template_part( 'template-parts/page-hero', null, [
 
         <li class="service-sns-principle__item">
           <p class="service-sns-principle__num">01</p>
-          <h3 class="service-sns-principle__title">BtoB中小企業に特化した型化</h3>
+          <h3 class="service-sns-principle__title">BtoB企業に特化した型化</h3>
           <p class="service-sns-principle__text">
             業種・規模にあわせた支援フローを標準化することで、<span class="keyword">「刺さる型」を最短で構築できる体制</span>をつくっています。
-            50社以上のBtoB中小企業を支援してきた経験から、共通する成功パターンを型として持っているため、ゼロから設計するのではなく、貴社の状況にあわせて最適化する形で進められます。
+            50社以上のBtoB企業を支援してきた経験から、共通する成功パターンを型として持っているため、ゼロから設計するのではなく、貴社の状況にあわせて最適化する形で進められます。
           </p>
         </li>
 

@@ -1,0 +1,35 @@
+// =========================================
+// ウィル ブランドカラー / デザイントークン
+// ブランドカラーガイドライン ver.1.0 準拠
+// =========================================
+
+// --- ブランドカラー（5色） ---
+$primary:   #7CC1C9; // PRIMARY   ターコイズブルー（メイン）
+$light:     #B4DBE0; // LIGHT     ペールターコイズ（補助背景）
+$accent:    #28849D; // ACCENT    ディープティール（強調・CTA）
+$highlight: #F0E74E; // HIGHLIGHT マーカーイエロー（注目）
+$text:      #3E5054; // TEXT      チャコールグレー（本文）
+
+// --- 補助カラー ---
+$bg-pale: #F0F8F9; // 極淡背景
+$white:   #FFFFFF; // 白
+$border:  #C0D5D8; // 薄罫線
+$subtle:  #8AA0A4; // サブテキスト
+$warn-bg: #FFF4E6; // 注意背景（極稀）
+
+// --- 派生（hover等） ---
+$accent-dark: #1f6a7e; // ACCENT のホバー濃色
+
+// --- レイアウト ---
+$container: 1120px;
+$container-narrow: 760px;
+$gutter: 24px;
+$radius: 12px;
+$radius-lg: 20px;
+
+// --- ブレークポイント ---
+$bp-sm: 600px;
+$bp-md: 900px;
+
+// --- フォント ---
+$font-base: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;

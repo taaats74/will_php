@@ -174,7 +174,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <div class="service-ma-problem__head problem-header">
         <p class="en">PROBLEM</p>
         <h2>こんなお悩みは<br class="sp">ありませんか?</h2>
-        <p class="subtitle">BtoB中小企業のMA導入・運用で、よくいただくご相談を3つの観点で整理しました。</p>
+        <p class="subtitle">BtoB企業のMA導入・運用で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
       <ul class="service-ma-problem__list">

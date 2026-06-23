@@ -8,7 +8,7 @@
  *   get_template_part( 'template-parts/page-hero', null, [
  *     'en'    => 'ABOUT',                                    // 英語ラベル(必須)
  *     'title' => 'ウィルについて',                            // 日本語タイトル(必須)
- *     'lead'  => '福岡から、BtoB中小企業の営業基盤を設計する。', // リード(任意・<br> 可)
+ *     'lead'  => '福岡から、BtoB企業の営業基盤を設計する。', // リード(任意・<br> 可)
  *     'badge' => '',                                         // バッジ(任意・Phase 1 では未使用)
  *   ] );
  *

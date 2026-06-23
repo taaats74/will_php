@@ -23,7 +23,7 @@ get_header();
 get_template_part( 'template-parts/page-hero', null, [
   'en'    => 'ABOUT',
   'title' => 'ウィルについて',
-  'lead'  => '福岡から、BtoB中小企業の営業基盤を、Webから設計する。',
+  'lead'  => '福岡から、BtoB企業の営業基盤を、Webから設計する。',
 ] );
 ?>
 
@@ -56,7 +56,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="concept-header">
         <p class="en">CONCEPT</p>
-        <h2>BtoB中小企業の営業基盤を、<br>Webから設計する。</h2>
+        <h2>BtoB企業の営業基盤を、<br>Webから設計する。</h2>
         <p class="subtitle">私たちが向き合っているのは、Webサイトの問題ではなく、<br class="pc">「Webを使えていないことで起きている、経営上の損失」です。</p>
       </div>
 
@@ -64,7 +64,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
         <div class="concept-block">
           <p>
-            紹介・展示会への依存、属人的な営業、価格競争。BtoB中小企業の多くが抱えるこれらの課題は、<span class="keyword">単発の施策では解決できません</span>。
+            紹介・展示会への依存、属人的な営業、価格競争。BtoB企業の多くが抱えるこれらの課題は、<span class="keyword">単発の施策では解決できません</span>。
           </p>
           <p>
             見込み客との接点をどう作り、どう比較検討の俎上に乗せ、どう意思決定を後押しするか。<span class="keyword">その全体設計を、Webを起点に組み立てる</span>のが私たちの仕事です。
@@ -166,7 +166,7 @@ get_template_part( 'template-parts/page-hero', null, [
           </div>
           <div class="strength-item-body">
             <p>
-              良い商品・良いサービスを持ちながら、その価値が伝わっていない。私たちが日々向き合っているBtoB中小企業の多くは、そんな状況にあります。
+              良い商品・良いサービスを持ちながら、その価値が伝わっていない。私たちが日々向き合っているBtoB企業の多くは、そんな状況にあります。
             </p>
             <p>
               だから私たちは、施策設計の前に、<span class="keyword">対話に時間をかけます</span>。お客様自身が言語化できていない強みや独自性、お客様自身が気づいていない事業の本質的な価値を、丁寧なヒアリングを通じて掘り起こすところから始めます。

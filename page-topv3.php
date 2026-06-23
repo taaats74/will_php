@@ -37,7 +37,7 @@
           </div>
           <div class="fv-message-wrapper">
             <p class="ja">ともに、未来を創る</p>
-            <p class="sub1">BtoB中小企業の営業基盤を、Webから設計</p>
+            <p class="sub1">BtoB企業の営業基盤を、Webから設計</p>
             <p class="sub2">事業のパートナーとして、ともに伴走します</p>
           </div>
           <div class="fv-cta-cards">
@@ -72,7 +72,7 @@
             </div>
             <div class="fv-message-wrapper">
               <p class="ja">ともに、未来を創る</p>
-              <p class="sub1">BtoB中小企業の営業基盤を、Webから設計</p>
+              <p class="sub1">BtoB企業の営業基盤を、Webから設計</p>
               <p class="sub2">事業のパートナーとして、ともに伴走します</p>
             </div>
           </div>
@@ -297,7 +297,7 @@
           <ul class="mainproduct-tab">
             <li data-mp-tab="mp-tab1" class="active">
               <a href="#willsupport">
-                <span class="mp-tab-label">BtoB中小企業向け</span>
+                <span class="mp-tab-label">BtoB企業向け</span>
                 <span class="mp-tab-name">ウィルサポ</span>
               </a>
             </li>
@@ -312,7 +312,7 @@
           <div class="mainproduct-wrapper animation-target to-up">
 
             <div id="mp-tab1" class="mainproduct-item is-active">
-              <div class="mp-target-label">[BtoB中小企業向け]</div>
+              <div class="mp-target-label">[BtoB企業向け]</div>
               <p class="mp-catch">
                 あなたのWebサイトは、<br>
                 競合と比較されたときに勝てていますか？
@@ -335,7 +335,7 @@
                   </div>
                 </div>
                 <p class="mp-description">
-                  BtoB中小企業のための戦略設計から運用まで伴走する<br>
+                  BtoB企業のための戦略設計から運用まで伴走する<br>
                   月額費用型のサブスクホームページ制作サービスです
                 </p>
               </div>
@@ -394,7 +394,7 @@
             <h2>私たちが提供する5つの<br class="sp">サービス領域</h2>
             <p class="lead">
               ウィルは、Webサイト制作を起点に、<br>MA・コンテンツSEO・Instagram・グラフィックまで、<br>
-              BtoB中小企業の営業基盤を統合的に支援する5つのサービスを提供しています。
+              BtoB企業の営業基盤を統合的に支援する5つのサービスを提供しています。
             </p>
           </div>
 
@@ -463,7 +463,7 @@
               </div>
               <p class="whatwedo-catch">BtoBでも届く、信頼形成型のSNS運用</p>
               <p class="whatwedo-body">
-                BtoB中小企業向けに、認知拡大ではなく「信頼形成」を目的としたInstagram運用を支援。アカウント設計から投稿運用まで、営業基盤の補完チャネルとして機能させます。
+                BtoB企業向けに、認知拡大ではなく「信頼形成」を目的としたInstagram運用を支援。アカウント設計から投稿運用まで、営業基盤の補完チャネルとして機能させます。
               </p>
               <div class="whatwedo-link">
                 <span class="whatwedo-link-text">サービス詳細を見る</span>
@@ -821,7 +821,7 @@
                   </h2>
                   <p class="blog-v5-lead">
                     営業仕組み化、リード獲得、価値訴求の整理。<br>
-                    BtoB中小企業の経営者・担当者の意思決定に役立つ視点を、ブログで継続的に発信しています。中でも特にお読みいただきたい6本をご紹介します。
+                    BtoB企業の経営者・担当者の意思決定に役立つ視点を、ブログで継続的に発信しています。中でも特にお読みいただきたい6本をご紹介します。
                   </p>
                 </div>
 
@@ -955,7 +955,7 @@
               </h2>
 
               <p class="about-v5-lead">
-                多くのBtoB中小企業の経営者と向き合う中で見てきた現実。<br class="pc">
+                多くのBtoB企業の経営者と向き合う中で見てきた現実。<br class="pc">
                 私たちウィルは、Webを「営業基盤」として設計し、<br class="pc">
                 事業の価値を伝わる形に変えることを使命に、福岡から地方企業の成長を支えています。
               </p>

@@ -625,9 +625,14 @@ body.has-loading-v2.appear .header-child-v2 {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.header-child-v2__megamenu__featured-card--primary {
+  grid-column: 1 / -1;
+}
 .header-child-v2__megamenu__featured-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 4px;
   padding: 14px 16px;
   background: #f0f8f9;
@@ -24223,6 +24228,19 @@ body.is-sp-menu-open {
 .footer-v5-col--services .footer-v5-services-list.footer-v5-services-list--main li a {
   font-weight: bold;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.footer-v5-col--services .footer-v5-services-list.footer-v5-services-list--main li a span {
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* サブ文言で2行になるため、ダッシュ印をタイトル行の高さに合わせる */
+.footer-v5-col--services .footer-v5-services-list.footer-v5-services-list--main li::before {
+  top: 11px;
 }
 
 .footer-v5-col--contents .footer-v5-contents-list {
