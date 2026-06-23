@@ -104,8 +104,6 @@ get_template_part('template-parts/page-hero', null, [
              rel="noopener noreferrer"
              aria-label="ウィルグローのサービス詳細を新しいタブで開く">
 
-            <div class="page-service__main-card-target">[BtoB企業向け]</div>
-
             <p class="page-service__main-card-catch">
               リード獲得から商談化まで、<br>
               BtoB企業のマーケティングの仕組みを作ります。
@@ -129,21 +127,9 @@ get_template_part('template-parts/page-hero', null, [
               </div>
             </div>
 
-            <p class="page-service__main-card-desc">
-              御社のマーケティング部門として、問い合わせの獲得から育成・商談化までを仕組み化。
-              コンテンツSEO・導線改善・マーケティングオートメーションを組み合わせ、安定した見込み顧客の創出を実現します。
+            <p class="page-service__main-card-point">
+              属人化せず、安定して見込み客と商談を生み出す営業基盤がつくれます。
             </p>
-
-            <div class="page-service__main-card-benefit">
-              <p class="page-service__main-card-benefit-feature">
-                <span class="page-service__main-card-benefit-label">機能・特長</span>
-                集客から問い合わせ獲得・育成・商談創出までを一本の仕組みに統合
-              </p>
-              <p class="page-service__main-card-benefit-result">
-                <span class="page-service__main-card-benefit-arrow">→</span>
-                属人化せず、安定して見込み客と商談を生み出す営業基盤がつくれる
-              </p>
-            </div>
 
             <span class="page-service__main-card-cta">
               <span class="page-service__main-card-cta-text"><span class="pc">ウィルグローの</span>サービス詳細を見る</span>
@@ -163,8 +149,6 @@ get_template_part('template-parts/page-hero', null, [
              target="_blank"
              rel="noopener noreferrer"
              aria-label="ウィルサポのサービス詳細を新しいタブで開く">
-
-            <div class="page-service__main-card-target">[BtoB企業向け]</div>
 
             <p class="page-service__main-card-catch">
               あなたのWebサイトは、<br>
@@ -189,21 +173,9 @@ get_template_part('template-parts/page-hero', null, [
               </div>
             </div>
 
-            <p class="page-service__main-card-desc">
-              BtoB企業のための戦略設計から運用まで伴走する、月額費用型のサブスクホームページ制作サービスです。
-              比較検討フェーズで選ばれるWebサイトを、月額制で構築・改善し続けます。
+            <p class="page-service__main-card-point">
+              社内にWeb担当を置かずとも、サイトが見込み客を育てる仕組みになります。
             </p>
-
-            <div class="page-service__main-card-benefit">
-              <p class="page-service__main-card-benefit-feature">
-                <span class="page-service__main-card-benefit-label">機能・特長</span>
-                営業構造から逆算した戦略設計と、月額制での継続運用
-              </p>
-              <p class="page-service__main-card-benefit-result">
-                <span class="page-service__main-card-benefit-arrow">→</span>
-                社内にWeb担当を置かずとも、サイトが見込み客を育てる仕組みになる
-              </p>
-            </div>
 
             <span class="page-service__main-card-cta">
               <span class="page-service__main-card-cta-text"><span class="pc">ウィルサポの</span>サービス詳細を見る</span>
@@ -222,8 +194,6 @@ get_template_part('template-parts/page-hero', null, [
              target="_blank"
              rel="noopener noreferrer"
              aria-label="ウィルサポECのサービス詳細を新しいタブで開く">
-
-            <div class="page-service__main-card-target">[EC事業者向け]</div>
 
             <p class="page-service__main-card-catch">スモールスタートで、本気のECを。</p>
 
@@ -245,21 +215,9 @@ get_template_part('template-parts/page-hero', null, [
               </div>
             </div>
 
-            <p class="page-service__main-card-desc">
-              ECサイト制作会社をお探しの方や、構築を代行してほしい企業様へ。
-              ウィルサポECは、構成設計から公開後の運用・保守まで一括対応する、Shopifyベースの月額型サービスです。
+            <p class="page-service__main-card-point">
+              大きな初期投資なくEC事業を立ち上げ、運用しながら改善し続けられます。
             </p>
-
-            <div class="page-service__main-card-benefit">
-              <p class="page-service__main-card-benefit-feature">
-                <span class="page-service__main-card-benefit-label">機能・特長</span>
-                Shopifyベースのサブスク設計 + 構成設計から運用までの一括対応
-              </p>
-              <p class="page-service__main-card-benefit-result">
-                <span class="page-service__main-card-benefit-arrow">→</span>
-                大きな初期投資なくEC事業を立ち上げ、運用しながら改善し続けられる
-              </p>
-            </div>
 
             <span class="page-service__main-card-cta">
               <span class="page-service__main-card-cta-text"><span class="pc">ウィルサポECの</span>サービス詳細を見る</span>

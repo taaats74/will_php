@@ -23571,6 +23571,15 @@ body.is-sp-menu-open {
   font-weight: 700;
 }
 
+/* カードスリム化: benefit ブロック廃止後の成果一文（素のテキスト） */
+.page-service__main-card-point {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #28849D;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
 .page-service__main-card-cta {
   display: inline-flex;
   align-items: center;
