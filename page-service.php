@@ -127,10 +127,6 @@ get_template_part('template-parts/page-hero', null, [
               </div>
             </div>
 
-            <p class="page-service__main-card-point">
-              属人化せず、安定して見込み客と商談を生み出す営業基盤がつくれます。
-            </p>
-
             <span class="page-service__main-card-cta">
               <span class="page-service__main-card-cta-text"><span class="pc">ウィルグローの</span>サービス詳細を見る</span>
               <span class="page-service__main-card-cta-arrow">→</span>
@@ -173,10 +169,6 @@ get_template_part('template-parts/page-hero', null, [
               </div>
             </div>
 
-            <p class="page-service__main-card-point">
-              社内にWeb担当を置かずとも、サイトが見込み客を育てる仕組みになります。
-            </p>
-
             <span class="page-service__main-card-cta">
               <span class="page-service__main-card-cta-text"><span class="pc">ウィルサポの</span>サービス詳細を見る</span>
               <span class="page-service__main-card-cta-arrow">→</span>
@@ -214,10 +206,6 @@ get_template_part('template-parts/page-hero', null, [
                      decoding="async">
               </div>
             </div>
-
-            <p class="page-service__main-card-point">
-              大きな初期投資なくEC事業を立ち上げ、運用しながら改善し続けられます。
-            </p>
 
             <span class="page-service__main-card-cta">
               <span class="page-service__main-card-cta-text"><span class="pc">ウィルサポECの</span>サービス詳細を見る</span>

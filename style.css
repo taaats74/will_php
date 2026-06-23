@@ -23571,29 +23571,32 @@ body.is-sp-menu-open {
   font-weight: 700;
 }
 
-/* カードスリム化: benefit ブロック廃止後の成果一文（素のテキスト） */
-.page-service__main-card-point {
-  font-size: 15px;
-  line-height: 1.75;
-  color: #28849D;
-  font-weight: 600;
-  margin-bottom: 32px;
-}
-
+/* カードスリム化: CTA をボタン形式で強調 */
 .page-service__main-card-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  align-self: flex-start;
   margin-top: auto;
-  padding-top: 4px;
-  font-size: 16px;
+  padding: 16px 40px;
+  font-size: 17px;
   font-weight: 700;
-  color: #28849D;
+  color: #ffffff;
+  background: #28849D;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(40, 132, 157, 0.28);
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .page-service__main-card-cta .page-service__main-card-cta-arrow {
   transition: transform 0.3s ease;
 }
 
+.page-service__main-card-link:hover .page-service__main-card-cta {
+  background: #1F6B80;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(40, 132, 157, 0.36);
+}
 .page-service__main-card-link:hover .page-service__main-card-cta-arrow {
   transform: translateX(4px);
 }
