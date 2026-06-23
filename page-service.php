@@ -69,7 +69,7 @@ get_template_part('template-parts/page-hero', null, [
             tabindex="0"
             aria-selected="true"
             aria-controls="ps-main-tab-wg">
-          <span class="page-service__main-tab-label">リード獲得・商談化支援</span>
+          <span class="page-service__main-tab-label">BtoB向けリード獲得・商談化支援</span>
           <span class="page-service__main-tab-name">ウィルグロー</span>
         </li>
         <li class="page-service__main-tab"
@@ -78,7 +78,7 @@ get_template_part('template-parts/page-hero', null, [
             tabindex="0"
             aria-selected="false"
             aria-controls="ps-main-tab-ws">
-          <span class="page-service__main-tab-label">BtoB企業向け</span>
+          <span class="page-service__main-tab-label">BtoB向けサブスクHP</span>
           <span class="page-service__main-tab-name">ウィルサポ</span>
         </li>
         <li class="page-service__main-tab"

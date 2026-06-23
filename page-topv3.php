@@ -288,16 +288,22 @@
 
           <div class="mainproduct-header">
             <p class="lead">
-              ウィルが提供する5つの支援領域の中心にあるのが、<br>
-              <span class="keyword">月額制ホームページ制作サービス</span>です。<br>
-              事業フェーズに合った形で営業基盤の構築を支援します。
+              施策を単発で終わらせるのではなく、<br>
+              <span class="keyword">リード獲得から商談化までを<br class="sp">ひとつの営業基盤</span>として設計する。<br>
+              事業フェーズに合った形で、<br class="sp">その仕組みづくりを支援します。
             </p>
           </div>
 
           <ul class="mainproduct-tab">
-            <li data-mp-tab="mp-tab1" class="active">
+            <li data-mp-tab="mp-tab-wg" class="active">
+              <a href="#willgrow">
+                <span class="mp-tab-label">BtoB向けリード獲得・商談化支援</span>
+                <span class="mp-tab-name">ウィルグロー</span>
+              </a>
+            </li>
+            <li data-mp-tab="mp-tab1">
               <a href="#willsupport">
-                <span class="mp-tab-label">BtoB企業向け</span>
+                <span class="mp-tab-label">BtoB向けサブスクHP</span>
                 <span class="mp-tab-name">ウィルサポ</span>
               </a>
             </li>
@@ -311,8 +317,40 @@
 
           <div class="mainproduct-wrapper animation-target to-up">
 
-            <div id="mp-tab1" class="mainproduct-item is-active">
-              <div class="mp-target-label">[BtoB企業向け]</div>
+            <div id="mp-tab-wg" class="mainproduct-item is-active">
+              <p class="mp-catch">
+                リード獲得から商談化まで、<br>
+                BtoB企業のマーケティングの仕組みを作ります。
+              </p>
+              <div class="mp-desc mp-desc--wg">
+                <div class="mp-desc-grid">
+                  <div class="mp-desc-content">
+                    <p class="mp-type">BtoBマーケティング伴走支援</p>
+                    <h3 class="mp-name mp-name--wg">ウィルグロー</h3>
+                    <ul class="mp-badges">
+                      <li>リード<br>獲得</li>
+                      <li>見込み客<br>育成</li>
+                      <li>商談<br>創出</li>
+                    </ul>
+                  </div>
+                  <div class="mp-desc-visual">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-grow-assets/images/fv-img.png" alt="">
+                  </div>
+                </div>
+                <p class="mp-description">
+                  御社のマーケティング部門として、問い合わせの獲得から育成・商談化までを仕組み化。<br>
+                  安定した見込み顧客の創出を実現します。
+                </p>
+              </div>
+              <div class="mp-btn">
+                <a href="<?php echo esc_url( home_url('/willgrow/') ); ?>" class="mp-btn-link" target="_blank" rel="noopener noreferrer">
+                  <span class="mp-btn-text"><span class="pc">ウィルグローの</span>サービス詳細を見る</span>
+                  <span class="mp-btn-arrow">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div id="mp-tab1" class="mainproduct-item">
               <p class="mp-catch">
                 あなたのWebサイトは、<br>
                 競合と比較されたときに勝てていますか？
@@ -348,7 +386,6 @@
             </div>
 
             <div id="mp-tab2" class="mainproduct-item">
-              <div class="mp-target-label">[EC事業者向け]</div>
               <p class="mp-catch">スモールスタートで、本気のECを。</p>
               <div class="mp-desc mp-desc--ec">
                 <div class="mp-desc-grid">
