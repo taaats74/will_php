@@ -22,7 +22,7 @@
           </header>
           <div class="bg-img">
             <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" alt=""> -->
-            <video autoplay muted loop playsinline preload="metadata" poster="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie.mp4" ></video>
+            <video autoplay muted loop playsinline preload="metadata" poster="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" id="myVideo-pc" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie.mp4" ></video>
           </div>
           <div class="logo-wrapper">
             <div class="logo-text">
@@ -31,8 +31,9 @@
             </div>
             <h1 class="logo-img">
               <a href="<?php echo home_url( '/' ); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル 福岡 久留米 八女 北九州 サブスクホームページ 格安ホームページ ウェブ集客 ウェブ制作 ウェブマーケティング ホームページ制作">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル">
               </a>
+              <span class="visually-hidden">BtoB企業の営業基盤をWebから設計する福岡のマーケティング支援会社</span>
             </h1>
           </div>
           <div class="fv-message-wrapper">
@@ -67,7 +68,7 @@
                 <p class="text2">Sales Foundation Design</p>
               </div>
               <a href="<?php echo home_url( '/' ); ?>" class="logo-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル 福岡 ウェブ制作 ウェブマーケティング ホームページ制作">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル">
               </a>
             </div>
             <div class="fv-message-wrapper">
@@ -138,7 +139,7 @@
             </p>
           </div>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.webp" alt="management issue" class="text-image rellax-up">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-management-issue.webp" alt="management issue" class="text-image rellax-up">
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.webp" alt="合同会社ウィル" class="logo-image rellax-up">
       </div>
     </section>

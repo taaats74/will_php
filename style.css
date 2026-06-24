@@ -11,10 +11,6 @@ Version: 1.0 ver
   color: black;
 }
 
-.grecaptcha-badge {
-  visibility: hidden;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -143,6 +139,19 @@ img {
   .pc {
     display: none;
   }
+}
+
+/* スクリーンリーダー/クローラ向けの視覚非表示テキスト */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 #splash {
   position: fixed;

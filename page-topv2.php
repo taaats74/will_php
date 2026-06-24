@@ -115,7 +115,7 @@
 
           </div>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-Management Issue.webp" alt="management issue" class="text-image rellax-up">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-management-issue.webp" alt="management issue" class="text-image rellax-up">
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.webp" alt="合同会社ウィル" class="logo-image rellax-up">
       </div>
     </section>
