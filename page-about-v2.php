@@ -299,7 +299,7 @@ get_template_part( 'template-parts/page-hero', null, [
         </div>
         <div class="company-row">
           <dt>業務内容</dt>
-          <dd>WEBサイト制作・WEBマーケティング支援・SNS運用サポート・広告運用代行</dd>
+          <dd>BtoB企業向けWebマーケティング支援（営業基盤の設計・構築）／Webサイト制作・運用／MA構築・運用支援／コンテンツSEO構築・運用支援／Instagram構築・運用支援／グラフィック制作</dd>
         </div>
       </dl>
 

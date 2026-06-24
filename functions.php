@@ -396,7 +396,7 @@ EOS;
 add_filter( 'slim_seo_schema_organization', function( $organization ) {
     $organization['url']         = 'https://will-corp.co.jp/';
     $organization['logo']        = 'https://will-corp.co.jp/wp-content/uploads/2025/08/logo_black.png';
-    $organization['description'] = 'BtoB企業の営業基盤をWebから設計する、福岡のWebマーケティング支援会社。Webサイト制作・MA・コンテンツSEO・SNS運用・グラフィック制作を統合的に提供。';
+    $organization['description'] = 'BtoB企業の営業基盤をWebから設計する、福岡のWebマーケティング支援会社。Webサイト制作・運用、MA構築・運用支援、コンテンツSEO構築・運用支援、Instagram構築・運用支援、グラフィック制作を統合的に提供。';
     $organization['address']     = [
         '@type'           => 'PostalAddress',
         'streetAddress'   => '博多駅前1-23-2 ParkFront博多駅前1丁目5F-B',
