@@ -5,6 +5,45 @@
   */
 ?>
 
+<?php
+/* ============================================================
+   料金改定 自動切替（/price/ ウィルサポ サブスクHP のみ）
+   - 本文はDB（ページID21）にあるため the_content フィルタで変換
+   - 2026-08-01 00:00 JST 以降：スタート削除・30,000/40,000/50,000・初期費用100,000円・税抜注記
+   - 他サービス（集客サポート等）や 9,800円〜（別サービス）は変更しない
+   ============================================================ */
+if ( ! function_exists( 'will_price_revised_content' ) ) {
+  function will_price_revised_content( $content ) {
+    if ( get_the_ID() !== 21 ) { return $content; }
+    // プレビュー用：?ws_preview=after で改定後、?ws_preview=before で現行を強制表示（確認用・後で削除可）
+    $ws_revised = ( current_time( 'timestamp' ) >= strtotime( '2026-08-01 00:00:00' ) );
+    if ( isset( $_GET['ws_preview'] ) ) { $ws_revised = ( $_GET['ws_preview'] === 'after' ); }
+    if ( ! $ws_revised ) { return $content; }
+    $pattern = '/(<h2 class="price-header"><span>ウ<\/span>ィルサポ サブスクHP<\/h2>.*?)(<div class="service double">)/s';
+    return preg_replace_callback( $pattern, function ( $m ) {
+      $block = $m[1];
+      // スタートプラン（box-wrapper web の最初の box）を削除
+      $block = preg_replace( '/(<div class="box-wrapper web">\s*)<div class="box">.*?(?=<div class="box">)/s', '$1', $block, 1 );
+      // 残プラン価格を改定（「円/月」はウィルサポ節に固有）
+      $block = str_replace( '<span>19,800</span>円/月', '<span>30,000</span>円/月', $block );
+      $block = str_replace( '<span>29,800</span>円/月', '<span>40,000</span>円/月', $block );
+      $block = str_replace( '<span>39,800</span>円/月', '<span>50,000</span>円/月', $block );
+      // 番号 02→01, 03→02, 04→03
+      $block = preg_replace( '/<p>02<\/p>/', '<p>01</p>', $block, 1 );
+      $block = preg_replace( '/<p>03<\/p>/', '<p>02</p>', $block, 1 );
+      $block = preg_replace( '/<p>04<\/p>/', '<p>03</p>', $block, 1 );
+      // 初期費用・税抜注記を「費用例」直後に挿入
+      $note = '<p class="ex">費用例</p>'
+            . "\n" . '            <p class="price-initial">初期費用 <span>100,000</span>円（税抜）</p>'
+            . "\n" . '            <p class="price-taxnote">※表示価格はすべて税抜です。別途、消費税を申し受けます。</p>';
+      $block = preg_replace( '/<p class="ex">費用例<\/p>/', $note, $block, 1 );
+      return $block . $m[2];
+    }, $content );
+  }
+  add_filter( 'the_content', 'will_price_revised_content', 9 );
+}
+?>
+
 <?php get_header(); ?>
 
 <?php
@@ -25,387 +64,5 @@ get_template_part( 'template-parts/page-hero', null, [
   endif;
   ?>
 
-  <!-- <section class="page-price-contact">
-    <div class="container">
-      <div class="wrapper">
-        <p class="content">お客様のニーズに合わせ、柔軟に対応するために様々なプランをご用意しております。ウェブサイト制作に関するご質問やお見積もりのご依頼、ウェブ戦略に関する相談など、お客様のさまざまなニーズに対応いたします。専門スタッフがお客様のご要望を丁寧にお伺いし、最適なソリューションを提案いたします。お気軽にお問い合わせください。</p>
-        <div class="btn">
-          <a href="[contact]">お問い合わせはこちら</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="service-price">
-    <div class="container">
-      <div class="wrapper">
-        <div class="service-wrapper">
-          <div class="service">
-            <h2 class="price-header"><span>ウ</span>ィルサポ サブスクHP</h2>
-            <div class="border"></div>
-            <p class="ex">費用例</p>
-            <div class="box-wrapper web">
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>01</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">スタートプラン</h3>
-                  </div>
-                </div>
-                <div class="desc">
-                  <ul>
-                    <li>
-                      <p class="li-header">ページ数 :</p>
-                      <p class="li-desc">1ページ</p>
-                    </li>
-                    <li>
-                      <p class="li-header">デザイン :</p>
-                      <p class="li-desc">フルオーダー</p>
-                    </li>
-                    <li>
-                      <p class="li-header">CMS :</p>
-                      <p class="li-desc">WordPress</p>
-                    </li>
-                    <li>
-                      <p class="li-header">工期 :</p>
-                      <p class="li-desc">1ヶ月程度</p>
-                    </li>
-                    <li>
-                      <p class="li-header">ブログ :</p>
-                      <p class="li-desc">なし</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="price">
-                  <p><span>9,800</span>円/月</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>02</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">シンプルプラン</h3>
-                  </div>
-                </div>
-                <div class="desc">
-                  <ul>
-                    <li>
-                      <p class="li-header">ページ数 :</p>
-                      <p class="li-desc">〜6ページ</p>
-                    </li>
-                    <li>
-                      <p class="li-header">デザイン :</p>
-                      <p class="li-desc">フルオーダー</p>
-                    </li>
-                    <li>
-                      <p class="li-header">CMS :</p>
-                      <p class="li-desc">WordPress</p>
-                    </li>
-                    <li>
-                      <p class="li-header">工期 :</p>
-                      <p class="li-desc">2ヶ月程度</p>
-                    </li>
-                    <li>
-                      <p class="li-header">ブログ :</p>
-                      <p class="li-desc">なし</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="price">
-                  <p><span>19,800</span>円/月</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>03</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">スタンダードプラン</h3>
-                  </div>
-                </div>
-                <div class="desc">
-                  <ul>
-                    <li>
-                      <p class="li-header">ページ数 :</p>
-                      <p class="li-desc">〜12ページ</p>
-                    </li>
-                    <li>
-                      <p class="li-header">デザイン :</p>
-                      <p class="li-desc">フルオーダー</p>
-                    </li>
-                    <li>
-                      <p class="li-header">CMS :</p>
-                      <p class="li-desc">WordPress</p>
-                    </li>
-                    <li>
-                      <p class="li-header">工期 :</p>
-                      <p class="li-desc">2.5ヶ月程度</p>
-                    </li>
-                    <li>
-                      <p class="li-header">ブログ :</p>
-                      <p class="li-desc">あり</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="price">
-                  <p><span>29,800</span>円/月</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>04</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">プレミアムプラン</h3>
-                  </div>
-                </div>
-                <div class="desc">
-                  <ul>
-                    <li>
-                      <p class="li-header">ページ数 :</p>
-                      <p class="li-desc">13ページ〜</p>
-                    </li>
-                    <li>
-                      <p class="li-header">デザイン :</p>
-                      <p class="li-desc">フルオーダー</p>
-                    </li>
-                    <li>
-                      <p class="li-header">CMS :</p>
-                      <p class="li-desc">WordPress</p>
-                    </li>
-                    <li>
-                      <p class="li-header">工期 :</p>
-                      <p class="li-desc">3ヶ月以上</p>
-                    </li>
-                    <li>
-                      <p class="li-header">ブログ :</p>
-                      <p class="li-desc">あり</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="price">
-                  <p><span>39,800</span>円/月</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="service double">
-            <h2 class="price-header"><span>W</span>ebマーケティング支援</h2>
-            <div class="border"></div>
-            <p class="ex">費用例</p>
-            <div class="box-wrapper">
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>01</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">集客サポートプラン</h3>
-                  </div>
-                </div>
-                <div class="desc">
-                  <p class="intro">zoomで月1回/1時間でサービスや商品の集客に関するご相談から、SNS、MEO、ブログ運用などのご相談をお受けいたします。</p>
-                </div>
-                <div class="price">
-                  <p><span>9,800</span>円〜 / 月</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>02</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">集客設計プラン</h3>
-                  </div>
-                </div>
-                <div class="desc">
-                  <p class="intro">zoomで1回/2時間でマーケティングの差別化戦略や集客の動線設計を一緒に構築します。マーケティングの考え方なども合わせてお伝えするプランです。</p>
-                </div>
-                <div class="price">
-                  <p><span>30,000</span>円〜 / 回</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="service sns-support">
-            <h2 class="price-header"><span>S</span>NS運用サポート</h2>
-            <div class="border"></div>
-            <p class="ex">費用例</p>
-            <div class="box-wrapper">
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>01</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">シンプルプラン</h3>
-                  </div>
-                </div>
-                <p class="recommendation">社内での内製化を目指す企業様向け</p>
-                <div class="desc">
-                  <ul>
-                    <li>
-                      <p class="li-desc">・コンセプト設計</p>
-                    </li>
-                    <li>
-                      <p class="li-desc">・競合リサーチ</p>
-                    </li>
-                    <li>
-                      <p class="li-desc">・投稿ネタだし</p>
-                    </li>
-                    <li>
-                      <p class="li-desc">・ノウハウ講習</p>
-                    </li>
-                    <div class="li-desc etc">etc.</div>
-                  </ul>
-                </div>
-                <div class="price">
-                  <p><span>15</span>万円〜(税別)</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>02</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">スタンダードプラン</h3>
-                  </div>
-                </div>
-                <p class="recommendation">一番大事な土台作りをサポート</p>
-                <div class="desc">
-                  <ul>
-                    <li>
-                      <p class="li-desc">・シンプルプランの内容</p>
-                    </li>
-                    <li>
-                      <p class="li-desc">・デザインテンプレ作成</p>
-                    </li>
-                    <li>
-                      <p class="li-desc">・ハイライトテンプレ作成</p>
-                    </li>
-                    <li>
-                      <p class="li-desc">・1投稿作成</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="price">
-                  <p><span>20</span>万円〜(税別)</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>03</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">プレミアムプラン</h3>
-                  </div>
-                </div>
-                <p class="recommendation">運用に早くのせたい企業様向け</p>
-                <div class="desc">
-                  <ul>
-                    <li>
-                      <p class="li-desc">・スタンダードプランの内容</p>
-                    </li>
-                    <li>
-                      <p class="li-desc">・12投稿作成</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="price">
-                  <p><span>30</span>万円〜(税別)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="service graphic">
-            <h2 class="price-header"><span>ロ</span>ゴ・チラシ作成</h2>
-            <div class="border"></div>
-            <p class="ex">費用例</p>
-            <div class="box-wrapper">
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>01</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">バナー作成</h3>
-                  </div>
-                </div>
-                <p class="recommendation">WebサイトやSNSに掲載するバナーを作成します。</p>
-                <div class="price">
-                  <p><span>1</span>万円〜(税別)</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>02</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">チラシ作成</h3>
-                  </div>
-                </div>
-                <p class="recommendation">ポスティング広告や展示会などで配る両面印刷のカラーチラシを作成します。</p>
-                <div class="price">
-                  <p><span>8</span>万円〜(税別)</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>03</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">名刺作成</h3>
-                  </div>
-                </div>
-                <p class="recommendation">オリジナルデザインの名刺を作成します。</p>
-                <div class="price">
-                  <p><span>8</span>万円〜(税別)</p>
-                </div>
-              </div>
-              <div class="box">
-                <div class="title-wrapper">
-                  <div class="num">
-                    <p>04</p>
-                  </div>
-                  <div class="title">
-                    <h3 class="plan">ロゴ作成</h3>
-                  </div>
-                </div>
-                <p class="recommendation">オリジナルデザインのロゴを作成します。</p>
-                <div class="price">
-                  <p><span>10</span>万円〜(税別)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-top-contact price-contact">
-    <div class="container">
-      <div class="wrapper">
-        <h2 class="section-header"><span class="green">c</span>ontact</h2>
-        <p class="sub-title">お問い合わせ</p>
-        <div class="border"></div>
-        <p class="content">当社はウェブサイト制作に関するご質問やお見積もりのご依頼、ウェブ戦略に関する相談など、お客様のさまざまなニーズに対応いたします。専門スタッフがお客様のご要望を丁寧にお伺いし、最適なソリューションを提案いたします。お気軽にお問い合わせください。</p>
-        <div class="btn">
-          <a href="[contact]">お問い合わせはこちら</a>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
 <?php get_footer(); ?>

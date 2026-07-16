@@ -3,6 +3,18 @@
   Template Name: ウィルサポv2 LP
   Tempkate Post Type: page
 */
+
+/* ============================================================
+   料金改定 自動切替フラグ（2026-08-01 00:00 JST 以降で新価格）
+   - true  : 新価格（税抜・初期費用100,000円・スタートプラン廃止・0円訴求なし）
+   - false : 現行価格（〜2026-07-31・税抜・初期費用0円）
+   ※表示価格はすべて税抜（税別）で統一
+   ※境界日時を変えたい場合は下記 strtotime の日付を変更
+   ============================================================ */
+$ws_revised   = ( current_time( 'timestamp' ) >= strtotime( '2026-08-01 00:00:00' ) );
+// プレビュー用：?ws_preview=after で改定後、?ws_preview=before で現行を強制表示（確認用・後で削除可）
+if ( isset( $_GET['ws_preview'] ) ) { $ws_revised = ( $_GET['ws_preview'] === 'after' ); }
+$ws_tax_label = '円（税抜）';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -27,10 +39,16 @@
     "areaServed": "JP",
     "description": "BtoB企業のための月額制ホームページ制作・運用サービス",
     "offers": [
+<?php if ( ! $ws_revised ) : ?>
       {"@type": "Offer", "name": "スタート", "price": "9800", "priceCurrency": "JPY"},
       {"@type": "Offer", "name": "シンプル", "price": "19800", "priceCurrency": "JPY"},
       {"@type": "Offer", "name": "スタンダード", "price": "29800", "priceCurrency": "JPY"},
       {"@type": "Offer", "name": "プレミアム", "price": "39800", "priceCurrency": "JPY"}
+<?php else : ?>
+      {"@type": "Offer", "name": "シンプル", "price": "30000", "priceCurrency": "JPY"},
+      {"@type": "Offer", "name": "スタンダード", "price": "40000", "priceCurrency": "JPY"},
+      {"@type": "Offer", "name": "プレミアム", "price": "50000", "priceCurrency": "JPY"}
+<?php endif; ?>
     ]
   }
   </script>
@@ -43,11 +61,19 @@
     "mainEntity": [
       {
         "@type": "Question",
+<?php if ( ! $ws_revised ) : ?>
         "name": "初期費用は本当に0円ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "はい、本当に0円です。制作開始時にまとまった費用は発生しません。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。"
         }
+<?php else : ?>
+        "name": "初期費用はいくらですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "初期費用は100,000円（税抜）です。構成設計・オリジナルデザイン・WordPress構築などの初期構築費用にあたります。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。"
+        }
+<?php endif; ?>
       },
       {
         "@type": "Question",
@@ -268,7 +294,7 @@
     <section class="wsv2-fv" id="top">
       <div class="container">
         <div class="wrapper">
-          <p class="wsv2-fv__label"><span class="wsv2-fv__label-text">あなたの<span class="wsv2-fv__label-em">Webサイト</span>は<br class="wsv2-fv__label-br"><span class="wsv2-fv__label-em">競合</span>と<span class="wsv2-fv__label-em">比較</span>されたときに<br class="wsv2-fv__label-br-sp"><span class="wsv2-fv__label-em">勝てて</span>いますか?</span></p>
+          <p class="wsv2-fv__label"><span class="wsv2-fv__label-text">あなたの<span class="wsv2-fv__label-em">Webサイト</span>、<br class="wsv2-fv__label-br"><span class="wsv2-fv__label-em">お問い合わせ</span>は来ていますか?</span></p>
           <div class="wsv2-fv__grid">
 
             <!-- 左カラム：テキストコンテンツ -->
@@ -301,9 +327,8 @@
     <!-- ============================================
          3. サービスコンセプト
          ============================================ -->
-    <section class="wsv2-concept" id="concept">
+    <!-- <section class="wsv2-concept" id="concept">
 
-      <!-- Ticker Banner -->
       <div class="wsv2-concept__ticker" aria-hidden="true">
         <div class="wsv2-concept__ticker-track">
           <span class="wsv2-concept__ticker-item">A WEBSITE IS NOT A TOOL TO ATTRACT — IT'S A TOOL TO BE SELECTED.</span>
@@ -330,7 +355,7 @@
 
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ============================================
          4. 課題共感
@@ -342,7 +367,7 @@
           <div class="wsv2-issue__section-head">
             <p class="wsv2-issue__eyebrow">ISSUE</p>
             <h2 class="wsv2-issue__title wsv2-fade">ウィルサポが解決する<br>Webサイトの5つの課題</h2>
-            <p class="wsv2-issue__lead">比較検討フェーズで選ばれないWebサイトには共通する特徴があり、<br>一つでも当てはまる場合は、ウィルサポがお役に立てる可能性があります。</p>
+            <!-- <p class="wsv2-issue__lead">比較検討フェーズで選ばれないWebサイトには共通する特徴があり、<br>一つでも当てはまる場合は、ウィルサポがお役に立てる可能性があります。</p> -->
           </div>
 
           <ul class="wsv2-issue__list">
@@ -407,7 +432,7 @@
             <div class="wsv2-feature__section-head">
               <p class="wsv2-feature__eyebrow">FEATURE</p>
               <h2 class="wsv2-feature__title wsv2-fade">ウィルサポが選ばれる<br>6つの理由</h2>
-              <p class="wsv2-feature__lead">BtoB企業の比較検討フェーズで「選ばれるWebサイト」をつくるために、ウィルサポは戦略設計から運用まで、6つの要素を一貫したサービスとして提供しています。</p>
+              <!-- <p class="wsv2-feature__lead">BtoB企業の比較検討フェーズで「選ばれるWebサイト」をつくるために、ウィルサポは戦略設計から運用まで、6つの要素を一貫したサービスとして提供しています。</p> -->
             </div>
           </div>
 
@@ -458,8 +483,13 @@
             <!-- カード06：料金 -->
             <li class="wsv2-feature__card">
               <p class="wsv2-feature__card-num">06</p>
+<?php if ( ! $ws_revised ) : ?>
               <h3 class="wsv2-feature__card-title">初期費用0円・縛りなしの<br>月額サブスク</h3>
               <p class="wsv2-feature__card-text">初期費用をまとめて回収するモデルではなく、長期継続を前提とした月額設計。契約期間の縛りもないため、比較検討の心理的ハードルを下げ、必要な期間だけご活用いただけます。</p>
+<?php else : ?>
+              <h3 class="wsv2-feature__card-title">契約期間の縛りなしの<br>月額サブスク</h3>
+              <p class="wsv2-feature__card-text">大きな一括制作費をまとめて支払うモデルではなく、長期継続を前提とした月額設計。契約期間の縛りもないため、比較検討の心理的ハードルを下げ、必要な期間だけご活用いただけます。</p>
+<?php endif; ?>
               <p class="wsv2-feature__card-benefit">→ 大きな経営判断ではなく通常の月次経費として、Web投資のハードルが下がります</p>
             </li>
 
@@ -485,33 +515,27 @@
           <ul class="wsv2-who-for__list">
 
             <li class="wsv2-who-for__item">
-              <h3 class="wsv2-who-for__item-title">Webサイトを、集客施策の受け皿として<br>機能させたい</h3>
-              <p class="wsv2-who-for__item-text">SEO・広告・SNS・営業活動などで獲得したアクセスが、サイト上で成果に結びついていない企業様。流入の受け皿となる構成・導線を整備し、見込み客の意思決定を後押しする構造をつくります。</p>
+              <h3 class="wsv2-who-for__item-title">Webサイトを、<span class="wsv2-who-for__mark">集客施策の受け皿</span>として<br>機能させたい</h3>
             </li>
 
             <li class="wsv2-who-for__item">
-              <h3 class="wsv2-who-for__item-title">展示会・紹介で接点を持った見込み客に<br>「選ばれる」状態を作りたい</h3>
-              <p class="wsv2-who-for__item-text">展示会・紹介で接点を持った見込み客が、その後自社サイトを訪問したときに比較検討で選ばれる状態を作りたい企業様。初回訪問時の信頼形成と、継続訪問での理解促進を両立する設計を行います。</p>
+              <h3 class="wsv2-who-for__item-title">展示会・紹介で接点を持った見込み客に<br><span class="wsv2-who-for__mark">「選ばれる」状態</span>を作りたい</h3>
             </li>
 
             <li class="wsv2-who-for__item">
-              <h3 class="wsv2-who-for__item-title">既存サイトが「会社案内」止まりで<br>比較検討材料になっていない</h3>
-              <p class="wsv2-who-for__item-text">サイトはあるものの、見込み客が比較検討する際に必要な情報（強み・実績・事例・プロセス）が不足している企業様。BtoB特有の購買プロセスを踏まえ、比較検討フェーズで差がつく構成に再設計します。</p>
+              <h3 class="wsv2-who-for__item-title">既存サイトが「会社案内」止まりで<br><span class="wsv2-who-for__mark">比較検討材料</span>になっていない</h3>
             </li>
 
             <li class="wsv2-who-for__item">
-              <h3 class="wsv2-who-for__item-title">リニューアルを検討している</h3>
-              <p class="wsv2-who-for__item-text">既存サイトを刷新したいが、何から手をつけるべきか判断がつかない企業様。現状サイトの課題分析から始め、事業フェーズに合わせた最適なリニューアル計画をご提案します。</p>
+              <h3 class="wsv2-who-for__item-title">Webサイトから<span class="wsv2-who-for__mark">お問い合わせやリードを獲得</span>していきたい</h3>
             </li>
 
             <li class="wsv2-who-for__item">
-              <h3 class="wsv2-who-for__item-title">営業活動と連動したWebサイトに<br>作り直したい</h3>
-              <p class="wsv2-who-for__item-text">営業現場で聞かれる質問・不安が、サイト上で解消されていない企業様。営業プロセスと連動したコンテンツ設計により、商談前の事前理解を促進し、商談の質を向上させます。</p>
+              <h3 class="wsv2-who-for__item-title"><span class="wsv2-who-for__mark">営業活動と連動</span>したWebサイトに<br>作り直したい</h3>
             </li>
 
             <li class="wsv2-who-for__item">
-              <h3 class="wsv2-who-for__item-title">社内にWeb専任担当がおらず<br>運用まで任せたい</h3>
-              <p class="wsv2-who-for__item-text">Web担当者が不在、または他業務と兼任で手が回らない企業様。戦略設計・制作・公開後の運用改善までを一貫して伴走し、社内リソースを圧迫せずにWeb活用を進めます。</p>
+              <h3 class="wsv2-who-for__item-title">社内にWeb専任担当がおらず<br><span class="wsv2-who-for__mark">運用まで任せたい</span></h3>
             </li>
 
           </ul>
@@ -530,7 +554,6 @@
           <div class="wsv2-compare__section-head">
             <p class="wsv2-compare__eyebrow">COMPARE</p>
             <h2 class="wsv2-compare__title wsv2-fade">サブスク型・スポット型<br class="wsv2-compare__title-br-sp">との違い</h2>
-            <p class="wsv2-compare__lead">ホームページ制作には、大きく分けて「スポット型」と「サブスク型」があります。それぞれの特徴を整理した上で、比較表をご確認ください。</p>
           </div>
 
           <div class="wsv2-compare__types">
@@ -586,7 +609,7 @@
                   <th scope="row">初期費用</th>
                   <td data-label="サブスク型"><span class="wsv2-compare__icon wsv2-compare__icon--ok" aria-hidden="true">◯</span><span class="wsv2-compare__cell-text">0円〜少額</span></td>
                   <td data-label="スポット型（従来）"><span class="wsv2-compare__icon wsv2-compare__icon--ng" aria-hidden="true">×</span><strong class="wsv2-compare__price">50万〜300万円</strong></td>
-                  <td data-label="ウィルサポ" class="wsv2-compare__td--wsv2"><span class="wsv2-compare__icon wsv2-compare__icon--ok" aria-hidden="true">◯</span><strong class="wsv2-compare__price">0円</strong></td>
+                  <td data-label="ウィルサポ" class="wsv2-compare__td--wsv2"><span class="wsv2-compare__icon wsv2-compare__icon--ok" aria-hidden="true">◯</span><strong class="wsv2-compare__price"><?php echo $ws_revised ? '100,000円' : '0円'; ?></strong></td>
                 </tr>
               </tbody>
             </table>
@@ -605,8 +628,8 @@
 
         <div class="wsv2-cta__section-head">
           <span class="wsv2-cta__eyebrow">CONTACT</span>
-          <h2 class="wsv2-cta__title wsv2-fade">「比較検討で選ばれるWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
-          <p class="wsv2-cta__lead">初期費用0円・契約期間の縛りなし。<br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
+          <h2 class="wsv2-cta__title wsv2-fade">「お問い合わせ獲得に強いWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
+          <p class="wsv2-cta__lead"><?php echo $ws_revised ? '契約期間の縛りなし。' : '初期費用0円・契約期間の縛りなし。'; ?><br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
         </div>
 
         <div class="wsv2-cta__grid wsv2-fade is-visible">
@@ -647,7 +670,6 @@
           <div class="wsv2-works__section-head">
             <p class="wsv2-works__eyebrow">WORKS</p>
             <h2 class="wsv2-works__title wsv2-fade">制作実績</h2>
-            <p class="wsv2-works__lead">BtoB企業に特化し、製造・IT・士業・不動産など幅広い業種のホームページ制作を伴走支援してきました。<br>業種は異なっても、「比較検討で選ばれる構造」という設計思想は共通しています。業種ごとの設計意図とあわせて実績をご覧ください。</p>
           </div>
 
           <ul class="wsv2-works__list">
@@ -788,19 +810,20 @@
           <div class="wsv2-pricing__section-head">
             <span class="wsv2-pricing__eyebrow">PRICING</span>
             <h2 class="wsv2-pricing__title wsv2-fade">料金プラン</h2>
-            <p class="wsv2-pricing__lead">用途に合わせて4つのプランをご用意しています。必要な情報を整理し、比較しやすい形でご確認いただけます。</p>
+            <p class="wsv2-pricing__lead"><?php echo $ws_revised ? '用途に合わせて3つのプランをご用意しています。' : '用途に合わせて4つのプランをご用意しています。'; ?>必要な情報を整理し、比較しやすい形でご確認いただけます。</p>
           </div>
 
-          <div class="wsv2-pricing__cards wsv2-fade">
+          <div class="wsv2-pricing__cards wsv2-fade<?php echo $ws_revised ? ' wsv2-pricing__cards--revised' : ''; ?>">
 
-            <!-- プラン1：スタート -->
+<?php if ( ! $ws_revised ) : ?>
+            <!-- プラン1：スタート（〜2026-07-31のみ） -->
             <div class="wsv2-pricing__card">
               <p class="wsv2-pricing__plan-name">スタート</p>
               <p class="wsv2-pricing__subcopy">名刺代わりのサイトを整えたい方に。シンプルな1ページ構成でまず始めたい</p>
               <div class="wsv2-pricing__price">
                 <span class="wsv2-pricing__price-label">月額</span>
                 <span class="wsv2-pricing__price-amount">9,800</span>
-                <span class="wsv2-pricing__price-unit">円（税込）</span>
+                <span class="wsv2-pricing__price-unit">円（税抜）</span>
               </div>
               <ul class="wsv2-pricing__list">
                 <li class="wsv2-pricing__list-item">
@@ -821,6 +844,7 @@
                 </li>
               </ul>
             </div>
+<?php endif; // /スタートカード ?>
 
             <!-- プラン2：シンプル -->
             <div class="wsv2-pricing__card">
@@ -828,10 +852,16 @@
               <p class="wsv2-pricing__subcopy">基本情報をしっかり整えたい企業様に。複数ページで会社の魅力を伝えたい</p>
               <div class="wsv2-pricing__price">
                 <span class="wsv2-pricing__price-label">月額</span>
-                <span class="wsv2-pricing__price-amount">19,800</span>
-                <span class="wsv2-pricing__price-unit">円（税込）</span>
+                <span class="wsv2-pricing__price-amount"><?php echo $ws_revised ? '30,000' : '19,800'; ?></span>
+                <span class="wsv2-pricing__price-unit"><?php echo $ws_tax_label; ?></span>
               </div>
               <ul class="wsv2-pricing__list">
+<?php if ( $ws_revised ) : ?>
+                <li class="wsv2-pricing__list-item">
+                  <span class="wsv2-pricing__list-key">初期費用</span>
+                  <span class="wsv2-pricing__list-val">100,000円</span>
+                </li>
+<?php endif; ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">ページ数</span>
                   <span class="wsv2-pricing__list-val">〜6ページ</span>
@@ -858,10 +888,16 @@
               <p class="wsv2-pricing__subcopy">BtoB企業に最も選ばれるプランです。集客・採用に必要な情報を網羅した構成</p>
               <div class="wsv2-pricing__price">
                 <span class="wsv2-pricing__price-label">月額</span>
-                <span class="wsv2-pricing__price-amount">29,800</span>
-                <span class="wsv2-pricing__price-unit">円（税込）</span>
+                <span class="wsv2-pricing__price-amount"><?php echo $ws_revised ? '40,000' : '29,800'; ?></span>
+                <span class="wsv2-pricing__price-unit"><?php echo $ws_tax_label; ?></span>
               </div>
               <ul class="wsv2-pricing__list">
+<?php if ( $ws_revised ) : ?>
+                <li class="wsv2-pricing__list-item">
+                  <span class="wsv2-pricing__list-key">初期費用</span>
+                  <span class="wsv2-pricing__list-val">100,000円</span>
+                </li>
+<?php endif; ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">ページ数</span>
                   <span class="wsv2-pricing__list-val">〜12ページ</span>
@@ -884,16 +920,22 @@
             <!-- プラン4：プレミアム -->
             <div class="wsv2-pricing__card">
               <p class="wsv2-pricing__plan-name">プレミアム</p>
-              <p class="wsv2-pricing__subcopy">本格的なWeb基盤を整えたい企業様に。ブログ連動で継続的な情報発信を実現</p>
+              <p class="wsv2-pricing__subcopy">BtoBマーケティングを本格的に強化したい企業向け。SEO・コンテンツまで見据えた充実構成</p>
               <div class="wsv2-pricing__price">
                 <span class="wsv2-pricing__price-label">月額</span>
-                <span class="wsv2-pricing__price-amount">39,800</span>
-                <span class="wsv2-pricing__price-unit">円（税込）</span>
+                <span class="wsv2-pricing__price-amount"><?php echo $ws_revised ? '50,000' : '39,800'; ?></span>
+                <span class="wsv2-pricing__price-unit"><?php echo $ws_tax_label; ?></span>
               </div>
               <ul class="wsv2-pricing__list">
+<?php if ( $ws_revised ) : ?>
+                <li class="wsv2-pricing__list-item">
+                  <span class="wsv2-pricing__list-key">初期費用</span>
+                  <span class="wsv2-pricing__list-val">100,000円</span>
+                </li>
+<?php endif; ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">ページ数</span>
-                  <span class="wsv2-pricing__list-val">12ページ+ブログ</span>
+                  <span class="wsv2-pricing__list-val">〜18ページ</span>
                 </li>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">CMS</span>
@@ -912,6 +954,8 @@
 
           </div><!-- /.wsv2-pricing__cards -->
 
+          <p class="wsv2-pricing__tax-note">※表示価格はすべて税抜です。別途、消費税を申し受けます。</p>
+
           <!-- 月額費用に含まれるもの -->
           <div class="wsv2-pricing__includes">
             <p class="wsv2-pricing__includes-title">月額費用に含まれるもの</p>
@@ -923,51 +967,6 @@
               <li>構成や導線に関する相談・改善提案・機能追加のご相談</li>
             </ul>
           </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         11. この価格で運営できる3つの理由
-         ============================================ -->
-    <section class="wsv2-reason">
-      <div class="container">
-        <div class="wrapper">
-
-          <div class="wsv2-reason__section-head">
-            <span class="wsv2-reason__eyebrow">WHY IT IS POSSIBLE</span>
-            <h2 class="wsv2-reason__title wsv2-fade">この価格で運営できる<br class="wsv2-reason__title-br-sp">3つの理由</h2>
-            <p class="wsv2-reason__lead">「安くする」のではなく「無駄をなくす」設計です</p>
-          </div>
-
-          <ul class="wsv2-reason__list">
-
-            <li class="wsv2-reason__item">
-              <div class="wsv2-reason__num" aria-hidden="true">01</div>
-              <div class="wsv2-reason__body">
-                <h3 class="wsv2-reason__item-title">サブスクによる費用分散</h3>
-                <p class="wsv2-reason__item-text">初期費用をまとめて回収するモデルではなく、長期継続を前提とした月額設計。だから初期費用ゼロが実現できます。</p>
-              </div>
-            </li>
-
-            <li class="wsv2-reason__item">
-              <div class="wsv2-reason__num" aria-hidden="true">02</div>
-              <div class="wsv2-reason__body">
-                <h3 class="wsv2-reason__item-title">制作フローの標準化</h3>
-                <p class="wsv2-reason__item-text">成果につながる構成設計と工程最適化により、無駄な工数を削減。「安いから簡易的」ではなく「仕組みが合理的」だから可能な価格です。</p>
-              </div>
-            </li>
-
-            <li class="wsv2-reason__item">
-              <div class="wsv2-reason__num" aria-hidden="true">03</div>
-              <div class="wsv2-reason__body">
-                <h3 class="wsv2-reason__item-title">継続率95%以上の安定モデル</h3>
-                <p class="wsv2-reason__item-text">公開後も伴走する前提のサービス設計。長期関係を前提としているため、初期費用で回収する必要がありません。</p>
-              </div>
-            </li>
-
-          </ul>
 
         </div>
       </div>
@@ -992,8 +991,7 @@
               <div class="wsv2-flow__num" aria-hidden="true">1</div>
               <div class="wsv2-flow__body">
                 <h3 class="wsv2-flow__step-title">無料相談・ヒアリング</h3>
-                <p class="wsv2-flow__text">まずはオンラインでお打ち合わせを行います。「事業内容・ターゲット層・現在の課題・理想のイメージ」などをお伺いし、サイトの方向性を整理します。「何から始めればいいかわからない」状態でも問題ありません。不安点も含めて一緒に整理します。</p>
-                <p class="wsv2-flow__note">※ご相談・お見積もりは無料です。</p>
+                <p class="wsv2-flow__subtext">オンラインで事業内容や課題をお伺いします。</p>
               </div>
             </li>
 
@@ -1001,8 +999,7 @@
               <div class="wsv2-flow__num" aria-hidden="true">2</div>
               <div class="wsv2-flow__body">
                 <h3 class="wsv2-flow__step-title">キックオフ・ご契約</h3>
-                <p class="wsv2-flow__text">正式にご依頼いただいた後、キックオフミーティングを実施します。「制作スケジュールの共有・必要素材の確認・全体工程の説明」ここからプロジェクトがスタートします。</p>
-                <p class="wsv2-flow__note">※キックオフ後に月額プランのご契約・お支払い手続きを行います。<br>※初期費用は発生しません。<br>※契約期間の縛りもありません。</p>
+                <p class="wsv2-flow__subtext">制作スケジュールと全体工程を共有します。</p>
               </div>
             </li>
 
@@ -1010,8 +1007,7 @@
               <div class="wsv2-flow__num" aria-hidden="true">3</div>
               <div class="wsv2-flow__body">
                 <h3 class="wsv2-flow__step-title">構成案のご提案</h3>
-                <p class="wsv2-flow__text">ヒアリング内容をもとに、「サイト全体のページ構成・導線の設計・問い合わせまでの流れ」を設計します。強みが伝わる構成と、ユーザーが回遊しやすい導線を両立させます。内容確定後、デザイン工程へ進みます。</p>
-                <p class="wsv2-flow__note">※このタイミングで、テキスト作成や、画像素材の準備などを行っていただきます。ご要望に応じて、別料金が発生しますが、弊社でテキスト作成などの代行も可能です。</p>
+                <p class="wsv2-flow__subtext">ページ構成と問い合わせまでの導線を設計します。</p>
               </div>
             </li>
 
@@ -1019,7 +1015,7 @@
               <div class="wsv2-flow__num" aria-hidden="true">4</div>
               <div class="wsv2-flow__body">
                 <h3 class="wsv2-flow__step-title">デザイン案のご提案</h3>
-                <p class="wsv2-flow__text">事業内容に合わせたオリジナルデザインをご提案します。テンプレートに縛られず、世界観やターゲットに合った設計を行います。確認・修正を経て、デザイン確定後に構築へ進みます。</p>
+                <p class="wsv2-flow__subtext">事業に合わせたオリジナルデザインをご提案します。</p>
               </div>
             </li>
 
@@ -1027,7 +1023,7 @@
               <div class="wsv2-flow__num" aria-hidden="true">5</div>
               <div class="wsv2-flow__body">
                 <h3 class="wsv2-flow__step-title">ウェブサイト構築</h3>
-                <p class="wsv2-flow__text">確定した構成・デザインをもとにサイトを構築します。「ワードプレスの構築・問い合わせフォーム設定・各種機能設定・スマートフォン最適化」専門的な設定はすべて対応します。</p>
+                <p class="wsv2-flow__subtext">WordPress構築・フォーム・スマホ最適化まで対応します。</p>
               </div>
             </li>
 
@@ -1035,7 +1031,7 @@
               <div class="wsv2-flow__num" aria-hidden="true">6</div>
               <div class="wsv2-flow__body">
                 <h3 class="wsv2-flow__step-title">最終確認・公開</h3>
-                <p class="wsv2-flow__text">最終チェック後、問題がなければ公開します。ドメイン設定・サーバー管理・動作確認まで対応します。通常、約2ヶ月〜3ヶ月で公開可能です。ここがスタート地点です。</p>
+                <p class="wsv2-flow__subtext">動作確認のうえ公開します。約2〜3ヶ月が目安です。</p>
               </div>
             </li>
 
@@ -1043,7 +1039,7 @@
               <div class="wsv2-flow__num" aria-hidden="true">7</div>
               <div class="wsv2-flow__body">
                 <h3 class="wsv2-flow__step-title">公開後の運用サポート</h3>
-                <p class="wsv2-flow__text">公開して終わりではありません。月額内で以下をサポートします。「サーバー・ドメイン管理・セキュリティ対応・月2回までの更新作業や軽微な修正対応」専任担当がいなくても、無理なく運用できる体制を整えています。</p>
+                <p class="wsv2-flow__subtext">更新・保守・軽微な修正まで月額内でサポートします。</p>
               </div>
             </li>
 
@@ -1068,10 +1064,17 @@
           <div class="wsv2-faq__list wsv2-fade">
 
             <details class="wsv2-faq__item">
+<?php if ( ! $ws_revised ) : ?>
               <summary class="wsv2-faq__question">初期費用は本当に0円ですか？</summary>
               <div class="wsv2-faq__answer">
                 <p>はい、本当に0円です。制作開始時にまとまった費用は発生しません。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。</p>
               </div>
+<?php else : ?>
+              <summary class="wsv2-faq__question">初期費用はいくらですか？</summary>
+              <div class="wsv2-faq__answer">
+                <p>初期費用は100,000円（税抜）です。構成設計・オリジナルデザイン・WordPress構築などの初期構築費用にあたります。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。</p>
+              </div>
+<?php endif; ?>
             </details>
 
             <details class="wsv2-faq__item">
@@ -1182,8 +1185,8 @@
 
         <div class="wsv2-cta__section-head">
           <span class="wsv2-cta__eyebrow">CONTACT</span>
-          <h2 class="wsv2-cta__title wsv2-fade">「比較検討で選ばれるWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
-          <p class="wsv2-cta__lead">初期費用0円・契約期間の縛りなし。<br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
+          <h2 class="wsv2-cta__title wsv2-fade">「お問い合わせ獲得に強いWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
+          <p class="wsv2-cta__lead"><?php echo $ws_revised ? '契約期間の縛りなし。' : '初期費用0円・契約期間の縛りなし。'; ?><br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
         </div>
 
         <div class="wsv2-cta__grid wsv2-fade is-visible">
@@ -1284,6 +1287,7 @@
 
   <script src="<?php echo esc_url( will_asset_url( 'will-support-v2-assets/js/script.js' ) ); ?>" defer></script>
 
+<?php if ( ! $ws_revised ) : // 予告バナーは改定日(8/1)以降は非表示 ?>
   <!-- ============================================================
        料金改定 追従バナー（sticky bottom bar）
        - このブロックだけで自己完結（HTML + CSS + バニラJS）。不要になったら丸ごと削除可。
@@ -1465,6 +1469,7 @@
     })();
   </script>
   <!-- ===================== /料金改定 追従バナー ===================== -->
+<?php endif; // /予告バナー ?>
 
   <?php wp_footer(); ?>
 </body>

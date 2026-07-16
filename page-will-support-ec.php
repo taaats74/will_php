@@ -25,11 +25,11 @@
         "@id": "https://will-corp.co.jp/#organization"
       },
       "areaServed": "JP",
-      "description": "中小企業向けの月額制ECサイト構築・運用サービス。Shopifyを活用し、初期費用0円・契約期間の縛りなしで本格的なECサイトを月額型で構築・運用できます。",
+      "description": "中小企業向けの月額制ECサイト構築・運用サービス。Shopifyを活用し、契約期間の縛りなしで本格的なECサイトを月額型で構築・運用できます。",
       "offers": [
-        {"@type": "Offer", "name": "シンプル", "price": "35000", "priceCurrency": "JPY"},
-        {"@type": "Offer", "name": "スタンダード", "price": "45000", "priceCurrency": "JPY"},
-        {"@type": "Offer", "name": "プレミアム", "price": "55000", "priceCurrency": "JPY"}
+        {"@type": "Offer", "name": "シンプル", "price": "40000", "priceCurrency": "JPY"},
+        {"@type": "Offer", "name": "スタンダード", "price": "50000", "priceCurrency": "JPY"},
+        {"@type": "Offer", "name": "プレミアム", "price": "60000", "priceCurrency": "JPY"}
       ]
     }
     </script>
@@ -42,10 +42,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "本当に初期費用はかかりませんか？",
+          "name": "初期費用はいくらですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "35,000円プラン（シンプル）および45,000円プラン（スタンダード）は初期費用はかかりません。月額のみでECサイトを構築・公開いただけます。55,000円プラン（プレミアム）は、ページ数や構成規模に応じて初期費用が発生する場合があります。詳細は事前にお見積りいたします。"
+            "text": "初期費用は各プラン300,000円です。月額費用とあわせてお支払いいただきます。ページ数や構成規模によって内容が変わる場合は、事前にお見積りのうえご提示します。"
           }
         },
         {
@@ -61,7 +61,7 @@
           "name": "支払いはいつから発生しますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "無料相談後、正式にご依頼いただきキックオフを実施した段階で月額契約が開始となります。初期費用が発生しないプランの場合は、月額のみのお支払いとなります。"
+            "text": "無料相談後、正式にご依頼いただきキックオフを実施した段階で契約が開始となります。キックオフ時に初期費用、以降は毎月の月額をお支払いいただきます。"
           }
         },
         {
@@ -122,10 +122,10 @@
         },
         {
           "@type": "Question",
-          "name": "なぜ初期費用なしで提供できるのですか？",
+          "name": "月額費用を抑えられるのはなぜですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "制作内容の標準化に加え、AIツールなどを活用することで設計・制作の効率化を図っています。さらに月額モデルで継続運用する仕組みにより、初期費用を抑えた合理的な価格を実現しています。"
+            "text": "制作内容の標準化に加え、AIツールなどを活用することで設計・制作の効率化を図っています。さらに月額モデルで継続運用する仕組みにより、無理のない月額費用を実現しています。"
           }
         }
       ]
@@ -189,7 +189,7 @@
           <p class="ws-ec-fv__label">定額サブスクECサイト</p>
           <h1 id="ws-ec-fv-title" class="ws-ec-fv__title">ウィルサポEC</h1>
           <ul class="ws-ec-fv__points" aria-label="サービスの特長">
-            <li class="ws-ec-fv__point">初期費用<br>無料</li>
+            <li class="ws-ec-fv__point">スモール<br>スタート</li>
             <li class="ws-ec-fv__point">契約期間の<br>縛りなし</li>
             <li class="ws-ec-fv__point">自由な<br>デザイン</li>
           </ul>
@@ -216,7 +216,7 @@
             <br /><br />
             ウィルサポECは、そんな中小企業のためのEC基盤です。
             <br /><br />
-            初期費用ゼロでスモールスタート。<br />
+            月額型でスモールスタート。<br />
             しかし設計は本格的に。
             <br /><br />
             ターゲットに刺さる導線設計とデザイン設計を行い、<br />
@@ -261,9 +261,9 @@
                     <path d="M9 10.5h6M9 14h4" />
                   </svg>
                 </span>
-                <h3 class="ws-ec-feature__item-title">初期費用0円・契約縛りなしの月額モデル</h3>
+                <h3 class="ws-ec-feature__item-title">契約縛りなしの月額モデル</h3>
               </div>
-              <p class="ws-ec-feature__item-text">初期費用は不要。契約期間の縛りもありません。 一括制作ではなく月額型で始められるため、初期のキャッシュ負担を大きく抑えながら本格的なECサイトを構築できます。サーバー・ドメイン費用も含まれているため、追加の固定費を気にせずスタートできます。</p>
+              <p class="ws-ec-feature__item-text">契約期間の縛りはありません。一括制作ではなく月額型で運用まで続けられるため、初期の負担を抑えながら本格的なECサイトを構築できます。サーバー・ドメイン費用も含まれているため、追加の固定費を気にせずスタートできます。</p>
             </li>
             <li class="ws-ec-feature__item">
               <div class="ws-ec-feature__item-head">
@@ -391,12 +391,12 @@
           <ul class="ws-ec-pricing__cards">
             <li class="ws-ec-pricing__card">
               <h3 class="ws-ec-pricing__plan">シンプル</h3>
-              <p class="ws-ec-pricing__price"><span class="ws-ec-pricing__yen">月額</span>35,000円</p>
-              <p class="ws-ec-pricing__badge">初期費用 0円</p>
+              <p class="ws-ec-pricing__price"><span class="ws-ec-pricing__yen">月額</span>40,000円</p>
+              <p class="ws-ec-pricing__badge">契約期間の縛りなし</p>
               <dl class="ws-ec-pricing__meta">
                 <div class="ws-ec-pricing__meta-row">
-                  <dt>契約期間の縛り</dt>
-                  <dd>なし</dd>
+                  <dt>初期費用</dt>
+                  <dd>300,000円</dd>
                 </div>
                 <div class="ws-ec-pricing__meta-row">
                   <dt>ページ数</dt>
@@ -419,12 +419,12 @@
             <li class="ws-ec-pricing__card ws-ec-pricing__card--featured">
               <p class="ws-ec-pricing__featured-tag">おすすめ</p>
               <h3 class="ws-ec-pricing__plan">スタンダード</h3>
-              <p class="ws-ec-pricing__price"><span class="ws-ec-pricing__yen">月額</span>45,000円</p>
-              <p class="ws-ec-pricing__badge">初期費用 0円</p>
+              <p class="ws-ec-pricing__price"><span class="ws-ec-pricing__yen">月額</span>50,000円</p>
+              <p class="ws-ec-pricing__badge">契約期間の縛りなし</p>
               <dl class="ws-ec-pricing__meta">
                 <div class="ws-ec-pricing__meta-row">
-                  <dt>契約期間の縛り</dt>
-                  <dd>なし</dd>
+                  <dt>初期費用</dt>
+                  <dd>300,000円</dd>
                 </div>
                 <div class="ws-ec-pricing__meta-row">
                   <dt>ページ数</dt>
@@ -446,16 +446,16 @@
             </li>
             <li class="ws-ec-pricing__card">
               <h3 class="ws-ec-pricing__plan">プレミアム</h3>
-              <p class="ws-ec-pricing__price"><span class="ws-ec-pricing__yen">月額</span>55,000円</p>
-              <p class="ws-ec-pricing__badge">初期費用 要相談</p>
+              <p class="ws-ec-pricing__price"><span class="ws-ec-pricing__yen">月額</span>60,000円</p>
+              <p class="ws-ec-pricing__badge">契約期間の縛りなし</p>
               <dl class="ws-ec-pricing__meta">
                 <div class="ws-ec-pricing__meta-row">
-                  <dt>契約期間の縛り</dt>
-                  <dd>なし</dd>
+                  <dt>初期費用</dt>
+                  <dd>300,000円</dd>
                 </div>
                 <div class="ws-ec-pricing__meta-row">
                   <dt>ページ数</dt>
-                  <dd>13ページ以上</dd>
+                  <dd>18ページ</dd>
                 </div>
                 <div class="ws-ec-pricing__meta-row">
                   <dt>制作期間</dt>
@@ -495,7 +495,7 @@
                 <h3 class="ws-ec-flow__step-title">キックオフ・ご契約</h3>
               </div>
               <p class="ws-ec-flow__text">正式にご依頼いただいた後、キックオフミーティングを実施します。制作スケジュールや必要素材を整理し、プロジェクトをスタートします。</p>
-              <small class="ws-ec-flow__note">※キックオフ後に、月額プランのお支払い手続きを行います。<br />※初期費用は発生しません。契約期間の縛りもありません。</small>
+              <small class="ws-ec-flow__note">※キックオフ時に、初期費用と月額のお支払い手続きを行います。<br />※契約期間の縛りはありません。</small>
             </li>
             <li class="ws-ec-flow__step">
               <div class="ws-ec-flow__head">
@@ -561,9 +561,9 @@
           <h2 id="ws-ec-faq-title" class="ws-ec-faq__title">よくあるご質問</h2>
           <div class="ws-ec-faq__list">
             <details class="ws-ec-faq__item">
-              <summary class="ws-ec-faq__question">Q1. 本当に初期費用はかかりませんか？</summary>
+              <summary class="ws-ec-faq__question">Q1. 初期費用はいくらですか？</summary>
               <div class="ws-ec-faq__answer">
-                <p>35,000円プラン（シンプル）および45,000円プラン（スタンダード）は初期費用はかかりません。月額のみでECサイトを構築・公開いただけます。55,000円プラン（プレミアム）は、ページ数や構成規模に応じて初期費用が発生する場合があります。詳細は事前にお見積りいたします。</p>
+                <p>初期費用は各プラン300,000円です。月額費用とあわせてお支払いいただきます。ページ数や構成規模によって内容が変わる場合は、事前にお見積りのうえご提示します。</p>
               </div>
             </details>
             <details class="ws-ec-faq__item">
@@ -575,7 +575,7 @@
             <details class="ws-ec-faq__item">
               <summary class="ws-ec-faq__question">Q3. 支払いはいつから発生しますか？</summary>
               <div class="ws-ec-faq__answer">
-                <p>無料相談後、正式にご依頼いただきキックオフを実施した段階で月額契約が開始となります。初期費用が発生しないプランの場合は、月額のみのお支払いとなります。</p>
+                <p>無料相談後、正式にご依頼いただきキックオフを実施した段階で契約が開始となります。キックオフ時に初期費用、以降は毎月の月額をお支払いいただきます。</p>
               </div>
             </details>
             <details class="ws-ec-faq__item">
@@ -623,9 +623,9 @@
               </div>
             </details>
             <details class="ws-ec-faq__item">
-              <summary class="ws-ec-faq__question">Q11. なぜ初期費用なしで提供できるのですか？</summary>
+              <summary class="ws-ec-faq__question">Q11. 月額費用を抑えられるのはなぜですか？</summary>
               <div class="ws-ec-faq__answer">
-                <p>制作内容の標準化に加え、AIツールなどを活用することで設計・制作の効率化を図っています。さらに月額モデルで継続運用する仕組みにより、初期費用を抑えた合理的な価格を実現しています。</p>
+                <p>制作内容の標準化に加え、AIツールなどを活用することで設計・制作の効率化を図っています。さらに月額モデルで継続運用する仕組みにより、無理のない月額費用を実現しています。</p>
               </div>
             </details>
           </div>

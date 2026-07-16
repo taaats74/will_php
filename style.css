@@ -3834,10 +3834,10 @@ body.is-sp-menu-open {
   font-size: 16px;
   color: #474747;
   letter-spacing: 2px;
-  line-height: 2.2em;
+  line-height: 1.7em;
 }
 .page-topv3-concept .container .wrapper .concept-block .concept-block-body p + p {
-  margin-top: 20px;
+  margin-top: 7px;
 }
 .page-topv3-concept .container .wrapper .concept-block .concept-block-body .keyword {
   font-weight: bold;
@@ -5001,7 +5001,7 @@ body.is-sp-menu-open {
 }
 
 .page-topv3-ebook .container {
-  background: #ffffff;
+  background: #eef5f5;
   padding: 120px 0 100px 0;
   position: relative;
 }
@@ -5992,7 +5992,7 @@ body.is-sp-menu-open {
   justify-content: space-between;
 }
 .page-topv3-blog .container .wrapper .sticky {
-  width: 25%;
+  width: 34%;
   padding-bottom: 200px;
 }
 .page-topv3-blog .container .wrapper .sticky .sticky-container {
@@ -6083,7 +6083,7 @@ body.is-sp-menu-open {
   left: -44%;
 }
 .page-topv3-blog .container .wrapper .content-wrapper {
-  width: 72%;
+  width: 62%;
   padding: 140px 0;
   /* ============================================
      旧 .content(RSSフィード用)スタイル
@@ -7044,10 +7044,10 @@ body.is-sp-menu-open {
   .page-topv3-concept .container .wrapper .concept-block .concept-block-body p {
     font-size: 14px;
     letter-spacing: 1.5px;
-    line-height: 2em;
+    line-height: 1.7em;
   }
   .page-topv3-concept .container .wrapper .concept-block .concept-block-body p + p {
-    margin-top: 15px;
+    margin-top: 5px;
   }
   .page-topv3-concept .container .wrapper .concept-video {
     margin-top: 50px;
@@ -10141,6 +10141,20 @@ body.is-sp-menu-open {
   margin-top: 40px;
   font-size: 1.5em;
   line-height: 1em;
+}
+.service-price .container .wrapper .service-wrapper .service .price-initial {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 14px;
+}
+.service-price .container .wrapper .service-wrapper .service .price-initial span {
+  font-size: 1.4em;
+}
+.service-price .container .wrapper .service-wrapper .service .price-taxnote {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
 }
 .service-price .container .wrapper .service-wrapper .service .box-wrapper {
   display: flex;

@@ -12,6 +12,11 @@
  * @package will-corp
  */
 get_header();
+
+// 料金改定 自動切替（2026-08-01 00:00 JST 以降で新価格）
+$ws_revised = ( current_time( 'timestamp' ) >= strtotime( '2026-08-01 00:00:00' ) );
+// プレビュー用：?ws_preview=after で改定後、?ws_preview=before で現行を強制表示（確認用・後で削除可）
+if ( isset( $_GET['ws_preview'] ) ) { $ws_revised = ( $_GET['ws_preview'] === 'after' ); }
 ?>
 
 <?php
@@ -473,12 +478,12 @@ get_template_part( 'template-parts/page-hero', null, [
               <tr>
                 <th>初期費用</th>
                 <td>70〜120万円</td>
-                <td>0円</td>
+                <td><?php echo $ws_revised ? '100,000円' : '0円'; ?></td>
               </tr>
               <tr>
                 <th>月額</th>
                 <td>なし</td>
-                <td>9,800円〜</td>
+                <td><?php echo $ws_revised ? '30,000円〜（税抜）' : '9,800円〜'; ?></td>
               </tr>
               <tr>
                 <th>サイトの所有</th>

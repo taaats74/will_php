@@ -120,7 +120,7 @@
       <div class="wg-container">
         <div class="wg-hero__grid">
           <h1 class="wg-hero__title">
-            <span class="wg-hero__textbg">リード獲得から商談化まで</span><br><span class="wg-hero__textbg">BtoB企業の<span class="wg-hero__title-accent">マーケティングの仕組み</span>を作ります。</span>
+            <span class="wg-hero__textbg">御社の<span class="wg-hero__title-accent">「BtoBマーケティング担当」</span>として</span><br><span class="wg-hero__textbg">分析・集客・育成・商談化をワンストップで提供</span>
           </h1>
 
           <div class="wg-hero__visual">
@@ -129,13 +129,12 @@
 
           <div class="wg-hero__content">
             <p class="wg-hero__sub">
-              <span class="wg-hero__textbg">御社の<span class="wg-hero__title-accent">マーケティング部門</span>として、</span><br><span class="wg-hero__textbg">問い合わせの獲得から育成・商談化までを<span class="wg-hero__title-accent">仕組み化</span>し、</span><br><span class="wg-hero__textbg"><span class="wg-hero__title-accent">安定した見込み顧客の創出</span>を実現します。</span>
+              <span class="wg-hero__textbg">問い合わせの獲得から育成・商談化までを<span class="wg-hero__title-accent">仕組み化</span>し、</span><br><span class="wg-hero__textbg"><span class="wg-hero__title-accent">安定した見込み顧客の創出</span>を実現します。</span>
             </p>
             <div class="wg-hero__cta wg-cta-group">
               <a href="https://will-corp.co.jp/diagnosis/" class="wg-btn wg-btn--accent wg-btn--lg" target="_blank" rel="noopener" data-cta="hero-shindan">無料診断（1分）はこちら</a>
               <a href="#wg-form" class="wg-btn wg-btn--ghost wg-btn--lg" data-cta="hero-soudan">無料相談を申し込む</a>
             </div>
-            <p class="wg-hero__sub-note">「無料診断」は10問・約1分。まず現状を可視化したい方へ。</p>
           </div>
         </div>
       </div>
@@ -555,17 +554,16 @@
             <p class="wg-option__lead">BtoB特化・サブスク型のホームページ制作／運用</p>
           </div>
           <ul class="wg-option__features">
-            <li>「集めるサイト」ではなく、比較検討で“選ばれる”ためのサイト設計（BtoB特化）</li>
+            <li>BtoBに特化したお問い合わせ、リード獲得に強いサイト設計</li>
             <li>営業構造から逆算したWeb戦略設計・導線設計</li>
             <li>テンプレートに頼らないフルオーダーデザイン</li>
             <li>戦略設計から公開後の運用・改善まで、月額制で一貫して伴走</li>
             <li>Web専任担当が不在でも、更新・改善が止まらない</li>
           </ul>
-          <p class="wg-option__note">※ウィルグローで獲得・育成したリードが、最終的に「比較検討」する受け皿として機能します</p>
         </div>
 
         <div class="wg-cta-group wg-cta-group--center wg-pricing__cta">
-          <a href="#wg-form" class="wg-btn wg-btn--accent wg-btn--lg" data-cta="pricing-soudan">どのプランが合うか相談する</a>
+          <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="wg-btn wg-btn--accent wg-btn--lg" target="_blank" rel="noopener" data-cta="pricing-willsupport">ウィルサポの詳細はこちら</a>
         </div>
       </div>
     </section>

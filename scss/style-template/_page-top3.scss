@@ -530,10 +530,10 @@
             font-size: 16px;
             color: #474747;
             letter-spacing: 2px;
-            line-height: 2.2em;
+            line-height: 1.7em;
 
             & + p {
-              margin-top: 20px;
+              margin-top: 7px;
             }
           }
 
@@ -1834,7 +1834,7 @@
 
 .page-topv3-ebook {
   .container {
-    background: #ffffff;
+    background: #eef5f5;
     padding: 120px 0 100px 0;
     position: relative;
 
@@ -2979,7 +2979,7 @@
       justify-content: space-between;
 
       .sticky {
-        width: 25%;
+        width: 34%;
         padding-bottom: 200px;
 
         .sticky-container {
@@ -3086,7 +3086,7 @@
       }
 
       .content-wrapper {
-        width: 72%;
+        width: 62%;
         padding: 140px 0;
 
         /* ============================================
@@ -4203,10 +4203,10 @@
             p {
               font-size: 14px;
               letter-spacing: 1.5px;
-              line-height: 2em;
+              line-height: 1.7em;
 
               & + p {
-                margin-top: 15px;
+                margin-top: 5px;
               }
             }
           }

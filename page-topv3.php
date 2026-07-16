@@ -95,47 +95,48 @@
       <div class="container">
         <div class="wrapper">
           <div class="issue-header">
-            <h2>Webや営業の取り組みで、<br>次のようなことはございませんか？</h2>
+            <h2>Webや営業の取り組みで、<br>このようなお悩みはありませんか？</h2>
           </div>
 
           <div class="issue-wrapper">
 
             <div class="issue">
               <span class="issue-number">01</span>
-              <p>サイトはあるが、月間アクセス数を把握しておらず、検索しても出てこない</p>
+              <p>営業活動は頑張っているのに、<br>新規の問い合わせは思うように増えない</p>
             </div>
 
             <div class="issue">
               <span class="issue-number">02</span>
-              <p>トップページや事業紹介を見ても、自社の強みや独自性が伝わらない</p>
+              <p>紹介や既存顧客からの依頼はあるものの、<br>新しい接点を増やしたい</p>
             </div>
 
             <div class="issue">
               <span class="issue-number">03</span>
-              <p>比較検討の段階で、競合他社にお客様が流れてしまっている</p>
+              <p>展示会や広告、Webサイト、SEOなどに取り組んでいるが、お問い合わせや商談につながらない</p>
             </div>
 
             <div class="issue">
               <span class="issue-number">04</span>
-              <p>紹介や既存営業に依存しており、安定した新規問い合わせがない</p>
+              <p>改善点ややるべきことは何となく分かるが、優先順位が決められない</p>
             </div>
 
             <div class="issue">
               <span class="issue-number">05</span>
-              <p>営業活動が属人化しており、特定の担当者頼みで仕組みになっていない</p>
+              <p>施策ごとに進めているものの、<br>全体を見てくれる人がいない</p>
             </div>
 
             <div class="issue">
               <span class="issue-number">06</span>
-              <p>展示会や名刺で集めた見込み客情報が、その後活用できていない</p>
+              <p>マーケティング担当を採用するほどではないが、これから力を入れていきたい</p>
             </div>
 
           </div>
 
           <div class="issue-bridge">
             <p>
-              一見バラバラに見えるこれらの課題は、<br>
-              実は<span class="bridge-keyword">「営業基盤」</span>という一つの構造に集約されます。
+              必要なのは、新しい施策を増やすことではありません。<br>
+              <span class="bridge-keyword">営業やマーケティングをつなぎ、</span><br>
+              問い合わせや商談につながる流れをつくることです。
             </p>
           </div>
         </div>
@@ -151,7 +152,7 @@
           <div class="concept-header">
             <p class="en">CONCEPT</p>
             <h2>私たちの考え方</h2>
-            <p class="subtitle">BtoBマーケティングで成果を出すために、私たちが大切にしていること</p>
+            <p class="subtitle">成果につながるマーケティングに必要なのは、<br class="sp">「施策を増やすこと」ではありません。</p>
           </div>
 
           <div class="concept-blocks">
@@ -159,14 +160,11 @@
             <div class="concept-block animation-target to-up">
               <div class="concept-block-header">
                 <span class="block-number">01</span>
-                <h3>BtoBマーケの本質</h3>
+                <h3>施策を増やす前に、<br>つなげる</h3>
               </div>
               <div class="concept-block-body">
                 <p>
-                  多くの中小企業が、SEO・広告・SNS・展示会など個別の施策に取り組みながらも、継続的な成果に結びつかない状態に悩まされています。
-                </p>
-                <p>
-                  その理由は、施策が足りないからではありません。お客様が<span class="keyword">「認知」「興味・関心」「信頼・選択」</span>と段階を踏んで意思決定する流れに対して、それぞれの施策が線でつながっていないからです。
+                  展示会、Webサイト、SEO、広告、顧客情報。<span class="keyword">成果が出ない原因は、施策の数ではなく、それぞれがつながっていないこと</span>にあります。
                 </p>
               </div>
             </div>
@@ -174,21 +172,42 @@
             <div class="concept-block animation-target to-up">
               <div class="concept-block-header">
                 <span class="block-number">02</span>
-                <h3>ウィルの解決アプローチ</h3>
+                <h3>正解を決めつけず、<br>一緒に考える</h3>
               </div>
               <div class="concept-block-body">
                 <p>
-                  ウィルは、Web・MA・SNS・コンテンツを個別のツールとしてではなく、お客様の意思決定の流れに沿って配置される、<span class="keyword">営業基盤を構成する要素</span>として捉えています。
+                  会社によって課題も強みも違います。だから私たちは、テンプレートではなく、<span class="keyword">お客様と一緒に優先順位を決めながら進めます。</span>
                 </p>
+              </div>
+            </div>
+
+            <div class="concept-block animation-target to-up">
+              <div class="concept-block-header">
+                <span class="block-number">03</span>
+                <h3>提案だけで終わらせない</h3>
+              </div>
+              <div class="concept-block-body">
                 <p>
-                  <span class="keyword">施策の点を線でつなぎ、線を仕組みに変える。</span>これが、再現性のある事業成長の土台になります。
+                  戦略を考えるだけでも、制作だけでもありません。<span class="keyword">成果につながるまで改善を重ね、お客様と一緒に育てていきます。</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="concept-block animation-target to-up">
+              <div class="concept-block-header">
+                <span class="block-number">04</span>
+                <h3>戦略から実行まで一気通貫</h3>
+              </div>
+              <div class="concept-block-body">
+                <p>
+                  マーケティング戦略だけでは成果は出ません。<span class="keyword">Webサイトの改善や、リード獲得施策や商談化施策まで一貫して支援します。</span>
                 </p>
               </div>
             </div>
 
           </div>
 
-          <div class="concept-video">
+          <!-- <div class="concept-video">
             <p class="concept-video-lead">より具体的な内容は、こちらの動画で詳しく解説しています。</p>
             <div class="concept-video-frame">
               <div class="yt-facade" data-video-id="pZqpWtp93YY" data-title="YouTube video player">
@@ -205,13 +224,13 @@
                 </button>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
     </section>
 
-    <section class="page-topv3-strength" id="strength">
+    <!-- <section class="page-topv3-strength" id="strength">
       <div class="container">
         <div class="wrapper">
 
@@ -281,7 +300,7 @@
 
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="page-topv3-mainproduct" id="mainproduct">
       <div class="container">
@@ -289,9 +308,7 @@
 
           <div class="mainproduct-header">
             <p class="lead">
-              施策を単発で終わらせるのではなく、<br>
-              <span class="keyword">リード獲得から商談化までを<br class="sp">ひとつの営業基盤</span>として設計する。<br>
-              事業フェーズに合った形で、<br class="sp">その仕組みづくりを支援します。
+              社外マーケティング担当として、<span class="keyword">何をやれば成果につながるのか</span>を一緒に考え、<span class="keyword">実行から改善まで伴走します</span>
             </p>
           </div>
 
@@ -308,30 +325,28 @@
                 <span class="mp-tab-name">ウィルサポ</span>
               </a>
             </li>
+            <?php /* ウィルサポECは非表示（必要時に復活）
             <li data-mp-tab="mp-tab2">
               <a href="#willsupport-ec">
                 <span class="mp-tab-label">EC事業者向け</span>
                 <span class="mp-tab-name">ウィルサポEC</span>
               </a>
             </li>
+            */ ?>
           </ul>
 
           <div class="mainproduct-wrapper animation-target to-up">
 
             <div id="mp-tab-wg" class="mainproduct-item is-active">
-              <p class="mp-catch">
-                リード獲得から商談化まで、<br>
-                BtoB企業のマーケティングの仕組みを作ります。
-              </p>
               <div class="mp-desc mp-desc--wg">
                 <div class="mp-desc-grid">
                   <div class="mp-desc-content">
                     <p class="mp-type">BtoBマーケティング伴走支援</p>
                     <h3 class="mp-name mp-name--wg">ウィルグロー</h3>
                     <ul class="mp-badges">
-                      <li>リード<br>獲得</li>
-                      <li>見込み客<br>育成</li>
-                      <li>商談<br>創出</li>
+                      <li>お問い合わせ<br>獲得</li>
+                      <li>見込み顧客の<br>育成</li>
+                      <li>商談を<br>増やす</li>
                     </ul>
                   </div>
                   <div class="mp-desc-visual">
@@ -352,10 +367,6 @@
             </div>
 
             <div id="mp-tab1" class="mainproduct-item">
-              <p class="mp-catch">
-                あなたのWebサイトは、<br>
-                競合と比較されたときに勝てていますか？
-              </p>
               <div class="mp-desc mp-desc--ws">
                 <div class="mp-desc-grid">
                   <div class="mp-desc-content">
@@ -364,9 +375,9 @@
                       <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ">
                     </h3>
                     <ul class="mp-badges">
-                      <li>初期費用<br>無料</li>
-                      <li>契約期間の<br>縛りなし</li>
                       <li>BtoB特化の<br>構成設計</li>
+                      <li>お問合せに<br>繋がる</li>
+                      <li>比較検討で<br>選ばれる</li>
                     </ul>
                   </div>
                   <div class="mp-desc-visual">
@@ -386,6 +397,7 @@
               </div>
             </div>
 
+            <!-- ウィルサポECは非表示（必要時に復活）
             <div id="mp-tab2" class="mainproduct-item">
               <p class="mp-catch">スモールスタートで、本気のECを。</p>
               <div class="mp-desc mp-desc--ec">
@@ -415,6 +427,7 @@
                 </a>
               </div>
             </div>
+            -->
 
           </div>
 
@@ -423,7 +436,7 @@
       </div>
     </section>
 
-    <section class="page-topv3-whatwedo" id="whatwedo">
+    <!-- <section class="page-topv3-whatwedo" id="whatwedo">
       <div class="container">
         <div class="wrapper">
 
@@ -531,7 +544,7 @@
 
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="page-topv3-diagnosis" id="diagnosis-banner">
       <div class="container">
@@ -540,23 +553,14 @@
           <span class="diagnosis-eyebrow">DIAGNOSIS</span>
           <h2 class="diagnosis-title animation-target to-up">
             1分の入力で、<br class="pc">
-            貴社のBtoBマーケで<span class="diagnosis-keyword">「最優先すべき一手」</span>が見えます。
+            貴社のBtoBマーケで<span class="diagnosis-keyword">「何から取り組めばいいのか」</span>を診断します。
           </h2>
-          <p class="diagnosis-lead">
-            運用体制・現在の施策・抱えている課題。<br class="pc">
-            10問の質問からウィルが構造的に分析し、改善すべき優先順位をまとめたレポートをお送りします。
-          </p>
         </div>
 
         <div class="diagnosis-panel animation-target to-up">
           <h3 class="diagnosis-panel-title">無料診断レポートをお送りします</h3>
-          <p class="diagnosis-panel-text">所要時間は1分。面談は不要です。<br>回答内容に基づき、貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
-          <ul class="diagnosis-features">
-            <li>所要1分</li>
-            <li>面談不要</li>
-            <li>個別レポート送付</li>
-          </ul>
-          <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="diagnosis-btn">1分でできる無料診断を受ける</a>
+          <p class="diagnosis-panel-text">所要時間は1分。面談は不要です。回答内容に基づき、<br>貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
+          <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="diagnosis-btn">無料診断を受ける</a>
         </div>
 
       </div>
@@ -569,13 +573,9 @@
           <div class="ebook-header">
             <p class="en">DOWNLOAD</p>
             <h2>
-              BtoBマーケの実務ナレッジを、<br>
-              資料にまとめて公開しています。
+              BtoBマーケの実務で活用できる4つの資料を、<br>
+              無料でダウンロードいただけます
             </h2>
-            <p class="lead">
-              戦略全体の見取り図から、サイト改善・MA連携・コンテンツSEOまで。<br class="pc">
-              BtoBマーケの実務で活用できる4つの資料を、無料でダウンロードいただけます。
-            </p>
           </div>
 
           <div class="ebooks-cards-grid ebooks-cards-grid--top-featured">
@@ -760,13 +760,12 @@
           <div class="works-header">
             <p class="en">WORKS</p>
             <h2>
-              営業構造から逆算した、<br>
-              BtoBサイトの制作実績。
+              BtoBサイトの制作実績
             </h2>
-            <p class="lead">
+            <!-- <p class="lead">
               「作って終わり」ではなく、営業構造とコンテンツ設計から逆算したWebサイトを、<br class="pc">
               業種の異なるBtoB企業向けに制作してきました。一部の事例をご紹介します。
-            </p>
+            </p> -->
           </div>
 
           <div class="works-list">
@@ -854,12 +853,10 @@
                 <div class="blog-v5-header">
                   <p class="en">BLOG</p>
                   <h2 class="blog-v5-headline">
-                    個別施策ではなく、<br>
-                    営業構造から考える
+                    BtoBマーケティングの現場で、<br>本当に役立つ情報を
                   </h2>
                   <p class="blog-v5-lead">
-                    営業仕組み化、リード獲得、価値訴求の整理。<br>
-                    BtoB企業の経営者・担当者の意思決定に役立つ視点を、ブログで継続的に発信しています。中でも特にお読みいただきたい6本をご紹介します。
+                    Webサイト、SEO、展示会、コンテンツ、営業活動など、BtoB中小企業のマーケティングに役立つノウハウや考え方を発信しています。「次に何をやるべきか」を考えるヒントとして、ぜひご活用ください。
                   </p>
                 </div>
 
@@ -993,9 +990,13 @@
               </h2>
 
               <p class="about-v5-lead">
-                多くのBtoB企業の経営者と向き合う中で見てきた現実。<br class="pc">
-                私たちウィルは、Webを「営業基盤」として設計し、<br class="pc">
-                事業の価値を伝わる形に変えることを使命に、福岡から地方企業の成長を支えています。
+                ウィルのミッションは、事業の価値をクライアント以上に理解して広めることです。BtoB企業の独自性を最大限に引き出し、ウェブマーケティングを通じて、社会に新たな価値を生み出します。
+              </p>
+
+              <p class="about-v5-lead">
+                私たちは、戦略を考えるだけでも、制作を行うだけでもありません。<br class="pc">
+                「何をやれば成果につながるのか」を一緒に考え、実行し、改善を重ねる。<br class="pc">
+                そんな社外マーケティング担当として、お客様の事業成長に伴走しています。
               </p>
 
             </div>
@@ -1048,8 +1049,8 @@ PHPコメントアウトで温存する。
           </div>
 
           <h3 class="contact-v5-headline">
-            <span class="contact-v5-headline-keyword">「次の一手」</span>を、<br>
-            一緒に考えましょう。
+            貴社マーケティングの<span class="contact-v5-headline-keyword">「次の一手」</span>を、<br>
+            一緒に考えましょう
           </h3>
 
           <p class="contact-v5-lead">

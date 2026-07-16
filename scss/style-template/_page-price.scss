@@ -78,6 +78,20 @@
             font-size: 1.5em;
             line-height: 1em;
           }
+          .price-initial{
+            text-align: center;
+            font-weight: 700;
+            margin-top: 14px;
+            span{
+              font-size: 1.4em;
+            }
+          }
+          .price-taxnote{
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 6px;
+          }
           .box-wrapper{
             display: flex;
             justify-content: space-between;
