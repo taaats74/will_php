@@ -226,7 +226,7 @@ $ws_tax_label = '円（税抜）';
                 <a href="#contact-form" class="wsv2-header__link wsv2-header__link--cta">無料相談</a>
               </li>
               <li class="wsv2-header__nav-item">
-                <a href="https://site.will-corp.co.jp/content-fq349tq4jio" class="wsv2-header__link wsv2-header__link--cta" target="_blank" rel="noopener noreferrer">資料請求</a>
+                <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-header__link wsv2-header__link--cta" target="_blank" rel="noopener noreferrer">無料診断</a>
               </li>
             </ul>
           </nav>
@@ -281,7 +281,7 @@ $ws_tax_label = '円（税抜）';
         <a href="#contact-form" class="wsv2-fab-nav__link wsv2-fab-nav__link--cta">無料相談</a>
       </li>
       <li class="wsv2-fab-nav__item">
-        <a href="https://site.will-corp.co.jp/content-fq349tq4jio" class="wsv2-fab-nav__link wsv2-fab-nav__link--cta" target="_blank" rel="noopener noreferrer">資料請求</a>
+        <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-fab-nav__link wsv2-fab-nav__link--cta" target="_blank" rel="noopener noreferrer">無料診断</a>
       </li>
     </ul>
   </nav>
@@ -309,7 +309,7 @@ $ws_tax_label = '円（税抜）';
                 <li class="wsv2-fv__point">比較検討で<br>選ばれる</li>
               </ul>
               <div class="wsv2-fv__cta">
-                <a href="https://site.will-corp.co.jp/content-fq349tq4jio" class="wsv2-fv__cta-btn" target="_blank" rel="noopener noreferrer">資料をダウンロードする</a>
+                <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-fv__cta-btn" target="_blank" rel="noopener noreferrer">無料診断（1分）はこちら</a>
               </div>
             </div>
 
@@ -641,17 +641,17 @@ $ws_tax_label = '円（税抜）';
             <a href="#contact-form" class="wsv2-cta__btn">無料相談はこちら</a>
           </div>
 
-          <!-- 右パネル：資料請求 -->
+          <!-- 右パネル：無料診断 -->
           <div class="wsv2-cta__panel">
-            <h3 class="wsv2-cta__panel-title">まずは詳細を確認したい方へ<br>（資料請求）</h3>
-            <p class="wsv2-cta__panel-text">料金プランや制作内容、サポート体制を分かりやすくまとめた資料をお送りします。他社との比較検討にもご活用いただけます。</p>
+            <h3 class="wsv2-cta__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
+            <p class="wsv2-cta__panel-text">10問に答えるだけ・約1分。Webサイトや集客の現状を構造的に分析し、強み・改善点・優先順位をレポートにまとめてお送りします。</p>
             <a
-              href="https://site.will-corp.co.jp/content-fq349tq4jio"
+              href="https://will-corp.co.jp/diagnosis/"
               class="wsv2-cta__btn"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="資料請求はこちら（外部サイトに移動します）"
-            >資料請求はこちら</a>
+              aria-label="無料診断（1分）を試す（別ページで開きます）"
+            >無料診断（1分）を試す</a>
           </div>
 
         </div><!-- /.wsv2-cta__grid -->
@@ -1198,17 +1198,17 @@ $ws_tax_label = '円（税抜）';
             <a href="#contact-form" class="wsv2-cta__btn">無料相談はこちら</a>
           </div>
 
-          <!-- 右パネル：資料請求 -->
+          <!-- 右パネル：無料診断 -->
           <div class="wsv2-cta__panel">
-            <h3 class="wsv2-cta__panel-title">まずは詳細を確認したい方へ<br>（資料請求）</h3>
-            <p class="wsv2-cta__panel-text">料金プランや制作内容、サポート体制を分かりやすくまとめた資料をお送りします。他社との比較検討にもご活用いただけます。</p>
+            <h3 class="wsv2-cta__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
+            <p class="wsv2-cta__panel-text">10問に答えるだけ・約1分。Webサイトや集客の現状を構造的に分析し、強み・改善点・優先順位をレポートにまとめてお送りします。</p>
             <a
-              href="https://site.will-corp.co.jp/content-fq349tq4jio"
+              href="https://will-corp.co.jp/diagnosis/"
               class="wsv2-cta__btn"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="資料請求はこちら（外部サイトに移動します）"
-            >資料請求はこちら</a>
+              aria-label="無料診断（1分）を試す（別ページで開きます）"
+            >無料診断（1分）を試す</a>
           </div>
 
         </div><!-- /.wsv2-cta__grid -->
@@ -1273,7 +1273,7 @@ $ws_tax_label = '円（税抜）';
           <a href="#works" class="wsv2-footer__link">制作実績</a>
           <a href="#faq" class="wsv2-footer__link">よくあるご質問</a>
           <a href="#contact-form" class="wsv2-footer__link wsv2-footer__link--cta">無料相談</a>
-          <a href="https://site.will-corp.co.jp/content-fq349tq4jio" class="wsv2-footer__link wsv2-footer__link--cta" target="_blank" rel="noopener noreferrer">資料請求</a>
+          <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-footer__link wsv2-footer__link--cta" target="_blank" rel="noopener noreferrer">無料診断</a>
         </nav>
 
       </div><!-- /.wsv2-footer__inner -->
@@ -1284,6 +1284,23 @@ $ws_tax_label = '円（税抜）';
 
     </div>
   </footer>
+
+  <!-- ============================================
+       17. 無料診断 追従バナー（PC：右下カード／SP：下部バー）
+       ============================================ -->
+  <div class="wsv2-float-cta" id="wsv2-float-cta" role="complementary" aria-label="無料診断のご案内">
+    <button class="wsv2-float-cta__close" id="wsv2-float-cta-close" type="button" aria-label="閉じる">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="wsv2-float-cta__body">
+      <p class="wsv2-float-cta__title">無料診断（約1分）はこちら</p>
+      <p class="wsv2-float-cta__note">10問に答えるだけ。Webサイトや集客の現状を構造的に分析し、強み・改善点・優先順位をレポートにまとめてお送りします。</p>
+    </div>
+    <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-float-cta__btn" target="_blank" rel="noopener noreferrer">
+      <span class="wsv2-float-cta__btn-pc">無料診断を試す</span>
+      <span class="wsv2-float-cta__btn-sp">診断する</span>
+    </a>
+  </div>
 
   <script src="<?php echo esc_url( will_asset_url( 'will-support-v2-assets/js/script.js' ) ); ?>" defer></script>
 

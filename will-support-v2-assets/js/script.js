@@ -252,4 +252,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ============================================
+  // 無料診断 追従バナー：FV通過後に表示、×で閉じる
+  // （閉じた状態は記憶せず、リロードで再表示）
+  // ============================================
+
+  var floatCta      = document.getElementById('wsv2-float-cta');
+  var floatCtaClose = document.getElementById('wsv2-float-cta-close');
+
+  if (floatCta) {
+    var floatCtaClosed = false;
+
+    function onFloatCtaScroll() {
+      if (floatCtaClosed) return;
+      floatCta.classList.toggle('is-visible', window.scrollY > getScrollThreshold());
+    }
+
+    onFloatCtaScroll();
+    window.addEventListener('scroll', onFloatCtaScroll, { passive: true });
+
+    if (floatCtaClose) {
+      floatCtaClose.addEventListener('click', function () {
+        floatCtaClosed = true;
+        floatCta.classList.remove('is-visible');
+        floatCta.classList.add('is-closed');
+      });
+    }
+  }
+
 });
