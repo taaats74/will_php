@@ -3410,23 +3410,18 @@ body.is-sp-menu-open {
   transform: translateY(0px);
 }
 
+.page-topv3-fv {
+  /* 2026-08-06 FV刷新: 背景を動画から画像へ。
+     カンプ準拠の暗幕(#050505 75%)は page-topv3-fv.webp に焼き込み済みのため、
+     旧 .container:before のCSSオーバーレイは削除している。 */
+}
 .page-topv3-fv .container {
   position: relative;
 }
-.page-topv3-fv .container:before {
-  content: "";
-  width: 100%;
-  height: 99%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
 .page-topv3-fv .container .wrapper .page-topv3-header {
   position: absolute;
-  top: 35px;
-  right: 8%;
+  top: 29px;
+  right: 2.88%;
   z-index: 2;
 }
 .page-topv3-fv .container .wrapper .page-topv3-header nav ul {
@@ -3435,9 +3430,11 @@ body.is-sp-menu-open {
   font-style: normal;
   list-style: none;
   writing-mode: vertical-lr;
+  letter-spacing: 0.1em;
 }
 .page-topv3-fv .container .wrapper .page-topv3-header nav ul li {
-  margin: 0 20px;
+  /* 隣接マージンは相殺されるため 33px = 項目間 33px（ピッチ 24+33=57px） */
+  margin: 0 33px;
   position: relative;
   transition: 0.5s;
 }
@@ -3465,13 +3462,14 @@ body.is-sp-menu-open {
   display: inline-block;
   transition: 0.5s;
 }
-.page-topv3-fv .container .wrapper .bg-img video {
+.page-topv3-fv .container .wrapper .bg-img img {
   width: 100%;
+  display: block;
 }
 .page-topv3-fv .container .wrapper .logo-wrapper {
   position: absolute;
-  top: 35px;
-  left: 5%;
+  top: 36px;
+  left: 2.71%;
   z-index: 2;
   display: flex;
 }
@@ -3493,79 +3491,74 @@ body.is-sp-menu-open {
   letter-spacing: 3px;
 }
 .page-topv3-fv .container .wrapper .logo-wrapper .logo-img {
-  width: 60px;
+  /* カンプのロゴ実寸は 62x30 だが、当サイトの素材(66x38)は余白が異なるため
+     描画される図版サイズが一致する 67px を指定している */
+  width: 67px;
 }
+/* FVメッセージ（2026-08-06 カンプ準拠に刷新／実測 h1 52px・本文 19px） */
+/* FVカード（2026-08-06 カンプ準拠／350×90・角丸なし・縦2枚） */
 .page-topv3-fv .container .wrapper .fv-message-wrapper {
   position: absolute;
   z-index: 2;
-  bottom: 5%;
-  left: 5%;
+  bottom: 7.1%;
+  left: 2.95%;
+  /* 1440px カンプ実測 52px を基準に vw 追従（背景動画が width:100% のため） */
 }
-.page-topv3-fv .container .wrapper .fv-message-wrapper .ja {
+.page-topv3-fv .container .wrapper .fv-message-wrapper .fv-title {
   color: white;
-  font-size: 48px;
+  font-size: clamp(30px, 3.6vw, 60px);
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 500;
   font-style: normal;
-  letter-spacing: 5px;
-  line-height: 1em;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
 }
-.page-topv3-fv .container .wrapper .fv-message-wrapper .sub1 {
-  margin-top: 20px;
-  margin-left: 30px;
+.page-topv3-fv .container .wrapper .fv-message-wrapper .fv-lead {
+  /* カンプの 38px は文字の実インク間。行ボックスの余白ぶん詰める */
+  margin-top: 1.81vw; /* 実測 26px / 1440 */
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: normal;
-  font-size: 21px;
+  font-weight: 500;
+  font-size: clamp(14px, 1.32vw, 22px);
   color: white;
-  letter-spacing: 2px;
-  line-height: 1.3em;
-}
-.page-topv3-fv .container .wrapper .fv-message-wrapper .sub2 {
-  margin-top: 2px;
-  margin-left: 30px;
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: normal;
-  font-size: 21px;
-  color: rgba(255, 255, 255, 0.85);
-  letter-spacing: 2px;
-  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  line-height: 1.63;
 }
 .page-topv3-fv .container .wrapper .fv-cta-cards {
   position: absolute;
-  bottom: 5%;
-  right: 5%;
+  bottom: 8.17%;
+  right: 2.74%;
   z-index: 2;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 1.46vw; /* 実測 21px / 1440 */
 }
 .page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-card {
-  width: 280px;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 4px;
-  padding: 22px 24px;
+  width: clamp(260px, 24.3vw, 400px); /* 実測 350px / 1440 */
+  min-height: clamp(70px, 6.25vw, 104px); /* 実測 90px / 1440 */
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 0;
+  padding: 12px 20px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: center;
   transition: 0.4s;
 }
-.page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-card .cta-label {
+.page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-card .cta-text {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: #7fbabd;
-}
-.page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-card .cta-text {
-  font-family: YuGothic, "Yu Gothic", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
+  font-size: clamp(12px, 1.11vw, 18px); /* 実測 16px / 1440 */
   color: #333333;
-  letter-spacing: 1.5px;
-  line-height: 1.7em;
+  letter-spacing: 0.14em;
+  line-height: 1.375;
+  text-align: center;
+}
+.page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-card .cta-accent {
+  font-weight: 700;
+  color: #469295;
 }
 .page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-card:hover {
-  background: rgb(255, 255, 255);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -3574,11 +3567,11 @@ body.is-sp-menu-open {
 }
 .page-topv3-fv .container .wrapper .scroll {
   position: absolute;
-  right: 3%;
+  right: 2.78%;
   top: 0;
   z-index: 2;
   width: 1px;
-  height: 46vw;
+  height: 26.7vw;
   background: rgba(255, 255, 255, 0.1);
 }
 .page-topv3-fv .container .wrapper .scroll:before {
@@ -6801,76 +6794,72 @@ body.is-sp-menu-open {
   .page-topv3-fv-sp .container .wrapper {
     position: relative;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video {
+  /* 2026-08-06 背景を動画から画像へ。PC用の横長画像を縦位置にトリミングして使う */
+.page-topv3-fv-sp .container .wrapper .fv-sp-visual {
     position: relative;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video video {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual img {
     width: 100%;
     display: block;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: 40% center;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .logo-wrapper {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .logo-wrapper {
     position: absolute;
     top: 18px;
     left: 4%;
     z-index: 2;
     display: flex;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .logo-wrapper .logo-text {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .logo-wrapper .logo-text {
     writing-mode: vertical-rl;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 400;
     font-style: normal;
     user-select: none;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .logo-wrapper .logo-text .text1 {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .logo-wrapper .logo-text .text1 {
     color: white;
     font-size: 11px;
     letter-spacing: 1.5px;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .logo-wrapper .logo-text .text2 {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .logo-wrapper .logo-text .text2 {
     color: white;
     font-size: 14px;
     letter-spacing: 2px;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .logo-wrapper .logo-img {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .logo-wrapper .logo-img {
     width: 45px;
     display: block;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .logo-wrapper .logo-img img {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .logo-wrapper .logo-img img {
     width: 100%;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .fv-message-wrapper {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .fv-message-wrapper {
     position: absolute;
     z-index: 2;
     bottom: 5%;
     left: 5%;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .fv-message-wrapper .ja {
+  /* 2026-08-06 カンプ準拠のコピーに差し替え（SPはPCカンプ無しのため既存比率を踏襲） */
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .fv-message-wrapper .fv-title {
     color: white;
-    font-size: 28px;
+    font-size: 26px;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
     font-style: normal;
-    letter-spacing: 5px;
-    line-height: 1em;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .fv-message-wrapper .sub1 {
-    margin-top: 12px;
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual .fv-message-wrapper .fv-lead {
+    margin-top: 14px;
     font-family: "Zen Kaku Gothic New", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     color: white;
-    letter-spacing: 1.5px;
-    line-height: 1.3em;
-  }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-video .fv-message-wrapper .sub2 {
-    margin-top: 1.5px;
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.85);
-    letter-spacing: 1.5px;
-    line-height: 1.3em;
+    letter-spacing: 0.06em;
+    line-height: 1.63;
   }
   .page-topv3-fv-sp .container .wrapper .fv-cta-cards-sp {
     padding: 30px 5% 40px 5%;
@@ -6890,17 +6879,19 @@ body.is-sp-menu-open {
     text-decoration: none;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
   }
-  .page-topv3-fv-sp .container .wrapper .fv-cta-cards-sp .fv-cta-card .cta-label {
-    display: none;
-  }
   .page-topv3-fv-sp .container .wrapper .fv-cta-cards-sp .fv-cta-card .cta-text {
-    font-family: YuGothic, "Yu Gothic", sans-serif;
-    font-weight: bold;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
     font-size: 13px;
     color: #333333;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
     flex: 1;
     text-align: center;
+  }
+  .page-topv3-fv-sp .container .wrapper .fv-cta-cards-sp .fv-cta-card .cta-accent {
+    font-weight: 700;
+    color: #469295;
   }
   .page-topv3-issue .container {
     position: relative;

@@ -21,34 +21,29 @@
             ?>
           </header>
           <div class="bg-img">
-            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" alt=""> -->
-            <video autoplay muted loop playsinline preload="metadata" poster="<?php echo get_template_directory_uri(); ?>/img/page-top2-fv.webp" id="myVideo-pc" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie.mp4" ></video>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/page-topv3-fv.webp" alt="" width="2880" height="1334" fetchpriority="high" decoding="async">
           </div>
           <div class="logo-wrapper">
             <div class="logo-text">
-              <p class="text1">BtoB Marketing & Web Strategy</p>
-              <p class="text2">Sales Foundation Design</p>
+              <p class="text1">BtoB marketing &amp; Web strategy</p>
+              <p class="text2">Sales foundation design</p>
             </div>
-            <h1 class="logo-img">
+            <div class="logo-img">
               <a href="<?php echo home_url( '/' ); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル">
               </a>
-              <span class="visually-hidden">BtoB企業の営業基盤をWebから設計する福岡のマーケティング支援会社</span>
-            </h1>
+            </div>
           </div>
           <div class="fv-message-wrapper">
-            <p class="ja">ともに、未来を創る</p>
-            <p class="sub1">BtoB企業の営業基盤を、Webから設計</p>
-            <p class="sub2">事業のパートナーとして、ともに伴走します</p>
+            <h1 class="fv-title">成果につながるマーケティングを<br>一緒につくります。<span class="visually-hidden">BtoB企業の営業基盤をWebから設計する福岡のマーケティング支援会社</span></h1>
+            <p class="fv-lead">御社のマーケティング担当として、何をやれば成果につながるのかを一緒に考えます。<br>展示会やWebサイト、SEO、コンテンツ、顧客情報など、<br>バラバラになりがちな施策をつなぎ、実行から改善まで伴走します。</p>
           </div>
           <div class="fv-cta-cards">
-            <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="fv-cta-card fv-cta-card--ebook">
-              <span class="cta-label">DOWNLOAD</span>
-              <span class="cta-text">BtoBマーケお役立ち<br>ダウンロード資料一覧はこちら</span>
-            </a>
             <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="fv-cta-card fv-cta-card--diagnosis">
-              <span class="cta-label">DIAGNOSIS</span>
-              <span class="cta-text">1分でできる<br>自社のWebマーケ診断はこちら</span>
+              <span class="cta-text"><span class="cta-accent">「何から取り組めばいいか」</span><br>1分でできる<br>貴社のBtoBマーケ診断</span>
+            </a>
+            <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="fv-cta-card fv-cta-card--ebook">
+              <span class="cta-text">BtoBマーケの<br><span class="cta-accent">実務で活用できる</span><br>ダウンロード資料はこちら</span>
             </a>
           </div>
           <div class="scroll"></div>
@@ -59,32 +54,28 @@
     <section class="page-topv3-fv-sp sp">
       <div class="container">
         <div class="wrapper">
-          <div class="fv-sp-video">
-            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.webp" alt=""> -->
-            <video autoplay muted loop playsinline preload="metadata" poster="<?php echo get_template_directory_uri(); ?>/img/page-top2-sp_top.webp" id="myVideo-sp" src="<?php echo get_template_directory_uri(); ?>/img/page-top-fv-movie-sp.mp4" ></video>
+          <div class="fv-sp-visual">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/page-topv3-fv.webp" alt="" width="2880" height="1334" fetchpriority="high" decoding="async">
             <div class="logo-wrapper">
               <div class="logo-text">
-                <p class="text1">BtoB Marketing & Web Strategy</p>
-                <p class="text2">Sales Foundation Design</p>
+                <p class="text1">BtoB marketing &amp; Web strategy</p>
+                <p class="text2">Sales foundation design</p>
               </div>
               <a href="<?php echo home_url( '/' ); ?>" class="logo-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-header-logo.webp" alt="合同会社ウィル">
               </a>
             </div>
             <div class="fv-message-wrapper">
-              <p class="ja">ともに、未来を創る</p>
-              <p class="sub1">BtoB企業の営業基盤を、Webから設計</p>
-              <p class="sub2">事業のパートナーとして、ともに伴走します</p>
+              <p class="fv-title">成果につながる<br>マーケティングを<br>一緒につくります。</p>
+              <p class="fv-lead">御社のマーケティング担当として、<br>何をやれば成果につながるのかを<br>一緒に考えます。</p>
             </div>
           </div>
           <div class="fv-cta-cards-sp">
-            <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="fv-cta-card fv-cta-card--ebook">
-              <span class="cta-label">DOWNLOAD</span>
-              <span class="cta-text">BtoBマーケお役立ち<br>ダウンロード資料一覧はこちら</span>
-            </a>
             <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="fv-cta-card fv-cta-card--diagnosis">
-              <span class="cta-label">DIAGNOSIS</span>
-              <span class="cta-text">1分でできる<br>自社のWebマーケ診断はこちら</span>
+              <span class="cta-text"><span class="cta-accent">「何から取り組めばいいか」</span><br>1分でできる 貴社のBtoBマーケ診断</span>
+            </a>
+            <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="fv-cta-card fv-cta-card--ebook">
+              <span class="cta-text">BtoBマーケの<span class="cta-accent">実務で活用できる</span><br>ダウンロード資料はこちら</span>
             </a>
           </div>
         </div>

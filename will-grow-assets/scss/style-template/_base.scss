@@ -10,9 +10,19 @@
   box-sizing: border-box;
 }
 
+// 固定ヘッダーの高さ。FVの開始位置・ドロワー位置・アンカーのオフセットが全てこれを参照する
+:root {
+  --wg-header-h: 64px;
+
+  // PC はカンプ実測（ヘッダー帯 94px）に合わせる
+  @media (min-width: v.$bp-md) {
+    --wg-header-h: 94px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: calc(var(--wg-header-h) + 16px);
 }
 
 body {

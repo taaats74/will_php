@@ -176,9 +176,18 @@ select {
   box-sizing: border-box;
 }
 
+:root {
+  --wg-header-h: 64px;
+}
+@media (min-width: 900px) {
+  :root {
+    --wg-header-h: 94px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: calc(var(--wg-header-h) + 16px);
 }
 
 body {
@@ -506,77 +515,93 @@ strong {
 .wg-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 16px;
-  height: 64px;
+  height: var(--wg-header-h);
   width: 88%;
   max-width: 1600px;
+}
+@media (min-width: 900px) {
+  .wg-header__inner {
+    width: 92%;
+  }
 }
 .wg-header__logo {
   flex: 0 0 auto;
   display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-  font-weight: 900;
-  font-size: 1.3rem;
-  letter-spacing: 0.04em;
-  color: #28849D;
+  align-items: center;
+  margin-right: auto;
 }
-.wg-header__logo-sub {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: #8AA0A4;
-  margin-top: 3px;
+.wg-header__logo-img {
+  display: block;
+  width: auto;
+  height: 26px;
 }
 @media (min-width: 900px) {
-  .wg-header__logo { font-size: 1.5rem; }
-  .wg-header__logo-sub { font-size: 0.82rem; }
+  .wg-header__logo-img {
+    height: clamp(36px, 3.75vw, 54px);
+  }
 }
 .wg-header__nav {
   display: flex;
   align-items: center;
   gap: 12px 24px;
 }
+@media (min-width: 1240px) {
+  .wg-header__nav {
+    gap: 12px clamp(24px, 3.5vw, 50px);
+  }
+}
 .wg-header__links {
   display: none;
 }
-@media (min-width: 900px) {
+@media (min-width: 1240px) {
   .wg-header__links {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: clamp(14px, 1.94vw, 28px);
   }
 }
 .wg-header__link {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #3E5054;
+  font-size: clamp(0.85rem, 1.11vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: #000000;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 .wg-header__link:hover {
-  color: #28849D;
+  color: #0E849C;
 }
-.wg-header .wg-btn--accent {
+.wg-header__nav .wg-btn--accent {
   display: none;
 }
 @media (min-width: 600px) {
-  .wg-header .wg-btn--accent {
+  .wg-header__nav .wg-btn--accent {
     display: inline-flex;
+    min-height: clamp(40px, 3.2vw, 46px);
+    padding: 10px clamp(20px, 2.85vw, 41px);
+    border-radius: 10px;
+    background: #4E4E4E;
+    border-color: #4E4E4E;
+    font-size: clamp(0.85rem, 1.11vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    color: #FFFFFF;
+  }
+  .wg-header__nav .wg-btn--accent:hover {
+    background: #3E5054;
+    border-color: #3E5054;
+    color: #FFFFFF;
   }
 }
 
 .wg-hero {
   position: relative;
-  padding-block: 132px 100px;
-  background: linear-gradient(160deg, #F0F8F9 0%, rgba(180, 219, 224, 0.6) 100%);
+  margin-top: var(--wg-header-h);
+  padding-block: 88px 80px;
+  background: #E2F5F7 url("images/hero-bg.webp") center top/cover no-repeat;
   overflow: hidden;
-}
-@media (min-width: 900px) {
-  .wg-hero .wg-container {
-    width: 80%;
-    max-width: 1500px;
-  }
 }
 .wg-hero__grid {
   position: relative;
@@ -587,80 +612,49 @@ strong {
   z-index: 1;
   text-align: left;
 }
-@media (min-width: 900px) {
-  .wg-hero__content {
-    max-width: 64%;
-  }
-}
 .wg-hero__eyebrow {
-  display: inline-block;
-  font-size: 0.85rem;
+  font-family: "Zen Maru Gothic", "Corporate Logo ver2", "Hiragino Maru Gothic ProN", "Noto Sans JP", sans-serif;
   font-weight: 700;
-  color: #28849D;
-  background: #FFFFFF;
-  border: 1px solid #C0D5D8;
-  padding: 5px 14px;
-  border-radius: 999px;
-  margin-bottom: 30px;
+  font-size: clamp(1rem, 1.94vw, 1.75rem);
+  line-height: 1.2;
+  letter-spacing: 0.24em;
+  color: #0E849C;
+  margin: 0;
 }
-.wg-hero__title {
-  font-size: 1.85rem;
-  line-height: 1.55;
-  font-weight: 900;
-  color: #3E5054;
-  margin-top: 70px;
-  margin-bottom: 28px;
-  letter-spacing: 0.08em;
+.wg-hero__logotype {
+  margin: 17px 0 0;
+  line-height: 0;
 }
-@media (min-width: 900px) {
-  .wg-hero__title {
-    font-size: clamp(2.1rem, 3.4vw, 2.8rem);
-    line-height: 1.6;
-    margin-bottom: 44px;
-    width: max-content;
-    max-width: none;
-  }
+.wg-hero__logotype-img {
+  display: block;
+  width: clamp(240px, 39.2vw, 620px);
+  height: auto;
 }
-.wg-hero__title-accent {
-  color: #28849D;
+.wg-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
 }
-@media (min-width: 900px) {
-  .wg-hero__textbg {
-    background: #FFFFFF;
-    padding: 0.3em 0.75em;
-    border-radius: 6px;
-  }
-}
-.wg-hero__sub {
-  font-size: 1.1rem;
-  line-height: 1.95;
-  font-weight: 700;
-  color: #3E5054;
-  margin-bottom: 40px;
+.wg-hero__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: clamp(120px, 12.43vw, 179px);
+  min-height: clamp(64px, 6.53vw, 94px);
+  padding: 8px 6px;
+  background: #FAE714;
+  border-radius: 0;
+  font-family: "Zen Maru Gothic", "Corporate Logo ver2", "Hiragino Maru Gothic ProN", "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.67vw, 1.5rem);
+  line-height: 1.2;
   letter-spacing: 0.06em;
-}
-@media (min-width: 900px) {
-  .wg-hero__sub {
-    font-size: 1.2rem;
-    line-height: 1.75;
-    width: max-content;
-    max-width: none;
-  }
-}
-.wg-hero__cta {
-  flex-direction: column;
-  align-items: stretch;
-}
-@media (min-width: 600px) {
-  .wg-hero__cta {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-.wg-hero__sub-note {
-  margin-top: 16px;
-  font-size: 0.85rem;
-  color: #8AA0A4;
+  color: #000000;
+  text-align: center;
 }
 .wg-hero__visual {
   display: flex;
@@ -671,9 +665,8 @@ strong {
   .wg-hero__visual {
     position: absolute;
     top: 50%;
-    right: -16px;
+    right: -24px;
     transform: translateY(-50%);
-    width: min(62%, 780px);
     margin-top: 0;
     justify-content: flex-end;
     z-index: 0;
@@ -682,27 +675,33 @@ strong {
 }
 .wg-hero__illust {
   width: 100%;
-  max-width: 520px;
+  max-width: 388px;
   height: auto;
-  opacity: 0.5;
 }
 @media (min-width: 900px) {
   .wg-hero__illust {
-    max-width: 780px;
+    width: clamp(280px, 27vw, 420px);
+    max-width: none;
   }
 }
-.wg-hero__illust-placeholder {
-  width: 100%;
-  max-width: 520px;
-  aspect-ratio: 5/4;
-  display: grid;
-  place-items: center;
-  border: 2px dashed #7CC1C9;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.5);
-  color: #8AA0A4;
+.wg-hero__lead {
+  margin: 33px 0 0;
+  padding-top: 34px;
+  border-top: 1px solid #0E849C;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 1.67vw, 1.5rem);
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  color: #0E849C;
+  text-align: center;
+}
+.wg-hero__lead-br {
+  display: none;
+}
+@media (min-width: 900px) {
+  .wg-hero__lead-br {
+    display: inline;
+  }
 }
 
 .wg-issue-groups {
@@ -2045,18 +2044,32 @@ thead .wg-compare__own {
     scroll-behavior: auto;
   }
 }
-
 /* =========================================================
    SP（スマホ ≤599px）専用調整 — PC/タブレットは変更しない
    ※スマホ表示の微調整。min-width 系（PC/タブレット）には影響しません。
    ========================================================= */
-.wg-br-sp { display: inline; }
-@media (min-width: 600px) {
-  .wg-br-sp { display: none; }
+.wg-br-sp {
+  display: inline;
 }
 
-/* FV 再構成後も h1 を背景イラストより前面に保つ（PC維持用） */
-.wg-hero__title { position: relative; z-index: 1; }
+@media (min-width: 600px) {
+  .wg-br-sp {
+    display: none;
+  }
+}
+/* スクリーンリーダー専用テキスト */
+.wg-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* ハンバーガーメニュー（SP/タブレット用・PC≥900pxでは非表示＝横並びナビ維持） */
 .wg-burger {
@@ -2074,6 +2087,7 @@ thead .wg-compare__own {
   border: none;
   cursor: pointer;
 }
+
 .wg-burger span {
   display: block;
   width: 24px;
@@ -2082,16 +2096,27 @@ thead .wg-compare__own {
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
-.wg-burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.wg-burger.is-open span:nth-child(2) { opacity: 0; }
-.wg-burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-@media (min-width: 900px) {
-  .wg-burger { display: none; }
+
+.wg-burger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
 }
 
+.wg-burger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.wg-burger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (min-width: 1240px) {
+  .wg-burger {
+    display: none;
+  }
+}
 .wg-drawer {
   position: fixed;
-  top: 64px;
+  top: var(--wg-header-h);
   left: 0;
   right: 0;
   bottom: 0;
@@ -2105,18 +2130,24 @@ thead .wg-compare__own {
   pointer-events: none;
   transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s;
 }
+
 .wg-drawer.is-open {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+
 .wg-drawer__links {
   list-style: none;
   margin: 0 0 16px;
   padding: 0;
 }
-.wg-drawer__links li { border-bottom: 1px solid #EEF3F4; }
+
+.wg-drawer__links li {
+  border-bottom: 1px solid #EEF3F4;
+}
+
 .wg-drawer__links a {
   display: block;
   padding: 14px 4px;
@@ -2124,31 +2155,82 @@ thead .wg-compare__own {
   font-weight: 700;
   text-decoration: none;
 }
-.wg-drawer__links a:hover { color: #28849D; }
-.wg-drawer__actions { display: grid; gap: 10px; }
-/* ドロワー内のボタンは常に表示（ヘッダーのSP時 .wg-btn--accent 非表示ルールを上書き） */
-.wg-drawer__actions .wg-btn { display: flex; width: 100%; }
-@media (min-width: 900px) {
-  .wg-drawer { display: none; }
+
+.wg-drawer__links a:hover {
+  color: #28849D;
 }
 
+.wg-drawer__actions {
+  display: grid;
+  gap: 10px;
+}
+
+/* ドロワー内のボタンは常に表示（ヘッダーのSP時 .wg-btn--accent 非表示ルールを上書き） */
+.wg-drawer__actions .wg-btn {
+  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 1240px) {
+  .wg-drawer {
+    display: none;
+  }
+}
 @media (max-width: 599.98px) {
-  /* FV: 見出し・サブをさらに一回り小さく／上padding 0 */
-  .wg-hero { padding-top: 0; }
-  .wg-hero__title { margin-top: 90px; margin-bottom: 9px; font-size: 1.4rem; }
-  .wg-hero__visual { margin-top: 9px; }
-  .wg-hero__sub { margin-top: 15px; font-size: 1rem; }
-
+  /* FV（SP）: カンプはPCのみのため、縦リズムを詰めて1画面に収める */
+  .wg-hero {
+    padding-block: 40px 44px;
+  }
+  .wg-hero__logotype {
+    margin-top: 10px;
+  }
+  .wg-hero__badges {
+    margin-top: 20px;
+    gap: 8px;
+  }
+  .wg-hero__badge {
+    width: calc((100% - 16px) / 3);
+    min-height: 60px;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+  }
+  .wg-hero__visual {
+    margin-top: 20px;
+  }
+  .wg-hero__lead {
+    margin-top: 22px;
+    padding-top: 22px;
+    text-align: left;
+  }
   /* 集客→問い合わせ獲得→商談化: 縦表示（折り返さない） */
-  .wg-broken { padding: 32px 20px; }
-  .wg-broken__track { flex-direction: column; flex-wrap: nowrap; gap: 0; }
-  .wg-broken__node { width: 100%; font-size: 1rem; padding: 14px 16px; text-align: center; }
-  .wg-broken__cut { margin: 8px 0; }
-  .wg-broken__cut::after { content: "↓"; font-size: 1.8rem; }
-
+  .wg-broken {
+    padding: 32px 20px;
+  }
+  .wg-broken__track {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .wg-broken__node {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .wg-broken__cut {
+    margin: 8px 0;
+  }
+  .wg-broken__cut::after {
+    content: "↓";
+    font-size: 1.8rem;
+  }
   /* 導入の流れ: 番号をボックス左上角／縦ボーダー削除／ボックスを横に広げる */
-  .wg-process__step { gap: 0; }
-  .wg-process__step:not(:last-child)::before { display: none; }
+  .wg-process__step {
+    gap: 0;
+  }
+  .wg-process__step:not(:last-child)::before {
+    display: none;
+  }
   .wg-process__num {
     position: absolute;
     top: 0;
@@ -2158,8 +2240,10 @@ thead .wg-compare__own {
     border-radius: 12px 0 12px 0;
     font-size: 0.95rem;
   }
-  .wg-process__body { width: 100%; padding-top: 52px; }
-
+  .wg-process__body {
+    width: 100%;
+    padding-top: 52px;
+  }
   /* 追従CTA: 全幅50%ずつ／角丸・余白・背景なし */
   .wg-sticky-cta {
     gap: 0;
@@ -2177,7 +2261,8 @@ thead .wg-compare__own {
     border-radius: 0;
     padding-block: 16px;
   }
-
   /* モニター/CTA群: ボタン横幅80% */
-  .wg-monitor__cta .wg-btn { width: 80%; }
+  .wg-monitor__cta .wg-btn {
+    width: 80%;
+  }
 }

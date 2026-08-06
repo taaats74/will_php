@@ -22,38 +22,35 @@
   &__inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // ロゴだけ左、ナビ・CTA・ハンバーガーは右にまとめる
+    // （space-between だとバーガー表示時に CTA が中央に取り残される）
+    justify-content: flex-start;
     gap: 16px;
-    height: 64px;
+    height: var(--wg-header-h);
     width: 88%;
     max-width: 1600px;
+
+    // カンプの左右余白（左75px / 右32px = 実効1333px）に近づける
+    @media (min-width: v.$bp-md) {
+      width: 92%;
+    }
   }
 
   &__logo {
     flex: 0 0 auto;
     display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-    font-weight: 900;
-    font-size: 1.3rem;
-    letter-spacing: 0.04em;
-    color: v.$accent;
-
-    // PC はさらに一回り大きく
-    @media (min-width: v.$bp-md) {
-      font-size: 1.5rem;
-    }
+    align-items: center;
+    margin-right: auto;
   }
 
-  &__logo-sub {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: v.$subtle;
-    margin-top: 3px;
+  // 書き出し画像のロゴ（2x 素材 495×107 / カンプ表示 248×54）
+  &__logo-img {
+    display: block;
+    width: auto;
+    height: 26px;
 
     @media (min-width: v.$bp-md) {
-      font-size: 0.82rem;
+      height: clamp(36px, 3.75vw, 54px); // 54px / 1440
     }
   }
 
@@ -61,55 +58,78 @@
     display: flex;
     align-items: center;
     gap: 12px 24px;
+
+    // カンプはナビ末尾とCTAの間が約50px空く
+    @media (min-width: v.$bp-header) {
+      gap: 12px clamp(24px, 3.5vw, 50px);
+    }
   }
 
+  // ナビ 実測 16px / tracking 160 / 項目間 28px
   &__links {
     display: none;
 
-    @media (min-width: v.$bp-md) {
+    @media (min-width: v.$bp-header) {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: clamp(14px, 1.94vw, 28px); // 28px / 1440
     }
   }
 
   &__link {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: v.$text;
+    font-size: clamp(0.85rem, 1.11vw, 1rem); // 16px / 1440
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    color: v.$fv-ink;
+    white-space: nowrap;
     transition: color 0.2s ease;
 
     &:hover {
-      color: v.$accent;
+      color: v.$fv-brand;
     }
   }
 
   // モバイルでは追従ボトムCTAに集約するため、ヘッダーCTAはタブレット以上で表示
-  .wg-btn--accent {
+  // （.wg-drawer 内のボタンに当たらないよう __nav 配下に限定する）
+  &__nav .wg-btn--accent {
     display: none;
 
+    // カンプのヘッダーCTA: 191×46 / #4E4E4E / 角丸10px / 16px tracking160
+    // 表示される幅では常に同じ見た目になるよう bp-sm から適用する
     @media (min-width: v.$bp-sm) {
       display: inline-flex;
+      min-height: clamp(40px, 3.2vw, 46px);
+      padding: 10px clamp(20px, 2.85vw, 41px);
+      border-radius: 10px;
+      background: v.$fv-btn-dark;
+      border-color: v.$fv-btn-dark;
+      font-size: clamp(0.85rem, 1.11vw, 1rem);
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      color: v.$white;
+
+      &:hover {
+        background: v.$text;
+        border-color: v.$text;
+        color: v.$white;
+      }
     }
   }
 }
 
 // =========================================
 // 1. ファーストビュー
+// 2026-08-06 カンプ（ウィルグロー.psd / 1440px）実測値で再構築。
+// 縦リズム: 背景上端+88 → アイブロー → +17 → ロゴタイプ → +32 → バッジ
+//           → +33 → 区切り線 → +34 → リード文
 // =========================================
 .wg-hero {
   position: relative;
-  padding-block: 132px 100px;
-  background: linear-gradient(160deg, v.$bg-pale 0%, rgba(v.$light, 0.6) 100%);
+  // 固定ヘッダーの直下から背景を開始する
+  margin-top: var(--wg-header-h);
+  padding-block: 88px 80px;
+  background: v.$fv-tint url("images/hero-bg.webp") center top / cover no-repeat;
   overflow: hidden;
-
-  // FVコンテンツの横幅を広げて窮屈さを解消
-  .wg-container {
-    @media (min-width: v.$bp-md) {
-      width: 80%;
-      max-width: 1500px;
-    }
-  }
 
   &__grid {
     position: relative;
@@ -120,95 +140,64 @@
     position: relative;
     z-index: 1;
     text-align: left;
-
-    @media (min-width: v.$bp-md) {
-      max-width: 64%;
-    }
   }
 
+  // アイブロー「BtoBマーケティング伴走支援」 実測 28px / tracking 240
   &__eyebrow {
-    display: inline-block;
-    font-size: 0.85rem;
+    font-family: v.$font-round;
     font-weight: 700;
-    color: v.$accent;
-    background: v.$white;
-    border: 1px solid v.$border;
-    padding: 5px 14px;
-    border-radius: 999px;
-    margin-bottom: 30px;
+    font-size: clamp(1rem, 1.94vw, 1.75rem); // 28px / 1440
+    line-height: 1.2;
+    letter-spacing: 0.24em;
+    color: v.$fv-brand;
+    margin: 0;
   }
 
-  &__title {
-    font-size: 1.85rem;
-    line-height: 1.55;
-    font-weight: 900;
-    color: v.$text;
-    margin-top: 70px;
-    margin-bottom: 28px;
-    letter-spacing: 0.08em;
-
-    @media (min-width: v.$bp-md) {
-      // 一回り大きく。狭い画面では縮んで段落ち・はみ出しを防ぐ
-      font-size: clamp(2.1rem, 3.4vw, 2.8rem);
-      // 行間を広げてゆったりと（背景は上下paddingで連続を維持）
-      line-height: 1.6;
-      // サブキャッチとの間隔を広げる
-      margin-bottom: 44px;
-      // 最長行幅に合わせ、各行が幅で段落ちしないようにする
-      width: max-content;
-      max-width: none;
-    }
+  // ロゴタイプ「ウィルグロー」
+  // Corporate Logo ver2 は Web フォント配信が無いため、書き出し画像を使用する
+  // （カンプ実測: 表示 565×120 / 2x 素材 1130×240）
+  &__logotype {
+    margin: 17px 0 0;
+    line-height: 0;
   }
 
-  &__title-accent {
-    color: v.$accent;
+  &__logotype-img {
+    display: block;
+    width: clamp(240px, 39.2vw, 620px); // 565px / 1440
+    height: auto;
   }
 
-  // メイン／サブ共通：行ごとに文字幅へフィットする純白の背景（上下が重なって連続）
-  &__textbg {
-    @media (min-width: v.$bp-md) {
-      background: v.$white;
-      // 文字に余裕を持たせる上下・左右の余白（emなので文字サイズに追従）
-      padding: 0.3em 0.75em;
-      border-radius: 6px;
-    }
+  // バッジ 実測 179×94 / 角丸なし / 間隔 10px
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
   }
 
-  &__sub {
-    font-size: 1.1rem;
-    line-height: 1.95;
-    font-weight: 700;
-    color: v.$text;
-    margin-bottom: 40px;
+  &__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: clamp(120px, 12.43vw, 179px);   // 179px / 1440
+    min-height: clamp(64px, 6.53vw, 94px); // 94px  / 1440
+    padding: 8px 6px;
+    background: v.$fv-badge;
+    border-radius: 0;
+    font-family: v.$font-round;
+    font-weight: 500;
+    font-size: clamp(0.9rem, 1.67vw, 1.5rem); // 24px / 1440
+    line-height: 1.2;
     letter-spacing: 0.06em;
-
-    @media (min-width: v.$bp-md) {
-      font-size: 1.2rem;
-      // 行間を広げてゆったりと（背景は上下paddingで連続を維持）
-      line-height: 1.75;
-      // 最長行幅に合わせ、各行が幅で段落ちしないようにする
-      width: max-content;
-      max-width: none;
-    }
+    color: #000000;
+    text-align: center;
   }
 
-  &__cta {
-    flex-direction: column;
-    align-items: stretch;
-
-    @media (min-width: v.$bp-sm) {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-
-  &__sub-note {
-    margin-top: 16px;
-    font-size: 0.85rem;
-    color: v.$subtle;
-  }
-
-  // 右カラムのイラスト枠（PCではテキストに重ねて大きく表示）
+  // 右カラムのイラスト（カンプ実測 1x で約 388×272）
+  // PC はカンプ同様、テキスト列に重ねて右端に絶対配置する
   &__visual {
     display: flex;
     justify-content: center;
@@ -217,9 +206,8 @@
     @media (min-width: v.$bp-md) {
       position: absolute;
       top: 50%;
-      right: -16px;
+      right: -24px;
       transform: translateY(-50%);
-      width: min(62%, 780px);
       margin-top: 0;
       justify-content: flex-end;
       z-index: 0;
@@ -229,29 +217,34 @@
 
   &__illust {
     width: 100%;
-    max-width: 520px;
+    max-width: 388px;
     height: auto;
-    opacity: 0.5;
 
-    // 1.5倍に拡大してテキストと重ねる
     @media (min-width: v.$bp-md) {
-      max-width: 780px;
+      width: clamp(280px, 27vw, 420px);
+      max-width: none;
     }
   }
 
-  // イラスト差し替え前のプレースホルダ（画像配置後は削除）
-  &__illust-placeholder {
-    width: 100%;
-    max-width: 520px;
-    aspect-ratio: 5 / 4;
-    display: grid;
-    place-items: center;
-    border: 2px dashed v.$primary;
-    border-radius: 20px;
-    background: rgba(v.$white, 0.5);
-    color: v.$subtle;
+  // 区切り線（実測 #0E849C・コンテナ全幅）＋ リード文 24px / line-height 1.8
+  &__lead {
+    margin: 33px 0 0;
+    padding-top: 34px;
+    border-top: 1px solid v.$fv-brand;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: clamp(0.95rem, 1.67vw, 1.5rem); // 24px / 1440
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    color: v.$fv-brand;
+    text-align: center;
+  }
+
+  &__lead-br {
+    display: none;
+
+    @media (min-width: v.$bp-md) {
+      display: inline;
+    }
   }
 }
 
@@ -1815,8 +1808,19 @@
   .wg-br-sp { display: none; }
 }
 
-/* FV 再構成後も h1 を背景イラストより前面に保つ（PC維持用） */
-.wg-hero__title { position: relative; z-index: 1; }
+/* スクリーンリーダー専用テキスト */
+.wg-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* ハンバーガーメニュー（SP/タブレット用・PC≥900pxでは非表示＝横並びナビ維持） */
 .wg-burger {
@@ -1845,13 +1849,13 @@
 .wg-burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .wg-burger.is-open span:nth-child(2) { opacity: 0; }
 .wg-burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-@media (min-width: 900px) {
+@media (min-width: v.$bp-header) {
   .wg-burger { display: none; }
 }
 
 .wg-drawer {
   position: fixed;
-  top: 64px;
+  top: var(--wg-header-h);
   left: 0;
   right: 0;
   bottom: 0;
@@ -1888,16 +1892,18 @@
 .wg-drawer__actions { display: grid; gap: 10px; }
 /* ドロワー内のボタンは常に表示（ヘッダーのSP時 .wg-btn--accent 非表示ルールを上書き） */
 .wg-drawer__actions .wg-btn { display: flex; width: 100%; }
-@media (min-width: 900px) {
+@media (min-width: v.$bp-header) {
   .wg-drawer { display: none; }
 }
 
 @media (max-width: 599.98px) {
-  /* FV: 見出し・サブをさらに一回り小さく／上padding 0 */
-  .wg-hero { padding-top: 0; }
-  .wg-hero__title { margin-top: 90px; margin-bottom: 9px; font-size: 1.4rem; }
-  .wg-hero__visual { margin-top: 9px; }
-  .wg-hero__sub { margin-top: 15px; font-size: 1rem; }
+  /* FV（SP）: カンプはPCのみのため、縦リズムを詰めて1画面に収める */
+  .wg-hero { padding-block: 40px 44px; }
+  .wg-hero__logotype { margin-top: 10px; }
+  .wg-hero__badges { margin-top: 20px; gap: 8px; }
+  .wg-hero__badge { width: calc((100% - 16px) / 3); min-height: 60px; font-size: 0.8rem; letter-spacing: 0.02em; }
+  .wg-hero__visual { margin-top: 20px; }
+  .wg-hero__lead { margin-top: 22px; padding-top: 22px; text-align: left; }
 
   /* 集客→問い合わせ獲得→商談化: 縦表示（折り返さない） */
   .wg-broken { padding: 32px 20px; }

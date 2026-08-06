@@ -16,7 +16,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://js-na2.hsforms.net" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Zen Maru Gothic = カンプの Corporate Logo ver2（Web配信なし）の代替書体。FVのロゴタイプ/アイブロー/バッジで使用 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="<?php echo esc_url( will_asset_url( 'will-grow-assets/style.css' ) ); ?>">
 
@@ -80,7 +81,7 @@
   <header class="wg-header" id="wgHeader">
     <div class="wg-container wg-header__inner">
       <a href="#wg-hero" class="wg-header__logo">
-        ウィルグロー<span class="wg-header__logo-sub">WILL&nbsp;GROW</span>
+        <img class="wg-header__logo-img" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/header-logo.webp' ) ); ?>" alt="ウィルグロー" width="495" height="107" decoding="async">
       </a>
       <nav class="wg-header__nav" aria-label="主要導線">
         <ul class="wg-header__links">
@@ -119,24 +120,29 @@
     <section class="wg-hero" id="wg-hero">
       <div class="wg-container">
         <div class="wg-hero__grid">
-          <h1 class="wg-hero__title">
-            <span class="wg-hero__textbg">御社の<span class="wg-hero__title-accent">「BtoBマーケティング担当」</span>として</span><br><span class="wg-hero__textbg">分析・集客・育成・商談化をワンストップで提供</span>
-          </h1>
+          <div class="wg-hero__content">
+            <p class="wg-hero__eyebrow">BtoBマーケティング伴走支援</p>
+
+            <h1 class="wg-hero__logotype">
+              <img class="wg-hero__logotype-img" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/hero-logotype.webp' ) ); ?>" alt="ウィルグロー" width="1130" height="240" fetchpriority="high" decoding="async">
+              <span class="wg-visually-hidden">｜BtoB企業の集客・問い合わせ獲得から育成・商談化までを仕組み化する伴走支援サービス</span>
+            </h1>
+
+            <ul class="wg-hero__badges">
+              <li class="wg-hero__badge">お問い合わせ<br>獲得</li>
+              <li class="wg-hero__badge">見込み顧客の<br>育成</li>
+              <li class="wg-hero__badge">商談を増やす</li>
+            </ul>
+          </div>
 
           <div class="wg-hero__visual">
-            <img class="wg-hero__illust" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/fv-img.png' ) ); ?>" alt="Webサイトを起点に、集客・分析から商談化までを仕組み化するイメージ" width="1314" height="898">
-          </div>
-
-          <div class="wg-hero__content">
-            <p class="wg-hero__sub">
-              <span class="wg-hero__textbg">問い合わせの獲得から育成・商談化までを<span class="wg-hero__title-accent">仕組み化</span>し、</span><br><span class="wg-hero__textbg"><span class="wg-hero__title-accent">安定した見込み顧客の創出</span>を実現します。</span>
-            </p>
-            <div class="wg-hero__cta wg-cta-group">
-              <a href="https://will-corp.co.jp/diagnosis/" class="wg-btn wg-btn--accent wg-btn--lg" target="_blank" rel="noopener" data-cta="hero-shindan">無料診断（1分）はこちら</a>
-              <a href="#wg-form" class="wg-btn wg-btn--ghost wg-btn--lg" data-cta="hero-soudan">無料相談を申し込む</a>
-            </div>
+            <img class="wg-hero__illust" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/hero-illust.webp' ) ); ?>" alt="BtoBマーケティングの数値を見ながら打ち合わせをするチームのイラスト" width="775" height="543" fetchpriority="high" decoding="async">
           </div>
         </div>
+
+        <p class="wg-hero__lead">
+          御社のマーケティング部門として問い合わせの獲得から育成・商談化までを仕組み化。<br class="wg-hero__lead-br">安定した見込み顧客の創出を実現します。
+        </p>
       </div>
     </section>
 
