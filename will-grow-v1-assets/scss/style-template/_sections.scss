@@ -127,25 +127,26 @@
   position: relative;
   // 固定ヘッダーの直下から背景を開始する
   margin-top: var(--wg-header-h);
-  padding-block: 88px 80px;
+  padding-block: 48px 52px;
   background: v.$fv-tint url("images/hero-bg.webp") center top / cover no-repeat;
   overflow: hidden;
 
+  @media (min-width: v.$bp-md) {
+    padding-block: 80px 68px;
+  }
+
   &__grid {
     position: relative;
-    display: block;
   }
 
   &__content {
     position: relative;
     z-index: 1;
-    text-align: left;
   }
 
   // アイブロー「BtoBマーケティング伴走支援」 実測 28px / tracking 240
   &__eyebrow {
-    font-family: v.$font-round;
-    font-weight: 700;
+    font-weight: 900;
     font-size: clamp(1rem, 1.94vw, 1.75rem); // 28px / 1440
     line-height: 1.2;
     letter-spacing: 0.24em;
@@ -172,7 +173,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 32px 0 0;
+    margin: 26px 0 0;
     padding: 0;
     list-style: none;
   }
@@ -181,19 +182,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    width: clamp(120px, 12.43vw, 179px);   // 179px / 1440
-    min-height: clamp(64px, 6.53vw, 94px); // 94px  / 1440
+    width: clamp(112px, 12.43vw, 179px);
+    min-height: clamp(60px, 6.53vw, 94px);
     padding: 8px 6px;
     background: v.$fv-badge;
-    border-radius: 0;
-    font-family: v.$font-round;
-    font-weight: 500;
-    font-size: clamp(0.9rem, 1.67vw, 1.5rem); // 24px / 1440
+    font-weight: 700;
+    // SP はバッジ幅(最小112px)に24pxが収まらないため可変。PC幅で24pxに固定する
+    font-size: clamp(0.85rem, 1.67vw, 1.5rem);
     line-height: 1.2;
     letter-spacing: 0.06em;
-    color: #000000;
+    color: #000;
     text-align: center;
+
+    @media (min-width: v.$bp-lg) {
+      // 24px×6文字＋tracking＝約153px。padding込みで収まるよう下限を170pxに引き上げ
+      width: clamp(170px, 12.43vw, 179px);
+      font-size: 24px;
+    }
   }
 
   // 右カラムのイラスト（カンプ実測 1x で約 388×272）
@@ -201,7 +206,7 @@
   &__visual {
     display: flex;
     justify-content: center;
-    margin-top: 28px;
+    margin-top: 24px;
 
     @media (min-width: v.$bp-md) {
       position: absolute;
@@ -218,7 +223,6 @@
   &__illust {
     width: 100%;
     max-width: 388px;
-    height: auto;
 
     @media (min-width: v.$bp-md) {
       width: clamp(280px, 27vw, 420px);
@@ -228,8 +232,8 @@
 
   // 区切り線（実測 #0E849C・コンテナ全幅）＋ リード文 24px / line-height 1.8
   &__lead {
-    margin: 33px 0 0;
-    padding-top: 34px;
+    margin: 26px 0 0;
+    padding-top: 26px;
     border-top: 1px solid v.$fv-brand;
     font-weight: 700;
     font-size: clamp(0.95rem, 1.67vw, 1.5rem); // 24px / 1440

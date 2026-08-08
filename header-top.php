@@ -115,7 +115,7 @@
     <a href="<?php echo home_url('/'); ?>" class="sp-header-v5__logo" aria-label="トップページへ">
       <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.webp" alt="合同会社ウィル">
     </a>
-    <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="sp-header-v5__cta">資料DL</a>
+    <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="sp-header-v5__cta">無料診断</a>
     <button type="button" class="sp-header-v5__hamburger" aria-label="メニューを開く" aria-controls="sp-menu-v5" aria-expanded="false">
       <span></span>
       <span></span>
@@ -126,12 +126,12 @@
   <nav id="sp-menu-v5" class="sp-menu-v5 sp" aria-hidden="true">
     <div class="sp-menu-v5__inner">
 
+      <!-- PC のメガメニュー「主力サービス」と項目・順序・表記を揃える -->
       <div class="sp-menu-v5__featured">
-        <p class="sp-menu-v5__group-label">BtoB向けサブスクホームページ</p>
+        <p class="sp-menu-v5__group-label">主力サービス</p>
         <ul>
-          <li><a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポ<span>BtoB向けサブスクHP</span></a></li>
-          <li><a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポEC<span>EC事業者向け</span></a></li>
           <li><a href="<?php echo esc_url( home_url('/willgrow/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルグロー<span>BtoB向けリード獲得・商談化支援</span></a></li>
+          <li><a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポ<span>BtoB向けサブスクHP</span></a></li>
         </ul>
       </div>
 
@@ -160,6 +160,7 @@
       <details class="sp-menu-v5__group">
         <summary>COMPANY</summary>
         <ul>
+          <li><a href="<?php echo esc_url( home_url('/') ); ?>">ホーム</a></li>
           <li><a href="<?php echo esc_url( home_url('/about/') ); ?>">私たちについて</a></li>
           <li><a href="<?php echo esc_url( home_url('/contact/') ); ?>">お問い合わせ</a></li>
         </ul>

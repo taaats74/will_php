@@ -37,11 +37,12 @@ $radius-lg: 20px;
 // --- ブレークポイント ---
 $bp-sm: 600px;
 $bp-md: 900px;
+// FVバッジを24px固定にできる下限（v2と揃える）
+$bp-lg: 1024px;
 // ヘッダー専用。ナビ6項目を実測(16px / tracking160 / 項目間28px)で横並びにできる下限。
 // これ未満はハンバーガー＋ドロワーに切り替える
 $bp-header: 1240px;
 
 // --- フォント ---
+// LP 全体を Noto Sans JP に統一（丸ゴシックの併用は廃止）
 $font-base: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-// カンプ指定の Corporate Logo ver2 は Web フォント配信が無いため、丸ゴシックの Zen Maru Gothic で代替
-$font-round: "Zen Maru Gothic", "Corporate Logo ver2", "Hiragino Maru Gothic ProN", "Noto Sans JP", sans-serif;

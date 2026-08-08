@@ -16,8 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://js-na2.hsforms.net" crossorigin>
-  <!-- Zen Maru Gothic = カンプの Corporate Logo ver2（Web配信なし）の代替書体。FVのロゴタイプ/アイブロー/バッジで使用 -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="<?php echo esc_url( will_asset_url( 'will-grow-v1-assets/style.css' ) ); ?>">
 

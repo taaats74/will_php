@@ -7034,8 +7034,10 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
   }
   .page-topv3-fv-sp .container .wrapper .fv-sp-visual {
     position: relative;
+    /* 直下の背景画像のみが対象。子孫セレクタだとロゴ画像(66×38)にも
+       aspect-ratio 3/4 + object-fit:cover が当たり、ロゴが切れてしまう */
   }
-  .page-topv3-fv-sp .container .wrapper .fv-sp-visual img {
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual > img {
     width: 100%;
     display: block;
     aspect-ratio: 3/4;
@@ -7073,16 +7075,21 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
   .page-topv3-fv-sp .container .wrapper .fv-sp-visual .logo-wrapper .logo-img img {
     width: 100%;
   }
+  .page-topv3-fv-sp .container .wrapper .fv-sp-visual {
+    /* 左右5%を除いた全幅を使い、文字サイズを画面幅に追従させて
+       右側が大きく余るアンバランスを解消する */
+  }
   .page-topv3-fv-sp .container .wrapper .fv-sp-visual .fv-message-wrapper {
     position: absolute;
     z-index: 2;
     bottom: 5%;
     left: 5%;
+    right: 5%;
     /* 2026-08-06 カンプ準拠のコピーに差し替え（SPはPCカンプ無しのため既存比率を踏襲） */
   }
   .page-topv3-fv-sp .container .wrapper .fv-sp-visual .fv-message-wrapper .fv-title {
     color: white;
-    font-size: 26px;
+    font-size: clamp(26px, 8.2vw, 34px);
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -7093,7 +7100,7 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
     margin-top: 14px;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
-    font-size: 14px;
+    font-size: clamp(14px, 3.9vw, 16px);
     color: white;
     letter-spacing: 0.06em;
     line-height: 1.63;
@@ -7799,11 +7806,15 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
     margin: 0;
   }
   .page-topv3-mainproduct .container .wrapper .mainproduct-tab li a {
-    padding: 14px 8px;
+    padding: 14px 6px;
+  }
+  .page-topv3-mainproduct .container .wrapper .mainproduct-tab {
+    /* 「BtoB向けリード獲得・商談化支援」(16文字)が半分幅に1行で収まるよう
+       tracking を殺し、文字サイズを画面幅に追従させる */
   }
   .page-topv3-mainproduct .container .wrapper .mainproduct-tab .mp-tab-label {
-    font-size: 9px;
-    letter-spacing: 1px;
+    font-size: clamp(8px, 2.3vw, 10px);
+    letter-spacing: 0;
   }
   .page-topv3-mainproduct .container .wrapper .mainproduct-tab .mp-tab-name {
     font-size: 14px;
@@ -7899,9 +7910,12 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
     width: 78%;
     margin: 0 auto;
   }
+  .page-topv3-mainproduct .container .wrapper .mainproduct-wrapper .mainproduct-item .mp-fv--wg {
+    /* 3つが1行に収まらず段落ちするため、SPは幅を揃えず全幅を使う */
+  }
   .page-topv3-mainproduct .container .wrapper .mainproduct-wrapper .mainproduct-item .mp-fv--wg .mp-fv-badges {
     gap: 6px;
-    max-width: 78%;
+    max-width: none;
     margin: 18px auto 0;
   }
   .page-topv3-mainproduct .container .wrapper .mainproduct-wrapper .mainproduct-item .mp-fv--wg .mp-fv-badge {
@@ -7931,9 +7945,12 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
     width: 78%;
     margin: 0 auto;
   }
+  .page-topv3-mainproduct .container .wrapper .mainproduct-wrapper .mainproduct-item .mp-fv--ws {
+    /* 3つが1行に収まらず段落ちするため、SPは幅を揃えず全幅を使う */
+  }
   .page-topv3-mainproduct .container .wrapper .mainproduct-wrapper .mainproduct-item .mp-fv--ws .mp-fv-points {
     gap: 6px;
-    max-width: 78%;
+    max-width: none;
     margin-inline: auto;
     margin-top: 18px;
   }

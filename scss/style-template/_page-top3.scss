@@ -4177,7 +4177,9 @@ body.has-loading-v2.appear {
         /* 2026-08-06 背景を動画から画像へ。PC用の横長画像を縦位置にトリミングして使う */
         .fv-sp-visual {
           position: relative;
-          img {
+          /* 直下の背景画像のみが対象。子孫セレクタだとロゴ画像(66×38)にも
+             aspect-ratio 3/4 + object-fit:cover が当たり、ロゴが切れてしまう */
+          > img {
             width: 100%;
             display: block;
             aspect-ratio: 3 / 4;
@@ -4221,16 +4223,19 @@ body.has-loading-v2.appear {
             }
           }
 
+          /* 左右5%を除いた全幅を使い、文字サイズを画面幅に追従させて
+             右側が大きく余るアンバランスを解消する */
           .fv-message-wrapper {
             position: absolute;
             z-index: 2;
             bottom: 5%;
             left: 5%;
+            right: 5%;
 
             /* 2026-08-06 カンプ準拠のコピーに差し替え（SPはPCカンプ無しのため既存比率を踏襲） */
             .fv-title {
               color: white;
-              font-size: 26px;
+              font-size: clamp(26px, 8.2vw, 34px);
               font-family: "Zen Kaku Gothic New", sans-serif;
               font-weight: 500;
               font-style: normal;
@@ -4242,7 +4247,7 @@ body.has-loading-v2.appear {
               margin-top: 14px;
               font-family: "Zen Kaku Gothic New", sans-serif;
               font-weight: 500;
-              font-size: 14px;
+              font-size: clamp(14px, 3.9vw, 16px);
               color: white;
               letter-spacing: .06em;
               line-height: 1.63;
@@ -5032,13 +5037,15 @@ body.has-loading-v2.appear {
             margin: 0;
 
             a {
-              padding: 14px 8px;
+              padding: 14px 6px;
             }
           }
 
+          /* 「BtoB向けリード獲得・商談化支援」(16文字)が半分幅に1行で収まるよう
+             tracking を殺し、文字サイズを画面幅に追従させる */
           .mp-tab-label {
-            font-size: 9px;
-            letter-spacing: 1px;
+            font-size: clamp(8px, 2.3vw, 10px);
+            letter-spacing: 0;
           }
 
           .mp-tab-name {
@@ -5159,9 +5166,10 @@ body.has-loading-v2.appear {
                 }
               }
 
+              /* 3つが1行に収まらず段落ちするため、SPは幅を揃えず全幅を使う */
               .mp-fv-badges {
                 gap: 6px;
-                max-width: $mp-fv-name-w-sp;
+                max-width: none;
                 margin: 18px auto 0;
               }
 
@@ -5200,9 +5208,10 @@ body.has-loading-v2.appear {
                 }
               }
 
+              /* 3つが1行に収まらず段落ちするため、SPは幅を揃えず全幅を使う */
               .mp-fv-points {
                 gap: 6px;
-                max-width: $mp-fv-name-w-sp;
+                max-width: none;
                 margin-inline: auto;
                 margin-top: 18px;
               }

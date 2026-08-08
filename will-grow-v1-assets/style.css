@@ -599,22 +599,24 @@ strong {
 .wg-hero {
   position: relative;
   margin-top: var(--wg-header-h);
-  padding-block: 88px 80px;
+  padding-block: 48px 52px;
   background: #E2F5F7 url("images/hero-bg.webp") center top/cover no-repeat;
   overflow: hidden;
 }
+@media (min-width: 900px) {
+  .wg-hero {
+    padding-block: 80px 68px;
+  }
+}
 .wg-hero__grid {
   position: relative;
-  display: block;
 }
 .wg-hero__content {
   position: relative;
   z-index: 1;
-  text-align: left;
 }
 .wg-hero__eyebrow {
-  font-family: "Zen Maru Gothic", "Corporate Logo ver2", "Hiragino Maru Gothic ProN", "Noto Sans JP", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   font-size: clamp(1rem, 1.94vw, 1.75rem);
   line-height: 1.2;
   letter-spacing: 0.24em;
@@ -634,7 +636,7 @@ strong {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 32px 0 0;
+  margin: 26px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -642,24 +644,27 @@ strong {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  width: clamp(120px, 12.43vw, 179px);
-  min-height: clamp(64px, 6.53vw, 94px);
+  width: clamp(112px, 12.43vw, 179px);
+  min-height: clamp(60px, 6.53vw, 94px);
   padding: 8px 6px;
   background: #FAE714;
-  border-radius: 0;
-  font-family: "Zen Maru Gothic", "Corporate Logo ver2", "Hiragino Maru Gothic ProN", "Noto Sans JP", sans-serif;
-  font-weight: 500;
-  font-size: clamp(0.9rem, 1.67vw, 1.5rem);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.67vw, 1.5rem);
   line-height: 1.2;
   letter-spacing: 0.06em;
-  color: #000000;
+  color: #000;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .wg-hero__badge {
+    width: clamp(170px, 12.43vw, 179px);
+    font-size: 24px;
+  }
 }
 .wg-hero__visual {
   display: flex;
   justify-content: center;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 @media (min-width: 900px) {
   .wg-hero__visual {
@@ -676,7 +681,6 @@ strong {
 .wg-hero__illust {
   width: 100%;
   max-width: 388px;
-  height: auto;
 }
 @media (min-width: 900px) {
   .wg-hero__illust {
@@ -685,8 +689,8 @@ strong {
   }
 }
 .wg-hero__lead {
-  margin: 33px 0 0;
-  padding-top: 34px;
+  margin: 26px 0 0;
+  padding-top: 26px;
   border-top: 1px solid #0E849C;
   font-weight: 700;
   font-size: clamp(0.95rem, 1.67vw, 1.5rem);
@@ -2265,4 +2269,6 @@ thead .wg-compare__own {
   .wg-monitor__cta .wg-btn {
     width: 80%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
