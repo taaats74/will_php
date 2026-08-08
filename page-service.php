@@ -120,7 +120,7 @@ get_template_part('template-parts/page-hero', null, [
                 </ul>
               </div>
               <div class="page-service__main-card-visual">
-                <img src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/fv-img.png' ) ); ?>"
+                <img src="<?php echo esc_url( will_asset_url( 'will-grow-v1-assets/images/fv-img.png' ) ); ?>"
                      alt=""
                      loading="lazy"
                      decoding="async">
@@ -394,10 +394,9 @@ get_template_part('template-parts/page-hero', null, [
 
     <div class="diagnosis-panel">
       <h3 class="diagnosis-panel-title">無料診断レポートをお送りします</h3>
-      <p class="diagnosis-panel-text">所要時間は1分。面談は不要です。<br>回答内容に基づき、貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
+      <p class="diagnosis-panel-text">所要時間は1分。<br>回答内容に基づき、貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
       <ul class="diagnosis-features">
         <li>所要1分</li>
-        <li>面談不要</li>
         <li>個別レポート送付</li>
       </ul>
       <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="diagnosis-btn">1分でできる無料診断を受ける</a>

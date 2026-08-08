@@ -15,7 +15,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Noto Sans JP = 各LPのFV（ウィルグロー/ウィルサポ）と同じ書体でメインプロダクト枠を表示するため -->
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <?php wp_head(); ?>
 </head>
@@ -70,10 +71,6 @@
                   <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="header-child-v2__megamenu__featured-card" role="menuitem" target="_blank" rel="noopener noreferrer">
                     <span class="header-child-v2__megamenu__featured-card-title">ウィルサポ</span>
                     <span class="header-child-v2__megamenu__featured-card-sub">BtoB向けサブスクHP</span>
-                  </a>
-                  <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="header-child-v2__megamenu__featured-card" role="menuitem" target="_blank" rel="noopener noreferrer">
-                    <span class="header-child-v2__megamenu__featured-card-title">ウィルサポEC</span>
-                    <span class="header-child-v2__megamenu__featured-card-sub">EC事業者向け</span>
                   </a>
                 </div>
               </div>

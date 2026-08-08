@@ -328,25 +328,27 @@
 
           <div class="mainproduct-wrapper animation-target to-up">
 
+            <!-- ウィルグローLP（page-willgrow-v2.php）の .wg2-hero と文言・デザインを揃える -->
             <div id="mp-tab-wg" class="mainproduct-item is-active">
-              <div class="mp-desc mp-desc--wg">
-                <div class="mp-desc-grid">
-                  <div class="mp-desc-content">
-                    <p class="mp-type">BtoBマーケティング伴走支援</p>
-                    <h3 class="mp-name mp-name--wg">ウィルグロー</h3>
-                    <ul class="mp-badges">
-                      <li>お問い合わせ<br>獲得</li>
-                      <li>見込み顧客の<br>育成</li>
-                      <li>商談を<br>増やす</li>
+              <div class="mp-fv mp-fv--wg">
+                <div class="mp-fv-grid">
+                  <div class="mp-fv-content">
+                    <p class="mp-fv-eyebrow">BtoBマーケティング伴走支援</p>
+                    <h3 class="mp-fv-logotype">
+                      <img src="<?php echo get_template_directory_uri(); ?>/will-grow-v2-assets/images/hero-logotype.webp" alt="ウィルグロー" width="1130" height="240" loading="lazy" decoding="async">
+                    </h3>
+                    <ul class="mp-fv-badges">
+                      <li class="mp-fv-badge">お問い合わせ<br>獲得</li>
+                      <li class="mp-fv-badge">見込み顧客の<br>育成</li>
+                      <li class="mp-fv-badge">商談を増やす</li>
                     </ul>
                   </div>
-                  <div class="mp-desc-visual">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-grow-assets/images/fv-img.png" alt="">
+                  <div class="mp-fv-visual">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-grow-v2-assets/images/hero-illust.webp" alt="" width="775" height="543" loading="lazy" decoding="async">
                   </div>
                 </div>
-                <p class="mp-description">
-                  御社のマーケティング部門として、問い合わせの獲得から育成・商談化までを仕組み化。<br>
-                  安定した見込み顧客の創出を実現します。
+                <p class="mp-fv-lead">
+                  御社のマーケティング部門として問い合わせの獲得から育成・商談化までを仕組み化。<br class="pc">安定した見込み顧客の創出を実現します。
                 </p>
               </div>
               <div class="mp-btn">
@@ -357,28 +359,26 @@
               </div>
             </div>
 
+            <!-- ウィルサポLP（page-willsupport-v2.php）の .wsv2-fv と文言・デザインを揃える -->
             <div id="mp-tab1" class="mainproduct-item">
-              <div class="mp-desc mp-desc--ws">
-                <div class="mp-desc-grid">
-                  <div class="mp-desc-content">
-                    <p class="mp-type">サブスク型ホームページサービス</p>
-                    <h3 class="mp-name">
-                      <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ">
+              <div class="mp-fv mp-fv--ws">
+                <div class="mp-fv-grid">
+                  <div class="mp-fv-content">
+                    <p class="mp-fv-sublabel">サブスク型ホームページサービス</p>
+                    <h3 class="mp-fv-title">
+                      <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ" loading="lazy" decoding="async">
                     </h3>
-                    <ul class="mp-badges">
-                      <li>BtoB特化の<br>構成設計</li>
-                      <li>お問合せに<br>繋がる</li>
-                      <li>比較検討で<br>選ばれる</li>
+                    <ul class="mp-fv-points">
+                      <li class="mp-fv-point">BtoB特化の<br>構成設計</li>
+                      <li class="mp-fv-point">問い合わせに<br>つながる</li>
+                      <li class="mp-fv-point">比較検討で<br>選ばれる</li>
                     </ul>
                   </div>
-                  <div class="mp-desc-visual">
-                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-illust.webp" alt="">
+                  <div class="mp-fv-visual">
+                    <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-illust.webp" alt="ウィルサポ サービスイメージ" loading="lazy" decoding="async">
                   </div>
                 </div>
-                <p class="mp-description">
-                  BtoB企業のための戦略設計から運用まで伴走する<br>
-                  月額費用型のサブスクホームページ制作サービスです
-                </p>
+                <p class="mp-fv-catchcopy">BtoB企業のための戦略設計から運用まで伴走する<br>月額費用型のサブスクホームページ制作サービスです</p>
               </div>
               <div class="mp-btn">
                 <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="mp-btn-link" target="_blank" rel="noopener noreferrer">
@@ -550,7 +550,7 @@
 
         <div class="diagnosis-panel animation-target to-up">
           <h3 class="diagnosis-panel-title">無料診断レポートをお送りします</h3>
-          <p class="diagnosis-panel-text">所要時間は1分。面談は不要です。回答内容に基づき、<br>貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
+          <p class="diagnosis-panel-text">所要時間は1分。回答内容に基づき、<br>貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
           <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="diagnosis-btn">無料診断を受ける</a>
         </div>
 

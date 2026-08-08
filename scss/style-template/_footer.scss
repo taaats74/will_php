@@ -177,8 +177,23 @@
     &.footer-v5-services-list--main {
       li {
         a {
+          display: block;
           font-weight: bold;
           color: #ffffff;
+
+          // 副文言。全称セレクタの color: black を継承して黒文字になるため明示指定が必須
+          span {
+            display: block;
+            margin-top: 3px;
+            font-weight: normal;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, .6);
+          }
+
+          &:hover span {
+            color: rgba(249, 230, 21, .8);
+          }
         }
       }
     }
@@ -257,8 +272,11 @@
         transform: translateY(-2px);
       }
 
+      // fill="currentColor" が効くよう色を継承させる。
+      // 全称セレクタの color: black が svg にも当たるため inherit が必須
       svg {
         display: block;
+        color: inherit;
       }
     }
   }

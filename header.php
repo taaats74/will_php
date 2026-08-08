@@ -78,10 +78,6 @@
                     <span class="header-child-v2__megamenu__featured-card-title">ウィルサポ</span>
                     <span class="header-child-v2__megamenu__featured-card-sub">BtoB向けサブスクHP</span>
                   </a>
-                  <a href="<?php echo esc_url( home_url('/will-support-ec/') ); ?>" class="header-child-v2__megamenu__featured-card" role="menuitem" target="_blank" rel="noopener noreferrer">
-                    <span class="header-child-v2__megamenu__featured-card-title">ウィルサポEC</span>
-                    <span class="header-child-v2__megamenu__featured-card-sub">EC事業者向け</span>
-                  </a>
                 </div>
               </div>
 

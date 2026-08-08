@@ -228,10 +228,10 @@ $h4-bg-pale:    #f0f8f9;  // メガメニューのホバー背景
     }
   }
 
-  // 主力サービス(2 カラム横並び)
+  // 主力サービス(1 カラム縦積み。ウィルグロー / ウィルサポの2枚)
   &__featured {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 

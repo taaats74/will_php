@@ -6,4 +6,5 @@
 **/.DS_Store
 
 # willグロー LP のビルド依存
-will-grow-assets/node_modules/
+will-grow-v1-assets/node_modules/
+will-grow-v2-assets/node_modules/

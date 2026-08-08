@@ -1,0 +1,51 @@
+// =========================================
+// ウィル ブランドカラー / デザイントークン
+// ブランドカラーガイドライン ver.1.0 準拠
+// =========================================
+
+// --- ブランドカラー（5色） ---
+$primary:   #7CC1C9; // PRIMARY   ターコイズブルー（メイン）
+$light:     #B4DBE0; // LIGHT     ペールターコイズ（補助背景）
+$accent:    #28849D; // ACCENT    ディープティール（強調・CTA）
+$highlight: #F0E74E; // HIGHLIGHT マーカーイエロー（注目）
+$text:      #3E5054; // TEXT      チャコールグレー（本文）
+
+// --- 補助カラー ---
+$bg-pale: #F0F8F9; // 極淡背景
+$white:   #FFFFFF; // 白
+$border:  #C0D5D8; // 薄罫線
+$subtle:  #8AA0A4; // サブテキスト
+$warn-bg: #FFF4E6; // 注意背景（極稀）
+
+// --- 派生（hover等） ---
+$accent-dark: #1f6a7e; // ACCENT のホバー濃色
+
+// --- v2 追加 ---
+$navy: #17394A; // 04の図解中央ブロック／フッター地色
+
+// --- FV / ヘッダー（2026-08-06 カンプ実測値。PSD「ウィルグロー.psd」1440px より） ---
+$fv-brand:    #0E849C; // ロゴタイプ／アイブロー／リード文／区切り線
+$fv-badge:    #FAE714; // バッジ背景
+$fv-tint:     #E2F5F7; // 幾何学パターン背景の実測平均（画像未読込時のフォールバック）
+$fv-ink:      #000000; // ヘッダーナビ／バッジ文言
+$fv-btn-dark: #4E4E4E; // ヘッダーCTAボタン背景
+
+// --- レイアウト ---
+$container: 1120px;
+$container-narrow: 760px;
+$gutter: 24px;
+$radius: 12px;
+$radius-lg: 20px;
+
+// --- ブレークポイント ---
+$bp-sm: 600px;
+$bp-md: 900px;
+// 料金3プランを横並びにできる下限（これ未満は縦積み）
+$bp-lg: 1024px;
+// ヘッダー専用。ナビ6項目を実測(16px / tracking160 / 項目間28px)で横並びにできる下限。
+// これ未満はハンバーガー＋ドロワーに切り替える
+$bp-header: 1240px;
+
+// --- フォント ---
+// LP 全体を Noto Sans JP に統一（丸ゴシックの併用は廃止）
+$font-base: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;

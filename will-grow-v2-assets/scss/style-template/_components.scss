@@ -1,0 +1,547 @@
+@use "variables" as v;
+
+// =========================================
+// 共通コンポーネント（wg2-btn / wg2-cta / wg2-card / wg2-icon）
+// =========================================
+
+.wg2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 16px 30px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 8px 18px -12px rgba(v.$navy, 0.9);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.15s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px -14px rgba(v.$navy, 0.9);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  // ボタン末尾の矢印（SVG）
+  svg {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(3px);
+  }
+
+  // 主CTA（無料診断）：ACCENT 塗り
+  &--primary {
+    background: v.$accent;
+    color: v.$white;
+    border-color: v.$accent;
+
+    &:hover {
+      background: v.$accent-dark;
+      border-color: v.$accent-dark;
+      color: v.$white;
+    }
+  }
+
+  // 従CTA（無料相談）：白抜き
+  &--ghost {
+    background: v.$white;
+    color: v.$accent;
+    border-color: v.$accent;
+
+    &:hover {
+      background: v.$accent;
+      color: v.$white;
+    }
+  }
+
+  // 濃色帯の上に置く白塗り
+  &--on-dark {
+    background: v.$white;
+    color: v.$navy;
+    border-color: v.$white;
+
+    &:hover {
+      background: v.$highlight;
+      border-color: v.$highlight;
+      color: v.$navy;
+    }
+  }
+
+  // 濃色帯の上に置く白抜き
+  &--outline-on-dark {
+    background: transparent;
+    color: v.$white;
+    border-color: rgba(v.$white, 0.7);
+
+    &:hover {
+      background: rgba(v.$white, 0.12);
+      border-color: v.$white;
+      color: v.$white;
+    }
+  }
+
+  &--sm {
+    padding: 11px 20px;
+    font-size: 0.85rem;
+    gap: 6px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &--lg {
+    padding: 19px 36px;
+    font-size: 1.05rem;
+
+    @media (min-width: v.$bp-md) {
+      padding: 22px 52px;
+      font-size: 1.15rem;
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+
+// ボタン下の補足（所要時間・無料など）
+.wg2-btn-note {
+  margin: 14px 0 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+
+// =========================================
+// セクション見出しまわり
+// =========================================
+
+// アイブローのチップ（PROBLEM / SOLUTION …）
+.wg2-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: rgba(v.$accent, 0.1);
+  color: v.$accent;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  margin: 0 0 16px;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 0.8rem;
+  }
+
+  &--on-dark {
+    background: rgba(v.$white, 0.16);
+    color: v.$white;
+  }
+}
+
+// 見出しの上に置く小さな導入コピー（そもそも／ご安心ください 等）
+.wg2-kicker {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: v.$accent;
+  letter-spacing: 0.08em;
+
+  &--on-dark {
+    color: v.$highlight;
+  }
+}
+
+// =========================================
+// CTA（カード型）
+// =========================================
+.wg2-cta {
+  margin-top: 48px;
+  padding: 32px 22px;
+  border-radius: v.$radius-lg;
+  background: v.$white;
+  border: 2px solid rgba(v.$accent, 0.25);
+  box-shadow: 0 20px 44px -34px rgba(v.$navy, 1);
+  text-align: center;
+
+  @media (min-width: v.$bp-md) {
+    padding: 44px;
+  }
+
+  &--pale {
+    background: v.$bg-pale;
+    border-color: v.$white;
+  }
+}
+
+.wg2-cta__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: v.$navy;
+  margin: 0 0 12px;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 1.5rem;
+  }
+}
+
+.wg2-cta__text {
+  margin: 0 auto 26px;
+  max-width: 640px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  text-align: left;
+
+  @media (min-width: v.$bp-md) {
+    text-align: center;
+  }
+}
+
+.wg2-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+
+  @media (min-width: v.$bp-sm) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.wg2-cta__note {
+  margin: 16px 0 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+// =========================================
+// CTA（全幅の濃色バンド）
+// =========================================
+.wg2-band {
+  position: relative;
+  padding-block: 52px;
+  background: linear-gradient(135deg, v.$navy 0%, v.$accent 100%);
+  color: v.$white;
+  overflow: hidden;
+
+  @media (min-width: v.$bp-md) {
+    padding-block: 72px;
+  }
+
+  // 右上にうっすら円形のあしらい
+  &::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(v.$white, 0.06);
+    pointer-events: none;
+  }
+}
+
+.wg2-band__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.wg2-band__title {
+  margin: 0 0 14px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.6;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 1.9rem;
+  }
+}
+
+.wg2-band__text {
+  max-width: 680px;
+  margin: 0 auto 28px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  text-align: left;
+
+  @media (min-width: v.$bp-md) {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+// =========================================
+// カード / リスト
+// =========================================
+.wg2-card {
+  background: v.$white;
+  border: 1px solid v.$border;
+  border-radius: v.$radius-lg;
+  padding: 24px 20px;
+  box-shadow: 0 16px 36px -32px rgba(v.$navy, 1);
+
+  @media (min-width: v.$bp-md) {
+    padding: 32px 28px;
+  }
+}
+
+// アイコンの丸台座
+.wg2-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(v.$primary, 0.18);
+  color: v.$accent;
+
+  svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  &--lg {
+    width: 64px;
+    height: 64px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &--on-dark {
+    background: rgba(v.$white, 0.14);
+    color: v.$highlight;
+  }
+
+  &--solid {
+    background: v.$accent;
+    color: v.$white;
+  }
+}
+
+// --- 青丸ポチリスト ---
+.wg2-dotlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.3em;
+    margin-bottom: 0.7em;
+    line-height: 1.8;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: v.$primary;
+    }
+  }
+}
+
+// --- チェック（✓）リスト ---
+.wg2-checkitems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.75em;
+    margin-bottom: 0.7em;
+    line-height: 1.8;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 1.15em;
+      height: 1.15em;
+      border-radius: 50%;
+      background: rgba(v.$accent, 0.12);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.36em;
+      top: 0.78em;
+      width: 0.28em;
+      height: 0.55em;
+      border-right: 2px solid v.$accent;
+      border-bottom: 2px solid v.$accent;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+// --- チェックボックス（□）カード：02のお悩み ---
+.wg2-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 20px;
+  }
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 74px;
+    padding: 16px 20px 16px 58px;
+    background: v.$white;
+    border-radius: 999px;
+    box-shadow: 0 14px 30px -26px rgba(v.$navy, 1);
+    font-weight: 700;
+    line-height: 1.6;
+    font-size: 0.95rem;
+
+    @media (min-width: v.$bp-md) {
+      font-size: 1rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      border: 2px solid v.$accent;
+      border-radius: 5px;
+      background: v.$white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 26px;
+      top: 50%;
+      width: 9px;
+      height: 15px;
+      transform: translateY(-60%) rotate(45deg);
+      border-right: 3px solid v.$accent;
+      border-bottom: 3px solid v.$accent;
+    }
+  }
+}
+
+// --- 表（ネイビーヘッダー＋ゼブラ） ---
+.wg2-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: v.$white;
+  font-size: 0.95rem;
+  border: 1px solid v.$border;
+  border-radius: v.$radius;
+  overflow: hidden;
+
+  th,
+  td {
+    border-bottom: 1px solid v.$border;
+    padding: 14px 16px;
+    text-align: left;
+    line-height: 1.7;
+    vertical-align: top;
+  }
+
+  thead th {
+    background: v.$navy;
+    color: v.$white;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-bottom: 0;
+    white-space: nowrap;
+  }
+
+  tbody th {
+    background: v.$bg-pale;
+    font-weight: 700;
+    white-space: nowrap;
+    color: v.$navy;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 700;
+    color: v.$navy;
+    padding-bottom: 10px;
+  }
+}
+
+// --- スクロール連動フェードイン ---
+.wg2-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wg2-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -19,7 +19,7 @@
   <!-- Zen Maru Gothic = カンプの Corporate Logo ver2（Web配信なし）の代替書体。FVのロゴタイプ/アイブロー/バッジで使用 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="<?php echo esc_url( will_asset_url( 'will-grow-assets/style.css' ) ); ?>">
+  <link rel="stylesheet" href="<?php echo esc_url( will_asset_url( 'will-grow-v1-assets/style.css' ) ); ?>">
 
   <!-- ========== 構造化データ JSON-LD ========== -->
   <!-- (1) Service + Offer -->
@@ -81,7 +81,7 @@
   <header class="wg-header" id="wgHeader">
     <div class="wg-container wg-header__inner">
       <a href="#wg-hero" class="wg-header__logo">
-        <img class="wg-header__logo-img" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/header-logo.webp' ) ); ?>" alt="ウィルグロー" width="495" height="107" decoding="async">
+        <img class="wg-header__logo-img" src="<?php echo esc_url( will_asset_url( 'will-grow-v1-assets/images/header-logo.webp' ) ); ?>" alt="ウィルグロー" width="495" height="107" decoding="async">
       </a>
       <nav class="wg-header__nav" aria-label="主要導線">
         <ul class="wg-header__links">
@@ -124,7 +124,7 @@
             <p class="wg-hero__eyebrow">BtoBマーケティング伴走支援</p>
 
             <h1 class="wg-hero__logotype">
-              <img class="wg-hero__logotype-img" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/hero-logotype.webp' ) ); ?>" alt="ウィルグロー" width="1130" height="240" fetchpriority="high" decoding="async">
+              <img class="wg-hero__logotype-img" src="<?php echo esc_url( will_asset_url( 'will-grow-v1-assets/images/hero-logotype.webp' ) ); ?>" alt="ウィルグロー" width="1130" height="240" fetchpriority="high" decoding="async">
               <span class="wg-visually-hidden">｜BtoB企業の集客・問い合わせ獲得から育成・商談化までを仕組み化する伴走支援サービス</span>
             </h1>
 
@@ -136,7 +136,7 @@
           </div>
 
           <div class="wg-hero__visual">
-            <img class="wg-hero__illust" src="<?php echo esc_url( will_asset_url( 'will-grow-assets/images/hero-illust.webp' ) ); ?>" alt="BtoBマーケティングの数値を見ながら打ち合わせをするチームのイラスト" width="775" height="543" fetchpriority="high" decoding="async">
+            <img class="wg-hero__illust" src="<?php echo esc_url( will_asset_url( 'will-grow-v1-assets/images/hero-illust.webp' ) ); ?>" alt="BtoBマーケティングの数値を見ながら打ち合わせをするチームのイラスト" width="775" height="543" fetchpriority="high" decoding="async">
           </div>
         </div>
 
@@ -800,7 +800,7 @@
 
   <!-- HubSpot 埋め込みフォーム -->
   <script src="https://js-na2.hsforms.net/forms/embed/48153453.js" defer></script>
-  <script src="<?php echo esc_url( will_asset_url( 'will-grow-assets/js/main.js' ) ); ?>" defer></script>
+  <script src="<?php echo esc_url( will_asset_url( 'will-grow-v1-assets/js/main.js' ) ); ?>" defer></script>
   <?php wp_footer(); ?>
 </body>
 </html>
