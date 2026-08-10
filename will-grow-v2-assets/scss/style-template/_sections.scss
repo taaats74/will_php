@@ -243,25 +243,43 @@
 
   &__logotype-img {
     display: block;
-    width: clamp(240px, 39.2vw, 620px);
+    // SPは横いっぱい。900px以上は従来どおり
+    width: 100%;
     height: auto;
+
+    @media (min-width: v.$bp-md) {
+      width: clamp(240px, 39.2vw, 620px);
+    }
   }
 
   &__badges {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    // SPは3つを1行に収める。900px以上は従来どおり折り返し可
+    flex-wrap: nowrap;
+    gap: 8px;
     margin: 26px 0 0;
     padding: 0;
     list-style: none;
+
+    @media (min-width: v.$bp-md) {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
   }
 
   &__badge {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(112px, 12.43vw, 179px);
+    // SPは3等分。900px以上はカンプ実測の固定幅に戻す
+    flex: 1;
+    min-width: 0;
     min-height: clamp(60px, 6.53vw, 94px);
+
+    @media (min-width: v.$bp-md) {
+      flex: 0 0 auto;
+      width: clamp(112px, 12.43vw, 179px);
+    }
     padding: 8px 6px;
     background: v.$fv-badge;
     font-weight: 700;
@@ -366,6 +384,11 @@
     max-width: 360px;
     height: auto;
     margin-inline: auto;
+
+    // SPのみ2/3の大きさに
+    @media (max-width: (v.$bp-md - 1px)) {
+      width: 66%;
+    }
   }
 }
 
@@ -516,7 +539,8 @@
   max-width: 1000px;
   margin: 0 auto 44px;
   text-align: center;
-  font-size: 1.05rem;
+  // SPは指定の位置で改行するため一回り小さく（PCは下のmedia queryで従来値）
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 2;
   color: v.$navy;
@@ -524,6 +548,12 @@
   @media (min-width: v.$bp-md) {
     font-size: 1.3rem;
     line-height: 2.1;
+  }
+}
+
+.wg2-define__key {
+  @media (max-width: (v.$bp-md - 1px)) {
+    font-size: 1.35em;
   }
 }
 
@@ -558,10 +588,16 @@
 // 中央の往復矢印
 .wg2-diagram__flow {
   display: grid;
-  gap: 14px;
-  padding: 4px 0;
+  // SPは2つの矢印を横並びにして縦の間延びを抑える
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+  padding: 8px 0;
 
   @media (min-width: v.$bp-md) {
+    // PCは上下2段（送り／戻り）に戻す
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
     gap: 26px;
     padding: 0 18px;
     align-content: center;

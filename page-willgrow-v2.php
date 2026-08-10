@@ -270,10 +270,10 @@ if ( ! function_exists( 'wg2_icon' ) ) {
         </div>
 
         <p class="wg2-define">
-          ウィルグローは、<em class="wg2-define__key">BtoB特化・月額制の<br class="wg2-br-sp">マーケティング支援</em>のサービスです。<br>
-          マーケティング担当がいなくても、<br>
-          <em class="wg2-define__key">問い合わせと商談が生まれる</em>状態を、<br>
-          <em class="wg2-define__key">設計から運用までまるごと</em>お任せいただけます。
+          ウィルグローは、<br class="wg2-br-sp"><em class="wg2-define__key">BtoB特化・月額制の<br class="wg2-br-sp">マーケティング支援</em>の<br class="wg2-br-sp">サービスです。<br>
+          マーケティング担当が<br class="wg2-br-sp">いなくても、<br>
+          <em class="wg2-define__key">問い合わせと<br class="wg2-br-sp">商談が生まれる</em>状態を、<br>
+          <em class="wg2-define__key">設計から運用まで<br class="wg2-br-sp">まるごと</em>お任せいただけます。
         </p>
 
         <!-- 図解（画像ではなく HTML＋CSS）

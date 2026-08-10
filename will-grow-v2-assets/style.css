@@ -1252,23 +1252,43 @@ body.wg2-loading {
 }
 .wg2-hero__logotype-img {
   display: block;
-  width: clamp(240px, 39.2vw, 620px);
+  width: 100%;
   height: auto;
+}
+@media (min-width: 900px) {
+  .wg2-hero__logotype-img {
+    width: clamp(240px, 39.2vw, 620px);
+  }
 }
 .wg2-hero__badges {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-wrap: nowrap;
+  gap: 8px;
   margin: 26px 0 0;
   padding: 0;
   list-style: none;
+}
+@media (min-width: 900px) {
+  .wg2-hero__badges {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 .wg2-hero__badge {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(112px, 12.43vw, 179px);
+  flex: 1;
+  min-width: 0;
   min-height: clamp(60px, 6.53vw, 94px);
+}
+@media (min-width: 900px) {
+  .wg2-hero__badge {
+    flex: 0 0 auto;
+    width: clamp(112px, 12.43vw, 179px);
+  }
+}
+.wg2-hero__badge {
   padding: 8px 6px;
   background: #FAE714;
   font-weight: 700;
@@ -1365,6 +1385,11 @@ body.wg2-loading {
   max-width: 360px;
   height: auto;
   margin-inline: auto;
+}
+@media (max-width: 899px) {
+  .wg2-problem__visual img {
+    width: 66%;
+  }
 }
 
 .wg2-problem__list {
@@ -1492,7 +1517,7 @@ body.wg2-loading {
   max-width: 1000px;
   margin: 0 auto 44px;
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 2;
   color: #17394A;
@@ -1501,6 +1526,12 @@ body.wg2-loading {
   .wg2-define {
     font-size: 1.3rem;
     line-height: 2.1;
+  }
+}
+
+@media (max-width: 899px) {
+  .wg2-define__key {
+    font-size: 1.35em;
   }
 }
 
@@ -1529,11 +1560,15 @@ body.wg2-loading {
 
 .wg2-diagram__flow {
   display: grid;
-  gap: 14px;
-  padding: 4px 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+  padding: 8px 0;
 }
 @media (min-width: 900px) {
   .wg2-diagram__flow {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
     gap: 26px;
     padding: 0 18px;
     align-content: center;
