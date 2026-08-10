@@ -14,7 +14,7 @@
      - 構造化データ（Service / Offer / FAQPage）が出力される
    ※ noindex 期間中は JSON-LD も評価されないため、意図的に出力を止めている
    ============================================================ */
-$wg2_noindex = true;
+$wg2_noindex = false;
 
 /* robots は WordPress コアの wp_robots 経由で出す。
    Slim SEO も同じフィルターを使うため、meta タグが二重に出ない（後勝ちで noindex を確定させる） */
@@ -39,6 +39,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
     function wg2_icon( $name ) {
         $paths = array(
             'arrow-right'  => '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
+            'close'        => '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
             'check'        => '<path d="M20 6 9 17l-5-5"/>',
             'check-circle' => '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
             'minus-circle' => '<circle cx="12" cy="12" r="10"/><path d="M8 12h8"/>',
@@ -134,6 +135,13 @@ if ( ! function_exists( 'wg2_icon' ) ) {
 <body>
 <?php wp_body_open(); ?>
 
+  <!-- ============ ローディング（ウィルサポ LP と同仕様） ============ -->
+  <div class="wg2-loader" id="wg2Loader" aria-hidden="true">
+    <div class="wg2-loader__inner">
+      <img class="wg2-loader__logo" src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/hero-logotype.webp' ) ); ?>" alt="" width="1130" height="240" decoding="async">
+    </div>
+  </div>
+
   <!-- ============ ヘッダー（主CTA=無料診断を常時配置） ============ -->
   <header class="wg2-header" id="wg2Header">
     <div class="wg2-container wg2-header__inner">
@@ -143,13 +151,12 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <nav class="wg2-header__nav" aria-label="主要導線">
         <ul class="wg2-header__links">
           <li><a href="#wg2-service" class="wg2-header__link">ウィルグローとは</a></li>
-          <li><a href="#wg2-why" class="wg2-header__link">ココが違う</a></li>
           <li><a href="#wg2-price" class="wg2-header__link">料金プラン</a></li>
-          <li><a href="#wg2-choose" class="wg2-header__link">プランの選び方</a></li>
-          <li><a href="#wg2-flow" class="wg2-header__link">6ヶ月の流れ</a></li>
+          <li><a href="#wg2-choose" class="wg2-header__link">活用例</a></li>
           <li><a href="#wg2-faq" class="wg2-header__link">よくあるご質問</a></li>
+          <li><a href="#wg2-contact" class="wg2-header__link wg2-header__link--cta" data-cta-type="consult" data-cta-position="header">お問い合わせ</a></li>
+          <li><a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-header__link wg2-header__link--cta" data-cta-type="diagnosis" data-cta-position="header">無料診断</a></li>
         </ul>
-        <a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--sm" data-cta-type="diagnosis" data-cta-position="header">無料診断（約1分）<?php echo wg2_icon( 'arrow-right' ); ?></a>
       </nav>
       <button class="wg2-burger" id="wg2Burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="wg2Drawer">
         <span></span><span></span><span></span>
@@ -158,15 +165,13 @@ if ( ! function_exists( 'wg2_icon' ) ) {
     <nav class="wg2-drawer" id="wg2Drawer" aria-label="モバイルメニュー">
       <ul class="wg2-drawer__links">
         <li><a href="#wg2-service">ウィルグローとは</a></li>
-        <li><a href="#wg2-why">ココが違う</a></li>
         <li><a href="#wg2-price">料金プラン</a></li>
-        <li><a href="#wg2-choose">プランの選び方</a></li>
-        <li><a href="#wg2-flow">6ヶ月の流れ</a></li>
+        <li><a href="#wg2-choose">活用例</a></li>
         <li><a href="#wg2-faq">よくあるご質問</a></li>
       </ul>
       <div class="wg2-drawer__actions">
-        <a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="drawer">無料診断（約1分）<?php echo wg2_icon( 'arrow-right' ); ?></a>
-        <a href="<?php echo esc_url( $wg2_consult_url ); ?>" class="wg2-btn wg2-btn--ghost wg2-btn--block" data-cta-type="consult" data-cta-position="drawer">無料相談を申し込む<?php echo wg2_icon( 'arrow-right' ); ?></a>
+        <a href="#wg2-contact" class="wg2-btn wg2-btn--ghost wg2-btn--block" data-cta-type="consult" data-cta-position="drawer">お問い合わせ<?php echo wg2_icon( 'arrow-right' ); ?></a>
+        <a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="drawer">無料診断<?php echo wg2_icon( 'arrow-right' ); ?></a>
       </div>
     </nav>
   </header>
@@ -211,7 +216,11 @@ if ( ! function_exists( 'wg2_icon' ) ) {
           <h2 class="wg2-title">こんなお悩みは<br class="wg2-br-sp">ありませんか</h2>
         </div>
 
-        <div class="wg2-problem__list">
+        <div class="wg2-problem">
+          <div class="wg2-problem__visual">
+            <img src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/problem.webp' ) ); ?>" alt="" width="900" height="1185" loading="lazy" decoding="async">
+          </div>
+          <div class="wg2-problem__list">
           <ul class="wg2-checklist">
             <li>売上を伸ばしたいが、打ち手が見つからない</li>
             <li>新規開拓の入口が、紹介と展示会しかない</li>
@@ -220,24 +229,18 @@ if ( ! function_exists( 'wg2_icon' ) ) {
             <li>相見積になると価格で比べられ、技術や品質が伝わらない</li>
             <li>新規開拓をやらなければと思うが、動ける人が社内にいない</li>
           </ul>
-        </div>
-
-        <div class="wg2-cta">
-          <p class="wg2-cta__title">まずは無料診断で、<br class="wg2-br-sp">御社の課題を整理しませんか</p>
-          <p class="wg2-cta__text">10の質問に答えるだけ、約1分です。いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。費用はかかりません。</p>
-          <div class="wg2-cta__actions">
-            <a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--lg" data-cta-type="diagnosis" data-cta-position="sec02">無料診断（約1分）を試す<?php echo wg2_icon( 'arrow-right' ); ?></a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ 03. ご安心ください ============ -->
-    <section class="wg2-section wg2-section--navy" id="wg2-solution">
+    <section class="wg2-section wg2-section--watermark" id="wg2-solution">
+      <img class="wg2-watermark" src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/solution-bg.webp' ) ); ?>" alt="" width="1200" height="1028" loading="lazy" decoding="async" aria-hidden="true">
       <div class="wg2-container">
         <div class="wg2-head">
-          <span class="wg2-eyebrow wg2-eyebrow--on-dark">SOLUTION</span>
-          <h2 class="wg2-title wg2-title--on-dark">ご安心ください、<br class="wg2-br-sp">ウィルグローが<em>すべて解決</em>いたします</h2>
+          <span class="wg2-eyebrow">SOLUTION</span>
+          <h2 class="wg2-title">ご安心ください、<br class="wg2-br-sp">ウィルグローが<em>すべて解決</em>いたします</h2>
         </div>
 
         <ol class="wg2-solution">
@@ -267,17 +270,18 @@ if ( ! function_exists( 'wg2_icon' ) ) {
         </div>
 
         <p class="wg2-define">
-          ウィルグローは、BtoB特化・月額制のマーケティング支援のサービスです。<br>
+          ウィルグローは、<em class="wg2-define__key">BtoB特化・月額制の<br class="wg2-br-sp">マーケティング支援</em>のサービスです。<br>
           マーケティング担当がいなくても、<br>
-          問い合わせと商談が生まれる状態を、<br>
-          設計から運用までまるごとお任せいただけます。
+          <em class="wg2-define__key">問い合わせと商談が生まれる</em>状態を、<br>
+          <em class="wg2-define__key">設計から運用までまるごと</em>お任せいただけます。
         </p>
 
-        <!-- 図解（画像ではなく HTML＋CSS） -->
+        <!-- 図解（画像ではなく HTML＋CSS）
+             左に御社、右にウィルグロー。往復の矢印で「依頼」と「成果」を表す -->
         <div class="wg2-diagram">
           <div class="wg2-diagram__node wg2-diagram__node--you">
             <div class="wg2-diagram__head">
-              <span class="wg2-icon"><?php echo wg2_icon( 'building' ); ?></span>
+              <img class="wg2-diagram__illust" src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/diagram-you.webp' ) ); ?>" alt="" width="600" height="787" loading="lazy" decoding="async">
               <span>
                 <span class="wg2-diagram__label">御社</span>
                 <span class="wg2-diagram__name">マーケ担当のいないBtoB企業</span>
@@ -285,13 +289,21 @@ if ( ! function_exists( 'wg2_icon' ) ) {
             </div>
           </div>
 
-          <p class="wg2-diagram__arrow"><span>まるごとお任せ</span></p>
+          <div class="wg2-diagram__flow">
+            <p class="wg2-diagram__arrow wg2-diagram__arrow--to">
+              <span class="wg2-diagram__arrow-label">まるごとお任せ</span>
+              <span class="wg2-diagram__arrow-line" aria-hidden="true"></span>
+            </p>
+            <p class="wg2-diagram__arrow wg2-diagram__arrow--back">
+              <span class="wg2-diagram__arrow-label">問い合わせ・商談</span>
+              <span class="wg2-diagram__arrow-line" aria-hidden="true"></span>
+            </p>
+          </div>
 
           <div class="wg2-diagram__node wg2-diagram__node--wg">
             <div class="wg2-diagram__head">
-              <span class="wg2-icon wg2-icon--on-dark"><?php echo wg2_icon( 'target' ); ?></span>
               <span>
-                <span class="wg2-diagram__label">ウィルグロー</span>
+                <img class="wg2-diagram__logo" src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/hero-logotype.webp' ) ); ?>" alt="ウィルグロー" width="1130" height="240" loading="lazy" decoding="async">
                 <span class="wg2-diagram__name">御社のマーケティング部門</span>
               </span>
             </div>
@@ -303,19 +315,9 @@ if ( ! function_exists( 'wg2_icon' ) ) {
               <li><?php echo wg2_icon( 'check' ); ?><span>毎月の効果測定と改善</span></li>
             </ul>
           </div>
-
-          <p class="wg2-diagram__arrow"><span>問い合わせ・商談</span></p>
-
-          <div class="wg2-diagram__node wg2-diagram__node--goal">
-            <div class="wg2-diagram__head">
-              <span class="wg2-icon"><?php echo wg2_icon( 'briefcase' ); ?></span>
-              <span class="wg2-diagram__name">御社の営業へ</span>
-            </div>
-          </div>
         </div>
 
         <div class="wg2-service__closing">
-          <p>制作会社・SEO会社・MA導入会社に分けて依頼する必要はありません。<br>窓口はひとつです。</p>
           <p><span class="wg2-service__punch">御社専属のマーケティングチームが、<br class="wg2-br-sp">問い合わせと商談を生み出します。</span></p>
         </div>
       </div>
@@ -331,34 +333,39 @@ if ( ! function_exists( 'wg2_icon' ) ) {
 
         <div class="wg2-why">
           <article class="wg2-why__card">
+            <div class="wg2-why__visual">
+              <img src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/why-01.webp' ) ); ?>" alt="" width="1200" height="1496" loading="lazy" decoding="async">
+            </div>
+            <div class="wg2-why__content">
             <span class="wg2-why__num">1</span>
             <span class="wg2-icon wg2-icon--lg wg2-why__icon"><?php echo wg2_icon( 'target' ); ?></span>
-            <p class="wg2-why__text">BtoBの営業とマーケティングを実務でやってきたチームが設計するため、「問い合わせの数」だけでなく「商談になる数」からも逆算できる。</p>
+            <p class="wg2-why__text">BtoBの営業とマーケティングを<span class="wg2-marker">実務でやってきたチーム</span>が設計するため、「問い合わせの数」だけでなく<span class="wg2-marker">「商談になる数」からも逆算</span>できる。</p>
+            </div>
           </article>
           <article class="wg2-why__card">
+            <div class="wg2-why__visual">
+              <img src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/why-02.webp' ) ); ?>" alt="" width="1200" height="1107" loading="lazy" decoding="async">
+            </div>
+            <div class="wg2-why__content">
             <span class="wg2-why__num">2</span>
             <span class="wg2-icon wg2-icon--lg wg2-why__icon"><?php echo wg2_icon( 'refresh' ); ?></span>
-            <p class="wg2-why__text">お問い合わせの獲得だけでなく、失注後の追客や掘り起こしまで仕組みにするため、営業が本当に追うべき会社に集中できる。</p>
+            <p class="wg2-why__text">お問い合わせの獲得だけでなく、<span class="wg2-marker">失注後の追客や掘り起こしまで仕組み</span>にするため、営業が<span class="wg2-marker">本当に追うべき会社に集中</span>できる。</p>
+            </div>
           </article>
           <article class="wg2-why__card">
+            <div class="wg2-why__visual">
+              <img src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/why-03.webp' ) ); ?>" alt="" width="1200" height="1205" loading="lazy" decoding="async">
+            </div>
+            <div class="wg2-why__content">
             <span class="wg2-why__num">3</span>
             <span class="wg2-icon wg2-icon--lg wg2-why__icon"><?php echo wg2_icon( 'wallet' ); ?></span>
-            <p class="wg2-why__text">記事の本数や作業量で区切らない月額固定のため、その都度の見積もりや稟議を待たずに、記事の追加も、サイトの改善も、必要なだけ進められる。</p>
+            <p class="wg2-why__text">記事の本数や作業量で区切らない<span class="wg2-marker">月額固定</span>のため、その都度の見積もりや稟議を待たずに、記事の追加も、サイトの改善も、<span class="wg2-marker">必要なだけ進められる</span>。</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ 05 CTA（無料診断バンド） ============ -->
-    <section class="wg2-band">
-      <div class="wg2-container wg2-band__inner">
-        <p class="wg2-band__title">御社の課題がどこにあるか、<br class="wg2-br-sp">まず確かめてみませんか</p>
-        <p class="wg2-band__text">10の質問に答えるだけ、約1分です。いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。費用はかかりません。</p>
-        <div class="wg2-cta__actions">
-          <a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-btn wg2-btn--on-dark wg2-btn--lg" data-cta-type="diagnosis" data-cta-position="sec05">無料診断（約1分）を試す<?php echo wg2_icon( 'arrow-right' ); ?></a>
-        </div>
-      </div>
-    </section>
 
     <!-- ============ 06. 料金プラン ============ -->
     <section class="wg2-section wg2-section--pale" id="wg2-price">
@@ -438,35 +445,6 @@ if ( ! function_exists( 'wg2_icon' ) ) {
           </article>
         </div>
 
-        <!-- 全プラン共通 -->
-        <div class="wg2-common">
-          <table class="wg2-table">
-            <caption>全プラン共通</caption>
-            <tbody>
-              <tr><th scope="row">初期費用</th><td>0円</td></tr>
-              <tr><th scope="row">契約期間</th><td>縛りなし（月単位の自動更新）</td></tr>
-              <tr><th scope="row">お打ち合わせ</th><td>月1回・30〜60分</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- 対応範囲 / 別途お見積り -->
-        <div class="wg2-scope">
-          <div class="wg2-scope__box wg2-scope__box--in">
-            <h3 class="wg2-scope__title"><?php echo wg2_icon( 'check-circle' ); ?>プラン内で対応する範囲</h3>
-            <p class="wg2-scope__text">記事制作・リライト（上限なし）／サイト内テキストの修正／問い合わせ導線の改善／フォーム改善／内部リンクの調整／計測設定</p>
-          </div>
-          <div class="wg2-scope__box wg2-scope__box--out">
-            <h3 class="wg2-scope__title"><?php echo wg2_icon( 'minus-circle' ); ?>別途お見積りとなるもの</h3>
-            <p class="wg2-scope__text">新規セクションのデザイン追加／新規ページ・LP制作／撮影・動画制作／システム開発／サイトリニューアル</p>
-          </div>
-        </div>
-
-        <div class="wg2-callout">
-          <p>判断の基準は「デザインを新たに起こす必要があるかどうか」です。<br>必ず事前にお見積りとご合意をいただいてから着手します。<br>知らないうちに費用が増えることはありません。</p>
-          <p class="wg2-note">※3ヶ月ごとに分析結果をおまとめし、大きな改修が必要な場合は、その都度ご提案します</p>
-        </div>
-
         <!-- オプション -->
         <div class="wg2-option">
           <div class="wg2-card">
@@ -475,112 +453,74 @@ if ( ! function_exists( 'wg2_icon' ) ) {
             <p>サイトそのものを作り直したほうが早い場合は、弊社のウィルサポをご案内しています。制作から運用までを月額でお任せいただけます。</p>
             <a class="wg2-option__link" href="<?php echo esc_url( home_url( '/willsupport/' ) ); ?>" target="_blank" rel="noopener">ウィルサポの詳細ページへ<?php echo wg2_icon( 'arrow-right' ); ?></a>
           </div>
-          <div class="wg2-card">
-            <span class="wg2-option__tag">オプション</span>
-            <h3 class="wg2-option__name"><?php echo wg2_icon( 'mail' ); ?>MAツール利用料</h3>
-            <!-- TODO(未確定): 「◯万円前後」の具体的な金額が未定。決まり次第ここを差し替える -->
-            <p>商談プランでは、MAツールの利用料のみ実費でご負担いただきます。目安は月額◯万円前後です（配信規模・ツールにより変動します）。ツールの選定と設定は、私たちが行います。</p>
-          </div>
         </div>
 
-        <div class="wg2-cta">
-          <p class="wg2-cta__title">どのプランが合うか<br class="wg2-br-sp">分からない、という段階で構いません。</p>
-          <p class="wg2-cta__text">現状をお聞きしたうえで、必要なプランをお伝えします。</p>
-          <div class="wg2-cta__actions">
-            <a href="<?php echo esc_url( $wg2_consult_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--lg" data-cta-type="consult" data-cta-position="sec06">無料相談を申し込む<?php echo wg2_icon( 'arrow-right' ); ?></a>
+      </div>
+    </section>
+
+    <!-- ============ 中間CTA（ウィルサポの CTA デザインを踏襲した全幅バンド） ============ -->
+    <section class="wg2-ctaband">
+      <div class="wg2-container wg2-ctaband__inner">
+
+        <div class="wg2-ctaband__head">
+          <span class="wg2-ctaband__eyebrow">CONTACT</span>
+          <h2 class="wg2-ctaband__title">どのプランが合うか分からない、<br class="wg2-br-pc">という段階で構いません。</h2>
+          <p class="wg2-ctaband__lead">初期費用0円・契約期間の縛りなし。<br>現状をお聞きしたうえで、必要なプランをお伝えします。</p>
+        </div>
+
+        <div class="wg2-ctaband__grid">
+
+          <div class="wg2-ctaband__panel">
+            <h3 class="wg2-ctaband__panel-title">まずはお気軽にご相談ください<br>（無料相談）</h3>
+            <p class="wg2-ctaband__panel-text">オンラインで30〜60分。現状をお聞きしたうえで、必要なプランと進め方をお伝えします。ご予算に見合わないと判断した場合は、その旨も正直にお伝えします。</p>
+            <a href="<?php echo esc_url( $wg2_consult_url ); ?>" class="wg2-ctaband__btn" data-cta-type="consult" data-cta-position="sec06">無料相談を申し込む</a>
           </div>
-          <p class="wg2-cta__note">オンライン30〜60分／無料　しつこい営業はいたしません</p>
+
+          <div class="wg2-ctaband__panel">
+            <h3 class="wg2-ctaband__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
+            <p class="wg2-ctaband__panel-text">10の質問に答えるだけ・約1分。いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。費用はかかりません。</p>
+            <a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-ctaband__btn" data-cta-type="diagnosis" data-cta-position="sec06" target="_blank" rel="noopener noreferrer" aria-label="無料診断（約1分）を試す（別ページで開きます）">無料診断（約1分）を試す</a>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- ============ 07. プランの選び方 ============ -->
-    <section class="wg2-section" id="wg2-choose">
+    <section class="wg2-section wg2-section--imgright" id="wg2-choose">
+      <img class="wg2-sideimage wg2-sideimage--br" src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/choose-bg.webp' ) ); ?>" alt="" width="1100" height="1382" loading="lazy" decoding="async" aria-hidden="true">
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">HOW TO CHOOSE</span>
           <h2 class="wg2-title">ウィルグロー活用例</h2>
         </div>
 
-        <div class="wg2-choose">
-          <article class="wg2-choose__card">
-            <h3 class="wg2-choose__name"><?php echo wg2_icon( 'clipboard' ); ?>設計プラン｜月10万円</h3>
-            <div class="wg2-choose__body">
-              <h4 class="wg2-choose__subtitle">こんな会社に向いています</h4>
-              <ul class="wg2-checkitems">
-                <li>社内に、Webを触れる人・動ける人がいる</li>
-                <li>ホームページはあるが、成果が出ているのか分からない</li>
-                <li>何から手をつけるべきか、順番を知りたい</li>
-                <li>大きな予算を決める前に、まず現状を確かめたい</li>
-              </ul>
+        <div class="wg2-plancards">
+          <button type="button" class="wg2-plancard" data-wg2-modal-open="wg2-modal-design">
+            <span class="wg2-plancard__icon"><?php echo wg2_icon( 'clipboard' ); ?></span>
+            <span class="wg2-plancard__name">設計プラン</span>
+            <span class="wg2-plancard__price">月10万円</span>
+            <span class="wg2-plancard__more">活用例を見る<?php echo wg2_icon( 'arrow-right' ); ?></span>
+          </button>
 
-              <h4 class="wg2-choose__subtitle">使い方のイメージ</h4>
-              <div class="wg2-choose__flow">
-                <p>まず、御社のホームページと同業他社のサイトを調べ、いま何が起きているのかを整理します。</p>
-                <p>そのうえで、「どんな会社が、どんな言葉で探しているか」を洗い出し、打つべき手を、効果の大きさと手間の両面から順番に並べます。</p>
-                <p>最後に「どのテーマを、どの順番で書くべきか」を一覧にしてお渡しします。</p>
-                <p>月に一度の打ち合わせで、進め方のご質問にもお答えします。</p>
-              </div>
-              <p class="wg2-note">
-                ※実際に手を動かすのは御社です。お渡しした一覧に沿って、社内で進めていただく形になります。<br>
-                　動かす方がいない場合は、次のプランをご覧ください。
-              </p>
-            </div>
-          </article>
+          <button type="button" class="wg2-plancard wg2-plancard--recommend" data-wg2-modal-open="wg2-modal-inquiry">
+            <span class="wg2-plancard__badge">★おすすめ</span>
+            <span class="wg2-plancard__icon"><?php echo wg2_icon( 'mail' ); ?></span>
+            <span class="wg2-plancard__name">問い合わせプラン</span>
+            <span class="wg2-plancard__price">月30万円</span>
+            <span class="wg2-plancard__more">活用例を見る<?php echo wg2_icon( 'arrow-right' ); ?></span>
+          </button>
 
-          <article class="wg2-choose__card">
-            <h3 class="wg2-choose__name"><?php echo wg2_icon( 'mail' ); ?>問い合わせプラン｜月30万円<span>★おすすめ</span></h3>
-            <div class="wg2-choose__body">
-              <h4 class="wg2-choose__subtitle">こんな会社に向いています</h4>
-              <ul class="wg2-checkitems">
-                <li>新規のお客様を、紹介と展示会以外からも増やしたい</li>
-                <li>やるべきことは何となく分かるが、動ける人が社内にいない</li>
-                <li>営業は動けている。会える相手の数が足りない</li>
-                <li>ホームページから問い合わせが、ほとんど来ていない</li>
-              </ul>
-
-              <h4 class="wg2-choose__subtitle">使い方のイメージ</h4>
-              <div class="wg2-choose__flow">
-                <p>はじめの1ヶ月で、御社のサイトと同業他社を調べ、「どんな会社が、どんな困りごとで探しているか」を整理します。あわせて、数字を正しく見られるよう計測の設定を整えます。</p>
-                <p>2ヶ月目からは、実際に検索されている言葉に合わせた記事を毎月公開。問い合わせフォームまでの導線も、並行して直していきます。</p>
-                <p>毎月、数字を見て、翌月に何をするかを決めます。うまくいかなかった打ち手は、その時点で切り替えます。</p>
-              </div>
-              <p class="wg2-note">
-                ※御社にお願いするのは、月に一度の打ち合わせだけです。<br>
-                　記事を書くのも、サイトを直すのも、数字を見るのも私たちが行います。
-              </p>
-            </div>
-          </article>
-
-          <article class="wg2-choose__card">
-            <h3 class="wg2-choose__name"><?php echo wg2_icon( 'briefcase' ); ?>商談プラン｜月50万円</h3>
-            <div class="wg2-choose__body">
-              <h4 class="wg2-choose__subtitle">こんな会社に向いています</h4>
-              <ul class="wg2-checkitems">
-                <li>問い合わせは来ている。でも受注につながっていない</li>
-                <li>過去に名刺交換した会社が、そのままになっている</li>
-                <li>検討期間が長く、一度断られたきり連絡が途切れてしまう</li>
-                <li>営業の人数は増やせない。会う相手の質を上げたい</li>
-              </ul>
-
-              <h4 class="wg2-choose__subtitle">使い方のイメージ</h4>
-              <div class="wg2-choose__flow">
-                <p>はじめの1ヶ月で、問い合わせプランと同じ準備を進めながら、お持ちの名刺や、過去にお問い合わせいただいた会社を整理します。そのうえで、こちらから連絡を届けられる仕組みを用意します。</p>
-                <p>2ヶ月目からは、一度接点を持った会社へ、定期的に役立つ情報をお届け。記事の公開とサイトの改善も、同時に進めます。</p>
-                <p>届いた情報への反応から「いま関心が高まっている会社」を見つけ、営業の方へお渡しするタイミングをお伝えします。</p>
-              </div>
-              <p class="wg2-note">※営業が、動くべき相手だけに時間を使える形をつくります。</p>
-            </div>
-          </article>
+          <button type="button" class="wg2-plancard" data-wg2-modal-open="wg2-modal-meeting">
+            <span class="wg2-plancard__icon"><?php echo wg2_icon( 'briefcase' ); ?></span>
+            <span class="wg2-plancard__name">商談プラン</span>
+            <span class="wg2-plancard__price">月50万円</span>
+            <span class="wg2-plancard__more">活用例を見る<?php echo wg2_icon( 'arrow-right' ); ?></span>
+          </button>
         </div>
 
-        <div class="wg2-callout">
-          <h3 class="wg2-h3">迷われた場合</h3>
-          <p>社内に動ける方がいなければ、問い合わせプランをお選びください。<br>この状態のご相談を、いちばん多くいただきます。</p>
-          <p>問い合わせはすでに届いていて、その先が課題であれば、商談プランをご検討ください。</p>
-        </div>
 
-        <div class="wg2-honest">
+        <!-- <div class="wg2-honest">
           <h3 class="wg2-honest__title"><?php echo wg2_icon( 'alert' ); ?>正直にお伝えします｜こんな場合は、他の方法をおすすめします</h3>
           <dl class="wg2-honest__list">
             <div>
@@ -596,16 +536,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
               <dd>費用に見合わない可能性があります。その場合は、その旨を最初にお伝えします。</dd>
             </div>
           </dl>
-        </div>
-
-        <div class="wg2-cta wg2-cta--pale">
-          <p class="wg2-cta__title">どれを選べばいいか<br class="wg2-br-sp">分からない、で構いません。</p>
-          <p class="wg2-cta__text">現状をお聞きしたうえで、必要なプランをお伝えします。ご予算に見合わないと判断した場合は、その旨も正直にお伝えします。</p>
-          <div class="wg2-cta__actions">
-            <a href="<?php echo esc_url( $wg2_consult_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--lg" data-cta-type="consult" data-cta-position="sec07">無料相談を申し込む<?php echo wg2_icon( 'arrow-right' ); ?></a>
-          </div>
-          <p class="wg2-cta__note">オンライン30〜60分／無料　しつこい営業はいたしません</p>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -619,8 +550,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
 
         <ol class="wg2-flow">
           <li class="wg2-flow__item">
-            <span class="wg2-icon wg2-flow__icon"><?php echo wg2_icon( 'search' ); ?></span>
-            <span class="wg2-flow__period"><?php echo wg2_icon( 'search' ); ?>1ヶ月目</span>
+            <span class="wg2-flow__period">1ヶ月目</span>
             <h3 class="wg2-flow__title">分析と戦略設計</h3>
             <div class="wg2-flow__block">
               <span class="wg2-flow__label"><?php echo wg2_icon( 'list-checks' ); ?>やること</span>
@@ -633,8 +563,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
           </li>
 
           <li class="wg2-flow__item">
-            <span class="wg2-icon wg2-flow__icon"><?php echo wg2_icon( 'wrench' ); ?></span>
-            <span class="wg2-flow__period"><?php echo wg2_icon( 'wrench' ); ?>2〜3ヶ月目</span>
+            <span class="wg2-flow__period">2〜3ヶ月目</span>
             <h3 class="wg2-flow__title">導線の改修と、記事の制作開始</h3>
             <div class="wg2-flow__block">
               <span class="wg2-flow__label"><?php echo wg2_icon( 'list-checks' ); ?>やること</span>
@@ -649,8 +578,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
           </li>
 
           <li class="wg2-flow__item">
-            <span class="wg2-icon wg2-flow__icon"><?php echo wg2_icon( 'trending-up' ); ?></span>
-            <span class="wg2-flow__period"><?php echo wg2_icon( 'trending-up' ); ?>4〜6ヶ月目</span>
+            <span class="wg2-flow__period">4〜6ヶ月目</span>
             <h3 class="wg2-flow__title">検索からの流入が動き始めます</h3>
             <div class="wg2-flow__block">
               <span class="wg2-flow__label"><?php echo wg2_icon( 'list-checks' ); ?>やること</span>
@@ -664,8 +592,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
           </li>
 
           <li class="wg2-flow__item">
-            <span class="wg2-icon wg2-flow__icon"><?php echo wg2_icon( 'award' ); ?></span>
-            <span class="wg2-flow__period"><?php echo wg2_icon( 'award' ); ?>6ヶ月目以降</span>
+            <span class="wg2-flow__period">6ヶ月目以降</span>
             <h3 class="wg2-flow__title">問い合わせが入る状態へ</h3>
             <div class="wg2-flow__block">
               <span class="wg2-flow__label"><?php echo wg2_icon( 'list-checks' ); ?>やること</span>
@@ -696,12 +623,10 @@ if ( ! function_exists( 'wg2_icon' ) ) {
 
         <div class="wg2-message">
           <figure class="wg2-message__photo">
-            <img src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/member-takahashi.webp' ) ); ?>" alt="合同会社ウィル 代表 高橋竜也" width="1170" height="1165" loading="lazy" decoding="async">
-            <figcaption><strong>高橋 竜也</strong>合同会社ウィル 代表</figcaption>
+            <img src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/message-takahashi.webp' ) ); ?>" alt="合同会社ウィル 代表 高橋竜也" width="780" height="1040" loading="lazy" decoding="async">
           </figure>
 
           <div class="wg2-message__body">
-          <h3 class="wg2-h3">代表メッセージ</h3>
           <p>前職では、BtoB企業のマーケティングを10年以上担当してきました。<br>見込み客を集める仕組みをつくり、インサイドセールスのチームを立ち上げ、そのマネジメントまで一通りやってきました。</p>
           <p>そこで痛感したのは、「問い合わせを増やすこと」と「売上が上がること」は別の話だということです。</p>
           <p>数だけ増やしても、営業が動けない相手ばかりでは意味がない。<br>逆に、いい会社から一件届けば、それだけで事業が変わることもある。<br>マーケティングと営業を切り離した瞬間に、この感覚は失われます。</p>
@@ -838,14 +763,6 @@ if ( ! function_exists( 'wg2_icon' ) ) {
             </div>
           </details>
         </div>
-
-        <div class="wg2-cta">
-          <p class="wg2-cta__title">ここに書かれていないことも、<br class="wg2-br-sp">お気軽にご相談ください。</p>
-          <div class="wg2-cta__actions">
-            <a href="<?php echo esc_url( $wg2_consult_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--lg" data-cta-type="consult" data-cta-position="sec10">無料相談を申し込む<?php echo wg2_icon( 'arrow-right' ); ?></a>
-          </div>
-          <p class="wg2-cta__note">オンライン30〜60分／無料　しつこい営業はいたしません</p>
-        </div>
       </div>
     </section>
 
@@ -857,52 +774,8 @@ if ( ! function_exists( 'wg2_icon' ) ) {
           <h2 class="wg2-title">お問い合わせ</h2>
         </div>
 
-        <!-- 無料診断／無料相談の違い -->
-        <div class="wg2-contact__compare">
-          <table class="wg2-table">
-            <thead>
-              <tr>
-                <th scope="col"><span class="wg2-vh">項目</span></th>
-                <th scope="col"><span class="wg2-contact__ico"><?php echo wg2_icon( 'zap' ); ?>無料診断</span></th>
-                <th scope="col"><span class="wg2-contact__ico"><?php echo wg2_icon( 'message' ); ?>無料相談</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">かかる時間</th>
-                <td>10の質問に答えるだけ、約1分</td>
-                <td>オンライン30〜60分</td>
-              </tr>
-              <tr>
-                <th scope="row">やること</th>
-                <td>ご回答をもとに、いまの取り組みのどこに課題がありそうかを整理してレポートをお送りします</td>
-                <td>現状をお聞きしたうえで、必要なプランをお伝えします</td>
-              </tr>
-              <tr>
-                <th scope="row">こんな方に</th>
-                <td>まず自社の課題を手早く把握したい</td>
-                <td>実際のサイトを見て、進め方まで相談したい</td>
-              </tr>
-              <tr>
-                <th scope="row">費用</th>
-                <td>無料</td>
-                <td>無料／しつこい営業はいたしません</td>
-              </tr>
-              <tr>
-                <th scope="row">お申し込み</th>
-                <td><a class="wg2-option__link" href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" data-cta-type="diagnosis" data-cta-position="sec11">無料診断へ<?php echo wg2_icon( 'arrow-right' ); ?></a></td>
-                <td>下記フォームより</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
 
         <div class="wg2-form">
-          <p class="wg2-form__title"><?php echo wg2_icon( 'send' ); ?>無料相談のお申し込み</p>
-          <p class="wg2-form__note">
-            ご入力いただいた個人情報の取り扱いについては<a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" target="_blank" rel="noopener">プライバシーポリシー</a>をご確認ください。<br>
-            フォームの送信をもって、内容に同意いただいたものとみなします。
-          </p>
           <!-- HubSpot 埋め込みフォーム -->
           <div class="hs-form-frame" data-region="na2" data-form-id="0c0451c8-6e90-4f30-a2ec-7e6f83ec71fc" data-portal-id="48153453"></div>
         </div>
@@ -911,21 +784,96 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       </div>
     </section>
 
+    <!-- ============ 活用例モーダル ============ -->
+      <dialog class="wg2-modal" id="wg2-modal-design" aria-labelledby="wg2-modal-design-title">
+        <div class="wg2-modal__inner">
+          <div class="wg2-modal__head">
+            <h3 class="wg2-modal__title" id="wg2-modal-design-title"><?php echo wg2_icon( 'clipboard' ); ?>設計プラン｜月10万円</h3>
+            <button type="button" class="wg2-modal__close" data-wg2-modal-close aria-label="閉じる"><?php echo wg2_icon( 'close' ); ?></button>
+          </div>
+          <div class="wg2-modal__body wg2-choose__body">
+                  <h4 class="wg2-choose__subtitle">こんな会社に向いています</h4>
+                  <ul class="wg2-checkitems">
+                    <li>社内に、Webを触れる人・動ける人がいる</li>
+                    <li>ホームページはあるが、成果が出ているのか分からない</li>
+                    <li>何から手をつけるべきか、順番を知りたい</li>
+                    <li>大きな予算を決める前に、まず現状を確かめたい</li>
+                  </ul>
+
+                  <h4 class="wg2-choose__subtitle">使い方のイメージ</h4>
+                  <div class="wg2-choose__flow">
+                    <p>まず、御社のホームページと同業他社のサイトを調べ、いま何が起きているのかを整理します。</p>
+                    <p>そのうえで、「どんな会社が、どんな言葉で探しているか」を洗い出し、打つべき手を、効果の大きさと手間の両面から順番に並べます。</p>
+                    <p>最後に「どのテーマを、どの順番で書くべきか」を一覧にしてお渡しします。</p>
+                    <p>月に一度の打ち合わせで、進め方のご質問にもお答えします。</p>
+                  </div>
+                  <p class="wg2-note">
+                    ※実際に手を動かすのは御社です。お渡しした一覧に沿って、社内で進めていただく形になります。<br>
+                    　動かす方がいない場合は、次のプランをご覧ください。
+                  </p>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog class="wg2-modal" id="wg2-modal-inquiry" aria-labelledby="wg2-modal-inquiry-title">
+        <div class="wg2-modal__inner">
+          <div class="wg2-modal__head">
+            <h3 class="wg2-modal__title" id="wg2-modal-inquiry-title"><?php echo wg2_icon( 'mail' ); ?>問い合わせプラン｜月30万円</h3>
+            <button type="button" class="wg2-modal__close" data-wg2-modal-close aria-label="閉じる"><?php echo wg2_icon( 'close' ); ?></button>
+          </div>
+          <div class="wg2-modal__body wg2-choose__body">
+                  <h4 class="wg2-choose__subtitle">こんな会社に向いています</h4>
+                  <ul class="wg2-checkitems">
+                    <li>新規のお客様を、紹介と展示会以外からも増やしたい</li>
+                    <li>やるべきことは何となく分かるが、動ける人が社内にいない</li>
+                    <li>営業は動けている。会える相手の数が足りない</li>
+                    <li>ホームページから問い合わせが、ほとんど来ていない</li>
+                  </ul>
+
+                  <h4 class="wg2-choose__subtitle">使い方のイメージ</h4>
+                  <div class="wg2-choose__flow">
+                    <p>はじめの1ヶ月で、御社のサイトと同業他社を調べ、「どんな会社が、どんな困りごとで探しているか」を整理します。あわせて、数字を正しく見られるよう計測の設定を整えます。</p>
+                    <p>2ヶ月目からは、実際に検索されている言葉に合わせた記事を毎月公開。問い合わせフォームまでの導線も、並行して直していきます。</p>
+                    <p>毎月、数字を見て、翌月に何をするかを決めます。うまくいかなかった打ち手は、その時点で切り替えます。</p>
+                  </div>
+                  <p class="wg2-note">
+                    ※御社にお願いするのは、月に一度の打ち合わせだけです。<br>
+                    　記事を書くのも、サイトを直すのも、数字を見るのも私たちが行います。
+                  </p>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog class="wg2-modal" id="wg2-modal-meeting" aria-labelledby="wg2-modal-meeting-title">
+        <div class="wg2-modal__inner">
+          <div class="wg2-modal__head">
+            <h3 class="wg2-modal__title" id="wg2-modal-meeting-title"><?php echo wg2_icon( 'briefcase' ); ?>商談プラン｜月50万円</h3>
+            <button type="button" class="wg2-modal__close" data-wg2-modal-close aria-label="閉じる"><?php echo wg2_icon( 'close' ); ?></button>
+          </div>
+          <div class="wg2-modal__body wg2-choose__body">
+                  <h4 class="wg2-choose__subtitle">こんな会社に向いています</h4>
+                  <ul class="wg2-checkitems">
+                    <li>問い合わせは来ている。でも受注につながっていない</li>
+                    <li>過去に名刺交換した会社が、そのままになっている</li>
+                    <li>検討期間が長く、一度断られたきり連絡が途切れてしまう</li>
+                    <li>営業の人数は増やせない。会う相手の質を上げたい</li>
+                  </ul>
+
+                  <h4 class="wg2-choose__subtitle">使い方のイメージ</h4>
+                  <div class="wg2-choose__flow">
+                    <p>はじめの1ヶ月で、問い合わせプランと同じ準備を進めながら、お持ちの名刺や、過去にお問い合わせいただいた会社を整理します。そのうえで、こちらから連絡を届けられる仕組みを用意します。</p>
+                    <p>2ヶ月目からは、一度接点を持った会社へ、定期的に役立つ情報をお届け。記事の公開とサイトの改善も、同時に進めます。</p>
+                    <p>届いた情報への反応から「いま関心が高まっている会社」を見つけ、営業の方へお渡しするタイミングをお伝えします。</p>
+                  </div>
+                  <p class="wg2-note">※営業が、動くべき相手だけに時間を使える形をつくります。</p>
+          </div>
+        </div>
+      </dialog>
+
   </main>
 
-  <!-- ============ フッター ============ -->
-  <footer class="wg2-footer">
-    <div class="wg2-container">
-      <p class="wg2-footer__logo">ウィルグロー</p>
-      <p class="wg2-footer__company">運営：合同会社ウィル（福岡・博多）</p>
-      <ul class="wg2-footer__links">
-        <li><a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" data-cta-type="diagnosis" data-cta-position="footer">無料診断（約1分）</a></li>
-        <li><a href="<?php echo esc_url( $wg2_consult_url ); ?>" data-cta-type="consult" data-cta-position="footer">無料相談</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" target="_blank" rel="noopener">プライバシーポリシー</a></li>
-      </ul>
-      <p class="wg2-footer__copy">&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> WILL, LLC. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- ============ フッター（コーポレートサイト共通） ============ -->
+  <?php get_template_part( 'template-parts/footer-common' ); ?>
 
   <!-- ============ 追従CTA（SP=下部固定／PC=右下） ============ -->
   <div class="wg2-sticky" id="wg2Sticky">

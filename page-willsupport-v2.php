@@ -1243,47 +1243,7 @@ $ws_tax_label = '円（税抜）';
   <!-- ============================================
        16. FOOTER
        ============================================ -->
-  <footer class="wsv2-footer" role="contentinfo">
-    <div class="container">
-
-      <div class="wsv2-footer__inner">
-
-        <!-- ブランド -->
-        <div class="wsv2-footer__brand">
-          <a href="#top" class="wsv2-footer__logo" aria-label="ウィルサポ トップへ戻る">
-            <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/header-logo.webp" alt="ウィルサポ" width="140" height="35" loading="lazy" decoding="async">
-          </a>
-          <p class="wsv2-footer__site-link">
-            <a
-              href="https://will-corp.co.jp/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="運営会社はこちら（外部サイトに移動します）"
-            >運営会社はこちら</a>
-          </p>
-        </div>
-
-        <!-- フッターナビ -->
-        <nav class="wsv2-footer__nav" aria-label="フッターナビゲーション">
-          <a href="#concept" class="wsv2-footer__link">コンセプト</a>
-          <a href="#feature" class="wsv2-footer__link">選ばれる理由</a>
-          <a href="#compare" class="wsv2-footer__link">他社との違い</a>
-          <a href="#pricing" class="wsv2-footer__link">料金プラン</a>
-          <a href="#flow" class="wsv2-footer__link">制作の流れ</a>
-          <a href="#works" class="wsv2-footer__link">制作実績</a>
-          <a href="#faq" class="wsv2-footer__link">よくあるご質問</a>
-          <a href="#contact-form" class="wsv2-footer__link wsv2-footer__link--cta">無料相談</a>
-          <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-footer__link wsv2-footer__link--cta" target="_blank" rel="noopener noreferrer">無料診断</a>
-        </nav>
-
-      </div><!-- /.wsv2-footer__inner -->
-
-      <div class="wsv2-footer__bottom">
-        <p class="wsv2-footer__copy">© Will LLC. All rights reserved.</p>
-      </div>
-
-    </div>
-  </footer>
+  <?php get_template_part( 'template-parts/footer-common' ); ?>
 
   <!-- ============================================
        17. 無料診断 追従バナー（PC：右下カード／SP：下部バー）

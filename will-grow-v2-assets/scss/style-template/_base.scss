@@ -70,7 +70,31 @@ strong {
     background: v.$bg-pale;
   }
 
-  // 濃色セクション（03 SOLUTION など）
+  // 右側に背景イラストを敷くセクション（07 活用例）
+  // 画像の上に白のカバーを重ね、本文の可読性を保つ
+  &--imgright {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    // 白のカバー（画像より前・本文より後ろ）
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba(v.$white, 0.74);
+      pointer-events: none;
+    }
+
+    .wg2-container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
+  // 濃色セクション
   &--navy {
     background: v.$navy;
     color: v.$white;

@@ -1,6 +1,81 @@
 @use "variables" as v;
 
 // =========================================
+// ローディング（ウィルサポ LP の .wsv2-loader と同仕様）
+// 背景一色にロゴをふわっと出し、1.5秒後にフェードアウトして DOM から削除する
+// =========================================
+.wg2-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: v.$fv-tint;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.9s ease-in-out, visibility 0s linear 0.9s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  // 将来的にスキップさせたい場合用
+  &.is-skipped {
+    display: none;
+  }
+}
+
+.wg2-loader__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wg2-loader__logo {
+  width: 70%;
+  max-width: 480px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.7s ease-out, transform 0.9s ease-in-out;
+
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
+}
+
+// JS が .is-shown を付けたらロゴがフェードイン
+.wg2-loader.is-shown .wg2-loader__logo {
+  opacity: 1;
+  transform: none;
+}
+
+// JS が .is-hidden を付けたらロゴが少し上へ抜ける（背景のフェードは親側）
+.wg2-loader.is-hidden .wg2-loader__logo {
+  transform: translateY(-14px);
+}
+
+// ローダー表示中は背面のスクロールを止める
+body.wg2-loading {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wg2-loader__logo,
+  .wg2-loader.is-shown .wg2-loader__logo,
+  .wg2-loader.is-hidden .wg2-loader__logo {
+    transform: none;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .wg2-loader.is-shown .wg2-loader__logo {
+    opacity: 1;
+  }
+}
+
+// =========================================
 // 共通コンポーネント（wg2-btn / wg2-cta / wg2-card / wg2-icon）
 // =========================================
 
@@ -169,6 +244,143 @@
 }
 
 // =========================================
+// 中間CTAバンド（ウィルサポ LP の .wsv2-cta デザインを踏襲）
+// 全幅・左右で色が切り替わる地に、白い2パネルを内側にずらして重ねる
+// =========================================
+.wg2-ctaband {
+  // 左半分=ACCENT / 右半分=PRIMARY の2色地
+  background: linear-gradient(90deg, v.$accent 0%, v.$accent 50%, v.$primary 50%, v.$primary 100%);
+  padding: 72px 0;
+
+  @media (min-width: v.$bp-md) {
+    padding: 100px 0;
+  }
+}
+
+.wg2-ctaband__head {
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media (min-width: v.$bp-md) {
+    margin-bottom: 56px;
+  }
+}
+
+.wg2-ctaband__eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(v.$white, 0.42);
+  text-transform: uppercase;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 1.5rem;
+  }
+}
+
+.wg2-ctaband__title {
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: v.$white;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 1.9rem;
+  }
+}
+
+.wg2-ctaband__lead {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: rgba(v.$white, 0.88);
+}
+
+.wg2-ctaband__grid {
+  display: grid;
+  gap: 20px;
+  align-items: stretch;
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+
+.wg2-ctaband__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 30px 24px;
+  background: v.$white;
+  border-radius: v.$radius;
+  box-shadow: 0 10px 40px rgba(#000, 0.15);
+
+  @media (min-width: v.$bp-md) {
+    padding: 40px 36px;
+
+    // 2色の境目をまたぐように内側へ寄せる
+    &:first-child {
+      transform: translateX(-24px);
+    }
+
+    &:last-child {
+      transform: translateX(24px);
+    }
+  }
+}
+
+.wg2-ctaband__panel-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: v.$navy;
+  text-align: center;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 1.4rem;
+  }
+}
+
+.wg2-ctaband__panel-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: v.$text;
+}
+
+.wg2-ctaband__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+  padding: 16px 24px;
+  background: v.$navy;
+  color: v.$white;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid v.$white;
+    outline-offset: 3px;
+  }
+}
+
+// =========================================
 // CTA（カード型）
 // =========================================
 .wg2-cta {
@@ -235,63 +447,6 @@
   opacity: 0.85;
 }
 
-// =========================================
-// CTA（全幅の濃色バンド）
-// =========================================
-.wg2-band {
-  position: relative;
-  padding-block: 52px;
-  background: linear-gradient(135deg, v.$navy 0%, v.$accent 100%);
-  color: v.$white;
-  overflow: hidden;
-
-  @media (min-width: v.$bp-md) {
-    padding-block: 72px;
-  }
-
-  // 右上にうっすら円形のあしらい
-  &::before {
-    content: "";
-    position: absolute;
-    top: -120px;
-    right: -80px;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: rgba(v.$white, 0.06);
-    pointer-events: none;
-  }
-}
-
-.wg2-band__inner {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-.wg2-band__title {
-  margin: 0 0 14px;
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: 1.6;
-
-  @media (min-width: v.$bp-md) {
-    font-size: 1.9rem;
-  }
-}
-
-.wg2-band__text {
-  max-width: 680px;
-  margin: 0 auto 28px;
-  font-size: 0.95rem;
-  line-height: 1.9;
-  text-align: left;
-
-  @media (min-width: v.$bp-md) {
-    text-align: center;
-    font-size: 1rem;
-  }
-}
 
 // =========================================
 // カード / リスト

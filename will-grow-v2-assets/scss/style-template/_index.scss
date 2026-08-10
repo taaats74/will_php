@@ -2,3 +2,7 @@
 @use "base";
 @use "components";
 @use "sections";
+
+// コーポレートサイト共通フッター（テーマ本体の SCSS をそのまま利用）
+// 変数依存が無い独立したパーシャルなので、そのまま @use できる
+@use "../../../scss/style-template/footer";
