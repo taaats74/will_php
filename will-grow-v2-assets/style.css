@@ -2713,47 +2713,38 @@ body.wg2-modal-open {
 }
 
 .wg2-message {
-  display: grid;
-  gap: 28px;
-  max-width: 960px;
+  position: relative;
+  width: 80%;
+  max-width: 1100px;
   margin-inline: auto;
 }
-@media (min-width: 900px) {
-  .wg2-message {
-    grid-template-columns: 320px minmax(0, 1fr);
-    grid-template-areas: ".     head" "photo body";
-    column-gap: 44px;
-    row-gap: 0;
-    align-items: start;
-  }
-}
-@media (min-width: 1160px) {
-  .wg2-message {
-    margin-left: calc((100% - 960px) / 2 + 60px);
-    margin-right: calc((100% - 960px) / 2 - 60px);
-  }
-}
 
-@media (min-width: 900px) {
-  .wg2-message__heading {
-    grid-area: head;
-  }
+.wg2-message__heading,
+.wg2-message__body {
+  position: relative;
+  z-index: 1;
 }
 
 .wg2-message__photo {
+  margin: 0 auto 24px;
   max-width: 260px;
-  margin: 0 auto;
 }
 @media (min-width: 900px) {
   .wg2-message__photo {
-    grid-area: photo;
-    max-width: none;
+    position: absolute;
+    top: 0;
+    left: -8%;
+    z-index: 0;
+    width: 640px;
+    max-width: 76%;
+    margin: 0;
+    pointer-events: none;
+    user-select: none;
   }
 }
 .wg2-message__photo img {
   display: block;
   width: 100%;
-  box-shadow: 0 24px 48px -34px #17394a;
 }
 
 @media (min-width: 900px) {
@@ -2764,6 +2755,10 @@ body.wg2-modal-open {
 .wg2-message__body p {
   margin: 0 0 1.5em;
   line-height: 2;
+}
+.wg2-message__body strong {
+  font-weight: 700;
+  color: #17394A;
 }
 
 .wg2-message__sign {

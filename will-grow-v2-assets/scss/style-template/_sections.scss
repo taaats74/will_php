@@ -1847,54 +1847,41 @@ body.wg2-modal-open {
 // -----------------------------------------
 // 09. ABOUT US
 // -----------------------------------------
+// テキストは中央寄せの1カラム。ロゴは背面のあしらいとして左に置く
 .wg2-message {
-  display: grid;
-  gap: 28px;
-  max-width: 960px;
+  position: relative;
+  width: 80%;
+  max-width: 1100px;
   margin-inline: auto;
-
-  @media (min-width: v.$bp-md) {
-    // 見出しを独立した行に置き、写真と本文1行目を同じ行に載せることで
-    // 写真の上端が本文の1行目にぴったり揃う（計算値に頼らない）
-    grid-template-columns: 320px minmax(0, 1fr);
-    grid-template-areas:
-      ".     head"
-      "photo body";
-    column-gap: 44px;
-    row-gap: 0;
-    align-items: start;
-  }
-
-  // 視覚補正：本文の右端が <br> のせいで大きく空き、数値上は中央でも
-  // 左に寄って見えるため 60px 右へずらす。
-  // 余白が 60px 未満の幅では横スクロールが出るので 1160px 以上でのみ適用する
-  @media (min-width: 1160px) {
-    // 右マージンも同量詰めることで、ブロック幅960pxを保ったまま平行移動させる
-    margin-left: calc((100% - 960px) / 2 + 60px);
-    margin-right: calc((100% - 960px) / 2 - 60px);
-  }
 }
 
-.wg2-message__heading {
-  @media (min-width: v.$bp-md) {
-    grid-area: head;
-  }
+.wg2-message__heading,
+.wg2-message__body {
+  position: relative;
+  z-index: 1;
 }
 
-// 追従（sticky）はさせず、本文と一緒にスクロールさせる
 .wg2-message__photo {
+  margin: 0 auto 24px;
   max-width: 260px;
-  margin: 0 auto;
 
+  // PCはあしらいとして左に絶対配置し、本文の背面へ回す
   @media (min-width: v.$bp-md) {
-    grid-area: photo;
-    max-width: none;
+    position: absolute;
+    top: 0;
+    left: -8%;
+    z-index: 0;
+    width: 640px;
+    max-width: 76%;
+    margin: 0;
+    pointer-events: none;
+    user-select: none;
   }
 
+  // 透過ロゴを敷くため、写真時代の影は付けない
   img {
     display: block;
     width: 100%;
-    box-shadow: 0 24px 48px -34px rgba(v.$navy, 1);
   }
 }
 
@@ -1906,6 +1893,12 @@ body.wg2-modal-open {
   p {
     margin: 0 0 1.5em;
     line-height: 2;
+  }
+
+  // 本文中の強調。長文なのでマーカーは使わず、太字＋濃色で落ち着かせる
+  strong {
+    font-weight: 700;
+    color: v.$navy;
   }
 }
 
