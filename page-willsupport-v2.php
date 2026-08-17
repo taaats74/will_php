@@ -341,7 +341,7 @@
 
           <div class="wsv2-issue__section-head">
             <p class="wsv2-issue__eyebrow">ISSUE</p>
-            <h2 class="wsv2-issue__title wsv2-fade">ウィルサポが解決する<br>Webサイトの5つの課題</h2>
+            <h2 class="wsv2-issue__title wsv2-fade">ウィルサポが解決する<br>Webサイトの6つの課題</h2>
             <!-- <p class="wsv2-issue__lead">比較検討フェーズで選ばれないWebサイトには共通する特徴があり、<br>一つでも当てはまる場合は、ウィルサポがお役に立てる可能性があります。</p> -->
           </div>
 
