@@ -274,9 +274,9 @@
 
             <!-- 左カラム：テキストコンテンツ -->
             <div class="wsv2-fv__content">
-              <p class="wsv2-fv__sublabel">サブスク型ホームページサービス</p>
+              <p class="wsv2-fv__sublabel">BtoB企業のサブスク型サイト制作</p>
               <h1 class="wsv2-fv__title">
-                <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ" loading="eager" decoding="async">
+                <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ｜BtoB企業のためのサブスク型ホームページ制作" loading="eager" decoding="async">
               </h1>
               <ul class="wsv2-fv__points">
                 <li class="wsv2-fv__point">BtoB特化の<br>構成設計</li>
