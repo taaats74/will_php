@@ -7,18 +7,15 @@
 
 <?php
 /* ============================================================
-   料金改定 自動切替（/price/ ウィルサポ サブスクHP のみ）
-   - 本文はDB（ページID21）にあるため the_content フィルタで変換
-   - 2026-08-01 00:00 JST 以降：スタート削除・30,000/40,000/50,000・初期費用100,000円・税抜注記
+   料金改定（2026-08-01）反映（/price/ ウィルサポ サブスクHP のみ）
+   - 本文はDB（ページID21）に旧価格のまま残っているため the_content フィルタで変換
+   - 内容：スタート削除・30,000/40,000/50,000・初期費用100,000円・税抜注記
    - 他サービス（集客サポート等）や 9,800円〜（別サービス）は変更しない
+   - ※DB本文（ページID21）を新価格に修正できたら、このフィルタごと削除可
    ============================================================ */
 if ( ! function_exists( 'will_price_revised_content' ) ) {
   function will_price_revised_content( $content ) {
     if ( get_the_ID() !== 21 ) { return $content; }
-    // プレビュー用：?ws_preview=after で改定後、?ws_preview=before で現行を強制表示（確認用・後で削除可）
-    $ws_revised = ( current_time( 'timestamp' ) >= strtotime( '2026-08-01 00:00:00' ) );
-    if ( isset( $_GET['ws_preview'] ) ) { $ws_revised = ( $_GET['ws_preview'] === 'after' ); }
-    if ( ! $ws_revised ) { return $content; }
     $pattern = '/(<h2 class="price-header"><span>ウ<\/span>ィルサポ サブスクHP<\/h2>.*?)(<div class="service double">)/s';
     return preg_replace_callback( $pattern, function ( $m ) {
       $block = $m[1];

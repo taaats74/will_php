@@ -4,17 +4,7 @@
   Tempkate Post Type: page
 */
 
-/* ============================================================
-   料金改定 自動切替フラグ（2026-08-01 00:00 JST 以降で新価格）
-   - true  : 新価格（税抜・初期費用100,000円・スタートプラン廃止・0円訴求なし）
-   - false : 現行価格（〜2026-07-31・税抜・初期費用0円）
-   ※表示価格はすべて税抜（税別）で統一
-   ※境界日時を変えたい場合は下記 strtotime の日付を変更
-   ============================================================ */
-$ws_revised   = ( current_time( 'timestamp' ) >= strtotime( '2026-08-01 00:00:00' ) );
-// プレビュー用：?ws_preview=after で改定後、?ws_preview=before で現行を強制表示（確認用・後で削除可）
-if ( isset( $_GET['ws_preview'] ) ) { $ws_revised = ( $_GET['ws_preview'] === 'after' ); }
-$ws_tax_label = '円（税抜）';
+/* ※表示価格はすべて税抜（税別）で統一（2026-08-01 料金改定後の価格） */
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -39,16 +29,9 @@ $ws_tax_label = '円（税抜）';
     "areaServed": "JP",
     "description": "BtoB企業のための月額制ホームページ制作・運用サービス",
     "offers": [
-<?php if ( ! $ws_revised ) : ?>
-      {"@type": "Offer", "name": "スタート", "price": "9800", "priceCurrency": "JPY"},
-      {"@type": "Offer", "name": "シンプル", "price": "19800", "priceCurrency": "JPY"},
-      {"@type": "Offer", "name": "スタンダード", "price": "29800", "priceCurrency": "JPY"},
-      {"@type": "Offer", "name": "プレミアム", "price": "39800", "priceCurrency": "JPY"}
-<?php else : ?>
       {"@type": "Offer", "name": "シンプル", "price": "30000", "priceCurrency": "JPY"},
       {"@type": "Offer", "name": "スタンダード", "price": "40000", "priceCurrency": "JPY"},
       {"@type": "Offer", "name": "プレミアム", "price": "50000", "priceCurrency": "JPY"}
-<?php endif; ?>
     ]
   }
   </script>
@@ -61,19 +44,11 @@ $ws_tax_label = '円（税抜）';
     "mainEntity": [
       {
         "@type": "Question",
-<?php if ( ! $ws_revised ) : ?>
-        "name": "初期費用は本当に0円ですか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "はい、本当に0円です。制作開始時にまとまった費用は発生しません。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。"
-        }
-<?php else : ?>
         "name": "初期費用はいくらですか？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "初期費用は100,000円（税抜）です。構成設計・オリジナルデザイン・WordPress構築などの初期構築費用にあたります。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。"
         }
-<?php endif; ?>
       },
       {
         "@type": "Question",
@@ -483,13 +458,8 @@ $ws_tax_label = '円（税抜）';
             <!-- カード06：料金 -->
             <li class="wsv2-feature__card">
               <p class="wsv2-feature__card-num">06</p>
-<?php if ( ! $ws_revised ) : ?>
-              <h3 class="wsv2-feature__card-title">初期費用0円・縛りなしの<br>月額サブスク</h3>
-              <p class="wsv2-feature__card-text">初期費用をまとめて回収するモデルではなく、長期継続を前提とした月額設計。契約期間の縛りもないため、比較検討の心理的ハードルを下げ、必要な期間だけご活用いただけます。</p>
-<?php else : ?>
               <h3 class="wsv2-feature__card-title">契約期間の縛りなしの<br>月額サブスク</h3>
               <p class="wsv2-feature__card-text">大きな一括制作費をまとめて支払うモデルではなく、長期継続を前提とした月額設計。契約期間の縛りもないため、比較検討の心理的ハードルを下げ、必要な期間だけご活用いただけます。</p>
-<?php endif; ?>
               <p class="wsv2-feature__card-benefit">→ 大きな経営判断ではなく通常の月次経費として、Web投資のハードルが下がります</p>
             </li>
 
@@ -609,7 +579,7 @@ $ws_tax_label = '円（税抜）';
                   <th scope="row">初期費用</th>
                   <td data-label="サブスク型"><span class="wsv2-compare__icon wsv2-compare__icon--ok" aria-hidden="true">◯</span><span class="wsv2-compare__cell-text">0円〜少額</span></td>
                   <td data-label="スポット型（従来）"><span class="wsv2-compare__icon wsv2-compare__icon--ng" aria-hidden="true">×</span><strong class="wsv2-compare__price">50万〜300万円</strong></td>
-                  <td data-label="ウィルサポ" class="wsv2-compare__td--wsv2"><span class="wsv2-compare__icon wsv2-compare__icon--ok" aria-hidden="true">◯</span><strong class="wsv2-compare__price"><?php echo $ws_revised ? '100,000円' : '0円'; ?></strong></td>
+                  <td data-label="ウィルサポ" class="wsv2-compare__td--wsv2"><span class="wsv2-compare__icon wsv2-compare__icon--ok" aria-hidden="true">◯</span><strong class="wsv2-compare__price">100,000円</strong></td>
                 </tr>
               </tbody>
             </table>
@@ -629,7 +599,7 @@ $ws_tax_label = '円（税抜）';
         <div class="wsv2-cta__section-head">
           <span class="wsv2-cta__eyebrow">CONTACT</span>
           <h2 class="wsv2-cta__title wsv2-fade">「お問い合わせ獲得に強いWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
-          <p class="wsv2-cta__lead"><?php echo $ws_revised ? '契約期間の縛りなし。' : '初期費用0円・契約期間の縛りなし。'; ?><br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
+          <p class="wsv2-cta__lead">契約期間の縛りなし。<br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
         </div>
 
         <div class="wsv2-cta__grid wsv2-fade is-visible">
@@ -810,58 +780,25 @@ $ws_tax_label = '円（税抜）';
           <div class="wsv2-pricing__section-head">
             <span class="wsv2-pricing__eyebrow">PRICING</span>
             <h2 class="wsv2-pricing__title wsv2-fade">料金プラン</h2>
-            <p class="wsv2-pricing__lead"><?php echo $ws_revised ? '用途に合わせて3つのプランをご用意しています。' : '用途に合わせて4つのプランをご用意しています。'; ?>必要な情報を整理し、比較しやすい形でご確認いただけます。</p>
+            <p class="wsv2-pricing__lead">用途に合わせて3つのプランをご用意しています。必要な情報を整理し、比較しやすい形でご確認いただけます。</p>
           </div>
 
-          <div class="wsv2-pricing__cards wsv2-fade<?php echo $ws_revised ? ' wsv2-pricing__cards--revised' : ''; ?>">
+          <div class="wsv2-pricing__cards wsv2-fade wsv2-pricing__cards--revised">
 
-<?php if ( ! $ws_revised ) : ?>
-            <!-- プラン1：スタート（〜2026-07-31のみ） -->
-            <div class="wsv2-pricing__card">
-              <p class="wsv2-pricing__plan-name">スタート</p>
-              <p class="wsv2-pricing__subcopy">名刺代わりのサイトを整えたい方に。シンプルな1ページ構成でまず始めたい</p>
-              <div class="wsv2-pricing__price">
-                <span class="wsv2-pricing__price-label">月額</span>
-                <span class="wsv2-pricing__price-amount">9,800</span>
-                <span class="wsv2-pricing__price-unit">円（税抜）</span>
-              </div>
-              <ul class="wsv2-pricing__list">
-                <li class="wsv2-pricing__list-item">
-                  <span class="wsv2-pricing__list-key">ページ数</span>
-                  <span class="wsv2-pricing__list-val">1ページ</span>
-                </li>
-                <li class="wsv2-pricing__list-item">
-                  <span class="wsv2-pricing__list-key">CMS</span>
-                  <span class="wsv2-pricing__list-val">ワードプレス</span>
-                </li>
-                <li class="wsv2-pricing__list-item">
-                  <span class="wsv2-pricing__list-key">デザイン</span>
-                  <span class="wsv2-pricing__list-val">フルオーダー</span>
-                </li>
-                <li class="wsv2-pricing__list-item">
-                  <span class="wsv2-pricing__list-key">制作期間</span>
-                  <span class="wsv2-pricing__list-val">2ヶ月程度</span>
-                </li>
-              </ul>
-            </div>
-<?php endif; // /スタートカード ?>
-
-            <!-- プラン2：シンプル -->
+            <!-- プラン1：シンプル -->
             <div class="wsv2-pricing__card">
               <p class="wsv2-pricing__plan-name">シンプル</p>
               <p class="wsv2-pricing__subcopy">基本情報をしっかり整えたい企業様に。複数ページで会社の魅力を伝えたい</p>
               <div class="wsv2-pricing__price">
                 <span class="wsv2-pricing__price-label">月額</span>
-                <span class="wsv2-pricing__price-amount"><?php echo $ws_revised ? '30,000' : '19,800'; ?></span>
-                <span class="wsv2-pricing__price-unit"><?php echo $ws_tax_label; ?></span>
+                <span class="wsv2-pricing__price-amount">30,000</span>
+                <span class="wsv2-pricing__price-unit">円（税抜）</span>
               </div>
               <ul class="wsv2-pricing__list">
-<?php if ( $ws_revised ) : ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">初期費用</span>
                   <span class="wsv2-pricing__list-val">100,000円</span>
                 </li>
-<?php endif; ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">ページ数</span>
                   <span class="wsv2-pricing__list-val">〜6ページ</span>
@@ -881,23 +818,21 @@ $ws_tax_label = '円（税抜）';
               </ul>
             </div>
 
-            <!-- プラン3：スタンダード（おすすめ） -->
+            <!-- プラン2：スタンダード（おすすめ） -->
             <div class="wsv2-pricing__card wsv2-pricing__card--featured">
               <span class="wsv2-pricing__featured-tag">おすすめ</span>
               <p class="wsv2-pricing__plan-name">スタンダード</p>
               <p class="wsv2-pricing__subcopy">BtoB企業に最も選ばれるプランです。集客・採用に必要な情報を網羅した構成</p>
               <div class="wsv2-pricing__price">
                 <span class="wsv2-pricing__price-label">月額</span>
-                <span class="wsv2-pricing__price-amount"><?php echo $ws_revised ? '40,000' : '29,800'; ?></span>
-                <span class="wsv2-pricing__price-unit"><?php echo $ws_tax_label; ?></span>
+                <span class="wsv2-pricing__price-amount">40,000</span>
+                <span class="wsv2-pricing__price-unit">円（税抜）</span>
               </div>
               <ul class="wsv2-pricing__list">
-<?php if ( $ws_revised ) : ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">初期費用</span>
                   <span class="wsv2-pricing__list-val">100,000円</span>
                 </li>
-<?php endif; ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">ページ数</span>
                   <span class="wsv2-pricing__list-val">〜12ページ</span>
@@ -917,22 +852,20 @@ $ws_tax_label = '円（税抜）';
               </ul>
             </div>
 
-            <!-- プラン4：プレミアム -->
+            <!-- プラン3：プレミアム -->
             <div class="wsv2-pricing__card">
               <p class="wsv2-pricing__plan-name">プレミアム</p>
               <p class="wsv2-pricing__subcopy">BtoBマーケティングを本格的に強化したい企業向け。SEO・コンテンツまで見据えた充実構成</p>
               <div class="wsv2-pricing__price">
                 <span class="wsv2-pricing__price-label">月額</span>
-                <span class="wsv2-pricing__price-amount"><?php echo $ws_revised ? '50,000' : '39,800'; ?></span>
-                <span class="wsv2-pricing__price-unit"><?php echo $ws_tax_label; ?></span>
+                <span class="wsv2-pricing__price-amount">50,000</span>
+                <span class="wsv2-pricing__price-unit">円（税抜）</span>
               </div>
               <ul class="wsv2-pricing__list">
-<?php if ( $ws_revised ) : ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">初期費用</span>
                   <span class="wsv2-pricing__list-val">100,000円</span>
                 </li>
-<?php endif; ?>
                 <li class="wsv2-pricing__list-item">
                   <span class="wsv2-pricing__list-key">ページ数</span>
                   <span class="wsv2-pricing__list-val">〜18ページ</span>
@@ -1064,17 +997,10 @@ $ws_tax_label = '円（税抜）';
           <div class="wsv2-faq__list wsv2-fade">
 
             <details class="wsv2-faq__item">
-<?php if ( ! $ws_revised ) : ?>
-              <summary class="wsv2-faq__question">初期費用は本当に0円ですか？</summary>
-              <div class="wsv2-faq__answer">
-                <p>はい、本当に0円です。制作開始時にまとまった費用は発生しません。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。</p>
-              </div>
-<?php else : ?>
               <summary class="wsv2-faq__question">初期費用はいくらですか？</summary>
               <div class="wsv2-faq__answer">
                 <p>初期費用は100,000円（税抜）です。構成設計・オリジナルデザイン・WordPress構築などの初期構築費用にあたります。なお、独自機能の開発、写真撮影や原稿作成の代行、有料素材の購入などが必要な場合のみ、別途お見積もりをお出しします。追加費用が発生する場合は、必ず事前にご説明・ご承認のうえで進めますのでご安心ください。</p>
               </div>
-<?php endif; ?>
             </details>
 
             <details class="wsv2-faq__item">
@@ -1186,7 +1112,7 @@ $ws_tax_label = '円（税抜）';
         <div class="wsv2-cta__section-head">
           <span class="wsv2-cta__eyebrow">CONTACT</span>
           <h2 class="wsv2-cta__title wsv2-fade">「お問い合わせ獲得に強いWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
-          <p class="wsv2-cta__lead"><?php echo $ws_revised ? '契約期間の縛りなし。' : '初期費用0円・契約期間の縛りなし。'; ?><br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
+          <p class="wsv2-cta__lead">契約期間の縛りなし。<br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
         </div>
 
         <div class="wsv2-cta__grid wsv2-fade is-visible">
@@ -1263,190 +1189,6 @@ $ws_tax_label = '円（税抜）';
   </div>
 
   <script src="<?php echo esc_url( will_asset_url( 'will-support-v2-assets/js/script.js' ) ); ?>" defer></script>
-
-<?php if ( ! $ws_revised ) : // 予告バナーは改定日(8/1)以降は非表示 ?>
-  <!-- ============================================================
-       料金改定 追従バナー（sticky bottom bar）
-       - このブロックだけで自己完結（HTML + CSS + バニラJS）。不要になったら丸ごと削除可。
-       - ▼▼ 変更したい箇所はすべて下の JS 冒頭の「設定」にまとまっています ▼▼
-       ============================================================ -->
-  <div class="ws-price-banner" id="ws-price-banner" role="region" aria-label="料金改定のお知らせ" hidden>
-    <div class="ws-price-banner__inner">
-      <div class="ws-price-banner__text">
-        <!-- ▼文言（PC・768px以上）。一字一句の変更はここ -->
-        <p class="ws-price-banner__main ws-price-banner__main--pc">【8/1 料金改定】7/31までのご契約で、初期費用0円＆現行価格のままずっとご利用いただけます</p>
-        <p class="ws-price-banner__sub">改定後は初期費用100,000円／月額も改定。今がラストチャンスです。</p>
-        <!-- ▼文言（SP・767px以下） -->
-        <p class="ws-price-banner__main ws-price-banner__main--sp">【8/1料金改定】7/31までなら初期費用0円・現行価格で固定</p>
-      </div>
-      <!-- ▼リンク先PDFは JS 設定の PDF_URL を JSで流し込みます。ボタン文言の変更はここ -->
-      <a class="ws-price-banner__btn" id="ws-price-banner-btn" href="#" target="_blank" rel="noopener">
-        <span class="ws-price-banner__btn--pc">改定内容を見る</span>
-        <span class="ws-price-banner__btn--sp">詳しく見る</span>
-      </a>
-      <button type="button" class="ws-price-banner__close" id="ws-price-banner-close" aria-label="閉じる">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-  </div>
-
-  <style>
-    /* ===== 料金改定バナー（配色はPDFと統一。変更はこの変数で） ===== */
-    .ws-price-banner {
-      --wspb-navy:   #1a2b4a; /* ベース：ネイビー */
-      --wspb-gold:   #c9a14a; /* アクセント：ゴールド */
-      --wspb-text:   #ffffff; /* 文字：白 */
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 800; /* FABメニュー(900-1000)より下＝メニュー展開時はオーバーレイで覆われる */
-      background: var(--wspb-navy);
-      color: var(--wspb-text);
-      border-top-left-radius: 12px;   /* 上側だけ軽く角丸 */
-      border-top-right-radius: 12px;
-      box-shadow: 0 -6px 24px rgba(26, 43, 74, 0.28); /* 上方向への控えめなドロップシャドウ */
-      transform: translateY(110%);    /* 初期は画面外。JSで .is-visible を付けてスライドイン */
-      transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
-      will-change: transform;
-    }
-    .ws-price-banner.is-visible { transform: translateY(0); }
-
-    .ws-price-banner__inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 14px 20px;
-    }
-    .ws-price-banner__text { flex: 1 1 auto; min-width: 0; line-height: 1.5; }
-    .ws-price-banner__main {
-      margin: 0;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-    }
-    .ws-price-banner__sub {
-      margin: 3px 0 0;
-      font-size: 12.5px;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.82);
-    }
-    .ws-price-banner__main--sp { display: none; } /* SP文言はPCでは隠す */
-
-    .ws-price-banner__btn {
-      flex: 0 0 auto;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--wspb-gold);
-      color: var(--wspb-navy);          /* ゴールド地に濃紺文字 */
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      padding: 11px 24px;
-      border-radius: 8px;
-      transition: filter 0.2s ease, transform 0.2s ease;
-    }
-    .ws-price-banner__btn:hover { filter: brightness(1.08); }  /* hoverで軽く明度変化 */
-    .ws-price-banner__btn:active { transform: translateY(1px); }
-    .ws-price-banner__btn--sp { display: none; }
-
-    .ws-price-banner__close {
-      flex: 0 0 auto;
-      width: 34px;
-      height: 34px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      border-radius: 50%;
-      color: var(--wspb-text);
-      font-size: 20px;
-      line-height: 1;
-      cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-    .ws-price-banner__close:hover { background: rgba(255, 255, 255, 0.14); }
-
-    /* キーボード操作のフォーカス可視化 */
-    .ws-price-banner__btn:focus-visible,
-    .ws-price-banner__close:focus-visible {
-      outline: 2px solid var(--wspb-gold);
-      outline-offset: 2px;
-    }
-
-    /* ===== SP（767px以下） ===== */
-    @media (max-width: 767px) {
-      .ws-price-banner { border-top-left-radius: 0; border-top-right-radius: 0; } /* SPは角丸なし */
-      .ws-price-banner__inner { gap: 10px; padding: 10px 12px; }
-      .ws-price-banner__main--pc,
-      .ws-price-banner__sub      { display: none; }
-      .ws-price-banner__main--sp { display: block; font-size: 13px; }
-      .ws-price-banner__btn      { padding: 9px 14px; font-size: 13px; }
-      .ws-price-banner__btn--pc  { display: none; }
-      .ws-price-banner__btn--sp  { display: inline; }
-      .ws-price-banner__close    { width: 30px; height: 30px; font-size: 18px; }
-    }
-
-    /* バナー表示中はページ最下部に余白を確保（コンテンツが隠れない） */
-    body.ws-price-banner-active { padding-bottom: 88px; }
-    @media (max-width: 767px) {
-      body.ws-price-banner-active { padding-bottom: 70px; }
-    }
-
-    /* モーション軽減設定の尊重 */
-    @media (prefers-reduced-motion: reduce) {
-      .ws-price-banner { transition: none; }
-    }
-  </style>
-
-  <script>
-    (function () {
-      /* ========================= 設定（ここだけ触ればOK） ========================= */
-      var PDF_URL        = 'https://drive.google.com/file/d/1fKb17K9i6A_W6wpHXg3zrfTAkpSanty7/view'; // ボタンのリンク先PDF
-      var DEADLINE_JST   = '2026-08-01T00:00:00+09:00'; // この日時(JST)を過ぎたら自動で非表示
-      /* ========================================================================= */
-      /* ※「×」で閉じても、リロードすれば毎回再表示します（閉じた状態は記憶しません）。
-         閉じた後しばらく再表示しない挙動に戻したい場合は localStorage 版の履歴を参照。 */
-
-      var banner = document.getElementById('ws-price-banner');
-      if (!banner) return;
-
-      var btn   = document.getElementById('ws-price-banner-btn');
-      var close = document.getElementById('ws-price-banner-close');
-      var now   = Date.now();
-
-      // 1) 締切を過ぎていたら出さない
-      if (now >= new Date(DEADLINE_JST).getTime()) return;
-
-      // リンク先を設定
-      if (btn) btn.setAttribute('href', PDF_URL);
-
-      // 2) 表示（CLS回避：先に余白を確保してから position:fixed のバナーを出す）
-      document.body.classList.add('ws-price-banner-active');
-      banner.hidden = false;
-      // 次フレームでスライドイン（下からスッと）
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () { banner.classList.add('is-visible'); });
-      });
-
-      // 3) 「×」で閉じる → その場で隠すだけ（記憶しないのでリロードで再表示）
-      function dismiss() {
-        banner.classList.remove('is-visible');
-        document.body.classList.remove('ws-price-banner-active');
-        var hide = function () { banner.hidden = true; };
-        banner.addEventListener('transitionend', hide, { once: true });
-        setTimeout(hide, 400); // transitionend が来ない場合の保険
-      }
-      if (close) close.addEventListener('click', dismiss);
-    })();
-  </script>
-  <!-- ===================== /料金改定 追従バナー ===================== -->
-<?php endif; // /予告バナー ?>
 
   <?php wp_footer(); ?>
 </body>

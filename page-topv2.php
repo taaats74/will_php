@@ -3,10 +3,6 @@
   Template Name: Page Top Ver.2
   Template Post Type: page
   */
-  // 料金改定 自動切替（2026-08-01 00:00 JST 以降で新価格）
-  $ws_revised = ( current_time( 'timestamp' ) >= strtotime( '2026-08-01 00:00:00' ) );
-  // プレビュー用：?ws_preview=after で改定後、?ws_preview=before で現行を強制表示（確認用・後で削除可）
-  if ( isset( $_GET['ws_preview'] ) ) { $ws_revised = ( $_GET['ws_preview'] === 'after' ); }
 ?>
 
   <?php get_header(); ?>
@@ -141,7 +137,7 @@
           </ul>
           <div class="service-wrapper animation-target to-up">
             <div id="tab1" class="service is-active">
-              <p>ウィルサポは、自由なデザインの高品質ホームページを<span><?php echo $ws_revised ? '月額30,000円から（税抜）' : '月額9,800円から'; ?></span>ご利用いただける定額サブスクサービスです。</p>
+              <p>ウィルサポは、自由なデザインの高品質ホームページを<span>月額30,000円から（税抜）</span>ご利用いただける定額サブスクサービスです。</p>
               <div class="service-desc">
                 <p>定額サブスクホームページ</p>
                 <h3><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-willsupport-logo-white.webp" alt="ウィルサポ"></h3>
@@ -149,9 +145,6 @@
                   <ul>
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">限られた予算で本格的なサイトが持てる</li>
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">フルオーダーでデザイン作成</li>
-<?php if ( ! $ws_revised ) : ?>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">初期費用無料</li>
-<?php endif; ?>
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">サーバー、ドメイン費用無料</li>
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">サイトの更新や保守費用無料</li>
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-check.webp" alt="">契約期間の縛りなし</li>
