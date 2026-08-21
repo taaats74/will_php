@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  ⑨ 診断CTA（willgrow 08_cta-band / willsupport 07_cta-band 型）
+//  左右2色分割の帯の上に、白カードを2枚並べる
+// ===========================================
+
+.s-diagnosis {
+  color: var(--c-on-dark);
+  background: linear-gradient(90deg,
+              var(--c-primary) 0 50%,
+              var(--c-secondary) 50% 100%);
+
+  @include m.mq-down(md) {
+    background: var(--c-primary);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(24px, 3vw, 40px);
+    margin-top: 40px;
+
+    @include m.mq-down(md) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+// CTAカード
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 3.4vw, 44px) clamp(24px, 3vw, 40px);
+  border-radius: var(--radius-card);
+  background: var(--c-bg);
+  box-shadow: var(--shadow-card);
+
+  &__title {
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    line-height: var(--lh-head);
+    text-align: center;
+    color: var(--c-heading);
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--c-text);
+  }
+
+  &__btn {
+    margin-top: auto;
+    margin-block-start: 28px;
+  }
+}

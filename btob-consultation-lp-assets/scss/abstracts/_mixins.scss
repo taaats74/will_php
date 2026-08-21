@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@use "sass:map";
+
+// ===========================================
+//  Mixins
+//  色・サイズの値は design-tokens/tokens.css の CSS変数を使う。
+//  ここではブレークポイントとレイアウトの型だけを持つ。
+// ===========================================
+
+// 01_design-spec.md §6 のブレークポイント
+$bp: (
+  sm: 600px,   // < 600px  … すべて1カラム
+  md: 900px,   // 600-899  … 3カラム→2カラム
+  nav: 1100px, // < 1100px … ヘッダーのPCナビが入らないのでドロワーに切り替える
+  lg: 1200px,  // 900-1199 … 3カラム維持・gap 20px
+);
+
+@mixin mq-down($key) {
+  @media screen and (max-width: (map.get($bp, $key) - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin mq-up($key) {
+  @media screen and (min-width: map.get($bp, $key)) {
+    @content;
+  }
+}
+
+/// 中央寄せコンテナ（max-width 1120px / 左右 24px）
+@mixin container($max: var(--w-container)) {
+  width: 100%;
+  max-width: $max;
+  margin-inline: auto;
+  padding-inline: var(--pad-inline);
+}
+
+/// カードの質感（willgrow）
+@mixin card {
+  border-radius: var(--radius-card);
+  background: var(--c-bg);
+  box-shadow: var(--shadow-card);
+}
+
+/// 濃い面の上に置くカード（影を消す）
+@mixin card-on-dark {
+  border-radius: var(--radius-card);
+  background: var(--c-card-on-dark);
+  box-shadow: none;
+}
+
+@mixin focus-ring($color: var(--c-primary)) {
+  &:focus-visible {
+    outline: 3px solid $color;
+    outline-offset: 3px;
+  }
+}

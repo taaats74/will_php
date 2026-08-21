@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  ⑤ 特徴（willgrow 04_solution 型）
+//  右端のカードに少しかぶせて、イラストを断ち落としで置く
+// ===========================================
+
+.s-feature {
+  overflow: hidden;
+
+  &__bleed {
+    position: absolute;
+    top: 50%;
+    // 右端のコンテンツにかぶるところまで内側へ寄せる
+    left: calc(100% - 300px);
+    z-index: 0;
+    width: 640px;
+    transform: translateY(-50%);
+    opacity: .3;
+    pointer-events: none;
+    user-select: none;
+    // カードに重なる左側はフェードで抜く
+    mask-image: linear-gradient(to right, transparent 0%, #000 34%);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include m.mq-down(lg) {
+      left: calc(100% - 200px);
+      width: 460px;
+      opacity: .22;
+    }
+
+    @include m.mq-down(md) {
+      display: none;
+    }
+  }
+
+  .cols-3,
+  .section__head {
+    position: relative;
+    z-index: 1;
+  }
+
+  // はみ出した連番が見出しに寄りすぎないよう、上に余白を足す
+  &__list {
+    padding-top: 30px;
+  }
+}

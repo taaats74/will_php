@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  ヘッダー
+//  高さ92px・白・下端1px罫・sticky。LPなのでナビは置かない。
+// ===========================================
+
+.l-header {
+  position: relative;
+  z-index: 100;
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-border);
+
+  &__inner {
+    @include m.container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 92px;
+
+    @include m.mq-down(sm) {
+      min-height: 64px;
+    }
+  }
+
+  // --- PCのナビ（900px未満はドロワーに集約するので非表示）---
+  &__nav {
+    display: none;
+
+    // CTAが2つ並ぶため、余裕のある1100px以上でのみ出す
+    @media screen and (min-width: 1100px) {
+      display: block;
+      margin-left: auto;
+      margin-right: clamp(20px, 2.4vw, 36px);
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2.2vw, 32px);
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      padding-block: 6px;
+      font-size: clamp(13px, .95vw, 15px);
+      font-weight: 700;
+      letter-spacing: .02em;
+      white-space: nowrap;
+      color: var(--c-heading);
+      transition: color .2s ease;
+      @include m.focus-ring;
+
+      // ホバー時の下線
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 1px;
+        background: var(--c-primary);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .25s ease;
+      }
+
+      &:hover {
+        color: var(--c-primary);
+
+        &::after { transform: scaleX(1); }
+      }
+    }
+  }
+
+  // CTAは2つ横並び。SPはロゴ＋ハンバーガーだけにする（CTAはドロワーと追従バーにある）
+  &__ctas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+
+    // 1100px以上ではナビが auto マージンを持つので、ここでは不要
+    @media screen and (min-width: 1100px) { margin-left: 0; }
+
+    @include m.mq-down(md) { display: none; }
+  }
+
+  // --- ハンバーガー ---
+  // PCナビは1100px以上でしか出ないので、それ未満は必ずドロワーで補う
+  &__toggle {
+    display: none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    margin-right: -8px;
+    @include m.focus-ring;
+
+    @include m.mq-down(nav) { display: block; }
+  }
+
+  &__bars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--c-heading);
+    transform: translate(-50%, -50%);
+    transition: background-color .2s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 1px;
+      background: var(--c-heading);
+      transition: transform .28s ease;
+    }
+
+    &::before { top: -8px; }
+    &::after  { top: 8px; }
+  }
+
+  // 開いているとき（×に変える）
+  &__toggle[aria-expanded="true"] &__bars,
+  &__toggle[aria-expanded="true"] .l-header__bars {
+    background: transparent;
+
+    &::before { transform: translateY(8px) rotate(45deg); }
+    &::after  { transform: translateY(-8px) rotate(-45deg); }
+  }
+
+  // ロゴは下層ページ（.header-child-v2__logo）と同じ img/logo_black.webp・高さ40px
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    transition: opacity .25s ease;
+    @include m.focus-ring;
+
+    img {
+      width: auto;
+      height: 100%;
+      display: block;
+    }
+
+    &:hover { opacity: .75; }
+
+    @include m.mq-down(sm) {
+      height: 32px;
+    }
+  }
+}

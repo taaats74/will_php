@@ -24,6 +24,7 @@ function will_asset_url( $relative_path ) {
       'page-will-support-ec.php',
       'page-willgrow.php',
       'page-willgrow-v2.php',
+      'page-btob-consultation-lp.php',
     );
     $is_self_contained_lp = is_page_template( $self_contained_lp_templates );
 

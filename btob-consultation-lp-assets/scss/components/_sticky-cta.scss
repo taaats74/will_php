@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  スマホの追従CTA
+//  900px未満で画面下部に固定表示する。
+//  JSは .is-hidden の付け外しだけを行うため、
+//  JSが動かない環境では常に表示される。
+// ===========================================
+
+.sticky-cta {
+  display: none;
+
+  @include m.mq-down(md) {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: var(--c-sticky-bg);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--c-border);
+    transition: transform .28s ease, opacity .28s ease;
+
+    .btn {
+      width: 100%;
+      max-width: 420px;
+      min-height: 54px;
+      font-size: var(--fs-body);
+    }
+
+    // ⑩フォーム到達時など、隠したいときに JS が付ける
+    &.is-hidden {
+      transform: translateY(110%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+// 追従CTAがコンテンツ末尾に重ならないようにする
+@include m.mq-down(md) {
+  body:has(.sticky-cta) .l-footer {
+    padding-bottom: 96px;
+  }
+}

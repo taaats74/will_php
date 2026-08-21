@@ -1,0 +1,15 @@
+{
+  "name": "btob-consultation-lp",
+  "version": "1.0.0",
+  "description": "BtoBマーケティング無料相談 LP (page-btob-consultation-lp.php)",
+  "scripts": {
+    "build": "sass scss/style.scss style.css --style=expanded --no-source-map",
+    "watch": "sass --watch scss/style.scss style.css --style=expanded --no-source-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}

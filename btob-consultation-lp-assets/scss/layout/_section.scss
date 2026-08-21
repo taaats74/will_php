@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  Section 共通
+//  見出しは「英字ラベル → 和文見出し → 短い下線」の3段構え（willgrow）
+// ===========================================
+
+.section {
+  position: relative;
+  padding-block: var(--sp-section);
+
+  // 01_design-spec.md §1.4 の色リズム
+  &--tint    { background: var(--c-bg-tint); }
+  &--pale    { background: var(--c-pale); }
+  &--primary { background: var(--c-primary); }
+
+  &__inner {
+    @include m.container;
+    position: relative;
+  }
+
+  &__inner--slim { @include m.container(880px); }
+  &__inner--wide { @include m.container(1280px); }
+
+  &__head {
+    margin-bottom: 48px;
+    text-align: center;
+
+    @include m.mq-down(sm) {
+      margin-bottom: 32px;
+    }
+  }
+
+  // 見出し → 本文が続く場合
+  &__head--tight { margin-bottom: 24px; }
+
+  &__lead {
+    max-width: 760px;
+    margin: 24px auto 0;
+    line-height: var(--lh-body);
+  }
+
+  &__lead--onDark { color: var(--c-on-dark-90); }
+}
+
+// --- 英字ラベル（eyebrow） -----------------
+.eyebrow {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--c-primary-dark);
+  background: var(--c-surface);
+
+  // 濃い面の上
+  &--onDark {
+    color: var(--c-on-dark);
+    background: var(--c-on-dark-18);
+  }
+}
+
+// --- 見出し ---------------------------------
+.heading {
+  margin-top: 16px;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: var(--lh-head);
+  color: var(--c-heading);
+  text-wrap: balance;
+
+  &--onDark { color: var(--c-on-dark); }
+
+  // <br> で改行位置を指定する見出しは、自動の行分けを切る
+  &--noBalance { text-wrap: initial; }
+
+  // 見出しの下 16px に 幅40px・太さ3px の短い下線
+  &::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 16px auto 0;
+    background: var(--c-primary);
+  }
+
+  &--onDark::after { background: var(--c-on-dark); }
+}
+
+// --- 3カラム / 2カラム（01_design-spec.md §3）---
+.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+
+  @include m.mq-down(lg) { gap: 20px; }
+
+  @include m.mq-down(md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include m.mq-down(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+
+  @include m.mq-down(sm) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// ===========================================
+//  コーポレートサイト共通フッター（.footer-v5）の調整
+//
+//  実体は scss/style-template/_footer.scss（テーマ本体）。
+//  このLPは body に line-height: var(--lh-body)(1.9) を敷いているため、
+//  そのまま出すとフッターだけ下層ページより間延びする。
+//  下層ページ（line-height 指定なし）と同じ見た目に戻す。
+// ===========================================
+
+.footer-v5 {
+  line-height: normal;
+}
+
+// このLPの reset は img を display:block にしている。
+// ロゴの <a> がインラインのままだとベースライン下の余白が残り、
+// 下層ページよりブランド枠が5px高くなるので下端で揃える。
+.footer-v5-logo {
+  vertical-align: bottom;
+}

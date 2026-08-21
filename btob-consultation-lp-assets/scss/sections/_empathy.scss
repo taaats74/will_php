@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  ② 共感（willgrow 03_problem 型）
+//  左にイラスト／右にチェックカード2カラム
+//  各項目が2行に収まるよう、コンテナを広めに取る
+// ===========================================
+
+.s-empathy {
+  &__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(24px, 3vw, 48px);
+
+    // 1100px未満はカードが窮屈になるので、イラスト列を詰めてカード側に幅を回す
+    @include m.mq-down(nav) {
+      grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+      gap: 24px;
+    }
+
+    @include m.mq-down(md) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  // 原稿指定の改行位置（.pc-only）は1100px以上のカード幅を前提にしている。
+  // それ未満だと3行になる項目が出るため、自動折り返しに任せて2行に収める。
+  @include m.mq-down(nav) {
+    .check-list .pc-only { display: none; }
+  }
+
+  &__figure {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include m.mq-down(md) {
+      max-width: 260px;
+      order: -1;
+    }
+  }
+}

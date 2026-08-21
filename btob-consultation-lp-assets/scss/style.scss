@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// ===========================================
+//  BtoBマーケティング無料相談LP／合同会社ウィル
+//  entry: btob-consultation-lp-assets/scss/style.scss
+//      -> btob-consultation-lp-assets/style.css
+//
+//  色・サイズは btob-consultation-lp-assets/tokens.css（design-tokens/tokens.css の複製）の
+//  CSS変数のみを使う。値の直書きは禁止。
+// ===========================================
+
+@use "abstracts/mixins";
+
+@use "base/tokens-ext";
+@use "base/reset";
+@use "base/base";
+
+@use "layout/header";
+@use "layout/nav";
+@use "layout/section";
+
+// コーポレートサイト共通フッター（.footer-v5 / template-parts/footer-common.php）
+// テーマ本体の SCSS をそのまま利用する。変数依存が無い独立したパーシャルなので
+// そのまま @use できる（ウィルグロー v2 と同じ扱い）
+@use "../../scss/style-template/footer";
+@use "layout/footer-common";
+
+@use "components/button";
+@use "components/checklist";
+@use "components/card";
+@use "components/accordion";
+@use "components/diagram";
+@use "components/form";
+@use "components/sticky-cta";
+@use "components/diag-banner";
+
+@use "sections/fv";
+@use "sections/empathy";
+@use "sections/cause";
+@use "sections/feature";
+@use "sections/flow";
+@use "sections/message";
+@use "sections/diagnosis";
+@use "sections/form-section";

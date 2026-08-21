@@ -1,0 +1,59 @@
+/* =========================================================
+   デザイントークン
+
+   ベースは btob-consultation-lp/design-tokens/tokens.css。
+   ただし配色は「ウィルサポ（willsupport）と同じ」というご指示により、
+   グリーン系から既存LPのteal系に差し替えている。
+   値は reference/willsupport・willgrow のセクション画像から実測。
+
+   実測値：
+     濃teal #28849c ／ 中teal #7ec3cb ／ ヒーロー #81c3cb
+     ペール #c9ddde ／ 淡色 #f0f8f9 ／ ラベルのピル #e6f2f5
+     見出し #17394a ／ CTAボタン #333333 ／ フッター #4e4e4e
+
+   一部は文字コントラスト（WCAG AA）を満たすよう明度のみ微調整している。
+   （--c-primary は白文字を乗せるため #28849c → #278097。色相は同一）
+   ========================================================= */
+:root{
+  /* brand */
+  --c-primary: #278097;            /* メインCTA・塗り・アイコン・図解の主線／白文字の下地 4.54:1 */
+  --c-primary-dark: #1f6b7e;            /* hover / active・英字ラベルの文字 */
+  --c-primary-light: #2f9cb8;            /* 図解のアクセント・細い装飾線 */
+  --c-secondary: #7ec3cb;            /* 帯背景・図解の面・番号バッジ */
+  --c-pale: #c9ddde;            /* セクション背景（中）・カード枠線 */
+  --c-surface: #e6f2f5;            /* 英字ラベルのピル・淡いカード */
+  --c-bg-tint: #f0f8f9;            /* セクション背景（淡） */
+  /* base */
+  --c-bg: #ffffff;            /* ベース背景 */
+  --c-bg-gray: #f5f5f5;            /* 比較表などのグレー面 */
+  --c-heading: #17394a;            /* H2/H3 見出し */
+  --c-text: #333333;            /* 本文 */
+  --c-text-mute: #64747b;            /* 補足・キャプション */
+  --c-border: #dde7ea;            /* 罫線・カード枠 */
+  /* accent */
+  --c-marker: #fbec47;            /* 本文キーワードのマーカー下線・おすすめバッジ */
+  --c-btn-dark: #333333;            /* CTAボタン（ウィルサポと同じ濃グレー） */
+  /* footer */
+  --c-footer-bg: #4e4e4e;            /* フッター背景 */
+  --c-footer-text: #e9ecec;            /* フッター文字 */
+
+  /* typography */
+  --ff-base: "Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --fs-eyebrow: 0.8125rem;  /* 13px  英字ラベル letter-spacing .18em */
+  --fs-h1: clamp(2.25rem, 1.5rem + 2.4vw, 3.375rem); /* 36 -> 54px  FV大見出し */
+  --fs-h2: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);   /* 24 -> 36px */
+  --fs-h3: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);  /* 18 -> 22px */
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --lh-body: 1.9;
+  --lh-head: 1.5;
+
+  /* layout */
+  --w-container: 1120px;
+  --pad-inline: 24px;
+  --sp-section: clamp(64px, 4vw + 40px, 104px);  /* セクション上下padding */
+  --radius-card: 14px;
+  --radius-pill: 999px;
+  --shadow-card: 0 2px 12px rgba(23,57,74,.08);
+  --shadow-card-hover: 0 6px 20px rgba(23,57,74,.14);
+}

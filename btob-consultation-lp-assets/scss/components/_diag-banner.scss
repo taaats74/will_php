@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  無料診断バナー（900px以上のみ）
+//  表示・非表示は JS が [hidden] と .is-visible で制御する。
+//  JSが動かない場合は出ないだけで、本文には影響しない。
+// ===========================================
+
+.diag-banner {
+  display: none;
+
+  @include m.mq-up(md) {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 95;
+    display: block;
+    width: 330px;
+    padding: 22px 24px 20px;
+    border-radius: var(--radius-card);
+    background: var(--c-bg);
+    box-shadow: var(--shadow-float);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .3s ease, transform .3s ease;
+
+    &.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  &[hidden] { display: none; }
+
+  &__close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--c-text-mute);
+    transition: color .2s ease, background-color .2s ease;
+    @include m.focus-ring;
+
+    &:hover {
+      color: var(--c-heading);
+      background: var(--c-bg-tint);
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-right: 28px;
+    font-size: var(--fs-body);
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--c-heading);
+
+    svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--c-primary);
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-size: var(--fs-small);
+    line-height: 1.8;
+    color: var(--c-text);
+  }
+
+  &__btn {
+    gap: 8px;
+    margin-top: 16px;
+    min-height: 52px;
+    padding-inline: 20px;
+    font-size: var(--fs-body);
+
+    svg {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      transition: transform .2s ease;
+    }
+
+    &:hover svg { transform: translateX(3px); }
+  }
+}

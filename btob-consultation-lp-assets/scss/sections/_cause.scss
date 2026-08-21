@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  ③ 原因
+//  背景に白透かしのイラストを敷く
+// ===========================================
+
+.s-cause {
+  position: relative;
+  overflow: hidden;
+
+  // 背景の白透かし
+  // 素材の背景が不透明な白なので、白地の上に multiply で重ねて白を飛ばす
+  &__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    width: min(1080px, 96%);
+    transform: translate(-50%, -50%);
+    opacity: .09;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    user-select: none;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .section__inner {
+    z-index: 1;
+  }
+
+  &__text {
+    max-width: 940px;
+    margin-inline: auto;
+    margin-bottom: 48px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.95;
+    text-align: center;
+
+    // 重要な文言
+    strong {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--c-primary);
+    }
+
+    @include m.mq-down(md) {
+      font-size: 18px;
+
+      strong { font-size: 26px; }
+    }
+
+    @include m.mq-down(sm) {
+      margin-bottom: 32px;
+      font-size: 17px;
+      text-align: left;
+
+      strong { font-size: 22px; }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  ドロワーメニュー（1100px未満のみ＝PCナビが出ない幅）
+//  開閉は JS が [hidden] と .is-open で制御する。
+//  JSが無効な場合はメニュー自体が出ないだけで、
+//  ページ内容には影響しない。
+// ===========================================
+
+.l-nav {
+  // PCではメニューを使わない
+  @include m.mq-up(nav) {
+    display: none;
+  }
+
+  @include m.mq-down(nav) {
+    position: fixed;
+    inset: 0 0 0 auto;
+    z-index: 99;
+    width: min(88vw, 360px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--c-bg);
+    box-shadow: -8px 0 28px rgba(23, 57, 74, .16);
+    transform: translateX(100%);
+    transition: transform .3s ease;
+
+    &.is-open { transform: translateX(0); }
+  }
+
+  &[hidden] { display: none; }
+
+  &__inner {
+    padding: 64px 22px 40px;
+  }
+
+  // 閉じるボタン（ヘッダーが画面外でも閉じられるように）
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--c-heading);
+    transition: background-color .2s ease;
+    @include m.focus-ring;
+
+    &:hover { background: var(--c-bg-tint); }
+  }
+
+  &__list {
+    display: grid;
+
+    li + li { border-top: 1px solid var(--c-border); }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 8px 4px;
+      font-size: var(--fs-body);
+      font-weight: 700;
+      line-height: 1.6;
+      color: var(--c-heading);
+      transition: color .2s ease;
+      @include m.focus-ring;
+
+      &::before {
+        content: "";
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--c-primary);
+      }
+
+      &:hover { color: var(--c-primary); }
+    }
+  }
+
+  &__cta {
+    display: grid;
+    gap: 12px;
+    margin-top: 24px;
+
+    .btn {
+      min-height: 56px;
+      font-size: var(--fs-body);
+    }
+  }
+
+  // --- 背面のオーバーレイ ---
+  &__overlay {
+    @include m.mq-up(nav) { display: none; }
+
+    @include m.mq-down(nav) {
+      position: fixed;
+      inset: 0;
+      z-index: 98;
+      background: rgba(23, 57, 74, .42);
+      opacity: 0;
+      transition: opacity .3s ease;
+
+      &.is-open { opacity: 1; }
+    }
+
+    &[hidden] { display: none; }
+  }
+}
+
+// ドロワーを開いているあいだは背面をスクロールさせない
+.is-nav-open {
+  overflow: hidden;
+}

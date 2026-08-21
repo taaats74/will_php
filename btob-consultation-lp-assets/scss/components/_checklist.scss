@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  チェックリスト（01_design-spec.md §4.3）
+//  1項目 = 白カード（角丸12px・padding 20px 24px）
+// ===========================================
+
+.check-list {
+  display: grid;
+  gap: 16px;
+
+  &--2col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+
+    @include m.mq-down(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // 横並び・中央寄せ（⑩）
+  &--inline {
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 12px;
+
+    @include m.mq-down(md) {
+      grid-auto-flow: row;
+      justify-content: stretch;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: var(--c-bg);
+    box-shadow: var(--shadow-card);
+    font-size: var(--fs-body);
+    font-weight: 700;
+    line-height: 1.75;
+    color: var(--c-heading);
+
+    @include m.mq-down(sm) {
+      padding: 16px 18px;
+      font-size: var(--fs-body);
+    }
+  }
+
+  &__mark {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    color: var(--c-primary);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // カードを持たない素のリスト
+  &--plain {
+    gap: 14px;
+
+    .check-list__item {
+      padding: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      font-weight: 400;
+    }
+  }
+}

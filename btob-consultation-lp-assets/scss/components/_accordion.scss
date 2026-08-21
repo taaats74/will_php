@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  ⑧ FAQ（01_design-spec.md §4.4）
+//  details / summary で組み、本文は最初からDOMに出力する。
+// ===========================================
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.faq-item {
+  @include m.card;
+  border-radius: 12px;
+  overflow: hidden;
+
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px;
+    list-style: none;
+    cursor: pointer;
+    transition: background-color .2s ease;
+    @include m.focus-ring;
+
+    @include m.mq-down(sm) { padding: 16px 16px; }
+
+    &::-webkit-details-marker { display: none; }
+
+    &:hover { background: var(--c-bg-tint); }
+  }
+}
+
+.faq-q {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--c-on-dark);
+  background: var(--c-primary);
+}
+
+.faq-label {
+  flex: 1;
+  font-size: var(--fs-body);
+  font-weight: 700;
+  line-height: 1.7;
+  color: var(--c-heading);
+
+  @include m.mq-down(sm) { font-size: var(--fs-body); }
+}
+
+// 右端の＋（開いたら45度回転して×に見せる）
+.faq-mark {
+  position: relative;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  transition: transform .2s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--c-primary);
+    transform: translateY(-50%);
+  }
+
+  &::after { transform: translateY(-50%) rotate(90deg); }
+}
+
+.faq-item[open] .faq-mark { transform: rotate(45deg); }
+
+.faq-body {
+  overflow: hidden;
+
+  p {
+    margin: 0 24px;
+    padding: 4px 0 22px;
+    padding-left: 42px;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+
+    @include m.mq-down(sm) {
+      margin: 0 16px;
+      padding-left: 0;
+      padding-bottom: 18px;
+    }
+  }
+}

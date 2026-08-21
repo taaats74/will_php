@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@use "../abstracts/mixins" as m;
+
+// ===========================================
+//  ④ 得られること：アイコンカード（willgrow 06_difference の型）
+// ===========================================
+
+.benefit-card {
+  @include m.card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 28px;
+  text-align: center;
+
+  @include m.mq-down(sm) { padding: 28px 22px; }
+
+  // 円形の淡い下地72px＋線画アイコン48px（現在は未使用。イラストに置き換え）
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--c-surface);
+    color: var(--c-primary);
+
+    svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  // イラスト枠（willgrow 06_difference と同じ、カード上部にイラストを置く型）
+  &__figure {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 180px;
+
+    @include m.mq-down(md) { height: 160px; }
+
+    // <picture> が中間に入るため、こちらにも高さを通す
+    picture {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    line-height: var(--lh-head);
+    color: var(--c-heading);
+  }
+
+  &__text {
+    margin-top: 14px;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    text-align: left;
+
+    @include m.mq-down(sm) { text-align: center; }
+  }
+}
+
+// ===========================================
+//  ⑤ 特徴：カード枠を使わず、上端の罫線だけの軽い扱い
+// ===========================================
+
+.feature-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // 上は、はみ出した連番と見出しのあいだの余白ぶん
+  padding: clamp(36px, 3.2vw, 45px) clamp(22px, 2.6vw, 30px) clamp(28px, 3vw, 36px);
+  border-radius: var(--radius-card);
+  background: var(--c-bg);
+  box-shadow: var(--shadow-card);
+
+  // 連番はカードの左上からはみ出させる
+  &__num {
+    position: absolute;
+    top: -26px;
+    left: -4px;
+    font-size: clamp(2.75rem, 3.6vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .02em;
+    color: var(--c-secondary);
+    pointer-events: none;
+  }
+
+  &__title {
+    // 見出しが1行でも2行でも本文の開始位置が揃うよう、2行ぶんの高さを確保し、
+    // その中で上下中央に置く
+    display: flex;
+    align-items: center;
+    min-height: calc(var(--fs-h3) * var(--lh-head) * 2);
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    line-height: var(--lh-head);
+    color: var(--c-heading);
+
+    @include m.mq-down(sm) {
+      display: block;
+      min-height: 0;
+    }
+  }
+
+  &__text {
+    margin-top: 14px;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+}
