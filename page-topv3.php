@@ -40,7 +40,7 @@
           </div>
           <div class="fv-cta-cards">
             <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="fv-cta-card fv-cta-card--diagnosis">
-              <span class="cta-text"><span class="cta-accent">「何から手をつけるか」</span><br>ホームページの無料診断<br>全10問・約1分</span>
+              <span class="cta-text"><span class="cta-accent">「原因はどこにあるか」</span><br>ホームページの無料診断<br>全10問・約1分・費用なし</span>
             </a>
           </div>
           <div class="scroll"></div>
@@ -69,7 +69,7 @@
           </div>
           <div class="fv-cta-cards-sp">
             <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="fv-cta-card fv-cta-card--diagnosis">
-              <span class="cta-text"><span class="cta-accent">「何から手をつけるか」</span><br>ホームページの無料診断 全10問・約1分</span>
+              <span class="cta-text"><span class="cta-accent">「原因はどこにあるか」</span><br>ホームページの無料診断<br>全10問・約1分・費用なし</span>
             </a>
           </div>
         </div>
