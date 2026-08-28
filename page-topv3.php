@@ -538,15 +538,20 @@
         <div class="diagnosis-section-head">
           <span class="diagnosis-eyebrow">DIAGNOSIS</span>
           <h2 class="diagnosis-title animation-target to-up">
-            1分の入力で、<br class="pc">
-            貴社のBtoBマーケで<span class="diagnosis-keyword">「何から取り組めばいいのか」</span>を診断します。
+            ホームページから問い合わせが増えない原因は、<br class="pc">
+            <span class="diagnosis-keyword">どこにあるか</span>。10問・約1分で診断します。
           </h2>
         </div>
 
         <div class="diagnosis-panel animation-target to-up">
-          <h3 class="diagnosis-panel-title">無料診断レポートをお送りします</h3>
-          <p class="diagnosis-panel-text">所要時間は1分。回答内容に基づき、<br>貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
-          <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="diagnosis-btn">無料診断を受ける</a>
+          <h3 class="diagnosis-panel-title">10問に答えるだけ。<br>無料でレポートをお送りします</h3>
+          <p class="diagnosis-panel-text">所要時間は約1分です。ホームページへの集客、サイト内の導線、<br>問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
+          <ul class="diagnosis-features">
+            <li>全10問</li>
+            <li>約1分</li>
+            <li>費用なし</li>
+          </ul>
+          <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="diagnosis-btn">無料診断を試す（約1分）</a>
         </div>
 
       </div>
