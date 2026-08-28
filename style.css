@@ -3583,10 +3583,12 @@ body.is-sp-menu-open {
      かぶる。min() で「FV高さから割り出した上限」も同時にかけ、
      狭い幅では正方形のまま縮むようにしている */
   width: min(clamp(262px, 21.25vw, 306px), calc(42.53vw - 168px));
-  aspect-ratio: 1/1;
   box-sizing: border-box;
   background: #ffffff;
-  padding: clamp(14px, 1.32vw, 19px);
+  /* 正方形(aspect-ratio)だと中身より箱が大きく、上下に余りが出て
+     余白が広く見えていた。高さは中身なりにして、上下の余白は
+     従来の見た目(1440pxで上下約51px)の半分になる値にしている */
+  padding: clamp(18px, 1.81vw, 26px) clamp(14px, 1.32vw, 19px);
   display: flex;
   flex-direction: column;
   align-items: center;
