@@ -198,7 +198,7 @@
                 <a href="#faq" class="wsv2-header__link">よくあるご質問</a>
               </li>
               <li class="wsv2-header__nav-item">
-                <a href="#contact-form" class="wsv2-header__link wsv2-header__link--cta">無料相談</a>
+                <a href="#contact-form" class="wsv2-header__link wsv2-header__link--cta">お問い合わせ</a>
               </li>
               <li class="wsv2-header__nav-item">
                 <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-header__link wsv2-header__link--cta" target="_blank" rel="noopener noreferrer">無料診断</a>
@@ -253,7 +253,7 @@
         <a href="https://will-corp.co.jp/" class="wsv2-fab-nav__link" target="_blank" rel="noopener noreferrer">運営会社</a>
       </li>
       <li class="wsv2-fab-nav__item">
-        <a href="#contact-form" class="wsv2-fab-nav__link wsv2-fab-nav__link--cta">無料相談</a>
+        <a href="#contact-form" class="wsv2-fab-nav__link wsv2-fab-nav__link--cta">お問い合わせ</a>
       </li>
       <li class="wsv2-fab-nav__item">
         <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-fab-nav__link wsv2-fab-nav__link--cta" target="_blank" rel="noopener noreferrer">無料診断</a>
@@ -591,7 +591,7 @@
 
 
     <!-- ============================================
-         7-CTA. 無料相談CTA（中間）
+         7-CTA. お問い合わせCTA（中間）
          ============================================ -->
     <section class="wsv2-cta" id="cta-mid">
       <div class="container">
@@ -604,11 +604,11 @@
 
         <div class="wsv2-cta__grid wsv2-fade is-visible">
 
-          <!-- 左パネル：無料相談 -->
+          <!-- 左パネル：お問い合わせ -->
           <div class="wsv2-cta__panel">
-            <h3 class="wsv2-cta__panel-title">まずはお気軽にご相談ください<br>（無料相談）</h3>
+            <h3 class="wsv2-cta__panel-title">まずはお気軽にご相談ください<br>（お問い合わせ）</h3>
             <p class="wsv2-cta__panel-text">制作会社を比較中の方も歓迎です。他社との違いや最適なプランを、無料で分かりやすくご説明します。</p>
-            <a href="#contact-form" class="wsv2-cta__btn">無料相談はこちら</a>
+            <a href="#contact-form" class="wsv2-cta__btn">お問い合わせはこちら</a>
           </div>
 
           <!-- 右パネル：無料診断 -->
@@ -1104,7 +1104,7 @@
     </section>
 
     <!-- ============================================
-         14. 無料相談CTA
+         14. お問い合わせCTA
          ============================================ -->
     <section class="wsv2-cta" id="cta">
       <div class="container">
@@ -1117,11 +1117,11 @@
 
         <div class="wsv2-cta__grid wsv2-fade is-visible">
 
-          <!-- 左パネル：無料相談 -->
+          <!-- 左パネル：お問い合わせ -->
           <div class="wsv2-cta__panel">
-            <h3 class="wsv2-cta__panel-title">まずはお気軽にご相談ください<br>（無料相談）</h3>
+            <h3 class="wsv2-cta__panel-title">まずはお気軽にご相談ください<br>（お問い合わせ）</h3>
             <p class="wsv2-cta__panel-text">制作会社を比較中の方も歓迎です。他社との違いや最適なプランを、無料で分かりやすくご説明します。</p>
-            <a href="#contact-form" class="wsv2-cta__btn">無料相談はこちら</a>
+            <a href="#contact-form" class="wsv2-cta__btn">お問い合わせはこちら</a>
           </div>
 
           <!-- 右パネル：無料診断 -->
