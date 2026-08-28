@@ -225,6 +225,94 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
           }
         }
+
+        /* 診断バナーと同じ内容を入れる正方形パネル。
+           横幅は .fv-cta-card と同じ折れ点に揃え、aspect-ratio で正方形にする。
+           中身(見出し・本文・タグ・ボタン)も同じ折れ点の clamp で追従させ、
+           どの幅でも正方形に収まる比率を保つ */
+        .fv-cta-panel {
+          /* 横幅は .fv-cta-card と同じ折れ点。ただし FV の高さは画像比率で
+             幅に比例する(高さ≒42.53vw)ため、狭い幅では正方形がナビや本文に
+             かぶる。min() で「FV高さから割り出した上限」も同時にかけ、
+             狭い幅では正方形のまま縮むようにしている */
+          width: min(clamp(262px, 21.25vw, 306px), calc(42.53vw - 168px));
+          aspect-ratio: 1 / 1;
+          box-sizing: border-box;
+          background: #ffffff;
+          padding: clamp(14px, 1.32vw, 19px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: clamp(7px, .76vw, 11px);
+          text-align: center;
+
+          .fv-cta-panel-title {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: clamp(12px, 1.04vw, 15px);
+            line-height: 1.5;
+            letter-spacing: .04em;
+            color: #333333;
+          }
+
+          .fv-cta-panel-text {
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 500;
+            font-size: clamp(9px, .76vw, 11px);
+            line-height: 1.7;
+            letter-spacing: .02em;
+            color: #555555;
+            text-align: left;
+
+            /* 900px 以下は FV 自体が低く(高さ≒42.53vw)、本文まで入れると
+               正方形を保てずナビにかぶる。見出し・タグ・ボタンだけ残す */
+            @media screen and (max-width: 900px) {
+              display: none;
+            }
+          }
+
+          .fv-cta-panel-features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: clamp(4px, .42vw, 6px);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              font-family: "Zen Kaku Gothic New", sans-serif;
+              font-weight: 700;
+              font-size: clamp(9px, .69vw, 10px);
+              letter-spacing: .08em;
+              color: #333333;
+              padding: clamp(3px, .35vw, 5px) clamp(7px, .69vw, 10px);
+              background: #f5f5f5;
+              border-radius: 30px;
+            }
+          }
+
+          .fv-cta-panel-btn {
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            background: #333333;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: clamp(10px, .9vw, 13px);
+            letter-spacing: .04em;
+            padding: clamp(9px, .9vw, 13px) 6px;
+            text-align: center;
+            transition: .4s;
+
+            &:hover {
+              opacity: .8;
+            }
+          }
+        }
       }
 
       /* スクロールダウンの位置 */
