@@ -492,8 +492,8 @@ body.has-loading-v2.appear {
     .logo-image {
       width: 50%;
       position: absolute;
-      // パララックスの基準位置。セクション下端から 200px 持ち上げている
-      bottom: 200px;
+      // パララックスの基準位置。セクション下端から 500px 持ち上げている
+      bottom: 500px;
       right: 0;
       z-index: 1;
     }

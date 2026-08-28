@@ -126,8 +126,8 @@
           </div>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-management-issue.webp" alt="management issue" class="text-image rellax-up">
-        <?php /* PC(821px以上)のみパララックスを大きくする。移動量は 100×speed px(speed:2 で上下±100px) */ ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.webp" alt="合同会社ウィル" class="logo-image rellax-up" data-rellax-desktop-speed="2">
+        <?php /* PC(821px以上)のみパララックスを上書き。速度が負なのでスクロールに対して下方向に動く(移動量は 100×speed px = 上下±100px) */ ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-top2-logo-bg.webp" alt="合同会社ウィル" class="logo-image rellax-up" data-rellax-desktop-speed="-2">
       </div>
     </section>
 
