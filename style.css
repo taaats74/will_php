@@ -3603,11 +3603,11 @@ body.is-sp-menu-open {
   gap: clamp(7px, 0.76vw, 11px);
   text-align: center;
 }
-/* 閉じるボタン。パネル左上に重ねるので親を relative にしている */
+/* 閉じるボタン。パネル右上に重ねるので親を relative にしている */
 .page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-panel .fv-cta-panel-close {
   position: absolute;
   top: 6px;
-  left: 6px;
+  right: 6px;
   width: 26px;
   height: 26px;
   padding: 0;
