@@ -107,7 +107,7 @@
       </nav>
 
       <div class="header-child-v2__cta">
-        <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="header-child-v2__btn header-child-v2__btn--outline">無料診断</a>
+        <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="header-child-v2__btn header-child-v2__btn--outline">無料診断</a>
         <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>" class="header-child-v2__btn header-child-v2__btn--outline">資料DL</a>
         <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="header-child-v2__btn header-child-v2__btn--solid">お問い合わせ</a>
       </div>
@@ -124,7 +124,7 @@
     <a href="<?php echo home_url('/'); ?>" class="sp-header-v5__logo" aria-label="トップページへ">
       <img src="<?php echo get_template_directory_uri(); ?>/img/white_yoko.webp" alt="合同会社ウィル">
     </a>
-    <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="sp-header-v5__cta">無料診断</a>
+    <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="sp-header-v5__cta">無料診断</a>
     <button type="button" class="sp-header-v5__hamburger" aria-label="メニューを開く" aria-controls="sp-menu-v5" aria-expanded="false">
       <span></span>
       <span></span>
@@ -158,7 +158,7 @@
       <details class="sp-menu-v5__group">
         <summary>CONTENTS</summary>
         <ul>
-          <li><a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>">無料診断</a></li>
+          <li><a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer">無料診断</a></li>
           <li><a href="<?php echo esc_url( home_url('/ebooks/') ); ?>">ダウンロード資料</a></li>
           <li><a href="<?php echo esc_url( home_url('/works/') ); ?>">制作実績</a></li>
           <li><a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer">ブログ</a></li>
@@ -176,7 +176,7 @@
       </details>
 
       <div class="sp-menu-v5__cta">
-        <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="sp-menu-v5__cta-secondary">1分でできる無料診断</a>
+        <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="sp-menu-v5__cta-secondary">1分でできる無料診断</a>
         <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="sp-menu-v5__cta-primary">お問い合わせはこちら</a>
       </div>
 

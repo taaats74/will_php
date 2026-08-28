@@ -39,7 +39,7 @@
             <p class="fv-lead">御社のマーケティング担当として、何をやれば成果につながるのかを一緒に考えます。<br>展示会やWebサイト、SEO、コンテンツ、顧客情報など、<br>バラバラになりがちな施策をつなぎ、実行から改善まで伴走します。</p>
           </div>
           <div class="fv-cta-cards">
-            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="fv-cta-card fv-cta-card--diagnosis">
+            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="fv-cta-card fv-cta-card--diagnosis">
               <span class="cta-text"><span class="cta-accent">「何から取り組めばいいか」</span><br>1分でできる<br>貴社のBtoBマーケ診断</span>
             </a>
           </div>
@@ -68,7 +68,7 @@
             </div>
           </div>
           <div class="fv-cta-cards-sp">
-            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="fv-cta-card fv-cta-card--diagnosis">
+            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="fv-cta-card fv-cta-card--diagnosis">
               <span class="cta-text"><span class="cta-accent">「何から取り組めばいいか」</span><br>1分でできる 貴社のBtoBマーケ診断</span>
             </a>
           </div>
@@ -545,7 +545,7 @@
         <div class="diagnosis-panel animation-target to-up">
           <h3 class="diagnosis-panel-title">無料診断レポートをお送りします</h3>
           <p class="diagnosis-panel-text">所要時間は1分。回答内容に基づき、<br>貴社の優先課題と取り組むべき一手をまとめた個別レポートを送付します。</p>
-          <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="diagnosis-btn">無料診断を受ける</a>
+          <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="diagnosis-btn">無料診断を受ける</a>
         </div>
 
       </div>
@@ -1045,7 +1045,7 @@ PHPコメントアウトで温存する。
 
           <div class="contact-v5-cta-group">
 
-            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="contact-v5-cta contact-v5-cta--outline">
+            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="contact-v5-cta contact-v5-cta--outline">
               <span class="contact-v5-cta-label">DIAGNOSIS</span>
               <span class="contact-v5-cta-text">1分でできる無料診断</span>
               <span class="contact-v5-cta-arrow">→</span>

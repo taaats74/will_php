@@ -792,7 +792,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-ma-cta__grid">
 
         <li class="service-ma-cta__card">
-          <a class="service-ma-cta__card-link" href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>">
+          <a class="service-ma-cta__card-link" href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer">
             <p class="service-ma-cta__label">[初期検討の方へ]</p>
             <h3 class="service-ma-cta__title">1分でできる無料診断</h3>
             <p class="service-ma-cta__desc">現在のWeb・営業基盤の課題を整理します</p>

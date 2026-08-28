@@ -273,7 +273,7 @@
           </p>
           <div class="ebooks-cta-banner__buttons">
             <a href="<?php echo esc_url( home_url('/willsupport/') ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--primary" target="_blank" rel="noopener noreferrer">ウィルサポ詳細</a>
-            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--secondary">1分でできる無料診断</a>
+            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="ebooks-cta-banner__btn ebooks-cta-banner__btn--secondary">1分でできる無料診断</a>
           </div>
         </div>
       </aside>
