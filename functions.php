@@ -1,4 +1,8 @@
 <?php
+// 構造化データ(JSON-LD)の追加出力。Slim SEO が扱わない Service / ItemList /
+// DigitalDocument を補う。詳細は inc/structured-data.php を参照。
+require_once get_template_directory() . '/inc/structured-data.php';
+
 /**
  * テーマ配下のアセットURLにfilemtimeベースのバージョンクエリを付与して返す
  * (LP の直接 <link> / <script> 用。wp_enqueue_* には別途 filemtime を直接渡す)
@@ -422,6 +426,39 @@ add_filter( 'slim_seo_schema_organization', function( $organization ) {
         'https://www.instagram.com/will_marketing_branding',
         'https://www.youtube.com/@will-btob-marketing',
     ];
+
+    // 連絡先。出典は特定商取引法に基づく表記ページ(page-tradelaw.php)。
+    // telephone は Google 推奨の国際形式で記述する。
+    $organization['legalName'] = '合同会社ウィル';
+    $organization['telephone'] = '+81-70-4131-3250';
+    $organization['email']     = 'info@will-corp.co.jp';
+    $organization['image']     = 'https://will-corp.co.jp/wp-content/uploads/2025/08/logo_black.png';
+    $organization['areaServed'] = [
+        '@type' => 'Country',
+        'name'  => '日本',
+    ];
+    $organization['contactPoint'] = [
+        [
+            '@type'             => 'ContactPoint',
+            'contactType'       => 'customer support',
+            'telephone'         => '+81-70-4131-3250',
+            'email'             => 'info@will-corp.co.jp',
+            'url'               => 'https://will-corp.co.jp/contact/',
+            'areaServed'        => 'JP',
+            'availableLanguage' => [ 'Japanese' ],
+        ],
+    ];
+    // 事業領域。about ページの「業務内容」と揃える。
+    $organization['knowsAbout'] = [
+        'BtoBマーケティング',
+        'Webサイト制作',
+        'Webサイト運用',
+        'マーケティングオートメーション',
+        'コンテンツSEO',
+        'Instagram運用',
+        'グラフィックデザイン',
+    ];
+
     return $organization;
 } );
 
