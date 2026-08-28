@@ -366,7 +366,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
           <div class="flow-step__body">
             <div class="flow-step__head">
               <span class="flow-step__num">1</span>
-              <h3 class="flow-step__name">BtoBマーケ無料診断</h3>
+              <h3 class="flow-step__name">Webサイト・BtoBマーケ無料診断</h3>
             </div>
             <p class="flow-step__time-slot"><span class="flow-step__time">約1分</span></p>
             <p class="flow-step__text">10問に答えるだけです。費用はかかりません。</p>
@@ -395,7 +395,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
           <div class="flow-step__body">
             <div class="flow-step__head">
               <span class="flow-step__num">3</span>
-              <h3 class="flow-step__name">BtoBマーケ無料相談</h3>
+              <h3 class="flow-step__name">サイト改善・BtoBマーケ無料相談</h3>
             </div>
             <p class="flow-step__time-slot"><span class="flow-step__time">オンライン30〜60分</span></p>
             <p class="flow-step__text">レポートを土台に、事業の状況と、これからどう伸ばしていきたいかをうかがいます。資料の準備は不要です。オンライン会議ツールで行うため、<span class="marker">全国どこからでも</span>ご相談いただけます。</p>
