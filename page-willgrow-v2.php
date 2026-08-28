@@ -27,7 +27,7 @@ if ( $wg2_noindex ) {
     }, 99 );
 }
 
-// 主CTA（無料診断）／従CTA（無料相談＝ページ内 HubSpot フォーム）
+// 主CTA（無料診断）／従CTA（お問い合わせ＝ページ内 HubSpot フォーム）
 $wg2_diagnosis_url = home_url( '/diagnosis/' );
 $wg2_consult_url   = '#wg2-contact';
 
@@ -471,9 +471,9 @@ if ( ! function_exists( 'wg2_icon' ) ) {
         <div class="wg2-ctaband__grid">
 
           <div class="wg2-ctaband__panel">
-            <h3 class="wg2-ctaband__panel-title">まずはお気軽にご相談ください<br>（無料相談）</h3>
+            <h3 class="wg2-ctaband__panel-title">まずはお気軽にご相談ください<br>（お問い合わせ）</h3>
             <p class="wg2-ctaband__panel-text">オンラインで30〜60分。現状をお聞きしたうえで、必要なプランと進め方をお伝えします。ご予算に見合わないと判断した場合は、その旨も正直にお伝えします。</p>
-            <a href="<?php echo esc_url( $wg2_consult_url ); ?>" class="wg2-ctaband__btn" data-cta-type="consult" data-cta-position="sec06">無料相談を申し込む</a>
+            <a href="<?php echo esc_url( $wg2_consult_url ); ?>" class="wg2-ctaband__btn" data-cta-type="consult" data-cta-position="sec06">お問い合わせはこちら</a>
           </div>
 
           <div class="wg2-ctaband__panel">
@@ -882,9 +882,14 @@ if ( ! function_exists( 'wg2_icon' ) ) {
   <!-- ============ 追従CTA（SP=下部固定／PC=右下） ============ -->
   <div class="wg2-sticky" id="wg2Sticky">
     <button class="wg2-sticky__close" id="wg2StickyClose" type="button" aria-label="閉じる">×</button>
-    <p class="wg2-sticky__title"><?php echo wg2_icon( 'clipboard' ); ?>無料診断（約1分）はこちら</p>
-    <p class="wg2-sticky__text">10の質問に答えるだけ。いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。</p>
-    <a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="sticky">無料診断を試す<?php echo wg2_icon( 'arrow-right' ); ?></a>
+    <p class="wg2-sticky__title"><?php echo wg2_icon( 'clipboard' ); ?><span>10問に答えるだけ。<br>無料でレポートをお送りします</span></p>
+    <p class="wg2-sticky__text">所要時間は約1分です。ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
+    <ul class="wg2-sticky__features">
+      <li>全10問</li>
+      <li>約1分</li>
+      <li>費用なし</li>
+    </ul>
+    <a href="<?php echo esc_url( home_url( '/btob-marketing-consultation/' ) ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="sticky" target="_blank" rel="noopener noreferrer">無料診断を試す（約1分）<?php echo wg2_icon( 'arrow-right' ); ?></a>
   </div>
 
   <!-- HubSpot 埋め込みフォーム -->

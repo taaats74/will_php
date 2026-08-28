@@ -3756,6 +3756,28 @@ body.wsv2-loading {
   margin: 0 0 14px;
 }
 
+/* コーポレートの追従バナーに合わせたタグ3つ。
+   本文(__note)と同じく PC のみ表示し、SPの下部バーには出さない */
+.wsv2-float-cta__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.wsv2-float-cta__features li {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--wsv2-primary);
+  background: var(--wsv2-bg);
+  border: 1px solid var(--wsv2-light-teal);
+  border-radius: 30px;
+  padding: 4px 10px;
+}
+
 .wsv2-float-cta__btn {
   display: flex;
   align-items: center;
@@ -3815,7 +3837,8 @@ body.wsv2-loading {
     margin: 0 1.6em 0 0;
   }
 
-  .wsv2-float-cta__note {
+  .wsv2-float-cta__note,
+  .wsv2-float-cta__features {
     display: none;
   }
 
