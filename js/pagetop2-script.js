@@ -17,6 +17,18 @@
   });
 }
 {
+  // FV追従バナーの閉じるボタン。押されたらバナーごと隠す
+  // (再表示は再読み込み時。閉じた状態は保存していない)
+  const bannerClose = document.querySelector('.fv-cta-panel-close');
+  if (bannerClose) {
+    bannerClose.addEventListener('click', () => {
+      const banner = bannerClose.closest('.fv-cta-cards');
+      if (banner) banner.classList.add('is-closed');
+    });
+  }
+}
+
+{
   // 旧 .tab タブ切り替え (page-topv3-service 用、現在コメントアウト中のため空のときは何もしない)
   const tabButtons = document.querySelectorAll(".tab > li");
   if (tabButtons.length > 0) {

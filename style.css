@@ -3526,6 +3526,10 @@ body.is-sp-menu-open {
   letter-spacing: 0.06em;
   line-height: 1.63;
 }
+/* 閉じるボタンで消したあと */
+.page-topv3-fv .container .wrapper .fv-cta-cards.is-closed {
+  display: none;
+}
 .page-topv3-fv .container .wrapper .fv-cta-cards {
   /* 画面右下に追従させる。既存の固定要素(ヘッダー z=100 / SPドロワー z=99)
      より下に入れて、開いたドロワーに重ならないようにしている。
@@ -3591,12 +3595,38 @@ body.is-sp-menu-open {
   padding: clamp(18px, 1.81vw, 26px) clamp(14px, 1.32vw, 19px);
   /* 浮いている要素として背景から分離させる */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  position: relative; /* 閉じるボタンの基準 */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: clamp(7px, 0.76vw, 11px);
   text-align: center;
+}
+/* 閉じるボタン。パネル左上に重ねるので親を relative にしている */
+.page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-panel .fv-cta-panel-close {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #aaaaaa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-panel .fv-cta-panel-close svg {
+  width: 11px;
+  height: 11px;
+  display: block;
+}
+.page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-panel .fv-cta-panel-close:hover {
+  color: #333333;
 }
 .page-topv3-fv .container .wrapper .fv-cta-cards .fv-cta-panel .fv-cta-panel-title {
   font-family: "Zen Kaku Gothic New", sans-serif;

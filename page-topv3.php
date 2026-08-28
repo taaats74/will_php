@@ -45,6 +45,9 @@
                    opacity:0 で、スクロールすると .show が付いて1.5秒でフェードインする */ ?>
           <div class="fv-cta-cards">
             <div class="fv-cta-panel animation-target to-up">
+              <button type="button" class="fv-cta-panel-close" aria-label="バナーを閉じる">
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false"><path d="M1.5 1.5l11 11M12.5 1.5l-11 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </button>
               <h3 class="fv-cta-panel-title">10問に答えるだけ。<br>無料でレポートをお送りします</h3>
               <p class="fv-cta-panel-text">所要時間は約1分です。ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
               <ul class="fv-cta-panel-features">
