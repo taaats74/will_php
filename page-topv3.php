@@ -38,13 +38,13 @@
             <h1 class="fv-title">成果につながるマーケティングを<br>一緒につくります。<span class="visually-hidden">BtoB企業の営業基盤をWebから設計する福岡のマーケティング支援会社</span></h1>
             <p class="fv-lead">御社のマーケティング担当として、何をやれば成果につながるのかを一緒に考えます。<br>展示会やWebサイト、SEO、コンテンツ、顧客情報など、<br>バラバラになりがちな施策をつなぎ、実行から改善まで伴走します。</p>
           </div>
-          <?php /* 診断バナー(#diagnosis-banner)と同じ内容を正方形パネルで置く。
+          <?php /* 診断バナー(#diagnosis-banner)と同じ内容のパネル。
                    パネル内にボタンのリンクを持つため、外側は a ではなく div にしている
-                   (a の入れ子は不正なHTMLのため)。登場アニメの .animation-target /
-                   .to-up はスクロールで .show が付く仕組みで、ファーストビューでは
-                   付かず非表示のままになるので付けていない */ ?>
+                   (a の入れ子は不正なHTMLのため)。
+                   .animation-target / .to-up はサイト共通の登場アニメ。読み込み時は
+                   opacity:0 で、スクロールすると .show が付いて1.5秒でフェードインする */ ?>
           <div class="fv-cta-cards">
-            <div class="fv-cta-panel">
+            <div class="fv-cta-panel animation-target to-up">
               <h3 class="fv-cta-panel-title">10問に答えるだけ。<br>無料でレポートをお送りします</h3>
               <p class="fv-cta-panel-text">所要時間は約1分です。ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
               <ul class="fv-cta-panel-features">
