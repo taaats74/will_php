@@ -42,11 +42,9 @@ $bcl_diagnosis_url = home_url( '/diagnosis/' );
 $bcl_consult_url   = '#consultation-form';
 $bcl_privacy_url   = home_url( '/privacy-policy/' );
 
-/* HubSpot フォーム
-   ▼ 要確認: 無料相談専用のフォームがまだ無いため、暫定で /contact/ と同じ
-   フォームIDを使っている。専用フォームを作成したら $bcl_hs_form_id を差し替える。 */
+/* HubSpot フォーム（BtoBマーケ無料相談 専用フォーム） */
 $bcl_hs_portal_id = '48153453';
-$bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
+$bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -165,11 +163,12 @@ $bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
 
       <div class="s-fv__layout">
         <div class="s-fv__text">
-          <!-- 1. 小見出し -->
-          <p class="s-fv__label">BtoBマーケティング無料相談</p>
-
-          <!-- 2. 大見出し -->
-          <h1 class="s-fv__title">何から手をつけるべきか、<br class="pc-only">一緒に整理します</h1>
+          <!-- 1. 小見出し ＋ 2. 大見出し。1つの h1 にまとめ、
+               文字サイズは従来どおり .s-fv__label / .s-fv__title 側で決める -->
+          <h1 class="s-fv__heading">
+            <span class="s-fv__label">ホームページとBtoBマーケティングの<br>無料相談・無料診断</span>
+            <span class="s-fv__title">何から手をつけるべきかを<br class="pc-only">一緒に整理します</span>
+          </h1>
 
           <!-- 3. タグ3つ -->
           <ul class="tag-list s-fv__tags">
@@ -207,7 +206,7 @@ $bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
     <div class="section__inner section__inner--wide">
       <div class="section__head" data-fade>
         <span class="eyebrow">CHECK</span>
-        <h2 class="heading heading--noBalance">貴社のマーケティング<br>こんな状態になっていませんか</h2>
+        <h2 class="heading heading--noBalance">貴社のホームページとマーケティング<br>こんな状態になっていませんか</h2>
       </div>
 
       <div class="s-empathy__layout">
@@ -231,15 +230,15 @@ $bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
           </li>
           <li class="check-list__item">
             <span class="check-list__mark" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" focusable="false"><path d="M3.5 10.5l4 4 9-9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span>制作会社やSEO会社に頼んだが、<br class="pc-only"><span class="marker">成果まで届かなかった</span></span>
-          </li>
-          <li class="check-list__item">
-            <span class="check-list__mark" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" focusable="false"><path d="M3.5 10.5l4 4 9-9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <span>社内に相談できる相手がおらず、<br class="pc-only"><span class="marker">判断の基準がない</span></span>
           </li>
           <li class="check-list__item">
             <span class="check-list__mark" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" focusable="false"><path d="M3.5 10.5l4 4 9-9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <span>何かやらなければとは思うが、<br class="pc-only"><span class="marker">優先順位が決められない</span></span>
+          </li>
+          <li class="check-list__item">
+            <span class="check-list__mark" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" focusable="false"><path d="M3.5 10.5l4 4 9-9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span>ホームページはあるが、<br class="pc-only"><span class="marker">そこから問い合わせが生まれていない</span></span>
           </li>
         </ul>
       </div>
@@ -275,7 +274,7 @@ $bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
     <div class="section__inner">
       <div class="section__head" data-fade>
         <span class="eyebrow">BENEFIT</span>
-        <h2 class="heading">BtoBマーケティングの無料相談で得られること</h2>
+        <h2 class="heading">ホームページとBtoBマーケティングの<br>無料相談で得られること</h2>
       </div>
 
       <div class="cols-3" data-fade>
@@ -292,7 +291,7 @@ $bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
             <img src="<?php echo esc_url( will_asset_url( 'btob-consultation-lp-assets/images/sub-growth-analysis.webp' ) ); ?>" alt="" width="1000" height="923" loading="lazy" decoding="async">
           </span>
           <h3 class="benefit-card__title">改善ポイントと優先順位</h3>
-          <p class="benefit-card__text">どこが詰まっているか、人手と予算のなかで何から着手すべきかを整理します。</p>
+          <p class="benefit-card__text">ホームページのどこに課題があるかを見立て、人手と予算のなかで何から着手すべきかを整理します。</p>
         </div>
 
         <div class="benefit-card">
@@ -415,14 +414,14 @@ $bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
     <div class="section__inner">
       <div class="section__head section__head--tight" data-fade>
         <span class="eyebrow eyebrow--onDark">DIAGNOSIS</span>
-        <h2 class="heading heading--onDark">まずは約1分の無料診断から</h2>
-        <p class="section__lead section__lead--onDark">いきなり相談するのは気が重い、という声もいただきます。まずは診断だけでもお試しください。</p>
+        <h2 class="heading heading--onDark">Webサイト・ホームページ<br>マーケティングの無料診断・無料相談</h2>
+        <p class="section__lead section__lead--onDark">診断では、ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見ていきます。いきなり相談するのは気が重い、という声もいただきます。まずは診断だけでもお試しください。</p>
       </div>
 
       <div class="s-diagnosis__cards">
         <div class="cta-card" data-fade>
           <h3 class="cta-card__title">まずは現状を把握したい方へ<br>（無料診断）</h3>
-          <p class="cta-card__text">10問に答えるだけ・所要時間は約1分。いまの状態と、何から手をつけるべきかを整理して、レポートでお送りします。費用はかかりません。</p>
+          <p class="cta-card__text">10問に答えるだけ・所要時間は約1分。ホームページとマーケティングの現状と、何から手をつけるべきかを整理して、レポートでお送りします。費用はかかりません。</p>
           <a class="btn btn--dark btn--block cta-card__btn" href="<?php echo esc_url( $bcl_diagnosis_url ); ?>">無料診断（約1分）を試す</a>
         </div>
 
@@ -538,6 +537,15 @@ $bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
           </summary>
           <div class="faq-body"><p>はい、全国どこからでもご相談いただけます。無料相談はオンラインで実施しています。</p></div>
         </details>
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q" aria-hidden="true">Q</span>
+            <span class="faq-label">ホームページについての相談もできますか？</span>
+            <span class="faq-mark" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body"><p>はい、ご相談いただけます。ホームページから問い合わせが増えない原因は、集客・導線・受け皿のどこかにあるケースが多いです。無料診断で現状を整理したうえで、Webサイトのどこから手をつけるべきかをお伝えします。</p></div>
+        </details>
       </div>
     </div>
   </section>
@@ -550,14 +558,11 @@ $bcl_hs_form_id   = 'bf7c2589-af6c-47c8-a017-f6ae2303be47';
     <div class="section__inner">
       <div class="section__head section__head--tight" data-fade>
         <span class="eyebrow">CONTACT</span>
-        <h2 class="heading">BtoBマーケティング無料相談のお申し込み</h2>
+        <h2 class="heading">ホームページ・BtoBマーケティングの<br>無料相談お申し込み</h2>
       </div>
 
       <div class="form-card" data-fade>
-        <!-- HubSpot 埋め込みフォーム
-             ▼ 要確認: 現在は /contact/ と同じフォームIDを暫定で使用している。
-             無料相談専用のフォームを HubSpot 側で作成したら、ファイル冒頭の
-             $bcl_hs_form_id を差し替えること。 -->
+        <!-- HubSpot 埋め込みフォーム -->
         <div class="hs-form-frame" data-region="na2" data-form-id="<?php echo esc_attr( $bcl_hs_form_id ); ?>" data-portal-id="<?php echo esc_attr( $bcl_hs_portal_id ); ?>"></div>
 
         <p class="form__privacy">ご入力いただいた個人情報は、ご相談への対応のみに使用します。詳しくは<a href="<?php echo esc_url( $bcl_privacy_url ); ?>">プライバシーポリシー</a>をご確認ください。</p>

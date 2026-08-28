@@ -1692,13 +1692,19 @@ body {
     text-align: left;
   }
 }
+.s-fv__heading {
+  font-size: inherit;
+  font-weight: inherit;
+}
 .s-fv__label {
+  display: block;
   font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.04em;
 }
 .s-fv__title {
+  display: block;
   margin-top: 10px;
   font-size: var(--fs-h1);
   font-weight: 900;

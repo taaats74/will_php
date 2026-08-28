@@ -72,16 +72,25 @@
     }
   }
 
-  // 1. 小見出し
+  // 1〜2 をまとめて囲む h1。大きさは子の label / title 側で決めるので、
+  // ここでは h1 のブラウザ既定サイズを打ち消すだけにする
+  &__heading {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  // 1. 小見出し（h1 の中の span なのでブロックにする）
   &__label {
+    display: block;
     font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: .04em;
   }
 
-  // 2. 大見出し
+  // 2. 大見出し（同上）
   &__title {
+    display: block;
     margin-top: 10px;
     font-size: var(--fs-h1);
     font-weight: 900;
