@@ -2,8 +2,11 @@
 
 {
   // Rellaxの設定をオブジェクトで管理
+  // breakpoints は [xs|sm, sm|md, md|lg] の境界。3つ目をテーマのPC境界(821px)に
+  // 合わせることで、要素側の data-rellax-desktop-speed が「PC表示のときだけ」効く。
+  // 属性を持たない要素は従来どおり speed の値が使われるため、既存の動きは変わらない。
   const rellaxSettings = [
-    { selector: '.rellax-up', options: { speed: 1, center: true } },
+    { selector: '.rellax-up', options: { speed: 1, center: true, breakpoints: [576, 768, 821] } },
     { selector: '.rellax-up2', options: { speed: .5, center: true } },
     { selector: '.rellax-down', options: { speed: -3, center: true } },
 ];
