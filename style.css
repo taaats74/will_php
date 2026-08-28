@@ -3796,7 +3796,7 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
 .page-topv3-issue .container .logo-image {
   width: 50%;
   position: absolute;
-  bottom: 0;
+  bottom: 200px;
   right: 0;
   z-index: 1;
 }
