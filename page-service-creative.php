@@ -470,7 +470,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-web-cta__grid">
 
         <li class="service-web-cta__card">
-          <a class="service-web-cta__card-link" href="<?php echo esc_url( home_url('/diagnosis/') ); ?>">
+          <a class="service-web-cta__card-link" href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>">
             <p class="service-web-cta__label">[初期検討の方へ]</p>
             <h3 class="service-web-cta__title">1分でできる無料診断</h3>
             <p class="service-web-cta__desc">現在のWebサイトの課題を整理します</p>

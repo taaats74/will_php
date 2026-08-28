@@ -399,7 +399,7 @@ get_template_part('template-parts/page-hero', null, [
         <li>所要1分</li>
         <li>個別レポート送付</li>
       </ul>
-      <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="diagnosis-btn">1分でできる無料診断を受ける</a>
+      <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="diagnosis-btn">1分でできる無料診断を受ける</a>
     </div>
 
   </div>
@@ -486,7 +486,7 @@ get_template_part('template-parts/page-hero', null, [
 
       <div class="contact-v5-cta-group">
 
-        <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" class="contact-v5-cta contact-v5-cta--outline">
+        <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" class="contact-v5-cta contact-v5-cta--outline">
           <span class="contact-v5-cta-label">DIAGNOSIS</span>
           <span class="contact-v5-cta-text">1分でできる無料診断</span>
           <span class="contact-v5-cta-arrow">→</span>
