@@ -9,3 +9,6 @@
 will-grow-v1-assets/node_modules/
 will-grow-v2-assets/node_modules/
 btob-consultation-lp-assets/node_modules/
+
+# 編集前スナップショット置き場(ローカル作業用)
+/_backup/
