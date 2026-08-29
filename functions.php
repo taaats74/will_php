@@ -411,14 +411,42 @@ add_filter( 'slim_seo_schema_organization', function( $organization ) {
         'postalCode'      => '812-0011',
         'addressCountry'  => 'JP',
     ];
+    // ブログ側(mu-plugin)の Article.author と同一の @id を使い、
+    // 2つのWordPress間で同じ人物エンティティとして扱えるようにする。
+    // 経歴は about ページ(page-about-v2.php)の記載に基づく。
     $organization['founder']     = [
         [
-            '@type' => 'Person',
-            'name'  => '高橋 竜也',
+            '@type'       => 'Person',
+            '@id'         => 'https://will-corp.co.jp/#person-takahashi',
+            'name'        => '高橋 竜也',
+            'jobTitle'    => '代表',
+            'url'         => 'https://will-corp.co.jp/about/',
+            'description' => 'アメリカの大学でマネジメントとマーケティングを学び、その後IT企業のマーケティング部門に10年間従事。マーケティングから内勤営業チームのマネジメントまで、集客から販売までの実践的なビジネススキルを培う。現在は福岡を拠点に、BtoB中小企業のWebマーケティング支援を行う。',
+            'knowsAbout'  => [
+                'BtoBマーケティング',
+                'Webマーケティング',
+                'リード獲得',
+                'マーケティングオートメーション',
+                'コンテンツSEO',
+            ],
         ],
         [
-            '@type' => 'Person',
-            'name'  => '岩田 あゆみ',
+            '@type'       => 'Person',
+            '@id'         => 'https://will-corp.co.jp/#person-iwata',
+            'name'        => '岩田 あゆみ',
+            'jobTitle'    => '代表',
+            'url'         => 'https://will-corp.co.jp/about/',
+            'description' => '九州大学大学院卒業後、研究職を経てWebデザイン・マーケティングの制作会社へ転職。独立後、制作全般とSNS集客支援・講師業を経て会社を設立。デザイン全般・SNS集客・ディレクションを担当。',
+            'alumniOf'    => [
+                '@type' => 'CollegeOrUniversity',
+                'name'  => '九州大学大学院',
+            ],
+            'knowsAbout'  => [
+                'Webデザイン',
+                'グラフィックデザイン',
+                'Instagram運用',
+                'ディレクション',
+            ],
         ],
     ];
     $organization['foundingDate'] = '2023-11';
