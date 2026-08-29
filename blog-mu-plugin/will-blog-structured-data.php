@@ -193,7 +193,15 @@ function will_bsd_output_faq() {
 		return;
 	}
 	$post_id = get_queried_object_id();
-	$faq     = will_bsd_extract_faq( get_post_field( 'post_content', $post_id ) );
+	$content = get_post_field( 'post_content', $post_id );
+
+	// 記事本文に手書きの FAQPage が埋め込まれている場合は二重出力になるため何もしない。
+	// （lead-kakutoku-cpl に1件存在。本文側を削除すればこちらの自動生成に切り替わる）
+	if ( is_string( $content ) && false !== stripos( $content, '"FAQPage"' ) ) {
+		return;
+	}
+
+	$faq = will_bsd_extract_faq( $content );
 	if ( ! $faq ) {
 		return;
 	}
