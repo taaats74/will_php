@@ -14,46 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- 構造化データ：Service + Offer -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "ウィルサポEC",
-      "serviceType": "サブスク型ECサイト制作",
-      "provider": {
-        "@id": "https://will-corp.co.jp/#organization"
-      },
-      "areaServed": "JP",
-      "description": "中小企業向けの月額制ECサイト構築・運用サービス。Shopifyを活用し、契約期間の縛りなしで本格的なECサイトを月額型で構築・運用できます。",
-      "offers": [
-        {"@type": "Offer", "name": "シンプル", "price": "40000", "priceCurrency": "JPY"},
-        {"@type": "Offer", "name": "スタンダード", "price": "50000", "priceCurrency": "JPY"},
-        {"@type": "Offer", "name": "プレミアム", "price": "60000", "priceCurrency": "JPY"}
-      ]
-    }
-    </script>
-
-    <!-- 構造化データ：FAQPage -->
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "初期費用はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "初期費用は各プラン300,000円です。月額費用とあわせてお支払いいただきます。ページ数や構成規模によって内容が変わる場合は、事前にお見積りのうえご提示します。"}},
-      {"@type": "Question", "name": "契約期間の縛りはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "契約期間の縛りはありません。解約をご希望の場合は、1ヶ月前までにご連絡いただければお手続き可能です。"}},
-      {"@type": "Question", "name": "支払いはいつから発生しますか？", "acceptedAnswer": {"@type": "Answer", "text": "無料相談後、正式にご依頼いただきキックオフを実施した段階で契約が開始となります。キックオフ時に初期費用、以降は毎月の月額をお支払いいただきます。"}},
-      {"@type": "Question", "name": "Shopifyの月額費用は別途かかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、Shopifyの月額利用料は別途発生します。Shopifyとは直接ご契約いただく形となります。料金の詳細はShopify公式ページをご確認ください。"}},
-      {"@type": "Question", "name": "決済手数料はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "決済手数料はShopifyの規定に基づきます。ご利用の決済方法により異なりますので、詳細は以下の公式ページをご確認ください。"}},
-      {"@type": "Question", "name": "商品登録は何点まで含まれますか？", "acceptedAnswer": {"@type": "Answer", "text": "商品登録は10点まで無料で対応いたします。11点目以降は、1点あたり2,000円で登録対応いたします。"}},
-      {"@type": "Question", "name": "デザインはどこまで自由ですか？", "acceptedAnswer": {"@type": "Answer", "text": "ブランドイメージに合わせたオリジナルデザインで制作いたします。テンプレートに固定されることなく、構成・デザインともに柔軟に対応可能です。"}},
-      {"@type": "Question", "name": "将来的な機能追加や拡張は可能ですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、可能です。将来の拡張を前提とした設計を行っていますので、機能追加やカスタマイズにも対応できます。"}},
-      {"@type": "Question", "name": "更新や保守はどこまで含まれますか？", "acceptedAnswer": {"@type": "Answer", "text": "サーバー・ドメインの管理を含め、保守対応は月額内で実施します。さらに、月2回までのテキスト修正や画像差し替えなどの更新作業も無料で対応いたします。"}},
-      {"@type": "Question", "name": "追加費用が発生するケースはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "大幅なカスタマイズ、ページ追加、商品登録数の超過、有料アプリ導入などが必要な場合は追加費用が発生することがあります。その際は必ず事前にご説明いたします。"}},
-      {"@type": "Question", "name": "月額費用を抑えられるのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "制作内容の標準化に加え、AIツールなどを活用することで設計・制作の効率化を図っています。さらに月額モデルで継続運用する仕組みにより、無理のない月額費用を実現しています。"}}
-    ]
-  }
-    </script>
 
     <?php wp_head(); ?>
   </head>
