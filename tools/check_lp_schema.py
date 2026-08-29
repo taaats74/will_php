@@ -124,6 +124,15 @@ def norm(s):
     return re.sub(r"\s+", "", html.unescape(s))
 
 
+def answer_on_page(answer, body):
+    """回答を構成する各文がページ本文に存在するか。
+
+    回答は段落を連結したものなので、段落間に表や箇条書きが挟まる場合
+    連結後の文字列は本文中に連続して現れない。文単位で照合する。
+    """
+    return [s for s in re.split(r"(?<=。)", answer) if s.strip() and norm(s) not in body]
+
+
 def main():
     ng = 0
     for template, url in TARGETS.items():
@@ -204,9 +213,11 @@ def main():
             elif live[norm(q)] != norm(a):
                 print(f"  [不一致] {q[:44]}")
                 missing += 1
-            elif norm(a) not in body:
-                print(f"  [本文に無い回答] {q[:44]}")
-                missing += 1
+            else:
+                gap = answer_on_page(a, body)
+                if gap:
+                    print(f"  [本文に無い回答] {q[:40]} … 「{gap[0][:34]}」")
+                    missing += 1
         ng += missing
         print(f"  FAQPage {len(live)}問 / テンプレート {len(expected)}問 / 問題 {missing}件")
 
