@@ -156,15 +156,27 @@ add_filter( 'slim_seo_schema_graph', 'will_bsd_filter_graph', 20 );
  * @return array{0:string,1:string}[] [質問, 回答] の配列
  */
 function will_bsd_extract_faq( $content ) {
-	if ( ! is_string( $content ) || false === strpos( $content, 'id="faq"' ) ) {
+	if ( ! is_string( $content ) ) {
 		return [];
 	}
-	if ( ! preg_match( '#<section[^>]+id="faq"[^>]*>(.*?)</section>#is', $content, $m ) ) {
+
+	$block = '';
+	if ( preg_match( '#<section[^>]+id="faq"[^>]*>(.*?)</section>#is', $content, $m ) ) {
+		// 通常の書き方: <section id="faq"> でくくる
+		$block = $m[1];
+	} elseif ( preg_match( '#<h2[^>]*>\s*(?:よくあるご質問|よくある質問|FAQ|Q&amp;A|Q&A)\s*</h2>(.*?)(?=<h2[^>]*>|<section[^>]|\z)#is', $content, $m ) ) {
+		// section でくくらず h2 見出しだけの書き方にも対応する。
+		// 「よくある質問を掲載して〜」のような本文中の言及を拾わないよう、
+		// 見出しが FAQ の語だけで構成されている場合に限る。
+		$block = $m[1];
+	}
+
+	if ( '' === $block ) {
 		return [];
 	}
 
 	// h3 ごとに区切る。各区切りの中の <p> をすべて回答として拾う。
-	if ( ! preg_match_all( '#<h3[^>]*>(.*?)</h3>(.*?)(?=<h3[^>]*>|\z)#is', $m[1], $items, PREG_SET_ORDER ) ) {
+	if ( ! preg_match_all( '#<h3[^>]*>(.*?)</h3>(.*?)(?=<h3[^>]*>|\z)#is', $block, $items, PREG_SET_ORDER ) ) {
 		return [];
 	}
 
