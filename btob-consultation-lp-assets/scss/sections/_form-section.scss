@@ -27,3 +27,116 @@
     }
   }
 }
+
+// -------------------------------------------
+//  無料診断への導線（フォームの直前）
+//  ここまで読むと無料相談しか見えないため、主CTAの無料診断を
+//  フォームとは別の枠として立てる。枠線＋ラベルで白いフォームカードと区別する。
+// -------------------------------------------
+.form-diag {
+  position: relative;
+  max-width: 720px;
+  // 上は見出しから離して独立したCTAに見せる（60px）
+  margin: 60px auto 36px;
+  padding: 40px clamp(24px, 3vw, 40px) clamp(28px, 3vw, 36px);
+  border: 2px solid var(--c-primary);
+  border-radius: var(--radius-card);
+  background: var(--c-bg);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+
+  @include m.mq-down(sm) {
+    margin-bottom: 28px;
+    padding: 34px 20px 26px;
+  }
+
+  // 枠線にまたがる見出しラベル
+  &__badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6px 20px;
+    border-radius: var(--radius-pill);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+    color: var(--c-on-dark);
+    background: var(--c-primary);
+
+    @include m.mq-down(sm) {
+      padding: 5px 14px;
+      font-size: 13px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    line-height: var(--lh-head);
+    color: var(--c-heading);
+
+    svg {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      color: var(--c-primary);
+    }
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    text-align: left;
+    color: var(--c-text);
+
+    @include m.mq-down(sm) { font-size: var(--fs-small); }
+  }
+
+  &__btn {
+    gap: 10px;
+    width: 100%;
+    max-width: 420px;
+    margin-top: 24px;
+
+    svg {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      transition: transform .2s ease;
+    }
+
+    &:hover svg { transform: translateX(3px); }
+  }
+
+  // 診断枠とフォームの区切り（中央に短い文言を挟んだ罫線）
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 720px;
+    margin: 0 auto 24px;
+    font-size: var(--fs-small);
+    font-weight: 700;
+    color: var(--c-text-mute);
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--c-border);
+    }
+
+    @include m.mq-down(sm) {
+      gap: 10px;
+      font-size: 13px;
+    }
+  }
+}

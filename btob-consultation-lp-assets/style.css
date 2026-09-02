@@ -2195,3 +2195,106 @@ body {
     margin-bottom: 28px;
   }
 }
+
+.form-diag {
+  position: relative;
+  max-width: 720px;
+  margin: 60px auto 36px;
+  padding: 40px clamp(24px, 3vw, 40px) clamp(28px, 3vw, 36px);
+  border: 2px solid var(--c-primary);
+  border-radius: var(--radius-card);
+  background: var(--c-bg);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+@media screen and (max-width: 599.98px) {
+  .form-diag {
+    margin-bottom: 28px;
+    padding: 34px 20px 26px;
+  }
+}
+.form-diag__badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 6px 20px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: var(--c-on-dark);
+  background: var(--c-primary);
+}
+@media screen and (max-width: 599.98px) {
+  .form-diag__badge {
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+}
+.form-diag__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: var(--lh-head);
+  color: var(--c-heading);
+}
+.form-diag__title svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--c-primary);
+}
+.form-diag__text {
+  margin-top: 16px;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  text-align: left;
+  color: var(--c-text);
+}
+@media screen and (max-width: 599.98px) {
+  .form-diag__text {
+    font-size: var(--fs-small);
+  }
+}
+.form-diag__btn {
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 24px;
+}
+.form-diag__btn svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+.form-diag__btn:hover svg {
+  transform: translateX(3px);
+}
+.form-diag__divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--c-text-mute);
+}
+.form-diag__divider::before, .form-diag__divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--c-border);
+}
+@media screen and (max-width: 599.98px) {
+  .form-diag__divider {
+    gap: 10px;
+    font-size: 13px;
+  }
+}

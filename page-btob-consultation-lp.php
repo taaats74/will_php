@@ -542,6 +542,26 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
         <h2 class="heading">ホームページ・BtoBマーケティングの<br>無料相談お申し込み</h2>
       </div>
 
+      <!-- 無料診断への導線（フォームの前に置く）
+           ここまで読んだ方には無料相談しか見えないため、主CTAの無料診断を明示する -->
+      <div class="form-diag" data-fade>
+        <p class="form-diag__badge">相談内容がまだ固まっていない方へ</p>
+
+        <h3 class="form-diag__title">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+          まずは<span class="marker">無料診断（約1分）</span>から
+        </h3>
+
+        <p class="form-diag__text">10問に答えるだけで、ホームページとマーケティングの現状、そして何から手をつけるべきかを整理し、レポートでお送りします。費用はかかりません。診断結果というたたき台があると、無料相談も状況説明ではなく、原因の見立てと優先順位の話から始められます。</p>
+
+        <a class="btn btn--primary form-diag__btn" href="<?php echo esc_url( $bcl_diagnosis_url ); ?>">
+          無料診断（約1分）を試す
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <p class="form-diag__divider" data-fade><span>ご相談内容が決まっている方は、こちらのフォームから</span></p>
+
       <div class="form-card" data-fade>
         <!-- HubSpot 埋め込みフォーム -->
         <div class="hs-form-frame" data-region="na2" data-form-id="<?php echo esc_attr( $bcl_hs_form_id ); ?>" data-portal-id="<?php echo esc_attr( $bcl_hs_portal_id ); ?>"></div>
