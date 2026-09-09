@@ -125,17 +125,120 @@
     revealTargets.forEach(function (el) { revealObserver.observe(el); });
   }
 
-  /* --- FAQ：1つ開いたら他を閉じる --- */
+  /* --- FAQ：1つ開いたら他を閉じる／開閉は高さをアニメーションさせる ---
+     開閉自体は <details> のまま。高さを 300ms で変化させ、ネイティブの
+     「一瞬で開く」動きを避ける（ウィルサポ LP の .wsv2-faq__item と同方式）。
+     Web Animations API が無い環境では、従来どおりネイティブの開閉にする。 */
   var faqItems = document.querySelectorAll('.wg2-faq__item');
-  faqItems.forEach(function (item) {
-    item.addEventListener('toggle', function () {
-      if (item.open) {
-        faqItems.forEach(function (other) {
-          if (other !== item) { other.open = false; }
+
+  if (faqItems.length) {
+    var FAQ_DURATION = 300;
+    var FAQ_EASING = 'ease';
+
+    if (typeof faqItems[0].animate !== 'function') {
+      faqItems.forEach(function (item) {
+        item.addEventListener('toggle', function () {
+          if (!item.open) { return; }
+          faqItems.forEach(function (other) {
+            if (other !== item) { other.open = false; }
+          });
         });
-      }
-    });
-  });
+      });
+    } else {
+      var faqControllers = [];
+
+      faqItems.forEach(function (item) {
+        var summary = item.querySelector('.wg2-faq__q');
+        var answer = item.querySelector('.wg2-faq__a');
+        if (!summary || !answer) { return; }
+
+        var animation = null;
+        var isClosing = false;
+        var isExpanding = false;
+
+        var finish = function (openState) {
+          item.open = openState;
+          animation = null;
+          isClosing = false;
+          isExpanding = false;
+          item.style.height = '';
+          item.style.overflow = '';
+        };
+
+        var animate = function (startHeight, endHeight, openState) {
+          if (animation) { animation.cancel(); }
+
+          var current = item.animate(
+            { height: [ startHeight, endHeight ] },
+            { duration: FAQ_DURATION, easing: FAQ_EASING }
+          );
+          var settled = false;
+
+          animation = current;
+
+          var settle = function () {
+            if (settled || animation !== current) { return; }
+            settled = true;
+            finish(openState);
+          };
+
+          current.onfinish = settle;
+          current.oncancel = function () {
+            settled = true;
+            isClosing = false;
+            isExpanding = false;
+          };
+
+          // onfinish が届かない環境でも高さと open 状態を確定させる保険
+          window.setTimeout(settle, FAQ_DURATION + 80);
+        };
+
+        var shrink = function () {
+          if (!item.open || isClosing) { return; }
+          isClosing = true;
+          item.style.overflow = 'hidden';
+          animate(item.offsetHeight + 'px', summary.offsetHeight + 'px', false);
+        };
+
+        var expand = function () {
+          isExpanding = true;
+          animate(item.offsetHeight + 'px', (summary.offsetHeight + answer.offsetHeight) + 'px', true);
+        };
+
+        var openItem = function () {
+          item.style.overflow = 'hidden';
+          item.style.height = item.offsetHeight + 'px';
+          item.open = true;
+
+          // 次フレームで展開する。rAF が来ない環境（バックグラウンドタブ等）でも
+          // 開いたまま畳まれた状態にならないよう、タイマーでも保険をかける
+          var started = false;
+          var start = function () {
+            if (started) { return; }
+            started = true;
+            expand();
+          };
+          window.requestAnimationFrame(start);
+          window.setTimeout(start, 60);
+        };
+
+        summary.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          if (isClosing || !item.open) {
+            faqControllers.forEach(function (other) {
+              if (other.item !== item) { other.shrink(); }
+            });
+            openItem();
+          } else {
+            shrink();
+          }
+        });
+
+        faqControllers.push({ item: item, shrink: shrink });
+      });
+    }
+  }
 
   /* --- CTAクリック計測 ---
      data-cta-type="diagnosis" → cta_diagnosis_click
