@@ -4,35 +4,39 @@
 // 01 ファーストビュー
 // v2 の .wg2-hero をそのまま使い、その上に先行導入企業募集のバナー（見出し＋主CTA）を置く
 // =========================================
+// ヘッダーの直下から横幅いっぱいに敷く帯。影・角丸は付けず、白geometryのまま下の FV につなげる
 .wgm-banner {
   // 下の余白は v2 の FV 上パディングの倍（SP 48px / PC 64px）
   margin-bottom: 48px;
-  padding: 20px;
-  border-radius: v.$radius-lg;
-  background: rgba(v.$white, 0.94);
-  box-shadow: 0 20px 44px -30px rgba(v.$navy, 1);
+  padding-block: 20px;
+  background: v.$white;
 
   @media (min-width: v.$bp-md) {
     margin-bottom: 64px;
-    padding: 24px 32px;
+    padding-block: 24px;
   }
 }
 
-// バナーの上の余白は v2 の FV 上パディングの半分にする（SP 48→24px / PC 80→40px）
+// バナーをヘッダーに接させるため、FV の上パディングは持たせない
 .wgm-hero {
-  padding-top: 24px;
+  padding-top: 0;
 
   @media (min-width: v.$bp-md) {
-    padding-top: 40px;
+    padding-top: 0;
   }
 }
 
 // 1カラム（見出し → サブ → CTA → 補足）
+// 帯は全幅だが、中身の折り返し位置は .wg2-container と揃える
 .wgm-banner__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  width: 100%;
+  max-width: v.$container;
+  margin-inline: auto;
+  padding-inline: v.$gutter;
   text-align: center;
 
   @media (min-width: v.$bp-md) {
@@ -310,9 +314,13 @@
   }
 }
 
-// 11 の白パネルは FV のバナーと同じ中身。パネル自身に余白があるので詰める
+// 11 の白パネルは FV のバナーと同じ中身。パネル自身に余白があるので詰める。
+// FV のバナーは全幅の帯なので __inner に幅と左右余白を持たせているが、
+// こちらはパネルの中なので打ち消す
 .wgm-final .wg2-ctaband__panel .wgm-banner__inner {
   gap: 14px;
+  max-width: none;
+  padding-inline: 0;
 
   @media (min-width: v.$bp-md) {
     gap: 18px;

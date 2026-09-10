@@ -113,7 +113,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
           <li><a href="#wgm-price" class="wg2-header__link">先行導入料金</a></li>
           <li><a href="#wgm-terms" class="wg2-header__link">先行導入条件</a></li>
           <li><a href="#wgm-faq" class="wg2-header__link">よくあるご質問</a></li>
-          <li><a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" class="wg2-header__link wg2-header__link--cta" data-cta-type="diagnosis" data-cta-position="header">無料診断</a></li>
+          <li><a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" class="wg2-header__link wg2-header__link--cta" data-cta-type="diagnosis" data-cta-position="header">無料診断</a></li>
         </ul>
       </nav>
 
@@ -130,7 +130,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
         <li><a href="#wgm-faq">よくあるご質問</a></li>
       </ul>
       <div class="wg2-drawer__actions">
-        <a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="drawer">無料診断<?php echo wgm_icon( 'arrow-right' ); ?></a>
+        <a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="drawer">無料診断<?php echo wgm_icon( 'arrow-right' ); ?></a>
       </div>
     </nav>
   </header>
@@ -139,22 +139,25 @@ if ( ! function_exists( 'wgm_icon' ) ) {
 
     <!-- ============ 01 ファーストビュー（ウィルグローLP v2 の FV に、先行導入企業募集の見出しを上に足したもの） ============ -->
     <section class="wg2-hero wgm-hero" id="wgm-fv">
-      <div class="wg2-container">
 
-        <!-- 先行導入企業募集バナー（見出し＋主CTA） -->
-        <div class="wgm-banner">
-          <div class="wgm-banner__inner">
-            <div class="wgm-banner__body">
-              <h1 class="wgm-banner__title">先行導入企業募集</h1>
-              <p class="wgm-banner__sub">新サービス立ち上げ、事例構築期間につき、<br class="wg2-br-pc">3社限定でサービスを特別料金にてご提供いたします。</p>
-            </div>
+      <!-- 先行導入企業募集バナー（見出し＋主CTA）
+           横幅いっぱいに敷くため、あえて .wg2-container の外に出している。
+           中身の折り返し位置だけ .wgm-banner__inner でコンテナ幅に合わせる -->
+      <div class="wgm-banner">
+        <div class="wgm-banner__inner">
+          <div class="wgm-banner__body">
+            <h1 class="wgm-banner__title">先行導入企業募集</h1>
+            <p class="wgm-banner__sub">新サービス立ち上げ、事例構築期間につき、<br class="wg2-br-pc">3社限定でサービスを特別料金にてご提供いたします。</p>
+          </div>
 
-            <div class="wgm-banner__actions">
-              <a class="wg2-btn wg2-btn--primary" id="wgmFvCta" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" data-cta-type="diagnosis" data-cta-position="fv">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
-              <p class="wg2-btn-note">先行導入への参加は、診断結果をご覧いただいたうえでご検討ください。</p>
-            </div>
+          <div class="wgm-banner__actions">
+            <a class="wg2-btn wg2-btn--primary" id="wgmFvCta" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="fv">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
+            <p class="wg2-btn-note">先行導入への参加は、診断結果をご覧いただいたうえでご検討ください。</p>
           </div>
         </div>
+      </div>
+
+      <div class="wg2-container">
 
         <!-- 以下は v2 の FV と同じ -->
         <div class="wg2-hero__grid">
@@ -263,7 +266,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
         </div>
 
         <div class="wgm-cta-center">
-          <a class="wg2-btn wg2-btn--ghost wg2-btn--lg" href="<?php echo esc_url( $wgm_willgrow_url ); ?>" target="_self">ウィルグローサービス詳細<?php echo wgm_icon( 'arrow-right' ); ?></a>
+          <a class="wg2-btn wg2-btn--ghost wg2-btn--lg" href="<?php echo esc_url( $wgm_willgrow_url ); ?>" target="_blank" rel="noopener noreferrer">ウィルグローサービス詳細<?php echo wgm_icon( 'arrow-right' ); ?></a>
         </div>
       </div>
     </section>
@@ -305,7 +308,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
         </div>
 
         <div class="wgm-midcta">
-          <a class="wg2-btn wg2-btn--primary wg2-btn--lg" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" data-cta-type="diagnosis" data-cta-position="sec03">まずは現状を確認する → 無料診断</a>
+          <a class="wg2-btn wg2-btn--primary wg2-btn--lg" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="sec03">まずは現状を確認する → 無料診断</a>
         </div>
       </div>
     </section>
@@ -406,7 +409,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
         </div>
 
         <div class="wgm-cta-center">
-          <a class="wg2-btn wg2-btn--primary wg2-btn--lg" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" data-cta-type="diagnosis" data-cta-position="sec05">まずは無料診断を受ける<?php echo wgm_icon( 'arrow-right' ); ?></a>
+          <a class="wg2-btn wg2-btn--primary wg2-btn--lg" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="sec05">まずは無料診断を受ける<?php echo wgm_icon( 'arrow-right' ); ?></a>
           <p class="wg2-btn-note">どちらのプランが合うかは、診断結果をもとにご提案します。</p>
         </div>
       </div>
@@ -463,7 +466,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
               <li>撮影・動画・開発</li>
             </ul>
             <p class="wgm-scope__note">サイトリニューアルは、サブスク型Webサイトの制作・運用支援サービス「ウィルサポ」で承ります。</p>
-            <p class="wgm-scope__link"><a class="wg2-btn wg2-btn--ghost wg2-btn--sm" href="<?php echo esc_url( $wgm_willsupport_url ); ?>" target="_self">ウィルサポはこちら<?php echo wgm_icon( 'arrow-right' ); ?></a></p>
+            <p class="wgm-scope__link"><a class="wg2-btn wg2-btn--ghost wg2-btn--sm" href="<?php echo esc_url( $wgm_willsupport_url ); ?>" target="_blank" rel="noopener noreferrer">ウィルサポはこちら<?php echo wgm_icon( 'arrow-right' ); ?></a></p>
           </div>
         </div>
       </div>
@@ -542,7 +545,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
         </p>
 
         <div class="wgm-cta-center">
-          <a class="wg2-btn wg2-btn--ghost wg2-btn--lg" href="<?php echo esc_url( $wgm_willgrow_url ); ?>" target="_self">ウィルグローサービス詳細<?php echo wgm_icon( 'arrow-right' ); ?></a>
+          <a class="wg2-btn wg2-btn--ghost wg2-btn--lg" href="<?php echo esc_url( $wgm_willgrow_url ); ?>" target="_blank" rel="noopener noreferrer">ウィルグローサービス詳細<?php echo wgm_icon( 'arrow-right' ); ?></a>
         </div>
       </div>
     </section>
@@ -662,7 +665,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
               </div>
 
               <div class="wgm-banner__actions">
-                <a class="wg2-btn wg2-btn--primary" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" data-cta-type="diagnosis" data-cta-position="sec08">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
+                <a class="wg2-btn wg2-btn--primary" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="sec08">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
                 <p class="wg2-btn-note">先行導入への参加は、診断結果をご覧いただいたうえでご検討ください。</p>
               </div>
             </div>
@@ -680,7 +683,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
   <div class="wg2-sticky wgm-sticky" id="wgmSticky">
     <p class="wg2-sticky__title"><?php echo wgm_icon( 'clipboard' ); ?><span>先行導入企業募集</span></p>
     <p class="wg2-sticky__text">新サービス立ち上げ、事例構築期間につき、3社限定でサービスを特別料金にてご提供いたします。</p>
-    <a class="wg2-btn wg2-btn--primary wg2-btn--block" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" data-cta-type="diagnosis" data-cta-position="sticky">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
+    <a class="wg2-btn wg2-btn--primary wg2-btn--block" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="sticky">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
     <p class="wgm-sticky__note">先行導入への参加は、診断結果をご覧いただいたうえでご検討ください。</p>
   </div>
 
