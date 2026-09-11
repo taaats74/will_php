@@ -3,6 +3,7 @@
  * ヘッダーのハンバーガー（1024px 未満）とドロワーの開閉。
  * 追従CTA：FV の CTA が画面外に出たら表示し、最終CTA（11）が画面内に入ったら非表示。
  *          IntersectionObserver のみで判定する（スクロールイベントは使わない）。
+ *          PC の右下カードは × で閉じられる。閉じたあとは再表示しない。
  * FAQ：ウィルグローLP v2 と同じ挙動（1つ開いたら他を閉じる。開閉自体は <details> のネイティブ）。
  */
 (function () {
@@ -37,6 +38,7 @@
 
     /* --- 追従CTA --- */
     var sticky = document.getElementById('wgmSticky');
+    var stickyClose = document.getElementById('wgmStickyClose');
     var fvCta = document.getElementById('wgmFvCta');
     var finalSection = document.getElementById('wgm-cta');
 
@@ -44,10 +46,21 @@
 
     var fvPassed = false; // FV の CTA が画面外に出たか
     var atFinal = false;  // 最終CTA が画面内にあるか
+    var closed = false;   // 閉じるボタンで消したか（以後スクロールしても出さない）
 
     var render = function () {
+      if (closed) { return; }
       sticky.classList.toggle('is-visible', fvPassed && !atFinal);
     };
+
+    // 閉じるボタン：以後このページを読み込み直すまで表示しない
+    if (stickyClose) {
+      stickyClose.addEventListener('click', function () {
+        closed = true;
+        sticky.classList.add('is-closed');
+        sticky.classList.remove('is-visible');
+      });
+    }
 
     new IntersectionObserver(function (entries) {
       var e = entries[0];

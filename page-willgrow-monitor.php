@@ -363,6 +363,33 @@ if ( ! function_exists( 'wgm_icon' ) ) {
       </div>
     </section>
 
+    <!-- ============ 中間CTA（11 の CTA バンドと同内容。計測は sec04） ============ -->
+    <section class="wg2-ctaband wgm-midband">
+      <div class="wg2-container wg2-ctaband__inner">
+        <div class="wg2-ctaband__head">
+          <span class="wg2-ctaband__eyebrow">CONTACT</span>
+          <h2 class="wg2-ctaband__title">お気軽にお問い合わせください。</h2>
+          <p class="wg2-ctaband__lead">初期費用0円・契約期間の縛りなし。<br>現状をお聞かせいただくか、まず無料診断でいまの位置を確かめてください。</p>
+        </div>
+
+        <div class="wg2-ctaband__grid">
+
+          <div class="wg2-ctaband__panel">
+            <h3 class="wg2-ctaband__panel-title">まずは話を聞いてみたい方へ<br>（無料相談）</h3>
+            <p class="wg2-ctaband__panel-text">オンラインで30〜60分。現状をお聞きしたうえで、先行導入が御社に合うかどうかも含めてお伝えします。見合わないと判断した場合は、その旨も正直にお伝えします。</p>
+            <a href="<?php echo esc_url( $wgm_consult_url ); ?>" class="wg2-ctaband__btn" data-cta-type="consult" data-cta-position="sec04">無料相談を申し込む</a>
+          </div>
+
+          <div class="wg2-ctaband__panel">
+            <h3 class="wg2-ctaband__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
+            <p class="wg2-ctaband__panel-text">10問に答えるだけ・約1分。御社サイトの現在地と改善の方向性をレポートにしてお送りします。先行導入へのご参加は、レポートをご覧になってからご検討ください。</p>
+            <a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" class="wg2-ctaband__btn" data-cta-type="diagnosis" data-cta-position="sec04" target="_blank" rel="noopener noreferrer">無料診断（約1分）を試す</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ============ 06 先行導入料金 ============ -->
     <section class="wg2-section wg2-section--pale" id="wgm-price">
       <div class="wg2-container">
@@ -728,6 +755,8 @@ if ( ! function_exists( 'wgm_icon' ) ) {
 
   <!-- ============ 追従CTA（SP=下部固定／PC=右下。v2 と同仕様） ============ -->
   <div class="wg2-sticky wgm-sticky" id="wgmSticky">
+    <!-- 閉じるボタン。v2 と同じく PC（右下カード）のみ表示する -->
+    <button class="wg2-sticky__close" id="wgmStickyClose" type="button" aria-label="閉じる">×</button>
     <p class="wg2-sticky__title"><?php echo wgm_icon( 'clipboard' ); ?><span>先行導入企業募集</span></p>
     <p class="wg2-sticky__text">新サービス立ち上げ、事例構築期間につき、3社限定でサービスを特別料金にてご提供いたします。</p>
     <a class="wg2-btn wg2-btn--primary wg2-btn--block" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="sticky">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
