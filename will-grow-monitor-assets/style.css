@@ -353,6 +353,29 @@
   }
 }
 
+.wgm-common {
+  max-width: 880px;
+  margin: 24px auto 0;
+}
+@media (min-width: 900px) {
+  .wgm-common {
+    margin-top: 28px;
+  }
+}
+
+.wgm-common__list {
+  margin-top: 16px;
+}
+@media (min-width: 600px) {
+  .wgm-common__list {
+    columns: 2;
+    column-gap: 28px;
+  }
+  .wgm-common__list li {
+    break-inside: avoid;
+  }
+}
+
 .wgm-plan__regular {
   margin: 10px 0 0;
   font-size: 0.85rem;

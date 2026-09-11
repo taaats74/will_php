@@ -373,14 +373,19 @@ if ( ! function_exists( 'wgm_icon' ) ) {
               <p class="wg2-plan__price"><small>月額</small>10万円</p>
             </div>
             <div class="wg2-plan__body">
-              <p class="wg2-plan__catch">Webからの問い合わせを増やしたい企業様向け</p>
+              <p class="wg2-plan__catch">問い合わせが届く状態を、私たちがつくります</p>
+              <p class="wg2-plan__inherit">下記の共通内容 ＋</p>
               <ul class="wg2-checkitems wg2-plan__list">
-                <li>戦略設計・実行計画</li>
-                <li>記事の制作・リライト（本数の上限なし）</li>
+                <li>記事の企画・執筆・公開（本数の上限なし）</li>
+                <li>既存記事のリライト（本数の上限なし）</li>
                 <li>問い合わせ導線の改善</li>
-                <li>計測設定と月次レポート</li>
-                <li>月1回の定例打ち合わせ</li>
+                <li>フォームの改善</li>
+                <li>サイト内テキストの修正</li>
+                <li>内部リンクの調整</li>
+                <li>計測環境の構築と運用</li>
+                <li>月次レポートと改善提案</li>
               </ul>
+              <p class="wg2-plan__punch"><?php echo wgm_icon( 'check' ); ?><span>手を動かすのは、すべて私たちです</span></p>
             </div>
           </article>
 
@@ -391,15 +396,33 @@ if ( ! function_exists( 'wgm_icon' ) ) {
               <p class="wg2-plan__price"><small>月額</small>30万円</p>
             </div>
             <div class="wg2-plan__body">
-              <p class="wg2-plan__catch">問い合わせを商談まで確実につなげたい企業様向け</p>
+              <p class="wg2-plan__catch">届いた問い合わせを、商談まで育てます</p>
+              <p class="wg2-plan__inherit">問い合わせプランの内容すべて ＋</p>
               <ul class="wg2-checkitems wg2-plan__list">
-                <li>問い合わせプランの内容すべて</li>
-                <li>失注後の追客の仕組み化</li>
-                <li>過去の問い合わせ・名刺の掘り起こし</li>
-                <li>営業に渡す前のリードの整理</li>
+                <li>MAツールの構築（構築費込み）</li>
+                <li>見込み客リストの管理・整理</li>
+                <li>メール配信によるナーチャリング</li>
+                <li>関心度の高い見込み客の抽出</li>
+                <li>営業へお渡しするタイミングの設計</li>
+                <li>商談化状況の分析と改善</li>
               </ul>
+              <p class="wg2-plan__punch"><?php echo wgm_icon( 'check' ); ?><span>追いかけるべき会社と、そのタイミングが分かります</span></p>
             </div>
           </article>
+        </div>
+
+        <!-- どちらのプランにも共通して含まれる内容（通常LPの「設計プラン」相当） -->
+        <div class="wg2-card wgm-common">
+          <h3 class="wg2-h3">どちらのプランにも共通して含まれる内容</h3>
+          <ul class="wg2-checkitems wgm-common__list">
+            <li>現状分析（アクセス・検索順位・サイト診断）</li>
+            <li>競合調査</li>
+            <li>ターゲットと訴求の設計</li>
+            <li>獲得すべきキーワードの選定</li>
+            <li>施策の優先順位づけ</li>
+            <li>改善提案書のご提出</li>
+            <li>月1回の打ち合わせ</li>
+          </ul>
         </div>
 
         <!-- 先行導入期間の経過後の扱い。注記ではなく、目立たせたい約束として大きめ・太字で見せる -->

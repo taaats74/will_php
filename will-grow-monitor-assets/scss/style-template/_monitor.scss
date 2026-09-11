@@ -419,6 +419,31 @@
   }
 }
 
+// どちらのプランにも共通して含まれる内容（通常LPの「設計プラン」相当）
+// 金額を先に見せたいので、プラン2枚の下に置く
+.wgm-common {
+  max-width: 880px;
+  margin: 24px auto 0;
+
+  @media (min-width: v.$bp-md) {
+    margin-top: 28px;
+  }
+}
+
+// 7項目あるので PC は2列に分ける
+.wgm-common__list {
+  margin-top: 16px;
+
+  @media (min-width: v.$bp-sm) {
+    columns: 2;
+    column-gap: 28px;
+
+    li {
+      break-inside: avoid;
+    }
+  }
+}
+
 // 「通常 月額30万円」（プラン名と価格のあいだ。色帯の上に載るため白系）
 .wgm-plan__regular {
   margin: 10px 0 0;
