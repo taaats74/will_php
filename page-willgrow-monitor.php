@@ -683,7 +683,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
       <div class="wg2-container wg2-ctaband__inner">
         <div class="wg2-ctaband__head">
           <span class="wg2-ctaband__eyebrow">CONTACT</span>
-          <h2 class="wg2-ctaband__title">どちらから始めていただいても構いません</h2>
+          <h2 class="wg2-ctaband__title">お気軽にお問い合わせください。</h2>
           <p class="wg2-ctaband__lead">初期費用0円・契約期間の縛りなし。<br>現状をお聞かせいただくか、まず無料診断でいまの位置を確かめてください。</p>
         </div>
 
