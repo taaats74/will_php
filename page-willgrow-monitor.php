@@ -33,6 +33,8 @@ $wgm_diagnosis_url = home_url( '/diagnosis/' );
 $wgm_willgrow_url  = home_url( '/willgrow/' );
 // ウィルサポ：07 条件の「別途お見積り」からサイトリニューアルの受け皿として案内する
 $wgm_willsupport_url = home_url( '/willsupport/' );
+// 無料相談：ページ下部の HubSpot フォームへ（通常LPと同じく同一ページ内アンカー）
+$wgm_consult_url   = '#wgm-contact';
 
 /* robots は WordPress コアの wp_robots 経由で出す。
    Slim SEO も同じフィルターを使うため、meta タグが二重に出ない */
@@ -86,6 +88,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
        固定ページ側では「ヘッダー・フッターあり、サイドバーなし」の想定
        （本テンプレートはヘッダー・フッターを自前で出力し、サイドバーは持たない）。 -->
 
+  <link rel="preconnect" href="https://js-na2.hsforms.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -113,6 +116,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
           <li><a href="#wgm-price" class="wg2-header__link">先行導入料金</a></li>
           <li><a href="#wgm-terms" class="wg2-header__link">先行導入条件</a></li>
           <li><a href="#wgm-faq" class="wg2-header__link">よくあるご質問</a></li>
+          <li><a href="<?php echo esc_url( $wgm_consult_url ); ?>" class="wg2-header__link wg2-header__link--cta" data-cta-type="consult" data-cta-position="header">無料相談</a></li>
           <li><a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" class="wg2-header__link wg2-header__link--cta" data-cta-type="diagnosis" data-cta-position="header">無料診断</a></li>
         </ul>
       </nav>
@@ -130,6 +134,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
         <li><a href="#wgm-faq">よくあるご質問</a></li>
       </ul>
       <div class="wg2-drawer__actions">
+        <a href="<?php echo esc_url( $wgm_consult_url ); ?>" class="wg2-btn wg2-btn--ghost wg2-btn--block" data-cta-type="consult" data-cta-position="drawer">無料相談<?php echo wgm_icon( 'arrow-right' ); ?></a>
         <a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="drawer">無料診断<?php echo wgm_icon( 'arrow-right' ); ?></a>
       </div>
     </nav>
@@ -151,7 +156,10 @@ if ( ! function_exists( 'wgm_icon' ) ) {
           </div>
 
           <div class="wgm-banner__actions">
-            <a class="wg2-btn wg2-btn--primary" id="wgmFvCta" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="fv">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
+            <div class="wgm-banner__btns">
+              <a class="wg2-btn wg2-btn--primary" id="wgmFvCta" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="fv">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
+              <a class="wg2-btn wg2-btn--ghost" href="<?php echo esc_url( $wgm_consult_url ); ?>" data-cta-type="consult" data-cta-position="fv">無料相談を申し込む<?php echo wgm_icon( 'arrow-right' ); ?></a>
+            </div>
             <p class="wg2-btn-note">先行導入への参加は、診断結果をご覧いただいたうえでご検討ください。</p>
           </div>
         </div>
@@ -670,29 +678,45 @@ if ( ! function_exists( 'wgm_icon' ) ) {
       </div>
     </section>
 
-    <!-- ============ 11 無料診断 CTA ============ -->
+    <!-- ============ 11 CTA（無料相談・無料診断。通常LPの CTA バンドと同構成） ============ -->
     <section class="wg2-ctaband wgm-final" id="wgm-cta">
       <div class="wg2-container wg2-ctaband__inner">
         <div class="wg2-ctaband__head">
-          <h2 class="wg2-ctaband__title">まずは無料診断から</h2>
-          <p class="wg2-ctaband__lead">10問・約1分の診断で、御社サイトの現在地と改善の方向性をレポートでお送りします。<br>先行導入へのご参加は、レポートをご覧いただいてからご検討ください。</p>
+          <span class="wg2-ctaband__eyebrow">CONTACT</span>
+          <h2 class="wg2-ctaband__title">どちらから始めていただいても構いません</h2>
+          <p class="wg2-ctaband__lead">初期費用0円・契約期間の縛りなし。<br>現状をお聞かせいただくか、まず無料診断でいまの位置を確かめてください。</p>
         </div>
 
-        <div class="wg2-ctaband__grid wgm-final__grid">
-          <div class="wg2-ctaband__panel">
-            <!-- 中身は FV の先行導入企業募集バナーと同じ -->
-            <div class="wgm-banner__inner">
-              <div class="wgm-banner__body">
-                <p class="wgm-banner__title">先行導入企業募集</p>
-                <p class="wgm-banner__sub">新サービス立ち上げ、事例構築期間につき、<br class="wg2-br-pc">3社限定でサービスを特別料金にてご提供いたします。</p>
-              </div>
+        <div class="wg2-ctaband__grid">
 
-              <div class="wgm-banner__actions">
-                <a class="wg2-btn wg2-btn--primary" href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" target="_blank" rel="noopener noreferrer" data-cta-type="diagnosis" data-cta-position="sec08">まずは無料診断を受ける<span class="wgm-btn__sub">（約1分）</span><?php echo wgm_icon( 'arrow-right' ); ?></a>
-                <p class="wg2-btn-note">先行導入への参加は、診断結果をご覧いただいたうえでご検討ください。</p>
-              </div>
-            </div>
+          <div class="wg2-ctaband__panel">
+            <h3 class="wg2-ctaband__panel-title">まずは話を聞いてみたい方へ<br>（無料相談）</h3>
+            <p class="wg2-ctaband__panel-text">オンラインで30〜60分。現状をお聞きしたうえで、先行導入が御社に合うかどうかも含めてお伝えします。見合わないと判断した場合は、その旨も正直にお伝えします。</p>
+            <a href="<?php echo esc_url( $wgm_consult_url ); ?>" class="wg2-ctaband__btn" data-cta-type="consult" data-cta-position="sec08">無料相談を申し込む</a>
           </div>
+
+          <div class="wg2-ctaband__panel">
+            <h3 class="wg2-ctaband__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
+            <p class="wg2-ctaband__panel-text">10問に答えるだけ・約1分。御社サイトの現在地と改善の方向性をレポートにしてお送りします。先行導入へのご参加は、レポートをご覧になってからご検討ください。</p>
+            <a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" class="wg2-ctaband__btn" data-cta-type="diagnosis" data-cta-position="sec08" target="_blank" rel="noopener noreferrer">無料診断（約1分）を試す</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 12 無料相談フォーム（通常LPと同じ HubSpot フォーム） ============ -->
+    <section class="wg2-section" id="wgm-contact">
+      <div class="wg2-container">
+        <div class="wg2-head">
+          <h2 class="wg2-title">無料相談のお申し込み</h2>
+        </div>
+
+        <p class="wg2-lead">先行導入についてのご質問だけでも構いません。<br class="wg2-br-pc">ご記入いただいた内容をもとに、担当者より折り返しご連絡します。</p>
+
+        <div class="wg2-form">
+          <!-- HubSpot 埋め込みフォーム（通常LP page-willgrow-v2.php と同じフォーム） -->
+          <div class="hs-form-frame" data-region="na2" data-form-id="0c0451c8-6e90-4f30-a2ec-7e6f83ec71fc" data-portal-id="48153453"></div>
         </div>
       </div>
     </section>
@@ -710,6 +734,8 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <p class="wgm-sticky__note">先行導入への参加は、診断結果をご覧いただいたうえでご検討ください。</p>
   </div>
 
+  <!-- HubSpot 埋め込みフォーム -->
+  <script src="https://js-na2.hsforms.net/forms/embed/48153453.js" defer></script>
   <script src="<?php echo esc_url( will_asset_url( 'will-grow-monitor-assets/js/main.js' ) ); ?>" defer></script>
   <?php wp_footer(); ?>
 </body>

@@ -80,6 +80,26 @@
     }
   }
 
+  // 無料診断（塗り）＋無料相談（ゴースト）の2本。SPは縦積み、PCは横並び
+  .wgm-banner__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    @media (min-width: v.$bp-sm) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .wg2-btn--ghost {
+      @media (min-width: v.$bp-sm) {
+        min-width: 240px;
+      }
+    }
+  }
+
   .wg2-btn-note {
     margin-top: 12px;
     font-size: 0.82rem;
@@ -295,36 +315,6 @@
   line-height: 1.8;
   color: v.$subtle;
   text-align: center;
-}
-
-// =========================================
-// 10 無料診断 CTA（v2 の CTA バンドを1パネルで使う）
-// =========================================
-.wgm-final__grid {
-  @media (min-width: v.$bp-md) {
-    grid-template-columns: minmax(0, 560px);
-    justify-content: center;
-  }
-
-  .wg2-ctaband__panel {
-    @media (min-width: v.$bp-md) {
-      // 2パネル前提の左右ずらしを打ち消す
-      transform: none;
-    }
-  }
-}
-
-// 11 の白パネルは FV のバナーと同じ中身。パネル自身に余白があるので詰める。
-// FV のバナーは全幅の帯なので __inner に幅と左右余白を持たせているが、
-// こちらはパネルの中なので打ち消す
-.wgm-final .wg2-ctaband__panel .wgm-banner__inner {
-  gap: 14px;
-  max-width: none;
-  padding-inline: 0;
-
-  @media (min-width: v.$bp-md) {
-    gap: 18px;
-  }
 }
 
 // =========================================

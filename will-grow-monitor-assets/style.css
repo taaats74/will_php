@@ -71,6 +71,24 @@
     min-width: 340px;
   }
 }
+.wgm-banner__actions .wgm-banner__btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+@media (min-width: 600px) {
+  .wgm-banner__actions .wgm-banner__btns {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+@media (min-width: 600px) {
+  .wgm-banner__actions .wgm-banner__btns .wg2-btn--ghost {
+    min-width: 240px;
+  }
+}
 .wgm-banner__actions .wg2-btn-note {
   margin-top: 12px;
   font-size: 0.82rem;
@@ -251,29 +269,6 @@
   line-height: 1.8;
   color: #8AA0A4;
   text-align: center;
-}
-
-@media (min-width: 900px) {
-  .wgm-final__grid {
-    grid-template-columns: minmax(0, 560px);
-    justify-content: center;
-  }
-}
-@media (min-width: 900px) {
-  .wgm-final__grid .wg2-ctaband__panel {
-    transform: none;
-  }
-}
-
-.wgm-final .wg2-ctaband__panel .wgm-banner__inner {
-  gap: 14px;
-  max-width: none;
-  padding-inline: 0;
-}
-@media (min-width: 900px) {
-  .wgm-final .wg2-ctaband__panel .wgm-banner__inner {
-    gap: 18px;
-  }
 }
 
 .wgm-sticky .wg2-btn {
