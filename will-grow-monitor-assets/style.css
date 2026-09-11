@@ -74,19 +74,22 @@
 .wgm-banner__actions .wgm-banner__btns {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 12px;
 }
 @media (min-width: 600px) {
   .wgm-banner__actions .wgm-banner__btns {
     flex-direction: row;
     justify-content: center;
+    align-items: stretch;
     gap: 16px;
   }
 }
 @media (min-width: 600px) {
-  .wgm-banner__actions .wgm-banner__btns .wg2-btn--ghost {
-    min-width: 240px;
+  .wgm-banner__actions .wgm-banner__btns .wg2-btn {
+    flex: 0 0 auto;
+    width: 340px;
+    min-width: 0;
   }
 }
 .wgm-banner__actions .wg2-btn-note {

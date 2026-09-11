@@ -80,22 +80,26 @@
     }
   }
 
-  // 無料診断（塗り）＋無料相談（ゴースト）の2本。SPは縦積み、PCは横並び
+  // 無料診断（塗り）＋無料相談（ゴースト）の2本。SPは縦積み、PCは横並び。
+  // 2本は同じ大きさに揃える（文字数が違うので幅は長いほうに合わせる）
   .wgm-banner__btns {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 12px;
 
     @media (min-width: v.$bp-sm) {
       flex-direction: row;
       justify-content: center;
+      align-items: stretch;
       gap: 16px;
     }
 
-    .wg2-btn--ghost {
+    .wg2-btn {
       @media (min-width: v.$bp-sm) {
-        min-width: 240px;
+        flex: 0 0 auto;
+        width: 340px;
+        min-width: 0;
       }
     }
   }
