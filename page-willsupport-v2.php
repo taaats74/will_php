@@ -142,7 +142,7 @@
             <!-- 左カラム：テキストコンテンツ -->
             <div class="wsv2-fv__content">
               <p class="wsv2-fv__sublabel">BtoB企業のサブスク型サイト制作</p>
-              <h1 class="wsv2-fv__title">
+              <h1 class="wsv2-fv__title" data-section="top">
                 <img src="<?php echo get_template_directory_uri(); ?>/will-support-v2-assets/img/fv-logotext.webp" alt="ウィルサポ｜BtoB企業のためのサブスク型ホームページ制作" loading="eager" decoding="async">
               </h1>
               <ul class="wsv2-fv__points">
@@ -208,7 +208,7 @@
 
           <div class="wsv2-issue__section-head">
             <p class="wsv2-issue__eyebrow">ISSUE</p>
-            <h2 class="wsv2-issue__title wsv2-fade">ウィルサポが解決する<br>Webサイトの6つの課題</h2>
+            <h2 class="wsv2-issue__title wsv2-fade" data-section="issue">ウィルサポが解決する<br>Webサイトの6つの課題</h2>
             <!-- <p class="wsv2-issue__lead">比較検討フェーズで選ばれないWebサイトには共通する特徴があり、<br>一つでも当てはまる場合は、ウィルサポがお役に立てる可能性があります。</p> -->
           </div>
 
@@ -273,7 +273,7 @@
           <div class="wsv2-feature__sidebar">
             <div class="wsv2-feature__section-head">
               <p class="wsv2-feature__eyebrow">FEATURE</p>
-              <h2 class="wsv2-feature__title wsv2-fade">ウィルサポが選ばれる<br>6つの理由</h2>
+              <h2 class="wsv2-feature__title wsv2-fade" data-section="feature">ウィルサポが選ばれる<br>6つの理由</h2>
               <!-- <p class="wsv2-feature__lead">BtoB企業の比較検討フェーズで「選ばれるWebサイト」をつくるために、ウィルサポは戦略設計から運用まで、6つの要素を一貫したサービスとして提供しています。</p> -->
             </div>
           </div>
@@ -346,7 +346,7 @@
 
           <div class="wsv2-who-for__section-head">
             <p class="wsv2-who-for__eyebrow">WHO IT IS FOR</p>
-            <h2 class="wsv2-who-for__title wsv2-fade">こんな企業様に向いています</h2>
+            <h2 class="wsv2-who-for__title wsv2-fade" data-section="who-for">こんな企業様に向いています</h2>
           </div>
 
           <ul class="wsv2-who-for__list">
@@ -390,7 +390,7 @@
 
           <div class="wsv2-compare__section-head">
             <p class="wsv2-compare__eyebrow">COMPARE</p>
-            <h2 class="wsv2-compare__title wsv2-fade">サブスク型・スポット型<br class="wsv2-compare__title-br-sp">との違い</h2>
+            <h2 class="wsv2-compare__title wsv2-fade" data-section="compare">サブスク型・スポット型<br class="wsv2-compare__title-br-sp">との違い</h2>
           </div>
 
           <div class="wsv2-compare__types">
@@ -465,7 +465,7 @@
 
         <div class="wsv2-cta__section-head">
           <span class="wsv2-cta__eyebrow">CONTACT</span>
-          <h2 class="wsv2-cta__title wsv2-fade">「お問い合わせ獲得に強いWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
+          <h2 class="wsv2-cta__title wsv2-fade" data-section="cta-mid">「お問い合わせ獲得に強いWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
           <p class="wsv2-cta__lead">契約期間の縛りなし。<br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
         </div>
 
@@ -506,7 +506,7 @@
 
           <div class="wsv2-works__section-head">
             <p class="wsv2-works__eyebrow">WORKS</p>
-            <h2 class="wsv2-works__title wsv2-fade">制作実績</h2>
+            <h2 class="wsv2-works__title wsv2-fade" data-section="works">制作実績</h2>
           </div>
 
           <ul class="wsv2-works__list">
@@ -646,7 +646,7 @@
 
           <div class="wsv2-pricing__section-head">
             <span class="wsv2-pricing__eyebrow">PRICING</span>
-            <h2 class="wsv2-pricing__title wsv2-fade">料金プラン</h2>
+            <h2 class="wsv2-pricing__title wsv2-fade" data-section="pricing">料金プラン</h2>
             <p class="wsv2-pricing__lead">用途に合わせて3つのプランをご用意しています。必要な情報を整理し、比較しやすい形でご確認いただけます。</p>
           </div>
 
@@ -781,7 +781,7 @@
 
           <div class="wsv2-flow__section-head">
             <span class="wsv2-flow__eyebrow">FLOW</span>
-            <h2 class="wsv2-flow__title wsv2-fade">制作の流れ</h2>
+            <h2 class="wsv2-flow__title wsv2-fade" data-section="flow">制作の流れ</h2>
             <p class="wsv2-flow__lead">ウェブサイト構築は、複雑なプロジェクトではありません。必要な工程を整理し、段階的に進めていきます。</p>
           </div>
 
@@ -858,7 +858,7 @@
 
           <div class="wsv2-faq__section-head">
             <span class="wsv2-faq__eyebrow">FAQ</span>
-            <h2 class="wsv2-faq__title wsv2-fade">よくあるご質問</h2>
+            <h2 class="wsv2-faq__title wsv2-fade" data-section="faq">よくあるご質問</h2>
           </div>
 
           <div class="wsv2-faq__list wsv2-fade">
@@ -978,7 +978,7 @@
 
         <div class="wsv2-cta__section-head">
           <span class="wsv2-cta__eyebrow">CONTACT</span>
-          <h2 class="wsv2-cta__title wsv2-fade">「お問い合わせ獲得に強いWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
+          <h2 class="wsv2-cta__title wsv2-fade" data-section="cta">「お問い合わせ獲得に強いWebサイト」を<br class="wsv2-cta__title-br-pc">月額制で伴走しながら、<br class="wsv2-cta__title-br-sp">一緒につくりませんか。</h2>
           <p class="wsv2-cta__lead">契約期間の縛りなし。<br>まずは60分の無料オンライン相談から、貴社の状況に合わせた設計をご提案します。</p>
         </div>
 
@@ -1018,7 +1018,7 @@
 
           <div class="wsv2-contact__section-head">
             <span class="wsv2-contact__eyebrow">CONTACT FORM</span>
-            <h2 class="wsv2-contact__title">無料相談はこちらから</h2>
+            <h2 class="wsv2-contact__title" data-section="contact-form">無料相談はこちらから</h2>
             <p class="wsv2-contact__lead">ご相談内容をご入力ください。通常1営業日以内に担当者よりご連絡いたします。</p>
           </div>
 

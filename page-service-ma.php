@@ -31,7 +31,7 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-ma-hero__inner">
 
-      <h2 class="service-ma-hero__catch">
+      <h2 class="service-ma-hero__catch" data-section="hero">
         Webサイトを「営業の土台」として整えた次のステップ。<br>
         属人化したフォローを<span class="keyword">仕組み</span>に変え、<span class="keyword">商談化率</span>と<span class="keyword">営業生産性</span>を高めます。
       </h2>
@@ -56,7 +56,7 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-ma-concept__inner">
 
-      <h2 class="service-ma-concept__headline">
+      <h2 class="service-ma-concept__headline" data-section="concept">
         Webサイトは営業の土台。<br>
         MAは、その土台の上で<span class="keyword">見込み客を育てる仕組み</span>。
       </h2>
@@ -101,7 +101,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-target__head target-header">
         <p class="en">FOR WHOM</p>
-        <h2>こんな会社のための<br class="sp">サービスです</h2>
+        <h2 data-section="target">こんな会社のための<br class="sp">サービスです</h2>
         <p class="subtitle">本サービスは、特に以下のような会社向けにご提供しています。</p>
       </div>
 
@@ -173,7 +173,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-problem__head problem-header">
         <p class="en">PROBLEM</p>
-        <h2>こんなお悩みは<br class="sp">ありませんか?</h2>
+        <h2 data-section="problem">こんなお悩みは<br class="sp">ありませんか?</h2>
         <p class="subtitle">BtoB企業のMA導入・運用で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
@@ -226,7 +226,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-principle__head principle-header">
         <p class="en">PRINCIPLE</p>
-        <h2>ウィルがMA設計で<br class="sp">大切にしている3つの原則</h2>
+        <h2 data-section="principle">ウィルがMA設計で<br class="sp">大切にしている3つの原則</h2>
         <p class="subtitle">MA構築には、ツール選定よりもはるかに大切な「設計の考え方」があります。</p>
       </div>
 
@@ -306,7 +306,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-reason__head reason-header">
         <p class="en">REASON</p>
-        <h2>ウィルが選ばれる<br class="sp">4つの理由</h2>
+        <h2 data-section="reason">ウィルが選ばれる<br class="sp">4つの理由</h2>
         <p class="subtitle">MA構築・運用支援を提供する会社は数多くあります。そのなかで、ウィルが選ばれる理由をお伝えします。</p>
       </div>
 
@@ -401,7 +401,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-flow__head flow-header">
         <p class="en">FLOW</p>
-        <h2>構築・運用の流れ</h2>
+        <h2 data-section="flow">構築・運用の流れ</h2>
         <p class="subtitle">ツール設定よりも前に「営業構造の整理」と「育成シナリオ設計」に十分な時間をかけます。</p>
       </div>
 
@@ -476,7 +476,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-price__head price-header">
         <p class="en">PRICE</p>
-        <h2>料金プラン</h2>
+        <h2 data-section="price">料金プラン</h2>
         <p class="subtitle">下記は参考価格です。詳細なお見積もりはヒアリング後にご提示いたします。</p>
       </div>
 
@@ -583,7 +583,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-faq__head faq-header">
         <p class="en">FAQ</p>
-        <h2>よくあるご質問</h2>
+        <h2 data-section="faq">よくあるご質問</h2>
         <p class="subtitle">お問い合わせ前によくいただく質問をまとめました。</p>
       </div>
 
@@ -785,14 +785,14 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-ma-cta__head cta-header">
         <p class="en">CONTACT</p>
-        <h2>3つの相談入口をご用意しています</h2>
+        <h2 data-section="cta">3つの相談入口をご用意しています</h2>
         <p class="subtitle">ご検討の段階に合わせて、お気軽にお問い合わせください。</p>
       </div>
 
       <ul class="service-ma-cta__grid">
 
         <li class="service-ma-cta__card">
-          <a class="service-ma-cta__card-link" href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer">
+          <a class="service-ma-cta__card-link" href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" target="_blank" rel="noopener noreferrer">
             <p class="service-ma-cta__label">[初期検討の方へ]</p>
             <h3 class="service-ma-cta__title">1分でできる無料診断</h3>
             <p class="service-ma-cta__desc">現在のWeb・営業基盤の課題を整理します</p>

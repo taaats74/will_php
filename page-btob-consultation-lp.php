@@ -146,7 +146,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
         <div class="s-fv__text">
           <!-- 1. 小見出し ＋ 2. 大見出し。1つの h1 にまとめ、
                文字サイズは従来どおり .s-fv__label / .s-fv__title 側で決める -->
-          <h1 class="s-fv__heading">
+          <h1 class="s-fv__heading" data-section="fv">
             <span class="s-fv__label">ホームページとBtoBマーケティングの<br>無料相談・無料診断</span>
             <span class="s-fv__title">何から手をつけるべきかを<br class="pc-only">一緒に整理します</span>
           </h1>
@@ -187,7 +187,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     <div class="section__inner section__inner--wide">
       <div class="section__head" data-fade>
         <span class="eyebrow">CHECK</span>
-        <h2 class="heading heading--noBalance">貴社のホームページとマーケティング<br>こんな状態になっていませんか</h2>
+        <h2 class="heading heading--noBalance" data-section="empathy">貴社のホームページとマーケティング<br>こんな状態になっていませんか</h2>
       </div>
 
       <div class="s-empathy__layout">
@@ -240,7 +240,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     <div class="section__inner">
       <div class="section__head section__head--tight" data-fade>
         <span class="eyebrow">PROBLEM</span>
-        <h2 class="heading">BtoBで問い合わせが増えない原因は<br>施策の量ではありません</h2>
+        <h2 class="heading" data-section="cause">BtoBで問い合わせが増えない原因は<br>施策の量ではありません</h2>
       </div>
 
       <p class="s-cause__text" data-fade>ホームページはあるのに問い合わせが来ない。<br>リードは増えても商談につながらない。<br>BtoBでこうなる原因の多くは、<br><strong>集客・サイト・営業の受け渡しが設計されていない</strong>ことにあります。</p>
@@ -255,7 +255,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     <div class="section__inner">
       <div class="section__head" data-fade>
         <span class="eyebrow">BENEFIT</span>
-        <h2 class="heading">ホームページとBtoBマーケティングの<br>無料相談で得られること</h2>
+        <h2 class="heading" data-section="benefit">ホームページとBtoBマーケティングの<br>無料相談で得られること</h2>
       </div>
 
       <div class="cols-3" data-fade>
@@ -300,7 +300,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
 
       <div class="section__head" data-fade>
         <span class="eyebrow">FEATURE</span>
-        <h2 class="heading">わたしたちの無料相談の特徴</h2>
+        <h2 class="heading" data-section="feature">わたしたちの無料相談の特徴</h2>
       </div>
 
       <div class="cols-3 s-feature__list" data-fade>
@@ -334,7 +334,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     <div class="section__inner">
       <div class="section__head" data-fade>
         <span class="eyebrow">FLOW</span>
-        <h2 class="heading">無料相談までの流れ</h2>
+        <h2 class="heading" data-section="flow">無料相談までの流れ</h2>
       </div>
 
       <!-- 流れ（1カラム／左に図・右に説明。図の中に文字は入れない） -->
@@ -395,7 +395,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     <div class="section__inner">
       <div class="section__head section__head--tight" data-fade>
         <span class="eyebrow eyebrow--onDark">DIAGNOSIS</span>
-        <h2 class="heading heading--onDark">Webサイト・ホームページ<br>マーケティングの無料診断・無料相談</h2>
+        <h2 class="heading heading--onDark" data-section="diagnosis">Webサイト・ホームページ<br>マーケティングの無料診断・無料相談</h2>
         <p class="section__lead section__lead--onDark">診断では、ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見ていきます。いきなり相談するのは気が重い、という声もいただきます。まずは診断だけでもお試しください。</p>
       </div>
 
@@ -428,7 +428,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     <div class="section__inner">
       <div class="section__head" data-fade>
         <span class="eyebrow">MESSAGE</span>
-        <h2 class="heading">マーケティングと営業を、切り離さない</h2>
+        <h2 class="heading" data-section="message">マーケティングと営業を、切り離さない</h2>
       </div>
 
       <div class="s-message__body" data-fade>
@@ -461,7 +461,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     <div class="section__inner">
       <div class="section__head" data-fade>
         <span class="eyebrow">FAQ</span>
-        <h2 class="heading">よくいただくご質問</h2>
+        <h2 class="heading" data-section="faq">よくいただくご質問</h2>
       </div>
 
       <div class="faq-list" data-fade>
@@ -539,7 +539,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     <div class="section__inner">
       <div class="section__head section__head--tight" data-fade>
         <span class="eyebrow">CONTACT</span>
-        <h2 class="heading">ホームページ・BtoBマーケティングの<br>無料相談お申し込み</h2>
+        <h2 class="heading" data-section="consultation-form">ホームページ・BtoBマーケティングの<br>無料相談お申し込み</h2>
       </div>
 
       <!-- 無料診断への導線（フォームの前に置く）

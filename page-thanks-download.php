@@ -34,7 +34,7 @@ get_template_part( 'template-parts/page-hero', null, [
       </p>
 
       <p class="page-thanks__inline-link">
-        <a href="<?php echo esc_url( home_url('/ebook/') ); ?>">メールが送られてきていない方はこちらをクリック</a>
+        <a href="<?php echo esc_url( home_url('/ebooks/') ); ?>">メールが送られてきていない方はこちらをクリック</a>
       </p>
 
       <p class="page-thanks__body">
@@ -54,7 +54,7 @@ get_template_part( 'template-parts/page-hero', null, [
             </span>
           </a>
 
-          <a class="page-thanks__next-item" href="<?php echo esc_url( home_url('/ebook/') ); ?>">
+          <a class="page-thanks__next-item" href="<?php echo esc_url( home_url('/ebooks/') ); ?>">
             <span class="page-thanks__next-label">他の資料を見る</span>
             <span class="page-thanks__next-text">
               Webマーケティング・営業の仕組み化に関する資料を他にもご用意しています。

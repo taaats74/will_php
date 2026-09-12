@@ -150,7 +150,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
       <div class="wgm-banner">
         <div class="wgm-banner__inner">
           <div class="wgm-banner__body">
-            <h1 class="wgm-banner__title">先行導入企業募集</h1>
+            <h1 class="wgm-banner__title" data-section="wgm-fv">先行導入企業募集</h1>
             <p class="wgm-banner__sub">新サービス立ち上げ、事例構築期間につき、<br class="wg2-br-pc">3社限定でサービスを特別料金にてご提供いたします。</p>
           </div>
 
@@ -199,7 +199,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section wg2-section--pale" id="wgm-why">
       <div class="wg2-container">
         <div class="wg2-head">
-          <h2 class="wg2-title">先行導入企業様<br>募集の背景</h2>
+          <h2 class="wg2-title" data-section="wgm-why">先行導入企業様<br>募集の背景</h2>
         </div>
 
         <!-- 要点（.wgm-em）だけ本文より大きく・太字・アクセント色にして、拾い読みでも趣旨が伝わるようにする -->
@@ -217,7 +217,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
         <div class="wg2-head">
           <span class="wg2-eyebrow">SERVICE</span>
           <span class="wg2-kicker">そもそも</span>
-          <h2 class="wg2-title">ウィルグローとは？</h2>
+          <h2 class="wg2-title" data-section="wgm-service">ウィルグローとは？</h2>
         </div>
 
         <p class="wg2-define">
@@ -282,7 +282,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section wg2-section--pale" id="wgm-target">
       <div class="wg2-container">
         <div class="wg2-head">
-          <h2 class="wg2-title">こんな企業様が対象です</h2>
+          <h2 class="wg2-title" data-section="wgm-target">こんな企業様が対象です</h2>
         </div>
 
         <div class="wg2-problem">
@@ -324,7 +324,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section" id="wgm-diff">
       <div class="wg2-container">
         <div class="wg2-head">
-          <h2 class="wg2-title">ウィルグローは<br class="wg2-br-sp">他のサービスとここが違う</h2>
+          <h2 class="wg2-title" data-section="wgm-diff">ウィルグローは<br class="wg2-br-sp">他のサービスとここが違う</h2>
         </div>
 
         <div class="wg2-why">
@@ -367,7 +367,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
       <div class="wg2-container wg2-ctaband__inner">
         <div class="wg2-ctaband__head">
           <span class="wg2-ctaband__eyebrow">CONTACT</span>
-          <h2 class="wg2-ctaband__title">お気軽にお問い合わせください。</h2>
+          <h2 class="wg2-ctaband__title" data-section="wgm-cta-mid">お気軽にお問い合わせください。</h2>
           <p class="wg2-ctaband__lead">初期費用0円・契約期間の縛りなし。<br>現状をお聞かせいただくか、まず無料診断でいまの位置を確かめてください。</p>
         </div>
 
@@ -393,7 +393,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section wg2-section--pale" id="wgm-price">
       <div class="wg2-container">
         <div class="wg2-head">
-          <h2 class="wg2-title">先行導入料金</h2>
+          <h2 class="wg2-title" data-section="wgm-price">先行導入料金</h2>
         </div>
 
         <p class="wg2-lead">事例掲載にご協力いただける企業様に限り、以下の月額でご提供します。<br class="wg2-br-pc">どちらのプランも初期費用は0円です。</p>
@@ -476,7 +476,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section" id="wgm-terms">
       <div class="wg2-container">
         <div class="wg2-head">
-          <h2 class="wg2-title">先行導入企業様の条件</h2>
+          <h2 class="wg2-title" data-section="wgm-terms">先行導入企業様の条件</h2>
         </div>
 
         <table class="wg2-table wgm-table">
@@ -533,7 +533,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section wg2-section--pale" id="wgm-plan">
       <div class="wg2-container">
         <div class="wg2-head">
-          <h2 class="wg2-title">先行導入期間にやること</h2>
+          <h2 class="wg2-title" data-section="wgm-plan">先行導入期間にやること</h2>
         </div>
 
         <p class="wg2-lead">通常の「問い合わせプラン」と同じ内容をご提供します。</p>
@@ -611,7 +611,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section" id="wgm-member">
       <div class="wg2-container">
         <div class="wg2-head">
-          <h2 class="wg2-title">担当するのは、この2名です</h2>
+          <h2 class="wg2-title" data-section="wgm-member">担当するのは、この2名です</h2>
         </div>
 
         <p class="wg2-lead">打ち合わせから施策の実行まで、代表の2名が直接担当します。</p>
@@ -655,7 +655,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section wg2-section--pale" id="wgm-faq">
       <div class="wg2-container wg2-container--narrow">
         <div class="wg2-head">
-          <h2 class="wg2-title">よくあるご質問</h2>
+          <h2 class="wg2-title" data-section="wgm-faq">よくあるご質問</h2>
         </div>
 
         <div class="wg2-faq">
@@ -709,7 +709,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
       <div class="wg2-container wg2-ctaband__inner">
         <div class="wg2-ctaband__head">
           <span class="wg2-ctaband__eyebrow">CONTACT</span>
-          <h2 class="wg2-ctaband__title">お気軽にお問い合わせください。</h2>
+          <h2 class="wg2-ctaband__title" data-section="wgm-cta">お気軽にお問い合わせください。</h2>
           <p class="wg2-ctaband__lead">初期費用0円・契約期間の縛りなし。<br>現状をお聞かせいただくか、まず無料診断でいまの位置を確かめてください。</p>
         </div>
 
@@ -735,7 +735,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
     <section class="wg2-section" id="wgm-contact">
       <div class="wg2-container">
         <div class="wg2-head">
-          <h2 class="wg2-title">無料相談のお申し込み</h2>
+          <h2 class="wg2-title" data-section="wgm-contact">無料相談のお申し込み</h2>
         </div>
 
         <p class="wg2-lead">先行導入についてのご質問だけでも構いません。<br class="wg2-br-pc">ご記入いただいた内容をもとに、担当者より折り返しご連絡します。</p>

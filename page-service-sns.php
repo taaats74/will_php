@@ -30,7 +30,7 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="service-sns-hero__inner">
 
-      <h2 class="service-sns-hero__catch">
+      <h2 class="service-sns-hero__catch" data-section="hero">
         Instagram単体ではなく、<br>
         <span class="keyword">Webと接続した「営業基盤の入口」</span>として設計します。
       </h2>
@@ -50,7 +50,7 @@ get_template_part( 'template-parts/page-hero', null, [
 <section class="service-sns-concept">
   <div class="container">
     <div class="service-sns-concept__inner">
-      <h2 class="service-sns-concept__headline">
+      <h2 class="service-sns-concept__headline" data-section="concept">
         Instagramは、フォロワーを集めるツールではなく、<br>
         <span class="keyword">"知ってもらう"から"検討してもらう"まで<br>進めるツール</span>です。
       </h2>
@@ -80,7 +80,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-problem__head problem-header">
         <p class="en">PROBLEM</p>
-        <h2>こんな企業様向けの<br class="sp">サービスです</h2>
+        <h2 data-section="problem">こんな企業様向けの<br class="sp">サービスです</h2>
         <p class="subtitle">BtoB企業のInstagram運用で、よくいただくご相談を3つの観点で整理しました。</p>
       </div>
 
@@ -128,7 +128,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-role__head role-header">
         <p class="en">ROLE</p>
-        <h2>Instagramの本当の役割</h2>
+        <h2 data-section="role">Instagramの本当の役割</h2>
         <p class="subtitle">全体構造の中での「位置づけ」を明確にすることが、成果への第一歩です。</p>
       </div>
 
@@ -184,7 +184,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-feature__head feature-header">
         <p class="en">FEATURE</p>
-        <h2>Instagram構築・<br class="sp">運用支援の特徴</h2>
+        <h2 data-section="feature">Instagram構築・<br class="sp">運用支援の特徴</h2>
         <p class="subtitle">数あるInstagram支援サービスの中で、ウィルが選ばれる4つの特徴をお伝えします。</p>
       </div>
 
@@ -275,7 +275,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-price__head price-header">
         <p class="en">PRICE</p>
-        <h2>料金プラン</h2>
+        <h2 data-section="price">料金プラン</h2>
         <p class="subtitle">下記の料金は参考価格です。詳細なお見積もりはヒアリング後にご提示いたします。</p>
       </div>
 
@@ -323,7 +323,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-principle__head principle-header">
         <p class="en">PRINCIPLE</p>
-        <h2>私たちが大切にしている<br class="sp">3つのこと</h2>
+        <h2 data-section="principle">私たちが大切にしている<br class="sp">3つのこと</h2>
         <p class="subtitle">「安いから簡易的」ではなく、「無駄をなくしたから、必要な部分に集中できる」サービス設計の根拠をお伝えします。</p>
       </div>
 
@@ -375,7 +375,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-flow__head flow-header">
         <p class="en">FLOW</p>
-        <h2>支援の流れ</h2>
+        <h2 data-section="flow">支援の流れ</h2>
         <p class="subtitle">完全代行ではなく、社内と共に積み上げていく伴走型のプロセスです。</p>
       </div>
 
@@ -439,7 +439,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-faq__head faq-header">
         <p class="en">FAQ</p>
-        <h2>よくあるご質問</h2>
+        <h2 data-section="faq">よくあるご質問</h2>
         <p class="subtitle">お問い合わせ前によくいただく質問をまとめました。</p>
       </div>
 
@@ -686,7 +686,7 @@ get_template_part( 'template-parts/page-hero', null, [
 
       <div class="service-sns-cta__head cta-header">
         <p class="en">CONTACT</p>
-        <h2>お問い合わせ</h2>
+        <h2 data-section="cta">お問い合わせ</h2>
         <p class="subtitle">Instagram運用について、まずは現状を整理するところから始めませんか。</p>
       </div>
 
@@ -697,7 +697,7 @@ get_template_part( 'template-parts/page-hero', null, [
       <ul class="service-sns-cta__grid">
 
         <li class="service-sns-cta__card">
-          <a class="service-sns-cta__card-link" href="<?php echo esc_url( home_url('/ebook/') ); ?>">
+          <a class="service-sns-cta__card-link" href="<?php echo esc_url( home_url('/ebooks/') ); ?>">
             <p class="service-sns-cta__label">[情報収集の方へ]</p>
             <h3 class="service-sns-cta__title">無料ダウンロード資料</h3>
             <p class="service-sns-cta__desc">Instagram運用の全体像とサービス詳細をまとめた資料を配布中</p>

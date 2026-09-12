@@ -146,7 +146,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
           <div class="wg2-hero__content">
             <p class="wg2-hero__eyebrow">BtoBマーケティング伴走支援</p>
 
-            <h1 class="wg2-hero__logotype">
+            <h1 class="wg2-hero__logotype" data-section="wg2-hero">
               <img class="wg2-hero__logotype-img" src="<?php echo esc_url( will_asset_url( 'will-grow-v2-assets/images/hero-logotype.webp' ) ); ?>" alt="ウィルグロー" width="1130" height="240" fetchpriority="high" decoding="async">
               <span class="wg2-vh">｜BtoB企業の集客・問い合わせ獲得から育成・商談化までを仕組み化する伴走支援サービス</span>
             </h1>
@@ -174,7 +174,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">PROBLEM</span>
-          <h2 class="wg2-title">こんなお悩みは<br class="wg2-br-sp">ありませんか</h2>
+          <h2 class="wg2-title" data-section="wg2-problem">こんなお悩みは<br class="wg2-br-sp">ありませんか</h2>
         </div>
 
         <div class="wg2-problem">
@@ -201,7 +201,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">SOLUTION</span>
-          <h2 class="wg2-title">ご安心ください、<br class="wg2-br-sp">ウィルグローが<em>すべて解決</em>いたします</h2>
+          <h2 class="wg2-title" data-section="wg2-solution">ご安心ください、<br class="wg2-br-sp">ウィルグローが<em>すべて解決</em>いたします</h2>
         </div>
 
         <ol class="wg2-solution">
@@ -227,7 +227,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
         <div class="wg2-head">
           <span class="wg2-eyebrow">SERVICE</span>
           <span class="wg2-kicker">そもそも</span>
-          <h2 class="wg2-title">ウィルグローとは？</h2>
+          <h2 class="wg2-title" data-section="wg2-service">ウィルグローとは？</h2>
         </div>
 
         <p class="wg2-define">
@@ -289,7 +289,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">WHY WILLGROW</span>
-          <h2 class="wg2-title">ウィルグローは<br class="wg2-br-sp">他のサービスとここが違う</h2>
+          <h2 class="wg2-title" data-section="wg2-why">ウィルグローは<br class="wg2-br-sp">他のサービスとここが違う</h2>
         </div>
 
         <div class="wg2-why">
@@ -333,7 +333,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">PRICE</span>
-          <h2 class="wg2-title">料金プラン</h2>
+          <h2 class="wg2-title" data-section="wg2-price">料金プラン</h2>
         </div>
 
         <!-- SPは縦積み（横スワイプにしない） -->
@@ -426,7 +426,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
 
         <div class="wg2-ctaband__head">
           <span class="wg2-ctaband__eyebrow">CONTACT</span>
-          <h2 class="wg2-ctaband__title">どのプランが合うか分からない、<br class="wg2-br-pc">という段階で構いません。</h2>
+          <h2 class="wg2-ctaband__title" data-section="wg2-cta-mid">どのプランが合うか分からない、<br class="wg2-br-pc">という段階で構いません。</h2>
           <p class="wg2-ctaband__lead">初期費用0円・契約期間の縛りなし。<br>現状をお聞きしたうえで、必要なプランをお伝えします。</p>
         </div>
 
@@ -454,7 +454,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">HOW TO CHOOSE</span>
-          <h2 class="wg2-title">ウィルグロー活用例</h2>
+          <h2 class="wg2-title" data-section="wg2-choose">ウィルグロー活用例</h2>
         </div>
 
         <div class="wg2-plancards">
@@ -507,7 +507,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">FLOW</span>
-          <h2 class="wg2-title">ご利用の流れと<br class="wg2-br-sp">期待できる効果</h2>
+          <h2 class="wg2-title" data-section="wg2-flow">ご利用の流れと<br class="wg2-br-sp">期待できる効果</h2>
         </div>
 
         <ol class="wg2-flow">
@@ -580,7 +580,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">ABOUT US</span>
-          <h2 class="wg2-title">マーケティングと営業を、<br class="wg2-br-sp">切り離さない</h2>
+          <h2 class="wg2-title" data-section="wg2-about">マーケティングと営業を、<br class="wg2-br-sp">切り離さない</h2>
         </div>
 
         <div class="wg2-message">
@@ -640,7 +640,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container wg2-container--narrow">
         <div class="wg2-head">
           <span class="wg2-eyebrow">FAQ</span>
-          <h2 class="wg2-title">よくあるご質問</h2>
+          <h2 class="wg2-title" data-section="wg2-faq">よくあるご質問</h2>
         </div>
 
         <div class="wg2-faq">
@@ -737,7 +737,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
       <div class="wg2-container">
         <div class="wg2-head">
           <span class="wg2-eyebrow">CONTACT</span>
-          <h2 class="wg2-title">お問い合わせ</h2>
+          <h2 class="wg2-title" data-section="wg2-contact">お問い合わせ</h2>
         </div>
 
 
