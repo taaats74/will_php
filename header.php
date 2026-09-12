@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class('has-header has-loading-v2'); ?>>
+<?php wp_body_open(); ?>
 
 <?php /* Phase 7 で削除予定:旧 inline JS(splash-v2 採用前の body.appear 即時付与)
 <script>

@@ -754,7 +754,7 @@
 
           </div><!-- /.wsv2-pricing__cards -->
 
-          <p class="wsv2-pricing__tax-note">※表示価格はすべて税抜です。別途、消費税を申し受けます。</p>
+          <p class="wsv2-pricing__tax-note">※表示価格はすべて税抜です。別途、消費税を申し受けます。<br>最終更新日：<?php echo will_seo_updated_html(); ?></p>
 
           <!-- 月額費用に含まれるもの -->
           <div class="wsv2-pricing__includes">

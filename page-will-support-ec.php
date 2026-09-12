@@ -355,6 +355,7 @@
               <small class="ws-ec-pricing__note">※Shopify月額費用は別途発生いたします</small>
             </li>
           </ul>
+          <p class="ws-ec-pricing__note" style="display: block; text-align: center; margin-top: 24px;">最終更新日：<?php echo will_seo_updated_html(); ?></p>
         </div>
       </section>
 

@@ -115,14 +115,14 @@
   <sectoin class="fv pc">
     <div class="container">
       <div class="wrapper">
-        <p class="fv-message">月額<span class="large">9,800</span>円から<span class="large2">高品質</span><span class="mid">なホームページ</span>ができる</p>
+        <p class="fv-message">月額<span class="large">30,000</span>円から<span class="large2">高品質</span><span class="mid">なホームページ</span>ができる</p>
         <div class="fv-content-wrapper">
           <div class="text-wrapper">
             <h2>定額サブスクホームページ</h2>
             <!-- <p class="fv-logo">ウィルサポ</p> -->
             <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/fv-logotext.webp" alt="">
             <ul>
-              <li>初期費用<br>なし</li>
+              <li>更新・保守<br>月額込み</li>
               <li>契約期間の<br>縛りなし</li>
               <li>自由な<br>デザイン</li>
             </ul>
@@ -196,7 +196,7 @@
       <div class="wrapper">
         <h2><span class="bold">ウィルサポ</span>なら<br class="sp">全てのお悩みを解決できます</h2>
         <h3>多くの方の<span class="bold">「<span class="dot-text">不</span><span class="dot-text">安</span><span class="dot-text">を</span><span class="dot-text">無</span><span class="dot-text">く</span><span class="dot-text">す</span>」</span><br class="sp">ホームページサービスを実現しました！</h3>
-        <p class="service-text">ウィルサポは、<br class="sp">自由なデザインの高品質ホームページを<br class="sp"><span class="bold">月額9,800円から</span><br>ご利用いただける定額サブスクサービスです。</p>
+        <p class="service-text">ウィルサポは、<br class="sp">自由なデザインの高品質ホームページを<br class="sp"><span class="bold">月額30,000円から</span><br>ご利用いただける定額サブスクサービスです。</p>
         <div class="list-wrapper">
           <ul>
             <li>
@@ -209,15 +209,15 @@
             </li>
             <li>
               <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
-              <p>初期費用無料</p>
+              <p>月2回までの更新に対応</p>
             </li>
             <li>
               <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
-              <p>サーバー、ドメイン費用無料</p>
+              <p>サーバー・ドメイン管理込み</p>
             </li>
             <li>
               <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
-              <p>サイトの更新や保守費用無料</p>
+              <p>サイトの更新・保守も月額内</p>
             </li>
             <li>
               <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/check.webp" alt="">
@@ -381,35 +381,10 @@
         <div class="header-wrapper">
           <h2>PLAN</h2>
           <p class="text">ページ数で選べる料金プラン</p>
+          <p class="text">初期費用100,000円（価格はすべて税抜）</p>
           <img src="<?php echo get_template_directory_uri(); ?>/will-support-v1-assets/img/plan.webp" alt="">
         </div>
         <div class="box-wrapper">
-          <div class="box">
-            <h3>スタートプラン</h3>
-            <ul>
-              <li>
-                <p>ページ数：</p>
-                <p>1ページ</p>
-              </li>
-              <li>
-                <p>デザイン：</p>
-                <p>フルオーダー</p>
-              </li>
-              <li>
-                <p>CMS：</p>
-                <p>ワードプレス</p>
-              </li>
-              <li>
-                <p>制作期間：</p>
-                <p>1ヶ月程度</p>
-              </li>
-              <li>
-                <p>SEO対策：</p>
-                <p>あり</p>
-              </li>
-            </ul>
-            <p class="price"><span class="num">¥9,800</span>/月</p>
-          </div>
           <div class="box">
             <h3>シンプルプラン</h3>
             <ul>
@@ -434,7 +409,7 @@
                 <p>あり</p>
               </li>
             </ul>
-            <p class="price"><span class="num">¥19,800</span>/月</p>
+            <p class="price"><span class="num">¥30,000</span>/月</p>
           </div>
           <div class="box">
             <h3>スタンダードプラン</h3>
@@ -460,7 +435,7 @@
                 <p>あり</p>
               </li>
             </ul>
-            <p class="price"><span class="num">¥29,800</span>/月</p>
+            <p class="price"><span class="num">¥40,000</span>/月</p>
           </div>
           <div class="box">
             <h3>プレミアムプラン</h3>
@@ -486,7 +461,7 @@
                 <p>あり</p>
               </li>
             </ul>
-            <p class="price"><span class="num">¥39,800</span>/月</p>
+            <p class="price"><span class="num">¥50,000</span>/月</p>
           </div>
         </div>
       </div>
@@ -569,7 +544,7 @@
               </div>
               <div class="text-wrapper">
                 <p class="header">運用・集客サポート</p>
-                <p class="text">ホームページの運用サポートや保守は無料で対応させていただきます。月2回までのサイトの更新作業（30分程度の作業）なども対応いたします。<br>集客サポートプラン（有料）もございますので、ご希望の方はお気軽にご連絡ください。</p>
+                <p class="text">ホームページの運用サポートや保守は月額料金の範囲内で対応させていただきます。月2回までのサイトの更新作業（30分程度の作業）なども対応いたします。<br>集客サポートプラン（有料）もございますので、ご希望の方はお気軽にご連絡ください。</p>
               </div>
             </li>
           </ul>
@@ -621,14 +596,14 @@
               <div class="list question">
                 <div class="text-wrapper">
                   <div class="list-icon">Q</div>
-                  <p class="text">初期費用や追加費用は本当にかかりませんか？</p>
+                  <p class="text">初期費用や追加費用はかかりますか？</p>
                 </div>
                 <i class="fa-solid fa-chevron-up"></i>
               </div>
               <div class="list answer">
                 <div class="text-wrapper">
                   <div class="list-icon">A</div>
-                  <p class="text">初期費用はかかりません。サーバー・ドメイン費用、通常の更新・保守費用も月額料金に含まれています。</p>
+                  <p class="text">初期費用は100,000円（税抜）です。サーバー・ドメイン管理、通常の更新・保守対応は月額料金に含まれています。</p>
                 </div>
               </div>
             </li>

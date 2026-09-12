@@ -20,7 +20,7 @@
 
 $wgm_noindex = true;
 
-/* title / description / OGP は Slim SEO（固定ページの設定）側で入力する。
+/* title / description / OGP は固定ページの編集画面「SEO設定」で入力する。
    本テンプレートでは出力しない。設定する値：
      title       : ウィルグロー 先行導入企業募集｜BtoBマーケティング支援を事例掲載企業限定・6ヶ月
      description : 事例掲載にご協力いただける企業様限定で、BtoBマーケティング支援「ウィルグロー」の先行導入企業を募集。問い合わせプランを月額10万円（通常30万円）、商談プランを月額30万円（通常50万円）で、6ヶ月間ご提供します。まずは無料診断から。
@@ -37,7 +37,7 @@ $wgm_willsupport_url = home_url( '/willsupport/' );
 $wgm_consult_url   = '#wgm-contact';
 
 /* robots は WordPress コアの wp_robots 経由で出す。
-   Slim SEO も同じフィルターを使うため、meta タグが二重に出ない */
+   テーマの SEO 機能（inc/seo/meta.php）も同じフィルターを使うため、meta タグが二重に出ない */
 if ( $wgm_noindex ) {
     add_filter( 'wp_robots', function( $robots ) {
         unset( $robots['index'], $robots['follow'], $robots['max-image-preview'], $robots['max-snippet'], $robots['max-video-preview'] );
@@ -82,9 +82,8 @@ if ( ! function_exists( 'wgm_icon' ) ) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- robots（noindex,nofollow）／title／description／OGP は wp_head() から出力
-       ＝ SEOプラグイン（Slim SEO）側の出力に任せている。canonical・robots はプラグインが
-       自動出力するため、このファイルで meta を書くと二重出力になる。
-       twitter:card は、テーマ既定の og:image が存在しない場合 summary に変更する。
+       ＝ テーマの SEO 機能（inc/seo/）に任せている。canonical・robots も自動出力するため、
+       このファイルで meta を書くと二重出力になる。
        固定ページ側では「ヘッダー・フッターあり、サイドバーなし」の想定
        （本テンプレートはヘッダー・フッターを自前で出力し、サイドバーは持たない）。 -->
 

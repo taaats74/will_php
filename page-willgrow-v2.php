@@ -17,7 +17,7 @@
 $wg2_noindex = false;
 
 /* robots は WordPress コアの wp_robots 経由で出す。
-   Slim SEO も同じフィルターを使うため、meta タグが二重に出ない（後勝ちで noindex を確定させる） */
+   テーマの SEO 機能（inc/seo/meta.php）も同じフィルターを使うため、meta タグが二重に出ない（後勝ちで noindex を確定させる） */
 if ( $wg2_noindex ) {
     add_filter( 'wp_robots', function( $robots ) {
         unset( $robots['index'], $robots['follow'], $robots['max-image-preview'], $robots['max-snippet'], $robots['max-video-preview'] );
@@ -80,7 +80,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- robots（noindex,nofollow）は上部の wp_robots フィルター経由で wp_head() が出力 -->
-  <!-- title / description / OGP / Twitter Card は Slim SEO が wp_head() で出力 -->
+  <!-- title / description / OGP / Twitter Card は inc/seo/ が wp_head() で出力（値は編集画面の「SEO設定」で入力） -->
 
   <!-- ========== preconnect ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -405,6 +405,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
             </div>
           </article>
         </div>
+        <p class="wg2-note" style="text-align: center; margin-top: 24px;">最終更新日：<?php echo will_seo_updated_html(); ?></p>
 
         <!-- オプション -->
         <div class="wg2-option">

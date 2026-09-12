@@ -1,7 +1,6 @@
 <?php
-// 構造化データ(JSON-LD)の追加出力。Slim SEO が扱わない Service / ItemList /
-// DigitalDocument を補う。詳細は inc/structured-data.php を参照。
-require_once get_template_directory() . '/inc/structured-data.php';
+// SEO / AEO（title・description・OGP・構造化データ・サイトマップ・計測タグ）。詳細は inc/seo/bootstrap.php
+require_once get_template_directory() . '/inc/seo/bootstrap.php';
 
 /**
  * テーマ配下のアセットURLにfilemtimeベースのバージョンクエリを付与して返す
@@ -21,7 +20,7 @@ function will_asset_url( $relative_path ) {
     // 自己完結型 LP 判定: テーマ汎用 CSS/JS は読み込まない
     // (wp_head / wp_footer は呼ぶが、style.css の `* { color: black }` 等の
     //  汎用ルールが LP の独自スタイルを破壊するのを避ける。
-    //  Slim SEO 等プラグイン経由の GA4 / HubSpot 注入は wp_head 経由で動作する)
+    //  GTM / HubSpot は inc/seo/tracking.php が wp_head 経由で出力する)
     $self_contained_lp_templates = array(
       'page-willsupport.php',
       'page-willsupport-v2.php',
@@ -274,43 +273,6 @@ add_action( 'pre_get_posts', 'change_posts_per_page' );
 //   remove_menu_page( 'edit-comments.php' ); //コメントメニュー
 // }
 
-// メタ情報を各コンテンツから取得
-function get_meta_description() {
-  global $post;
-  $description = "";
-  if ( is_home() ) {
-    // ホームでは、ブログの説明文を取得
-    $description = get_bloginfo( 'description' );
-  }
-  elseif ( is_category() ) {
-    // カテゴリーページでは、カテゴリーの説明文を取得
-    $description = category_description();
-  }
-  elseif ( is_single() ) {
-    if ($post->post_excerpt) {
-      // 記事ページでは、記事本文から抜粋を取得
-      $description = $post->post_excerpt;
-    } else {
-      // post_excerpt で取れない時は、自力で記事の冒頭100文字を抜粋して取得
-      $description = strip_tags($post->post_content);
-      $description = str_replace("\n", "", $description);
-      $description = str_replace("\r", "", $description);
-      $description = mb_substr($description, 0, 100) . "...";
-    }
-  } else {
-    ;
-  }
-
-  return $description;
-}
-
-// echo meta description tag
-function echo_meta_description_tag() {
-  if ( is_home() || is_category() || is_single() ) {
-    echo '<meta name="description" content="' . get_meta_description() . '" />' . "\n";
-  }
-}
-
 // 溜まったカスタムフィールドの変数を削除する
 //オブジェクトを生成
 new Paka3CustomFieldDeleteKey;
@@ -394,105 +356,4 @@ EOS;
   }
 }
 
-/**
- * Slim SEO Organization 構造化データ詳細版上書き
- * Phase 2 (2026-05-03 修正版):簡易版 Organization を logo / address / founder /
- * foundingDate / sameAs 入りに上書きする。Service の provider (@id 参照) と
- * 紐づくよう、@id は Slim SEO デフォルトのまま温存する。
- */
-add_filter( 'slim_seo_schema_organization', function( $organization ) {
-    $organization['url']         = 'https://will-corp.co.jp/';
-    $organization['logo']        = 'https://will-corp.co.jp/wp-content/uploads/2025/08/logo_black.png';
-    $organization['description'] = 'BtoB企業の営業基盤をWebから設計する、福岡のWebマーケティング支援会社。Webサイト制作・運用、MA構築・運用支援、コンテンツSEO構築・運用支援、Instagram構築・運用支援、グラフィック制作を統合的に提供。';
-    $organization['address']     = [
-        '@type'           => 'PostalAddress',
-        'streetAddress'   => '博多駅前1-23-2 ParkFront博多駅前1丁目5F-B',
-        'addressLocality' => '福岡市博多区',
-        'addressRegion'   => '福岡県',
-        'postalCode'      => '812-0011',
-        'addressCountry'  => 'JP',
-    ];
-    // ブログ側(mu-plugin)の Article.author と同一の @id を使い、
-    // 2つのWordPress間で同じ人物エンティティとして扱えるようにする。
-    // 経歴は about ページ(page-about-v2.php)の記載に基づく。
-    $organization['founder']     = [
-        [
-            '@type'       => 'Person',
-            '@id'         => 'https://will-corp.co.jp/#person-takahashi',
-            'name'        => '高橋 竜也',
-            'jobTitle'    => '代表',
-            'url'         => 'https://will-corp.co.jp/about/',
-            'description' => 'アメリカの大学でマネジメントとマーケティングを学び、その後IT企業のマーケティング部門に10年間従事。マーケティングから内勤営業チームのマネジメントまで、集客から販売までの実践的なビジネススキルを培う。現在は福岡を拠点に、BtoB中小企業のWebマーケティング支援を行う。',
-            'knowsAbout'  => [
-                'BtoBマーケティング',
-                'Webマーケティング',
-                'リード獲得',
-                'マーケティングオートメーション',
-                'コンテンツSEO',
-            ],
-        ],
-        [
-            '@type'       => 'Person',
-            '@id'         => 'https://will-corp.co.jp/#person-iwata',
-            'name'        => '岩田 あゆみ',
-            'jobTitle'    => '代表',
-            'url'         => 'https://will-corp.co.jp/about/',
-            'description' => '九州大学大学院卒業後、研究職を経てWebデザイン・マーケティングの制作会社へ転職。独立後、制作全般とSNS集客支援・講師業を経て会社を設立。デザイン全般・SNS集客・ディレクションを担当。',
-            'alumniOf'    => [
-                '@type' => 'CollegeOrUniversity',
-                'name'  => '九州大学大学院',
-            ],
-            'knowsAbout'  => [
-                'Webデザイン',
-                'グラフィックデザイン',
-                'Instagram運用',
-                'ディレクション',
-            ],
-        ],
-    ];
-    $organization['foundingDate'] = '2023-11';
-    $organization['sameAs']       = [
-        'https://www.instagram.com/will_marketing_branding',
-        'https://www.youtube.com/@will-btob-marketing',
-    ];
-
-    // 連絡先。出典は特定商取引法に基づく表記ページ(page-tradelaw.php)。
-    // telephone は Google 推奨の国際形式で記述する。
-    $organization['legalName'] = '合同会社ウィル';
-    $organization['telephone'] = '+81-70-4131-3250';
-    $organization['email']     = 'info@will-corp.co.jp';
-    $organization['image']     = 'https://will-corp.co.jp/wp-content/uploads/2025/08/logo_black.png';
-    $organization['areaServed'] = [
-        '@type' => 'Country',
-        'name'  => '日本',
-    ];
-    $organization['contactPoint'] = [
-        [
-            '@type'             => 'ContactPoint',
-            'contactType'       => 'customer support',
-            'telephone'         => '+81-70-4131-3250',
-            'email'             => 'info@will-corp.co.jp',
-            'url'               => 'https://will-corp.co.jp/contact/',
-            'areaServed'        => 'JP',
-            'availableLanguage' => [ 'Japanese' ],
-        ],
-    ];
-    // 事業領域。about ページの「業務内容」と揃える。
-    $organization['knowsAbout'] = [
-        'BtoBマーケティング',
-        'Webサイト制作',
-        'Webサイト運用',
-        'マーケティングオートメーション',
-        'コンテンツSEO',
-        'Instagram運用',
-        'グラフィックデザイン',
-    ];
-
-    return $organization;
-} );
-
-// タイトルの区切り文字を変更（例：「｜」に）
-add_filter('document_title_separator', function() {
-return '｜'; // ← ここを好きな文字に変更可能
-});
 ?>

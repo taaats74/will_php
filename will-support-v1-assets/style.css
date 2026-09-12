@@ -676,7 +676,7 @@ header .container .wrapper .menu ul li:nth-child(6):hover a {
 }
 .plan .container .wrapper .box-wrapper .box {
   text-align: center;
-  width: 22%;
+  width: 31%;
   border: solid 2px #0e849c;
   padding: 30px 10px;
   background: white;
@@ -1460,7 +1460,7 @@ footer .container .wrapper .copy {
   }
   .plan .container .wrapper .box-wrapper .box {
     text-align: center;
-    width: 22%;
+    width: 31%;
     border: solid 2px #0e849c;
     padding: 30px 10px;
     background: white;

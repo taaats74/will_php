@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- title / description / OGP / Twitter Card は Slim SEO が wp_head() で出力 -->
+  <!-- title / description / OGP / Twitter Card は inc/seo/ が wp_head() で出力（値は編集画面の「SEO設定」で入力） -->
 
   <!-- ========== preconnect ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

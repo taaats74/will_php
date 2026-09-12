@@ -27,7 +27,7 @@
 $bcl_noindex = false;
 
 /* robots は WordPress コアの wp_robots 経由で出す。
-   Slim SEO も同じフィルターを使うため、meta タグが二重に出ない（後勝ちで noindex を確定させる） */
+   テーマの SEO 機能（inc/seo/meta.php）も同じフィルターを使うため、meta タグが二重に出ない（後勝ちで noindex を確定させる） */
 if ( $bcl_noindex ) {
     add_filter( 'wp_robots', function( $robots ) {
         unset( $robots['index'], $robots['follow'], $robots['max-image-preview'], $robots['max-snippet'], $robots['max-video-preview'] );
@@ -53,7 +53,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- robots（noindex,nofollow）は上部の wp_robots フィルター経由で wp_head() が出力 -->
-  <!-- title / description / OGP / Twitter Card は Slim SEO が wp_head() で出力 -->
+  <!-- title / description / OGP / Twitter Card は inc/seo/ が wp_head() で出力（値は編集画面の「SEO設定」で入力） -->
   <!-- OGP画像を差し替える場合は btob-consultation-lp-assets/images/ogp.png（1200×630）を使う -->
 
   <!-- ========== preconnect ========== -->
