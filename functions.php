@@ -2,6 +2,9 @@
 // SEO / AEO（title・description・OGP・構造化データ・サイトマップ・計測タグ）。詳細は inc/seo/bootstrap.php
 require_once get_template_directory() . '/inc/seo/bootstrap.php';
 
+// ユーザー名の非公開化・XML-RPC の停止。詳細は inc/security.php
+require_once get_template_directory() . '/inc/security.php';
+
 /**
  * テーマ配下のアセットURLにfilemtimeベースのバージョンクエリを付与して返す
  * (LP の直接 <link> / <script> 用。wp_enqueue_* には別途 filemtime を直接渡す)
