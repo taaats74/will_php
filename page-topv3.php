@@ -867,7 +867,7 @@
                 </div>
 
                 <div class="blog-v5-bottom-cta">
-                  <a href="https://will-corp.co.jp/blog/" class="blog-v5-bottom-cta-link" target="_blank" rel="noopener noreferrer">
+                  <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="blog-v5-bottom-cta-link">
                     <span class="blog-v5-bottom-cta-text">ブログ一覧はこちら</span>
                     <span class="blog-v5-bottom-cta-arrow">→</span>
                   </a>
@@ -880,61 +880,33 @@
 
             <div class="blog-v5-grid">
               <?php
-                // 別WordPress (https://will-corp.co.jp/blog/) の REST API から
-                // 指定ID 5本を順序維持で取得し、6時間キャッシュする
-                $featured_ids = array(810, 818, 813, 1155, 660);
-                $cache_key    = 'top_blog_featured_v4';
-                $featured_posts = get_transient($cache_key);
+                // 掲載する記事。統合前のブログの記事IDで指定し、表示順もこの順にする
+                // （移行時に _will_blog_source_id として保存した ID で引き当てる）
+                $featured_source_ids = array( 810, 818, 813, 1155, 660 );
+                $featured_posts      = get_posts( array(
+                  'post_type'      => 'post',
+                  'posts_per_page' => count( $featured_source_ids ),
+                  'meta_query'     => array( array( 'key' => '_will_blog_source_id', 'value' => $featured_source_ids, 'compare' => 'IN', 'type' => 'NUMERIC' ) ),
+                  'no_found_rows'  => true,
+                ) );
+                usort( $featured_posts, function ( $a, $b ) use ( $featured_source_ids ) {
+                  return array_search( (int) get_post_meta( $a->ID, '_will_blog_source_id', true ), $featured_source_ids, true )
+                    <=> array_search( (int) get_post_meta( $b->ID, '_will_blog_source_id', true ), $featured_source_ids, true );
+                } );
 
-                if ($featured_posts === false) {
-                  $endpoint = 'https://will-corp.co.jp/blog/wp-json/wp/v2/posts'
-                            . '?include=' . implode(',', $featured_ids)
-                            . '&orderby=include'
-                            . '&_embed=1';
-                  $response = wp_remote_get($endpoint, array('timeout' => 10));
-
-                  if (!is_wp_error($response) && wp_remote_retrieve_response_code($response) === 200) {
-                    $body = wp_remote_retrieve_body($response);
-                    $featured_posts = json_decode($body, true);
-                    if (is_array($featured_posts)) {
-                      set_transient($cache_key, $featured_posts, 6 * HOUR_IN_SECONDS);
-                    }
-                  }
-                }
-
-                if (!empty($featured_posts) && is_array($featured_posts)):
-                  foreach ($featured_posts as $post_data):
-                    $title     = isset($post_data['title']['rendered']) ? html_entity_decode($post_data['title']['rendered'], ENT_QUOTES, 'UTF-8') : '';
-                    $permalink = isset($post_data['link']) ? $post_data['link'] : '#';
-
-                    // 更新日(リライト基準・ISO 8601 → Y.m.d)
-                    $date_str = '';
-                    if (!empty($post_data['modified'])) {
-                      $date_str = mysql2date('Y.m.d', $post_data['modified']);
-                    } elseif (!empty($post_data['date'])) {
-                      $date_str = mysql2date('Y.m.d', $post_data['date']);
-                    }
-
-                    // アイキャッチ画像URL
-                    $thumb_url = '';
-                    if (!empty($post_data['_embedded']['wp:featuredmedia'][0])) {
-                      $media = $post_data['_embedded']['wp:featuredmedia'][0];
-                      if (!empty($media['media_details']['sizes']['medium_large']['source_url'])) {
-                        $thumb_url = $media['media_details']['sizes']['medium_large']['source_url'];
-                      } elseif (!empty($media['source_url'])) {
-                        $thumb_url = $media['source_url'];
-                      }
-                    }
-
-                    // カテゴリ名(最初の1つ)
-                    $category_name = '';
-                    if (!empty($post_data['_embedded']['wp:term'][0][0]['name'])) {
-                      $category_name = $post_data['_embedded']['wp:term'][0][0]['name'];
-                    }
+                if ( $featured_posts ) :
+                  foreach ( $featured_posts as $featured_post ) :
+                    $title         = get_the_title( $featured_post );
+                    $permalink     = get_permalink( $featured_post );
+                    // 更新日（リライト基準）
+                    $date_str      = get_the_modified_date( 'Y.m.d', $featured_post );
+                    $thumb_url     = get_the_post_thumbnail_url( $featured_post, 'medium_large' );
+                    $categories    = get_the_category( $featured_post->ID );
+                    $category_name = $categories ? $categories[0]->name : '';
               ?>
 
               <div class="blog-v5-card animation-target to-right">
-                <a href="<?php echo esc_url($permalink); ?>" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo esc_url($permalink); ?>">
 
                   <?php if (!empty($thumb_url)): ?>
                     <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php echo esc_attr($title); ?>">
@@ -968,7 +940,7 @@
           </div>
 
           <div class="blog-v5-bottom-cta blog-v5-bottom-cta--sp">
-            <a href="https://will-corp.co.jp/blog/" class="blog-v5-bottom-cta-link" target="_blank" rel="noopener noreferrer">
+            <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="blog-v5-bottom-cta-link">
               <span class="blog-v5-bottom-cta-text">ブログ一覧はこちら</span>
               <span class="blog-v5-bottom-cta-arrow">→</span>
             </a>

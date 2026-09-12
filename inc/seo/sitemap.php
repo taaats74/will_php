@@ -13,13 +13,14 @@
 defined( 'ABSPATH' ) || exit;
 
 /** リライトルールを変えたら上げる（本番反映時に1回だけ自動で再生成される） */
-const WILL_SEO_REWRITE_VERSION = '1';
+const WILL_SEO_REWRITE_VERSION = '2';
 
 add_action( 'init', function () {
 	add_rewrite_rule( '^sitemap\.xml$', 'index.php?sitemap=index', 'top' );
 	add_rewrite_rule( '^llms\.txt$', 'index.php?will_llms=1', 'top' );
-	// Slim SEO 時代の個別サイトマップURL
-	add_rewrite_rule( '^sitemap-(post-type|taxonomy)-([a-z0-9_-]+)\.xml$', 'index.php?will_legacy_sitemap=$matches[1]:$matches[2]', 'top' );
+	// Slim SEO 時代の個別サイトマップURL（本体・統合前のブログ）
+	add_rewrite_rule( '^(?:blog/)?sitemap-(post-type|taxonomy)-([a-z0-9_-]+)\.xml$', 'index.php?will_legacy_sitemap=$matches[1]:$matches[2]', 'top' );
+	add_rewrite_rule( '^blog/sitemap\.xml$', 'index.php?will_legacy_sitemap=index:index', 'top' );
 
 	if ( get_option( 'will_seo_rewrite_version' ) !== WILL_SEO_REWRITE_VERSION ) {
 		flush_rewrite_rules( false );
@@ -56,10 +57,15 @@ add_filter( 'redirect_canonical', function ( $redirect ) {
 
 /* ---------- サイトマップ ---------- */
 
-// ユーザー一覧・タクソノミー一覧は載せない（タクソノミーのアーカイブは noindex）
+// ユーザー一覧は載せない
 add_filter( 'wp_sitemaps_add_provider', function ( $provider, $name ) {
-	return in_array( $name, [ 'users', 'taxonomies' ], true ) ? false : $provider;
+	return 'users' === $name ? false : $provider;
 }, 10, 2 );
+
+// タクソノミーはブログのカテゴリだけ（資料の分類などの一覧は noindex）
+add_filter( 'wp_sitemaps_taxonomies', function ( $taxonomies ) {
+	return array_intersect_key( $taxonomies, [ 'category' => true ] );
+} );
 
 // 公開中の投稿が1件以上ある投稿タイプだけ
 add_filter( 'wp_sitemaps_post_types', function ( $post_types ) {
@@ -102,9 +108,14 @@ add_action( 'template_redirect', function () {
 		return;
 	}
 	list( $kind, $name ) = explode( ':', $legacy ) + [ '', '' ];
-	$to = ( 'post-type' === $kind && post_type_exists( $name ) )
-		? home_url( "/wp-sitemap-posts-{$name}-1.xml" )
-		: home_url( '/sitemap.xml' );
+	// 統合前のブログの固定ページ用サイトマップ（サンプルページのみ）は、本体の固定ページと別物なので全体へ
+	$from_blog = false !== strpos( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/blog/' ); // phpcs:ignore
+	$to        = home_url( '/sitemap.xml' );
+	if ( 'post-type' === $kind && post_type_exists( $name ) && ! ( $from_blog && 'page' === $name ) ) {
+		$to = home_url( "/wp-sitemap-posts-{$name}-1.xml" );
+	} elseif ( 'taxonomy' === $kind && 'category' === $name ) {
+		$to = home_url( '/wp-sitemap-taxonomies-category-1.xml' );
+	}
 	wp_safe_redirect( $to, 301 );
 	exit;
 }, 1 );
@@ -120,8 +131,6 @@ add_filter( 'robots_txt', function ( $output, $public ) {
 	$output  = rtrim( $output ) . "\n";
 	$output .= "Disallow: /?s=\nDisallow: /page/*/?s=\nDisallow: /search/\nAllow: /wp-admin/admin-ajax.php\n\n";
 	$output .= 'Sitemap: ' . home_url( '/sitemap.xml' ) . "\n";
-	// ブログ（/blog/ 別WordPress）のサイトマップ。robots.txt はドメイン直下の1つしか読まれないため、ここで案内する
-	$output .= 'Sitemap: ' . home_url( '/blog/sitemap.xml' ) . "\n";
 	return $output;
 }, 99, 2 );
 
@@ -150,17 +159,18 @@ function will_seo_llms_txt() {
 		'ダウンロード資料' => [],
 		'会社情報・その他' => [],
 	];
+	$blog_id    = (int) get_option( 'page_for_posts' );
+	$blog_posts = [];
 
 	$posts = get_posts( [
 		'post_type'      => [ 'page', 'ebooks', 'info', 'post' ],
 		'post_status'    => 'publish',
 		'posts_per_page' => -1,
-		'orderby'        => 'menu_order title',
-		'order'          => 'ASC',
+		'orderby'        => [ 'post_type' => 'ASC', 'menu_order' => 'ASC', 'date' => 'DESC' ],
 	] );
 
 	foreach ( $posts as $post ) {
-		if ( $post->ID === $front_id || ! will_seo_post_is_listable( $post->ID ) ) {
+		if ( $post->ID === $front_id || $post->ID === $blog_id || ! will_seo_post_is_listable( $post->ID ) ) {
 			continue;
 		}
 		$title = will_seo_custom_title( $post->ID ) ?: get_the_title( $post );
@@ -172,7 +182,10 @@ function will_seo_llms_txt() {
 
 		// 分類は、そのページの構造化データで判定した主題による
 		//   サービス … 主題が Service / OfferCatalog のページと、子ページがサービスのページ（サービス一覧）
-		if ( 'ebooks' === $post->post_type || $post->ID === $ebooks_index ) {
+		if ( 'post' === $post->post_type ) {
+			$cats = get_the_category( $post->ID );
+			$blog_posts[ $cats ? $cats[0]->name : 'その他' ][] = $line;
+		} elseif ( 'ebooks' === $post->post_type || $post->ID === $ebooks_index ) {
 			$groups['ダウンロード資料'][] = $line;
 		} elseif ( will_seo_llms_is_service( $post ) ) {
 			$groups['サービス'][] = $line;
@@ -209,10 +222,16 @@ function will_seo_llms_txt() {
 			$text .= "\n## {$heading}\n\n" . implode( "\n", $lines ) . "\n";
 		}
 	}
-	// ブログは別WordPressで運用しているため、トップとサイトマップを案内する
-	$text .= "\n## ブログ\n\n";
-	$text .= '- [ウィルのBtoBマーケブログ](' . home_url( '/blog/' ) . "): BtoB中小企業の実践的なWebマーケティングを解説する記事\n";
-	$text .= '- [ブログ記事のサイトマップ](' . home_url( '/blog/sitemap.xml' ) . ")\n";
+	// ブログ記事（カテゴリ別）
+	if ( $blog_posts ) {
+		$text .= "\n## " . ( $blog_id ? get_the_title( $blog_id ) : 'ブログ' ) . "\n\n";
+		if ( $blog_id ) {
+			$text .= '- [' . will_seo_llms_escape( get_the_title( $blog_id ) ) . '](' . get_permalink( $blog_id ) . '): ' . will_seo_llms_escape( will_seo_post_description( $blog_id ) ) . "\n";
+		}
+		foreach ( $blog_posts as $category => $lines ) {
+			$text .= "\n### {$category}\n\n" . implode( "\n", $lines ) . "\n";
+		}
+	}
 	return $text;
 }
 

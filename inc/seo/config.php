@@ -35,6 +35,17 @@ function will_seo_noindex_templates() {
 }
 
 /**
+ * ブログ記事の著者（記事ページの「執筆」表示と、構造化データの author に使う）
+ */
+function will_seo_post_author() {
+	return [
+		'name'  => '高橋竜也',
+		'label' => '高橋 竜也（合同会社ウィル 代表）',
+		'url'   => home_url( '/about/' ),
+	];
+}
+
+/**
  * 人物の @id に使う識別子（人名 → 識別子）。
  * ブログ（別WordPress）の Article.author と同じ @id にして、同一人物として扱わせるためのもの。
  * 人名は空白を詰めて書く。ここに無い人物にも、ページに載っていれば @id は自動で付く。

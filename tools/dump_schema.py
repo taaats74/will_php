@@ -83,6 +83,8 @@ def summarize(graph):
             lines.append(f"資料：{n['name']}（{n.get('numberOfPages', '?')}ページ・目次{len(n.get('hasPart', []))}章）")
         elif typ == "VideoObject":
             lines.append(f"動画：{n['name']}")
+        elif typ in ("BlogPosting", "Blog"):
+            lines.append(f"{typ}：{n.get('headline') or n.get('name', '')}" + (f"（記事{len(n['blogPost'])}件）" if n.get("blogPost") else ""))
         else:
             lines.append(f"{typ}：{n.get('name', '')}")
     if isinstance(page.get("mainEntity"), list):

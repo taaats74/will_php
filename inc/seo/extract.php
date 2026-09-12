@@ -236,9 +236,18 @@ function will_seo_item_name( DOMElement $item ) {
 			return will_seo_class_matches( $el, '/^plan$/' );
 		},
 	];
+	$in_linkcard = function ( DOMElement $node ) use ( $item ) {
+		// 記事同士のリンクカード（「あわせて読みたい」）の中の見出しは、項目名にしない
+		for ( $el = $node; $el instanceof DOMElement && $el !== $item->parentNode; $el = $el->parentNode ) {
+			if ( will_seo_class_matches( $el, '/linkcard/' ) ) {
+				return true;
+			}
+		}
+		return false;
+	};
 	foreach ( $rules as $rule ) {
 		foreach ( $candidates as $node ) {
-			if ( ! $rule( $node ) || will_seo_class_matches( $node, $skip ) || in_array( strtolower( $node->tagName ), [ 'ul', 'ol', 'img' ], true ) ) {
+			if ( ! $rule( $node ) || will_seo_class_matches( $node, $skip ) || in_array( strtolower( $node->tagName ), [ 'ul', 'ol', 'img' ], true ) || $in_linkcard( $node ) ) {
 				continue;
 			}
 			// 名前要素の中の補足（例：<h3>高橋 竜也<span>マーケティング戦略</span></h3>）は含めない
@@ -473,7 +482,8 @@ function will_seo_strip_number( $text ) {
  */
 function will_seo_extract_steps( DOMElement $root ) {
 	$items = will_seo_repeated_items( $root, function ( DOMElement $el ) {
-		return '' !== will_seo_item_name( $el );
+		// 記事同士のリンクカード（ブログ記事内の「あわせて読みたい」）は手順ではない
+		return ! will_seo_class_matches( $el, '/linkcard/' ) && '' !== will_seo_item_name( $el );
 	} );
 	$steps = [];
 	foreach ( $items as $item ) {
@@ -672,6 +682,7 @@ function will_seo_extract_people( DOMXPath $xpath ) {
  *
  *   A. <details><summary>質問</summary>回答</details>
  *   B. .accordion 内の <* class="question">質問</*><* class="answer">回答</*>
+ *   C. <section id="faq"> 内の <article><h3>質問</h3>回答</article>（ブログ記事）
  *
  * メニュー（ヘッダー・ナビ・フッター・class に menu を含む要素）内の <details> は対象外。
  * 「Q」「A」のバッジ・開閉アイコンは本文に含めず、「Q1.」のような連番も外す。
@@ -698,6 +709,20 @@ function will_seo_extract_faq( $html ) {
 		$answer   = [];
 		foreach ( $details->childNodes as $child ) {
 			if ( $child instanceof DOMElement && 'summary' === strtolower( $child->tagName ) ) {
+				$question = will_seo_node_text( $child );
+			} else {
+				$answer[] = will_seo_node_text( $child );
+			}
+		}
+		$faq[] = [ $question, implode( "\n", $answer ) ];
+	}
+
+	// C. ブログ記事：<section id="faq"> の中の <article><h3>質問</h3><p>回答</p></article>
+	foreach ( $xpath->query( "//section[@id='faq']//article[h3] | //*[starts-with(@id, 'faq-')][h3]" ) as $article ) {
+		$question = '';
+		$answer   = [];
+		foreach ( $article->childNodes as $child ) {
+			if ( $child instanceof DOMElement && 'h3' === strtolower( $child->tagName ) && '' === $question ) {
 				$question = will_seo_node_text( $child );
 			} else {
 				$answer[] = will_seo_node_text( $child );

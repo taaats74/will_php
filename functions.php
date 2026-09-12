@@ -5,6 +5,9 @@ require_once get_template_directory() . '/inc/seo/bootstrap.php';
 // ユーザー名の非公開化・XML-RPC の停止。詳細は inc/security.php
 require_once get_template_directory() . '/inc/security.php';
 
+// ブログ（/blog/）。URL・画像・目次・関連記事など。詳細は inc/blog.php
+require_once get_template_directory() . '/inc/blog.php';
+
 /**
  * テーマ配下のアセットURLにfilemtimeベースのバージョンクエリを付与して返す
  * (LP の直接 <link> / <script> 用。wp_enqueue_* には別途 filemtime を直接渡す)

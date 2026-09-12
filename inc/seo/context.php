@@ -102,9 +102,10 @@ function will_seo_post_description( $post_id ) {
 	if ( 'page' === get_option( 'show_on_front' ) && (int) get_option( 'page_on_front' ) === $post->ID ) {
 		return get_bloginfo( 'description' );
 	}
+	// 抜粋 → 本文の冒頭160字（統合前のブログ・Slim SEO の自動生成と同じ長さ）
 	$source = $post->post_excerpt ? $post->post_excerpt : $post->post_content;
 	$text   = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( strip_shortcodes( $source ) ) ) );
-	return mb_strlen( $text ) > 120 ? mb_substr( $text, 0, 120 ) . '…' : $text;
+	return mb_substr( $text, 0, 160 );
 }
 
 /**
@@ -139,10 +140,18 @@ function will_seo_canonical_url() {
 	if ( is_singular() ) {
 		return wp_get_canonical_url( get_queried_object_id() );
 	}
-	if ( is_post_type_archive() ) {
-		return get_post_type_archive_link( get_query_var( 'post_type' ) );
-	}
-	if ( is_tax() || is_category() || is_tag() ) {
+	// 一覧の2ページ目以降は、そのページ自身を正規URLにする
+	$paged = (int) get_query_var( 'paged' );
+	if ( is_home() || is_post_type_archive() || is_tax() || is_category() || is_tag() ) {
+		if ( $paged > 1 ) {
+			return get_pagenum_link( $paged );
+		}
+		if ( is_home() ) {
+			return get_permalink( (int) get_option( 'page_for_posts' ) );
+		}
+		if ( is_post_type_archive() ) {
+			return get_post_type_archive_link( get_query_var( 'post_type' ) );
+		}
 		$link = get_term_link( get_queried_object() );
 		return is_wp_error( $link ) ? '' : $link;
 	}
@@ -189,8 +198,14 @@ function will_seo_post_is_listable( $post_id ) {
 		return false;
 	}
 	$meta = will_seo_meta( $post_id );
-	return empty( $meta['canonical'] )
-		|| untrailingslashit( $meta['canonical'] ) === untrailingslashit( get_permalink( $post_id ) );
+	if ( ! empty( $meta['canonical'] ) && untrailingslashit( $meta['canonical'] ) !== untrailingslashit( get_permalink( $post_id ) ) ) {
+		return false;
+	}
+	// 別URLへ転送しているページ（例：統合前のブログで内容を統合した旧記事）
+	$redirects = get_option( 'will_redirects', [] );
+	$home_path = untrailingslashit( (string) wp_parse_url( home_url(), PHP_URL_PATH ) );
+	$path      = substr( (string) wp_parse_url( get_permalink( $post_id ), PHP_URL_PATH ), strlen( $home_path ) );
+	return ! ( is_array( $redirects ) && isset( $redirects[ $path ] ) );
 }
 
 /**
@@ -208,8 +223,8 @@ function will_seo_request_is_noindex() {
 		}
 		return will_seo_post_is_noindex( get_queried_object_id() );
 	}
-	// タクソノミーのアーカイブは専用テンプレートが無く、資料一覧と内容が重複するため出さない
-	if ( is_tax() || is_category() || is_tag() || is_author() || is_date() ) {
+	// ブログのカテゴリ以外のタクソノミー一覧（資料の分類など）は、専用テンプレートが無く内容が重複するため出さない
+	if ( is_tax() || is_tag() || is_author() || is_date() ) {
 		return true;
 	}
 	// 中身の無い一覧（例：公開記事が0件のお知らせ）
@@ -310,9 +325,26 @@ function will_seo_breadcrumb_items() {
 	if ( is_front_page() || is_404() || is_search() ) {
 		return [];
 	}
-	$items = [ [ 'ホーム', home_url( '/' ) ] ];
+	$items   = [ [ 'ホーム', home_url( '/' ) ] ];
+	$blog_id = (int) get_option( 'page_for_posts' );
 
-	if ( is_singular() ) {
+	if ( is_singular( 'post' ) ) {
+		// ホーム ＞ ブログ ＞ カテゴリ ＞ 記事
+		$post = get_queried_object();
+		if ( $blog_id ) {
+			$items[] = [ get_the_title( $blog_id ), get_permalink( $blog_id ) ];
+		}
+		$cats = get_the_category( $post->ID );
+		if ( $cats ) {
+			$items[] = [ $cats[0]->name, get_term_link( $cats[0] ) ];
+		}
+		$items[] = [ get_the_title( $post ), get_permalink( $post ) ];
+	} elseif ( is_home() && $blog_id ) {
+		$items[] = [ get_the_title( $blog_id ), get_permalink( $blog_id ) ];
+	} elseif ( is_category() && $blog_id ) {
+		$items[] = [ get_the_title( $blog_id ), get_permalink( $blog_id ) ];
+		$items[] = [ single_cat_title( '', false ), get_term_link( get_queried_object() ) ];
+	} elseif ( is_singular() ) {
 		$post = get_queried_object();
 		if ( 'page' !== $post->post_type ) {
 			$archive = get_post_type_archive_link( $post->post_type );

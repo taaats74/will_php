@@ -65,7 +65,7 @@
                 <li><a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer">無料診断</a></li>
                 <li><a href="<?php echo esc_url( home_url('/ebooks/') ); ?>">ダウンロード資料</a></li>
                 <li><a href="<?php echo esc_url( home_url('/works/') ); ?>">制作実績</a></li>
-                <li><a href="https://will-corp.co.jp/blog/" target="_blank" rel="noopener noreferrer">ブログ</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">ブログ</a></li>
                 <li>
                   <a href="https://www.youtube.com/@will-btob-marketing" target="_blank" rel="noopener noreferrer">YouTube</a>
                 </li>

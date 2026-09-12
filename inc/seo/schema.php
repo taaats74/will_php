@@ -13,6 +13,7 @@
  *     ├ mainEntity … ページの主題
  *     │    料金表 1つ or 流れ → Service（offers）   料金表が複数 → OfferCatalog
  *     │    資料 → DigitalDocument   会社概要 → Organization   子ページ・一覧 → ItemList
+ *     │    ブログ記事 → BlogPosting（isPartOf → Blog）   ブログのトップ → Blog
  *     │    FAQ があるときは Question[]（主題は about へ）
  *     └ hasPart … 流れ（HowTo）・制作実績（ItemList）・記事（ItemList）・動画（VideoObject）
  *
@@ -98,6 +99,10 @@ function will_seo_schema_prepare() {
 		'published'   => $post ? get_post_time( 'c', false, $post ) : '',
 		'modified'    => $post ? wp_date( 'c', will_seo_modified_timestamp( $post->ID ) ) : '',
 		'pages'       => (int) ( $post ? get_post_meta( $post->ID, 'dl_page_count', true ) : 0 ),
+		'categories'  => $post && 'post' === $post->post_type ? wp_list_pluck( get_the_category( $post->ID ), 'name' ) : [],
+		'is_blog'     => is_home() && get_option( 'page_for_posts' ),
+		'blog_url'    => get_option( 'page_for_posts' ) ? get_permalink( (int) get_option( 'page_for_posts' ) ) : '',
+		'blog_name'   => get_option( 'page_for_posts' ) ? get_the_title( (int) get_option( 'page_for_posts' ) ) : '',
 		'list'        => [],
 	];
 
@@ -105,7 +110,9 @@ function will_seo_schema_prepare() {
 	if ( $state['is_archive'] ) {
 		global $wp_query;
 		foreach ( $wp_query->posts as $item ) {
-			$state['list'][] = [ will_seo_short_title( get_the_title( $item ) ), get_permalink( $item ) ];
+			// ブログ記事のタイトルは「｜」を含むことが多いので、短縮しない
+			$title           = 'post' === $item->post_type ? get_the_title( $item ) : will_seo_short_title( get_the_title( $item ) );
+			$state['list'][] = [ wp_strip_all_tags( $title ), get_permalink( $item ) ];
 		}
 	}
 	// 子ページを持つ固定ページ（例：サービス一覧）：子ページの一覧
@@ -137,6 +144,23 @@ function will_seo_short_title( $title ) {
 function will_seo_schema_build( array $s, $html ) {
 	$a       = will_seo_analyze( $html );
 	$facts   = will_seo_update_facts( $a, $s );
+	if ( 'post' === $s['post_type'] ) {
+		// ブログ記事の本文から、料金・制作実績・記事カードは読み取らない（記事は販売ページではないため）
+		$a['offers']   = [];
+		$a['problems'] = [];
+		$a['works']    = [];
+		$a['posts']    = [];
+		// 記事の「流れ」は、項目の多くが番号付き（ステップ1／①／Step 1 など）の場合だけ手順として扱う。
+		// 「メリット」のような箇条や、ステップ内の補足項目を手順と誤認しないため
+		$is_numbered = function ( $step ) {
+			return (bool) preg_match( '/^(ステップ|STEP|Step|step|手順|第)?\s*[0-9０-９①-⑳]/u', $step['name'] );
+		};
+		$a['steps'] = array_values( array_filter( array_map( function ( $group ) use ( $is_numbered ) {
+			$numbered = array_values( array_filter( $group['steps'], $is_numbered ) );
+			$ok       = count( $numbered ) >= 2 && count( $numbered ) * 2 >= count( $group['steps'] );
+			return $ok ? [ 'name' => $group['name'], 'steps' => $numbered ] : null;
+		}, $a['steps'] ) ) );
+	}
 	$home    = home_url( '/' );
 	$url     = $s['url'];
 	$org_ref = [ '@id' => $home . '#organization' ];
@@ -168,10 +192,6 @@ function will_seo_schema_build( array $s, $html ) {
 			$people += [ $name => [ 'name' => $name ] ];
 		}
 	}
-	foreach ( $people as $person ) {
-		$graph[] = will_seo_person_node( $person, $org_ref );
-	}
-
 	// WebPage
 	$types = [ 'WebPage' ];
 	if ( $is_about ) {
@@ -240,9 +260,20 @@ function will_seo_schema_build( array $s, $html ) {
 	$works = $a['works'] ? will_seo_works_node( $a['works'], $url, $org_ref ) : null;
 	$posts = $a['posts'] ? will_seo_posts_node( $a['posts'], $url, $org_ref ) : null;
 
+	// 記事の著者
+	if ( 'post' === $s['post_type'] ) {
+		$author           = will_seo_post_author();
+		$people           = [ $author['name'] => [ 'name' => $author['name'], 'url' => $author['url'] ] ] + $people;
+	}
+
 	// ページの主題
 	$main = null;
-	if ( 'ebooks' === $s['post_type'] ) {
+	if ( 'post' === $s['post_type'] ) {
+		$main = will_seo_blog_posting_node( $s, $org_ref );
+	} elseif ( $s['is_blog'] ) {
+		$types = [ 'CollectionPage' ];
+		$main  = will_seo_blog_node( $s, $org_ref );
+	} elseif ( 'ebooks' === $s['post_type'] ) {
 		$main = will_seo_document_node( $s, $a, $org_ref );
 	} elseif ( $is_about ) {
 		$page['mainEntity'] = $org_ref;
@@ -264,6 +295,9 @@ function will_seo_schema_build( array $s, $html ) {
 	if ( $main ) {
 		$graph[]            = $main;
 		$page['mainEntity'] = [ '@id' => $main['@id'] ];
+	}
+	foreach ( $people as $person ) {
+		$graph[] = will_seo_person_node( $person, $org_ref );
 	}
 	will_seo_record_page_kind( $url, $main ? $main['@type'] : '' );
 
@@ -316,13 +350,72 @@ function will_seo_schema_build( array $s, $html ) {
 
 /* ---------- 各ノード ---------- */
 
+/**
+ * BlogPosting（ブログ記事）
+ */
+function will_seo_blog_posting_node( array $s, array $org_ref ) {
+	$author = will_seo_post_author();
+	$node   = [
+		'@type'            => 'BlogPosting',
+		'@id'              => $s['url'] . '#article',
+		'headline'         => $s['post_title'],
+		'url'              => $s['url'],
+		'mainEntityOfPage' => [ '@id' => $s['url'] . '#webpage' ],
+		'inLanguage'       => 'ja',
+		'datePublished'    => $s['published'],
+		'dateModified'     => $s['modified'],
+		'author'           => [ '@id' => will_seo_person_id( $author['name'] ) ],
+		'publisher'        => $org_ref,
+	];
+	if ( $s['description'] ) {
+		$node['description'] = $s['description'];
+	}
+	if ( $s['image']['url'] ) {
+		$node['image'] = [ '@id' => $s['url'] . '#primaryimage' ];
+	}
+	if ( $s['categories'] ) {
+		$node['articleSection'] = 1 === count( $s['categories'] ) ? $s['categories'][0] : $s['categories'];
+	}
+	if ( $s['blog_url'] ) {
+		$node['isPartOf'] = [
+			'@type' => 'Blog',
+			'@id'   => $s['blog_url'] . '#blog',
+			'name'  => $s['blog_name'],
+			'url'   => $s['blog_url'],
+		];
+	}
+	return $node;
+}
+
+/**
+ * Blog（ブログのトップ）。表示中の記事を blogPost に並べる
+ */
+function will_seo_blog_node( array $s, array $org_ref ) {
+	return [
+		'@type'     => 'Blog',
+		'@id'       => $s['blog_url'] . '#blog',
+		'name'      => $s['blog_name'],
+		'url'       => $s['blog_url'],
+		'publisher' => $org_ref,
+		'inLanguage' => 'ja',
+		'blogPost'  => array_map( function ( $item ) {
+			return [
+				'@type'    => 'BlogPosting',
+				'@id'      => $item[1] . '#article',
+				'headline' => $item[0],
+				'url'      => $item[1],
+			];
+		}, $s['list'] ),
+	];
+}
+
 function will_seo_person_node( array $person, array $org_ref ) {
 	$node = [
 		'@type' => 'Person',
 		'@id'   => will_seo_person_id( $person['name'] ),
 		'name'  => $person['name'],
 	];
-	foreach ( [ 'jobTitle', 'description', 'image' ] as $key ) {
+	foreach ( [ 'jobTitle', 'description', 'image', 'url' ] as $key ) {
 		if ( ! empty( $person[ $key ] ) ) {
 			$node[ $key ] = $person[ $key ];
 		}
