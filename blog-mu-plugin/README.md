@@ -7,7 +7,13 @@
 
 ```
 /home/taaats74/will-corp.co.jp/public_html/blog/wp-content/mu-plugins/will-blog-structured-data.php
+/home/taaats74/will-corp.co.jp/public_html/blog/wp-content/mu-plugins/will-blog-security.php
 ```
+
+| ファイル | 役割 |
+|---|---|
+| will-blog-structured-data.php | 構造化データの補正（下記「内容」） |
+| will-blog-security.php | ユーザー名の非公開化（ユーザー一覧API・著者アーカイブ・oEmbed）、XML-RPC の停止。コーポレート側の inc/security.php と同じ対応 |
 
 mu-plugins は**直下のPHPファイルのみ**が自動で読み込まれる（サブディレクトリは対象外）。
 
