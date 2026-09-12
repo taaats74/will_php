@@ -142,7 +142,6 @@ add_action( 'template_redirect', function () {
  * llms.txt の本文（https://llmstxt.org/ の書式）
  */
 function will_seo_llms_txt() {
-	$services     = will_seo_services();
 	$front_id     = (int) get_option( 'page_on_front' );
 	$ebooks_page  = will_seo_archive_page( 'ebooks' );
 	$ebooks_index = $ebooks_page ? $ebooks_page->ID : 0;
@@ -171,28 +170,40 @@ function will_seo_llms_txt() {
 			$line .= ': ' . will_seo_llms_escape( $desc );
 		}
 
-		$template = get_page_template_slug( $post );
-		if ( isset( $services[ $template ] ) || 'page-service.php' === $template ) {
-			$groups['サービス'][] = $line;
-		} elseif ( 'ebooks' === $post->post_type || $post->ID === $ebooks_index ) {
+		// 分類は、そのページの構造化データで判定した主題による
+		//   サービス … 主題が Service / OfferCatalog のページと、子ページがサービスのページ（サービス一覧）
+		if ( 'ebooks' === $post->post_type || $post->ID === $ebooks_index ) {
 			$groups['ダウンロード資料'][] = $line;
+		} elseif ( will_seo_llms_is_service( $post ) ) {
+			$groups['サービス'][] = $line;
 		} else {
 			$groups['会社情報・その他'][] = $line;
 		}
 	}
 
-	$org  = will_seo_organization();
+	// 会社情報は、会社概要・特定商取引法に基づく表記のページから読み取った内容
+	$org  = will_seo_organization_node( true );
 	$text = '# ' . get_bloginfo( 'name' ) . "\n\n";
 	$text .= '> ' . will_seo_llms_escape( $front_id ? will_seo_post_description( $front_id ) : get_bloginfo( 'description' ) ) . "\n\n";
-	$text .= will_seo_llms_escape( $org['description'] ) . "\n";
-	$text .= sprintf(
-		"所在地：%s%s%s　電話：%s　メール：%s\n",
-		$org['address']['addressRegion'],
-		$org['address']['addressLocality'],
-		$org['address']['streetAddress'],
-		$org['telephone'],
-		$org['email']
-	);
+	if ( ! empty( $org['description'] ) ) {
+		$text .= will_seo_llms_escape( $org['description'] ) . "\n";
+	}
+	$profile = [];
+	if ( ! empty( $org['address'] ) ) {
+		$profile[] = '所在地：' . ( $org['address']['addressRegion'] ?? '' ) . ( $org['address']['addressLocality'] ?? '' ) . ( $org['address']['streetAddress'] ?? '' );
+	}
+	if ( ! empty( $org['foundingDate'] ) ) {
+		$profile[] = '設立：' . $org['foundingDate'];
+	}
+	if ( ! empty( $org['telephone'] ) ) {
+		$profile[] = '電話：' . $org['telephone'];
+	}
+	if ( ! empty( $org['email'] ) ) {
+		$profile[] = 'メール：' . $org['email'];
+	}
+	if ( $profile ) {
+		$text .= implode( '　', $profile ) . "\n";
+	}
 	foreach ( $groups as $heading => $lines ) {
 		if ( $lines ) {
 			$text .= "\n## {$heading}\n\n" . implode( "\n", $lines ) . "\n";
@@ -203,6 +214,18 @@ function will_seo_llms_txt() {
 	$text .= '- [ウィルのBtoBマーケブログ](' . home_url( '/blog/' ) . "): BtoB中小企業の実践的なWebマーケティングを解説する記事\n";
 	$text .= '- [ブログ記事のサイトマップ](' . home_url( '/blog/sitemap.xml' ) . ")\n";
 	return $text;
+}
+
+function will_seo_llms_is_service( WP_Post $post ) {
+	if ( in_array( will_seo_page_kind( get_permalink( $post ) ), [ 'Service', 'OfferCatalog' ], true ) ) {
+		return true;
+	}
+	foreach ( get_pages( [ 'parent' => $post->ID, 'post_status' => 'publish' ] ) as $child ) {
+		if ( 'Service' === will_seo_page_kind( get_permalink( $child ) ) ) {
+			return true;
+		}
+	}
+	return false;
 }
 
 function will_seo_llms_escape( $text ) {

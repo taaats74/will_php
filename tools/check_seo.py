@@ -10,8 +10,8 @@
   - noindex になっていない（サイトマップに載せたページが noindex なら矛盾）
   - 構造化データが1ブロックの @graph で、@id の重複・参照切れが無い
   - FAQ の質問文がページ本文に実在する
-  - 料金を定義したLPで Offer が出ている（表示と不一致だと出力が止まる）
-  - どのページにも、設定（inc/seo/config.php）と異なる料金表記が無い
+  - 料金ページとサービスページで、同じプランの料金が食い違っていない
+  - 本文・説明文に、そのサービスの料金表と異なる月額・初期費用の表記が無い
   - GTM・HubSpot が1回ずつ読み込まれている
 あわせて /sitemap.xml・/llms.txt・robots.txt を確認する。
 
@@ -28,57 +28,101 @@ import urllib.request
 BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://will-corp.co.jp").rstrip("/")
 UA = "will-seo-check/1.0"
 
-# 料金（Offer）を出すページ。inc/seo/config.php の plans を持つサービス
-OFFER_PATHS = ["/willsupport/", "/willgrow/", "/will-support-ec/", "/btob-marketing-consultation/"]
-
-CONFIG = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "inc", "seo", "config.php")
-
-
-def load_prices():
-    """config.php の will_seo_services() から、料金のあるサービスを読む（料金の正は config.php のみ）"""
-    source = open(CONFIG, encoding="utf-8").read()
-    services = []
-    for body in re.findall(r"'page-[\w-]+\.php'\s*=>\s*\[(.*?)\n\t\t\],", source, re.S):
-        name = re.search(r"'name'\s*=>\s*'([^']+)'", body)
-        monthly = [int(m) for m in re.findall(r"'monthly'\s*=>\s*(\d+)", body)]
-        setup = [int(m) for m in re.findall(r"'setup'\s*=>\s*(\d+)", body)]
-        if name and any(monthly):
-            services.append({"name": name.group(1), "monthly": set(monthly), "setup": set(setup)})
-    # 「ウィルサポ」が「ウィルサポEC」の一部に一致しないよう、長い名前から判定する
-    return sorted(services, key=lambda s: -len(s["name"]))
-
-
-def services_in(text):
-    """文に含まれるサービス（長い名前を優先して重複一致を除く）"""
-    hits = []
-    for service in PRICES:
-        if service["name"] in text:
-            hits.append(service)
-            text = text.replace(service["name"], "")
-    return hits
-
-
-PRICES = load_prices()
-
 
 def to_yen(number, man):
     value = int(number.replace(",", ""))
     return value * 10000 if man else value
 
 
-def price_conflicts(page):
-    """設定と異なる金額・初期費用の表記を返す。
-    文にサービス名があればそのサービス、無ければページの <title> に1つだけ含まれるサービスで判定する。
-    """
+def norm_plan(name):
+    """プラン名の表記ゆれを揃える（「シンプルプラン」と「シンプル」を同じとみなす）"""
+    return re.sub(r"(プラン|\s)", "", name)
+
+
+def offer_facts(offer):
+    spec = offer.get("priceSpecification", {})
+    amount = spec.get("price", spec.get("minPrice", offer.get("price")))
+    setup = offer.get("addOn", {}).get("priceSpecification", {}).get("price")
+    return {
+        "name": offer.get("name", ""),
+        "amount": int(float(amount)) if amount is not None else None,
+        "monthly": spec.get("unitText") == "月額",
+        "min": "minPrice" in spec,
+        "setup": int(setup) if setup else 0,
+    }
+
+
+def collect_price_sources(url, graph):
+    """ページの構造化データから、サービスごとの料金を集める"""
+    for node in graph:
+        if node.get("@type") == "Service" and node.get("offers"):
+            PRICE_SOURCES.append({"url": url, "service": node["name"], "kind": "service",
+                                  "offers": [offer_facts(o) for o in node["offers"] if o.get("priceSpecification") or "price" in o]})
+        if node.get("@type") == "OfferCatalog":
+            for group in node.get("itemListElement", []):
+                PRICE_SOURCES.append({"url": url, "service": re.sub(r"\s", "", group.get("name", "")), "kind": "catalog",
+                                      "offers": [offer_facts(o) for o in group.get("itemListElement", [])]})
+
+
+def fmt(o):
+    if o["amount"] is None:
+        return "金額なし"
+    unit = "月額" if o["monthly"] else ""
+    return f"{unit}{o['amount']:,}円{'〜' if o['min'] else ''}" + (f"・初期費用{o['setup']:,}円" if o["setup"] else "")
+
+
+def cross_check_prices(pages):
+    """ページ間の料金の食い違いを検出する"""
+    services = [src for src in PRICE_SOURCES if src["kind"] == "service"]
+    # 1. 料金ページ（OfferCatalog）の各表と、サービスページの料金表の突き合わせ
+    generic = {"シンプル", "スタンダード", "プレミアム", "ライト", "ベーシック", "エントリー"}
+    for cat in [src for src in PRICE_SOURCES if src["kind"] == "catalog"]:
+        cat_plans = {norm_plan(o["name"]): o for o in cat["offers"]}
+
+        def score(svc):
+            # サービス名が一致するものを優先。名前が違う場合は、汎用でないプラン名が2つ以上一致するものだけ
+            if svc["service"] in cat["service"] or cat["service"] in svc["service"]:
+                return 1000 + len(svc["service"])
+            common = set(cat_plans) & {norm_plan(o["name"]) for o in svc["offers"]}
+            return len(common - generic) if len(common - generic) >= 2 else 0
+
+        candidates = sorted([svc for svc in services if score(svc)], key=score, reverse=True)
+        for svc in candidates[:1]:
+            svc_plans = {norm_plan(o["name"]): o for o in svc["offers"]}
+            same_name = score(svc) >= 1000
+            for plan in sorted(set(cat_plans) & set(svc_plans)):
+                c, v = cat_plans[plan], svc_plans[plan]
+                if (c["amount"], c["monthly"], c["setup"]) != (v["amount"], v["monthly"], v["setup"]):
+                    ng(cat["url"], f"料金の食い違い［{svc['service']}・{plan}］このページ {fmt(c)} ／ {svc['url']} {fmt(v)}")
+            only_cat = sorted(set(cat_plans) - set(svc_plans))
+            if same_name and only_cat and svc_plans:
+                ng(cat["url"], f"料金の食い違い［{svc['service']}］このページにだけあるプラン {only_cat} ／ {svc['url']} のプラン {sorted(svc_plans)}")
+    # 2. 本文中の料金表記（サービス名と同じ文、またはタイトルが1サービスのページ）
+    for url, page in pages.items():
+        for conflict in text_price_conflicts(page, services):
+            ng(url, f"設定と異なる料金表記 {conflict}")
+
+
+def text_price_conflicts(page, services):
+    by_name = sorted(services, key=lambda x: -len(x["service"]))
+
+    def services_in(text):
+        hits = []
+        for svc in by_name:
+            if svc["service"] in text and svc["service"] not in [h["service"] for h in hits]:
+                hits.append(svc)
+                text = text.replace(svc["service"], "")
+        return hits
+
     title = re.search(r"<title>(.*?)</title>", page, re.S)
     page_services = services_in(html.unescape(title.group(1))) if title else []
     page_service = page_services[0] if len(page_services) == 1 else None
 
     body = page.split("<body", 1)[-1]
     body = re.sub(r"<(script|style)\b.*?</\1>", "", body, flags=re.S | re.I)
+    body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
     body = re.sub(r"</?(p|li|h[1-6]|div|dt|dd|td|th|br|section|summary)\b[^>]*>", "\n", body, flags=re.I)
     text = html.unescape(re.sub(r"<[^>]+>", "", body))
-    # 検索結果・SNSに出る説明文も対象にする
     for content in re.findall(r'<meta (?:name="description"|property="og:description") content="([^"]*)"', page):
         text += "\n" + html.unescape(content)
     found = []
@@ -86,18 +130,25 @@ def price_conflicts(page):
         sentence = re.sub(r"\s+", "", sentence)
         targets = services_in(sentence) or ([page_service] if page_service else [])
         if len(targets) != 1:
-            continue  # 複数サービスが並ぶ文は、どの金額がどのサービスか判別できないため対象外
-        service = targets[0]
+            continue
+        svc = targets[0]
+        monthly = {o["amount"] for o in svc["offers"] if o["monthly"]}
+        setups = {o["setup"] for o in svc["offers"]}
+        if not monthly:
+            continue
         amounts = re.findall(r"月額([\d,]+)(万)?円", sentence)
-        amounts += [(n, "") for n in re.findall(r"(?:¥([\d,]+)/月)", sentence)]
+        amounts += [(n, "") for n in re.findall(r"¥([\d,]+)/月", sentence)]
         amounts += [(n, m) for n, m in re.findall(r"([\d,]+)(万)?円/月", sentence)]
         for number, man in amounts:
-            if to_yen(number, man) not in service["monthly"]:
-                found.append(f"{service['name']}：月額{number}{man}円 → {sentence[:60]}")
-        if max(service["setup"]) > 0 and re.search(r"初期費用(は|：|:)?(0円|０円|無料|なし|かかりません)", sentence):
-            found.append(f"{service['name']}：初期費用が無料の表記 → {sentence[:60]}")
+            if to_yen(number, man) not in monthly:
+                found.append(f"{svc['service']}：月額{number}{man}円（{svc['url']} では {sorted(monthly)}）→ {sentence[:50]}")
+        if max(setups) > 0 and re.search(r"初期費用(は|：|:)?(0円|０円|無料|なし|かかりません)", sentence):
+            found.append(f"{svc['service']}：初期費用が無料の表記 → {sentence[:50]}")
     return found
 
+
+PRICE_SOURCES = []
+PAGES = {}
 
 errors = []
 warnings = []
@@ -200,15 +251,8 @@ def check_page(url):
         if norm(q["name"]) not in body_text:
             ng(url, f"FAQ の質問がページに無い: {q['name']}")
 
-    for conflict in price_conflicts(page):
-        ng(url, f"設定と異なる料金表記 {conflict}")
-
-    path = url[len(BASE):]
-    if path in OFFER_PATHS:
-        services = [n for n in graph if n.get("@type") == "Service"]
-        if not services or not services[0].get("offers"):
-            ng(url, "Offer が出ていない（料金設定と表示の不一致を確認）")
-
+    PAGES[url] = page
+    collect_price_sources(url, graph)
 
 def main():
     urls = sitemap_urls()
@@ -217,6 +261,8 @@ def main():
         before = len(errors)
         check_page(url)
         print(("NG " if len(errors) > before else "ok ") + url)
+
+    cross_check_prices(PAGES)
 
     status, llms = fetch(BASE + "/llms.txt")
     if status != 200 or not llms.startswith("# "):

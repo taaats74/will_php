@@ -2,24 +2,21 @@
 /**
  * 構造化データ（JSON-LD）
  *
- * 1ページにつき1つの @graph を出力する。ノード同士は @id で参照し、
- * 同じ実体を2回書かない。
+ * 表示中のページの内容（inc/seo/extract.php の解析結果）から自動で組み立てる。
+ * テンプレートやページごとの設定は持たない。ページの記載を直せば構造化データも追従する。
+ *
+ * 1ページにつき1つの @graph を出力し、ノード同士は @id で参照する（同じ実体を2回書かない）。
  *
  *   WebSite ─ publisher → Organization ─ founder → Person
  *   WebPage（AboutPage / ContactPage / CollectionPage / +FAQPage）
- *     ├ isPartOf → WebSite
- *     ├ breadcrumb → BreadcrumbList
- *     ├ primaryImageOfPage → ImageObject
- *     └ mainEntity / about → Service / DigitalDocument / ItemList / Question[]
+ *     ├ isPartOf → WebSite / breadcrumb → BreadcrumbList / primaryImageOfPage → ImageObject
+ *     ├ mainEntity … ページの主題
+ *     │    料金表 1つ or 流れ → Service（offers）   料金表が複数 → OfferCatalog
+ *     │    資料 → DigitalDocument   会社概要 → Organization   子ページ・一覧 → ItemList
+ *     │    FAQ があるときは Question[]（主題は about へ）
+ *     └ hasPart … 流れ（HowTo）・制作実績（ItemList）・記事（ItemList）・動画（VideoObject）
  *
- * 会社・代表者の詳細はトップと About にだけ出し、他のページは @id で参照する。
- *
- * ページの内容から作るもの（手作業での同期は不要）
- *   - FAQ   … 表示中のHTMLから抽出する（<details> 形式／アコーディオン形式）
- *   - 料金  … inc/seo/config.php の金額が、表示中のページに書かれているときだけ出力する
- *   - 一覧  … サービス一覧は子ページ、資料一覧は表示中の投稿から作る
- * そのため、ページの描画が終わってから組み立てて <head> に差し込む。
- *
+ * 会社・代表者の詳細は、会社概要を載せたページ（About）とトップにだけ出し、他のページは @id で参照する。
  * noindex のページには出力しない。
  *
  * @package will-corp
@@ -39,7 +36,7 @@ add_action( 'template_redirect', function () {
 	ob_start( 'will_seo_schema_inject' );
 }, 999 );
 
-// wp_head の時点で位置だけ確保し、ページの状態（noindex 等）を確定しておく
+// wp_head の時点で位置を確保し、クエリに依存する値を確定しておく
 add_action( 'wp_head', function () {
 	if ( will_seo_is_noindex() ) {
 		return;
@@ -48,9 +45,6 @@ add_action( 'wp_head', function () {
 	echo "\n" . WILL_SEO_SCHEMA_MARKER . "\n";
 }, 20 );
 
-/**
- * wp_head 時点の情報を保持する
- */
 function will_seo_schema_state( $set = null ) {
 	static $state = null;
 	if ( null !== $set ) {
@@ -71,30 +65,25 @@ function will_seo_schema_inject( $html ) {
 	try {
 		$state = will_seo_schema_state();
 		if ( $state ) {
-			$graph = will_seo_schema_build( $state, $html );
-			$json  = '<script type="application/ld+json">' . wp_json_encode(
+			$json = '<script type="application/ld+json">' . wp_json_encode(
 				[
 					'@context' => 'https://schema.org',
-					'@graph'   => $graph,
+					'@graph'   => will_seo_schema_build( $state, $html ),
 				],
 				JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
 			) . '</script>';
 		}
 	} catch ( Throwable $e ) {
-		$json = '';
+		$json = ''; // 構造化データの失敗でページの表示を壊さない
 	}
 	return substr_replace( $html, $json, $pos, strlen( WILL_SEO_SCHEMA_MARKER ) );
 }
 
-/* ---------- wp_head 時点での準備 ---------- */
-
 /**
- * クエリに依存する値はテンプレートのループで変わる前に確定させる
+ * wp_head 時点の値（テンプレートのループでクエリが変わる前に確定させる）
  */
 function will_seo_schema_prepare() {
-	$object_id = will_seo_object_id();
-	$post      = is_singular() ? get_queried_object() : null;
-	$template  = $object_id ? get_page_template_slug( $object_id ) : '';
+	$post = is_singular() ? get_queried_object() : null;
 
 	$state = [
 		'url'         => will_seo_canonical_url() ?: home_url( '/' ),
@@ -103,92 +92,96 @@ function will_seo_schema_prepare() {
 		'image'       => will_seo_image(),
 		'breadcrumb'  => will_seo_breadcrumb_items(),
 		'is_front'    => is_front_page(),
-		'template'    => $template,
-		'post_id'     => $post ? $post->ID : 0,
+		'is_archive'  => is_post_type_archive() || is_tax() || is_category() || is_tag() || is_home(),
 		'post_type'   => $post ? $post->post_type : '',
+		'post_title'  => $post ? get_the_title( $post ) : '',
 		'published'   => $post ? get_post_time( 'c', false, $post ) : '',
 		'modified'    => $post ? wp_date( 'c', will_seo_modified_timestamp( $post->ID ) ) : '',
-		'is_archive'  => is_post_type_archive() || is_tax() || is_category() || is_tag() || is_home(),
+		'pages'       => (int) ( $post ? get_post_meta( $post->ID, 'dl_page_count', true ) : 0 ),
 		'list'        => [],
 	];
 
-	// 一覧ページ：表示中の投稿
+	// 一覧：表示中の投稿
 	if ( $state['is_archive'] ) {
 		global $wp_query;
 		foreach ( $wp_query->posts as $item ) {
-			$state['list'][] = [ get_the_title( $item ), get_permalink( $item ) ];
+			$state['list'][] = [ will_seo_short_title( get_the_title( $item ) ), get_permalink( $item ) ];
 		}
 	}
-	// サービス一覧：子ページを、サービス定義（config.php）の順に並べる
-	if ( 'page-service.php' === $template ) {
-		$services = will_seo_services();
-		$order    = array_flip( array_keys( $services ) );
-		$children = get_pages( [ 'parent' => $object_id, 'post_status' => 'publish' ] );
-		usort( $children, function ( $a, $b ) use ( $order ) {
-			return ( $order[ get_page_template_slug( $a ) ] ?? PHP_INT_MAX ) <=> ( $order[ get_page_template_slug( $b ) ] ?? PHP_INT_MAX );
-		} );
-		foreach ( $children as $child ) {
-			$state['list'][] = [
-				$services[ get_page_template_slug( $child ) ]['name'] ?? get_the_title( $child ),
-				get_permalink( $child ),
-			];
+	// 子ページを持つ固定ページ（例：サービス一覧）：子ページの一覧
+	if ( $post && 'page' === $post->post_type && ! $state['is_front'] ) {
+		$children = array_filter(
+			get_pages( [ 'parent' => $post->ID, 'post_status' => 'publish', 'sort_column' => 'menu_order,post_title' ] ),
+			function ( $child ) {
+				return will_seo_post_is_listable( $child->ID );
+			}
+		);
+		if ( count( $children ) >= 2 ) {
+			foreach ( $children as $child ) {
+				$state['list'][] = [ will_seo_short_title( get_the_title( $child ) ), get_permalink( $child ) ];
+			}
 		}
 	}
 	return $state;
 }
 
+/**
+ * 「Webサイト制作｜BtoB中小企業の…｜福岡」→「Webサイト制作」
+ */
+function will_seo_short_title( $title ) {
+	return trim( preg_split( '/[｜|]/u', wp_strip_all_tags( $title ) )[0] );
+}
+
 /* ---------- @graph の組み立て ---------- */
 
 function will_seo_schema_build( array $s, $html ) {
-	$home      = home_url( '/' );
-	$org       = will_seo_organization();
-	$org_ref   = [ '@id' => $org['@id'] ];
-	$url       = $s['url'];
-	$page_id   = $url . '#webpage';
-	$template  = $s['template'];
-	$services  = will_seo_services();
-	$is_about  = 0 === strpos( $template, 'page-about' );
-	$show_full = $s['is_front'] || $is_about;
-	$graph     = [];
+	$a       = will_seo_analyze( $html );
+	$facts   = will_seo_update_facts( $a, $s );
+	$home    = home_url( '/' );
+	$url     = $s['url'];
+	$org_ref = [ '@id' => $home . '#organization' ];
 
-	// WebSite
-	$graph[] = [
-		'@type'       => 'WebSite',
-		'@id'         => $home . '#website',
-		'url'         => $home,
-		'name'        => get_bloginfo( 'name' ),
-		'description' => get_bloginfo( 'description' ),
-		'inLanguage'  => 'ja',
-		'publisher'   => $org_ref,
+	$is_about   = (bool) $a['company'];
+	$is_contact = $a['has_form'] && preg_match( '/お問い合わせ|問合せ|contact/iu', $a['h1'] );
+	$show_full  = $s['is_front'] || $is_about;
+
+	$graph = [
+		[
+			'@type'       => 'WebSite',
+			'@id'         => $home . '#website',
+			'url'         => $home,
+			'name'        => get_bloginfo( 'name' ),
+			'description' => get_bloginfo( 'description' ),
+			'inLanguage'  => 'ja',
+			'publisher'   => $org_ref,
+		],
+		will_seo_organization_node( $show_full ),
 	];
 
-	// Organization / Person
+	// 人物：ページに載っている人物に加え、会社情報を出すページでは代表者も（founder の参照先）
+	$people = [];
+	foreach ( $a['people'] as $person ) {
+		$people[ $person['name'] ] = $person;
+	}
 	if ( $show_full ) {
-		$people           = will_seo_people();
-		$org['founder']   = array_map( function ( $p ) {
-			return [ '@id' => $p['@id'] ];
-		}, $people );
-		$graph[]          = $org;
-		foreach ( $people as $person ) {
-			$person['worksFor'] = $org_ref;
-			$graph[]            = $person;
+		foreach ( $facts['company']['founders'] ?? [] as $name ) {
+			$people += [ $name => [ 'name' => $name ] ];
 		}
-	} else {
-		$graph[] = array_intersect_key( $org, array_flip( [ '@type', '@id', 'name', 'url', 'logo' ] ) );
+	}
+	foreach ( $people as $person ) {
+		$graph[] = will_seo_person_node( $person, $org_ref );
 	}
 
 	// WebPage
 	$types = [ 'WebPage' ];
 	if ( $is_about ) {
 		$types = [ 'AboutPage' ];
-	} elseif ( 'page-contact.php' === $template ) {
+	} elseif ( $is_contact ) {
 		$types = [ 'ContactPage' ];
-	} elseif ( $s['is_archive'] || 'page-service.php' === $template || 'page-works.php' === $template ) {
-		$types = [ 'CollectionPage' ];
 	}
 
 	$page = [
-		'@id'        => $page_id,
+		'@id'        => $url . '#webpage',
 		'url'        => $url,
 		'name'       => $s['title'],
 		'inLanguage' => 'ja',
@@ -201,11 +194,8 @@ function will_seo_schema_build( array $s, $html ) {
 		$page['datePublished'] = $s['published'];
 		$page['dateModified']  = $s['modified'];
 	}
-	if ( $s['is_front'] || $is_about ) {
+	if ( $show_full ) {
 		$page['about'] = $org_ref;
-	}
-	if ( $is_about ) {
-		$page['mainEntity'] = $org_ref;
 	}
 
 	// 代表画像
@@ -246,27 +236,63 @@ function will_seo_schema_build( array $s, $html ) {
 		$page['breadcrumb'] = [ '@id' => $url . '#breadcrumb' ];
 	}
 
+	// 制作実績・記事の一覧
+	$works = $a['works'] ? will_seo_works_node( $a['works'], $url, $org_ref ) : null;
+	$posts = $a['posts'] ? will_seo_posts_node( $a['posts'], $url, $org_ref ) : null;
+
 	// ページの主題
 	$main = null;
-	if ( isset( $services[ $template ] ) ) {
-		$main = will_seo_schema_service( $services[ $template ], $s, $org_ref, $html );
-	} elseif ( 'ebooks' === $s['post_type'] ) {
-		$main = will_seo_schema_document( $s, $org_ref );
+	if ( 'ebooks' === $s['post_type'] ) {
+		$main = will_seo_document_node( $s, $a, $org_ref );
+	} elseif ( $is_about ) {
+		$page['mainEntity'] = $org_ref;
+	} elseif ( count( $a['offers'] ) >= 2 ) {
+		$main = will_seo_catalog_node( $a['offers'], $s, $org_ref );
+	} elseif ( ! $s['is_front'] && ! $is_contact && ( $a['offers'] || $a['steps'] ) && 'page' === $s['post_type'] ) {
+		$main = will_seo_service_node( $s, $a, $org_ref );
 	} elseif ( $s['list'] ) {
-		$main = will_seo_schema_item_list( $s );
+		$types = [ 'CollectionPage' ];
+		$main  = will_seo_item_list_node( $s['list'], $url . '#itemlist' );
+	} elseif ( $works && preg_match( '/実績|事例|WORKS/iu', $a['h1'] ) ) {
+		$types = [ 'CollectionPage' ];
+		$main  = $works;
+		$works = null;
+	}
+	if ( $s['is_archive'] ) {
+		$types = [ 'CollectionPage' ];
 	}
 	if ( $main ) {
 		$graph[]            = $main;
 		$page['mainEntity'] = [ '@id' => $main['@id'] ];
 	}
+	will_seo_record_page_kind( $url, $main ? $main['@type'] : '' );
+
+	// ページの一部
+	$parts = [];
+	foreach ( $a['steps'] as $i => $group ) {
+		$parts[] = will_seo_howto_node( $group, $url . '#howto' . ( $i ? '-' . ( $i + 1 ) : '' ) );
+	}
+	foreach ( [ $works, $posts ] as $node ) {
+		if ( $node ) {
+			$parts[] = $node;
+		}
+	}
+	foreach ( $a['videos'] as $video_id ) {
+		$video = will_seo_video_node( $video_id );
+		if ( $video ) {
+			$parts[] = $video;
+		}
+	}
+	foreach ( $parts as $part ) {
+		$graph[]           = $part;
+		$page['hasPart'][] = [ '@id' => $part['@id'] ];
+	}
 
 	// FAQ（ページに表示されている Q&A）
-	$faq = will_seo_extract_faq( $html );
-	if ( $faq ) {
+	if ( $a['faq'] ) {
 		$types[] = 'FAQPage';
-		// FAQPage の mainEntity は質問の配列。ページの主題は about に移す
 		if ( isset( $page['mainEntity'] ) && ! $is_about ) {
-			$page['about'] = $page['mainEntity'];
+			$page['about'] = $page['mainEntity']; // FAQPage の mainEntity は質問の配列
 		}
 		$page['mainEntity'] = array_map( function ( $qa ) {
 			return [
@@ -277,351 +303,379 @@ function will_seo_schema_build( array $s, $html ) {
 					'text'  => $qa[1],
 				],
 			];
-		}, $faq );
+		}, $a['faq'] );
 	}
+
+	// 料金表を読み取れなかった箇所は管理画面に知らせる
+	will_seo_report_price_problems( $url, $a['problems'] );
 
 	$page = array_merge( [ '@type' => 1 === count( $types ) ? $types[0] : $types ], $page );
 	array_splice( $graph, 2, 0, [ $page ] );
-
 	return $graph;
 }
 
-/**
- * Service（料金は表示と一致した場合のみ）
- */
-function will_seo_schema_service( array $def, array $s, array $org_ref, $html ) {
-	$service = [
-		'@type'       => 'Service',
-		'@id'         => $s['url'] . '#service',
-		'name'        => $def['name'],
-		'serviceType' => $def['serviceType'],
-		'url'         => $s['url'],
-		'provider'    => $org_ref,
-		'areaServed'  => [
-			'@type' => 'Country',
-			'name'  => '日本',
-		],
-		'audience'    => [
-			'@type'        => 'BusinessAudience',
-			'audienceType' => 'BtoB中小企業',
-		],
+/* ---------- 各ノード ---------- */
+
+function will_seo_person_node( array $person, array $org_ref ) {
+	$node = [
+		'@type' => 'Person',
+		'@id'   => will_seo_person_id( $person['name'] ),
+		'name'  => $person['name'],
 	];
+	foreach ( [ 'jobTitle', 'description', 'image' ] as $key ) {
+		if ( ! empty( $person[ $key ] ) ) {
+			$node[ $key ] = $person[ $key ];
+		}
+	}
+	$node['worksFor'] = $org_ref;
+	return $node;
+}
+
+/**
+ * Service。料金はページの料金表から読み取ったもの
+ */
+function will_seo_service_node( array $s, array $a, array $org_ref ) {
+	$name    = $a['service']['name'] ?: will_seo_short_title( $s['post_title'] );
+	$service = [
+		'@type'    => 'Service',
+		'@id'      => $s['url'] . '#service',
+		'name'     => $name,
+		'url'      => $s['url'],
+		'provider' => $org_ref,
+	];
+	if ( $a['service']['type'] ) {
+		$service['serviceType'] = $a['service']['type'];
+	}
 	if ( $s['description'] ) {
 		$service['description'] = $s['description'];
 	}
-
-	if ( ! empty( $def['plans'] ) ) {
-		$text     = will_seo_page_text( $html );
-		$problems = will_seo_verify_prices( $def['plans'], $text );
-		if ( $problems ) {
-			will_seo_report_price_mismatch( $def['name'], $problems );
-		} else {
-			will_seo_clear_price_mismatch( $def['name'] );
-			$service['offers'] = array_map( function ( $plan ) use ( $s ) {
-				return will_seo_build_offer( $plan, $s['url'] );
-			}, $def['plans'] );
-		}
+	if ( false !== mb_strpos( $a['text'], '全国' ) ) {
+		$service['areaServed'] = [
+			'@type' => 'Country',
+			'name'  => '日本',
+		];
+	}
+	if ( $a['offers'] ) {
+		$service['offers'] = will_seo_offer_nodes( $a['offers'][0]['offers'], $s['url'], 'offer' );
+	} elseif ( false !== mb_strpos( $a['h1'], '無料' ) ) {
+		// 料金表が無く、無料をうたうサービス（例：無料相談）
+		$service['offers'] = [
+			[
+				'@type'         => 'Offer',
+				'@id'           => $s['url'] . '#offer-free',
+				'name'          => $name,
+				'url'           => $s['url'],
+				'price'         => '0',
+				'priceCurrency' => 'JPY',
+				'availability'  => 'https://schema.org/InStock',
+			],
+		];
 	}
 	return $service;
 }
 
 /**
- * DigitalDocument（無料ダウンロード資料）
+ * OfferCatalog（料金ページのように、複数サービスの料金表が並ぶページ）
  */
-function will_seo_schema_document( array $s, array $org_ref ) {
+function will_seo_catalog_node( array $groups, array $s, array $org_ref ) {
+	$catalogs = [];
+	foreach ( $groups as $i => $group ) {
+		$offers = will_seo_offer_nodes( $group['offers'], $s['url'], 'offer-' . ( $i + 1 ) );
+		foreach ( $offers as &$offer ) {
+			$offer['offeredBy'] = $org_ref;
+		}
+		unset( $offer );
+		$catalogs[] = [
+			'@type'           => 'OfferCatalog',
+			'name'            => $group['name'],
+			'itemListElement' => $offers,
+		];
+	}
+	return [
+		'@type'           => 'OfferCatalog',
+		'@id'             => $s['url'] . '#offercatalog',
+		'name'            => will_seo_short_title( $s['post_title'] ),
+		'itemListElement' => $catalogs,
+	];
+}
+
+/**
+ * 読み取った料金を Offer にする
+ */
+function will_seo_offer_nodes( array $plans, $url, $id_prefix ) {
+	$offers = [];
+	foreach ( $plans as $i => $plan ) {
+		$spec = [
+			'@type'         => $plan['unit'] ? 'UnitPriceSpecification' : 'PriceSpecification',
+			( $plan['min'] ? 'minPrice' : 'price' ) => $plan['amount'],
+			'priceCurrency' => 'JPY',
+		];
+		if ( null !== $plan['tax'] ) {
+			$spec['valueAddedTaxIncluded'] = $plan['tax'];
+		}
+		if ( '月' === $plan['unit'] ) {
+			// 月額であることを referenceQuantity(unitCode=MON) で明示する（price だけだと一回払いと解釈される）
+			$spec['unitText']          = '月額';
+			$spec['referenceQuantity'] = [
+				'@type'    => 'QuantitativeValue',
+				'value'    => 1,
+				'unitCode' => 'MON',
+			];
+		} elseif ( $plan['unit'] ) {
+			$spec['unitText'] = preg_match( '/^\d/', $plan['unit'] ) ? $plan['unit'] : '1' . $plan['unit'];
+		}
+
+		$offer = [
+			'@type'              => 'Offer',
+			'@id'                => $url . '#' . $id_prefix . '-' . ( $i + 1 ),
+			'name'               => $plan['name'],
+			'url'                => $url,
+			'priceSpecification' => $spec,
+		];
+		if ( $plan['setup'] ) {
+			$setup = [
+				'@type'         => 'PriceSpecification',
+				'price'         => $plan['setup'],
+				'priceCurrency' => 'JPY',
+			];
+			if ( null !== $plan['tax'] ) {
+				$setup['valueAddedTaxIncluded'] = $plan['tax'];
+			}
+			$offer['addOn'] = [
+				'@type'              => 'Offer',
+				'name'               => '初期費用',
+				'priceSpecification' => $setup,
+			];
+		}
+		$offers[] = $offer;
+	}
+	return $offers;
+}
+
+/**
+ * DigitalDocument（ダウンロード資料）。目次・対象者・わかることはページの記載から
+ */
+function will_seo_document_node( array $s, array $a, array $org_ref ) {
 	$doc = [
-		'@type'               => 'DigitalDocument',
-		'@id'                 => $s['url'] . '#document',
-		'name'                => get_the_title( $s['post_id'] ),
-		'url'                 => $s['url'],
-		'inLanguage'          => 'ja',
-		'datePublished'       => $s['published'],
-		'dateModified'        => $s['modified'],
-		'publisher'           => $org_ref,
-		'isAccessibleForFree' => true,
-		'image'               => [ '@id' => $s['url'] . '#primaryimage' ],
-		'offers'              => [
+		'@type'         => 'DigitalDocument',
+		'@id'           => $s['url'] . '#document',
+		'name'          => $s['post_title'],
+		'url'           => $s['url'],
+		'inLanguage'    => 'ja',
+		'datePublished' => $s['published'],
+		'dateModified'  => $s['modified'],
+		'publisher'     => $org_ref,
+		'image'         => [ '@id' => $s['url'] . '#primaryimage' ],
+	];
+	if ( $s['description'] ) {
+		$doc['description'] = $s['description'];
+	}
+	if ( $s['pages'] ) {
+		$doc['numberOfPages'] = $s['pages'];
+	}
+	if ( $a['audience'] ) {
+		$doc['audience'] = [
+			'@type'        => 'Audience',
+			'audienceType' => implode( '／', $a['audience'] ),
+		];
+	}
+	if ( $a['teaches'] ) {
+		$doc['teaches'] = $a['teaches'];
+	}
+	if ( $a['toc'] ) {
+		$doc['hasPart'] = array_map( function ( $chapter, $i ) {
+			$part = [
+				'@type'    => 'CreativeWork',
+				'position' => $i + 1,
+				'name'     => trim( $chapter['label'] . ' ' . $chapter['name'] ),
+			];
+			if ( $chapter['text'] ) {
+				$part['description'] = str_replace( "\n", '', $chapter['text'] );
+			}
+			return $part;
+		}, $a['toc'], array_keys( $a['toc'] ) );
+	}
+	if ( false !== mb_strpos( $a['h1'] . $a['text'], '無料' ) ) {
+		$doc['isAccessibleForFree'] = true;
+		$doc['offers']              = [
 			'@type'         => 'Offer',
 			'price'         => '0',
 			'priceCurrency' => 'JPY',
 			'availability'  => 'https://schema.org/InStock',
 			'url'           => $s['url'],
-		],
-	];
-	if ( $s['description'] ) {
-		$doc['description'] = $s['description'];
+		];
 	}
 	return $doc;
 }
 
-/**
- * ItemList（一覧ページ）
- */
-function will_seo_schema_item_list( array $s ) {
+function will_seo_howto_node( array $group, $id ) {
+	return [
+		'@type' => 'HowTo',
+		'@id'   => $id,
+		'name'  => $group['name'],
+		'step'  => array_map( function ( $step, $i ) {
+			$node = [
+				'@type'    => 'HowToStep',
+				'position' => $i + 1,
+				'name'     => $step['name'],
+			];
+			$text = trim( ( $step['label'] ? $step['label'] . "\n" : '' ) . $step['text'] );
+			if ( '' !== $text ) {
+				$node['text'] = $text;
+			}
+			return $node;
+		}, $group['steps'], array_keys( $group['steps'] ) ),
+	];
+}
+
+function will_seo_item_list_node( array $list, $id ) {
 	$elements = [];
-	foreach ( $s['list'] as $i => $item ) {
+	foreach ( $list as $i => $item ) {
 		$elements[] = [
 			'@type'    => 'ListItem',
 			'position' => $i + 1,
-			'name'     => wp_strip_all_tags( $item[0] ),
+			'name'     => $item[0],
 			'url'      => $item[1],
 		];
 	}
 	return [
 		'@type'           => 'ItemList',
-		'@id'             => $s['url'] . '#itemlist',
+		'@id'             => $id,
 		'numberOfItems'   => count( $elements ),
 		'itemListElement' => $elements,
 	];
 }
 
-/* ---------- FAQ の抽出 ---------- */
-
-/**
- * 表示中のHTMLから Q&A を取り出す。
- *
- * 対応する形式
- *   A. <details><summary>質問</summary>回答</details>（LP）
- *   B. .accordion 内の <* class="question">質問</*><* class="answer">回答</*>（サービスページ）
- *
- * ヘッダー・ナビ・フッター内の <details>（メニュー）は対象外。
- * 「Q」「A」のバッジ・開閉アイコンは本文に含めず、「Q1.」のような連番も外す。
- *
- * @return array<int, array{0:string,1:string}>
- */
-function will_seo_extract_faq( $html ) {
-	if ( false === stripos( $html, '<details' ) && false === stripos( $html, 'question' ) ) {
-		return [];
-	}
-	$dom = will_seo_dom( $html );
-	if ( ! $dom ) {
-		return [];
-	}
-	$class = function ( $name ) {
-		return "contains(concat(' ', normalize-space(@class), ' '), ' $name ')";
-	};
-	$xpath   = new DOMXPath( $dom );
-	$outside = "not(ancestor-or-self::*[contains(@class, 'menu')]) and not(ancestor::header) and not(ancestor::nav) and not(ancestor::footer)";
-	$faq     = [];
-
-	foreach ( $xpath->query( "//details[summary][$outside]" ) as $details ) {
-		$question = '';
-		$answer   = [];
-		foreach ( $details->childNodes as $child ) {
-			if ( $child instanceof DOMElement && 'summary' === strtolower( $child->tagName ) ) {
-				$question = will_seo_node_text( $child );
-			} else {
-				$answer[] = will_seo_node_text( $child );
-			}
+function will_seo_works_node( array $works, $url, array $org_ref ) {
+	$elements = [];
+	foreach ( $works as $i => $work ) {
+		$item = [
+			'@type'   => 'CreativeWork',
+			'name'    => $work['alt'] ?: $work['name'],
+			'creator' => $org_ref,
+		];
+		if ( $work['url'] ) {
+			$item['url'] = $work['url'];
 		}
-		$faq[] = [ $question, implode( "\n", $answer ) ];
-	}
-
-	foreach ( $xpath->query( '//*[' . $class( 'accordion' ) . ']//*[' . $class( 'question' ) . "][$outside]" ) as $q ) {
-		$a = $xpath->query( 'following-sibling::*[' . $class( 'answer' ) . '][1]', $q )->item( 0 );
-		if ( $a ) {
-			$faq[] = [ will_seo_node_text( $q ), will_seo_node_text( $a ) ];
+		if ( $work['image'] ) {
+			$item['image'] = $work['image'];
 		}
-	}
-
-	$result = [];
-	foreach ( $faq as $pair ) {
-		$question = trim( preg_replace( '/^Q\d*\s*[.．、:：]?\s*/u', '', will_seo_clean_text( $pair[0] ) ) );
-		$answer   = will_seo_clean_text( $pair[1] );
-		if ( '' !== $question && '' !== $answer && ! isset( $result[ $question ] ) ) {
-			$result[ $question ] = [ $question, $answer ];
+		if ( $work['genre'] ) {
+			$item['genre'] = $work['genre'];
 		}
-	}
-	return array_values( $result );
-}
-
-/**
- * HTML を DOM にする（同じリクエスト内では1回だけ解析する）
- */
-function will_seo_dom( $html ) {
-	static $cache = [];
-	$key = md5( $html );
-	if ( ! isset( $cache[ $key ] ) ) {
-		$dom      = new DOMDocument();
-		$previous = libxml_use_internal_errors( true );
-		$loaded   = $dom->loadHTML( '<?xml encoding="UTF-8">' . $html, LIBXML_NOWARNING | LIBXML_NOERROR | LIBXML_COMPACT );
-		libxml_clear_errors();
-		libxml_use_internal_errors( $previous );
-		$cache[ $key ] = $loaded ? $dom : false;
-	}
-	return $cache[ $key ];
-}
-
-/**
- * 要素のテキスト。装飾（バッジ・アイコン・非表示要素）と表は除き、段落・項目は改行で区切る
- */
-function will_seo_node_text( DOMNode $node ) {
-	if ( $node instanceof DOMText ) {
-		return $node->nodeValue;
-	}
-	if ( ! $node instanceof DOMElement ) {
-		return '';
-	}
-	$tag = strtolower( $node->tagName );
-	if ( in_array( $tag, [ 'script', 'style', 'svg', 'i', 'button', 'table', 'img', 'template', 'noscript' ], true ) ) {
-		return '';
-	}
-	if ( 'true' === $node->getAttribute( 'aria-hidden' )
-		|| preg_match( '/(^|\s)(list-icon|faq-q|faq-mark|icon)(\s|$)/', $node->getAttribute( 'class' ) ) ) {
-		return '';
-	}
-	if ( 'br' === $tag ) {
-		return "\n";
-	}
-	$text = '';
-	foreach ( $node->childNodes as $child ) {
-		$text .= will_seo_node_text( $child );
-	}
-	if ( 'li' === $tag ) {
-		return "\n・" . trim( $text ) . "\n";
-	}
-	if ( in_array( $tag, [ 'p', 'div', 'ul', 'ol', 'dl', 'dt', 'dd', 'h2', 'h3', 'h4', 'h5', 'section' ], true ) ) {
-		return "\n" . $text . "\n";
-	}
-	return $text;
-}
-
-/**
- * 空白の整理。行ごとに詰め、日本語の前後に入った改行由来の空白は取り除く
- */
-function will_seo_clean_text( $text ) {
-	$lines = [];
-	foreach ( preg_split( '/\n+/u', html_entity_decode( $text, ENT_QUOTES, 'UTF-8' ) ) as $line ) {
-		$line = trim( preg_replace( '/[ \t\r\x{00A0}\x{3000}]+/u', ' ', $line ) );
-		$line = preg_replace( '/(?<=[^\x00-\x7F]) | (?=[^\x00-\x7F])/u', '', $line );
-		if ( '' !== $line ) {
-			$lines[] = $line;
-		}
-	}
-	return implode( "\n", $lines );
-}
-
-/* ---------- 料金の照合 ---------- */
-
-/**
- * 本文のテキスト（空白なし）。<head> 内の description 等に書かれた金額では一致させない
- */
-function will_seo_page_text( $html ) {
-	$start = stripos( $html, '<body' );
-	$body  = false === $start ? $html : substr( $html, $start );
-	$body  = preg_replace( '#<(script|style|noscript|template)\b[^>]*>.*?</\1>#is', '', $body );
-	return preg_replace( '/\s+/u', '', html_entity_decode( wp_strip_all_tags( $body ), ENT_QUOTES, 'UTF-8' ) );
-}
-
-/**
- * 金額がページ上に書かれているか。「30,000」「30000」「3万」のいずれでも一致とみなす
- */
-function will_seo_amount_on_page( $amount, $text ) {
-	$amount = (int) $amount;
-	if ( $amount <= 0 ) {
-		return true; // 無料プランは金額表記を持たない
-	}
-	$variants = [ number_format( $amount ), (string) $amount ];
-	if ( 0 === $amount % 10000 ) {
-		$variants[] = number_format( $amount / 10000 ) . '万';
-	}
-	foreach ( $variants as $variant ) {
-		if ( false !== strpos( $text, $variant ) ) {
-			return true;
-		}
-	}
-	return false;
-}
-
-/**
- * @return string[] 不一致の内容（空なら一致）
- */
-function will_seo_verify_prices( array $plans, $text ) {
-	$problems = [];
-	foreach ( $plans as $plan ) {
-		if ( false === strpos( $text, preg_replace( '/\s+/u', '', $plan['name'] ) ) ) {
-			$problems[] = sprintf( 'プラン「%s」がページ上に見つかりません', $plan['name'] );
-		}
-		if ( ! will_seo_amount_on_page( $plan['monthly'], $text ) ) {
-			$problems[] = sprintf( '「%s」の月額 %s円 がページ上に見つかりません', $plan['name'], number_format( $plan['monthly'] ) );
-		}
-		if ( ! empty( $plan['setup'] ) && ! will_seo_amount_on_page( $plan['setup'], $text ) ) {
-			$problems[] = sprintf( '「%s」の初期費用 %s円 がページ上に見つかりません', $plan['name'], number_format( $plan['setup'] ) );
-		}
-	}
-	return $problems;
-}
-
-function will_seo_build_offer( array $plan, $url ) {
-	$offer = [
-		'@type'        => 'Offer',
-		'@id'          => $url . '#offer-' . $plan['id'],
-		'name'         => $plan['name'],
-		'url'          => $url,
-		'availability' => 'https://schema.org/InStock',
-	];
-
-	if ( empty( $plan['monthly'] ) ) {
-		$offer['price']         = '0';
-		$offer['priceCurrency'] = 'JPY';
-		return $offer;
-	}
-
-	// 月額であることを referenceQuantity(unitCode=MON) で明示する
-	$offer['priceSpecification'] = [
-		'@type'                 => 'UnitPriceSpecification',
-		'price'                 => $plan['monthly'],
-		'priceCurrency'         => 'JPY',
-		'valueAddedTaxIncluded' => false,
-		'unitText'              => '月額',
-		'referenceQuantity'     => [
-			'@type'    => 'QuantitativeValue',
-			'value'    => 1,
-			'unitCode' => 'MON',
-		],
-	];
-	if ( ! empty( $plan['setup'] ) ) {
-		$offer['addOn'] = [
-			'@type'              => 'Offer',
-			'name'               => '初期費用',
-			'priceSpecification' => [
-				'@type'                 => 'PriceSpecification',
-				'price'                 => $plan['setup'],
-				'priceCurrency'         => 'JPY',
-				'valueAddedTaxIncluded' => false,
-			],
+		$elements[] = [
+			'@type'    => 'ListItem',
+			'position' => $i + 1,
+			'item'     => $item,
 		];
 	}
-	return $offer;
+	return [
+		'@type'           => 'ItemList',
+		'@id'             => $url . '#works',
+		'name'            => '制作実績',
+		'numberOfItems'   => count( $elements ),
+		'itemListElement' => $elements,
+	];
 }
 
-/* ---------- 料金不一致の通知 ---------- */
-
-function will_seo_report_price_mismatch( $name, array $problems ) {
-	$stored          = get_transient( 'will_seo_price_mismatch' );
-	$stored          = is_array( $stored ) ? $stored : [];
-	$stored[ $name ] = $problems;
-	set_transient( 'will_seo_price_mismatch', $stored, WEEK_IN_SECONDS );
-}
-
-function will_seo_clear_price_mismatch( $name ) {
-	$stored = get_transient( 'will_seo_price_mismatch' );
-	if ( is_array( $stored ) && isset( $stored[ $name ] ) ) {
-		unset( $stored[ $name ] );
-		set_transient( 'will_seo_price_mismatch', $stored, WEEK_IN_SECONDS );
+function will_seo_posts_node( array $posts, $url, array $org_ref ) {
+	$elements = [];
+	foreach ( $posts as $i => $post ) {
+		$item = [
+			'@type'         => 'BlogPosting',
+			'headline'      => $post['name'],
+			'url'           => $post['url'],
+			'datePublished' => $post['date'],
+			'publisher'     => $org_ref,
+		];
+		if ( $post['image'] ) {
+			$item['image'] = $post['image'];
+		}
+		if ( $post['genre'] ) {
+			$item['articleSection'] = $post['genre'];
+		}
+		$elements[] = [
+			'@type'    => 'ListItem',
+			'position' => $i + 1,
+			'item'     => $item,
+		];
 	}
+	return [
+		'@type'           => 'ItemList',
+		'@id'             => $url . '#posts',
+		'name'            => 'ブログ記事',
+		'numberOfItems'   => count( $elements ),
+		'itemListElement' => $elements,
+	];
+}
+
+/**
+ * VideoObject。タイトル・公開日は YouTube から取得してキャッシュする（取得できなければ出力しない）
+ */
+function will_seo_video_node( $video_id ) {
+	$key  = 'will_seo_video_' . $video_id;
+	$data = get_transient( $key );
+	if ( false === $data ) {
+		$data  = [];
+		$watch = 'https://www.youtube.com/watch?v=' . $video_id;
+		$res   = wp_remote_get( 'https://www.youtube.com/oembed?format=json&url=' . rawurlencode( $watch ), [ 'timeout' => 3 ] );
+		$json  = is_wp_error( $res ) ? null : json_decode( wp_remote_retrieve_body( $res ), true );
+		if ( ! empty( $json['title'] ) ) {
+			$data['title'] = $json['title'];
+			$page          = wp_remote_get( $watch, [ 'timeout' => 3, 'headers' => [ 'Accept-Language' => 'ja' ] ] );
+			$body          = is_wp_error( $page ) ? '' : wp_remote_retrieve_body( $page );
+			if ( preg_match( '/itemprop="(?:uploadDate|datePublished)" content="([^"]+)"/', $body, $m ) ) {
+				$data['date'] = $m[1];
+			}
+			if ( preg_match( '/<meta name="description" content="([^"]*)"/', $body, $m ) ) {
+				$data['description'] = html_entity_decode( $m[1], ENT_QUOTES, 'UTF-8' );
+			}
+		}
+		set_transient( $key, $data, $data ? 30 * DAY_IN_SECONDS : DAY_IN_SECONDS );
+	}
+	if ( empty( $data['title'] ) ) {
+		return null;
+	}
+	$video = [
+		'@type'        => 'VideoObject',
+		'@id'          => 'https://www.youtube.com/watch?v=' . $video_id . '#video',
+		'name'         => $data['title'],
+		'description'  => $data['description'] ?? $data['title'],
+		'thumbnailUrl' => 'https://i.ytimg.com/vi/' . $video_id . '/hqdefault.jpg',
+		'embedUrl'     => 'https://www.youtube.com/embed/' . $video_id,
+		'contentUrl'   => 'https://www.youtube.com/watch?v=' . $video_id,
+	];
+	if ( ! empty( $data['date'] ) ) {
+		$video['uploadDate'] = $data['date'];
+	}
+	return $video;
+}
+
+/* ---------- 料金表の読み取り失敗の通知 ---------- */
+
+function will_seo_report_price_problems( $url, array $problems ) {
+	$stored = get_transient( 'will_seo_price_problems' );
+	$stored = is_array( $stored ) ? $stored : [];
+	if ( $problems ) {
+		$stored[ $url ] = $problems;
+	} elseif ( isset( $stored[ $url ] ) ) {
+		unset( $stored[ $url ] );
+	} else {
+		return;
+	}
+	set_transient( 'will_seo_price_problems', $stored, WEEK_IN_SECONDS );
 }
 
 add_action( 'admin_notices', function () {
-	$stored = get_transient( 'will_seo_price_mismatch' );
+	$stored = get_transient( 'will_seo_price_problems' );
 	if ( ! is_array( $stored ) || ! $stored ) {
 		return;
 	}
-	echo '<div class="notice notice-warning"><p><strong>構造化データ：料金の設定がページの表示と一致していません。</strong><br>';
-	echo '一致するまで料金（Offer）の出力を停止しています。<code>inc/seo/config.php</code> の <code>will_seo_services()</code> を修正してください。</p><ul style="list-style:disc;padding-left:1.5em">';
-	foreach ( $stored as $name => $problems ) {
+	echo '<div class="notice notice-warning"><p><strong>構造化データ：料金表を読み取れないページがあります。</strong><br>';
+	echo 'そのページの料金（Offer）は出力を止めています。プラン名と「〇〇円」の金額が各プランに書かれているか確認してください。</p><ul style="list-style:disc;padding-left:1.5em">';
+	foreach ( $stored as $url => $problems ) {
 		foreach ( $problems as $problem ) {
-			echo '<li>' . esc_html( $name . '：' . $problem ) . '</li>';
+			echo '<li><a href="' . esc_url( $url ) . '">' . esc_html( $url ) . '</a>：' . esc_html( $problem ) . '</li>';
 		}
 	}
 	echo '</ul></div>';
