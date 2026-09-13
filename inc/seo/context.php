@@ -102,10 +102,15 @@ function will_seo_post_description( $post_id ) {
 	if ( 'page' === get_option( 'show_on_front' ) && (int) get_option( 'page_on_front' ) === $post->ID ) {
 		return get_bloginfo( 'description' );
 	}
-	// 抜粋 → 本文の冒頭160字（統合前のブログ・Slim SEO の自動生成と同じ長さ）
+	// 抜粋 → 本文の冒頭。160字以内で、文の途中で切れないよう最後の「。」までにする
 	$source = $post->post_excerpt ? $post->post_excerpt : $post->post_content;
 	$text   = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( strip_shortcodes( $source ) ) ) );
-	return mb_substr( $text, 0, 160 );
+	if ( mb_strlen( $text ) <= 160 ) {
+		return $text;
+	}
+	$cut  = mb_substr( $text, 0, 160 );
+	$last = mb_strrpos( $cut, '。' );
+	return false !== $last && $last >= 60 ? mb_substr( $cut, 0, $last + 1 ) : $cut;
 }
 
 /**
@@ -286,12 +291,27 @@ function will_seo_image() {
 	if ( ! empty( $meta['facebook_image'] ) ) {
 		$url = $meta['facebook_image'];
 	} elseif ( $id && has_post_thumbnail( $id ) ) {
-		$url = get_the_post_thumbnail_url( $id, 'full' );
+		// アイキャッチは画像IDが分かるので、URLから引き当てずにサイズを取る
+		// （統合前のブログの画像は本体の uploads 外にあり、URLからは引き当てられないため）
+		return will_seo_image_data_by_id( get_post_thumbnail_id( $id ) );
 	}
 	if ( ! $url ) {
 		$url = content_url( 'uploads/' . WILL_SEO_DEFAULT_IMAGE );
 	}
 	return will_seo_image_data( $url );
+}
+
+/**
+ * 画像IDからURL・サイズ・代替テキストを取る
+ */
+function will_seo_image_data_by_id( $attachment_id ) {
+	$file = wp_get_attachment_metadata( $attachment_id );
+	return [
+		'url'    => wp_get_attachment_url( $attachment_id ),
+		'width'  => (int) ( $file['width'] ?? 0 ),
+		'height' => (int) ( $file['height'] ?? 0 ),
+		'alt'    => get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ?: get_the_title( $attachment_id ),
+	];
 }
 
 /**

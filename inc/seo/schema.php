@@ -410,7 +410,10 @@ function will_seo_blog_node( array $s, array $org_ref ) {
 }
 
 function will_seo_person_node( array $person, array $org_ref ) {
-	$node = [
+	// ページに書かれていない項目は、About に載っている内容で補う
+	$known  = will_seo_facts()['people'][ $person['name'] ] ?? [];
+	$person = array_merge( $known, array_filter( $person ) );
+	$node   = [
 		'@type' => 'Person',
 		'@id'   => will_seo_person_id( $person['name'] ),
 		'name'  => $person['name'],

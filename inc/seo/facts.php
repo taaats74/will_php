@@ -55,6 +55,13 @@ function will_seo_update_facts( array $analysis, array $state ) {
 	if ( $analysis['same_as'] ) {
 		$new['same_as'] = $analysis['same_as'];
 	}
+	// 会社概要のあるページ（About）に載っている人物の肩書き・紹介文。記事の著者などで使う
+	if ( $company && $analysis['people'] ) {
+		$new['people'] = [];
+		foreach ( $analysis['people'] as $person ) {
+			$new['people'][ $person['name'] ] = array_intersect_key( $person, array_flip( [ 'jobTitle', 'description', 'image' ] ) );
+		}
+	}
 
 	if ( $new !== $facts ) {
 		update_option( WILL_SEO_FACTS_OPTION, $new, false );
