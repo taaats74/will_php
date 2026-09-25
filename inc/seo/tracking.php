@@ -9,6 +9,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
+// ローカル環境（wp-config.php で WP_ENVIRONMENT_TYPE を 'local' に定義）では計測しない
+if ( 'local' === wp_get_environment_type() ) {
+	return;
+}
+
 add_action( 'wp_head', function () {
 	if ( is_feed() || is_robots() || is_trackback() ) {
 		return;
