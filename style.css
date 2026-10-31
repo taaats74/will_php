@@ -19144,6 +19144,1408 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
     padding: 11px 24px;
   }
 }
+.sns-v2-step__text .keyword, .sns-v2-intro__catch .keyword, .sns-v2-band .keyword {
+  background: linear-gradient(transparent 0%, transparent 60%, rgba(240, 231, 78, 0.65) 60%, rgba(240, 231, 78, 0.65) 95%, transparent 95%);
+  color: inherit;
+  font-weight: 700;
+  padding: 0 2px;
+}
+
+.sns-v2-cta .container, .sns-v2-team .container, .sns-v2-fit .container, .sns-v2-policy .container, .sns-v2-price .container, .sns-v2-monthly .container, .sns-v2-build .container, .sns-v2-bridge .container, .sns-v2-ctamid .container, .sns-v2-range .container, .sns-v2-step .container, .sns-v2-overview .container, .sns-v2-problem .container, .sns-v2-intro .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sns-v2-cta__inner, .sns-v2-team__inner, .sns-v2-fit__inner, .sns-v2-policy__inner, .sns-v2-price__inner, .sns-v2-monthly__inner, .sns-v2-build__inner, .sns-v2-bridge__inner, .sns-v2-ctamid__inner, .sns-v2-range__inner, .sns-v2-step__inner, .sns-v2-overview__inner, .sns-v2-problem__inner, .sns-v2-intro__inner {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sns-v2-head {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.sns-v2-head .en {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: #7fbabd;
+  opacity: 0.1;
+  line-height: 1;
+  margin: 0 0 -28px;
+  text-transform: uppercase;
+}
+.sns-v2-head h2 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #333333;
+  letter-spacing: 8px;
+  line-height: 1.55;
+  margin: 0 0 22px;
+}
+.sns-v2-head .subtitle {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #595959;
+  letter-spacing: 3px;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sns-v2-band {
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-left: 4px solid #28849D;
+  border-radius: 6px;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  text-align: center;
+  padding: 26px 32px;
+  margin: 56px 0 0;
+}
+.sns-v2-btn {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background: #28849D;
+  text-decoration: none;
+  padding: 17px 48px;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.sns-v2-btn:hover {
+  background: #1F6F82;
+  transform: translateY(-2px);
+  opacity: 1;
+}
+.sns-v2-btn--light {
+  background: #FFFFFF;
+  color: #28849D;
+}
+.sns-v2-btn--light:hover {
+  background: #F0F8F9;
+  color: #28849D;
+}
+
+.sns-v2-intro {
+  background: #FFFFFF;
+  padding: 80px 0 60px;
+}
+.sns-v2-intro__inner {
+  background: #F0F8F9;
+  border-radius: 16px;
+  padding: 56px 64px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+}
+
+.sns-v2-intro__catch {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  color: #28849D;
+  margin: 0 0 24px;
+}
+.sns-v2-intro__lead {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  margin: 0 0 32px;
+}
+
+.sns-v2-intro__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+}
+.sns-v2-intro__chips li {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: #28849D;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 999px;
+  padding: 9px 24px;
+}
+
+.sns-v2-intro__action {
+  margin: 0;
+}
+
+.sns-v2-problem {
+  background: #F0F8F9;
+  padding: 120px 0;
+}
+.sns-v2-problem__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sns-v2-problem__list li {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 8px;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  padding: 22px 26px 22px 54px;
+}
+.sns-v2-problem__list li::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 26px;
+  width: 14px;
+  height: 14px;
+  background: #7CC1C9;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px #FFFFFF;
+}
+
+.sns-v2-overview {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.sns-v2-overview__flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 26px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sns-v2-overview__node {
+  position: relative;
+  list-style: none;
+}
+.sns-v2-overview__node:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -19px;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #7CC1C9;
+  border-right: 2px solid #7CC1C9;
+  transform: translateY(-50%) rotate(45deg);
+}
+.sns-v2-overview__node a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+  background: #F0F8F9;
+  border: 1px solid #C0D5D8;
+  border-radius: 8px;
+  padding: 26px 12px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.sns-v2-overview__node a:hover {
+  background: #B4DBE0;
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.sns-v2-overview__node-no {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: #8AA0A4;
+  line-height: 1;
+}
+
+.sns-v2-overview__node-name {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  color: #28849D;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.sns-v2-step {
+  background: #FFFFFF;
+  padding: 110px 0;
+}
+.sns-v2-step--pale {
+  background: #F0F8F9;
+}
+.sns-v2-step__inner {
+  max-width: 1040px;
+}
+
+.sns-v2-step__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding-bottom: 28px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #C0D5D8;
+}
+
+.sns-v2-step__no {
+  flex: 0 0 auto;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: #7CC1C9;
+  margin: 0;
+}
+.sns-v2-step__no small {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #8AA0A4;
+  margin-bottom: 6px;
+}
+
+.sns-v2-step__heading {
+  flex: 1 1 auto;
+}
+
+.sns-v2-step__name {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  background: #28849D;
+  border-radius: 999px;
+  padding: 5px 18px;
+  margin: 0 0 14px;
+}
+
+.sns-v2-step__head h2 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  color: #333333;
+  margin: 0;
+}
+
+.sns-v2-step__body {
+  margin-bottom: 32px;
+}
+
+.sns-v2-step__label {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #28849D;
+  margin: 0 0 16px;
+  padding-left: 12px;
+  border-left: 3px solid #28849D;
+  line-height: 1.4;
+}
+
+.sns-v2-step__cards {
+  display: grid;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sns-v2-step__cards li {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 8px;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  padding: 20px 22px;
+}
+.sns-v2-step__cards--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.sns-v2-step__cards--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.sns-v2-step__cards--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sns-v2-step__route {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: v2route;
+}
+.sns-v2-step__route li {
+  position: relative;
+  counter-increment: v2route;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 8px;
+  padding: 24px 14px 20px;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: #28849D;
+  text-align: center;
+}
+.sns-v2-step__route li::before {
+  content: counter(v2route, decimal-leading-zero);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #8AA0A4;
+  margin-bottom: 10px;
+}
+.sns-v2-step__route li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #7CC1C9;
+  border-right: 2px solid #7CC1C9;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.sns-v2-step__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sns-v2-step__tags li {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #28849D;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 999px;
+  padding: 10px 24px;
+}
+
+.sns-v2-step__result {
+  background: rgba(40, 132, 157, 0.05);
+  border-radius: 8px;
+  padding: 30px 32px;
+}
+
+.sns-v2-step__text {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  margin: 0;
+}
+.sns-v2-range {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.sns-v2-range__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sns-v2-range__item {
+  list-style: none;
+  background: #F0F8F9;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sns-v2-range__case {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  text-align: center;
+  padding: 26px 24px;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.sns-v2-range__plan {
+  position: relative;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  background: #28849D;
+  text-align: center;
+  padding: 22px 24px;
+  margin: 0;
+}
+.sns-v2-range__plan::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 9px solid #F0F8F9;
+}
+
+.sns-v2-ctamid {
+  background: #28849D;
+  padding: 80px 0;
+}
+.sns-v2-ctamid__inner {
+  text-align: center;
+}
+
+.sns-v2-ctamid__title {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  margin: 0 0 20px;
+}
+
+.sns-v2-ctamid__lead {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 36px;
+}
+
+.sns-v2-ctamid__action {
+  margin: 0;
+}
+
+.sns-v2-bridge {
+  background: #FFFFFF;
+  padding: 70px 0;
+}
+.sns-v2-bridge .sns-v2-band {
+  margin-top: 0;
+}
+
+.sns-v2-monthly__list, .sns-v2-build__list {
+  display: grid;
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sns-v2-monthly__col, .sns-v2-build__col {
+  list-style: none;
+  background: #FFFFFF;
+  border: 1px solid #C0D5D8;
+  border-radius: 8px;
+  padding: 30px 26px;
+}
+.sns-v2-monthly__col h3, .sns-v2-build__col h3 {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: #28849D;
+  text-align: center;
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #C0D5D8;
+}
+.sns-v2-monthly__col ul, .sns-v2-build__col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sns-v2-monthly__col ul li, .sns-v2-build__col ul li {
+  position: relative;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+.sns-v2-monthly__col ul li:last-child, .sns-v2-build__col ul li:last-child {
+  margin-bottom: 0;
+}
+.sns-v2-monthly__col ul li::before, .sns-v2-build__col ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 8px;
+  height: 8px;
+  background: #7CC1C9;
+  border-radius: 50%;
+}
+
+.sns-v2-build {
+  background: #F0F8F9;
+  padding: 120px 0;
+}
+.sns-v2-build__inner {
+  max-width: 1100px;
+}
+
+.sns-v2-build__list {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sns-v2-monthly {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.sns-v2-monthly__inner {
+  max-width: 1100px;
+}
+
+.sns-v2-monthly__list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sns-v2-monthly__col {
+  background: #F0F8F9;
+  border-color: transparent;
+}
+.sns-v2-monthly__col h3 {
+  border-bottom-color: #C0D5D8;
+}
+
+.sns-v2-price {
+  background: #F0F8F9;
+  padding: 120px 0;
+}
+.sns-v2-price__inner {
+  max-width: 1100px;
+}
+
+.sns-v2-price__lead {
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #3E5054;
+  margin: 0 0 48px;
+}
+
+.sns-v2-price__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.sns-v2-price__card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sns-v2-price__num {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: #7CC1C9;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0 0 14px;
+}
+
+.sns-v2-price__name {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #C0D5D8;
+}
+
+.sns-v2-price__desc {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #3E5054;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+  flex: 1 1 auto;
+}
+
+.sns-v2-price__amount {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: #28849D;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-align: right;
+}
+.sns-v2-price__amount span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8AA0A4;
+  margin-left: 4px;
+}
+
+.sns-v2-policy {
+  background: #2C4046;
+  padding: 120px 0;
+}
+.sns-v2-policy__inner {
+  max-width: 900px;
+  text-align: center;
+}
+
+.sns-v2-policy__head {
+  margin-bottom: 40px;
+}
+.sns-v2-policy__head .en {
+  color: #7CC1C9;
+  opacity: 0.22;
+}
+.sns-v2-policy__head h2 {
+  color: #FFFFFF;
+}
+
+.sns-v2-policy__body {
+  margin: 0 0 36px;
+}
+.sns-v2-policy__body p {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 18px;
+}
+.sns-v2-policy__body p:last-child {
+  margin-bottom: 0;
+}
+.sns-v2-policy__body .keyword {
+  font-weight: 700;
+  color: #FFFFFF;
+  background: linear-gradient(transparent 0%, transparent 88%, #7CC1C9 88%, #7CC1C9 100%);
+  padding: 0 2px;
+}
+
+.sns-v2-policy__note {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+  padding: 18px 28px;
+  margin: 0;
+}
+
+.sns-v2-fit {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+.sns-v2-fit__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sns-v2-fit__list li {
+  position: relative;
+  background: #F0F8F9;
+  border-radius: 8px;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  padding: 24px 24px 24px 50px;
+}
+.sns-v2-fit__list li::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 28px;
+  width: 14px;
+  height: 14px;
+  background: #7CC1C9;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px #F0F8F9;
+}
+
+.sns-v2-team {
+  background: #F0F8F9;
+  padding: 120px 0;
+}
+.sns-v2-team__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sns-v2-team__member {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 32px 30px;
+}
+
+.sns-v2-team__photo {
+  flex: 0 0 110px;
+  width: 110px;
+}
+.sns-v2-team__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.sns-v2-team__body {
+  flex: 1 1 auto;
+}
+
+.sns-v2-team__name {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.06em;
+  color: #28849D;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #C0D5D8;
+}
+.sns-v2-team__name span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #8AA0A4;
+  margin-top: 6px;
+}
+
+.sns-v2-team__text {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: #3E5054;
+  margin: 0;
+}
+
+.sns-v2-cta {
+  background: #28849D;
+  padding: 110px 0;
+}
+.sns-v2-cta__head {
+  margin-bottom: 32px;
+}
+.sns-v2-cta__head .en {
+  color: #FFFFFF;
+  opacity: 0.18;
+}
+.sns-v2-cta__head h2 {
+  color: #FFFFFF;
+  letter-spacing: 5px;
+}
+
+.sns-v2-cta__quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 32px;
+  max-width: 560px;
+}
+.sns-v2-cta__quotes li {
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 14px 24px;
+  text-align: center;
+}
+
+.sns-v2-cta__lead {
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 48px;
+}
+
+.sns-v2-cta__action {
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .sns-v2-head {
+    margin-bottom: 44px;
+  }
+  .sns-v2-head .en {
+    font-size: 44px;
+    margin-bottom: -22px;
+  }
+  .sns-v2-head h2 {
+    font-size: 22px;
+    letter-spacing: 5px;
+  }
+  .sns-v2-head .subtitle {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .sns-v2-band {
+    font-size: 16px;
+    padding: 22px 26px;
+    margin-top: 44px;
+  }
+  .sns-v2-intro {
+    padding: 60px 0 48px;
+  }
+  .sns-v2-intro__inner {
+    padding: 44px 36px;
+  }
+  .sns-v2-intro__catch {
+    font-size: 24px;
+  }
+  .sns-v2-problem,
+  .sns-v2-overview {
+    padding: 90px 0;
+  }
+  .sns-v2-overview__flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 26px;
+  }
+  .sns-v2-step {
+    padding: 90px 0;
+  }
+  .sns-v2-step__no {
+    font-size: 46px;
+  }
+  .sns-v2-step__head h2 {
+    font-size: 22px;
+  }
+  .sns-v2-step__cards--3,
+  .sns-v2-step__cards--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sns-v2-step__route {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px 22px;
+  }
+  .sns-v2-range,
+  .sns-v2-build,
+  .sns-v2-monthly,
+  .sns-v2-price,
+  .sns-v2-policy,
+  .sns-v2-fit,
+  .sns-v2-team {
+    padding: 90px 0;
+  }
+  .sns-v2-build__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sns-v2-fit__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sns-v2-team__list {
+    grid-template-columns: 1fr;
+  }
+  .sns-v2-ctamid {
+    padding: 64px 0;
+  }
+  .sns-v2-ctamid__title {
+    font-size: 22px;
+  }
+  .sns-v2-cta {
+    padding: 90px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sns-v2-head {
+    margin-bottom: 32px;
+  }
+  .sns-v2-head .en {
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: -16px;
+  }
+  .sns-v2-head h2 {
+    font-size: 19px;
+    letter-spacing: 3px;
+  }
+  .sns-v2-head .subtitle {
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    line-height: 1.85;
+  }
+  .sns-v2-band {
+    font-size: 14.5px;
+    line-height: 1.85;
+    padding: 20px 18px;
+    margin-top: 32px;
+    text-align: left;
+  }
+  .sns-v2-btn {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .sns-v2-intro {
+    padding: 40px 0 32px;
+  }
+  .sns-v2-intro .container {
+    padding: 0 20px;
+  }
+  .sns-v2-intro__inner {
+    width: 100%;
+    border-radius: 12px;
+    padding: 32px 20px;
+  }
+  .sns-v2-intro__catch {
+    font-size: 20px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .sns-v2-intro__lead {
+    font-size: 13.5px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+  .sns-v2-intro__chips {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .sns-v2-intro__chips li {
+    font-size: 12.5px;
+    padding: 8px 16px;
+  }
+  .sns-v2-problem {
+    padding: 60px 0;
+  }
+  .sns-v2-problem .container {
+    padding: 0 20px;
+  }
+  .sns-v2-problem__inner {
+    width: 100%;
+  }
+  .sns-v2-problem__list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .sns-v2-problem__list li {
+    font-size: 13.5px;
+    padding: 18px 18px 18px 44px;
+  }
+  .sns-v2-problem__list li::before {
+    left: 18px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+  }
+  .sns-v2-overview {
+    padding: 60px 0;
+  }
+  .sns-v2-overview .container {
+    padding: 0 20px;
+  }
+  .sns-v2-overview__inner {
+    width: 100%;
+  }
+  .sns-v2-overview__flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .sns-v2-overview__node:not(:last-child)::after {
+    display: none;
+  }
+  .sns-v2-overview__node a {
+    padding: 18px 10px;
+    gap: 6px;
+  }
+  .sns-v2-overview__node-no {
+    font-size: 11px;
+  }
+  .sns-v2-overview__node-name {
+    font-size: 15px;
+  }
+  .sns-v2-step {
+    padding: 60px 0;
+  }
+  .sns-v2-step .container {
+    padding: 0 20px;
+  }
+  .sns-v2-step__inner {
+    width: 100%;
+  }
+  .sns-v2-step__head {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  .sns-v2-step__no {
+    font-size: 38px;
+    margin-bottom: 14px;
+  }
+  .sns-v2-step__no small {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .sns-v2-step__name {
+    font-size: 12px;
+    padding: 4px 14px;
+    margin-bottom: 12px;
+  }
+  .sns-v2-step__head h2 {
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  .sns-v2-step__body {
+    margin-bottom: 24px;
+  }
+  .sns-v2-step__label {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .sns-v2-step__cards {
+    gap: 10px;
+  }
+  .sns-v2-step__cards li {
+    font-size: 13.5px;
+    padding: 16px 16px;
+  }
+  .sns-v2-step__cards--2, .sns-v2-step__cards--3, .sns-v2-step__cards--4 {
+    grid-template-columns: 1fr;
+  }
+  .sns-v2-step__route {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .sns-v2-step__route li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    font-size: 13.5px;
+    padding: 16px 18px;
+  }
+  .sns-v2-step__route li::before {
+    margin-bottom: 0;
+  }
+  .sns-v2-step__route li:not(:last-child)::after {
+    display: none;
+  }
+  .sns-v2-step__tags {
+    gap: 8px;
+  }
+  .sns-v2-step__tags li {
+    font-size: 12.5px;
+    padding: 8px 16px;
+  }
+  .sns-v2-step__result {
+    padding: 22px 18px;
+  }
+  .sns-v2-step__text {
+    font-size: 13.5px;
+    line-height: 1.9;
+  }
+  .sns-v2-range {
+    padding: 60px 0;
+  }
+  .sns-v2-range .container {
+    padding: 0 20px;
+  }
+  .sns-v2-range__inner {
+    width: 100%;
+  }
+  .sns-v2-range__list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .sns-v2-range__case {
+    font-size: 13.5px;
+    padding: 20px 18px;
+  }
+  .sns-v2-range__plan {
+    font-size: 15px;
+    padding: 18px;
+  }
+  .sns-v2-ctamid {
+    padding: 48px 0;
+  }
+  .sns-v2-ctamid .container {
+    padding: 0 20px;
+  }
+  .sns-v2-ctamid__inner {
+    width: 100%;
+  }
+  .sns-v2-ctamid__title {
+    font-size: 19px;
+    letter-spacing: 3px;
+    line-height: 1.7;
+  }
+  .sns-v2-ctamid__lead {
+    font-size: 13.5px;
+    margin-bottom: 28px;
+  }
+  .sns-v2-bridge {
+    padding: 44px 0;
+  }
+  .sns-v2-bridge .container {
+    padding: 0 20px;
+  }
+  .sns-v2-bridge__inner {
+    width: 100%;
+  }
+  .sns-v2-build,
+  .sns-v2-monthly {
+    padding: 60px 0;
+  }
+  .sns-v2-build .container,
+  .sns-v2-monthly .container {
+    padding: 0 20px;
+  }
+  .sns-v2-build__inner,
+  .sns-v2-monthly__inner {
+    width: 100%;
+  }
+  .sns-v2-build__list,
+  .sns-v2-monthly__list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .sns-v2-build__col,
+  .sns-v2-monthly__col {
+    padding: 24px 20px;
+  }
+  .sns-v2-build__col h3,
+  .sns-v2-monthly__col h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .sns-v2-build__col ul li,
+  .sns-v2-monthly__col ul li {
+    font-size: 13.5px;
+  }
+  .sns-v2-price {
+    padding: 60px 0;
+  }
+  .sns-v2-price .container {
+    padding: 0 20px;
+  }
+  .sns-v2-price__inner {
+    width: 100%;
+  }
+  .sns-v2-price__lead {
+    font-size: 13.5px;
+    margin-bottom: 32px;
+  }
+  .sns-v2-price__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .sns-v2-price__card {
+    padding: 26px 22px;
+  }
+  .sns-v2-price__num {
+    font-size: 24px;
+  }
+  .sns-v2-price__name {
+    font-size: 19px;
+  }
+  .sns-v2-price__desc {
+    font-size: 13.5px;
+  }
+  .sns-v2-price__amount {
+    font-size: 22px;
+  }
+  .sns-v2-policy {
+    padding: 60px 0;
+  }
+  .sns-v2-policy .container {
+    padding: 0 20px;
+  }
+  .sns-v2-policy__inner {
+    width: 100%;
+  }
+  .sns-v2-policy__head {
+    margin-bottom: 28px;
+  }
+  .sns-v2-policy__body {
+    margin-bottom: 28px;
+    text-align: left;
+  }
+  .sns-v2-policy__body p {
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 14px;
+  }
+  .sns-v2-policy__note {
+    display: block;
+    font-size: 13px;
+    text-align: left;
+    padding: 16px 18px;
+  }
+  .sns-v2-fit {
+    padding: 60px 0;
+  }
+  .sns-v2-fit .container {
+    padding: 0 20px;
+  }
+  .sns-v2-fit__inner {
+    width: 100%;
+  }
+  .sns-v2-fit__list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .sns-v2-fit__list li {
+    font-size: 13.5px;
+    padding: 18px 18px 18px 44px;
+  }
+  .sns-v2-fit__list li::before {
+    left: 18px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+  }
+  .sns-v2-team {
+    padding: 60px 0;
+  }
+  .sns-v2-team .container {
+    padding: 0 20px;
+  }
+  .sns-v2-team__inner {
+    width: 100%;
+  }
+  .sns-v2-team__list {
+    gap: 14px;
+  }
+  .sns-v2-team__member {
+    display: block;
+    padding: 24px 20px;
+  }
+  .sns-v2-team__photo {
+    width: 88px;
+    margin: 0 auto 18px;
+  }
+  .sns-v2-team__name {
+    font-size: 17px;
+    text-align: center;
+  }
+  .sns-v2-team__text {
+    font-size: 13.5px;
+  }
+  .sns-v2-cta {
+    padding: 60px 0;
+  }
+  .sns-v2-cta .container {
+    padding: 0 20px;
+  }
+  .sns-v2-cta__inner {
+    width: 100%;
+  }
+  .sns-v2-cta__head h2 {
+    letter-spacing: 3px;
+  }
+  .sns-v2-cta__quotes {
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+  .sns-v2-cta__quotes li {
+    font-size: 13.5px;
+    padding: 13px 16px;
+  }
+  .sns-v2-cta__lead {
+    font-size: 13.5px;
+    margin-bottom: 32px;
+  }
+}
 .service-seo-cta__lead .keyword, .service-seo-flow__step-text .keyword, .service-seo-principle__text .keyword, .service-seo-feature__benefit .keyword, .service-seo-role__closing .keyword, .service-seo-role__layer-text .keyword, .service-seo-role__lead .keyword, .service-seo-concept__body .keyword, .service-seo-concept__headline .keyword, .service-seo-hero__catch .keyword {
   background: linear-gradient(transparent 0%, transparent 60%, rgba(240, 231, 78, 0.65) 60%, rgba(240, 231, 78, 0.65) 95%, transparent 95%);
   color: inherit;

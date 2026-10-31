@@ -1,0 +1,1481 @@
+// =====================================================
+// page-service-sns-v2.php 専用スタイル
+// 名前空間: .sns-v2-* / BEM
+// トンマナ: page-topv3 / page-service-web / page-service-sns 準拠
+//
+// セクション構成:
+//   1. INTRO     … .sns-v2-intro(page-hero 直後の補足 + CTA①)
+//   2. PROBLEM   … .sns-v2-problem(6項目チェックリスト)
+//   3. OVERVIEW  … .sns-v2-overview(STEP 01〜05 への導線フロー)
+//   4. STEP      … .sns-v2-step ×5(01 調べる 〜 05 分析して、改善する)
+//   5. RANGE     … .sns-v2-range(支援範囲・3パターン)
+//   6. CTA②     … .sns-v2-ctamid(帯 CTA)
+//   7. BRIDGE    … .sns-v2-bridge(初期構築 / 月次運用 へのつなぎ)
+//   8. BUILD     … .sns-v2-build(初期構築・4カラム)
+//   9. MONTHLY   … .sns-v2-monthly(月次運用・3カラム)
+//  10. PRICE     … .sns-v2-price(2プラン)
+//  11. POLICY    … .sns-v2-policy(思想・濃色背景)
+//  12. FIT       … .sns-v2-fit(6項目)
+//  13. TEAM      … .sns-v2-team(2名)
+//  14. CTA③     … .sns-v2-cta(相談ボタン単体)
+// =====================================================
+
+// =========================================
+// ウィルブランドカラー(Brand Color Guideline v1.0準拠)
+// =========================================
+$v2-primary:    #7CC1C9;
+$v2-light:      #B4DBE0;
+$v2-accent:     #28849D;
+$v2-accent-dk:  #1F6F82;
+$v2-highlight:  #F0E74E;
+$v2-text:       #3E5054;
+$v2-bg-pale:    #F0F8F9;
+$v2-border:     #C0D5D8;
+$v2-subtle:     #8AA0A4;
+$v2-white:      #FFFFFF;
+$v2-dark:       #2C4046;
+
+$v2-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
+
+// keyword ハイライト共通(蛍光ペン風・黄色マーカー)
+%v2-keyword {
+  background: linear-gradient(
+    transparent 0%,
+    transparent 60%,
+    rgba(240, 231, 78, 0.65) 60%,
+    rgba(240, 231, 78, 0.65) 95%,
+    transparent 95%
+  );
+  color: inherit;
+  font-weight: 700;
+  padding: 0 2px;
+}
+
+// セクション内 .container 共通
+%v2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+// セクション内 inner 共通
+%v2-inner {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// 共通セクションヘッダー(.en + h2 + .subtitle)
+.sns-v2-head {
+  text-align: center;
+  margin-bottom: 64px;
+
+  .en {
+    font-family: $v2-font-jp;
+    font-weight: 900;
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: #7fbabd;
+    opacity: .1;
+    line-height: 1;
+    margin: 0 0 -28px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: $v2-font-jp;
+    font-weight: 500;
+    font-size: 26px;
+    color: #333333;
+    letter-spacing: 8px;
+    line-height: 1.55;
+    margin: 0 0 22px;
+  }
+
+  .subtitle {
+    font-family: YuGothic, 'Yu Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #595959;
+    letter-spacing: 3px;
+    line-height: 1.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+// 強調帯(セクション締めの1文)
+.sns-v2-band {
+  background: $v2-white;
+  border: 1px solid $v2-border;
+  border-left: 4px solid $v2-accent;
+  border-radius: 6px;
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: $v2-text;
+  text-align: center;
+  padding: 26px 32px;
+  margin: 56px 0 0;
+
+  .keyword { @extend %v2-keyword; }
+}
+
+// 共通ボタン(ピル型)
+.sns-v2-btn {
+  display: inline-block;
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: $v2-white;
+  background: $v2-accent;
+  text-decoration: none;
+  padding: 17px 48px;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background: $v2-accent-dk;
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  &--light {
+    background: $v2-white;
+    color: $v2-accent;
+
+    &:hover {
+      background: $v2-bg-pale;
+      color: $v2-accent;
+    }
+  }
+}
+
+// =========================================
+// [1] INTRO(FV 補足 + CTA①)
+// =========================================
+.sns-v2-intro {
+  background: $v2-white;
+  padding: 80px 0 60px;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-intro__inner {
+  @extend %v2-inner;
+  background: $v2-bg-pale;
+  border-radius: 16px;
+  padding: 56px 64px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(40, 132, 157, 0.06);
+}
+
+.sns-v2-intro__catch {
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  color: $v2-accent;
+  margin: 0 0 24px;
+
+  .keyword { @extend %v2-keyword; }
+}
+
+.sns-v2-intro__lead {
+  font-family: $v2-font-jp;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: $v2-text;
+  margin: 0 0 32px;
+}
+
+.sns-v2-intro__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+
+  li {
+    font-family: $v2-font-jp;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: $v2-accent;
+    background: $v2-white;
+    border: 1px solid $v2-border;
+    border-radius: 999px;
+    padding: 9px 24px;
+  }
+}
+
+.sns-v2-intro__action { margin: 0; }
+
+// =========================================
+// [2] PROBLEM(6項目チェックリスト)
+// =========================================
+.sns-v2-problem {
+  background: $v2-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-problem__inner { @extend %v2-inner; }
+
+.sns-v2-problem__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    background: $v2-white;
+    border-radius: 8px;
+    font-family: $v2-font-jp;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    color: $v2-text;
+    padding: 22px 26px 22px 54px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 24px;
+      top: 26px;
+      width: 14px;
+      height: 14px;
+      background: $v2-primary;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 3px $v2-white;
+    }
+  }
+}
+
+// =========================================
+// [3] OVERVIEW(STEP 01〜05 への導線フロー)
+// =========================================
+.sns-v2-overview {
+  background: $v2-white;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-overview__inner { @extend %v2-inner; }
+
+.sns-v2-overview__flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 26px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sns-v2-overview__node {
+  position: relative;
+  list-style: none;
+
+  // ノード間の矢印
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -19px;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid $v2-primary;
+    border-right: 2px solid $v2-primary;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+    background: $v2-bg-pale;
+    border: 1px solid $v2-border;
+    border-radius: 8px;
+    padding: 26px 12px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: $v2-light;
+      transform: translateY(-3px);
+      opacity: 1;
+    }
+  }
+}
+
+.sns-v2-overview__node-no {
+  font-family: $v2-font-jp;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: $v2-subtle;
+  line-height: 1;
+}
+
+.sns-v2-overview__node-name {
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  color: $v2-accent;
+  line-height: 1.4;
+  text-align: center;
+}
+
+// =========================================
+// [4] STEP 01〜05(共通)
+// =========================================
+.sns-v2-step {
+  background: $v2-white;
+  padding: 110px 0;
+
+  &--pale { background: $v2-bg-pale; }
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-step__inner {
+  @extend %v2-inner;
+  max-width: 1040px;
+}
+
+.sns-v2-step__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding-bottom: 28px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $v2-border;
+}
+
+.sns-v2-step__no {
+  flex: 0 0 auto;
+  font-family: $v2-font-jp;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: $v2-primary;
+  margin: 0;
+
+  small {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: $v2-subtle;
+    margin-bottom: 6px;
+  }
+}
+
+.sns-v2-step__heading { flex: 1 1 auto; }
+
+.sns-v2-step__name {
+  display: inline-block;
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: $v2-white;
+  background: $v2-accent;
+  border-radius: 999px;
+  padding: 5px 18px;
+  margin: 0 0 14px;
+}
+
+.sns-v2-step__head h2 {
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  color: #333333;
+  margin: 0;
+}
+
+.sns-v2-step__body { margin-bottom: 32px; }
+
+.sns-v2-step__label {
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: $v2-accent;
+  margin: 0 0 16px;
+  padding-left: 12px;
+  border-left: 3px solid $v2-accent;
+  line-height: 1.4;
+}
+
+// 支援内容カード(列数はモディファイアで切替)
+.sns-v2-step__cards {
+  display: grid;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    background: $v2-white;
+    border: 1px solid $v2-border;
+    border-radius: 8px;
+    font-family: $v2-font-jp;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    color: $v2-text;
+    padding: 20px 22px;
+  }
+
+  &--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  &--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  &--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+// STEP 04 の導線ルート(番号つきフロー)
+.sns-v2-step__route {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: v2route;
+
+  li {
+    position: relative;
+    counter-increment: v2route;
+    background: $v2-white;
+    border: 1px solid $v2-border;
+    border-radius: 8px;
+    padding: 24px 14px 20px;
+    font-family: $v2-font-jp;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    color: $v2-accent;
+    text-align: center;
+
+    &::before {
+      content: counter(v2route, decimal-leading-zero);
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: $v2-subtle;
+      margin-bottom: 10px;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -16px;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid $v2-primary;
+      border-right: 2px solid $v2-primary;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+}
+
+// STEP 05 の指標タグ
+.sns-v2-step__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-family: $v2-font-jp;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: $v2-accent;
+    background: $v2-white;
+    border: 1px solid $v2-border;
+    border-radius: 999px;
+    padding: 10px 24px;
+  }
+}
+
+// この工程で整うこと
+.sns-v2-step__result {
+  background: rgba(40, 132, 157, 0.05);
+  border-radius: 8px;
+  padding: 30px 32px;
+}
+
+.sns-v2-step__text {
+  font-family: $v2-font-jp;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+  color: $v2-text;
+  margin: 0;
+
+  .keyword { @extend %v2-keyword; }
+}
+
+// =========================================
+// [5] RANGE(支援範囲・3パターン)
+// =========================================
+.sns-v2-range {
+  background: $v2-white;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-range__inner { @extend %v2-inner; }
+
+.sns-v2-range__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sns-v2-range__item {
+  list-style: none;
+  background: $v2-bg-pale;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sns-v2-range__case {
+  font-family: $v2-font-jp;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: $v2-text;
+  text-align: center;
+  padding: 26px 24px;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.sns-v2-range__plan {
+  position: relative;
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: $v2-white;
+  background: $v2-accent;
+  text-align: center;
+  padding: 22px 24px;
+  margin: 0;
+
+  // 上辺中央の下向き矢印
+  &::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 9px solid $v2-bg-pale;
+  }
+}
+
+// =========================================
+// [6] CTA②(帯 CTA)
+// =========================================
+.sns-v2-ctamid {
+  background: $v2-accent;
+  padding: 80px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-ctamid__inner {
+  @extend %v2-inner;
+  text-align: center;
+}
+
+.sns-v2-ctamid__title {
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  color: $v2-white;
+  margin: 0 0 20px;
+}
+
+.sns-v2-ctamid__lead {
+  font-family: $v2-font-jp;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 36px;
+}
+
+.sns-v2-ctamid__action { margin: 0; }
+
+// =========================================
+// [7] BRIDGE(つなぎ)
+// =========================================
+.sns-v2-bridge {
+  background: $v2-white;
+  padding: 70px 0;
+
+  .container { @extend %v2-container; }
+
+  .sns-v2-band { margin-top: 0; }
+}
+
+.sns-v2-bridge__inner { @extend %v2-inner; }
+
+// =========================================
+// [8] BUILD / [9] MONTHLY(カラムリスト共通)
+// =========================================
+%v2-col-list {
+  display: grid;
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%v2-col {
+  list-style: none;
+  background: $v2-white;
+  border: 1px solid $v2-border;
+  border-radius: 8px;
+  padding: 30px 26px;
+
+  h3 {
+    font-family: $v2-font-jp;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: $v2-accent;
+    text-align: center;
+    margin: 0 0 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid $v2-border;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      font-family: $v2-font-jp;
+      font-size: 14px;
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+      color: $v2-text;
+      padding-left: 18px;
+      margin-bottom: 10px;
+
+      &:last-child { margin-bottom: 0; }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 8px;
+        height: 8px;
+        background: $v2-primary;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.sns-v2-build {
+  background: $v2-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-build__inner {
+  @extend %v2-inner;
+  max-width: 1100px;
+}
+
+.sns-v2-build__list {
+  @extend %v2-col-list;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sns-v2-build__col { @extend %v2-col; }
+
+.sns-v2-monthly {
+  background: $v2-white;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-monthly__inner {
+  @extend %v2-inner;
+  max-width: 1100px;
+}
+
+.sns-v2-monthly__list {
+  @extend %v2-col-list;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sns-v2-monthly__col {
+  @extend %v2-col;
+  background: $v2-bg-pale;
+  border-color: transparent;
+
+  h3 { border-bottom-color: $v2-border; }
+}
+
+// =========================================
+// [10] PRICE(2プラン)
+// =========================================
+.sns-v2-price {
+  background: $v2-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-price__inner {
+  @extend %v2-inner;
+  max-width: 1100px;
+}
+
+.sns-v2-price__lead {
+  text-align: center;
+  font-family: $v2-font-jp;
+  font-size: 15px;
+  line-height: 1.95;
+  color: $v2-text;
+  margin: 0 0 48px;
+}
+
+.sns-v2-price__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.sns-v2-price__card {
+  background: $v2-white;
+  border-radius: 8px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sns-v2-price__num {
+  font-family: $v2-font-jp;
+  font-weight: 900;
+  font-size: 28px;
+  color: $v2-primary;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0 0 14px;
+}
+
+.sns-v2-price__name {
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 22px;
+  color: $v2-accent;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $v2-border;
+}
+
+.sns-v2-price__desc {
+  font-family: $v2-font-jp;
+  font-size: 14px;
+  line-height: 1.9;
+  color: $v2-text;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+  flex: 1 1 auto;
+}
+
+.sns-v2-price__amount {
+  font-family: $v2-font-jp;
+  font-weight: 800;
+  font-size: 26px;
+  color: $v2-accent;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-align: right;
+
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    color: $v2-subtle;
+    margin-left: 4px;
+  }
+}
+
+// =========================================
+// [11] POLICY(思想・濃色背景)
+// =========================================
+.sns-v2-policy {
+  background: $v2-dark;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-policy__inner {
+  @extend %v2-inner;
+  max-width: 900px;
+  text-align: center;
+}
+
+.sns-v2-policy__head {
+  margin-bottom: 40px;
+
+  .en {
+    color: $v2-primary;
+    opacity: .22;
+  }
+
+  h2 { color: $v2-white; }
+}
+
+.sns-v2-policy__body {
+  margin: 0 0 36px;
+
+  p {
+    font-family: $v2-font-jp;
+    font-size: 16px;
+    line-height: 2.1;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0 0 18px;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  // 濃色背景では黄色マーカーが白文字の可読性を落とすため、
+  // ターコイズの下線に差し替える
+  .keyword {
+    font-weight: 700;
+    color: $v2-white;
+    background: linear-gradient(
+      transparent 0%,
+      transparent 88%,
+      $v2-primary 88%,
+      $v2-primary 100%
+    );
+    padding: 0 2px;
+  }
+}
+
+.sns-v2-policy__note {
+  display: inline-block;
+  font-family: $v2-font-jp;
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+  padding: 18px 28px;
+  margin: 0;
+}
+
+// =========================================
+// [12] FIT(こんな企業に向いています)
+// =========================================
+.sns-v2-fit {
+  background: $v2-white;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-fit__inner { @extend %v2-inner; }
+
+.sns-v2-fit__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    background: $v2-bg-pale;
+    border-radius: 8px;
+    font-family: $v2-font-jp;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    color: $v2-text;
+    padding: 24px 24px 24px 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 22px;
+      top: 28px;
+      width: 14px;
+      height: 14px;
+      background: $v2-primary;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 3px $v2-bg-pale;
+    }
+  }
+}
+
+// =========================================
+// [13] TEAM(支援体制)
+// =========================================
+.sns-v2-team {
+  background: $v2-bg-pale;
+  padding: 120px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-team__inner { @extend %v2-inner; }
+
+.sns-v2-team__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sns-v2-team__member {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: $v2-white;
+  border-radius: 8px;
+  padding: 32px 30px;
+}
+
+.sns-v2-team__photo {
+  flex: 0 0 110px;
+  width: 110px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.sns-v2-team__body { flex: 1 1 auto; }
+
+.sns-v2-team__name {
+  font-family: $v2-font-jp;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.06em;
+  color: $v2-accent;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $v2-border;
+
+  span {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: $v2-subtle;
+    margin-top: 6px;
+  }
+}
+
+.sns-v2-team__text {
+  font-family: $v2-font-jp;
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: $v2-text;
+  margin: 0;
+}
+
+// =========================================
+// [14] CTA③(相談ボタン単体)
+// =========================================
+.sns-v2-cta {
+  background: $v2-accent;
+  padding: 110px 0;
+
+  .container { @extend %v2-container; }
+}
+
+.sns-v2-cta__inner { @extend %v2-inner; }
+
+.sns-v2-cta__head {
+  margin-bottom: 32px;
+
+  .en {
+    color: $v2-white;
+    opacity: 0.18;
+  }
+
+  h2 {
+    color: $v2-white;
+    letter-spacing: 5px;
+  }
+}
+
+// 3つの声は縦積み(幅を揃えて読ませる)
+.sns-v2-cta__quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 32px;
+  max-width: 560px;
+
+  li {
+    font-family: $v2-font-jp;
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    color: $v2-white;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    padding: 14px 24px;
+    text-align: center;
+  }
+}
+
+.sns-v2-cta__lead {
+  text-align: center;
+  font-family: $v2-font-jp;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 48px;
+}
+
+.sns-v2-cta__action {
+  text-align: center;
+  margin: 0;
+}
+
+// =====================================================
+// Tablet (max-width: 1024px)
+// =====================================================
+@media screen and (max-width: 1024px) {
+
+  .sns-v2-head {
+    margin-bottom: 44px;
+
+    .en { font-size: 44px; margin-bottom: -22px; }
+    h2 { font-size: 22px; letter-spacing: 5px; }
+    .subtitle { font-size: 15px; letter-spacing: 2px; }
+  }
+
+  .sns-v2-band { font-size: 16px; padding: 22px 26px; margin-top: 44px; }
+
+  // [1] INTRO
+  .sns-v2-intro { padding: 60px 0 48px; }
+  .sns-v2-intro__inner { padding: 44px 36px; }
+  .sns-v2-intro__catch { font-size: 24px; }
+
+  // [2] PROBLEM / [3] OVERVIEW
+  .sns-v2-problem,
+  .sns-v2-overview { padding: 90px 0; }
+
+  .sns-v2-overview__flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 26px;
+  }
+
+  // [4] STEP
+  .sns-v2-step { padding: 90px 0; }
+  .sns-v2-step__no { font-size: 46px; }
+  .sns-v2-step__head h2 { font-size: 22px; }
+  .sns-v2-step__cards--3,
+  .sns-v2-step__cards--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .sns-v2-step__route {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px 22px;
+  }
+
+  // [5] RANGE 〜 [13] TEAM
+  .sns-v2-range,
+  .sns-v2-build,
+  .sns-v2-monthly,
+  .sns-v2-price,
+  .sns-v2-policy,
+  .sns-v2-fit,
+  .sns-v2-team { padding: 90px 0; }
+
+  .sns-v2-build__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sns-v2-fit__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sns-v2-team__list { grid-template-columns: 1fr; }
+
+  .sns-v2-ctamid { padding: 64px 0; }
+  .sns-v2-ctamid__title { font-size: 22px; }
+
+  .sns-v2-cta { padding: 90px 0; }
+}
+
+// =====================================================
+// SP (max-width: 767px)
+// =====================================================
+@media screen and (max-width: 767px) {
+
+  .sns-v2-head {
+    margin-bottom: 32px;
+
+    .en { font-size: 32px; letter-spacing: 3px; margin-bottom: -16px; }
+    h2 { font-size: 19px; letter-spacing: 3px; }
+    .subtitle { font-size: 13.5px; letter-spacing: 1px; line-height: 1.85; }
+  }
+
+  .sns-v2-band {
+    font-size: 14.5px;
+    line-height: 1.85;
+    padding: 20px 18px;
+    margin-top: 32px;
+    text-align: left;
+  }
+
+  .sns-v2-btn {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  // [1] INTRO
+  .sns-v2-intro {
+    padding: 40px 0 32px;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-intro__inner {
+    width: 100%;
+    border-radius: 12px;
+    padding: 32px 20px;
+  }
+
+  .sns-v2-intro__catch { font-size: 20px; line-height: 1.65; margin-bottom: 18px; }
+  .sns-v2-intro__lead { font-size: 13.5px; line-height: 1.9; margin-bottom: 24px; }
+  .sns-v2-intro__chips { gap: 8px; margin-bottom: 28px; li { font-size: 12.5px; padding: 8px 16px; } }
+
+  // [2] PROBLEM
+  .sns-v2-problem {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-problem__inner { width: 100%; }
+
+  .sns-v2-problem__list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    li {
+      font-size: 13.5px;
+      padding: 18px 18px 18px 44px;
+
+      &::before { left: 18px; top: 22px; width: 12px; height: 12px; }
+    }
+  }
+
+  // [3] OVERVIEW
+  .sns-v2-overview {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-overview__inner { width: 100%; }
+
+  .sns-v2-overview__flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  // SP は矢印を出さない(折り返しで向きが崩れるため)
+  .sns-v2-overview__node {
+    &:not(:last-child)::after { display: none; }
+
+    a { padding: 18px 10px; gap: 6px; }
+  }
+
+  .sns-v2-overview__node-no { font-size: 11px; }
+  .sns-v2-overview__node-name { font-size: 15px; }
+
+  // [4] STEP
+  .sns-v2-step {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-step__inner { width: 100%; }
+
+  .sns-v2-step__head {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+
+  .sns-v2-step__no {
+    font-size: 38px;
+    margin-bottom: 14px;
+
+    small { font-size: 11px; margin-bottom: 4px; }
+  }
+
+  .sns-v2-step__name { font-size: 12px; padding: 4px 14px; margin-bottom: 12px; }
+  .sns-v2-step__head h2 { font-size: 19px; line-height: 1.7; }
+
+  .sns-v2-step__body { margin-bottom: 24px; }
+  .sns-v2-step__label { font-size: 12px; margin-bottom: 12px; }
+
+  .sns-v2-step__cards {
+    gap: 10px;
+
+    li { font-size: 13.5px; padding: 16px 16px; }
+
+    &--2,
+    &--3,
+    &--4 { grid-template-columns: 1fr; }
+  }
+
+  .sns-v2-step__route {
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+      font-size: 13.5px;
+      padding: 16px 18px;
+
+      &::before { margin-bottom: 0; }
+
+      &:not(:last-child)::after { display: none; }
+    }
+  }
+
+  .sns-v2-step__tags {
+    gap: 8px;
+    li { font-size: 12.5px; padding: 8px 16px; }
+  }
+
+  .sns-v2-step__result { padding: 22px 18px; }
+  .sns-v2-step__text { font-size: 13.5px; line-height: 1.9; }
+
+  // [5] RANGE
+  .sns-v2-range {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-range__inner { width: 100%; }
+
+  .sns-v2-range__list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sns-v2-range__case { font-size: 13.5px; padding: 20px 18px; }
+  .sns-v2-range__plan { font-size: 15px; padding: 18px; }
+
+  // [6] CTA②
+  .sns-v2-ctamid {
+    padding: 48px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-ctamid__inner { width: 100%; }
+  .sns-v2-ctamid__title { font-size: 19px; letter-spacing: 3px; line-height: 1.7; }
+  .sns-v2-ctamid__lead { font-size: 13.5px; margin-bottom: 28px; }
+
+  // [7] BRIDGE
+  .sns-v2-bridge {
+    padding: 44px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-bridge__inner { width: 100%; }
+
+  // [8] BUILD / [9] MONTHLY
+  .sns-v2-build,
+  .sns-v2-monthly {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-build__inner,
+  .sns-v2-monthly__inner { width: 100%; }
+
+  .sns-v2-build__list,
+  .sns-v2-monthly__list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sns-v2-build__col,
+  .sns-v2-monthly__col {
+    padding: 24px 20px;
+
+    h3 { font-size: 16px; margin-bottom: 16px; }
+    ul li { font-size: 13.5px; }
+  }
+
+  // [10] PRICE
+  .sns-v2-price {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-price__inner { width: 100%; }
+  .sns-v2-price__lead { font-size: 13.5px; margin-bottom: 32px; }
+
+  .sns-v2-price__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sns-v2-price__card { padding: 26px 22px; }
+  .sns-v2-price__num { font-size: 24px; }
+  .sns-v2-price__name { font-size: 19px; }
+  .sns-v2-price__desc { font-size: 13.5px; }
+  .sns-v2-price__amount { font-size: 22px; }
+
+  // [11] POLICY
+  .sns-v2-policy {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-policy__inner { width: 100%; }
+  .sns-v2-policy__head { margin-bottom: 28px; }
+
+  .sns-v2-policy__body {
+    margin-bottom: 28px;
+    text-align: left;
+
+    p { font-size: 14px; line-height: 1.95; margin-bottom: 14px; }
+  }
+
+  .sns-v2-policy__note {
+    display: block;
+    font-size: 13px;
+    text-align: left;
+    padding: 16px 18px;
+  }
+
+  // [12] FIT
+  .sns-v2-fit {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-fit__inner { width: 100%; }
+
+  .sns-v2-fit__list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    li {
+      font-size: 13.5px;
+      padding: 18px 18px 18px 44px;
+
+      &::before { left: 18px; top: 22px; width: 12px; height: 12px; }
+    }
+  }
+
+  // [13] TEAM
+  .sns-v2-team {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-team__inner { width: 100%; }
+  .sns-v2-team__list { gap: 14px; }
+
+  .sns-v2-team__member {
+    display: block;
+    padding: 24px 20px;
+  }
+
+  .sns-v2-team__photo {
+    width: 88px;
+    margin: 0 auto 18px;
+  }
+
+  .sns-v2-team__name { font-size: 17px; text-align: center; }
+  .sns-v2-team__text { font-size: 13.5px; }
+
+  // [14] CTA③
+  .sns-v2-cta {
+    padding: 60px 0;
+    .container { padding: 0 20px; }
+  }
+
+  .sns-v2-cta__inner { width: 100%; }
+  .sns-v2-cta__head h2 { letter-spacing: 3px; }
+
+  .sns-v2-cta__quotes {
+    gap: 10px;
+    margin-bottom: 26px;
+    li { font-size: 13.5px; padding: 13px 16px; }
+  }
+
+  .sns-v2-cta__lead { font-size: 13.5px; margin-bottom: 32px; }
+}
