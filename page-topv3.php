@@ -48,14 +48,14 @@
               <button type="button" class="fv-cta-panel-close" aria-label="バナーを閉じる">
                 <svg viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false"><path d="M1.5 1.5l11 11M12.5 1.5l-11 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
               </button>
-              <h3 class="fv-cta-panel-title">10問に答えるだけ。<br>無料でレポートをお送りします</h3>
+              <h3 class="fv-cta-panel-title">3問に答えるだけ。<br>無料でレポートをお送りします</h3>
               <p class="fv-cta-panel-text">所要時間は約1分です。ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
               <ul class="fv-cta-panel-features">
-                <li>全10問</li>
+                <li>全3問</li>
                 <li>約1分</li>
                 <li>費用なし</li>
               </ul>
-              <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="fv-cta-panel-btn">無料診断を試す（約1分）</a>
+              <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" target="_blank" rel="noopener noreferrer" class="fv-cta-panel-btn">無料診断を試す（約1分）</a>
             </div>
           </div>
           <div class="scroll"></div>
@@ -83,8 +83,8 @@
             </div>
           </div>
           <div class="fv-cta-cards-sp">
-            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="fv-cta-card fv-cta-card--diagnosis">
-              <span class="cta-text"><span class="cta-accent">「原因はどこにあるか」</span><br>ホームページの無料診断<br>全10問・約1分・費用なし</span>
+            <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" target="_blank" rel="noopener noreferrer" class="fv-cta-card fv-cta-card--diagnosis">
+              <span class="cta-text"><span class="cta-accent">「原因はどこにあるか」</span><br>ホームページの無料診断<br>全3問・約1分・費用なし</span>
             </a>
           </div>
         </div>
@@ -554,19 +554,19 @@
           <span class="diagnosis-eyebrow">DIAGNOSIS</span>
           <h2 class="diagnosis-title animation-target to-up">
             ホームページから問い合わせが増えない原因は、<br class="pc">
-            <span class="diagnosis-keyword">どこにあるか</span>。10問・約1分で診断します。
+            <span class="diagnosis-keyword">どこにあるか</span>。3問・約1分で診断します。
           </h2>
         </div>
 
         <div class="diagnosis-panel animation-target to-up">
-          <h3 class="diagnosis-panel-title">10問に答えるだけ。<br>無料でレポートをお送りします</h3>
+          <h3 class="diagnosis-panel-title">3問に答えるだけ。<br>無料でレポートをお送りします</h3>
           <p class="diagnosis-panel-text">所要時間は約1分です。ホームページへの集客、サイト内の導線、<br>問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
           <ul class="diagnosis-features">
-            <li>全10問</li>
+            <li>全3問</li>
             <li>約1分</li>
             <li>費用なし</li>
           </ul>
-          <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="diagnosis-btn">無料診断を試す（約1分）</a>
+          <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" target="_blank" rel="noopener noreferrer" class="diagnosis-btn">無料診断を試す（約1分）</a>
         </div>
 
       </div>
@@ -1038,7 +1038,7 @@ PHPコメントアウトで温存する。
 
           <div class="contact-v5-cta-group">
 
-            <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="contact-v5-cta contact-v5-cta--outline">
+            <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" target="_blank" rel="noopener noreferrer" class="contact-v5-cta contact-v5-cta--outline">
               <span class="contact-v5-cta-label">DIAGNOSIS</span>
               <span class="contact-v5-cta-text">1分でできる無料診断</span>
               <span class="contact-v5-cta-arrow">→</span>

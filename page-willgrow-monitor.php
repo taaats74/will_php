@@ -381,7 +381,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
 
           <div class="wg2-ctaband__panel">
             <h3 class="wg2-ctaband__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
-            <p class="wg2-ctaband__panel-text">10問に答えるだけ・約1分。御社サイトの現在地と改善の方向性をレポートにしてお送りします。先行導入へのご参加は、レポートをご覧になってからご検討ください。</p>
+            <p class="wg2-ctaband__panel-text">3問に答えるだけ・約1分。御社サイトの現在地と改善の方向性をレポートにしてお送りします。先行導入へのご参加は、レポートをご覧になってからご検討ください。</p>
             <a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" class="wg2-ctaband__btn" data-cta-type="diagnosis" data-cta-position="sec04" target="_blank" rel="noopener noreferrer">無料診断（約1分）を試す</a>
           </div>
 
@@ -723,7 +723,7 @@ if ( ! function_exists( 'wgm_icon' ) ) {
 
           <div class="wg2-ctaband__panel">
             <h3 class="wg2-ctaband__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
-            <p class="wg2-ctaband__panel-text">10問に答えるだけ・約1分。御社サイトの現在地と改善の方向性をレポートにしてお送りします。先行導入へのご参加は、レポートをご覧になってからご検討ください。</p>
+            <p class="wg2-ctaband__panel-text">3問に答えるだけ・約1分。御社サイトの現在地と改善の方向性をレポートにしてお送りします。先行導入へのご参加は、レポートをご覧になってからご検討ください。</p>
             <a href="<?php echo esc_url( $wgm_diagnosis_url ); ?>" class="wg2-ctaband__btn" data-cta-type="diagnosis" data-cta-position="sec08" target="_blank" rel="noopener noreferrer">無料診断（約1分）を試す</a>
           </div>
 

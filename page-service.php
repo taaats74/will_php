@@ -388,7 +388,7 @@ get_template_part('template-parts/page-hero', null, [
       </h2>
       <p class="diagnosis-lead">
         運用体制・現在の施策・抱えている課題。<br class="pc">
-        10問の質問からウィルが構造的に分析し、改善すべき優先順位をまとめたレポートをお送りします。
+        3つの質問からウィルが構造的に分析し、改善すべき優先順位をまとめたレポートをお送りします。
       </p>
     </div>
 
@@ -399,7 +399,7 @@ get_template_part('template-parts/page-hero', null, [
         <li>所要1分</li>
         <li>個別レポート送付</li>
       </ul>
-      <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="diagnosis-btn">1分でできる無料診断を受ける</a>
+      <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" target="_blank" rel="noopener noreferrer" class="diagnosis-btn">1分でできる無料診断を受ける</a>
     </div>
 
   </div>
@@ -486,7 +486,7 @@ get_template_part('template-parts/page-hero', null, [
 
       <div class="contact-v5-cta-group">
 
-        <a href="<?php echo esc_url( home_url('/btob-marketing-consultation/') ); ?>" target="_blank" rel="noopener noreferrer" class="contact-v5-cta contact-v5-cta--outline">
+        <a href="<?php echo esc_url( home_url('/diagnosis/') ); ?>" target="_blank" rel="noopener noreferrer" class="contact-v5-cta contact-v5-cta--outline">
           <span class="contact-v5-cta-label">DIAGNOSIS</span>
           <span class="contact-v5-cta-text">1分でできる無料診断</span>
           <span class="contact-v5-cta-arrow">→</span>

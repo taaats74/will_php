@@ -153,9 +153,14 @@ add_filter( 'the_content', function ( $content ) {
  * ========================================================================= */
 
 add_shortcode( 'post_link', function ( $atts ) {
-	$atts      = shortcode_atts( [ 'id' => 0 ], $atts, 'post_link' );
-	$map       = get_option( 'will_blog_migration', [] );
-	$target_id = (int) ( $map['posts'][ (int) $atts['id'] ] ?? 0 );
+	$atts      = shortcode_atts( [ 'id' => 0, 'post' => 0 ], $atts, 'post_link' );
+	if ( (int) $atts['post'] ) {
+		// 移管後に作った記事は対応表に無いため、投稿の番号を直接書く（[post_link post="1157"]・2026-11-01）
+		$target_id = (int) $atts['post'];
+	} else {
+		$map       = get_option( 'will_blog_migration', [] );
+		$target_id = (int) ( $map['posts'][ (int) $atts['id'] ] ?? 0 );
+	}
 	$target    = $target_id ? get_post( $target_id ) : null;
 	if ( ! $target || 'publish' !== $target->post_status ) {
 		return '';
@@ -321,16 +326,16 @@ add_action( 'wp_footer', function () {
 	if ( ! ( is_home() || is_category() || is_singular( 'post' ) ) ) {
 		return;
 	}
-	$url = home_url( '/btob-marketing-consultation/' );
+	$url = home_url( '/diagnosis/' );
 	?>
 	<aside class="blog-float" id="blog-float" aria-label="無料診断のご案内" hidden>
 		<button type="button" class="blog-float__close" aria-label="バナーを閉じる">
 			<svg viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false"><path d="M1.5 1.5l11 11M12.5 1.5l-11 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
 		</button>
-		<p class="blog-float__title">10問に答えるだけ。<br>無料でレポートをお送りします</p>
+		<p class="blog-float__title">3問に答えるだけ。<br>無料でレポートをお送りします</p>
 		<p class="blog-float__text">所要時間は約1分です。ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
 		<ul class="blog-float__features">
-			<li>全10問</li>
+			<li>全3問</li>
 			<li>約1分</li>
 			<li>費用なし</li>
 		</ul>

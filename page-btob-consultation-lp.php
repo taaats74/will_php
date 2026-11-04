@@ -350,7 +350,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
               <h3 class="flow-step__name">Webサイト・BtoBマーケ無料診断</h3>
             </div>
             <p class="flow-step__time-slot"><span class="flow-step__time">約1分</span></p>
-            <p class="flow-step__text">10問に答えるだけです。費用はかかりません。</p>
+            <p class="flow-step__text">3問に答えるだけです。費用はかかりません。</p>
           </div>
         </div>
 
@@ -402,7 +402,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
       <div class="s-diagnosis__cards">
         <div class="cta-card" data-fade>
           <h3 class="cta-card__title">まずは現状を把握したい方へ<br>（無料診断）</h3>
-          <p class="cta-card__text">10問に答えるだけ・所要時間は約1分。ホームページとマーケティングの現状と、何から手をつけるべきかを整理して、レポートでお送りします。費用はかかりません。</p>
+          <p class="cta-card__text">3問に答えるだけ・所要時間は約1分。ホームページとマーケティングの現状と、何から手をつけるべきかを整理して、レポートでお送りします。費用はかかりません。</p>
           <a class="btn btn--dark btn--block cta-card__btn" href="<?php echo esc_url( $bcl_diagnosis_url ); ?>">無料診断（約1分）を試す</a>
         </div>
 
@@ -552,7 +552,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
           まずは<span class="marker">無料診断（約1分）</span>から
         </h3>
 
-        <p class="form-diag__text">10問に答えるだけで、ホームページとマーケティングの現状、そして何から手をつけるべきかを整理し、レポートでお送りします。費用はかかりません。診断結果というたたき台があると、無料相談も状況説明ではなく、原因の見立てと優先順位の話から始められます。</p>
+        <p class="form-diag__text">3問に答えるだけで、ホームページとマーケティングの現状、そして何から手をつけるべきかを整理し、レポートでお送りします。費用はかかりません。診断結果というたたき台があると、無料相談も状況説明ではなく、原因の見立てと優先順位の話から始められます。</p>
 
         <a class="btn btn--primary form-diag__btn" href="<?php echo esc_url( $bcl_diagnosis_url ); ?>">
           無料診断（約1分）を試す
@@ -587,7 +587,7 @@ $bcl_hs_form_id   = 'ee8412aa-1e84-49a0-a1ca-739a3ccd0e7b';
     無料診断（約1分）はこちら
   </p>
 
-  <p class="diag-banner__text">10の質問に答えるだけ。いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。</p>
+  <p class="diag-banner__text">3つの質問に答えるだけ。いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。</p>
 
   <a class="btn btn--primary btn--block diag-banner__btn" href="<?php echo esc_url( $bcl_diagnosis_url ); ?>">
     無料診断を試す

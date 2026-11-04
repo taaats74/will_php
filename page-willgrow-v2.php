@@ -440,7 +440,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
 
           <div class="wg2-ctaband__panel">
             <h3 class="wg2-ctaband__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
-            <p class="wg2-ctaband__panel-text">10の質問に答えるだけ・約1分。いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。費用はかかりません。</p>
+            <p class="wg2-ctaband__panel-text">3つの質問に答えるだけ・約1分。いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。費用はかかりません。</p>
             <a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" class="wg2-ctaband__btn" data-cta-type="diagnosis" data-cta-position="sec06" target="_blank" rel="noopener noreferrer" aria-label="無料診断（約1分）を試す（別ページで開きます）">無料診断（約1分）を試す</a>
           </div>
 
@@ -709,7 +709,7 @@ if ( ! function_exists( 'wg2_icon' ) ) {
               <p>成果が出ない理由は、いくつかに分かれます。<br>狙う相手や言葉がずれている。実行が途中で止まっている。<br>そもそも何が起きているかを測れていない。<br>サイトの構造そのものに問題がある。</p>
               <p>原因が分からないまま依頼先だけを変えても、同じことが繰り返されます。</p>
               <p class="wg2-faq__strong">まずは無料診断からお試しください</p>
-              <p>10の質問に答えるだけ、約1分です。<br>いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。</p>
+              <p>3つの質問に答えるだけ、約1分です。<br>いまの取り組みのどこに課題がありそうかを整理して、レポートをお送りします。</p>
               <p>費用はかかりません。<br>そのまま切り替えを検討する必要もありません。</p>
               <p>もう少し詳しく見てほしいという場合は、無料相談で実際のサイトを拝見してお伝えします。<br>その時点で私たちに向かないと判断した場合は、正直にそう申し上げます。</p>
               <p><a href="<?php echo esc_url( $wg2_diagnosis_url ); ?>" data-cta-type="diagnosis" data-cta-position="faq-q6">無料診断へ<?php echo wg2_icon( 'arrow-right' ); ?></a></p>
@@ -844,14 +844,14 @@ if ( ! function_exists( 'wg2_icon' ) ) {
   <!-- ============ 追従CTA（SP=下部固定／PC=右下） ============ -->
   <div class="wg2-sticky" id="wg2Sticky">
     <button class="wg2-sticky__close" id="wg2StickyClose" type="button" aria-label="閉じる">×</button>
-    <p class="wg2-sticky__title"><?php echo wg2_icon( 'clipboard' ); ?><span>10問に答えるだけ。<br>無料でレポートをお送りします</span></p>
+    <p class="wg2-sticky__title"><?php echo wg2_icon( 'clipboard' ); ?><span>3問に答えるだけ。<br>無料でレポートをお送りします</span></p>
     <p class="wg2-sticky__text">所要時間は約1分です。ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
     <ul class="wg2-sticky__features">
-      <li>全10問</li>
+      <li>全3問</li>
       <li>約1分</li>
       <li>費用なし</li>
     </ul>
-    <a href="<?php echo esc_url( home_url( '/btob-marketing-consultation/' ) ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="sticky" target="_blank" rel="noopener noreferrer">無料診断を試す（約1分）<?php echo wg2_icon( 'arrow-right' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/diagnosis/' ) ); ?>" class="wg2-btn wg2-btn--primary wg2-btn--block" data-cta-type="diagnosis" data-cta-position="sticky" target="_blank" rel="noopener noreferrer">無料診断を試す（約1分）<?php echo wg2_icon( 'arrow-right' ); ?></a>
   </div>
 
   <!-- HubSpot 埋め込みフォーム -->

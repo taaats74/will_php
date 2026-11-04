@@ -481,7 +481,7 @@
           <!-- 右パネル：無料診断 -->
           <div class="wsv2-cta__panel">
             <h3 class="wsv2-cta__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
-            <p class="wsv2-cta__panel-text">10問に答えるだけ・約1分。Webサイトや集客の現状を構造的に分析し、強み・改善点・優先順位をレポートにまとめてお送りします。</p>
+            <p class="wsv2-cta__panel-text">3問に答えるだけ・約1分。Webサイトや集客の現状を構造的に分析し、強み・改善点・優先順位をレポートにまとめてお送りします。</p>
             <a
               href="https://will-corp.co.jp/diagnosis/"
               class="wsv2-cta__btn"
@@ -994,7 +994,7 @@
           <!-- 右パネル：無料診断 -->
           <div class="wsv2-cta__panel">
             <h3 class="wsv2-cta__panel-title">まずは現状を把握したい方へ<br>（無料診断）</h3>
-            <p class="wsv2-cta__panel-text">10問に答えるだけ・約1分。Webサイトや集客の現状を構造的に分析し、強み・改善点・優先順位をレポートにまとめてお送りします。</p>
+            <p class="wsv2-cta__panel-text">3問に答えるだけ・約1分。Webサイトや集客の現状を構造的に分析し、強み・改善点・優先順位をレポートにまとめてお送りします。</p>
             <a
               href="https://will-corp.co.jp/diagnosis/"
               class="wsv2-cta__btn"
@@ -1046,15 +1046,15 @@
       <span aria-hidden="true">&times;</span>
     </button>
     <div class="wsv2-float-cta__body">
-      <p class="wsv2-float-cta__title">10問に答えるだけ。<br>無料でレポートをお送りします</p>
+      <p class="wsv2-float-cta__title">3問に答えるだけ。<br>無料でレポートをお送りします</p>
       <p class="wsv2-float-cta__note">所要時間は約1分です。ホームページへの集客、サイト内の導線、問い合わせの受け皿という3点を見て、どこに手をつけるべきかをまとめます。</p>
       <ul class="wsv2-float-cta__features">
-        <li>全10問</li>
+        <li>全3問</li>
         <li>約1分</li>
         <li>費用なし</li>
       </ul>
     </div>
-    <a href="https://will-corp.co.jp/btob-marketing-consultation/" class="wsv2-float-cta__btn" target="_blank" rel="noopener noreferrer">
+    <a href="https://will-corp.co.jp/diagnosis/" class="wsv2-float-cta__btn" target="_blank" rel="noopener noreferrer">
       <span class="wsv2-float-cta__btn-pc">無料診断を試す（約1分）</span>
       <span class="wsv2-float-cta__btn-sp">診断する</span>
     </a>
