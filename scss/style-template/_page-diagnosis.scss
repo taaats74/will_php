@@ -238,11 +238,26 @@ $pd-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 }
 
 // -----------------------------------------------------
-// 診断の説明(見出し・おすすめ・レポート内容・流れ)
+// 診断の説明(バッジ・見出し・レポート内容)
 // -----------------------------------------------------
 .page-diagnosis__intro {
   text-align: center;
   margin: 0 auto 72px;
+}
+
+.page-diagnosis__badge {
+  display: inline-block;
+  font-family: $pd-font-jp;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $pd-color-accent;
+  background: $pd-color-bg-pale;
+  border: 1px solid $pd-color-border;
+  border-radius: 999px;
+  padding: 6px 20px;
+  letter-spacing: 0.06em;
+  margin: 0 0 20px;
 }
 
 .page-diagnosis__heading {
@@ -278,63 +293,6 @@ $pd-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   letter-spacing: 0.06em;
   text-align: center;
   margin: 0 0 28px;
-}
-
-.page-diagnosis__block-lead {
-  font-family: $pd-font-jp;
-  font-size: 15px;
-  line-height: 1.95;
-  color: $pd-color-text;
-  letter-spacing: 0.04em;
-  text-align: center;
-  margin: -8px 0 28px;
-}
-
-.page-diagnosis__checks {
-  list-style: none;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 28px 36px;
-  background: $pd-color-bg-pale;
-  border: 1px solid $pd-color-border;
-  border-radius: 10px;
-
-  li {
-    position: relative;
-    padding-left: 32px;
-    font-family: $pd-font-jp;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.8;
-    color: $pd-color-text;
-    letter-spacing: 0.04em;
-
-    & + li { margin-top: 12px; }
-
-    // チェックマーク
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0.35em;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: $pd-color-accent;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: calc(0.35em + 5px);
-      left: 7px;
-      width: 5px;
-      height: 9px;
-      border-right: 2px solid #ffffff;
-      border-bottom: 2px solid #ffffff;
-      transform: rotate(45deg);
-    }
-  }
 }
 
 .page-diagnosis__report {
@@ -382,21 +340,6 @@ $pd-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
   margin: 0;
 }
 
-
-
-
-
-.page-diagnosis__note {
-  font-family: $pd-font-jp;
-  font-size: 14px;
-  line-height: 1.9;
-  color: $pd-color-text;
-  letter-spacing: 0.04em;
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
 .page-diagnosis__cta {
   font-family: $pd-font-jp;
   font-weight: 700;
@@ -429,8 +372,14 @@ $pd-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
 @media screen and (max-width: 767px) {
   .page-diagnosis__intro { margin-bottom: 48px; }
 
+  .page-diagnosis__badge {
+    font-size: 13px;
+    padding: 5px 16px;
+    margin-bottom: 16px;
+  }
+
   .page-diagnosis__heading {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.65;
     margin-bottom: 18px;
   }
@@ -448,41 +397,16 @@ $pd-font-jp: "Zen Kaku Gothic New", YuGothic, 'Yu Gothic', sans-serif;
     margin-bottom: 20px;
   }
 
-  .page-diagnosis__block-lead {
-    font-size: 13.5px;
-    line-height: 1.85;
-    text-align: left;
-    margin: -4px 0 20px;
+  .page-diagnosis__report {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
-
-  .page-diagnosis__checks {
-    padding: 20px 18px;
-
-    li {
-      font-size: 14px;
-      padding-left: 28px;
-
-      & + li { margin-top: 10px; }
-    }
-  }
-
-  .page-diagnosis__report,
 
   .page-diagnosis__report-item { padding: 20px 18px; }
 
   .page-diagnosis__report-title { font-size: 16px; margin-bottom: 8px; }
 
   .page-diagnosis__report-text { font-size: 13.5px; }
-
-
-
-
-
-  .page-diagnosis__note {
-    font-size: 13.5px;
-    line-height: 1.85;
-    text-align: left;
-  }
 
   .page-diagnosis__cta {
     font-size: 17px;
