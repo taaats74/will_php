@@ -12713,46 +12713,6 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
     line-height: 1.85;
   }
 }
-.page-diagnosis__intro {
-  text-align: center;
-  margin: 0 auto 72px;
-}
-
-.page-diagnosis__badge {
-  display: inline-block;
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #28849D;
-  background: #F0F8F9;
-  border: 1px solid #C0D5D8;
-  border-radius: 999px;
-  padding: 6px 20px;
-  letter-spacing: 0.06em;
-  margin: 0 0 20px;
-}
-
-.page-diagnosis__heading {
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.6;
-  color: #3E5054;
-  letter-spacing: 0.04em;
-  margin: 0 0 24px;
-}
-
-.page-diagnosis__sub {
-  font-family: "Zen Kaku Gothic New", YuGothic, "Yu Gothic", sans-serif;
-  font-size: 16px;
-  line-height: 1.95;
-  color: #3E5054;
-  letter-spacing: 0.04em;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
 .page-diagnosis__block {
   margin: 0 auto 64px;
 }
@@ -12843,32 +12803,11 @@ body.has-loading-v2.appear .page-topv3-fv .container .wrapper .fv-message-wrappe
 }
 
 @media screen and (max-width: 1024px) {
-  .page-diagnosis__heading {
-    font-size: 24px;
-  }
   .page-diagnosis__report-item {
     padding: 24px 18px;
   }
 }
 @media screen and (max-width: 767px) {
-  .page-diagnosis__intro {
-    margin-bottom: 48px;
-  }
-  .page-diagnosis__badge {
-    font-size: 13px;
-    padding: 5px 16px;
-    margin-bottom: 16px;
-  }
-  .page-diagnosis__heading {
-    font-size: 18px;
-    line-height: 1.65;
-    margin-bottom: 18px;
-  }
-  .page-diagnosis__sub {
-    font-size: 14px;
-    line-height: 1.85;
-    text-align: left;
-  }
   .page-diagnosis__block {
     margin-bottom: 48px;
   }

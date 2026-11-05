@@ -17,8 +17,9 @@ get_header();
 <?php
 get_template_part( 'template-parts/page-hero', null, [
   'en'    => 'DIAGNOSIS',
-  'title' => '1分でできる無料診断',
-  'lead'  => '貴社のBtoBマーケで「最優先すべき一手」を見える化します。',
+  'title' => 'BtoBマーケティング<br>どこから改善すべきかが<br class="sp">わかる無料診断',
+  'lead'  => '貴社の回答とWebサイトをもとに、<br class="sp">現状・ボトルネック・改善の優先順位を<br>レポートにまとめてお送りします。',
+  'badge' => '約1分・3問で完了',
 ] );
 ?>
 
@@ -26,28 +27,22 @@ get_template_part( 'template-parts/page-hero', null, [
   <div class="container">
     <div class="page-diagnosis__inner">
 
-      <div class="page-diagnosis__intro">
-        <p class="page-diagnosis__badge">約1分・3問で完了</p>
-        <h2 class="page-diagnosis__heading">BtoBマーケティング<br>どこから改善すべきかがわかる無料診断</h2>
-        <p class="page-diagnosis__sub">貴社の回答とWebサイトをもとに、現状・ボトルネック・改善の優先順位を<br class="pc">レポートにまとめてお送りします。</p>
-      </div>
-
       <section class="page-diagnosis__block">
-        <h3 class="page-diagnosis__block-title">お届けする診断レポートの内容</h3>
+        <h2 class="page-diagnosis__block-title">お届けする診断レポートの内容</h2>
         <ol class="page-diagnosis__report">
           <li class="page-diagnosis__report-item">
             <span class="page-diagnosis__report-num">01</span>
-            <h4 class="page-diagnosis__report-title">現在地</h4>
+            <h3 class="page-diagnosis__report-title">現在地</h3>
             <p class="page-diagnosis__report-text">現在の集客・見込み客獲得・商談化の状況を整理</p>
           </li>
           <li class="page-diagnosis__report-item">
             <span class="page-diagnosis__report-num">02</span>
-            <h4 class="page-diagnosis__report-title">ボトルネック</h4>
+            <h3 class="page-diagnosis__report-title">ボトルネック</h3>
             <p class="page-diagnosis__report-text">成果につながりにくい要因と、改善できるポイントを整理</p>
           </li>
           <li class="page-diagnosis__report-item">
             <span class="page-diagnosis__report-num">03</span>
-            <h4 class="page-diagnosis__report-title">最優先すべき一手</h4>
+            <h3 class="page-diagnosis__report-title">最優先すべき一手</h3>
             <p class="page-diagnosis__report-text">現状を踏まえ、最も優先して取り組むべきことを提示</p>
           </li>
         </ol>
